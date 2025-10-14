@@ -1,0 +1,6 @@
+﻿id,status,rounds,overall_before,overall_after,I_before,N_before,V_before,E_before,S_before,T_before,I_after,N_after,V_after,E_after,S_after,T_after,delta_overall,delta_I,delta_N,delta_V,delta_E,delta_S,delta_T,final_text
+US001,FAIL,3,,,,,,,,,,,,,,,,,,,,,,"As a site member, I want to describe myself on my own page in a semi-structured way, so that others can learn about me."
+US002,FAIL,3,,,,,,,,,,,,,,,,,,,,,,"As a site member, I want to fill out an application to become a Certified Scrum Practitioner, so that I can earn that designation."
+US003,FAIL,3,,,,,,,,,,,,,,,,,,,,,,"As a Practitioner, I want to include additional details about me in my profile page, so that I can showcase my experience."
+US004,FAIL,3,,,,,,,,,,,,,,,,,,,,,,"As a site member, I want to fill out an application to become a Certified Scrum Trainer, so that I can teach CSM and CSPO courses and certify others."
+US005,FAIL,3,,,,,,,,,,,,,,,,,,,,,,"As a Trainer, I want to include additional details in my profile page about me, so that others can learn about me and decide if I am the right trainer for them."

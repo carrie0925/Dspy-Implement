@@ -1,0 +1,37 @@
+# Automatically generated .gitignore
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.env
+*.venv
+
+# macOS
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Build
+dist/
+build/
+out/
+
+# Others
+.env
+*.bak
+*.tmp
+*.tmp
+.env
