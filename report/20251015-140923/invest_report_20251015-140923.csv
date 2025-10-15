@@ -1,0 +1,61 @@
+﻿id,status,rounds,original_text,final_text,overall_before,overall_after,I_before,I_after,delta_I,N_before,N_after,delta_N,V_before,V_after,delta_V,E_before,E_after,delta_E,S_before,S_after,delta_S,T_before,T_after,delta_T,delta_overall
+US001,done,9,"I want to describe myself on my own page in a semi-structured way, so that others can learn about me.","User Story:
+As a profile owner, I want to showcase my personal information in a well-organized format on my profile page so that visitors can quickly grasp my background and interests.
+
+Acceptance Criteria:
+- Include distinct sections for essential information such as biography, skills, and interests.
+- Ensure the design is intuitive and visually engaging.
+- Facilitate straightforward updates to the displayed information.
+
+Test Outline:
+- Evaluate the page structure to ensure it is coherent and easy to navigate.
+- Verify that all sections contain pertinent and accurate information.
+- Test the update functionality for personal details to confirm it operates seamlessly.",1,2,1,2,1.0,1,2,1.0,1,2,1.0,1,2,1.0,1,2,1.0,1,2,1.0,1.0
+US002,done,9,"I want to fill out an application to become a Certified Scrum Practitioner, so that I can earn that designation.","User Story:
+As an aspiring Scrum Practitioner, I aim to finalize my certification application to secure the official credential and bolster my professional qualifications.
+
+Acceptance Criteria:
+- Successfully complete and submit the certification application form.
+- Receive an acknowledgment confirming the application has been received.
+- Attain certification status upon fulfilling all necessary criteria.
+
+Test Outline:
+- Ensure the application submission process is executed without any errors.
+- Verify that a confirmation email is dispatched following the submission.
+- Confirm that certification is awarded once all requirements are satisfied.",1,2,1,2,1.0,1,2,1.0,1,2,1.0,1,2,1.0,1,2,1.0,1,2,1.0,1.0
+US003,done,3,"As a Practitioner, I want to include additional details about me in my profile page, so that I can showcase my experience.","User Story:
+As a Practitioner, I want to enrich my profile page with more comprehensive information about my background, so that I can effectively highlight my expertise and experience.
+
+Acceptance Criteria:
+- Provide fields for adding professional qualifications and certifications.
+- Allow users to upload a portfolio or samples of work.
+- Enable the inclusion of personal achievements and testimonials.
+
+Test Outline:
+- Verify that new fields for qualifications and certifications are present on the profile page.
+- Confirm that users can successfully upload their portfolio or work samples.
+- Check that personal achievements and testimonials can be added and displayed correctly.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,2,3,1.0,1.0
+US004,done,3,"As a site member, I want to fill out an application to become a Certified Scrum Trainer, so that I can teach CSM and CSPO courses and certify others.","User Story:
+As a registered site member, I want to complete an application to obtain certification as a Scrum Trainer, enabling me to instruct CSM and CSPO courses and certify aspiring professionals.
+
+Acceptance Criteria:
+- Successfully submit the application form for Certified Scrum Trainer status.
+- Receive confirmation of application receipt within 24 hours.
+- Complete any required assessments or interviews as part of the certification process.
+
+Test Outline:
+- Verify that the application submission process is functional and user-friendly.
+- Confirm that an acknowledgment email is sent upon application submission.
+- Ensure that all necessary assessments or interviews are scheduled and completed.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,2,3,1.0,1.0
+US005,done,3,"As a Trainer, I want to include additional details in my profile page about me, so that others can learn about me and decide if I am the right trainer for them.","User Story:
+As a fitness trainer, I want to enrich my profile page with more personal information so that potential clients can better understand my qualifications and determine if I am the ideal trainer for their needs.
+
+Acceptance Criteria:
+- Add sections for certifications, training specialties, and personal training philosophy.
+- Include a professional photo and a brief introductory video.
+- Ensure that the profile is easily editable for future updates.
+
+Test Outline:
+- Review the profile page to confirm that all new details are accurately displayed.
+- Check that the profile is visually appealing and user-friendly.
+- Test the edit functionality to ensure updates can be made seamlessly.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,2,3,1.0,2,3,1.0,2,3,1.0,1.0
