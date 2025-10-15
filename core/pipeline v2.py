@@ -1,77 +1,26 @@
 from __future__ import annotations
 """
-DSPy-based INVEST Optimization Pipeline (significant rephrase + diversity-aware selection)
-- STRICT scoring via USE_STRICT_INVEST
-- Rewriter enforces SIGNIFICANT rephrase (>=30% token difference, avoid copying)
-- Candidate selection uses INVEST overall + λ * diversity (Jaccard)
-- Teleprompt knobs: fewshot_k / max_rounds / teacher_lm / metric_fn
-- Returns original_text for reporting
+Pipeline for DSPy-based INVEST Optimization (no 'title')
+Adds: strict scoring via USE_STRICT_INVEST, returns original_text.
 """
 
-from typing import List, Dict, Any, Tuple, Optional
+from typing import List, Dict, Any, Tuple
 from dataclasses import dataclass
-import os, json, re
-from tqdm import tqdm
+import os, json
 import dspy
-
-# =========================
-# LM 設定（可直接使用；或改成你要的模型）
-# =========================
-def configure_default_lm():
-    """
-    若外部未設定 dspy.settings.configure(lm=...)，則使用此預設。
-    需要環境變數 OPENAI_API_KEY。你也可以改成別的供應商名稱（ex: 'openai/gpt-4o-mini' -> 'openai/gpt-4o'）。
-    """
-    try:
-        lm = getattr(dspy.settings, "lm", None)
-    except Exception:
-        lm = None
-    if lm is None:
-        api_key = os.getenv("OPENAI_API_KEY")
-        if not api_key:
-            print("[WARN] OPENAI_API_KEY 未設定。請 export OPENAI_API_KEY 或在此函式內直接填 key。")
-        print("[INFO] Configuring default LM: openai/gpt-4o-mini (temperature=0.8)")
-        dspy.settings.configure(
-            lm=dspy.LM(
-                "openai/gpt-4o-mini",
-                api_key=api_key,
-                temperature=0.8,   # 讓改寫更有多樣性（可調 0.7~0.9）
-                max_tokens=512
-            )
-        )
-
-# 立即配置（如你外部已有設定，可把這行註解掉）
-configure_default_lm()
+from tqdm import tqdm
 
 # ===== seeds =====
 TRAIN_SEEDS = [
     {"input_text": "As a user, I want to reset my password via email so that I can regain access.\nAcceptance Criteria:\n- Request reset link via email\n- Receive email\n- Reset succeeds"},
-    # 用較具體的 seed 幫助學風格
-    {"input_text": "Improve dashboard performance.\nAcceptance Criteria:\n- Current p95=5s; target p95<=2s\n- Reduce initial DB calls to <=8\n- Cache top 3 widgets on first paint"}
+    {"input_text": "Improve dashboard performance."},
 ]
 DEV_SEEDS = [
     {"input_text": "As an admin, I want to export users to CSV so that I can analyze data offline.\nAcceptance Criteria:\n- Button 'Export CSV'\n- Only active users\n- Fields accurate"}
 ]
 
-# ===== env flags / knobs =====
+# ===== env flags =====
 STRICT = os.getenv("USE_STRICT_INVEST", "0") == "1"
-USE_DSPY = os.getenv("USE_DSPY", "1") != "0"
-
-# 多樣性參數（可用環境變數覆蓋）
-DIVERSITY_LAMBDA = float(os.getenv("DIVERSITY_LAMBDA", "0.7"))  # 推薦 0.5~1.0
-MIN_DIVERSITY    = float(os.getenv("MIN_DIVERSITY", "0.30"))    # 30% 以上差異
-
-# ===== token utils for diversity =====
-def _tokens(s: str):
-    return re.findall(r"[A-Za-z0-9]+", s.lower())
-
-def jaccard_diversity(a: str, b: str) -> float:
-    ta, tb = set(_tokens(a)), set(_tokens(b))
-    if not ta or not tb:
-        return 0.0
-    inter = len(ta & tb)
-    union = len(ta | tb)
-    return 1.0 - (inter / union)
 
 # ===== Signatures =====
 class InvestScoreSig(dspy.Signature):
@@ -86,15 +35,11 @@ class InvestScoreSig(dspy.Signature):
     result_json: str = dspy.OutputField(desc="Strict JSON as specified.")
 
 class InvestRewriteSig(dspy.Signature):
-    """Rewrite the story to improve INVEST while keeping intent (significantly rephrase)."""
+    """Rewrite the story to improve INVEST while keeping intent."""
     input_text: str = dspy.InputField()
     improved_text: str = dspy.OutputField(desc=(
-        # 關鍵要求：大幅改寫 + 具體詞彙 + 不抄原句 + 最低差異度要求
-        "Rewrite the user story with a SIGNIFICANT rephrase (avoid copying more than 8 consecutive words from input). "
-        "Use stronger, more specific verbs and nouns. Keep the original intent but clarify role/capability/benefit. "
-        "Aim for >=30% token-level difference from the input.\n"
-        "Output EXACTLY in this template:\n"
-        "User Story:\nAs a <specific role>, I want <clear capability> so that <explicit, business-relevant benefit>.\n"
+        "Rewrite to improve INVEST. Output exactly in this template:\n"
+        "User Story:\nAs a <role>, I want <capability> so that <benefit>.\n"
         "Acceptance Criteria:\n"
         "- <measurable criterion 1>\n- <measurable criterion 2>\n- <measurable criterion 3>\n"
         "Test Outline:\n- <how to verify 1>\n- <how to verify 2>"
@@ -128,14 +73,14 @@ class InvestScorer(dspy.Module):
         vals = [obj[d] for d in dims if obj[d] is not None]
         if obj.get("overall") is None:
             if STRICT and vals:
-                obj["overall"] = min(vals)                # 嚴格：瓶頸主導
+                obj["overall"] = min(vals)                # 更嚴格：瓶頸主導
             elif vals:
                 obj["overall"] = int(round(sum(vals)/len(vals)))
             else:
                 obj["overall"] = 0
         if not isinstance(obj.get("reasons"), dict):
             obj["reasons"] = {}
-        # 嚴格模式：若缺少可驗證語句但 T=3，降至 2 並壓 overall
+        # 嚴格模式：若缺乏可驗證語句，將 T 降至 ≤2
         if STRICT and obj.get("T") == 3:
             text = raw.lower()
             if ("acceptance" not in text and "criteria" not in text and "test" not in text):
@@ -155,7 +100,7 @@ class UserStoryRewriter(dspy.Module):
         out = self.rewrite(input_text=text)
         return (out.improved_text or text).strip()
 
-# ===== Teleprompt (DSPy 3.x) =====
+# ===== Teleprompt (DSPy 3.x：用 max_labeled_demos / max_bootstrapped_demos / max_rounds) =====
 def compile_scorer_with_teleprompt(
     base_scorer: InvestScorer,
     fewshot_k: int = 4,
@@ -172,6 +117,7 @@ def compile_scorer_with_teleprompt(
                 result_json=json.dumps(y, ensure_ascii=False)
             ).with_inputs("input_text")
         )
+
     try:
         tele = dspy.BootstrapFewShot(
             metric=metric_fn,
@@ -259,27 +205,14 @@ class OptimizeConfig:
     max_rounds: int = 3
     fewshot_k: int = 4
     use_dspy: bool = True
-    # 候選數可稍增，讓探索更豐富
-    best_of_k: int = 3
-    # 多樣性調參
-    diversity_lambda: float = DIVERSITY_LAMBDA
-    min_diversity:    float = MIN_DIVERSITY
 
 def run_batch_optimization(
     user_stories: List[Dict[str, Any]],
     max_rounds: int = 3,
     fewshot_k: int = 4,
-    use_dspy: bool = True,
-    best_of_k: int = 3,
-    diversity_lambda: Optional[float] = None,
-    min_diversity: Optional[float] = None,
+    use_dspy: bool = True
 ) -> List[Dict[str, Any]]:
-    cfg = OptimizeConfig(
-        max_rounds=max_rounds, fewshot_k=fewshot_k, use_dspy=use_dspy,
-        best_of_k=best_of_k,
-        diversity_lambda=(diversity_lambda if diversity_lambda is not None else DIVERSITY_LAMBDA),
-        min_diversity=(min_diversity if min_diversity is not None else MIN_DIVERSITY),
-    )
+    cfg = OptimizeConfig(max_rounds=max_rounds, fewshot_k=fewshot_k, use_dspy=use_dspy)
 
     base_scorer   = InvestScorer()
     base_rewriter = UserStoryRewriter()
@@ -305,42 +238,33 @@ def run_batch_optimization(
         hist: List[Dict[str, Any]] = []
 
         m0 = scorer(original_text)
-        hist.append({"text": original_text, "metrics": m0, "diversity": 0.0})
+        hist.append({"text": original_text, "metrics": m0})
 
         best_text, best_m = original_text, m0
-        best_combo = int(m0.get("overall") or 0) + cfg.diversity_lambda * 0.0
-
-        def invest_overall(m: Dict[str, Any]) -> int:
-            try: return int(m.get("overall") or 0)
-            except: return 0
 
         for _ in range(cfg.max_rounds):
             candidates = []
-            for _try in range(cfg.best_of_k):  # best-of-k（預設3）
+            for _try in range(2):  # best-of-2
                 cand_text = rewriter(best_text)
                 cand_m    = scorer(cand_text)
-                div       = jaccard_diversity(original_text, cand_text)
-                hist.append({"text": cand_text, "metrics": cand_m, "diversity": div})
-                candidates.append((cand_text, cand_m, div))
+                hist.append({"text": cand_text, "metrics": cand_m})
+                candidates.append((cand_text, cand_m))
 
-            def combo_score(item) -> float:
-                _, m, div = item
-                return invest_overall(m) + cfg.diversity_lambda * div
+            def score_of(m: Dict[str, Any]) -> int:
+                try:
+                    return int(m.get("overall") or 0)
+                except Exception:
+                    return 0
 
-            # 先過濾達最低差異度；若無，使用全部候選
-            elig = [c for c in candidates if c[2] >= cfg.min_diversity] or candidates
-            winner_text, winner_m, winner_div = max(elig, key=combo_score)
-            winner_combo = combo_score((winner_text, winner_m, winner_div))
+            winner_text, winner_m = max(candidates, key=lambda p: score_of(p[1]))
 
-            if winner_combo > best_combo:
-                best_text, best_m, best_combo = winner_text, winner_m, winner_combo
-
-            # 提早收斂條件：INVEST 高分且差異度合格
-            if invest_overall(best_m) >= 3 and jaccard_diversity(original_text, best_text) >= cfg.min_diversity:
+            if score_of(winner_m) > score_of(best_m):
+                best_text, best_m = winner_text, winner_m
+            if score_of(best_m) >= 3:
                 break
 
         results.append({
-            "id": story.get("id"),
+            "id": story["id"],
             "status": "done",
             "rounds": max(0, len(hist) - 1),
             "original_text": original_text,   # for reporting
@@ -349,12 +273,3 @@ def run_batch_optimization(
         })
 
     return results
-
-# ===== Example (remove in prod) =====
-if __name__ == "__main__":
-    sample_batch = [
-        {"id": "ex1", "description": "I want to describe myself on my own page in a semi-structured way, so that others can learn about me."},
-        {"id": "ex2", "description": "Improve dashboard performance."},
-    ]
-    out = run_batch_optimization(sample_batch, max_rounds=3, fewshot_k=4, use_dspy=USE_DSPY)
-    print(json.dumps(out, ensure_ascii=False, indent=2))
