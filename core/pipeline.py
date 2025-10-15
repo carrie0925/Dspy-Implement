@@ -146,8 +146,9 @@ def compile_scorer_with_teleprompt(base_scorer: "InvestScorer") -> "InvestScorer
             ).with_inputs("input_text")
         )
     try:
-        tele = dspy.BootstrapFewShot(base_scorer.predict, max_bootstrapped_demos=min(6, len(trainset)))
-        compiled = tele.compile(trainset=trainset)
+        # ✅ 新版 DSPy 需要 student 參數
+        tele = dspy.BootstrapFewShot(k=min(6, len(trainset)))
+        compiled = tele.compile(student=base_scorer.predict, trainset=trainset)
         base_scorer.predict = compiled
     except Exception as e:
         print(f"[WARN] compile_scorer_with_teleprompt failed: {e}")
@@ -182,8 +183,9 @@ def compile_rewriter_with_teleprompt(base_rewriter: "UserStoryRewriter", scorer:
     ]
 
     try:
-        tele = dspy.BootstrapFewShot(base_rewriter.rewrite, max_bootstrapped_demos=min(6, len(trainset)))
-        compiled = tele.compile(trainset=trainset)
+        # ✅ 新版 DSPy 需要 student 參數
+        tele = dspy.BootstrapFewShot(k=min(6, len(trainset)))
+        compiled = tele.compile(student=base_rewriter.rewrite, trainset=trainset)
         base_rewriter.rewrite = compiled
     except Exception as e:
         print(f"[WARN] compile_rewriter_with_teleprompt failed: {e}")

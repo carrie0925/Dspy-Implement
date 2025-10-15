@@ -1,11 +1,11 @@
 [
   {
     "id": "US001",
-    "description": "As a site member, I want to describe myself on my own page in a semi-structured way, so that others can learn about me."
+    "description": "I want to describe myself on my own page in a semi-structured way, so that others can learn about me."
   },
   {
     "id": "US002",
-    "description": "As a site member, I want to fill out an application to become a Certified Scrum Practitioner, so that I can earn that designation."
+    "description": "I want to fill out an application to become a Certified Scrum Practitioner, so that I can earn that designation."
   },
   {
     "id": "US003",
