@@ -58,22 +58,23 @@ def main():
     )
 
     print("=== Step 3: Exporting report ===")
-    df = export_results_csv(optimized_results)
+    df, run_dir = export_results_csv(optimized_results)
 
     print("=== Step 4: Summary ===")
     summarize_report(df)
 
     print("\nAll done ✅")
+    return run_dir
 
 if __name__ == "__main__":
-    main()
-    # 視覺化（放在 main() 之後，確保 CSV 已產生）
+    run_dir = main()
+    # 視覺化（存到本次資料夾）
     try:
         from report.visualize_report import load_latest_csv, plot_delta_overall_hist, plot_dim_delta_bars
-        df_latest, fpath = load_latest_csv("report")
-        print(f"(viz) using latest CSV: {fpath}")
-        p1 = plot_delta_overall_hist(df_latest)
-        p2 = plot_dim_delta_bars(df_latest)
+        df_latest, fpath = load_latest_csv(run_dir)
+        print(f"(viz) using CSV: {fpath}")
+        p1 = plot_delta_overall_hist(df_latest, run_dir)
+        p2 = plot_dim_delta_bars(df_latest, run_dir)
         print(f"(viz) saved: {p1}, {p2}")
     except Exception as e:
         print("(viz) skip visualization:", e)
