@@ -1,3 +1,4 @@
+from __future__ import annotations
 """
 Pipeline for DSPy-based INVEST Optimization (no 'title')
 Adds: strict scoring via USE_STRICT_INVEST, returns original_text.
@@ -79,7 +80,7 @@ class InvestScorer(dspy.Module):
                 obj["overall"] = 0
         if not isinstance(obj.get("reasons"), dict):
             obj["reasons"] = {}
-        # 在嚴格模式下，若某維度無明確驗證語句，將 T 或相關維度降至 ≤2（簡易啟發式）
+        # 嚴格模式：若缺乏可驗證語句，將 T 降至 ≤2
         if STRICT and obj.get("T") == 3:
             text = raw.lower()
             if ("acceptance" not in text and "criteria" not in text and "test" not in text):
@@ -99,45 +100,79 @@ class UserStoryRewriter(dspy.Module):
         out = self.rewrite(input_text=text)
         return (out.improved_text or text).strip()
 
-# ===== Teleprompt (新版 DSPy 需要 student) =====
-def compile_scorer_with_teleprompt(base_scorer: "InvestScorer") -> "InvestScorer":
+# ===== Teleprompt (DSPy 3.x：用 max_labeled_demos / max_bootstrapped_demos / max_rounds) =====
+def compile_scorer_with_teleprompt(
+    base_scorer: InvestScorer,
+    fewshot_k: int = 4,
+    max_rounds: int = 1,
+    metric_fn=None,
+    teacher_lm=None,
+) -> InvestScorer:
     trainset = []
     for ex in TRAIN_SEEDS:
         y = base_scorer(ex["input_text"])
-        trainset.append(dspy.Example(input_text=ex["input_text"],
-                                     result_json=json.dumps(y, ensure_ascii=False)
-                                     ).with_inputs("input_text"))
+        trainset.append(
+            dspy.Example(
+                input_text=ex["input_text"],
+                result_json=json.dumps(y, ensure_ascii=False)
+            ).with_inputs("input_text")
+        )
+
     try:
-        tele = dspy.BootstrapFewShot(k=min(6, len(trainset)))
+        tele = dspy.BootstrapFewShot(
+            metric=metric_fn,
+            max_labeled_demos=min(fewshot_k, len(trainset)),
+            max_bootstrapped_demos=min(4, len(trainset)),
+            max_rounds=max_rounds,
+            teacher_settings=({"lm": teacher_lm} if teacher_lm else None),
+        )
         compiled = tele.compile(student=base_scorer.predict, trainset=trainset)
         base_scorer.predict = compiled
     except Exception as e:
         print(f"[WARN] compile_scorer_with_teleprompt failed: {e}")
     return base_scorer
 
-def compile_rewriter_with_teleprompt(base_rewriter: "UserStoryRewriter", scorer: "InvestScorer") -> "UserStoryRewriter":
+def compile_rewriter_with_teleprompt(
+    base_rewriter: UserStoryRewriter,
+    scorer: InvestScorer,
+    fewshot_k: int = 4,
+    max_rounds: int = 1,
+    metric_fn=None,
+    teacher_lm=None,
+) -> UserStoryRewriter:
     pairs: List[Tuple[str, str]] = []
     for ex in TRAIN_SEEDS:
-        src = ex["input_text"]; cand = base_rewriter(src)
+        src = ex["input_text"]
+        cand = base_rewriter(src)
         m0, m1 = scorer(src), scorer(cand)
         try:
             if int(m1.get("overall") or 0) >= int(m0.get("overall") or 0):
                 pairs.append((src, cand))
         except Exception:
             pass
+
     trainset = [
         dspy.Example(input_text=s, improved_text=t).with_inputs("input_text")
         for (s, t) in pairs
     ] or [
         dspy.Example(
             input_text="Improve dashboard performance.",
-            improved_text=("User Story:\nAs a product analyst, I want initial dashboard load under 2s so that I can review KPIs quickly.\n"
-                           "Acceptance Criteria:\n- p95 cold start ≤ 2s\n- 6 widgets visible on load\n- Pagination for top lists\n"
-                           "Test Outline:\n- Synthetic dataset cold-start timing\n- Real data smoke test")
+            improved_text=(
+                "User Story:\nAs a product analyst, I want initial dashboard load under 2s so that I can review KPIs quickly.\n"
+                "Acceptance Criteria:\n- p95 cold start ≤ 2s\n- 6 widgets visible on load\n- Pagination for top lists\n"
+                "Test Outline:\n- Synthetic dataset cold-start timing\n- Real data smoke test"
+            ),
         ).with_inputs("input_text")
     ]
+
     try:
-        tele = dspy.BootstrapFewShot(k=min(6, len(trainset)))
+        tele = dspy.BootstrapFewShot(
+            metric=metric_fn,
+            max_labeled_demos=min(fewshot_k, len(trainset)),
+            max_bootstrapped_demos=min(4, len(trainset)),
+            max_rounds=max_rounds,
+            teacher_settings=({"lm": teacher_lm} if teacher_lm else None),
+        )
         compiled = tele.compile(student=base_rewriter.rewrite, trainset=trainset)
         base_rewriter.rewrite = compiled
     except Exception as e:
@@ -145,8 +180,12 @@ def compile_rewriter_with_teleprompt(base_rewriter: "UserStoryRewriter", scorer:
     return base_rewriter
 
 # ===== DEV metric =====
-def objective_mean_delta_overall(scorer: "InvestScorer", rewriter: "UserStoryRewriter", dev_items: List[Dict[str, Any]]) -> float:
-    deltas = []
+def objective_mean_delta_overall(
+    scorer: InvestScorer,
+    rewriter: UserStoryRewriter,
+    dev_items: List[Dict[str, Any]]
+) -> float:
+    deltas: List[int] = []
     for ex in dev_items:
         src = ex["input_text"]
         m0  = scorer(src)
@@ -158,7 +197,7 @@ def objective_mean_delta_overall(scorer: "InvestScorer", rewriter: "UserStoryRew
             deltas.append(b - a)
         except Exception:
             continue
-    return sum(deltas) / len(deltas) if deltas else 0.0
+    return float(sum(deltas) / len(deltas)) if deltas else 0.0
 
 # ===== main runner =====
 @dataclass
@@ -179,8 +218,12 @@ def run_batch_optimization(
     base_rewriter = UserStoryRewriter()
 
     if cfg.use_dspy:
-        scorer   = compile_scorer_with_teleprompt(base_scorer)
-        rewriter = compile_rewriter_with_teleprompt(base_rewriter, scorer)
+        scorer   = compile_scorer_with_teleprompt(base_scorer,
+                                                  fewshot_k=cfg.fewshot_k,
+                                                  max_rounds=cfg.max_rounds)
+        rewriter = compile_rewriter_with_teleprompt(base_rewriter, scorer,
+                                                    fewshot_k=cfg.fewshot_k,
+                                                    max_rounds=cfg.max_rounds)
         before = objective_mean_delta_overall(InvestScorer(), UserStoryRewriter(), DEV_SEEDS)
         after  = objective_mean_delta_overall(scorer, rewriter, DEV_SEEDS)
         print(f"[DEV metric] ΔOverall baseline={before:+.3f} → with DSPy={after:+.3f}")
@@ -197,8 +240,7 @@ def run_batch_optimization(
         m0 = scorer(original_text)
         hist.append({"text": original_text, "metrics": m0})
 
-        cur_text = original_text
-        best_text, best_m = cur_text, m0
+        best_text, best_m = original_text, m0
 
         for _ in range(cfg.max_rounds):
             candidates = []
@@ -208,9 +250,12 @@ def run_batch_optimization(
                 hist.append({"text": cand_text, "metrics": cand_m})
                 candidates.append((cand_text, cand_m))
 
-            def score_of(m): 
-                try: return int(m.get("overall") or 0)
-                except: return 0
+            def score_of(m: Dict[str, Any]) -> int:
+                try:
+                    return int(m.get("overall") or 0)
+                except Exception:
+                    return 0
+
             winner_text, winner_m = max(candidates, key=lambda p: score_of(p[1]))
 
             if score_of(winner_m) > score_of(best_m):
@@ -222,7 +267,7 @@ def run_batch_optimization(
             "id": story["id"],
             "status": "done",
             "rounds": max(0, len(hist) - 1),
-            "original_text": original_text,   # ← 新增：給報表用
+            "original_text": original_text,   # for reporting
             "final_text": best_text,
             "history": hist
         })
