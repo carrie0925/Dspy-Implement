@@ -1,0 +1,47 @@
+﻿id,status,rounds,original_text,final_text,overall_before,overall_after,I_before,I_after,delta_I,N_before,N_after,delta_N,V_before,V_after,delta_V,E_before,E_after,delta_E,S_before,S_after,delta_S,T_before,T_after,delta_T,delta_overall
+US001,done,2,"I want to describe myself on my own page in a semi-structured way, so that others can learn about me.","User Story:
+As a user, I want to create a personal page with a semi-structured format so that others can easily learn about my background, interests, and skills.
+
+Acceptance Criteria:
+- The page includes sections for background, interests, and skills.
+- Each section allows for a minimum of 100 characters and a maximum of 500 characters.
+- The layout is visually appealing and easy to navigate.
+
+Test Outline:
+- Verify that each section is present and meets the character requirements.
+- Check the layout for visual appeal and ease of navigation.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,2,3,1.0,2,3,1.0,2,3,1.0,1.0
+US002,done,2,"I want to fill out an application to become a Certified Scrum Practitioner, so that I can earn that designation.","User Story:
+As a professional seeking certification, I want to complete the application process to become a Certified Scrum Practitioner so that I can enhance my credentials and demonstrate my expertise in Scrum practices.
+
+Acceptance Criteria:
+- The application form is fully completed and submitted by the deadline.
+- All required documentation is attached to the application.
+- Confirmation of application receipt is received within 48 hours.
+
+Test Outline:
+- Verify that the application form is filled out correctly and submitted on time.
+- Check that all necessary documents are included with the application.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,2,3,1.0,2,3,1.0,2,3,1.0,1.0
+US003,done,2,"As a Practitioner, I want to include additional details about me in my profile page, so that I can showcase my experience.","User Story:
+As a Practitioner, I want to add specific details about my professional background and skills to my profile page so that I can effectively showcase my experience and attract potential clients or collaborators.
+
+Acceptance Criteria:
+- The profile page allows for the addition of at least three new fields for professional details (e.g., skills, certifications, and work history).
+- Users can edit and save their profile information without losing previously entered data.
+- The updated profile is displayed correctly on the user’s public profile page.
+
+Test Outline:
+- Verify that the new fields are present and functional on the profile edit page.
+- Check that changes made to the profile are saved and reflected on the public profile page.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,2,3,1.0,2,3,1.0,2,3,1.0,1.0
+US004,done,2,"As a site member, I want to fill out an application to become a Certified Scrum Trainer, so that I can teach CSM and CSPO courses and certify others.","As a site member, I want to fill out an application to become a Certified Scrum Trainer, so that I can teach CSM and CSPO courses and certify others.",3,3,3,3,0.0,3,3,0.0,3,3,0.0,3,3,0.0,3,3,0.0,3,3,0.0,0.0
+US005,done,2,"As a Trainer, I want to include additional details in my profile page about me, so that others can learn about me and decide if I am the right trainer for them.","User Story:
+As a Trainer, I want to enhance my profile page with detailed information about my qualifications and experience, so that potential clients can assess my suitability as their trainer.
+
+Acceptance Criteria:
+- The profile page includes a section for qualifications and certifications.
+- The profile page features a summary of training experience and specialties.
+- The profile page allows for client testimonials to be displayed.
+
+Test Outline:
+- Verify that the qualifications and certifications section is present and correctly formatted.
+- Check that the training experience summary is clear and informative.
+- Ensure that client testimonials can be added and displayed on the profile page.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,2,3,1.0,2,3,1.0,2,3,1.0,1.0
