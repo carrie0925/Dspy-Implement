@@ -1,0 +1,1165 @@
+﻿id,status,rounds,original_text,final_text,overall_before,overall_after,I_before,I_after,delta_I,N_before,N_after,delta_N,V_before,V_after,delta_V,E_before,E_after,delta_E,S_before,S_after,delta_S,T_before,T_after,delta_T,delta_overall
+US001,done,9,"As a site member, I want to describe myself on my own page in a semi-structured way, so that others can learn about me.","User Story:
+As a member of the community, I want to showcase my personal information on my profile page in a well-organized format, allowing others to easily understand my background and interests.
+
+Acceptance Criteria:
+- Include designated fields for essential personal information such as hobbies, expertise, and professional history.
+- Design the layout to be intuitive and visually engaging.
+- Enable straightforward updates to the displayed information.
+
+Test Outline:
+- Examine the profile page to verify the inclusion of organized fields.
+- Evaluate the layout for clarity and visual appeal.
+- Test the update functionality for personal information to ensure it operates smoothly.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US002,done,9,"As a site member, I want to fill out an application to become a Certified Scrum Practitioner, so that I can earn that designation.","User Story:
+As a registered user of the platform, I want to finalize my application for the Certified Scrum Practitioner credential so that I can achieve this esteemed professional certification.
+
+Acceptance Criteria:
+- Successfully complete and submit the application form containing all necessary details
+- Receive an acknowledgment confirming the application has been submitted
+- Get updates regarding the application status within a defined timeframe
+
+Test Outline:
+- Ensure the application form can be accurately filled out and submitted without any issues
+- Verify that a confirmation message or email is received immediately after submission
+- Monitor the application status to guarantee that updates are provided within the specified period",2,2,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US003,done,3,"As a Practitioner, I want to include additional details about me in my profile page, so that I can showcase my experience.","User Story:
+As a healthcare professional, I want to enrich my profile page with more comprehensive information about my background, so that I can effectively highlight my expertise and experience to potential clients.
+
+Acceptance Criteria:
+- Provide fields for education, certifications, and specialties.
+- Allow the addition of a personal statement or biography.
+- Enable the upload of relevant documents or portfolio items.
+
+Test Outline:
+- Verify that all new fields are present and functional on the profile page.
+- Check that users can successfully save and display the added information.
+- Ensure that uploaded documents are accessible and correctly linked to the profile.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,1.0
+US004,done,9,"As a site member, I want to fill out an application to become a Certified Scrum Trainer, so that I can teach CSM and CSPO courses and certify others.","User Story:
+As a registered user of the platform, I aim to complete my application for the Certified Scrum Trainer designation, enabling me to instruct CSM and CSPO courses and certify aspiring professionals in the industry.
+
+Acceptance Criteria:
+- Successfully fill out and submit the application for the Certified Scrum Trainer title.
+- Receive a notification confirming that the application has been successfully submitted.
+- Complete any required assessments or interviews necessary for certification approval.
+
+Test Outline:
+- Verify that the application interface is intuitive and allows for seamless submission without technical issues.
+- Check for an acknowledgment email confirming the successful submission of the application.
+- Ensure that the certification process encompasses all required evaluations or interviews.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US005,done,9,"As a Trainer, I want to include additional details in my profile page about me, so that others can learn about me and decide if I am the right trainer for them.","User Story:
+As a fitness coach, I want to enrich my profile page with detailed personal information so that potential clients can better understand my qualifications and determine if I align with their fitness goals.
+
+Acceptance Criteria:
+- Add specific sections highlighting my certifications, specialties, and personal training philosophy.
+- Craft a succinct biography that showcases my background and training approach.
+- Design the profile to be visually appealing and intuitive for seamless navigation.
+
+Test Outline:
+- Review the updated profile to ensure all necessary components are present.
+- Gather user feedback on the clarity and visual appeal of the new content.
+- Verify that the profile updates display correctly across different devices.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,1,0.0,2,2,0.0,1,2,1.0,0.0
+US006,done,9,"As a Practitioner, I want to write an article for the site with a small graphic shown with the article showing my CSP or CST status, so that others know my certifications when reading.","User Story:
+As a certified Practitioner, I want to publish an article on the website that includes a small graphic highlighting my CSP or CST credentials, allowing readers to quickly identify my qualifications and expertise.
+
+Acceptance Criteria:
+- The article is successfully published and accessible on the website.
+- The graphic representing my CSP or CST credentials is prominently featured alongside the article.
+- Readers can easily recognize my certifications while engaging with the content.
+
+Test Outline:
+- Verify that the article is live and visible on the website as intended.
+- Ensure the certification graphic is clearly displayed and accurately represents my credentials.
+- Gather reader feedback on the visibility and clarity of my qualifications as presented in the article.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,1,0.0,2,2,0.0,1,2,1.0,0.0
+US007,done,9,"As a trainer, I want to list my upcoming classes in my profile and include a link to a detailed page about each, so that prospective attendees can find my courses.","User Story:
+As a fitness instructor, I want to showcase my upcoming classes on my profile and provide links to detailed descriptions for each course, enabling potential participants to easily discover and learn more about my offerings.
+
+Acceptance Criteria:
+- Display a list of upcoming classes on the instructor's profile.
+- Include a clickable link for each class that directs to a detailed information page.
+- Ensure that the class details are accurate and up-to-date.
+
+Test Outline:
+- Verify that the upcoming classes are correctly listed on the profile.
+- Check that each class link leads to the appropriate detailed page.
+- Confirm that the information on the detailed pages is current and reflects the class schedule.",2,2,2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,3,1.0,1,3,2.0,0.0
+US008,done,3,"As a site member, I want to view the profiles of other members, so that I can find others I might want to connect with.","User Story:
+As a community member, I want to access the profiles of fellow members so that I can discover potential connections and expand my network.
+
+Acceptance Criteria:
+- Profiles of all members are accessible and viewable.
+- Search functionality allows filtering by interests or location.
+- Profile information is up-to-date and includes relevant details.
+
+Test Outline:
+- Verify that all member profiles can be accessed without errors.
+- Test the search feature to ensure it filters results accurately.
+- Check that profile information reflects the latest updates.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,1.0
+US009,done,3,"As a site member, I want to search for profiles based on a few fields, so that I can find others I might want to connect with.","User Story:
+As a registered member of the site, I want to filter profiles using specific criteria so that I can discover potential connections that align with my interests.
+
+Acceptance Criteria:
+- Enable search functionality based on at least three distinct profile fields.
+- Display relevant profiles that match the search criteria.
+- Allow users to initiate connection requests from the search results.
+
+Test Outline:
+- Test the search feature with various combinations of profile fields to ensure accurate results.
+- Verify that the profiles displayed correspond to the selected criteria.
+- Check that connection requests can be sent directly from the search results.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,3,2.0,1.0
+US010,done,3,"As a site member, I want to mark my profile as private in which case only my name will appear, so that no one can learn things about me I don't want shared.","User Story:
+As a registered member of the site, I want to set my profile to private, ensuring that only my name is visible, so that I can protect my personal information from being disclosed to others.
+
+Acceptance Criteria:
+- Enable the option to toggle profile visibility to private.
+- Ensure that only the member's name is displayed when the profile is private.
+- Confirm that no additional personal details are accessible to other users.
+
+Test Outline:
+- Verify that the privacy setting can be successfully activated.
+- Check that only the name appears on the profile when set to private.
+- Test that all other personal information is hidden from view.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,1,3,2.0,1.0
+US011,done,3,"As a site member, I want to mark my email address as private even if the rest of my profile is not, so that no one can contact me.","User Story:
+As a registered member of the site, I want the option to designate my email address as private, even when my profile information is public, so that I can prevent unwanted contact from others.
+
+Acceptance Criteria:
+- Provide a toggle feature to set the email address to private.
+- Ensure that the email address is hidden from all other users when marked as private.
+- Confirm that the privacy setting can be changed at any time by the member.
+
+Test Outline:
+- Test the functionality of the toggle to mark the email as private.
+- Verify that the email address is not visible to other users when the setting is activated.
+- Check that the member can successfully change the privacy setting back and forth.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,3,2.0,1.0
+US012,done,9,"As a site member, I want to send an email to any member via a form, so that we can connect.","User Story:
+As a community member, I want to utilize a form that allows me to email fellow members, thereby fostering connections and improving our communication.
+
+Acceptance Criteria:
+- The form must enable users to select any member of the community for email outreach.
+- Emails should be sent successfully without encountering any issues.
+- Recipients should receive the emails promptly after they are sent.
+
+Test Outline:
+- Verify that the form provides a comprehensive list of community members for selection.
+- Track the email system to ensure messages are dispatched without errors.
+- Confirm that recipients receive their emails in a timely manner following dispatch.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US013,done,9,"As a site administrator, I want to read practicing and training applications and approve or reject them, so that only applicants who qualify can become CSPs or CSTs.","User Story:
+As a site administrator, I aim to evaluate applications for training and practice programs to ascertain candidates' eligibility for CSP or CST designations, ensuring that only qualified individuals receive approval.
+
+Acceptance Criteria:
+- Review each application based on established qualification criteria.
+- Systematically document the approval or rejection outcome for each candidate.
+- Notify applicants promptly about their application status.
+
+Test Outline:
+- Confirm that all applications are assessed against the defined qualification standards.
+- Ensure that all decisions are accurately recorded in the database.
+- Validate that applicants are informed in a timely manner regarding their application outcomes.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US014,done,9,"As a site administrator, I want to edit any site member profile, so that I can correct problems for members.","User Story:
+As a site administrator, I want the ability to modify any member's profile, enabling me to resolve issues and ensure accurate information for all users.
+
+Acceptance Criteria:
+- Access to all member profiles for editing
+- Ability to save changes without errors
+- Confirmation message displayed after successful edits
+
+Test Outline:
+- Attempt to edit various member profiles and verify changes are saved
+- Check for error messages during the editing process
+- Ensure a confirmation notification appears after each successful update",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US015,done,3,"As a site visitor, I want to read current news on the home page, so that I stay current on agile news.","User Story:
+As a website visitor, I want to access the latest news directly from the home page so that I can remain informed about developments in the agile community.
+
+Acceptance Criteria:
+- Display the most recent news articles prominently on the home page.
+- Ensure news updates are refreshed at least once every hour.
+- Provide links to full articles for deeper insights.
+
+Test Outline:
+- Verify that the latest news articles are visible on the home page.
+- Check the frequency of news updates to confirm they occur hourly.
+- Test the links to ensure they direct to the complete articles.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,3,2.0,1.0
+US016,done,3,"As a site visitor, I want to access old news that is no longer on the home page, so that I can access things I remember from the past or that others mention to me.","User Story:
+As a site visitor, I want to retrieve archived news articles that are not featured on the homepage, so that I can revisit content I recall or that others reference.
+
+Acceptance Criteria:
+- Provide a dedicated section for accessing archived news articles.
+- Ensure that users can search for specific articles by date or keyword.
+- Allow easy navigation to find articles from previous months or years.
+
+Test Outline:
+- Verify the presence of an archive section on the site.
+- Test the search functionality to ensure it returns relevant results.
+- Check the navigation process to confirm users can easily locate older articles.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,1.0
+US017,done,9,"As a site visitor, I want to email news items to the editor, so that they can be considered for publication.","User Story:
+As a site visitor, I want to submit news articles directly to the editor via an email form, enabling them to evaluate the content for potential publication.
+
+Acceptance Criteria:
+- Develop a user-friendly email submission interface for news articles
+- Guarantee that each submission triggers an acknowledgment email
+- Allow editors to seamlessly review and organize incoming news article submissions
+
+Test Outline:
+- Assess the ease of use and functionality of the email submission interface
+- Verify that a confirmation email is sent immediately after the article is submitted
+- Review the editor's dashboard for streamlined access and management of submitted articles",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US018,done,3,"As a site editor, I want to set the following dates on a news item: Start Publishing Date, Old News Date, Stop Publishing Date, so that articles are published on and through appropriate dates.","User Story:
+As a content manager, I want to specify the Start Publishing Date, Old News Date, and Stop Publishing Date for a news article so that the content is released and managed according to the designated timeline.
+
+Acceptance Criteria:
+- Ability to set a Start Publishing Date for the article.
+- Define an Old News Date to indicate when the article transitions to archived status.
+- Establish a Stop Publishing Date to cease the article's visibility.
+
+Test Outline:
+- Verify that the Start Publishing Date is correctly applied to the article.
+- Check that the Old News Date is accurately reflected in the article's status.
+- Ensure the Stop Publishing Date effectively removes the article from public view.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,3,2.0,1.0
+US019,done,9,"As a site member, I want to subscribe to an RSS feed of news, so that I remain sufficiently and easily informed.","User Story:
+As a registered user of the platform, I want to sign up for an RSS news feed so that I can effortlessly stay updated on the latest news.
+
+Acceptance Criteria:
+- Complete the subscription process for the RSS feed successfully.
+- Receive prompt notifications regarding new articles.
+- Easily locate the feed from my account dashboard.
+
+Test Outline:
+- Confirm that the subscription procedure is user-friendly and operates correctly.
+- Monitor the delivery of news updates to ensure they are timely.
+- Verify that the RSS feed is readily accessible from the user's dashboard.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US020,done,9,"As a site editor, I want to assign priority numbers to news items, so that I can indicate which articles I want featured most prominently on the site.","User Story:
+As a content manager, I aim to implement a ranking system for news articles, enabling me to effectively highlight the most impactful stories on the website.
+
+Acceptance Criteria:
+- Assign a priority score to each news article to determine its significance.
+- Ensure that articles with higher priority scores are displayed more prominently on the website.
+- Create an intuitive interface that allows for easy adjustments to priority rankings as needed.
+
+Test Outline:
+- Verify that priority scores can be assigned to news articles without issues.
+- Evaluate the visibility and positioning of articles based on their assigned priority scores.
+- Test the functionality for modifying priority rankings and confirm that changes are accurately reflected on the website.",2,2,2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US021,done,3,"As a site visitor, I want to see a list of all upcoming Certification Courses and can page through them if there are a lot, so that I can choose the best course for me.","User Story:
+As a prospective learner, I want to access a comprehensive list of upcoming Certification Courses and navigate through multiple pages if necessary, so that I can select the most suitable course for my needs.
+
+Acceptance Criteria:
+- Display a complete list of upcoming Certification Courses.
+- Implement pagination to allow users to browse through multiple pages of courses.
+- Ensure that course details are easily accessible for informed decision-making.
+
+Test Outline:
+- Verify that all upcoming Certification Courses are listed on the site.
+- Check that pagination functions correctly, allowing navigation through course pages.
+- Confirm that course information is clear and detailed for user selection.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,1.0
+US022,done,9,"As a site visitor, I want to see a list of all upcoming Other Courses and can page through them if necessary, so that I can choose the best course for me.","User Story:
+As a prospective student, I want to access a comprehensive list of all upcoming Other Courses and navigate through multiple pages if needed, so that I can select the most suitable course for my needs.
+
+Acceptance Criteria:
+- Display a complete list of upcoming Other Courses.
+- Enable pagination for easy navigation through the course listings.
+- Ensure that course details are accessible for each entry.
+
+Test Outline:
+- Verify that all upcoming Other Courses are listed accurately.
+- Check that pagination functions correctly, allowing users to move between pages.
+- Confirm that clicking on a course provides detailed information.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US023,done,3,"As a site visitor, I want to see a list of all upcoming Events, so that I can decide if I want to attend any.","User Story:
+As a site visitor, I want to access a comprehensive list of upcoming events so that I can evaluate my interest in attending any of them.
+
+Acceptance Criteria:
+- Display a complete and organized list of all upcoming events.
+- Include essential details for each event, such as date, time, and location.
+- Ensure the list is updated in real-time to reflect any changes or new additions.
+
+Test Outline:
+- Verify that the events list is visible and accessible on the site.
+- Check that all relevant event details are correctly presented.
+- Confirm that the list updates automatically with new events or changes.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,1.0
+US024,done,9,"As a trainer, I want to create a new course or event, so that site visitors can see it.","User Story:
+As an educator, I want to launch a new course or event so that visitors to the website can easily find and participate in it.
+
+Acceptance Criteria:
+- Successfully publish a course or event listing on the platform
+- Ensure the new listing is accessible to all website users
+- Provide key information including date, time, and a detailed description
+
+Test Outline:
+- Confirm that the course or event is visible on the website post-publication
+- Validate that all pertinent details are accurately presented
+- Ensure that visitors can navigate to the listing without any difficulties",1,2,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,0,2,2.0,1.0
+US025,done,6,"As a trainer, I want to create an Other Course or Event I am charged a listing fee for that activity, so that I don't list events I don't really intend to hold.","User Story:
+As a course organizer, I want to launch a new course or event with a defined listing fee, ensuring that I only promote activities I am genuinely committed to hosting.
+
+Acceptance Criteria:
+- Successfully establish a new course or event with a transparent fee structure for listing.
+- Ensure that the listing fee effectively deters the promotion of events without firm commitment.
+- Verify that all event details are accurately presented upon creation.
+
+Test Outline:
+- Confirm that the listing fee is enforced during the creation of the course or event.
+- Ensure that only events with a verified commitment to take place are displayed.
+- Inspect the event page to guarantee that all information is correctly showcased.",2,3,2,2,0.0,2,3,1.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,1.0
+US026,done,9,"As a site administrator, I want to create an Other Course or Event that is not charged a listing fee, so that the Scrum Alliance doesn't charge itself for Scrum Gatherings that it puts on.","User Story:
+As a site administrator, I want to establish a listing for a complimentary Other Course or Event, ensuring that the Scrum Alliance does not impose any charges for its own Scrum Gatherings.
+
+Acceptance Criteria:
+- Successfully create an event listing that is free of charge.
+- Correctly classify the event under the Other Course or Event category.
+- Ensure the listing is visible and accessible to all users without restrictions.
+
+Test Outline:
+- Verify that the event listing process allows for submissions that do not incur any fees.
+- Check the event's classification to confirm it aligns with the Other Course or Event criteria.
+- Evaluate the listing's visibility on the site to ensure users can easily find it.",2,3,2,2,0.0,2,3,1.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,1.0
+US027,done,6,"As a site administrator, I want to set the listing fee per Other Course or Event, so that we have flexibility on what to charge in the future.","User Story:
+As a site administrator, I want to create a flexible pricing model for each Other Course or Event, allowing us to adapt our pricing strategies as market conditions evolve.
+
+Acceptance Criteria:
+- Establish a clear fee structure tailored for Other Courses and Events.
+- Ensure that fees can be easily adjusted through the admin interface.
+- Implement a user notification system to alert them of any fee modifications.
+
+Test Outline:
+- Confirm that the listing fee can be set and modified for each course or event without issues.
+- Ensure that any fee updates are accurately displayed in the user interface.
+- Test the notification system to verify that users receive timely alerts regarding fee changes.",2,3,2,2,0.0,2,3,1.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,1.0
+US028,done,9,"As a trainer, I want to update one of my existing courses or events, so that it reflects accurate information.","User Story:
+As an instructor, I want to modify the details of one of my current courses or events to ensure that the information presented is precise and up-to-date.
+
+Acceptance Criteria:
+- Successfully access the course or event for editing.
+- Implement changes to the course or event details.
+- Confirm that the updated information is accurately displayed to users.
+
+Test Outline:
+- Verify that the editing functionality is accessible for the selected course or event.
+- Check that the modifications are saved and reflected correctly.
+- Ensure that users can view the revised information without discrepancies.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US029,done,9,"As a trainer, I want to delete one of my courses or events, so that it's no longer listed if I cancel for some reason.","User Story:
+As an educator, I want the ability to remove a course or event from my listings, ensuring it is not displayed if I need to cancel it for any reason.
+
+Acceptance Criteria:
+- Effectively delete a selected course or event from the platform.
+- Confirm that the removed course or event no longer appears in my listings.
+- Ensure that all enrolled participants receive timely notifications about the cancellation.
+
+Test Outline:
+- Perform the deletion of a course or event and verify its successful removal.
+- Review the listings to confirm the absence of the deleted course or event.
+- Validate that notifications regarding the cancellation have been sent to users.",2,2,2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US030,done,9,"As a trainer, I want to copy one of my courses or events, so that I can create a new one.","User Story:
+As an educator, I want to replicate an existing course or event, allowing me to streamline the creation of a new offering.
+
+Acceptance Criteria:
+- Successfully generate a duplicate of the chosen course or event.
+- Ensure that all pertinent information and resources are carried over to the new iteration.
+- Facilitate straightforward adjustments to the replicated course or event.
+
+Test Outline:
+- Confirm that the duplication process preserves all essential details from the original.
+- Verify that the new course or event is editable without complications.
+- Ensure that the duplicated course or event appears as a distinct entry from the original.",1,2,2,2,0.0,1,3,2.0,2,2,0.0,1,2,1.0,2,2,0.0,0,2,2.0,1.0
+US031,done,9,"As a site admin, I want to delete any course or event, so that I can remove things that will no longer occur.","User Story:
+As a site administrator, I want the capability to permanently remove any course or event, allowing me to efficiently manage outdated or canceled listings on the platform.
+
+Acceptance Criteria:
+- Successfully execute the deletion of a course or event from the system.
+- Ensure that the deletion can be undone within a defined recovery window.
+- Confirm that users receive notifications regarding any courses or events that have been removed.
+
+Test Outline:
+- Assess the deletion feature across a range of courses and events.
+- Validate that items can be restored within the specified recovery timeframe.
+- Review user notifications to ensure they accurately reflect the deletions made.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US032,done,9,"As a site editor, I want to update any course or event, so that I can fix things the original author hasn't.","User Story:
+As a content administrator, I want the ability to modify any course or event details so that I can correct inaccuracies or enhance information that may have been overlooked by the original creator.
+
+Acceptance Criteria:
+- Complete permissions to edit all relevant course and event information
+- Edits can be saved smoothly without encountering any errors
+- A notification confirming the successful updates is displayed
+
+Test Outline:
+- Verify that the content administrator can access and edit all necessary course and event information
+- Ensure that changes are saved effectively and reflected immediately
+- Check that a confirmation message is shown after the updates are successfully completed",1,2,2,3,1.0,1,3,2.0,2,3,1.0,0,2,2.0,2,2,0.0,0,2,2.0,1.0
+US033,done,3,"As a trainer, I want to turn a course into an event or an event into a course, so that I can correctly classify anything that was entered incorrectly.","User Story:
+As an educator, I want to convert a course into an event or vice versa, enabling me to accurately categorize any entries that were misclassified.
+
+Acceptance Criteria:
+- Successfully transform a course into an event when needed.
+- Effectively change an event into a course as required.
+- Ensure all misclassified entries are correctly identified and reclassified.
+
+Test Outline:
+- Verify that a course can be converted to an event without data loss.
+- Check that an event can be transformed into a course seamlessly.
+- Validate that all previously misclassified entries are now accurately categorized.",2,3,2,2,0.0,2,3,1.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,1.0
+US034,done,3,"As a site visitor, I want to have an advanced search option that lets me fill in a form of search criteria, so that I can quickly find what I am looking for.","User Story:
+As a website visitor, I want to utilize an enhanced search feature that allows me to input specific search parameters, so that I can efficiently locate the information I need.
+
+Acceptance Criteria:
+- Provide a user-friendly form for entering search criteria.
+- Ensure search results are displayed within 3 seconds of submission.
+- Allow filtering options to refine search results based on user preferences.
+
+Test Outline:
+- Test the functionality of the search criteria form for usability.
+- Measure the response time for search results after form submission.
+- Verify that filtering options effectively narrow down the search results.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,1,3,2.0,1.0
+US035,done,9,"As a site visitor, I want to view a course I can click on the trainer's name and be taken to the trainer's profile, so that I can read more about a trainer before registering for a course.","User Story:
+As a prospective student, I want to click on the trainer's name to access their profile, allowing me to gather detailed insights about the trainer before deciding to enroll in a course.
+
+Acceptance Criteria:
+- Confirm that the trainer's name is interactive and redirects to their dedicated profile page.
+- Present thorough and relevant information about the trainer on their profile.
+- Ensure users can effortlessly return to the course page after exploring the trainer's profile.
+
+Test Outline:
+- Validate that clicking the trainer's name successfully navigates to the appropriate profile.
+- Assess the trainer's profile for the depth and relevance of the information provided.
+- Check that users can return to the course page without any navigation issues.",2,2,2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,3,1.0,1,2,1.0,0.0
+US036,done,9,"As a site visitor, I want to subscribe to an RSS feed of upcoming courses and events, so that I am up to day without having to visit the site.","User Story:
+As a site visitor, I want to enroll in an RSS feed for upcoming courses and events, enabling me to stay informed without needing to frequently check the website.
+
+Acceptance Criteria:
+- Successfully subscribe to the RSS feed for courses and events.
+- Receive timely updates through the feed whenever new content is available.
+- Ensure the feed is accessible and easy to integrate with various RSS readers.
+
+Test Outline:
+- Verify that the subscription process for the RSS feed is functional.
+- Check for timely updates in the RSS feed after new courses or events are posted.
+- Test the feed's compatibility with multiple RSS reader applications.",2,2,2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,3,1.0,1,2,1.0,0.0
+US037,done,9,"As a site visitor, I want to read FAQs, so that I can get quick answers.","User Story:
+As a visitor to the website, I want to easily locate the FAQ section so that I can quickly find answers to my queries.
+
+Acceptance Criteria:
+- The FAQ section is prominently featured and easily accessible from the homepage.
+- Each entry in the FAQ provides straightforward and informative responses.
+- The section is regularly refreshed to include the most frequently asked questions.
+
+Test Outline:
+- Confirm that the FAQ link is clearly visible on the homepage.
+- Assess that each FAQ entry delivers clear and useful information.
+- Examine the FAQ section for recent updates to ensure it remains relevant.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US038,done,9,"As a site editor, I want to maintain a FAQ section, so that support gets fewer easily answered questions.","User Story:
+As a content manager, I aim to create a detailed FAQ section to reduce the number of common inquiries directed to the support team.
+
+Acceptance Criteria:
+- Compile a thorough list of common questions along with their detailed answers.
+- Ensure the FAQ section is prominently displayed and easy to navigate on the website.
+- Regularly review and refresh the FAQ content based on user feedback and emerging trends.
+
+Test Outline:
+- Evaluate the FAQ section for thoroughness and user-friendliness.
+- Analyze the change in support inquiry volume before and after the FAQ launch.
+- Use analytics to measure user interaction and engagement with the FAQ section.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US039,done,3,"As a site visitor, I want to do a full-text search of the FAQs, so that I can find an answer quickly.","User Story:
+As a website visitor, I want to perform a comprehensive search of the FAQs so that I can swiftly locate the information I need.
+
+Acceptance Criteria:
+- Enable full-text search functionality across all FAQ entries.
+- Ensure search results are displayed within 2 seconds.
+- Provide relevant suggestions as users type their queries.
+
+Test Outline:
+- Test the search feature with various keywords to confirm it retrieves accurate results.
+- Measure the response time for search results to ensure it meets the 2-second requirement.
+- Verify that the search bar offers relevant suggestions during input.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,1,3,2.0,1.0
+US040,done,9,"As a site member, I want to download the latest training material and methodology PDFs, so that I have them.","User Story:
+As a registered user of the platform, I want seamless access to download the latest training materials and methodology PDFs, ensuring I have the most up-to-date resources at my fingertips.
+
+Acceptance Criteria:
+- Provide a clear and accessible option for downloading the latest training material PDFs.
+- Ensure that methodology PDFs are easily available for download.
+- Confirm that all downloaded files are the latest versions and correctly formatted.
+
+Test Outline:
+- Verify that the download links for training materials function correctly and lead users to the most recent files.
+- Check that methodology PDFs can be downloaded without any issues.
+- Evaluate the quality and formatting of the downloaded files to ensure they meet established standards.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US041,done,9,"As a visitor, I want to download presentations, PDFs, etc. on Scrum, so that I can learn from them or use them.","User Story:
+As a site visitor, I want to access and download various resources such as presentations and PDFs on Scrum, so that I can enhance my knowledge and apply the concepts effectively.
+
+Acceptance Criteria:
+- Provide a clear list of downloadable resources related to Scrum.
+- Ensure all downloadable files are accessible without errors.
+- Confirm that the downloads are in commonly used formats (e.g., PDF, PPT).
+
+Test Outline:
+- Verify that the resource list includes relevant Scrum materials.
+- Test the download functionality for each resource to ensure they work correctly.
+- Check that the files are in the specified formats and can be opened without issues.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US042,done,9,"As a site member, I want to scroll through a listing of jobs, so that I can see if there any I am interested in.","User Story:
+As a registered user, I want to browse a comprehensive selection of job opportunities so that I can find positions that match my professional goals.
+
+Acceptance Criteria:
+- Display a well-organized list of available job openings.
+- Provide a fluid scrolling experience through the job listings for continuous engagement.
+- Highlight job titles and essential details for quick identification.
+
+Test Outline:
+- Verify that the job listings are correctly presented and easy to navigate.
+- Assess the scrolling functionality for responsiveness and fluidity.
+- Check that job titles and key information are clearly visible and stand out.",1,2,2,2,0.0,1,2,1.0,2,2,0.0,1,1,0.0,2,2,0.0,0,2,2.0,1.0
+US043,done,3,"As a recruiter, I want to post a help wanted ad, so that I can attract candidates.","User Story:
+As a hiring manager, I want to publish a job advertisement so that I can draw in qualified candidates for open positions.
+
+Acceptance Criteria:
+- Successfully create and submit a help wanted ad.
+- Ensure the ad is visible on relevant job boards and platforms.
+- Track the number of applications received within a specified timeframe.
+
+Test Outline:
+- Verify that the job ad is posted and accessible to potential applicants.
+- Monitor the visibility of the ad across various recruitment channels.
+- Analyze the volume of applications generated in response to the ad.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,1,3,2.0,1.0
+US044,done,9,"As a site admin, I want to approve each help wanted ad before it gets to the site, so that we're sure of the quality of jobs being listed.","User Story:
+As a site administrator, I want to assess and authorize every job listing prior to its publication, ensuring that only high-quality opportunities are presented on the platform.
+
+Acceptance Criteria:
+- Implement a rigorous evaluation process for all incoming job listings.
+- Ensure that only thoroughly vetted and sanctioned advertisements are visible to users.
+- Maintain a detailed tracking system that monitors each job listing from submission to final approval.
+
+Test Outline:
+- Verify that all job listings require administrator approval before they can be published.
+- Confirm that any listings lacking approval are not visible on the website.
+- Examine the tracking system to ensure it accurately reflects the status of each job listing throughout the approval process.",2,2,2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,2,0.0,1,3,2.0,0.0
+US045,done,9,"As a site admin, I want to be emailed whenever a job is submitted, so that I am aware of it and can decide if I want to post it.","User Story:
+As a site administrator, I want to receive email notifications for every job submission, so that I can stay informed and determine whether to publish the listing.
+
+Acceptance Criteria:
+- Receive an email alert immediately upon job submission.
+- Ensure the email contains all relevant job details for review.
+- Confirm that notifications are sent without delays or errors.
+
+Test Outline:
+- Submit a job and check for the corresponding email notification.
+- Verify that the email includes complete and accurate job information.
+- Test the system for any delays in sending notifications.",2,2,2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US046,done,3,"As a site member, I want to subscribe to an RSS feed of jobs available, so that I can read them without visiting the site.","User Story:
+As a registered member of the site, I want to enroll in an RSS feed for job listings so that I can conveniently access and read them without needing to navigate to the website.
+
+Acceptance Criteria:
+- Successfully subscribe to the RSS feed for job opportunities.
+- Receive timely updates through the RSS feed whenever new jobs are posted.
+- Ensure the feed displays job listings accurately and in a user-friendly format.
+
+Test Outline:
+- Verify that the subscription process to the RSS feed is seamless and functional.
+- Check the RSS feed for timely updates on new job postings.
+- Validate that the job listings are presented correctly in the feed.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,1.0
+US047,done,9,"As a site admin, I want to edit and delete help wanted ads, so that I can correct small problems or make sure each ad complies with site guidelines.","User Story:
+As a site administrator, I want the ability to modify and delete help wanted postings, allowing me to rectify any errors and maintain adherence to the site's standards.
+
+Acceptance Criteria:
+- Enable the editing of current help wanted postings to fix any inaccuracies.
+- Allow for the deletion of postings that do not comply with the site's criteria.
+- Ensure that all modifications are reflected on the site in real-time.
+
+Test Outline:
+- Verify that the editing functionality successfully updates the posting.
+- Check that deleted postings are no longer visible on the site.
+- Confirm that all modifications comply with the site's established guidelines.",2,2,2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,3,1.0,1,2,1.0,0.0
+US048,done,6,"As a site admin, I want to stop publishing jobs on the site 30 days after being posted, so that jobs that may have been filled aren't still listed when the hiring party forgets to come back and delete the ad.","User Story:
+As a site administrator, I want to automate the removal of job postings 30 days after they are published, ensuring that outdated listings are not displayed when employers fail to delete them.
+
+Acceptance Criteria:
+- Develop a mechanism that detects and marks job postings for removal after a 30-day period.
+- Guarantee that marked job postings are no longer accessible to users on the platform.
+- Notify the employer prior to the removal of their job listing.
+
+Test Outline:
+- Confirm that job postings are marked for removal precisely 30 days after their publication date.
+- Ensure that marked postings are concealed from public access.
+- Validate that notifications are dispatched to employers before their job listings are removed.",2,3,2,2,0.0,2,3,1.0,2,2,0.0,2,3,1.0,2,3,1.0,1,3,2.0,1.0
+US049,done,9,"As a recruiter, I want to be able to extend an ad for another 30 days by visiting the site and updating the posting, so that my ad remains active.","User Story:
+As a recruitment coordinator, I want to extend the visibility of my job listing for an additional 30 days by accessing the platform and updating the advertisement, ensuring it continues to attract qualified candidates.
+
+Acceptance Criteria:
+- Successfully log into the platform and locate the specific job listing.
+- Modify the advertisement to extend its active period by 30 days.
+- Verify that the job listing remains live and visible to prospective applicants.
+
+Test Outline:
+- Confirm the ability to log in and find the targeted job listing.
+- Ensure the extension process is executed smoothly without any errors.
+- Check that the advertisement is still active and accessible to candidates after the modification.",2,2,2,2,0.0,2,3,1.0,2,2,0.0,2,2,0.0,2,3,1.0,1,2,1.0,0.0
+US050,done,9,"As an advertiser, I want to be emailed a reminder seven day before an ad is about to expire, so that I can go extend the ad.","User Story:
+As an advertiser, I want to receive an email alert one week before my advertisement expires, enabling me to take timely action to prolong its visibility.
+
+Acceptance Criteria:
+- Receive a notification email precisely seven days prior to the advertisement's expiration.
+- Ensure the email includes essential information about the ad and available extension options.
+- Confirm that reminders are dispatched for all active advertisements approaching their expiration date.
+
+Test Outline:
+- Monitor the email inbox for the reminder notification exactly one week before the ad's expiration.
+- Verify that the email contains all pertinent details regarding the advertisement and the extension procedure.
+- Test the system to ensure that reminders are consistently generated for all relevant ads.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,0.0
+US051,done,9,"As a site visitor, I want to read a new article on the front page about once a week, so that I am up on all the latest happenings.","User Story:
+As a frequent visitor to the site, I want a newly released article prominently displayed on the homepage each week, so that I stay informed about the latest news and developments.
+
+Acceptance Criteria:
+- Guarantee that a new article is showcased on the homepage at least once every week.
+- The article should cover relevant and timely topics of interest to the audience.
+- Users must receive notifications when a new article is published.
+
+Test Outline:
+- Review the homepage weekly to verify the availability of a new article.
+- Evaluate the article's content for its relevance and contemporary importance.
+- Ensure that users are promptly alerted about the publication of new articles.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US052,done,9,"As the site editor, I want to include a teaser with each article, so that site visitors can decide if they want to read the rest.","User Story:
+As a content curator, I aim to create captivating teasers for each article, enabling site visitors to quickly assess their interest in delving into the full content.
+
+Acceptance Criteria:
+- Each article must include a teaser that does not exceed 150 characters.
+- Teasers should effectively summarize the article's main themes.
+- Ensure that teasers are prominently featured on the article overview page for easy visibility.
+
+Test Outline:
+- Review multiple articles to confirm the presence of a teaser.
+- Verify that all teasers adhere to the 150-character maximum.
+- Evaluate the prominence and strategic positioning of teasers on the website.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,0.0
+US053,done,3,"As a site member who has read a teaser on the front page, I want to read the entire article so that I can finish articles that appeal to me.","User Story:
+As a registered member of the site who has seen a preview on the homepage, I want to access the full article so that I can complete reading content that interests me.
+
+Acceptance Criteria:
+- Provide a seamless link from the teaser to the full article.
+- Ensure the full article loads without delays.
+- Confirm that all articles are accessible to members who have viewed the teaser.
+
+Test Outline:
+- Test the functionality of the link from the teaser to the full article.
+- Measure the loading time of the full article.
+- Verify that all articles are available for reading after engaging with the teaser.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,3,2.0,1.0
+US054,done,9,"As the site editor, I want to add an article to the site, so that the site has plenty of content.","User Story:
+As a content manager, I aim to publish a new article on the website to enhance the site's content portfolio and captivate our audience.
+
+Acceptance Criteria:
+- Successfully draft and format the article for online publication
+- Ensure the article is live on the site within a 24-hour timeframe
+- Confirm that the article is tagged and categorized appropriately for improved discoverability
+
+Test Outline:
+- Review the article's formatting and content accuracy prior to publication
+- Track the publication process to ensure adherence to the 24-hour timeline
+- Assess the article's visibility and searchability on the website",2,2,2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US055,done,3,"As a site editor, I want to set start publishing dates, old article date, and stop publishing dates for articles, so that articles appear only during appropriate periods.","User Story:
+As a content manager, I want to establish start and end publishing dates for articles, as well as specify the original publication date, so that articles are displayed only during designated timeframes.
+
+Acceptance Criteria:
+- Ability to set a start date for when an article becomes visible.
+- Ability to define an original publication date for archival purposes.
+- Ability to set an end date for when an article should no longer be accessible.
+
+Test Outline:
+- Verify that articles are published according to the specified start and end dates.
+- Check that the original publication date is correctly recorded and displayed.
+- Ensure that articles are hidden after the end date has passed.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,1,3,2.0,1.0
+US056,done,9,"As a site editor, I want to be able to designate whether or not an ever makes the home page, so that the best content is featured most prominently.","User Story:
+As a content editor, I want the ability to select which articles appear on the homepage, ensuring that the most valuable content is highlighted for maximum visibility.
+
+Acceptance Criteria:
+- Implement a feature to mark articles for homepage display.
+- Ensure that only designated articles are showcased on the homepage.
+- Provide an easy-to-use interface for managing homepage content.
+
+Test Outline:
+- Verify that the selection feature allows for marking articles for the homepage.
+- Check that only the selected articles are visible on the homepage.
+- Test the interface for usability and accessibility in managing content.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US057,done,9,"As the site editor, I want to have pretty good control over how the article, so that articles are visually appealing.","User Story:
+As a content editor, I want to exert significant influence over the layout and design of articles so that the presentation captivates and retains reader interest.
+
+Acceptance Criteria:
+- Enable customization of font types and sizes for both headings and body content
+- Provide options for adjusting the positioning and dimensions of images within the article
+- Equip editors with tools to format text using bullet points, quotations, and various styling options
+
+Test Outline:
+- Confirm that font customization features work effectively and reflect updates in the article's appearance
+- Validate that images can be moved and resized according to the editor's specifications
+- Ensure that text formatting tools are user-friendly and yield the intended visual enhancements",1,2,1,3,2.0,1,3,2.0,2,3,1.0,0,2,2.0,2,2,0.0,0,2,2.0,1.0
+US058,done,3,"As a site visitor, I want to click the link from the article teaser to take me directly to the body of the article. not to another teaser setup, so that I can easily finish the article.","User Story:
+As a website visitor, I want to click on the link from the article preview to be taken directly to the full article, rather than being redirected to another preview, so that I can seamlessly read and complete the article.
+
+Acceptance Criteria:
+- The link from the article teaser leads directly to the article body.
+- No intermediate teaser pages are presented when accessing the article.
+- Users can access the full content without additional clicks.
+
+Test Outline:
+- Click on the article teaser link and verify it directs to the full article.
+- Ensure that no teaser setup appears before the article body.
+- Confirm that the article loads completely without requiring further navigation.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,3,2.0,1.0
+US059,done,3,"As a site editor, I want to be able to indicate whether an article is publicly available or for members only, so that visitors are incentivized to become members.","User Story:
+As a content editor, I want to specify if an article is accessible to the public or restricted to members only, so that potential visitors are motivated to sign up for membership.
+
+Acceptance Criteria:
+- Clearly mark articles as ""Public"" or ""Members Only""
+- Ensure that access restrictions are enforced based on the designation
+- Track membership sign-ups resulting from article visibility
+
+Test Outline:
+- Verify that articles are correctly labeled according to their access level
+- Test access to articles to confirm restrictions are applied accurately
+- Analyze membership sign-up data to assess the impact of article availability",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,2,0.0,1,3,2.0,1.0
+US060,done,3,"As a site visitor, I want to be able to read some of your articles, so that I can learn without first joining the site.","User Story:
+As a prospective reader, I want to access a selection of articles on your site so that I can gain knowledge without needing to register first.
+
+Acceptance Criteria:
+- Provide access to a limited number of articles without requiring user registration.
+- Ensure that the articles are easily discoverable on the homepage.
+- Allow visitors to read at least 3 articles before prompting for sign-up.
+
+Test Outline:
+- Verify that a selection of articles is available for reading without login.
+- Check the visibility and accessibility of these articles on the homepage.
+- Confirm that the system allows reading of at least 3 articles before a registration prompt appears.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,3,2.0,1.0
+US061,done,9,"As a site member, I want to have full access to all articles, so that there is a benefit to being a member.","User Story:
+As a premium member of the platform, I want to have unrestricted access to all articles, ensuring that my subscription provides tangible value.
+
+Acceptance Criteria:
+- Members can effortlessly view and read all articles without any limitations.
+- Content exclusive to members is clearly identified for easy recognition.
+- An alert system notifies members about the release of new articles.
+
+Test Outline:
+- Verify that all articles are accessible to members without any restrictions.
+- Check that exclusive content is prominently marked for member visibility.
+- Test the notification system to ensure members receive prompt alerts regarding new article publications.",2,3,2,2,0.0,2,3,1.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,1.0
+US062,done,3,"As a site visitor, I want to do a full-text search of article body, title, and author name, so that I can find what I want.","User Story:
+As a website visitor, I want to perform a comprehensive search across article content, titles, and author names, so that I can easily locate the information I need.
+
+Acceptance Criteria:
+- Enable full-text search functionality across all articles.
+- Ensure search results include matches from the body, title, and author name.
+- Provide relevant results within a reasonable response time.
+
+Test Outline:
+- Test the search feature with various keywords to confirm it retrieves accurate results.
+- Verify that results display matches from the article body, title, and author.
+- Measure the response time to ensure it meets user expectations.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,1.0
+US063,done,3,"As a site visitor, I want to subscribe to an RSS feed of articles, so that I can read them without visiting the site.","User Story:
+As a site visitor, I want to enroll in an RSS feed for articles so that I can conveniently access and read them without needing to navigate to the website.
+
+Acceptance Criteria:
+- Successfully subscribe to the RSS feed with a confirmation message.
+- Receive updates for new articles through the RSS feed.
+- Ensure the feed is updated in real-time with the latest content.
+
+Test Outline:
+- Verify that the subscription process completes with a confirmation.
+- Check the RSS feed for timely updates on new articles.
+- Test the feed's functionality by accessing it from an RSS reader.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,1.0
+US064,done,9,"As a site visitor, I want to post comments about articles, so that others can read them.","User Story:
+As a website visitor, I want to share my thoughts on articles by posting comments, which will encourage interaction and dialogue among readers.
+
+Acceptance Criteria:
+- Successfully submit a comment on an article.
+- Ensure that the comment is visible to other users on the article's page.
+- Allow users to edit or delete their comments after they have been posted.
+
+Test Outline:
+- Verify that a comment can be submitted successfully on an article.
+- Check that the comment appears on the article page for other users to view.
+- Test the functionality for editing and deleting comments to confirm they work as intended.",2,2,2,2,0.0,1,3,2.0,2,2,0.0,1,2,1.0,2,2,0.0,1,3,2.0,0.0
+US065,done,3,"As a site editor, I want to have a prominent area on the home page where I can put special announcements not necessarily news or articles, so that I can give them additional exposure.","User Story:
+As a website editor, I want a dedicated section on the homepage for highlighting special announcements that aren't limited to news or articles, so that I can enhance their visibility and engagement.
+
+Acceptance Criteria:
+- Create a visually distinct area on the homepage for special announcements.
+- Ensure the section is easily editable by the site editor.
+- Allow for the inclusion of various media types (text, images, links) in the announcements.
+
+Test Outline:
+- Verify the presence of the new announcement section on the homepage.
+- Test the editing functionality to ensure ease of use for the site editor.
+- Check that different media types can be successfully displayed within the section.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,1.0
+US066,done,9,"As a site editor, I want to have some flexibility as to where things appear, so that I can accommodate different types of content.","User Story:
+As a content manager, I seek the ability to customize the layout of website elements, enabling me to effectively showcase a variety of content types.
+
+Acceptance Criteria:
+- Allow users to reposition content blocks anywhere on the page.
+- Support the creation of additional content sections as needed.
+- Guarantee that all changes can be saved and published seamlessly, free from technical errors.
+
+Test Outline:
+- Evaluate the functionality to move content blocks to different locations.
+- Verify that new content sections can be added and displayed correctly.
+- Ensure that all modifications can be saved and published without complications.",1,2,2,2,0.0,1,3,2.0,2,2,0.0,0,2,2.0,2,2,0.0,0,2,2.0,1.0
+US067,done,9,"As a trainer, I want to see the upcoming courses are what I want visitors to notice, so that they register and there's a benefit to my membership.","User Story:
+As a course coordinator, I want to prominently highlight upcoming courses on the homepage to inspire potential participants to enroll, thereby enhancing the overall value of my membership offerings.
+
+Acceptance Criteria:
+- Ensure that upcoming courses are featured prominently on the homepage for optimal visibility.
+- Track enrollment figures for the highlighted courses to assess interest.
+- Gather participant feedback to measure the success of the promotional efforts.
+
+Test Outline:
+- Verify that upcoming courses are easily accessible and visually appealing on the website.
+- Analyze registration data to evaluate the impact of the visibility improvements.
+- Conduct surveys to collect feedback from participants about their awareness of the courses.",1,2,1,2,1.0,1,3,2.0,2,2,0.0,0,2,2.0,2,2,0.0,0,2,2.0,1.0
+US068,done,3,"As a site visitor, I want to see new content when I come to the site, so that I come back more often.","User Story:
+As a website visitor, I want to access fresh content upon my arrival so that I am encouraged to return frequently.
+
+Acceptance Criteria:
+- Display updated content on the homepage each time a visitor logs in.
+- Ensure that at least 3 new articles or features are available for viewing.
+- Track visitor engagement metrics to assess return rates.
+
+Test Outline:
+- Verify that new content is presented on the homepage for each visit.
+- Check that the number of new articles or features meets the minimum requirement.
+- Analyze visitor return rates to evaluate the effectiveness of the content updates.",1,3,2,3,1.0,1,3,2.0,2,3,1.0,1,2,1.0,2,3,1.0,0,2,2.0,2.0
+US069,done,3,"As a site visitor, I want to have articles that interest me and are easy to get to, so that I come to the site for my agile news and learning.","User Story:
+As a site visitor, I want to access engaging articles that align with my interests effortlessly, so that I consistently return to the site for the latest insights and learning in agile methodologies.
+
+Acceptance Criteria:
+- Curate a selection of articles tailored to user preferences.
+- Ensure articles are easily navigable from the homepage.
+- Track user engagement metrics to assess return visits.
+
+Test Outline:
+- Analyze user interaction data to confirm article relevance.
+- Test navigation pathways to ensure seamless access to articles.
+- Monitor return visit rates to evaluate the effectiveness of content curation.",1,3,1,3,2.0,1,3,2.0,2,3,1.0,1,3,2.0,1,3,2.0,0,3,3.0,2.0
+US070,done,9,"As a site visitor, I want to know as soon as I visit what on earth Scrum is and why it needs an alliance, so that I don't bounce immediately oﬀ the page.","User Story:
+As a visitor to the website, I want to swiftly grasp the fundamentals of Scrum and the value of its alliance upon arriving at the page, so that I stay engaged and do not exit immediately.
+
+Acceptance Criteria:
+- Deliver a succinct and clear overview of Scrum within the initial seconds of page loading.
+- Emphasize the relevance of the Scrum alliance in a captivating manner.
+- Ensure that the content is visually appealing and easily navigable to maintain visitor interest.
+
+Test Outline:
+- Evaluate the clarity and prominence of the Scrum overview on the landing page.
+- Collect user insights regarding the perceived significance of the Scrum alliance.
+- Track bounce rates to assess visitor engagement following the implementation of enhancements.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US071,done,9,"As a site visitor, I want to know as I glance around the home page what on earth a CSM is and why I'd want to be one, so that I read more.","User Story:
+As an aspiring visitor, I want to quickly understand the role of a Customer Success Manager (CSM) and the benefits of pursuing this profession while browsing the homepage, so that I feel inspired to explore more detailed information.
+
+Acceptance Criteria:
+- Present a clear and compelling definition of a CSM prominently on the homepage.
+- Highlight the key advantages and career opportunities associated with the CSM position.
+- Include engaging visuals or testimonials that captivate visitors and motivate them to seek further information.
+
+Test Outline:
+- Assess the visibility and clarity of the CSM definition on the homepage.
+- Evaluate the effectiveness of the content in conveying the advantages of the CSM role.
+- Monitor user engagement metrics to determine if visitors are clicking to discover more about the CSM career.",1,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,0,2,2.0,1.0
+US072,done,3,"As a site visitor, I want to be able to get back to the home page quickly and easily, so that I don't get lost navigating.","User Story:
+As a website visitor, I want a straightforward way to return to the homepage so that I can navigate the site without confusion.
+
+Acceptance Criteria:
+- Provide a prominent home button on every page.
+- Ensure the home button is accessible within two clicks from any location on the site.
+- Confirm that clicking the home button redirects to the homepage instantly.
+
+Test Outline:
+- Check the visibility and placement of the home button on various pages.
+- Test the number of clicks required to reach the homepage from different sections.
+- Measure the loading time of the homepage after clicking the home button.",1,3,2,3,1.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,0,3,3.0,2.0
+US073,done,3,"As a site visitor, I want to see a list of the most popular items on the site, so that I am most likely to read the most important or best content.","User Story:
+As a site visitor, I want to access a curated list of the most popular items on the website, so that I can easily engage with the most relevant and high-quality content.
+
+Acceptance Criteria:
+- Display a list of the top 10 most popular items based on user engagement metrics.
+- Update the list dynamically to reflect real-time popularity changes.
+- Ensure the list is easily accessible from the homepage.
+
+Test Outline:
+- Verify that the list of popular items is visible on the site.
+- Check that the items are updated regularly based on user interactions.
+- Test the accessibility of the list from the homepage to ensure user convenience.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,1,3,2.0,1.0
+US074,done,3,"As a trainer, I want to be assured that no one can submit the same answers multiple time and skew my results, so that my ratings are accurate.","User Story:
+As a training facilitator, I want to ensure that duplicate answer submissions are prevented, so that the integrity of my evaluation results remains intact and my ratings reflect true performance.
+
+Acceptance Criteria:
+- Implement a mechanism to detect and block repeated answer submissions from the same user.
+- Provide real-time feedback to users attempting to submit duplicate responses.
+- Ensure that the final ratings are based solely on unique submissions.
+
+Test Outline:
+- Test the system by attempting to submit the same answers multiple times and verify that the submissions are blocked.
+- Check for user notifications when a duplicate submission is attempted.
+- Analyze the final ratings to confirm they are derived from unique responses only.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,1,3,2.0,1.0
+US075,done,9,"As a trainer, I want to be notified about the results of surveys about my classes, so that I can read them.","User Story:
+As an instructor, I want to receive timely alerts regarding survey outcomes related to my courses, allowing me to assess and analyze the feedback effectively.
+
+Acceptance Criteria:
+- Obtain instant notifications as soon as each survey concludes.
+- Access detailed survey results displayed in a user-friendly format.
+- Ensure that feedback is categorized for efficient analysis.
+
+Test Outline:
+- Verify that notifications are sent immediately after a survey is completed.
+- Assess the clarity and accessibility of the survey results presentation.
+- Analyze the categorization of feedback to confirm it improves understanding and usability.",2,2,2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US076,done,3,"As a site admin, I want to see the results for each trainer and averages for the class, so that I can identify any outliers or possible problems.","User Story:
+As a site administrator, I want to access performance results for each trainer along with average metrics for the class, enabling me to pinpoint any anomalies or potential issues.
+
+Acceptance Criteria:
+- Display individual performance results for all trainers.
+- Calculate and present average metrics for the entire class.
+- Highlight any outliers that may indicate problems.
+
+Test Outline:
+- Verify that the results for each trainer are accurately displayed.
+- Check that the average metrics for the class are correctly calculated.
+- Ensure that any outliers are clearly identified and flagged for review.",2,3,2,2,0.0,2,3,1.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,1.0
+US077,done,3,"As a site visitor, I want to see a trainer's rating, so that I choose a course from an appropriate trainer.","User Story:
+As a prospective student, I want to view the ratings of trainers so that I can select a course taught by a qualified instructor.
+
+Acceptance Criteria:
+- Display trainer ratings prominently on the course selection page
+- Ensure ratings are updated in real-time based on user feedback
+- Allow filtering of courses based on trainer ratings
+
+Test Outline:
+- Check that trainer ratings are visible and correctly displayed for each course
+- Verify that ratings reflect the most recent user evaluations
+- Test the filtering functionality to ensure it works as intended based on ratings",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,3,2.0,1.0
+US078,done,9,"As a trainer, I want to show my rating up on my profile page, so that site visitors can choose wisely.","User Story:
+As a fitness coach, I want my rating to be prominently featured on my profile page, allowing prospective clients to make well-informed choices.
+
+Acceptance Criteria:
+- The rating is clearly displayed and easily accessible on the profile page.
+- The rating updates in real-time based on client feedback.
+- The rating system is designed to be intuitive and user-friendly for site visitors.
+
+Test Outline:
+- Inspect the profile page to confirm the rating's visibility and prominence.
+- Provide feedback to ensure the rating reflects changes accurately.
+- Assess the user interface for clarity and ease of navigation.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US079,done,9,"As a site visitor, I want to view a section of the website that teaches me the basics of what Scrum is, so that I can learn that quickly.","User Story:
+As a website visitor, I want to access a dedicated section that clearly articulates the essential principles of Scrum, enabling me to swiftly grasp the foundational concepts.
+
+Acceptance Criteria:
+- The section provides clear and concise explanations of Scrum principles.
+- It incorporates visual elements or real-world examples to aid understanding.
+- The content is organized for seamless navigation, reachable within two clicks from the homepage.
+
+Test Outline:
+- Review the section for clarity and completeness in presenting Scrum principles.
+- Confirm the presence of visual aids or examples that enhance the educational experience.
+- Test the navigation to ensure the section is accessible within the specified two clicks.",2,2,2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,3,1.0,1,2,1.0,0.0
+US080,done,9,"As a site editor, I want to create the content of the What Is Scrum section, so that it's there for visitors.","User Story:
+As a content creator, I aim to construct the ""What Is Scrum"" section to deliver insightful and valuable information to website visitors.
+
+Acceptance Criteria:
+- Compose a detailed and informative overview of the Scrum framework.
+- Ensure the writing is engaging and easily digestible for readers.
+- Make the section live on the website for public viewing.
+
+Test Outline:
+- Evaluate the drafted content for clarity, depth, and thoroughness.
+- Verify that the section is accessible and properly displayed on the website.
+- Collect user feedback to assess the relevance and helpfulness of the information presented.",1,2,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,0,2,2.0,1.0
+US081,done,3,"As a site visitor, I want to view lists on the site of all Certified Scrum Masters, Practitioners, Trainers, and Certified Scrum Product Owners.","User Story:
+As a site visitor, I want to access comprehensive lists of all Certified Scrum Masters, Practitioners, Trainers, and Certified Scrum Product Owners on the website so that I can easily find qualified professionals in these roles.
+
+Acceptance Criteria:
+- Display an organized list of Certified Scrum Masters, Practitioners, Trainers, and Certified Scrum Product Owners.
+- Ensure that each listing includes relevant details such as names, certifications, and contact information.
+- Implement a search or filter feature to help users quickly locate specific professionals.
+
+Test Outline:
+- Verify that the lists are accessible and correctly categorized on the site.
+- Check that all necessary information is present for each professional listed.
+- Test the search or filter functionality to ensure it works as intended.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,1.0
+US082,done,9,"As a CSM, I want to have my name listed in the registry without becoming a member of the site, so that employers or others can verify my certification.","User Story:
+As a Customer Success Manager, I want my name to be automatically added to the certification registry without requiring site membership, allowing potential employers and others to easily verify my credentials.
+
+Acceptance Criteria:
+- My name is accurately displayed in the certification registry.
+- Inclusion in the registry does not require any membership prerequisites.
+- The verification process for employers is smooth and efficient.
+
+Test Outline:
+- Confirm that my name is correctly listed in the certification registry.
+- Check that accessing the registry does not require membership registration.
+- Assess the verification process to ensure it is user-friendly for employers.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US083,done,9,"As a trainer, I want to load an Excel file into the site, so that the course participants are added to the Scrum Alliance records.","User Story:
+As a course coordinator, I want to seamlessly upload an Excel spreadsheet to the platform, enabling the swift integration of course participants into the Scrum Alliance database.
+
+Acceptance Criteria:
+- Successfully complete the Excel file upload without any errors.
+- Verify that every course participant is accurately reflected in the Scrum Alliance database.
+- Ensure the upload process is completed within a specified time frame.
+
+Test Outline:
+- Test the upload functionality with a sample Excel file to confirm it works correctly.
+- Check the Scrum Alliance database to ensure all participants from the uploaded spreadsheet are present.
+- Measure the time taken for the upload to ensure it meets the required performance benchmarks.",2,3,2,2,0.0,2,3,1.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,1.0
+US084,done,3,"As a site admin, I want to view all classes in a pending state, so that I can approve any that need to be approved.","User Story:
+As a site administrator, I want to access a comprehensive list of classes that are currently pending approval, so that I can efficiently review and authorize those that require my approval.
+
+Acceptance Criteria:
+- Display all classes categorized as pending in a dedicated section.
+- Provide a clear indication of which classes are awaiting approval.
+- Enable quick approval actions for each pending class.
+
+Test Outline:
+- Verify that the pending classes are accurately listed on the admin interface.
+- Check that each class shows its pending status clearly.
+- Test the approval functionality to ensure it works seamlessly for each class.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,3,2.0,1.0
+US085,done,9,"As a site admin, I want to move people in a trainer's class from a pending state to the registry once I have received proof of payment from the trainer.","User Story:
+As a site administrator, I want to transition participants in a trainer's class from a pending status to an official registration after confirming their payment from the trainer.
+
+Acceptance Criteria:
+- Verify the receipt of payment confirmation from the trainer.
+- Successfully update the status of participants from pending to officially registered.
+- Ensure the registry reflects these changes in real-time.
+
+Test Outline:
+- Validate that the payment confirmation is received and accurately logged.
+- Check the participant status in the registry to confirm the update was successful.
+- Monitor the registry for immediate accuracy after the status change.",2,2,2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US086,done,9,"As a CSM, I want to be sent an email welcoming me to the Scrum Alliance and with instructions to register or activate my membership once my name has been loaded to the registry.","User Story:
+As a Customer Success Manager, I want to receive a prompt welcome email from the Scrum Alliance that offers clear instructions for activating my membership once my name is added to the registry.
+
+Acceptance Criteria:
+- The welcome email is sent immediately after my registration is completed.
+- The email contains thorough guidance for the membership activation process.
+- Ensure the email is directed to the accurate address linked to my account.
+
+Test Outline:
+- Verify that the welcome email arrives without delay following my registration.
+- Examine the email to confirm it includes detailed instructions for activation.
+- Check that the email is sent to the correct email address associated with my account.",2,2,2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,2,0.0,1,3,2.0,0.0
+US087,done,9,"As a site editor, I want to edit the content of the email automatically sent to new Certified Scrum Masters and Product Owners, so that I don't need to involve a programmer on simple email edits.","User Story:
+As a content manager, I want to easily update the automated emails sent to newly certified Scrum Masters and Product Owners, allowing me to make quick modifications without needing a developer's help.
+
+Acceptance Criteria:
+- Gain access to an intuitive interface for editing the email content.
+- Successfully save modifications to the email template without encountering errors.
+- Preview the email prior to dispatch to verify its correctness.
+
+Test Outline:
+- Confirm that the content manager can navigate to the email editing interface.
+- Test the save function to ensure that changes are accurately recorded.
+- Validate the preview feature to check that it displays the revised content correctly.",2,2,2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,3,1.0,1,2,1.0,0.0
+US088,done,3,"As a company, I want to join the Scrum Alliance by paying a corporate membership fee, so that I can show the company's support of Scrum.","User Story:
+As a business entity, I want to enroll in the Scrum Alliance by submitting a corporate membership fee, so that I can demonstrate our commitment to the Scrum framework.
+
+Acceptance Criteria:
+- Complete the application process for corporate membership.
+- Process the payment of the membership fee successfully.
+- Receive confirmation of membership from the Scrum Alliance.
+
+Test Outline:
+- Verify that the application for corporate membership is submitted correctly.
+- Check that the payment transaction is completed without issues.
+- Confirm receipt of the membership confirmation email from the Scrum Alliance.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,2,0.0,1,3,2.0,1.0
+US089,done,6,"As a corporatesponsor, I want to display my logo on a corporate sponsors page, so that others see the company's support of Scrum.","User Story:
+As a corporate sponsor, I want to feature my logo on the sponsors page to demonstrate my company's dedication to advancing Scrum initiatives.
+
+Acceptance Criteria:
+- Ensure the logo is prominently positioned on the sponsors page for maximum visibility.
+- Validate that the logo adheres to the required dimensions and quality specifications.
+- Confirm that the logo is hyperlinked to the company’s official website.
+
+Test Outline:
+- Assess the logo's visibility and placement on the sponsors page.
+- Inspect the logo to ensure it meets the established size and quality criteria.
+- Test the hyperlink to verify it correctly directs to the company’s website.",2,3,2,2,0.0,2,3,1.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,1.0
+US090,done,3,"As a corporatesponsor, I want to make my logo randomly appear on the home page, so that others see the company's support of Scrum.","User Story:
+As a corporate sponsor, I want my logo to be displayed randomly on the homepage, so that visitors recognize my company's endorsement of Scrum.
+
+Acceptance Criteria:
+- Ensure the logo appears randomly on the homepage at least once per user session.
+- Track the frequency of logo displays to confirm visibility.
+- Verify that the logo links to the corporate sponsor's website.
+
+Test Outline:
+- Monitor the homepage to check for random logo appearances during user sessions.
+- Analyze display frequency data to ensure compliance with the acceptance criteria.
+- Click the logo to ensure it redirects to the correct corporate website.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,2,0.0,1,3,2.0,1.0
+US091,done,9,"As a CSM, I want to be charged a fee once I am approved for Practitioner status, so that my certification status can be activated.","User Story:
+As a Customer Success Manager, I want to incur a fee upon receiving confirmation of my Practitioner status, allowing me to activate my certification and fully leverage its benefits.
+
+Acceptance Criteria:
+- The fee amount is clearly communicated at the time of status approval.
+- The payment process is streamlined and user-friendly.
+- Certification status is activated immediately after payment is confirmed.
+
+Test Outline:
+- Confirm that a fee notification is sent out upon approval of Practitioner status.
+- Assess the payment workflow for ease of use.
+- Ensure that the certification status is promptly updated following payment verification.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US092,done,3,"As a CST, I want to pay an annual fee, so that my CST status is active.","User Story:
+As a Certified Specialist Trainer (CST), I want to submit my annual fee payment to ensure that my CST status remains current and valid.
+
+Acceptance Criteria:
+- Successfully process the annual fee payment.
+- Confirm that the CST status is updated to active upon payment completion.
+- Provide a receipt or confirmation of the payment for record-keeping.
+
+Test Outline:
+- Verify that the payment process completes without errors.
+- Check the CST status to ensure it reflects as active after payment.
+- Ensure a confirmation receipt is generated and accessible.",2,3,2,2,0.0,2,3,1.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,1.0
+US093,done,3,"As a site administrator, I want to set the annual fees for members, Practitioners and Trainers, so that fees can be set without involving a programmer.","User Story:
+As a site administrator, I want to independently establish the yearly fees for members, practitioners, and trainers, so that I can manage pricing without needing a programmer's assistance.
+
+Acceptance Criteria:
+- Provide an interface to input and update annual fees for each category.
+- Ensure changes are saved and reflected immediately on the site.
+- Allow for fee adjustments at any time throughout the year.
+
+Test Outline:
+- Verify that the fee-setting interface is user-friendly and accessible.
+- Check that updated fees are accurately displayed on the site after changes.
+- Test the system's ability to handle fee adjustments without errors.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,1.0
+US094,done,9,"As a member, I want to receive a reminder and a link, so that I can renew my membership.","User Story:
+As a member, I want to get a notification along with a renewal link, so that I can easily extend my membership.
+
+Acceptance Criteria:
+- Send a timely reminder notification to the member.
+- Include a direct link for membership renewal in the notification.
+- Ensure the renewal process is straightforward and user-friendly.
+
+Test Outline:
+- Verify that the reminder notification is sent out before the membership expiration date.
+- Check that the renewal link is functional and leads to the correct renewal page.
+- Test the renewal process to confirm it is seamless and efficient.",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US095,done,9,"As a member, I want to have the system email me a new password or a password reminder since i have short-term memory problems.","User Story:
+As a person experiencing short-term memory challenges, I want the system to send me a new password or a reminder through email so that I can easily access my account without complications.
+
+Acceptance Criteria:
+- Successfully initiate a request for an email that includes a new password or a reminder.
+- Receive the email promptly, containing clear and simple instructions.
+- Access the account using the new password or reminder without any issues.
+
+Test Outline:
+- Verify that the request for a new password or reminder generates an email notification.
+- Check the email inbox to confirm the email is received quickly.
+- Test the new password or reminder to ensure successful account access.",2,3,2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,2,0.0,1,3,2.0,1.0
+US096,done,9,"As a trainer, I want to read information of relevance only to trainers, so that the Scrum Alliance can share information with me easily.","User Story:
+As a training coordinator, I seek to acquire resources tailored specifically for trainers, allowing the Scrum Alliance to effectively disseminate pertinent updates and materials.
+
+Acceptance Criteria:
+- Gain access to content that is exclusively curated for trainers
+- Receive timely alerts about new resources or updates
+- Enjoy a user-friendly interface that simplifies the navigation of trainer-centric materials
+
+Test Outline:
+- Verify that the information presented is exclusively relevant to trainers
+- Assess the speed and reliability of notifications for new updates
+- Analyze the overall user experience when exploring the trainer-specific content area",2,2,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,0.0
+US097,done,6,"As a site editor, I want to post information in a trainers-only section, so that only trainers see it.","User Story:
+As a content manager, I want to establish a dedicated section for updates that is exclusively available to trainers, ensuring that only they can access and view the information.
+
+Acceptance Criteria:
+- Develop a secure platform for trainers to access the published updates.
+- Guarantee that only users assigned the trainer role can view the content.
+- Verify that all updates are restricted to visibility for authorized trainers only.
+
+Test Outline:
+- Confirm that the trainers-only section is correctly configured and accessible to the intended users.
+- Assess user permissions to ensure that individuals without trainer roles are denied access to the content.
+- Validate that all updates are accurately displayed to trainers within the specified section.",2,3,2,2,0.0,2,3,1.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,1.0
