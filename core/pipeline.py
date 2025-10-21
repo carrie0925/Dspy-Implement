@@ -1,11 +1,11 @@
 from __future__ import annotations
 """
 pipeline.py — DSPy-based INVEST Optimizer (robustly loads invest_rules.py)
-- 會先正常 import invest_rules；若失敗，再用 importlib 依檔名載入
-- Rewriter：大幅改寫、避免抄原句、>=30%差異
-- Scorer：LLM(60%) + 規範啟發式(40%) 融合；overall 依 INVEST_WEIGHTS
-- 選擇：INVEST + λ*Jaccard 差異；支援 MIN_DIVERSITY
-- DEV：列印 overall 與各構面平均 Δ
+- First attempts a normal import of invest_rules; if that fails, uses importlib to load by filename.
+- Rewriter: performs significant rewrites, avoids copying the original phrasing, targets >=30% token-level difference.
+- Scorer: fuses LLM (60%) + heuristic rubric (40%); overall score follows INVEST_WEIGHTS.
+- Selection: uses INVEST score + λ * Jaccard diversity; supports MIN_DIVERSITY.
+- DEV: prints overall and mean Δ for each dimension.
 """
 
 from typing import List, Dict, Any, Tuple, Optional
@@ -14,16 +14,16 @@ import os, json, re, importlib.util, types
 from tqdm import tqdm
 import dspy
 
-# ========= 穩健載入 invest_rules.py =========
+# ========= Load invest_rules.py =========
 def _load_invest_rules():
-    # 1) 先嘗試標準 import（同資料夾、或在 PYTHONPATH）
+    
     try:
         from invest_rules import INVEST_RUBRIC, INVEST_THRESHOLDS, INVEST_WEIGHTS
         return INVEST_RUBRIC, INVEST_THRESHOLDS, INVEST_WEIGHTS
     except ModuleNotFoundError:
         pass
 
-    # 2) 找可能的路徑（同資料夾、父層、檔名含空白的容錯）
+    
     here = os.path.dirname(os.path.abspath(__file__)) if '__file__' in globals() else os.getcwd()
     candidates = [
         os.path.join(here, "invest_rules.py"),
@@ -40,16 +40,16 @@ def _load_invest_rules():
             return mod.INVEST_RUBRIC, mod.INVEST_THRESHOLDS, mod.INVEST_WEIGHTS
 
     raise ModuleNotFoundError(
-        "找不到 invest_rules.py。請確認：\n"
-        "1) 與 pipeline.py 在同資料夾，或\n"
-        "2) 你以包含 invest_rules.py 的資料夾為工作目錄執行，或\n"
-        "3) 把 invest_rules.py 放到 PYTHONPATH。"
+        "invest_rules.py not found. Please ensure:\n"
+        "1) it is in the same directory as pipeline.py, or\n"
+        "2) you run from the directory that contains invest_rules.py, or\n"
+        "3) invest_rules.py is on your PYTHONPATH."
     )
 
 INVEST_RUBRIC, INVEST_THRESHOLDS, INVEST_WEIGHTS = _load_invest_rules()
 
 # =========================
-# LM 設定（可直接使用；或改成你要的模型）
+# LM settings fallback
 # =========================
 def configure_default_lm():
     try:
@@ -70,7 +70,7 @@ def configure_default_lm():
             )
         )
 
-# 若外部未設定就使用預設
+
 configure_default_lm()
 
 # ===== seeds =====

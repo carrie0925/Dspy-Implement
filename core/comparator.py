@@ -1,7 +1,7 @@
 """
 Comparator for INVEST Evaluation Results
 ----------------------------------------
-Compute before/after scores and deltas. No 'title'.
+Compute before/after scores and deltas. 
 """
 
 from typing import Dict, Any, List, Optional, Tuple
@@ -53,7 +53,7 @@ def aggregate_results(results: List[Dict[str, Any]]) -> pd.DataFrame:
             "id": rid,
             "status": status,
             "rounds": rounds,
-            "original_text": otext,   # ← 新欄位
+            "original_text": otext,  
             "final_text": ftext,
             "overall_before": first["overall"],
             "overall_after":  last["overall"],
