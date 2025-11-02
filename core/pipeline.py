@@ -1,29 +1,33 @@
 from __future__ import annotations
 """
-pipeline.py — DSPy-based INVEST Optimizer (robustly loads invest_rules.py)
-- First attempts a normal import of invest_rules; if that fails, uses importlib to load by filename.
-- Rewriter: performs significant rewrites, avoids copying the original phrasing, targets >=30% token-level difference.
-- Scorer: fuses LLM (60%) + heuristic rubric (40%); overall score follows INVEST_WEIGHTS.
-- Selection: uses INVEST score + λ * Jaccard diversity; supports MIN_DIVERSITY.
-- DEV: prints overall and mean Δ for each dimension.
+pipeline.py — DSPy-based INVEST Optimizer (robust import, role-lock, LLM-call stats)
+- Normal import of invest_rules; else importlib by filename.
+- Rewriter: significant rephrase (>=30% token-diff), then subject-only role lock.
+- Scorer: fuse LLM (60%) + heuristic (40%); overall via INVEST_WEIGHTS.
+- Selection: INVEST score + λ * Jaccard diversity (supports MIN_DIVERSITY).
+- DEV: prints overall and mean Δ per dimension.
+- Outputs include: original, rewritten, scoring_criteria_text, fuzzy_terms, low_score_explanations, score_new.
+
+This build fixes:
+1) USE compiled rewriter() in candidate generation (no more base_rewriter).
+2) Role-lock regex accepts optional comma before 'I'.
+3) Adds tiny LLM call counters for scorer/rewriter.
 """
 
 from typing import List, Dict, Any, Tuple, Optional
 from dataclasses import dataclass
-import os, json, re, importlib.util, types
+import os, json, re, importlib.util
 from tqdm import tqdm
 import dspy
 
 # ========= Load invest_rules.py =========
 def _load_invest_rules():
-    
     try:
         from invest_rules import INVEST_RUBRIC, INVEST_THRESHOLDS, INVEST_WEIGHTS
         return INVEST_RUBRIC, INVEST_THRESHOLDS, INVEST_WEIGHTS
     except ModuleNotFoundError:
         pass
 
-    
     here = os.path.dirname(os.path.abspath(__file__)) if '__file__' in globals() else os.getcwd()
     candidates = [
         os.path.join(here, "invest_rules.py"),
@@ -40,10 +44,7 @@ def _load_invest_rules():
             return mod.INVEST_RUBRIC, mod.INVEST_THRESHOLDS, mod.INVEST_WEIGHTS
 
     raise ModuleNotFoundError(
-        "invest_rules.py not found. Please ensure:\n"
-        "1) it is in the same directory as pipeline.py, or\n"
-        "2) you run from the directory that contains invest_rules.py, or\n"
-        "3) invest_rules.py is on your PYTHONPATH."
+        "invest_rules.py not found. Ensure it is near pipeline.py or on PYTHONPATH."
     )
 
 INVEST_RUBRIC, INVEST_THRESHOLDS, INVEST_WEIGHTS = _load_invest_rules()
@@ -70,7 +71,6 @@ def configure_default_lm():
             )
         )
 
-
 configure_default_lm()
 
 # ===== seeds =====
@@ -88,6 +88,9 @@ USE_DSPY = os.getenv("USE_DSPY", "1") != "0"
 DIVERSITY_LAMBDA = float(os.getenv("DIVERSITY_LAMBDA", "0.7"))
 MIN_DIVERSITY    = float(os.getenv("MIN_DIVERSITY", "0.30"))
 
+# ===== tiny call counters (for sanity check) =====
+CALLS = {"scorer": 0, "rewriter": 0}
+
 # ===== token utils for diversity =====
 def _tokens(s: str):
     return re.findall(r"[A-Za-z0-9]+", s.lower())
@@ -98,9 +101,117 @@ def jaccard_diversity(a: str, b: str) -> float:
         return 0.0
     return 1.0 - (len(ta & tb) / len(ta | tb))
 
+# ===== Role lock helpers (SUBJECT-ONLY REPLACEMENT) =====
+def _extract_us_line(block: str) -> str:
+    for ln in block.splitlines():
+        if ln.strip().lower().startswith("as "):
+            return ln.strip()
+    return (block.splitlines()[0] if block.strip() else "").strip()
+
+# NOTE: comma is optional now (',?')
+_ROLE_HEAD_RE = re.compile(
+    r"^(?P<prefix>\s*As\s+a?n?\s+)"
+    r"(?P<role>[^,]+)"
+    r"(?P<suffix>,?\s*I\b.*)$",
+    re.IGNORECASE
+)
+
+def _lock_role(original_text: str, rewritten_text: str) -> tuple[str, dict]:
+    """
+    Replace only the <role> in rewritten's first 'As ...' line with original's <role>.
+    Keep rewritten's verb (want/aim/plan...) and connectors (so that / in order to ...).
+    """
+    orig_us = _extract_us_line(original_text)
+    new_us  = _extract_us_line(rewritten_text)
+
+    head_old = _ROLE_HEAD_RE.match(orig_us or "")
+    head_new = _ROLE_HEAD_RE.match(new_us or "")
+
+    if head_old and head_new:
+        fixed_us = f"{head_old.group('prefix')}{head_old.group('role')}{head_new.group('suffix')}"
+        lines = rewritten_text.splitlines()
+        replaced = False
+        for i, ln in enumerate(lines):
+            if ln.strip() == new_us:
+                lines[i] = fixed_us
+                replaced = True
+                break
+        if not replaced:
+            if lines:
+                lines[0] = fixed_us
+            else:
+                lines = [fixed_us]
+        return "\n".join(lines), {"role_locked": True, "reason": "subject_only_replaced"}
+
+    return rewritten_text, {"role_locked": False, "reason": "parse_failed_head"}
+
+# ===== Fuzzy term detection (lightweight lexical set) =====
+LEXICON = {
+    "VERB_VAGUE": ["improve", "enhance", "optimize", "support", "handle", "leverage", "streamline"],
+    "ADJ_VAGUE":  ["easy", "fast", "robust", "reliable", "scalable", "user-friendly", "intuitive", "seamless"],
+    "ADV_VAGUE":  ["quickly", "easily", "significantly", "efficiently", "reliably"],
+    "QTY_VAGUE":  ["many", "some", "few", "several", "various", "as needed"],
+    "TIME_VAGUE": ["soon", "ASAP", "later", "instantly", "in real-time"],
+    "PLACEHOLDER":["etc.", "tbd", "to be decided", "and so on"],
+}
+_HAS_NUM = re.compile(
+    r"(?:\b\d+(?:\.\d+)?\s*(?:ms|s|sec|seconds?|minutes?|hours?|%|x)?\b)|(?:<=|>=|=|>|<)",
+    re.IGNORECASE
+)
+
+def _mk_suggestion(token: str) -> str:
+    return f"Replace '{token}' with a measurable criterion (e.g., '<= 200 ms', 'p95 <= 2s', explicit scope/boundary')."
+
+def detect_fuzzy(text: str) -> List[Dict[str, Any]]:
+    spans: List[Dict[str, Any]] = []
+    for pos, words in LEXICON.items():
+        for w in words:
+            for m in re.finditer(rf"\b{re.escape(w)}\b", text, flags=re.IGNORECASE):
+                sentence_start = text.rfind('.', 0, m.start()) + 1
+                sentence_end = text.find('.', m.end())
+                if sentence_end == -1: sentence_end = len(text)
+                sent = text[sentence_start:sentence_end]
+                if not _HAS_NUM.search(sent):
+                    spans.append({
+                        "text": w, "pos": pos,
+                        "reason": "Ambiguous or non-verifiable term without measurable threshold in the same sentence.",
+                        "suggestion": _mk_suggestion(w),
+                        "start": m.start(), "end": m.end()
+                    })
+    return spans
+
+# ===== Low-score explanation =====
+EXPLANATION_TEMPLATES = {
+    "I": {"why": "Story depends on other stories or mixed goals.", "fix": ["Split by goal; remove cross-dependencies in AC."]},
+    "N": {"why": "Prescriptive solution; scope not negotiable.", "fix": ["Focus on outcomes, not implementation; allow alternatives."]},
+    "V": {"why": "Persona value unclear.", "fix": ["Rewrite 'so that' with explicit, business-relevant benefit."]},
+    "E": {"why": "Effort unbounded; constraints missing.", "fix": ["Add numeric thresholds/assumptions/risks in AC."]},
+    "S": {"why": "Too large for a sprint.", "fix": ["Slice by platform, data case, or exception path; target 2–3 days."]},
+    "T": {"why": "Lacks objective test conditions.", "fix": ["Add Gherkin-style AC with measurable thresholds and boundary cases."]},
+}
+def explain_low_scores(scores: Dict[str, Any], threshold: float = 2.0) -> Dict[str, Any]:
+    out = {}
+    for dim, meta in EXPLANATION_TEMPLATES.items():
+        try:
+            val = int(scores.get(dim) or 0)
+        except Exception:
+            val = 0
+        if val < threshold:
+            out[dim] = {"score": val, "why_low": meta["why"], "how_to_fix": meta["fix"]}
+    return out
+
+def rubric_as_text() -> str:
+    parts = []
+    for k in ["I","N","V","E","S","T"]:
+        meta = INVEST_RUBRIC.get(k, {})
+        nm = meta.get("name", k)
+        desc = meta.get("description", "")
+        parts.append(f"{k}-{nm}: {desc}")
+    return " | ".join(parts)
+
 # ===== Signatures =====
 class InvestScoreSig(dspy.Signature):
-    """Grade a user story on INVEST (0–3); return JSON only, using the rubric (Annex A spirit)."""
+    """Grade a user story on INVEST (0–3); return JSON only, using the rubric."""
     input_text: str = dspy.InputField(desc=(
         "You are an INVEST rater. Score I,N,V,E,S,T on 0–3 using THIS rubric:\n"
         "- I: 0=no; 1=entangled; 2=mostly standalone; 3=single clear goal.\n"
@@ -132,7 +243,7 @@ class InvestRewriteSig(dspy.Signature):
     ))
 
 # ===== Modules =====
-class InvestScorer(dspy.Module):
+class InvestScorer(dspy.Module):  # ratio for LLM vs heuristic
     LLM_WEIGHT = 0.6
     HEU_WEIGHT = 0.4
 
@@ -171,8 +282,8 @@ class InvestScorer(dspy.Module):
     def heuristic_scores_from_rubric(self, text: str) -> Tuple[Dict[str,int], Dict[str,str]]:
         t = text.strip()
         core = self._story_core(t)
-        has_role_iwant = bool(re.search(r"As a .*?,?\s*I want", core, re.IGNORECASE))
-        has_so_that    = ("so that" in core.lower())
+        has_role_iwant = bool(re.search(r"As a .*?,?\s*I want|As a .*?,?\s*I\b", core, re.IGNORECASE))
+        has_so_that    = ("so that" in core.lower()) or ("in order to" in core.lower())
         has_ac         = self._sec(t, "Acceptance Criteria")
         n_ac           = self._count_bullets_after(t, "Acceptance Criteria")
         has_test_sec   = self._sec(t, "Test Outline") or self._sec(t, "Test Plan")
@@ -202,9 +313,9 @@ class InvestScorer(dspy.Module):
 
         scores  = {"I":I,"N":N,"V":V,"E":E,"S":S,"T":T}
         reasons = {
-            "I": f"single-goal={(' and ' not in core.lower())}; has As a/I want={has_role_iwant}",
+            "I": f"single-goal={(' and ' not in core.lower())}; has As a/I...={has_role_iwant}",
             "N": f"rigid_spec={is_rigid}; has_AC={has_ac}",
-            "V": f"has_benefit_clause(so that)={has_so_that}",
+            "V": f"has_benefit_clause(so that/in order to)={has_so_that}",
             "E": f"numbers={n_nums}; comparators={has_cmp}; has_AC={has_ac}",
             "S": f"story_token_len={story_len}",
             "T": f"AC_bullets={n_ac}; test_sec/word={has_test_sec or has_test_word}; measurable={n_nums>0 or has_cmp}",
@@ -265,6 +376,7 @@ class InvestScorer(dspy.Module):
         return out
 
     def __call__(self, text: str) -> Dict[str, Any]:
+        CALLS["scorer"] += 1
         llm_out = self.predict(input_text=text)
         llm_obj = self.parse_json(llm_out.result_json)
         heu_scores, heu_reasons = self.heuristic_scores_from_rubric(text)
@@ -279,8 +391,12 @@ class UserStoryRewriter(dspy.Module):
         super().__init__()
         self.rewrite = dspy.Predict(InvestRewriteSig)
     def __call__(self, text: str) -> str:
+        CALLS["rewriter"] += 1
         out = self.rewrite(input_text=text)
-        return (out.improved_text or text).strip()
+        rewritten = (out.improved_text or text).strip()
+        # 🔒 subject-only role lock
+        rewritten, _ = _lock_role(text, rewritten)
+        return rewritten
 
 # ===== Teleprompt =====
 def compile_scorer_with_teleprompt(base_scorer: InvestScorer, fewshot_k: int = 4, max_rounds: int = 1, metric_fn=None, teacher_lm=None) -> InvestScorer:
@@ -401,7 +517,9 @@ def run_batch_optimization(user_stories: List[Dict[str, Any]], max_rounds: int =
         for _ in range(cfg.max_rounds):
             candidates = []
             for _try in range(cfg.best_of_k):
-                cand_text = base_rewriter(original_text) if _try == 0 else base_rewriter(best_text)
+                # ✅ use compiled rewriter, not base_rewriter
+                seed_text = original_text if _try == 0 else best_text
+                cand_text = rewriter(seed_text)
                 cand_m    = scorer(cand_text)
                 div       = jaccard_diversity(original_text, cand_text)
                 hist.append({"text": cand_text, "metrics": cand_m, "diversity": div})
@@ -421,21 +539,47 @@ def run_batch_optimization(user_stories: List[Dict[str, Any]], max_rounds: int =
             if invest_overall(best_m) >= 3 and jaccard_diversity(original_text, best_text) >= cfg.min_diversity:
                 break
 
+        # === Build requested fields ===
+        fuzzy_terms = detect_fuzzy(best_text)
+        low_notes   = explain_low_scores(best_m, threshold=2.0)
+
         results.append({
             "id": story.get("id"),
             "status": "done",
             "rounds": max(0, len(hist) - 1),
             "original_text": original_text,
             "final_text": best_text,
-            "history": hist
+            "history": hist,
+
+            # ↓↓↓ structured outputs for report ↓↓↓
+            "original": original_text,                       # before
+            "rewritten": best_text,                          # after
+            "scoring_criteria_text": rubric_as_text(),       # rubric text
+            "fuzzy_terms": fuzzy_terms,                      # fuzzy annotations
+            "low_score_explanations": low_notes,             # low-score explain
+            "score_new": best_m                              # final metrics
         })
     return results
 
-# ===== Example =====
+# ===== Example / CSV export if available =====
 if __name__ == "__main__":
     sample_batch = [
-        {"id": "ex1", "description": "I want to describe myself on my own page in a semi-structured way, so that others can learn about me."},
+        {"id": "ex1", "description": "As a site member I want to fill out an application to become a Certified Scrum Trainer so that I can teach CSM and CSPO courses and certify others."},
         {"id": "ex2", "description": "Improve dashboard performance."},
     ]
     out = run_batch_optimization(sample_batch, max_rounds=3, fewshot_k=4, use_dspy=USE_DSPY)
-    print(json.dumps(out, ensure_ascii=False, indent=2))
+    print("[STATS] LLM calls → scorer:", CALLS["scorer"], "rewriter:", CALLS["rewriter"])
+    try:
+        # try local (same folder)
+        from report_generator import export_results_csv
+        df, run_dir = export_results_csv(out, out_root="report")
+        print("[OK] CSV saved at:", run_dir)
+    except Exception:
+        try:
+            # try package-style (core.report_generator)
+            from core.report_generator import export_results_csv
+            df, run_dir = export_results_csv(out, out_root="report")
+            print("[OK] CSV saved at:", run_dir)
+        except Exception as e:
+            print("[INFO] report_generator not found or export failed; printing JSON instead.")
+            print(json.dumps(out, ensure_ascii=False, indent=2))
