@@ -1,17 +1,12 @@
 from __future__ import annotations
 """
-pipeline.py — DSPy-based INVEST Optimizer (robust import, role-lock, LLM-call stats)
-- Normal import of invest_rules; else importlib by filename.
-- Rewriter: significant rephrase (>=30% token-diff), then subject-only role lock.
-- Scorer: fuse LLM (60%) + heuristic (40%); overall via INVEST_WEIGHTS.
-- Selection: INVEST score + λ * Jaccard diversity (supports MIN_DIVERSITY).
-- DEV: prints overall and mean Δ per dimension.
-- Outputs include: original, rewritten, scoring_criteria_text, fuzzy_terms, low_score_explanations, score_new.
-
-This build fixes:
-1) USE compiled rewriter() in candidate generation (no more base_rewriter).
-2) Role-lock regex accepts optional comma before 'I'.
-3) Adds tiny LLM call counters for scorer/rewriter.
+pipeline.py — DSPy-based INVEST Optimizer (1–5 scale, diversity + teleprompt)
+- Loads INVEST_RUBRIC_15 / INVEST_THRESHOLDS / INVEST_WEIGHTS from invest_rules.py
+- Rewriter: ≥30% token-level difference, then subject-only role lock (keep persona)
+- Scorer: LLM(60%) + Heuristic(40%), all on 1–5 scale, overall uses INVEST_WEIGHTS
+- Selection: INVEST overall + λ * Jaccard diversity (min diversity enforced)
+- Early stop: uses INVEST_THRESHOLDS["overall"] (not hard-coded 3)
+- Outputs: original/rewritten, rubric text, fuzzy terms, low-score notes, final scores
 """
 
 from typing import List, Dict, Any, Tuple, Optional
@@ -23,31 +18,28 @@ import dspy
 # ========= Load invest_rules.py =========
 def _load_invest_rules():
     try:
-        from invest_rules import INVEST_RUBRIC, INVEST_THRESHOLDS, INVEST_WEIGHTS
-        return INVEST_RUBRIC, INVEST_THRESHOLDS, INVEST_WEIGHTS
+        from invest_rules import INVEST_RUBRIC_15, INVEST_THRESHOLDS, INVEST_WEIGHTS
+        return INVEST_RUBRIC_15, INVEST_THRESHOLDS, INVEST_WEIGHTS
     except ModuleNotFoundError:
         pass
 
     here = os.path.dirname(os.path.abspath(__file__)) if '__file__' in globals() else os.getcwd()
-    candidates = [
+    for p in [
         os.path.join(here, "invest_rules.py"),
         os.path.join(here, "invest rules.py"),
         os.path.join(here, "..", "invest_rules.py"),
         os.path.join(here, "..", "invest rules.py"),
-    ]
-    for p in candidates:
+    ]:
         if os.path.exists(p):
             spec = importlib.util.spec_from_file_location("invest_rules_local", p)
             mod = importlib.util.module_from_spec(spec)  # type: ignore
             assert spec and spec.loader
             spec.loader.exec_module(mod)  # type: ignore
-            return mod.INVEST_RUBRIC, mod.INVEST_THRESHOLDS, mod.INVEST_WEIGHTS
+            return mod.INVEST_RUBRIC_15, mod.INVEST_THRESHOLDS, mod.INVEST_WEIGHTS
 
-    raise ModuleNotFoundError(
-        "invest_rules.py not found. Ensure it is near pipeline.py or on PYTHONPATH."
-    )
+    raise ModuleNotFoundError("invest_rules.py not found near pipeline.py or on PYTHONPATH.")
 
-INVEST_RUBRIC, INVEST_THRESHOLDS, INVEST_WEIGHTS = _load_invest_rules()
+INVEST_RUBRIC_15, INVEST_THRESHOLDS, INVEST_WEIGHTS = _load_invest_rules()
 
 # =========================
 # LM settings fallback
@@ -91,7 +83,7 @@ MIN_DIVERSITY    = float(os.getenv("MIN_DIVERSITY", "0.30"))
 # ===== tiny call counters (for sanity check) =====
 CALLS = {"scorer": 0, "rewriter": 0}
 
-# ===== token utils for diversity =====
+# ===== token & diversity utils =====
 def _tokens(s: str):
     return re.findall(r"[A-Za-z0-9]+", s.lower())
 
@@ -99,6 +91,13 @@ def jaccard_diversity(a: str, b: str) -> float:
     ta, tb = set(_tokens(a)), set(_tokens(b))
     if not ta or not tb:
         return 0.0
+    return 1.0 - (len(ta & tb) / len(ta | tb))
+
+def token_diff_ratio(a: str, b: str) -> float:
+    """Estimate rewrite magnitude via token-set Jaccard distance."""
+    ta, tb = set(_tokens(a)), set(_tokens(b))
+    if not ta or not tb:
+        return 1.0 if (a.strip() and not b.strip()) or (b.strip() and not a.strip()) else 0.0
     return 1.0 - (len(ta & tb) / len(ta | tb))
 
 # ===== Role lock helpers (SUBJECT-ONLY REPLACEMENT) =====
@@ -189,7 +188,7 @@ EXPLANATION_TEMPLATES = {
     "S": {"why": "Too large for a sprint.", "fix": ["Slice by platform, data case, or exception path; target 2–3 days."]},
     "T": {"why": "Lacks objective test conditions.", "fix": ["Add Gherkin-style AC with measurable thresholds and boundary cases."]},
 }
-def explain_low_scores(scores: Dict[str, Any], threshold: float = 2.0) -> Dict[str, Any]:
+def explain_low_scores(scores: Dict[str, Any], threshold: float = 3.0) -> Dict[str, Any]:
     out = {}
     for dim, meta in EXPLANATION_TEMPLATES.items():
         try:
@@ -203,7 +202,7 @@ def explain_low_scores(scores: Dict[str, Any], threshold: float = 2.0) -> Dict[s
 def rubric_as_text() -> str:
     parts = []
     for k in ["I","N","V","E","S","T"]:
-        meta = INVEST_RUBRIC.get(k, {})
+        meta = INVEST_RUBRIC_15.get(k, {})
         nm = meta.get("name", k)
         desc = meta.get("description", "")
         parts.append(f"{k}-{nm}: {desc}")
@@ -211,20 +210,20 @@ def rubric_as_text() -> str:
 
 # ===== Signatures =====
 class InvestScoreSig(dspy.Signature):
-    """Grade a user story on INVEST (0–3); return JSON only, using the rubric."""
+    """Grade a user story on INVEST (1–5); return JSON only, using this rubric summary."""
     input_text: str = dspy.InputField(desc=(
-        "You are an INVEST rater. Score I,N,V,E,S,T on 0–3 using THIS rubric:\n"
-        "- I: 0=no; 1=entangled; 2=mostly standalone; 3=single clear goal.\n"
-        "- N: 0=technical spec; 1=functional spec; 2=requirements shared; 3=high-level need enabling feedback.\n"
-        "- V: 0=no value; 1=implied; 2=explicit but generic; 3=explicit business-relevant benefit.\n"
-        "- E: 0=vague; 1=some hints; 2=bounded by quality/tech; 3=well-bounded with numbers/constraints validated.\n"
-        "- S: 0=epic; 1=too broad; 2=medium; 3=small enough for a sprint.\n"
-        "- T: 0=no tests; 1=tests indicated but incomplete; 2=complete but unvalidated; 3=completed and validated tests.\n"
+        "Score I,N,V,E,S,T on 1–5 using THIS rubric summary:\n"
+        "- I: 1=strongly tied/blocked; 3=some constraints; 5=fully independent single-goal.\n"
+        "- N: 1=technical spec/no negotiation; 3=requirement but limited flexibility; 5=high-level need enabling feedback.\n"
+        "- V: 1=function lacks user value; 3=value implied/generic; 5=explicit, user/ business-relevant benefit.\n"
+        "- E: 1=vague effort; 3=some hints; 4=bounded; 5=measurable with numbers/constraints validated.\n"
+        "- S: 1=epic; 3=medium; 5=small enough for a Sprint (balanced dev/test).\n"
+        "- T: 1=no tests; 3=tests indicated; 4=complete; 5=completed & validated acceptance tests.\n"
         "Reply ONLY with JSON: "
         '{"overall":int,"I":int,"N":int,"V":int,"E":int,"S":int,"T":int,'
         '"reasons":{"I":str,"N":str,"V":str,"E":str,"S":str,"T":str}} '
-        + ("Scoring is STRICT: any vagueness caps ≤2; 3 requires explicit & measurable evidence."
-           if STRICT else "Give 3 only when explicit & measurable evidence is present.")
+        + ("Scoring is STRICT: 5 needs explicit & measurable evidence; otherwise cap at 4."
+           if STRICT else "Give 5 only when explicit & measurable evidence is present.")
     ))
     result_json: str = dspy.OutputField(desc="Strict JSON as specified.")
 
@@ -232,9 +231,9 @@ class InvestRewriteSig(dspy.Signature):
     """Rewrite the story to improve INVEST while keeping intent (significantly rephrase)."""
     input_text: str = dspy.InputField()
     improved_text: str = dspy.OutputField(desc=(
-        "Rewrite with SIGNIFICANT rephrase (avoid copying >8 consecutive words). "
-        "Use stronger, specific verbs/nouns. Keep intent but clarify role/capability/benefit. "
-        "Aim for >=30% token-level difference from the input.\n"
+        "Rewrite with SIGNIFICANT rephrase (≥30% token difference). "
+        "Strengthen all INVEST dimensions explicitly; keep the same persona but clarify capability and value. "
+        "Prefer measurable, falsifiable criteria (numbers, %, ≤, ≥). "
         "Output EXACTLY in this template:\n"
         "User Story:\nAs a <specific role>, I want <clear capability> so that <explicit, business-relevant benefit>.\n"
         "Acceptance Criteria:\n"
@@ -252,9 +251,9 @@ class InvestScorer(dspy.Module):  # ratio for LLM vs heuristic
         self.predict = dspy.Predict(InvestScoreSig)
 
     # --- utils ---
-    def _clamp_int(self, v):
+    def _clamp_int15(self, v):
         try:
-            v = int(float(v)); return max(0, min(3, v))
+            v = int(float(v)); return max(1, min(5, v))
         except Exception:
             return None
     def _lines(self, s: str): return [x.strip() for x in s.splitlines()]
@@ -278,51 +277,78 @@ class InvestScorer(dspy.Module):  # ratio for LLM vs heuristic
         m = re.search(r"As a .*? so that .*?(?:\.|\n|$)", s, flags=re.IGNORECASE|re.DOTALL)
         return m.group(0) if m else s.split("\n",1)[0]
 
-    # --- heuristic from rubric ---
+    # --- heuristic on 1–5 ---
     def heuristic_scores_from_rubric(self, text: str) -> Tuple[Dict[str,int], Dict[str,str]]:
         t = text.strip()
+        low = t.lower()
         core = self._story_core(t)
+
         has_role_iwant = bool(re.search(r"As a .*?,?\s*I want|As a .*?,?\s*I\b", core, re.IGNORECASE))
+        single_goal    = (" and " not in core.lower())
         has_so_that    = ("so that" in core.lower()) or ("in order to" in core.lower())
         has_ac         = self._sec(t, "Acceptance Criteria")
         n_ac           = self._count_bullets_after(t, "Acceptance Criteria")
         has_test_sec   = self._sec(t, "Test Outline") or self._sec(t, "Test Plan")
-        has_test_word  = (" test" in (" " + t.lower()))
+        has_test_word  = (" test" in (" " + low))
         n_nums         = self._count_numbers(t)
         has_cmp        = self._has_cmp(t)
         story_len      = len(_tokens(core))
         rigid_markers  = ["must ","exactly ","pixel","ui spec","api spec","endpoint:","fixed layout","hard-coded","strictly","no deviation"]
-        is_rigid       = any(m in t.lower() for m in rigid_markers)
+        is_rigid       = any(m in low for m in rigid_markers)
 
-        I = 3 if has_role_iwant and (" and " not in core.lower()) else (2 if has_role_iwant else 1)
+        # I
+        I = 5 if (has_role_iwant and single_goal) else (4 if has_role_iwant else (3 if "as a" in low else 2))
+        # N
         if is_rigid:
-            N = 0 if any(x in t.lower() for x in ["ui spec","api spec","endpoint:"]) else 1
+            N = 1
         else:
-            N = 3 if (has_ac and not is_rigid) else (2 if not is_rigid else 1)
-        V = 3 if has_so_that else (2 if (" to " in core.lower()) else 1)
-        if n_nums>=2 or (n_nums>=1 and has_cmp): E = 3
-        elif n_nums>=1 or has_ac:                E = 2
-        else:                                    E = 1
-        S = 3 if story_len<=30 else (2 if story_len<=60 else 1)
-        if has_ac and (has_test_sec or has_test_word) and (n_nums>0 or has_cmp) and n_ac>=2: T = 3
-        elif has_ac and n_ac>=1:                                                        T = 2
-        else:                                                                           T = 1
+            if has_ac and any(w in low for w in ["feedback","negotiate","shared"]):
+                N = 5
+            elif has_ac:
+                N = 4
+            elif "requirement" in low:
+                N = 3
+            else:
+                N = 2
+        # V
+        V = 5 if has_so_that else (3 if (" to " in core.lower()) else 2)
+        # E
+        if n_nums>=2 or (n_nums>=1 and has_cmp):
+            E = 5
+        elif n_nums>=1 or has_ac:
+            E = 4
+        elif any(w in low for w in ["assumption","risk","constraint"]):
+            E = 3
+        else:
+            E = 2
+        # S
+        S = 5 if story_len<=30 else (4 if story_len<=60 else (3 if story_len<=100 else 2))
+        # T
+        if has_ac and (has_test_sec or has_test_word) and (n_nums>0 or has_cmp) and n_ac>=2:
+            T = 5
+        elif has_ac and (has_test_sec or has_test_word or n_ac>=1):
+            T = 4
+        elif has_test_sec or has_test_word:
+            T = 3
+        else:
+            T = 2
+
         if STRICT:
-            if E==3 and n_nums==0 and not has_cmp: E = 2
-            if T==3 and not (n_nums>0 or has_cmp): T = 2
+            if E==5 and n_nums==0 and not has_cmp: E = 4
+            if T==5 and not (n_nums>0 or has_cmp): T = 4
 
         scores  = {"I":I,"N":N,"V":V,"E":E,"S":S,"T":T}
         reasons = {
-            "I": f"single-goal={(' and ' not in core.lower())}; has As a/I...={has_role_iwant}",
+            "I": f"single_goal={single_goal}; has_As/I...={has_role_iwant}",
             "N": f"rigid_spec={is_rigid}; has_AC={has_ac}",
-            "V": f"has_benefit_clause(so that/in order to)={has_so_that}",
+            "V": f"benefit_clause(so that/in order to)={has_so_that}",
             "E": f"numbers={n_nums}; comparators={has_cmp}; has_AC={has_ac}",
             "S": f"story_token_len={story_len}",
             "T": f"AC_bullets={n_ac}; test_sec/word={has_test_sec or has_test_word}; measurable={n_nums>0 or has_cmp}",
         }
         return scores, reasons
 
-    # --- parse LLM json ---
+    # --- parse LLM json (1–5) ---
     def parse_json(self, raw_json: str) -> Dict[str, Any]:
         try:
             obj = json.loads(raw_json)
@@ -334,7 +360,7 @@ class InvestScorer(dspy.Module):  # ratio for LLM vs heuristic
                 obj = {}
         dims = ["I","N","V","E","S","T"]
         for k in ["overall", *dims]:
-            obj[k] = self._clamp_int(obj.get(k))
+            obj[k] = self._clamp_int15(obj.get(k))
         if not isinstance(obj.get("reasons"), dict):
             obj["reasons"] = {}
         return obj
@@ -352,23 +378,19 @@ class InvestScorer(dspy.Module):  # ratio for LLM vs heuristic
             l = llm_obj.get(d)
             h = heu.get(d, 0)
             val = h if l is None else round(self.LLM_WEIGHT*l + self.HEU_WEIGHT*h)
-            if STRICT and val>2 and d in ["E","T"]:
+            if STRICT and val>4 and d in ["E","T"]:
                 if (self._count_numbers(text)==0 and not self._has_cmp(text)):
-                    val = 2
-            out[d] = int(val)
+                    val = 4
+            out[d] = int(max(1, min(5, val)))
 
         weighted = self._weighted_overall(out)
-        if STRICT:
-            floor_by_dims = min(out[d] for d in dims)
-            out["overall"] = int(round(min(weighted, floor_by_dims)))
-        else:
-            out["overall"] = int(round(weighted))
+        out["overall"] = int(round(weighted))
 
         out["meets_thresholds"] = {
-            d: (out[d] >= int(round(INVEST_THRESHOLDS.get(d, 0))))
+            d: (out[d] >= int(round(INVEST_THRESHOLDS.get(d, 3))))
             for d in ["I","N","V","E","S","T"]
         }
-        out["meets_thresholds"]["overall"] = (out["overall"] >= int(round(INVEST_THRESHOLDS.get("overall", 0))))
+        out["meets_thresholds"]["overall"] = (out["overall"] >= int(round(INVEST_THRESHOLDS.get("overall", 3))))
 
         for d in dims:
             llm_r = (llm_obj.get("reasons") or {}).get(d)
@@ -392,11 +414,17 @@ class UserStoryRewriter(dspy.Module):
         self.rewrite = dspy.Predict(InvestRewriteSig)
     def __call__(self, text: str) -> str:
         CALLS["rewriter"] += 1
-        out = self.rewrite(input_text=text)
-        rewritten = (out.improved_text or text).strip()
-        # 🔒 subject-only role lock
-        rewritten, _ = _lock_role(text, rewritten)
-        return rewritten
+        MIN_DIFF = 0.30
+        MAX_TRIES = 3
+        best = text
+        for _ in range(MAX_TRIES):
+            out = self.rewrite(input_text=best)
+            rewritten = (getattr(out, "improved_text", None) or best).strip()
+            rewritten, _meta = _lock_role(text, rewritten)
+            if token_diff_ratio(text, rewritten) >= MIN_DIFF:
+                return rewritten
+            best = rewritten
+        return best
 
 # ===== Teleprompt =====
 def compile_scorer_with_teleprompt(base_scorer: InvestScorer, fewshot_k: int = 4, max_rounds: int = 1, metric_fn=None, teacher_lm=None) -> InvestScorer:
@@ -514,10 +542,11 @@ def run_batch_optimization(user_stories: List[Dict[str, Any]], max_rounds: int =
             try: return int(m.get("overall") or 0)
             except: return 0
 
+        stop_at = int(round(INVEST_THRESHOLDS.get("overall", 3)))
+
         for _ in range(cfg.max_rounds):
             candidates = []
             for _try in range(cfg.best_of_k):
-                # ✅ use compiled rewriter, not base_rewriter
                 seed_text = original_text if _try == 0 else best_text
                 cand_text = rewriter(seed_text)
                 cand_m    = scorer(cand_text)
@@ -536,12 +565,12 @@ def run_batch_optimization(user_stories: List[Dict[str, Any]], max_rounds: int =
             if winner_combo > best_combo:
                 best_text, best_m, best_combo = winner_text, winner_m, winner_combo
 
-            if invest_overall(best_m) >= 3 and jaccard_diversity(original_text, best_text) >= cfg.min_diversity:
+            if invest_overall(best_m) >= stop_at and jaccard_diversity(original_text, best_text) >= cfg.min_diversity:
                 break
 
         # === Build requested fields ===
         fuzzy_terms = detect_fuzzy(best_text)
-        low_notes   = explain_low_scores(best_m, threshold=2.0)
+        low_notes   = explain_low_scores(best_m, threshold=3.0)
 
         results.append({
             "id": story.get("id"),
@@ -570,13 +599,11 @@ if __name__ == "__main__":
     out = run_batch_optimization(sample_batch, max_rounds=3, fewshot_k=4, use_dspy=USE_DSPY)
     print("[STATS] LLM calls → scorer:", CALLS["scorer"], "rewriter:", CALLS["rewriter"])
     try:
-        # try local (same folder)
         from report_generator import export_results_csv
         df, run_dir = export_results_csv(out, out_root="report")
         print("[OK] CSV saved at:", run_dir)
     except Exception:
         try:
-            # try package-style (core.report_generator)
             from core.report_generator import export_results_csv
             df, run_dir = export_results_csv(out, out_root="report")
             print("[OK] CSV saved at:", run_dir)

@@ -1,182 +1,232 @@
+# -*- coding: utf-8 -*-
 """
-LM Assertion Rules for INVEST
---------------------------------------
-- Threshold check against INVEST (0~3 scale by default)
-- Weighted overall computation
-- Suggest messages per low dimension
-- Safe rescaling 0~3 <-> 1~5 for interoperability
+assertion_rules.py (Route B: native 1–5 scale)
 
-Depends on: core/invest_rules.py
+Purpose
+-------
+- Use 1–5 as the internal & external scale for INVEST evaluation.
+- Compute weighted overall score on 1–5.
+- Check per-dimension and overall thresholds (1–5).
+- Produce human-readable feedback with optional rubric text.
+
+Integration Notes
+-----------------
+- This module *optionally* uses `get_invest_rubric_text(dim, score, scale="1-5")`
+  from `invest_rules.py`. If not available, it gracefully degrades.
+
+Public API
+----------
+- assert_invest(scores15: dict, *, weights=None, thresholds=None, overall_min=None) -> AssertionResult
+- ensure_overall(scores15: dict, *, weights=None) -> dict
+- summarize_assertion(result: AssertionResult) -> str
+
+Data Contracts
+--------------
+- Input scores: dict with keys in {"I","N","V","E","S"}; values in [1, 5].
+- Output result: AssertionResult with details & message.
+
+Author: YOU
 """
 
-from dataclasses import dataclass
-from typing import Dict, List, Tuple
+from dataclasses import dataclass, field
+from typing import Dict, List, Optional, Tuple
 
-from .invest_rules import (
-    INVEST_RUBRIC,
-    INVEST_THRESHOLDS,
-    INVEST_WEIGHTS,
-)
+# --- Optional rubric import (safe fallback) -----------------------------------
+try:
+    # You will provide this in invest_rules.py next
+    from .invest_rules import get_invest_rubric_text, DIM_KEYS as _DIM_KEYS
+except Exception:  # pragma: no cover
+    def get_invest_rubric_text(dim: str, score: int, scale: str = "1-5") -> str:
+        return ""  # fallback: no rubric text available
+    _DIM_KEYS = ["I", "N", "V", "E", "S"]
 
-# -----------------------------
-# Scale utilities
-# -----------------------------
+# --- Constants / Defaults -----------------------------------------------------
+SCALE: str = "1-5"
+DIM_KEYS: List[str] = list(_DIM_KEYS)
 
-def clamp(v: float, lo: float, hi: float) -> float:
-    return max(lo, min(hi, v))
+# Equal weights by default (sum to 1.0)
+DEFAULT_WEIGHTS: Dict[str, float] = {d: 1.0 / len(DIM_KEYS) for d in DIM_KEYS}
 
-def rescale_03_to_15(x: float) -> float:
-    """Map 0~3 → 1~5 (linear)."""
-    return clamp(1.0 + (x * 4.0 / 3.0), 1.0, 5.0)
+# Per-dimension minimum threshold (1–5). Default 3.0 = "acceptable"
+DEFAULT_THRESHOLDS: Dict[str, float] = {d: 3.0 for d in DIM_KEYS}
 
-def rescale_15_to_03(x: float) -> float:
-    """Map 1~5 → 0~3 (linear)."""
-    return clamp((x - 1.0) * 3.0 / 4.0, 0.0, 3.0)
+# Overall minimum threshold on 1–5
+DEFAULT_OVERALL_MIN: float = 3.0
 
-# -----------------------------
-# Overall computation
-# -----------------------------
+# Clamp bounds
+LO, HI = 1.0, 5.0
 
-DIM_KEYS = ["I", "N", "V", "E", "S", "T"]
 
-def compute_overall_03(scores_03: Dict[str, float]) -> float:
-    """
-    Compute weighted overall on 0~3 scale using INVEST_WEIGHTS.
-    Expects keys I,N,V,E,S,T on 0~3 scale.
-    """
-    num = 0.0
-    den = 0.0
-    for k in DIM_KEYS:
-        w = float(INVEST_WEIGHTS.get(k, 1.0))
-        num += w * float(scores_03.get(k, 0.0))
-        den += w
-    return 0.0 if den == 0 else num / den
-
-def ensure_overall(scores: Dict[str, float], scale: str = "0-3") -> Dict[str, float]:
-    """
-    Ensure 'overall' exists; if missing, compute it with weights.
-    `scale` indicates the incoming score scale.
-    """
-    d = dict(scores)
-    if "overall" not in d:
-        if scale == "0-3":
-            d["overall"] = compute_overall_03(d)
-        elif scale == "1-5":
-            # Convert to 0~3 → compute → back to 1~5
-            tmp = {k: rescale_15_to_03(d.get(k, 1.0)) for k in DIM_KEYS}
-            d["overall"] = rescale_03_to_15(compute_overall_03(tmp))
-        else:
-            raise ValueError("scale must be '0-3' or '1-5'")
-    return d
-
-# -----------------------------
-# Suggest rules (human-written)
-# -----------------------------
-
-SUGGEST_RULES: Dict[str, str] = {
-    "I": "Make the story self-contained: remove cross-story dependencies or state clear prerequisites.",
-    "N": "Avoid prescribing implementation details; describe goals/constraints to keep room for negotiation.",
-    "V": "Clarify user/business value (use a concrete 'so that ...' clause and beneficiary).",
-    "E": "Narrow scope and list assumptions/boundaries so effort can be estimated.",
-    "S": "Split into smaller, deliverable slices that fit within 1~3 workdays.",
-    "T": "Add measurable acceptance criteria (steps, inputs, expected outcomes).",
-    "overall": "Improve clarity, completeness, and testability to raise the overall score.",
-}
-
-def build_suggest_text(low_dims: List[str]) -> str:
-    if not low_dims:
-        return ""
-    parts = []
-    for k in low_dims:
-        msg = SUGGEST_RULES.get(k, "").strip()
-        if msg:
-            parts.append(f"[{k}] {msg}")
-    return " ".join(parts)
-
-# -----------------------------
-# Threshold checking
-# -----------------------------
-
+# --- Data classes -------------------------------------------------------------
 @dataclass
 class AssertionResult:
     passed: bool
-    low_dims: List[str]          # which dimensions are below threshold (excluding overall)
-    message: str                 # concatenated suggestion (for LLM Rewrite hint)
-    details: Dict[str, Tuple[float, float]]  # dim -> (score, threshold) on same scale
-    scale: str                   # '0-3' or '1-5'
+    scale: str = SCALE
+    overall: float = 0.0
+    details: Dict[str, float] = field(default_factory=dict)
+    low_dims: List[str] = field(default_factory=list)
+    message: str = ""
 
-def _to_03_if_needed(scores: Dict[str, float], scale: str) -> Dict[str, float]:
-    if scale == "0-3":
-        return scores
-    elif scale == "1-5":
-        return {k: (rescale_15_to_03(v) if isinstance(v, (int, float)) else v)
-                for k, v in scores.items()}
-    else:
-        raise ValueError("scale must be '0-3' or '1-5'")
 
-def check_thresholds(
-    scores: Dict[str, float],
-    thresholds: Dict[str, float] = INVEST_THRESHOLDS,
-    scale: str = "0-3"
+# --- Utilities ----------------------------------------------------------------
+def _clamp01(x: float, lo: float = LO, hi: float = HI) -> float:
+    return max(lo, min(hi, float(x)))
+
+
+def _validate_and_cast_scores(scores15: Dict[str, float]) -> Dict[str, float]:
+    """Ensure dict has only DIM_KEYS and values in [1,5]; missing dims are filled with 3.0."""
+    out: Dict[str, float] = {}
+    for d in DIM_KEYS:
+        v = scores15.get(d, 3.0)
+        out[d] = _clamp01(v, LO, HI)
+    return out
+
+
+def _normalize_weights(weights: Optional[Dict[str, float]]) -> Dict[str, float]:
+    """Return normalized weights over DIM_KEYS."""
+    if not weights:
+        return dict(DEFAULT_WEIGHTS)
+    total = sum(max(0.0, float(weights.get(d, 0.0))) for d in DIM_KEYS)
+    if total <= 0.0:
+        return dict(DEFAULT_WEIGHTS)
+    return {d: max(0.0, float(weights.get(d, 0.0))) / total for d in DIM_KEYS}
+
+
+def _compose_rubric_hint(dim: str, score: float) -> str:
+    """
+    Return a short hint derived from rubric text around the nearest integer step.
+    If rubric text isn't available, return an empty string.
+    """
+    step = int(round(_clamp01(score)))
+    text = get_invest_rubric_text(dim, step, scale=SCALE)
+    if not text:
+        return ""
+    # Keep it concise (you can tailor truncation if needed)
+    return f"Guideline ({dim}={step}): {text}"
+
+
+# --- Core computations ---------------------------------------------------------
+def compute_overall_15(scores15: Dict[str, float], *, weights: Optional[Dict[str, float]] = None) -> float:
+    """Weighted average on 1–5 scale."""
+    s = _validate_and_cast_scores(scores15)
+    w = _normalize_weights(weights)
+    return sum(s[d] * w[d] for d in DIM_KEYS)
+
+
+def ensure_overall(scores15: Dict[str, float], *, weights: Optional[Dict[str, float]] = None) -> Dict[str, float]:
+    """Return a copy with 'overall' field (1–5)."""
+    out = dict(_validate_and_cast_scores(scores15))
+    out["overall"] = compute_overall_15(out, weights=weights)
+    out["_internal_scale"] = SCALE
+    out["_external_scale"] = SCALE
+    return out
+
+
+def _check_thresholds(
+    scores15: Dict[str, float],
+    *,
+    thresholds: Optional[Dict[str, float]] = None,
+    overall_min: Optional[float] = None
+) -> Tuple[bool, List[str], float]:
+    """Check per-dimension thresholds and overall threshold. Returns (passed, low_dims, overall)."""
+    s = _validate_and_cast_scores(scores15)
+    th = dict(DEFAULT_THRESHOLDS)
+    if thresholds:
+        for d in DIM_KEYS:
+            if d in thresholds:
+                th[d] = _clamp01(thresholds[d])
+
+    o_min = _clamp01(overall_min if overall_min is not None else DEFAULT_OVERALL_MIN)
+    overall = compute_overall_15(s)
+
+    low_dims = [d for d in DIM_KEYS if s[d] < th[d]]
+    passed = (len(low_dims) == 0) and (overall >= o_min)
+    return passed, low_dims, overall
+
+
+def _build_feedback_message(
+    scores15: Dict[str, float],
+    *,
+    thresholds: Optional[Dict[str, float]] = None,
+    overall_min: Optional[float] = None
+) -> str:
+    """Produce a compact, actionable feedback message."""
+    s = _validate_and_cast_scores(scores15)
+    th = dict(DEFAULT_THRESHOLDS)
+    if thresholds:
+        for d in DIM_KEYS:
+            if d in thresholds:
+                th[d] = _clamp01(thresholds[d])
+
+    o_min = _clamp01(overall_min if overall_min is not None else DEFAULT_OVERALL_MIN)
+    overall = compute_overall_15(s)
+
+    low_dims = [d for d in DIM_KEYS if s[d] < th[d]]
+
+    if not low_dims and overall >= o_min:
+        return f"✅ Passed. Overall={overall:.2f} (min {o_min:.2f}). All dimensions meet or exceed thresholds."
+
+    parts: List[str] = []
+    if low_dims:
+        parts.append("⚠️ Improve these dimensions:")
+        for d in low_dims:
+            gap = th[d] - s[d]
+            hint = _compose_rubric_hint(d, s[d])
+            base = f"- {d}: {s[d]:.2f} < {th[d]:.2f} (gap {gap:+.2f})"
+            if hint:
+                parts.append(f"{base}\n  {hint}")
+            else:
+                parts.append(base)
+
+    if overall < o_min:
+        parts.append(f"ℹ️ Overall={overall:.2f} is below min {o_min:.2f}. Focus on raising low dimensions first.")
+
+    return "\n".join(parts)
+
+
+# --- Public API ----------------------------------------------------------------
+def assert_invest(
+    scores15: Dict[str, float],
+    *,
+    weights: Optional[Dict[str, float]] = None,
+    thresholds: Optional[Dict[str, float]] = None,
+    overall_min: Optional[float] = None
 ) -> AssertionResult:
     """
-    Validate scores against thresholds.
-    Inputs can be in 0~3 or 1~5 scale (select via `scale`).
-    Returns an AssertionResult; `details` always reported on 0~3 scale for consistency.
+    Main entry to validate INVEST on native 1–5 scale.
+
+    Parameters
+    ----------
+    scores15 : dict
+        {"I": float, "N": float, "V": float, "E": float, "S": float}, each in [1,5].
+    weights : dict, optional
+        Per-dimension weights (will be normalized). Defaults to equal weights.
+    thresholds : dict, optional
+        Per-dimension minimum thresholds in [1,5]. Default 3.0.
+    overall_min : float, optional
+        Overall minimum threshold in [1,5]. Default 3.0.
+
+    Returns
+    -------
+    AssertionResult
     """
-    # normalize to 0~3 scale for comparison
-    s03 = _to_03_if_needed(ensure_overall(scores, scale=scale), scale=scale)
-
-    details: Dict[str, Tuple[float, float]] = {}
-    low_dims: List[str] = []
-
-    # check each threshold (including overall)
-    for k, thr in thresholds.items():
-        val = float(s03.get(k, 0.0))
-        details[k] = (val, float(thr))
-        if val < float(thr):
-            if k != "overall":  # we collect only per-dimension deficits here
-                low_dims.append(k)
-
-    passed = all(details[k][0] >= details[k][1] for k in thresholds.keys())
-    # build suggestion text (include overall advice if overall failed)
-    suggest_keys = list(low_dims)
-    if details.get("overall", (0.0, 0.0))[0] < details.get("overall", (0.0, 0.0))[1]:
-        suggest_keys = ["overall"] + suggest_keys
-    message = build_suggest_text(suggest_keys)
+    s = _validate_and_cast_scores(scores15)
+    passed, low_dims, overall = _check_thresholds(s, thresholds=thresholds, overall_min=overall_min)
+    msg = _build_feedback_message(s, thresholds=thresholds, overall_min=overall_min)
 
     return AssertionResult(
         passed=passed,
+        scale=SCALE,
+        overall=overall,
+        details=s,
         low_dims=low_dims,
-        message=message,
-        details=details,
-        scale="0-3",
+        message=msg,
     )
 
-# -----------------------------
-# Convenience helpers for pipelines
-# -----------------------------
 
-def dims_below_threshold(scores: Dict[str, float], scale: str = "0-3") -> List[str]:
-    """Return dimension keys that are below threshold (excludes 'overall')."""
-    return check_thresholds(scores, scale=scale).low_dims
-
-def need_refine(scores: Dict[str, float], scale: str = "0-3") -> bool:
-    """Return True if any dimension or overall is below threshold."""
-    ar = check_thresholds(scores, scale=scale)
-    return not ar.passed
-
-def summarize_assertion(ar: AssertionResult) -> str:
-    """
-    Human-readable summary; useful for logs or as Rewrite guidance.
-    """
-    lines = []
-    lines.append(f"[Assertion] passed={ar.passed} (scale={ar.scale})")
-    for k in ["overall"] + DIM_KEYS:
-        if k in ar.details:
-            v, thr = ar.details[k]
-            status = "OK" if v >= thr else "LOW"
-            lines.append(f" - {k}: {v:.2f} / {thr:.2f}  ({status})")
-    if ar.message:
-        lines.append(f"[Suggest] {ar.message}")
-    return "\n".join(lines)
+def summarize_assertion(result: AssertionResult) -> str:
+    """Compact single-paragraph summary suitable for logs/UI."""
+    status = "PASSED" if result.passed else "FAILED"
+    dims = " ".join([f"{d}:{result.details.get(d, 0):.2f}" for d in DIM_KEYS])
+    low = ", ".join(result.low_dims) if result.low_dims else "—"
+    return f"[{status}] Overall={result.overall:.2f} | {dims} | LowDims={low}"

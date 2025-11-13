@@ -1,151 +1,162 @@
+# -*- coding: utf-8 -*-
 """
-INVEST Metric Parser & Validator
---------------------------------------
-Purpose:
-- Parse and validate LLM JSON output from InvestScoreSig
-- Guarantee numeric range consistency (0~3 or 1~5)
-- Auto-fill missing keys / clamp invalid values
-- Provide safe conversion functions (0~3 <-> 1~5)
+invest_metric.py — Native 1–5 scale version
+-------------------------------------------
+
+Purpose
+-------
+- Provide utilities to compute INVEST metrics on a 1–5 scale.
+- Used by pipeline.py to evaluate each User Story and output CSV reports.
+- This replaces the old 0–3 scale logic (no rescaling anymore).
+
+Author: YOU
 """
 
-import json
-from typing import Dict, Any
+from typing import Dict, List, Optional
 from dataclasses import dataclass, field
-from .assertion_rules import (
-    rescale_03_to_15,
-    rescale_15_to_03,
-    compute_overall_03,
-    DIM_KEYS
-)
 
-# -----------------------------
-# Configurable defaults
-# -----------------------------
+# Import shared definitions
+from .invest_rules import DIM_KEYS, INVEST_THRESHOLDS, INVEST_WEIGHTS
+from .assertion_rules import compute_overall_15, assert_invest
 
-DEFAULT_SCALE = "0-3"  # could be "1-5" if you want 5-point view
-DEFAULT_MINMAX = {
-    "0-3": (0, 3),
-    "1-5": (1, 5)
-}
 
-# -----------------------------
-# Data structure
-# -----------------------------
+# ---------------------------------------------------------------------
+# Constants
+# ---------------------------------------------------------------------
+SCALE: str = "1-5"
+LO, HI = 1.0, 5.0
 
+
+# ---------------------------------------------------------------------
+# Dataclasses
+# ---------------------------------------------------------------------
 @dataclass
-class InvestMetric:
-    overall: float = 0.0
-    I: float = 0.0
-    N: float = 0.0
-    V: float = 0.0
-    E: float = 0.0
-    S: float = 0.0
-    T: float = 0.0
-    reasons: Dict[str, str] = field(default_factory=dict)
-    scale: str = DEFAULT_SCALE
+class InvestScore:
+    """Container for one User Story's INVEST evaluation result."""
+    story_id: str
+    scores: Dict[str, float]
+    overall: float
+    passed: bool
+    low_dims: List[str] = field(default_factory=list)
+    message: str = ""
 
-    def as_dict(self) -> Dict[str, Any]:
-        return {
-            "overall": self.overall,
-            "I": self.I, "N": self.N, "V": self.V,
-            "E": self.E, "S": self.S, "T": self.T,
-            "reasons": self.reasons,
-            "scale": self.scale
-        }
 
-# -----------------------------
-# Core utilities
-# -----------------------------
+# ---------------------------------------------------------------------
+# Utility Functions
+# ---------------------------------------------------------------------
+def clamp_15(x: float) -> float:
+    """Clamp score between 1 and 5."""
+    return max(LO, min(HI, float(x)))
 
-def clamp(v: float, lo: float, hi: float) -> float:
-    return max(lo, min(hi, v))
 
-def _parse_json_safe(raw: str) -> Dict[str, Any]:
+def normalize_scores(scores: Dict[str, float]) -> Dict[str, float]:
+    """Ensure scores contain all INVEST dimensions and are in range [1,5]."""
+    fixed = {}
+    for d in DIM_KEYS:
+        v = scores.get(d, 3.0)
+        fixed[d] = clamp_15(v)
+    return fixed
+
+
+def compute_invest_score(
+    story_id: str,
+    scores15: Dict[str, float],
+    *,
+    thresholds: Optional[Dict[str, float]] = None,
+    weights: Optional[Dict[str, float]] = None,
+) -> InvestScore:
     """
-    Parse raw JSON string safely, stripping unwanted characters.
+    Compute INVEST evaluation for a single User Story (1–5 scale).
+
+    Parameters
+    ----------
+    story_id : str
+        Identifier for the user story.
+    scores15 : dict
+        Raw dimension scores (I, N, V, E, S, T) on 1–5 scale.
+    thresholds : dict, optional
+        Custom per-dimension thresholds (default from invest_rules).
+    weights : dict, optional
+        Custom weights (default from invest_rules).
+
+    Returns
+    -------
+    InvestScore
     """
-    try:
-        cleaned = raw.strip().strip("```").strip()
-        if cleaned.startswith("json"):
-            cleaned = cleaned[4:].strip()
-        return json.loads(cleaned)
-    except Exception as e:
-        print(f"[WARN] JSON parsing failed: {e}")
-        return {}
+    scores = normalize_scores(scores15)
+    result = assert_invest(scores, thresholds=thresholds or INVEST_THRESHOLDS, weights=weights or INVEST_WEIGHTS)
 
-def _ensure_reasons(keys: list, reasons_dict: Dict[str, str]) -> Dict[str, str]:
-    """
-    Ensure all keys exist in reasons.
-    """
-    reasons = dict(reasons_dict or {})
-    for k in keys:
-        reasons.setdefault(k, "")
-    return reasons
-
-# -----------------------------
-# Public interface
-# -----------------------------
-
-def parse_invest_json(raw: str, scale: str = DEFAULT_SCALE) -> InvestMetric:
-    """
-    Parse LLM output JSON into InvestMetric object.
-    Auto-correct invalid/missing values.
-    """
-    data = _parse_json_safe(raw)
-    lo, hi = DEFAULT_MINMAX[scale]
-    values = {}
-
-    # Extract scores
-    for k in ["overall"] + DIM_KEYS:
-        try:
-            values[k] = float(data.get(k, 0))
-        except Exception:
-            values[k] = 0.0
-        # Clamp values
-        values[k] = clamp(values[k], lo, hi)
-
-    # Fix missing overall (recompute if needed)
-    if values["overall"] == 0:
-        if scale == "0-3":
-            values["overall"] = compute_overall_03(values)
-        else:
-            tmp03 = {k: rescale_15_to_03(values[k]) for k in DIM_KEYS}
-            values["overall"] = rescale_03_to_15(compute_overall_03(tmp03))
-
-    # Extract reasons
-    reasons = _ensure_reasons(DIM_KEYS, data.get("reasons", {}))
-
-    return InvestMetric(
-        overall=values["overall"],
-        I=values["I"], N=values["N"], V=values["V"],
-        E=values["E"], S=values["S"], T=values["T"],
-        reasons=reasons,
-        scale=scale
+    return InvestScore(
+        story_id=story_id,
+        scores=scores,
+        overall=result.overall,
+        passed=result.passed,
+        low_dims=result.low_dims,
+        message=result.message,
     )
 
-# -----------------------------
-# Conversion helpers
-# -----------------------------
 
-def convert_metric_scale(metric: InvestMetric, to_scale: str = "1-5") -> InvestMetric:
+def batch_compute_invest(
+    data: List[Dict[str, float]],
+    *,
+    thresholds: Optional[Dict[str, float]] = None,
+    weights: Optional[Dict[str, float]] = None,
+) -> List[InvestScore]:
     """
-    Convert entire metric object between 0~3 and 1~5 scales.
+    Compute INVEST scores for a batch of User Stories.
+
+    Parameters
+    ----------
+    data : list of dict
+        Each dict must contain {"id": str, "I":..., "N":..., "V":..., "E":..., "S":..., "T":...}.
+    thresholds : dict, optional
+        Per-dimension thresholds (default INVEST_THRESHOLDS).
+    weights : dict, optional
+        Per-dimension weights (default INVEST_WEIGHTS).
+
+    Returns
+    -------
+    list of InvestScore
     """
-    if metric.scale == to_scale:
-        return metric
+    results: List[InvestScore] = []
+    for item in data:
+        story_id = str(item.get("id") or item.get("story_id") or f"US_{len(results)+1}")
+        scores = {d: item.get(d, 3.0) for d in DIM_KEYS}
+        result = compute_invest_score(story_id, scores, thresholds=thresholds, weights=weights)
+        results.append(result)
+    return results
 
-    if to_scale == "1-5":
-        f = rescale_03_to_15
-    elif to_scale == "0-3":
-        f = rescale_15_to_03
-    else:
-        raise ValueError("to_scale must be '0-3' or '1-5'")
 
-    new_vals = {k: f(getattr(metric, k)) for k in DIM_KEYS + ["overall"]}
-    return InvestMetric(
-        overall=new_vals["overall"],
-        I=new_vals["I"], N=new_vals["N"], V=new_vals["V"],
-        E=new_vals["E"], S=new_vals["S"], T=new_vals["T"],
-        reasons=metric.reasons,
-        scale=to_scale
-    )
+# ---------------------------------------------------------------------
+# Optional: CSV Export Helper
+# ---------------------------------------------------------------------
+def invest_scores_to_rows(results: List[InvestScore]) -> List[Dict[str, float]]:
+    """
+    Convert list of InvestScore objects to plain dicts for CSV writing.
+
+    Each dict contains: id, I..T, overall, passed, low_dims, message.
+    """
+    rows = []
+    for r in results:
+        row = {"id": r.story_id, "overall": round(r.overall, 2), "passed": r.passed}
+        for d in DIM_KEYS:
+            row[d] = round(r.scores.get(d, 3.0), 2)
+        row["low_dims"] = ",".join(r.low_dims)
+        row["message"] = r.message
+        rows.append(row)
+    return rows
+
+
+# ---------------------------------------------------------------------
+# Example Usage (for testing)
+# ---------------------------------------------------------------------
+if __name__ == "__main__":
+    sample_data = [
+        {"id": "US_001", "I": 4, "N": 3, "V": 5, "E": 4, "S": 3, "T": 4},
+        {"id": "US_002", "I": 2, "N": 2, "V": 3, "E": 2, "S": 3, "T": 2},
+    ]
+    results = batch_compute_invest(sample_data)
+    for r in results:
+        print(f"{r.story_id} | Overall={r.overall:.2f} | Passed={r.passed}")
+        print(r.message)
+        print("-" * 80)

@@ -1,94 +1,78 @@
+# -*- coding: utf-8 -*-
 """
-INVEST Rubric Definition
---------------------------------------
-Defines detailed INVEST evaluation grid 0~3 scale
-based on Annex A: INVEST Grid (Independent, Negotiable, Valuable, Estimable, Small, Testable)
+invest_rules.py — 1–5 scale version (for assertion_rules.py Route B)
 
-Used by: dspy_signatures, assertion_rules, pipeline
+Purpose
+-------
+- Provide INVEST_RUBRIC_15 textual definitions for 1–5 scale.
+- Provide helper function `get_invest_rubric_text()` for retrieval.
+- Centralize rubric content to keep logic decoupled from assertions.
+
+Author: YOU
 """
 
-INVEST_RUBRIC = {
+# --- Dimensions ---------------------------------------------------------------
+DIM_KEYS = ["I", "N", "V", "E", "S"]
+
+# --- INVEST Rubric (1–5 Scale) ------------------------------------------------
+INVEST_RUBRIC_15 = {
     "I": {
-        "name": "Independent",
-        "description": "User Stories should be as independent as possible.",
-        "scale": {
-            0: "The start of construction of a User Story is tied to the completion of at least one other User Story.",
-            1: "The completion of a User Story hinders the start of construction of at least one other User Story.",
-            2: "The User Story can contain any constraint, but its release can be constrained by the completion of at least one other User Story.",
-            3: "The User Story is fully independent, and it can be realized and released without any constraint."
-        }
+        1: "The construction start of this user story is absolutely tied to the completion of at least one other user story.",
+        2: "The completion of this user story hinders the start of construction of at least one other user story.",
+        3: "The user story contains certain constraints, but its release is only constrained by the completion of at least one other user story.",
+        4: "The user story is fully independent and can be realized and released with any constraint.",
+        5: "The user story demonstrates optimal deployment independence; it is ideal for immediate and flexible delivery with zero inherent dependencies.",
     },
     "N": {
-        "name": "Negotiable",
-        "description": "User Stories should be 'open', reporting any relevant details as much as possible.",
-        "scale": {
-            0: "The User Story contains enough detail to be a technical specification (Design phase), leaving no room to negotiate any element.",
-            1: "The User Story is written with enough detail to be a functional specification (Analysis phase), leaving no room to negotiate any element.",
-            2: "The User Story is written with informative content defining a User Requirement in a consolidated manner, yet shared between Customer and Provider.",
-            3: "The User Story is written with the informative content typical of a high-level need, allowing feedback between customer and provider."
-        }
+        1: "The user story contains enough detail to be a technical specification, leaving no room to negotiate any element.",
+        2: "The user story is written with enough detail to be a functional specification (Analysis phase), leaving no room to negotiate any element.",
+        3: "The user story is written with informative content defining a User Requirement in a consolidated manner, yet shared between Customer and Provider.",
+        4: "The user story is written with the informative content typical of a high-level need, fully allowing feedback and negotiation between Customer and Provider.",
+        5: "The user story perfectly defines the high-level need, maximizing implementation flexibility while explicitly preventing premature scope creep.",
     },
     "V": {
-        "name": "Valuable",
-        "description": "User Stories should provide value to end users in terms of the solution.",
-        "scale": {
-            0: "The functional part of the User Story does not contain all the functionalities requested by the customer.",
-            1: "The functional part expresses mostly qualitative and technical requirements about the system, and needs to be more developed in terms of functional requirements.",
-            2: "The functional part expresses mostly the functional requirements requested by the customer, but also includes qualitative and technical requirements.",
-            3: "The functional part of the User Story correctly expresses only the functional requirements requested by the customer."
-        }
+        1: "The functional part (F) of the user story does not contain all the functionalities requested by the customer.",
+        2: "The functional (F) part primarily expresses qualitative (Q) and technical (T) requirements, requiring significant development in terms of functional requirements.",
+        3: "The functional (F) part mostly expresses the functional requirements requested by the customer, but also includes qualitative (Q) and technical (T) requirements.",
+        4: "The functional (F) part of the user story correctly expresses only the functional requirements requested by the customer.",
+        5: "The value is quantifiable and perfectly aligned with a measurable business outcome or clear user benefit, exceeding mere functional correctness.",
     },
     "E": {
-        "name": "Estimable",
-        "description": "Each User Story must be able to be estimated in terms of relative size and effort.",
-        "scale": {
-            0: "The User Story shows only its functional part, filled in by the customer, but without sufficient detail to allow the provider to fill in the qualitative/technical parts.",
-            1: "The User Story shows only its functional part, filled in by the customer, but validated with the provider.",
-            2: "The User Story has been completed by the provider with respect to qualitative/technical issues, but still needs to be validated jointly with the customer.",
-            3: "All useful parts of the User Story (functional/qualitative/technical) are shown, allowing the effort needed to size and estimate it, and validated by both parts."
-        }
+        1: "The user story shows only its functional (F) part, filled in by the customer, without sufficient detail to allow the provider to fill in the Q/T parts.",
+        2: "The user story shows only its functional (F) part, filled in by the customer, but the content has been validated with the provider.",
+        3: "The user story has been completed by the provider with respect to Q/T issues, but still needs to be validated jointly with the customer.",
+        4: "All the useful parts of the user story (F/Q/T) are shown, allowing the effort need to size and estimate it, and validated by both parts.",
+        5: "The user story quality permits highly objective and low-uncertainty estimation (e.g., suitable for Functional Size Measurement (FSM) reference).",
     },
     "S": {
-        "name": "Small",
-        "description": "Each User Story should be sufficiently granular, and not defined at too high a level.",
-        "scale": {
-            0: "The User Story is very large and cannot be completed within a Sprint.",
-            1: "The User Story is very large, and can be completed within a Sprint, but cannot accommodate the creation/delivery of other User Stories.",
-            2: "The size of the User Story is such that it can be completed within a Sprint, jointly with other User Stories, but it is too small to create overhead about the Testing phase.",
-            3: "The size of the User Story is such that it can be completed within a Sprint, jointly with other User Stories, ensuring an appropriate balance between development and testing activities."
-        }
+        1: "The user story is very large and cannot be completed within a Sprint.",
+        2: "The user story is very large, but can be completed within a Sprint along with other user story, though it cannot accommodate the creation/delivery of other user story.",
+        3: "The user story size is such that it can be completed within a Sprint jointly with other user story, but it is too small to create overhead about the Testing phase.",
+        4: "The size of the user story ensures an appropriate balance between development and testing activities within a Sprint.",
+        5: "The user story is defined at the level of the elementary process concept (the smallest unit meaningful to the user storyer), maximizing quality and readability.",
     },
     "T": {
-        "name": "Testable",
-        "description": "Each User Story must be formulated to stress useful details for creating tests.",
-        "scale": {
-            0: "The User Story does not include tips about Acceptance Tests.",
-            1: "The User Story includes a formal indication of Acceptance Tests, but yet to be completed.",
-            2: "The User Story includes an indication of Acceptance Tests which are complete, but yet to be validated.",
-            3: "The User Story includes an indication of completed and validated Acceptance Tests."
-        }
+        1: "The user story does not include any indication or detail about Acceptance Tests.",
+        2: "The user story includes a formal indication of Acceptance Tests, but they are not yet completed or validated.",
+        3: "The user story includes Acceptance Tests that are drafted and partially complete, but they still need validation with the customer or provider.",
+        4: "The user story includes clearly defined Acceptance Tests which are complete, though not yet validated by both parties.",
+        5: "The user story includes completed and validated Acceptance Tests, ensuring clear verification of the requirements.",
     }
 }
 
-# === Thresholds (LM Assertion use) ===
-# Using original grid (0~3), rescaled to 0~5 model in later modules if needed
-INVEST_THRESHOLDS = {
-    "overall": 2.5,
-    "I": 2,
-    "N": 2,
-    "V": 2,
-    "E": 2,
-    "S": 2,
-    "T": 2.5
-}
 
-# === Optional weights (for overall computation) ===
-# Increase influence of Testable and Valuable
-INVEST_WEIGHTS = {
-    "I": 1,
-    "N": 1,
-    "V": 2,
-    "E": 1,
-    "S": 1,
-    "T": 2
-}
+# === Thresholds (LM Assertion use) ===
+def get_invest_rubric_text(dim: str, score: int, scale: str = "1-5") -> str:
+    if scale != "1-5":
+        return ""
+    dim = (dim or "").upper().strip()
+    if dim not in INVEST_RUBRIC_15:
+        return ""
+    step = max(1, min(5, int(round(score))))
+    return INVEST_RUBRIC_15[dim][step]
+
+# thresholds & weights on 1–5
+INVEST_THRESHOLDS = {d: 3.0 for d in DIM_KEYS}
+INVEST_WEIGHTS = {d: 1.0 / len(DIM_KEYS) for d in DIM_KEYS}
+
+INVEST_RUBRIC = INVEST_RUBRIC_15
