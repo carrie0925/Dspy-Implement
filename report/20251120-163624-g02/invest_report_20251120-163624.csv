@@ -1,0 +1,1430 @@
+﻿ID,Original User Story,Rewritten User Story,Fuzzy Terms (with source),I_before,I_after,delta_I,N_before,N_after,delta_N,V_before,V_after,delta_V,E_before,E_after,delta_E,S_before,S_after,delta_S,T_before,T_after,delta_T,overall_before,overall_after,delta_overall,Low-score Explanation (<2)
+US001,"﻿As a Data user, I want to have the 12-19-2017 deletions processed.","User Story:
+As a data analyst, I want to ensure that the deletions from December 19, 2017, are processed accurately so that I can maintain data integrity and ensure compliance with data management policies.
+
+Acceptance Criteria:
+- Confirm that all deletions from the specified date are identified and logged.
+- Ensure that 100% of the deletions are processed within 24 hours of the request.
+- Validate that the processed deletions are reflected in the data repository without discrepancies.
+
+Test Outline:
+- Review the deletion logs to verify that all entries from December 19, 2017, are accounted for.
+- Track the processing time to ensure it meets the 24-hour requirement.
+- Cross-check the data repository to confirm that the deletions are accurately reflected and no residual data remains.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,2,4,2.0,2,5,3.0,2,5,3.0,3,5,2.0,2,5,3.0,2,5,3.0,—
+US002,"As a UI designer, I want to redesign the Resources page, so that it matches the new Broker design styles.","User Story:
+As a UI designer, I want to overhaul the Resources page to align with the updated Broker design styles, ensuring a cohesive and modern user experience across the platform.
+
+Acceptance Criteria:
+- The redesigned Resources page must incorporate at least 90% of the new Broker design elements, including color schemes, typography, and layout.
+- User feedback on the new design should achieve a satisfaction score of 80% or higher in post-launch surveys.
+- The page load time for the redesigned Resources page should not exceed 3 seconds to maintain optimal performance.
+
+Test Outline:
+- Conduct a design review to confirm that the new Resources page adheres to the specified Broker design guidelines.
+- Distribute a user satisfaction survey post-launch to gather feedback and measure satisfaction scores.
+- Monitor the page load time using performance testing tools to ensure it meets the established criteria.","it (ISO 29148)
+that (ISO 29148)",3,4,1.0,2,4,2.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US003,"As a UI designer, I want to report to the Agencies about user testing, so that they are aware of their contributions to making Broker a better UX.","User Story:
+As a UI designer, I want to provide comprehensive reports to the Agencies regarding user testing outcomes, so that they can understand their impact on enhancing the user experience (UX) of the Broker platform.
+
+Acceptance Criteria:
+- Deliver a detailed report summarizing user testing findings, including at least 3 key insights and recommendations for improvement.
+- Ensure that the report highlights specific contributions from the Agencies, quantifying their impact on user satisfaction with at least a 20% improvement in usability scores.
+- Schedule a follow-up meeting with the Agencies to discuss the report and gather their feedback within 2 weeks of the report delivery.
+
+Test Outline:
+- Review the user testing report to confirm it includes the required insights and recommendations.
+- Analyze user satisfaction scores before and after implementing changes to validate the reported improvements.
+- Confirm that a follow-up meeting is scheduled and attended by both the UI designer and the Agencies to discuss the findings.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,5,2.0,2,5,3.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US004,"As a UI designer, I want to move on to round 2 of DABS or FABS landing page edits, so that I can get approvals from leadership.","User Story:
+As a UI designer, I want to progress to the second round of edits for the DABS or FABS landing page so that I can secure timely approvals from leadership and ensure alignment with project goals.
+
+Acceptance Criteria:
+- Complete the second round of edits and present the updated designs to leadership within 5 business days.
+- Gather feedback from at least 3 leadership members to ensure diverse input on the design changes.
+- Achieve a minimum approval rating of 80% from leadership on the revised landing page designs.
+
+Test Outline:
+- Review the timeline to confirm that the edits are completed and presented within the specified timeframe.
+- Document the feedback received from leadership to verify that input was collected from the required number of members.
+- Conduct a survey or feedback session to assess the approval rating of the revised designs.","secure (ISO 29148)
+that (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",4,4,0.0,3,5,2.0,4,5,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US005,"As a UI designer, I want to move on to round 2 of Homepage edits, so that I can get approvals from leadership.","User Story:
+As a UI designer, I want to progress to the second round of edits for the Homepage so that I can secure timely approvals from leadership and ensure alignment with our design objectives.
+
+Acceptance Criteria:
+- Complete the second round of Homepage edits by the specified deadline.
+- Present the updated design to leadership for feedback within 2 business days of completion.
+- Achieve at least 80% approval from leadership on the proposed changes to move forward.
+
+Test Outline:
+- Review the completed edits against the initial design requirements to ensure all changes are implemented.
+- Schedule and conduct a presentation with leadership to gather feedback and document approval ratings.","secure (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",3,4,1.0,2,4,2.0,3,4,1.0,2,4,2.0,4,4,0.0,2,4,2.0,3,4,1.0,—
+US006,"As a UI designer, I want to move on to round 3 of the Help page edits, so that I can get approvals from leadership.","User Story:
+As a UI designer, I want to progress to the third round of edits for the Help page so that I can secure timely approvals from leadership and ensure the project stays on schedule.
+
+Acceptance Criteria:
+- Complete all necessary design revisions for the Help page by the end of the current week.
+- Present the updated Help page to leadership for feedback within 2 business days after revisions are finalized.
+- Achieve at least 80% approval from leadership on the proposed changes to move forward.
+
+Test Outline:
+- Review the final design revisions to confirm all edits are completed as per the requirements.
+- Schedule and conduct a presentation with leadership to gather feedback and document their responses.
+- Track the approval rate from leadership to ensure it meets the 80% threshold for moving to the next phase.","secure (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",3,4,1.0,2,5,3.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US007,"As a Developer , I want to be able to log better, so that I can troubleshoot issues with particular submissions and functions.","User Story:
+As a Developer , I want to implement enhanced logging capabilities so that I can efficiently diagnose and resolve issues related to specific submissions and functions, ultimately improving system reliability.
+
+Acceptance Criteria:
+- Ensure that all critical functions log detailed error messages with timestamps and unique identifiers for each submission.
+- Implement a logging level system (e.g., INFO, WARN, ERROR) to categorize log entries, allowing for easier filtering and analysis.
+- Verify that logs can be accessed and searched within 2 seconds to facilitate rapid troubleshooting.
+
+Test Outline:
+- Review the log files to confirm that critical functions are generating detailed logs with the required information.
+- Test the logging level system by generating logs at different levels and ensuring they are correctly categorized.
+- Measure the time taken to access and search logs to ensure it meets the 2-second requirement.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US008,"As a Developer, I want to add the updates on a FABS submission to be modified when the publishStatus changes, so that I know when the status of the submission has changed.","User Story:
+As a Developer, I want to implement a feature that automatically updates the FABS submission details whenever the publishStatus changes, so that I can promptly track and respond to any changes in the submission's status.
+
+Acceptance Criteria:
+- Ensure that any change in publishStatus triggers an automatic update to the FABS submission details within 2 seconds.
+- Log all status changes with timestamps to maintain a clear history of modifications.
+- Provide a notification to the developer when the status update occurs, ensuring awareness of the change.
+
+Test Outline:
+- Simulate a change in publishStatus and verify that the FABS submission details are updated within the specified time frame.
+- Check the logs to confirm that all status changes are recorded accurately with the correct timestamps.
+- Validate that a notification is sent to the developer upon each status change.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,3,5,2.0,2,5,3.0,3,5,2.0,—
+US009,"As a DevOps engineer, I want New Relic to provide useful data across all applications.","User Story:
+As a DevOps engineer, I want New Relic to deliver comprehensive and actionable performance data across all applications so that I can proactively monitor system health and optimize application performance.
+
+Acceptance Criteria:
+- Ensure that New Relic collects and displays performance metrics for at least 95% of all deployed applications.
+- Provide real-time alerts for any application performance degradation, with notifications sent within 1 minute of detection.
+- Generate detailed reports on application performance trends, with insights available on a weekly basis.
+
+Test Outline:
+- Verify that performance metrics are accurately captured and displayed for the majority of applications in New Relic.
+- Test the alerting system by simulating performance issues and confirming that notifications are received within the specified timeframe.
+- Review the generated reports to ensure they include relevant performance trends and insights for the applications monitored.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,1,4,3.0,2,5,3.0,2,5,3.0,4,5,1.0,1,5,4.0,2,5,3.0,—
+US010,"As a UI designer,  I want to move on to round 2 of the Help page edits, so that I can get approvals from leadership.","User Story:
+As a UI designer, I want to progress to the second round of edits for the Help page so that I can secure timely approvals from leadership and enhance the user experience.
+
+Acceptance Criteria:
+- Complete all design revisions for the Help page based on feedback from the first round.
+- Present the updated Help page design to leadership within 3 business days for review.
+- Obtain formal approval from leadership on the revised design to proceed with implementation.
+
+Test Outline:
+- Review the updated Help page to ensure all feedback has been addressed and revisions are complete.
+- Schedule and conduct a presentation with leadership to demonstrate the changes and gather their feedback.
+- Confirm receipt of approval from leadership through documented communication.","secure (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",3,4,1.0,2,4,2.0,3,4,1.0,2,4,2.0,4,4,0.0,2,4,2.0,3,4,1.0,—
+US011,"As a UI designer, I want to move on to round 2 of Homepage edits, so that I can get approvals from leadership.","User Story:
+As a UI designer, I want to progress to the second round of edits for the Homepage so that I can secure timely approvals from leadership and ensure alignment with our design objectives.
+
+Acceptance Criteria:
+- Complete the second round of Homepage edits by the specified deadline.
+- Present the updated design to leadership for feedback within 2 business days of completion.
+- Achieve at least 80% approval from leadership on the proposed changes to move forward.
+
+Test Outline:
+- Review the completed edits against the initial design requirements to ensure all changes are implemented.
+- Schedule and conduct a presentation with leadership to gather feedback and document approval ratings.","secure (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",3,4,1.0,2,4,2.0,3,4,1.0,2,4,2.0,4,4,0.0,2,4,2.0,3,4,1.0,—
+US012,"As a Broker user, I want to Upload and Validate the error message to have accurate text.","User Story:
+As a Broker user, I want to upload data and validate the error messages displayed so that I can ensure the accuracy and clarity of the text presented to users, enhancing the overall user experience.
+
+Acceptance Criteria:
+- Successfully upload a data file and receive a validation response within 3 seconds.
+- Ensure that all error messages are checked for accuracy, with at least 95% of messages matching the expected text.
+- Provide a mechanism for users to report any discrepancies in error messages, with a response time of 24 hours for resolution.
+
+Test Outline:
+- Test the upload functionality to confirm that the validation response time meets the 3-second requirement.
+- Review the error messages generated during validation to verify that they align with the predefined accurate text.
+- Simulate user reporting of an error message discrepancy and track the response time to ensure it is within the 24-hour window.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,4,2.0,2,4,2.0,2,5,3.0,2,5,3.0,4,5,1.0,2,5,3.0,2,5,3.0,—
+US013,"As a Broker user, I want the D1 file generation to be synced with the FPDS data load, so that I don't have to regenerate a file if no data has been updated.","User Story:
+As a Broker user, I want the generation of the D1 file to be synchronized with the loading of FPDS data, so that I can avoid unnecessary file regeneration when there are no updates to the data, thereby saving time and resources.
+
+Acceptance Criteria:
+- Ensure that the D1 file is generated only when there are changes in the FPDS data, reducing redundant file creation by at least 80%.
+- Implement a notification system that alerts users when the D1 file is generated due to data updates.
+- Confirm that the synchronization process completes within 2 minutes of the FPDS data load.
+
+Test Outline:
+- Monitor the D1 file generation process to verify that it only occurs when FPDS data has been modified.
+- Check the notification system to ensure users receive alerts for file generation events.
+- Measure the time taken for the synchronization process to ensure it meets the 2-minute requirement.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US014,"As a Website user, I want to access published FABS files, so that I can see the new files as they come in.","User Story:
+As a Website user, I want to easily access newly published FABS files so that I can stay updated with the latest information as it becomes available.
+
+Acceptance Criteria:
+- Ensure that all newly published FABS files are accessible within 10 minutes of their release.
+- Provide a clear notification system that alerts users when new FABS files are available for viewing.
+- Implement a user-friendly interface that allows users to filter and search for FABS files by date and category.
+
+Test Outline:
+- Monitor the time taken for new FABS files to appear on the website after publication to confirm it meets the 10-minute requirement.
+- Test the notification system to ensure users receive alerts for new file releases.
+- Evaluate the search and filter functionality to ensure it works effectively for users looking for specific FABS files.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,5,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US015,"As an owner, I want to be sure that USAspending only send grant records to my system.","User Story:
+As an owner, I want to ensure that only grant records from USAspending are transmitted to my system so that I can maintain data integrity and compliance with funding regulations.
+
+Acceptance Criteria:
+- Confirm that the data feed exclusively includes grant records, with 100% accuracy in classification.
+- Implement a validation process that checks for non-grant records, ensuring that any such records are flagged and reported.
+- Achieve a successful data transfer rate of at least 99% without errors related to record type misclassification.
+
+Test Outline:
+- Review the data feed to verify that all records are classified as grants and that no other types are present.
+- Test the validation process by introducing non-grant records and ensuring they are correctly identified and reported.
+- Monitor the data transfer logs to confirm that the success rate meets or exceeds the specified threshold.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,4,2.0,2,4,2.0,2,4,2.0,2,5,3.0,4,5,1.0,2,5,3.0,2,4,2.0,—
+US016,"As a Developer, I want to update the Broker validation rule table to account for the rule updates in DB-2213.","User Story:
+As a Developer, I want to revise the Broker validation rule table to incorporate the updates specified in DB-2213, ensuring that the system adheres to the latest compliance standards and improves overall data integrity.
+
+Acceptance Criteria:
+- Implement all rule updates from DB-2213 into the Broker validation rule table by the end of the current sprint.
+- Conduct unit tests to confirm that 100% of the updated rules are functioning correctly without errors.
+- Document the changes made to the validation rules and ensure that the documentation is reviewed and approved by the QA team.
+
+Test Outline:
+- Review the Broker validation rule table to verify that all updates from DB-2213 have been accurately applied.
+- Execute unit tests to ensure that each updated rule passes without any failures.
+- Check the documentation for completeness and obtain sign-off from the QA team to confirm that it meets the required standards.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)",4,4,0.0,3,4,1.0,3,4,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US017,"As a Developer, I want to add the GTAS window data to the database, so that I can ensure the site is locked down during the GTAS submission period.","User Story:
+As a Developer, I want to integrate the GTAS window data into the database so that I can guarantee the site remains secure and inaccessible during the GTAS submission period, thereby protecting sensitive information.
+
+Acceptance Criteria:
+- Successfully add GTAS window data to the database with a confirmation of successful entry.
+- Ensure that the site is locked down during the GTAS submission period, with access restricted to authorized personnel only.
+- Implement logging to track any access attempts during the lockdown period, with a report generated for review.
+
+Test Outline:
+- Verify that the GTAS window data is correctly stored in the database by querying the relevant tables.
+- Test the site’s access restrictions during the GTAS submission period to confirm that unauthorized users cannot access it.
+- Review the access logs to ensure that all attempts to access the site during the lockdown are recorded accurately.","secure (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US018,"As a Developer, I want D Files generation requests to be managed and cached, so that duplicate requests do not cause performance issues.","User Story:
+As a Developer, I want to implement a management and caching system for D Files generation requests so that we can eliminate duplicate requests and significantly enhance overall system performance.
+
+Acceptance Criteria:
+- Ensure that duplicate D Files generation requests are identified and managed, reducing unnecessary processing by at least 75%.
+- Implement a caching mechanism that stores the results of D Files generation for a minimum of 10 minutes to prevent repeated computations.
+- Monitor system performance to confirm that the average response time for D Files generation requests is reduced by at least 50%.
+
+Test Outline:
+- Test the system by sending multiple duplicate D Files generation requests and verify that only one request is processed.
+- Check the cache to ensure that the results of the D Files generation are stored and retrieved correctly within the specified time frame.
+- Measure the average response time for D Files generation requests before and after implementing the caching system to validate performance improvements.","that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US019,"As a user, I want to access the raw agency published files from FABS via USAspending.","User Story:
+As a user, I want to retrieve the raw agency published files from the Federal Awardee Performance and Integrity Information System (FABS) through the USAspending platform so that I can analyze the data for transparency and accountability in federal spending.
+
+Acceptance Criteria:
+- Successfully access the raw files published by agencies in FABS through the USAspending interface.
+- Ensure that the files are available for download in a standardized format (e.g., CSV, JSON) within 2 clicks from the homepage.
+- Confirm that the data retrieved is up-to-date, reflecting the latest published information within the last 30 days.
+
+Test Outline:
+- Verify that the user can navigate to the FABS section on USAspending and access the raw files without encountering errors.
+- Check the number of clicks required to download the files from the homepage to ensure it meets the specified criteria.
+- Validate the freshness of the data by comparing the download date of the files against the publication date in the FABS database.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,4,1.0,2,4,2.0,2,5,3.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US020,"As an Agency user, I want to be able to include a large number of flexfields without performance impact.","User Story:
+As an Agency user, I want to seamlessly incorporate a substantial number of flexfields into my workflow so that I can enhance data customization without experiencing any degradation in system performance.
+
+Acceptance Criteria:
+- Ensure that the system can handle at least 100 flexfields without any noticeable performance lag.
+- Maintain a response time of under 1 second for loading and processing flexfields, regardless of the quantity.
+- Validate that the user interface remains responsive and functional when all flexfields are displayed.
+
+Test Outline:
+- Conduct performance testing by adding varying numbers of flexfields, measuring the response time to ensure it stays below the specified threshold.
+- Monitor system performance metrics during flexfield integration to confirm that there is no significant impact on usability.
+- Gather user feedback on interface responsiveness when utilizing the maximum number of flexfields.","it (ISO 29148)
+that (ISO 29148)
+significant (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,5,2.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US021,"As a Broker user, I want  to help create content mockups, so that I can submit my data efficiently.","User Story:
+As a Broker user, I want to collaborate in the development of content mockups so that I can efficiently submit my data and streamline the overall submission process.
+
+Acceptance Criteria:
+- Participate in at least 3 collaborative sessions to gather requirements for the content mockups.
+- Ensure that the mockups are designed to accommodate 100% of the necessary data fields for submission.
+- Achieve a user satisfaction score of 85% or higher on the usability of the mockups during testing.
+
+Test Outline:
+- Track attendance and contributions during the collaborative sessions to confirm participation.
+- Review the final mockups to ensure all required data fields are included and functional.
+- Conduct a user satisfaction survey post-testing to measure the usability score of the mockups.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,2,4,2.0,3,5,2.0,2,5,3.0,4,5,1.0,1,5,4.0,2,5,3.0,—
+US022,"As a UI designer, I want to track the issues that come up in Tech Thursday, so that I know what to test and what want s to be fixed.","User Story:
+As a UI designer, I want to systematically document and monitor the issues raised during Tech Thursday sessions so that I can prioritize testing efforts and ensure that all identified concerns are addressed effectively.
+
+Acceptance Criteria:
+- Create a centralized issue tracking system that logs all reported problems from Tech Thursday.
+- Ensure that each issue is categorized by severity and assigned a status (e.g., open, in progress, resolved).
+- Generate a weekly report summarizing the issues discussed, including the number of issues resolved and outstanding.
+
+Test Outline:
+- Review the issue tracking system to confirm that all Tech Thursday issues are logged and categorized appropriately.
+- Check the status of each issue to ensure it reflects the current progress and is updated regularly.
+- Validate the accuracy of the weekly report by comparing it against the issues discussed during Tech Thursday.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,4,2.0,2,4,2.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US023,"As an Owner, I want to create a user testing summary from the UI SME, so that I can know what UI improvements we will follow through on.","User Story:
+As an Owner, I want to compile a comprehensive user testing summary based on feedback from the UI Subject Matter Expert (SME) so that I can identify and prioritize actionable UI enhancements for our product roadmap.
+
+Acceptance Criteria:
+- Gather detailed feedback from the UI SME that highlights at least 5 specific areas for improvement.
+- Prioritize the identified UI improvements based on user impact and feasibility, categorizing them into high, medium, and low priority.
+- Deliver the user testing summary document within 3 business days of the testing session.
+
+Test Outline:
+- Review the feedback provided by the UI SME to ensure it includes the required number of improvement areas.
+- Validate the prioritization of improvements by cross-referencing with user feedback and project goals.
+- Confirm the timely delivery of the user testing summary document to stakeholders.","it (ISO 29148)
+that (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",3,4,1.0,3,5,2.0,4,4,0.0,3,5,2.0,4,5,1.0,3,5,2.0,3,5,2.0,—
+US024,"As a UI designer, I want to begin user testing, so that I can validate stakeholder UI improvement requests.","User Story:
+As a UI designer, I want to initiate user testing sessions so that I can effectively validate and prioritize stakeholder requests for UI enhancements based on real user feedback.
+
+Acceptance Criteria:
+- Conduct at least 5 user testing sessions with diverse participants to gather comprehensive insights.
+- Collect and analyze feedback from users, aiming for a minimum satisfaction score of 80% on proposed UI changes.
+- Document and present findings to stakeholders within 2 weeks of completing the user testing sessions.
+
+Test Outline:
+- Schedule and execute user testing sessions, ensuring a varied participant group for diverse perspectives.
+- Use surveys or interviews to assess user satisfaction and compile feedback for analysis.
+- Prepare a report summarizing the findings and recommendations for stakeholders, ensuring timely delivery.","that (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",4,4,0.0,3,5,2.0,4,5,1.0,3,5,2.0,4,5,1.0,3,5,2.0,4,5,1.0,—
+US025,"As a UI designer, I want to schedule user testing, so that I can give the testers advanced notice to ensure buy-in.","User Story:
+As a UI designer, I want to organize and schedule user testing sessions in advance so that I can provide testers with sufficient notice, ensuring their participation and commitment to the process.
+
+Acceptance Criteria:
+- Schedule user testing sessions at least 2 weeks in advance to allow testers ample time to prepare.
+- Confirm participation from at least 80% of the invited testers prior to the testing date.
+- Distribute testing materials and instructions to all participants at least 5 days before the session.
+
+Test Outline:
+- Review the calendar to verify that user testing sessions are scheduled with the required lead time.
+- Track the confirmation responses from testers to ensure that the participation rate meets the target.
+- Check the distribution logs to confirm that all necessary materials were sent to participants within the specified timeframe.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,3,5,2.0,4,5,1.0,—
+US026,"As an Owner, I want to design a schedule from the UI SME, so that I know the potential timeline of the UI improvements wanted.","User Story:
+As an Owner, I want to collaborate with the UI Subject Matter Expert (SME) to create a detailed schedule for UI enhancements, so that I can clearly understand the projected timeline for implementing the desired improvements.
+
+Acceptance Criteria:
+- Develop a comprehensive schedule that outlines key milestones and deadlines for each UI improvement, with a completion target date.
+- Ensure that the schedule includes at least 3 major phases of the UI improvement process, each with specific deliverables.
+- Provide regular updates on the progress of the schedule, with adjustments made as necessary to stay on track.
+
+Test Outline:
+- Review the finalized schedule with the UI SME to confirm all milestones and deadlines are accurately captured.
+- Monitor the progress against the schedule and document any deviations or delays, ensuring timely communication of updates.","that (ISO 29148)
+all (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",2,4,2.0,2,4,2.0,3,3,0.0,2,4,2.0,4,4,0.0,2,4,2.0,3,4,1.0,—
+US027,"As an Owner, I want to design an audit from the UI SME, so that I know the potential scope of the UI improvements want ed.","User Story:
+As an Owner, I want to collaborate with the UI Subject Matter Expert (SME) to create a comprehensive audit, so that I can clearly identify the potential areas for UI enhancements and prioritize improvements effectively.
+
+Acceptance Criteria:
+- Conduct a detailed audit that outlines at least 10 specific UI improvement opportunities.
+- Provide a report that includes a prioritization of the identified improvements based on user impact and feasibility.
+- Ensure the audit is completed and delivered within 2 weeks from the start date.
+
+Test Outline:
+- Review the audit report to confirm it lists a minimum of 10 actionable UI improvement suggestions.
+- Validate the prioritization criteria used in the report by cross-referencing with user feedback and usability metrics.
+- Check the completion date of the audit to ensure it aligns with the 2-week timeline.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,4,2.0,2,5,3.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US028,"As a Developer, I want to prevent users from double publishing FABS submissions after refreshing, so that there are no duplicates.","User Story:
+As a Developer, I want to implement a mechanism that prevents users from submitting duplicate FABS entries after refreshing the page, so that we maintain data integrity and eliminate redundancy in submissions.
+
+Acceptance Criteria:
+- Ensure that a submission can only be processed once per user session, preventing any duplicates.
+- Implement a user notification system that alerts users if they attempt to submit a duplicate entry.
+- Conduct testing to confirm that no duplicate FABS submissions occur after a page refresh in at least 95% of test cases.
+
+Test Outline:
+- Simulate a user session to verify that a second submission attempt is blocked after the first submission.
+- Check that users receive a clear notification message when they try to submit a duplicate entry.
+- Run multiple test scenarios to ensure that the system consistently prevents duplicates across various user sessions.","that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US029,"As an data user, I want to receive updates to FABS records.","User Story:
+As an data user, I want to receive timely updates on FABS (Federal Awardee Performance and Integrity Information System) records so that I can stay informed about changes that may impact my analysis and decision-making processes.
+
+Acceptance Criteria:
+- Ensure that updates to FABS records are delivered to users within 24 hours of any changes.
+- Provide users with a summary of changes made to FABS records, including at least 3 key data points per update.
+- Allow users to customize their notification preferences to receive updates via email or in-app alerts.
+
+Test Outline:
+- Track the time taken from when a FABS record is updated to when the user receives the notification to confirm it meets the 24-hour requirement.
+- Review the content of the update notifications to ensure they include the specified key data points.
+- Test the customization feature to verify that users can successfully select their preferred notification method and receive updates accordingly.","it (ISO 29148)
+that (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)
+may (NASA ARM)",2,4,2.0,2,4,2.0,2,4,2.0,2,5,3.0,4,5,1.0,2,5,3.0,2,4,2.0,—
+US030,"As an Agency user, I want to be able to include a large number of flexfields without performance impact.","User Story:
+As an Agency user, I want to seamlessly incorporate a substantial number of flexfields into my workflow so that I can enhance data customization without experiencing any degradation in system performance.
+
+Acceptance Criteria:
+- Ensure that the system can handle at least 100 flexfields without any noticeable performance lag.
+- Maintain a response time of under 1 second for loading and processing flexfields, regardless of the quantity.
+- Validate that the user interface remains responsive and functional when all flexfields are displayed.
+
+Test Outline:
+- Conduct performance testing by adding varying numbers of flexfields, measuring the response time to ensure it stays below the specified threshold.
+- Monitor system performance metrics during flexfield integration to confirm that there is no significant impact on usability.
+- Gather user feedback on interface responsiveness when utilizing the maximum number of flexfields.","it (ISO 29148)
+that (ISO 29148)
+significant (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,5,2.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US031,"As a Developer , I want to update the FABS sample file to remove FundingAgencyCode after FABS is updated to no longer require the header.","User Story:
+As a Developer , I want to modify the FABS sample file to eliminate the FundingAgencyCode header, following the update to FABS that no longer necessitates this field, ensuring compliance with the latest specifications.
+
+Acceptance Criteria:
+- Confirm that the FundingAgencyCode header is completely removed from the FABS sample file.
+- Validate that the updated sample file passes all relevant compliance checks without errors.
+- Ensure that the documentation reflects the removal of the FundingAgencyCode header and provides clear instructions for users.
+
+Test Outline:
+- Review the FABS sample file to verify that the FundingAgencyCode header is absent.
+- Run compliance checks on the updated sample file to ensure it meets the new FABS requirements.
+- Check the documentation for accuracy and completeness regarding the changes made to the sample file.","it (ISO 29148)
+this (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)",4,4,0.0,3,4,1.0,3,4,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US032,"As an agency user, I want to ensure that deleted FSRS records are not included in submissions.","User Story:
+As an agency user, I want to guarantee that any deleted FSRS records are excluded from all submission processes so that the integrity and accuracy of the data submitted are maintained.
+
+Acceptance Criteria:
+- Confirm that deleted FSRS records are not present in the submission dataset.
+- Ensure that the system automatically updates the submission list to reflect the removal of deleted records within 1 hour.
+- Validate that users receive a notification confirming the exclusion of deleted records from submissions.
+
+Test Outline:
+- Review the submission dataset to verify that no deleted FSRS records are included.
+- Monitor the system's update process to ensure it reflects changes within the specified time frame.
+- Check for user notifications to confirm that they are informed about the exclusion of deleted records.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)",3,4,1.0,3,4,1.0,3,4,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US033,"As a website user, I want to see updated financial assistance data daily.","User Story:
+As a website user, I want to access updated financial assistance data on a daily basis so that I can make informed decisions based on the most current information available.
+
+Acceptance Criteria:
+- Financial assistance data must be refreshed and available for viewing at least once every 24 hours.
+- Users should receive a notification confirming the data update within 1 hour of the refresh.
+- The updated data should be easily accessible and clearly displayed on the website's main financial assistance page.
+
+Test Outline:
+- Monitor the data refresh schedule to ensure updates occur within the 24-hour timeframe.
+- Check for user notifications to confirm they are sent within the specified hour after data updates.
+- Evaluate the visibility and accessibility of the updated financial assistance data on the website.","most (ISO 29148)
+that (ISO 29148)
+every (ISO 29148)
+can (NASA ARM)",4,5,1.0,3,4,1.0,3,5,2.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US034,"As a user, I want the publish button in FABS to deactivate after I click it while the derivations are happening, so that I cannot click it multiple times for the same submission.","User Story:
+As a user, I want the publish button in the FABS interface to become inactive immediately after I click it, while the derivations are processing, so that I am prevented from submitting the same content multiple times inadvertently.
+
+Acceptance Criteria:
+- The publish button must be disabled within 1 second of being clicked to prevent further interactions.
+- The button should remain inactive until the derivation process is fully completed, ensuring no duplicate submissions occur.
+- A visual indicator (e.g., loading spinner) must be displayed to inform the user that the submission is in progress.
+
+Test Outline:
+- Click the publish button and measure the time taken for it to become inactive to ensure it meets the 1-second requirement.
+- Attempt to click the publish button again during the derivation process to confirm it remains disabled.
+- Check for the presence of a visual loading indicator during the submission process to verify user feedback.","it (ISO 29148)
+that (ISO 29148)",4,5,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US035,"As a Developer , I want to ensure that attempts to correct or delete non-existent records don't create new published data.","User Story:
+As a Developer , I want to implement safeguards that prevent the creation of new published data when users attempt to correct or delete records that do not exist, ensuring data integrity and system reliability.
+
+Acceptance Criteria:
+- Ensure that any attempt to correct a non-existent record results in an error message indicating the record was not found, without creating new data.
+- Validate that deletion requests for non-existent records trigger a notification to the user, confirming no changes were made to the published data.
+- Conduct tests to confirm that no new records are created in the database when invalid correction or deletion attempts are made.
+
+Test Outline:
+- Attempt to correct a non-existent record and verify that an appropriate error message is displayed without any new data being created.
+- Try to delete a non-existent record and check that the user receives a notification confirming the absence of changes.
+- Review the database logs to ensure that no new records were generated during these invalid operations.","that (ISO 29148)
+these (ISO 29148)
+appropriate (ISO 29148)",4,4,0.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US036,"As an Owner, I want to reset the environment to only take Staging MAX permissions, so that I can ensure that the FABS testers no longer have access.","User Story:
+As an Owner, I want to configure the environment to restrict access to only Staging MAX permissions, so that I can guarantee that FABS testers are completely denied access to sensitive areas.
+
+Acceptance Criteria:
+- The environment must be successfully reset to allow only Staging MAX permissions, with no other permissions granted.
+- Conduct an access audit to confirm that FABS testers have zero access to the environment post-reset.
+- Document the changes made to the permissions and ensure that they are communicated to all relevant stakeholders.
+
+Test Outline:
+- Verify that the environment settings reflect the Staging MAX permissions exclusively by reviewing the access control list.
+- Attempt to log in as a FABS tester to confirm that access is denied to all areas of the environment.
+- Review the documentation to ensure that all changes are accurately recorded and shared with the team.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,4,0.0,3,5,2.0,4,5,1.0,3,5,2.0,3,4,1.0,—
+US037,"As a user, I want the flexfields in my submission file to appear in the warning and error files when the only error is a missing required element.","User Story:
+As a user, I want the flexfields included in my submission file to be displayed in the warning and error files when the only issue is a missing required element, so that I can easily identify and rectify the specific fields that need attention.
+
+Acceptance Criteria:
+- Ensure that all flexfields from the submission file are listed in the warning and error files when a required element is missing.
+- Confirm that the warning and error files are generated within 2 minutes of submission.
+- Validate that the displayed flexfields accurately reflect the corresponding fields in the submission file.
+
+Test Outline:
+- Submit a file with a missing required element and check the warning and error files for the presence of flexfields.
+- Measure the time taken to generate the warning and error files to ensure it meets the 2-minute requirement.
+- Cross-reference the flexfields in the warning and error files with the original submission file to verify accuracy.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,3,5,2.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US038,"As a user, I want to have accurate and complete data related to PPoPCode and PPoPCongressionalDistrict.","User Story:
+As a user, I want to access precise and comprehensive data regarding PPoPCode and PPoPCongressionalDistrict so that I can make informed decisions based on reliable information.
+
+Acceptance Criteria:
+- Ensure that the data for PPoPCode is 100% accurate and up-to-date, with no discrepancies.
+- Confirm that the information for PPoPCongressionalDistrict is complete, covering all relevant entries without omissions.
+- Provide a validation mechanism that allows users to verify the accuracy of the data presented.
+
+Test Outline:
+- Conduct a data audit to check the accuracy of PPoPCode entries against the official source.
+- Review the dataset for PPoPCongressionalDistrict to ensure all necessary data points are included.
+- Implement a user feedback system to report any inaccuracies or missing information for continuous improvement.","reliable (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,4,2.0,2,5,3.0,2,5,3.0,2,5,3.0,4,5,1.0,2,5,3.0,2,5,3.0,—
+US039,"As an agency user, I want the FABS validation rules to accept zero and blank for loan records.","User Story:
+As an agency user, I want the FABS validation rules to recognize both zero and blank values for loan records so that I can accurately submit records without encountering validation errors.
+
+Acceptance Criteria:
+- Ensure that the FABS validation rules accept a value of zero (0) for loan records without triggering an error.
+- Confirm that blank entries for loan records are processed without causing validation failures.
+- Validate that the system correctly handles both zero and blank values during the submission process, allowing for successful record acceptance.
+
+Test Outline:
+- Test the submission of loan records with a value of zero to verify that no validation errors occur.
+- Submit loan records with blank values and check that the system processes them without issues.
+- Review the system's response to both scenarios to ensure compliance with the updated validation rules.","that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US040,"As an Agency user, I want FABS deployed into production, so I can submit my Financial Assistance data.","User Story:
+As an Agency user, I want the Financial Assistance Business System (FABS) to be fully deployed in the production environment so that I can efficiently submit my Financial Assistance data without any interruptions.
+
+Acceptance Criteria:
+- Ensure that FABS is successfully deployed to the production environment with zero critical issues reported post-launch.
+- Confirm that at least 95% of users can access the system and submit their Financial Assistance data within 2 minutes of deployment.
+- Provide training materials and support resources to at least 100 users within one week of deployment.
+
+Test Outline:
+- Monitor the deployment process to verify that FABS is live and functioning as intended in the production environment.
+- Conduct user access tests to ensure that the majority can submit their data successfully within the specified time frame.
+- Review the distribution and feedback on training materials to confirm that they reach the target number of users.","that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,5,2.0,2,4,2.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US041,"As a Developer , I want to clarify to users what exactly is triggering the CFDA error code in each case.","User Story:
+As a Developer , I want to provide detailed explanations to users regarding the specific causes of the CFDA error code in each instance so that they can understand the issues better and take appropriate actions to resolve them.
+
+Acceptance Criteria:
+- Document at least 5 distinct scenarios that trigger the CFDA error code, including the specific conditions for each case.
+- Ensure that users receive clear, actionable guidance on how to address each scenario, with at least 80% of users reporting improved understanding.
+- Implement a feedback mechanism to gather user insights on the clarity of the explanations provided.
+
+Test Outline:
+- Review the documentation to confirm that it includes all identified scenarios and their respective triggers.
+- Conduct a user survey to assess the level of understanding before and after the clarifications are provided.
+- Analyze feedback collected through the feedback mechanism to identify areas for further improvement.","it (ISO 29148)
+that (ISO 29148)
+appropriate (ISO 29148)
+better (ISO 29148)
+improved (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)
+better (NASA ARM)
+improved (NASA ARM)",4,4,0.0,2,5,3.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US042,"As an agency user, I want to be confident that the data coming from SAM is complete.","User Story:
+As an agency user, I want to ensure the completeness and accuracy of the data received from SAM so that I can make informed decisions based on reliable information.
+
+Acceptance Criteria:
+- Achieve a data completeness rate of 98% or higher from SAM.
+- Implement a validation process that checks for missing or inconsistent data entries before they are presented to the user.
+- Provide a report detailing any discrepancies or missing data points within 24 hours of data retrieval.
+
+Test Outline:
+- Conduct a data audit to measure the completeness rate and confirm it meets the target.
+- Review the validation process to ensure it effectively identifies and flags any data issues.
+- Generate and review the discrepancy report to verify that it is delivered within the specified timeframe.","reliable (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,4,2.0,1,4,3.0,2,4,2.0,2,5,3.0,4,5,1.0,1,5,4.0,2,4,2.0,—
+US043,"As a Developer , I want my domain models to be indexed properly, so that I can get validation results back in a reasonable amount of time.","User Story:
+As a Developer , I want to ensure that my domain models are indexed efficiently so that I can receive validation results within a maximum response time of 2 seconds, enhancing my development workflow.
+
+Acceptance Criteria:
+- All domain models must be indexed to achieve a query response time of 2 seconds or less for 95% of validation requests.
+- Implement indexing strategies that reduce the average validation time by at least 30% compared to the current performance.
+- Validate that the indexing process does not exceed a total downtime of 5 minutes during implementation.
+
+Test Outline:
+- Measure the response time for validation requests before and after indexing to confirm compliance with the 2-second target.
+- Analyze the average validation time to ensure it has decreased by the specified percentage.
+- Monitor the system for downtime during the indexing process to verify it remains within the acceptable limit.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)
+less (NASA ARM)",4,5,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US044,"As an agency user, I want the FABS validation rules to accept zero and blank for non-loan records.","User Story:
+As an agency user, I want the FABS validation rules to recognize both zero and blank values for non-loan records so that I can accurately submit data without unnecessary errors or rejections.
+
+Acceptance Criteria:
+- Ensure that the FABS validation rules accept a value of zero (0) for all applicable non-loan records.
+- Confirm that blank entries are also accepted for non-loan records without triggering validation errors.
+- Validate that the system processes submissions with zero or blank values correctly, maintaining data integrity.
+
+Test Outline:
+- Test the submission of non-loan records with a value of zero to verify that they pass validation without issues.
+- Submit non-loan records with blank fields and check that the validation process accepts them without errors.
+- Review the system's handling of submissions containing zero or blank values to ensure they are processed accurately.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US045,"As a broker team member, I want to make some updates to the SQL codes for clarity.","User Story:
+As a broker team member, I want to enhance the clarity of the SQL code by implementing updates and optimizations so that the code is more understandable and maintainable for current and future team members.
+
+Acceptance Criteria:
+- Review and refactor at least 3 SQL queries to improve readability and structure.
+- Document changes made to the SQL code, ensuring that comments explain the purpose and functionality of each query.
+- Conduct a peer review of the updated SQL code to confirm that clarity and maintainability have improved, with at least 80% positive feedback from team members.
+
+Test Outline:
+- Compare the original SQL queries with the updated versions to assess improvements in clarity and structure.
+- Check the documentation accompanying the SQL code to ensure it meets the required standards for clarity.
+- Gather feedback from team members through a survey or discussion to evaluate the perceived improvements in the SQL code.","it (ISO 29148)
+that (ISO 29148)
+improved (ISO 29148)
+improved (NASA ARM)
+more (NASA ARM)",3,4,1.0,2,5,3.0,2,5,3.0,2,5,3.0,4,5,1.0,1,5,4.0,2,5,3.0,—
+US046,"As an agency user, I want to have all derived data elements derived properly.","User Story:
+As an agency user, I want to ensure that all derived data elements are accurately calculated and presented so that I can rely on the data for informed decision-making and reporting.
+
+Acceptance Criteria:
+- All derived data elements must be validated to confirm they are calculated correctly with a minimum accuracy rate of 99%.
+- Implement automated tests to check the integrity of derived data elements, ensuring that any discrepancies are flagged immediately.
+- Provide a comprehensive report detailing the sources and calculations of derived data elements, updated in real-time.
+
+Test Outline:
+- Conduct a series of validation checks on derived data elements to ensure they meet the accuracy requirement.
+- Run automated tests and review logs to confirm that discrepancies are identified and reported.
+- Review the generated report for completeness and accuracy of the derived data elements.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,4,2.0,1,4,3.0,1,4,3.0,2,5,3.0,3,5,2.0,1,5,4.0,2,4,2.0,—
+US047,"As a broker team member, I want to add the 00***** and 00FORGN PPoPCode cases to the derivation logic.","User Story:
+As a broker team member, I want to incorporate the 00***** and 00FORGN PPoPCode cases into the derivation logic so that we can ensure accurate processing and reporting of these specific cases.
+
+Acceptance Criteria:
+- Successfully integrate the 00***** PPoPCode case into the existing derivation logic with no errors.
+- Ensure that the 00FORGN PPoPCode case is also added and functions correctly within the logic.
+- Validate that both cases are correctly processed and reflected in the output reports with a 100% accuracy rate.
+
+Test Outline:
+- Review the derivation logic to confirm that the 00***** and 00FORGN cases are included and functioning as intended.
+- Run test cases to verify that the output reflects the correct processing of both PPoPCode cases without discrepancies.","that (ISO 29148)
+these (ISO 29148)
+can (NASA ARM)",2,4,2.0,2,4,2.0,2,5,3.0,2,5,3.0,4,5,1.0,2,5,3.0,2,5,3.0,—
+US048,"As a data user, I want to see the office names derived from office codes, so that I can have appropriate context for understanding them.","User Story:
+As a data user, I want to view the office names associated with their respective office codes so that I can gain the necessary context to interpret the data accurately and make informed decisions.
+
+Acceptance Criteria:
+- Display a complete list of office names corresponding to each office code in the data set.
+- Ensure that the mapping between office codes and names is updated in real-time, reflecting any changes within 1 hour.
+- Provide a search functionality that allows users to quickly find office names by entering office codes, with results returned in under 2 seconds.
+
+Test Outline:
+- Verify that the office names are correctly displayed alongside their corresponding office codes in the data interface.
+- Check the update frequency of the office name mappings to confirm they reflect changes within the specified time frame.
+- Test the search functionality by entering various office codes and measuring the response time for the results.","that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US049,"As a broker user, I want the historical FABS loader to derive fields, so that my agency codes are correct in the PublishedAwardFinancialAssistance table.","User Story:
+As a broker user, I want the historical FABS loader to accurately derive fields so that the agency codes in the Published Award Financial Assistance table are consistently correct, ensuring data integrity and compliance.
+
+Acceptance Criteria:
+- The historical FABS loader must successfully derive and populate agency codes for at least 95% of records processed.
+- Any discrepancies in agency codes must be logged and reported, with a resolution rate of 100% within 48 hours.
+- The derived fields should be validated against a reference dataset to ensure accuracy, achieving a validation success rate of 99% or higher.
+
+Test Outline:
+- Run the historical FABS loader and verify that at least 95% of records have correctly derived agency codes.
+- Check the discrepancy log to confirm that all identified issues are resolved within the specified timeframe.
+- Compare the derived fields against the reference dataset to ensure that the accuracy rate meets or exceeds the target.","that (ISO 29148)
+all (ISO 29148)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US050,"As a broker team member, I want to ensure the Broker resources, validations, and P&P pages are updated appropriately for the launch of FABS and DAIMS v1.1.","User Story:
+As a broker team member, I want to guarantee that the Broker resources, validation processes, and Policies & Procedures (P&P) pages are accurately updated in preparation for the launch of FABS and DAIMS v1.1, ensuring compliance and operational efficiency.
+
+Acceptance Criteria:
+- All Broker resources must be reviewed and updated to reflect the latest requirements by the launch date.
+- Validation processes should be tested and confirmed to function correctly with the new version, achieving a success rate of 100% in test scenarios.
+- P&P pages must be revised and published, with all changes documented and accessible to the team at least 1 week prior to the launch.
+
+Test Outline:
+- Conduct a thorough review of the Broker resources and document any updates made, ensuring they align with the new version.
+- Execute validation tests to confirm that all processes work as intended, tracking success rates and addressing any failures.
+- Verify that the updated P&P pages are live and that team members can access the documentation, ensuring they are informed of all changes.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,3,4,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US051,"As a Developer, I want the data loaded from historical FABS to include the FREC derivations, so that I can have consistent FREC data for USASpending.gov.","User Story:
+As a Developer, I want to ensure that the data extracted from historical FABS includes the FREC derivations, so that I can maintain consistent and accurate FREC data for USASpending.gov, enhancing data integrity and reporting reliability.
+
+Acceptance Criteria:
+- Confirm that all historical FABS data includes the relevant FREC derivations for at least 95% of records.
+- Validate that the integration process for FREC derivations is completed within a 24-hour timeframe after data extraction.
+- Ensure that the FREC data aligns with the latest standards and formats required by USASpending.gov.
+
+Test Outline:
+- Review a sample of historical FABS records to verify that FREC derivations are present and accurate.
+- Track the time taken for the integration process to ensure it meets the 24-hour requirement.
+- Conduct a compliance check against USASpending.gov standards to confirm data alignment.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US052,"As a user, I don't want to see NASA grants displayed as contracts.","User Story:
+As a user, I want to ensure that NASA grants are distinctly categorized and not displayed as contracts so that I can easily identify and access the correct funding opportunities without confusion.
+
+Acceptance Criteria:
+- Ensure that all NASA grants are labeled correctly and are not mixed with contract listings.
+- Implement a filtering mechanism that allows users to view only grants or contracts based on their selection.
+- Confirm that at least 95% of users can accurately differentiate between grants and contracts in a usability test.
+
+Test Outline:
+- Review the categorization of funding opportunities to verify that NASA grants are correctly classified.
+- Test the filtering functionality to ensure it works as intended and allows users to select between grants and contracts.
+- Conduct a user survey to assess the clarity of the funding opportunity classifications and gather feedback on any confusion.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,5,2.0,3,5,2.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US053,"As a user, I want the DUNS validations to accept records whose ActionTypes are B, C, or D and the DUNS is registered in SAM, even though it may have expired.","User Story:
+As a user, I want the DUNS validation process to accept records with ActionTypes B, C, or D, provided that the DUNS number is registered in the System for Award Management (SAM), even if the registration has expired, so that I can ensure compliance without being hindered by outdated records.
+
+Acceptance Criteria:
+- Validate that records with ActionTypes B, C, or D are processed successfully, regardless of the DUNS registration status.
+- Confirm that the DUNS number is checked against the SAM database to verify its registration, even if it shows as expired.
+- Ensure that the system provides clear feedback on the acceptance of records based on the specified ActionTypes and DUNS status.
+
+Test Outline:
+- Test the validation process with records containing ActionTypes B, C, and D to ensure they are accepted.
+- Check the system's response when a DUNS number is registered in SAM but has expired, confirming it is still processed.
+- Review the feedback provided by the system to ensure it accurately reflects the acceptance criteria.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,5,2.0,3,5,2.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US054,"As a user, I want the DUNS validations to accept records whose ActionDates are before the current registration date in SAM, but after the initial registration date.","User Story:
+As a user, I want the DUNS validation process to accept records with ActionDates that are earlier than the current registration date in the System for Award Management (SAM), provided they are later than the initial registration date, so that I can ensure compliance while maintaining accurate record-keeping.
+
+Acceptance Criteria:
+- Validate that records with ActionDates are accepted if they fall between the initial registration date and the current SAM registration date.
+- Ensure that the system correctly identifies and processes records that meet the specified date criteria without errors.
+- Provide a report of accepted and rejected records, detailing the reasons for any rejections based on date criteria.
+
+Test Outline:
+- Test the validation logic by submitting records with various ActionDates to confirm acceptance or rejection based on the defined criteria.
+- Review the system's output to ensure it accurately reflects the acceptance of valid records and the rejection of invalid ones.
+- Generate a report to verify that it includes all relevant details about accepted and rejected records, ensuring transparency in the validation process.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,5,1.0,3,4,1.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US055,"As a broker team member, I want to derive FundingAgencyCode, so that the data quality and completeness improves.","User Story:
+As a broker team member, I want to extract the Funding Agency Code from our data sources so that we can enhance data quality and ensure completeness, leading to more accurate reporting and decision-making.
+
+Acceptance Criteria:
+- Successfully derive the Funding Agency Code from at least 95% of relevant data entries.
+- Ensure that the derived Funding Agency Code is validated against a predefined list of acceptable codes with a 100% accuracy rate.
+- Document the process for deriving the Funding Agency Code, including any exceptions or issues encountered, to improve future data handling.
+
+Test Outline:
+- Review a sample of data entries to confirm that the Funding Agency Code is correctly derived in at least 95% of cases.
+- Cross-check the derived codes against the predefined list to ensure 100% accuracy.
+- Evaluate the documentation for clarity and completeness, ensuring it covers all necessary steps and potential issues.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US056,"As an agency user, I want the maximum length allowed for LegalEntityAddressLine3 to match Schema v1.1.","User Story:
+As an agency user, I want the maximum character limit for LegalEntityAddressLine3 to align with Schema version 1.1 specifications so that data consistency and compliance are maintained across all submissions.
+
+Acceptance Criteria:
+- Ensure that the maximum length for LegalEntityAddressLine3 is set to match the defined limit in Schema v1.1.
+- Validate that any input exceeding this limit is rejected with an appropriate error message.
+- Confirm that existing records are updated to comply with the new maximum length requirement.
+
+Test Outline:
+- Check the configuration settings to verify that the maximum length for LegalEntityAddressLine3 is correctly implemented according to Schema v1.1.
+- Test the input field by attempting to enter a string that exceeds the maximum length and ensure it triggers the expected error message.
+- Review a sample of existing records to ensure they conform to the updated maximum length criteria.","it (ISO 29148)
+this (ISO 29148)
+that (ISO 29148)
+appropriate (ISO 29148)
+all (ISO 29148)",3,4,1.0,3,4,1.0,3,4,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US057,"As an agency user, I want to use the schema v1.1 headers in my FABS file.","User Story:
+As an agency user, I want to implement schema version 1.1 headers in my FABS file so that I can ensure compliance with the latest data standards and improve data integrity.
+
+Acceptance Criteria:
+- Confirm that the FABS file includes all required schema v1.1 headers as specified in the documentation.
+- Validate that the FABS file passes all schema validation checks without errors.
+- Ensure that the implementation of schema v1.1 headers does not disrupt existing data processing workflows.
+
+Test Outline:
+- Review the FABS file to verify the presence of all necessary schema v1.1 headers.
+- Run the FABS file through a schema validation tool to check for compliance and error-free status.
+- Monitor data processing workflows to ensure they function correctly with the updated schema headers.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,4,2.0,2,4,2.0,2,4,2.0,2,5,3.0,4,5,1.0,2,5,3.0,2,4,2.0,—
+US058,"As a agency user, I want to map the FederalActionObligation properly to the Atom Feed.","User Story:
+As a agency user, I want to accurately map the Federal Action Obligation data to the Atom Feed format so that the information is correctly represented and easily accessible for stakeholders.
+
+Acceptance Criteria:
+- Ensure that 100% of Federal Action Obligation entries are correctly formatted in the Atom Feed.
+- Validate that the mapping process completes without errors for at least 95% of the data entries.
+- Confirm that the Atom Feed updates reflect changes in Federal Action Obligation data within 10 minutes of the update.
+
+Test Outline:
+- Review the Atom Feed output to verify that all mapped entries align with the Federal Action Obligation specifications.
+- Conduct a data integrity check to ensure that the mapping process has no errors for the majority of entries.
+- Monitor the update frequency of the Atom Feed to ensure it meets the 10-minute update requirement.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)",3,4,1.0,2,4,2.0,2,5,3.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US059,"As a Broker user, I want to have PPoPZIP+4 work the same as the Legal Entity ZIP validations.","User Story:
+As a Broker user, I want the PPoPZIP+4 validation process to function identically to the Legal Entity ZIP validations so that I can ensure consistency and accuracy in address data entry.
+
+Acceptance Criteria:
+- The PPoPZIP+4 validation must match the criteria and logic used in the Legal Entity ZIP validation process.
+- Any discrepancies in validation results between PPoPZIP+4 and Legal Entity ZIP must be reduced to 0%.
+- The system should provide clear error messages for invalid PPoPZIP+4 entries, similar to those for Legal Entity ZIP.
+
+Test Outline:
+- Compare the validation outcomes of PPoPZIP+4 against Legal Entity ZIP for a set of test cases to confirm they yield identical results.
+- Review the error messages generated for invalid entries in both validation processes to ensure they are consistent and user-friendly.
+- Conduct user testing to gather feedback on the clarity and effectiveness of the validation process for PPoPZIP+4.","that (ISO 29148)
+those (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,3,5,2.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US060,"As a FABS user, I want to link the SAMPLE FILE on the ""What you want  to submit"" dialog to point to the correct file, so that I have an accurate reference for my agency submissions.","User Story:
+As a FABS user, I want to ensure that the SAMPLE FILE link in the ""What you want to submit"" dialog directs to the correct file, so that I can have a reliable reference for my agency submissions, minimizing errors and improving submission accuracy.
+
+Acceptance Criteria:
+- The SAMPLE FILE link must be updated to point to the correct file location, verified by a successful access test.
+- Users should be able to access the correct SAMPLE FILE within 3 clicks from the dialog.
+- Confirm that at least 95% of users report the link as accurate and helpful in a follow-up survey.
+
+Test Outline:
+- Test the SAMPLE FILE link to ensure it directs to the correct file and is accessible without errors.
+- Track the number of clicks required to access the SAMPLE FILE from the dialog to ensure it meets the specified limit.
+- Conduct a user survey post-implementation to gather feedback on the accuracy and usefulness of the link.","reliable (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US061,"As an Agency user, I want FPDS data to be up-to-date daily.","User Story:
+As an Agency user, I want the FPDS (Federal Procurement Data System) data to be refreshed daily so that I can access the most current information for accurate decision-making and reporting.
+
+Acceptance Criteria:
+- Ensure that FPDS data is updated and available for access at least once every 24 hours.
+- Confirm that the data refresh process completes without errors 95% of the time.
+- Provide a notification system to alert users when the data has been successfully updated.
+
+Test Outline:
+- Monitor the FPDS data update schedule to verify that updates occur daily within the specified timeframe.
+- Track the success rate of the data refresh process to ensure it meets the 95% error-free criterion.
+- Test the notification system to confirm that users receive alerts upon successful data updates.","most (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+every (ISO 29148)
+can (NASA ARM)",2,4,2.0,2,4,2.0,2,4,2.0,2,5,3.0,4,5,1.0,2,5,3.0,2,4,2.0,—
+US062,"As a user, I want to access the raw agency published files from FABS via USAspending.","User Story:
+As a user, I want to retrieve the raw agency published files from the Federal Awardee Performance and Integrity Information System (FABS) through the USAspending platform so that I can analyze the data for transparency and accountability in federal spending.
+
+Acceptance Criteria:
+- Successfully access the raw files published by agencies in FABS through the USAspending interface.
+- Ensure that the files are available for download in a standardized format (e.g., CSV, JSON) within 2 clicks from the homepage.
+- Confirm that the data retrieved is up-to-date, reflecting the latest published information within the last 30 days.
+
+Test Outline:
+- Verify that the user can navigate to the FABS section on USAspending and access the raw files without encountering errors.
+- Check the number of clicks required to download the files from the homepage to ensure it meets the specified criteria.
+- Validate the freshness of the data by comparing the download date of the files against the publication date in the FABS database.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,4,1.0,2,4,2.0,2,5,3.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US063,"As a Developer , I want to determine how agencies will generate and validate D Files from FABS and FPDS data.","User Story:
+As a Developer , I want to establish a clear process for agencies to generate and validate D Files using data from the Federal Awardee Performance and Integrity Information System (FABS) and the Federal Procurement Data System (FPDS) so that we ensure data accuracy and compliance with federal standards.
+
+Acceptance Criteria:
+- Define a standardized method for generating D Files from FABS and FPDS data that can be documented and replicated by agencies.
+- Implement validation checks to ensure that at least 95% of generated D Files meet the required data integrity standards.
+- Provide training materials or sessions for agencies to effectively understand and utilize the generation and validation process.
+
+Test Outline:
+- Review the documentation to confirm that the process for generating D Files is clearly outlined and accessible to all agencies.
+- Conduct a sample validation of generated D Files to ensure compliance with the established integrity standards.
+- Gather feedback from agencies on the training materials to assess their effectiveness and clarity.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,4,2.0,2,4,2.0,2,4,2.0,2,4,2.0,4,4,0.0,2,4,2.0,2,4,2.0,—
+US064,"As a user, I want to generate and validate D Files from FABS and FPDS data.","User Story:
+As a user, I want to create and verify D Files using data from the FABS and FPDS systems so that I can ensure compliance and accuracy in reporting.
+
+Acceptance Criteria:
+- Successfully generate D Files from FABS and FPDS data with a validation success rate of 95% or higher.
+- Ensure that the generated D Files are compliant with the required format and standards as specified by regulatory guidelines.
+- Validate the accuracy of the data in the D Files against the original FABS and FPDS records, achieving a discrepancy rate of less than 2%.
+
+Test Outline:
+- Run a generation process for D Files and track the validation success rate to confirm it meets the target.
+- Review the format and compliance of the generated D Files against regulatory requirements.
+- Cross-check the data in the D Files with the original FABS and FPDS records to ensure discrepancies are within acceptable limits.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)
+less (NASA ARM)",2,4,2.0,2,4,2.0,2,5,3.0,2,5,3.0,4,5,1.0,2,5,3.0,2,5,3.0,—
+US065,"As an Agency user, I want the header information box to show updated date AND time, so that I know when it was updated.","User Story:
+As an Agency user, I want the header information box to display both the updated date and time, so that I can easily determine the exact moment the information was last refreshed.
+
+Acceptance Criteria:
+- The header information box must clearly show the updated date in the format MM/DD/YYYY.
+- The header must also include the updated time in a 24-hour format (HH:MM) to provide precise timing.
+- The displayed date and time should automatically refresh whenever the information is updated.
+
+Test Outline:
+- Verify that the header information box displays the correct updated date and time after a refresh.
+- Check that the date format is consistent and adheres to the specified MM/DD/YYYY format.
+- Ensure that the time is displayed in the 24-hour format and updates accurately with each information refresh.","that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,4,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US066,"As an Agency user, I want to receive a more helpful file-level error when I upload a file with the wrong extension.","User Story:
+As an Agency user, I want to receive a clear and informative error message at the file level when I attempt to upload a file with an unsupported extension, so that I can quickly correct the issue and successfully complete my upload.
+
+Acceptance Criteria:
+- Display a specific error message indicating the allowed file extensions when an unsupported file is uploaded.
+- Ensure the error message is visible within 2 seconds of the upload attempt.
+- Provide a link or guidance on how to convert or change the file format to a supported type.
+
+Test Outline:
+- Attempt to upload a file with an unsupported extension and verify that the correct error message is displayed.
+- Measure the time taken for the error message to appear after the upload attempt to ensure it meets the 2-second requirement.
+- Check that the error message includes clear instructions or links for converting the file format.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US067,"As a tester, I want to have access to test features in environments other than Staging, so that I can test any nonProd feature in any environment.","User Story:
+As a tester, I want the ability to access and test features in various environments beyond just Staging, so that I can effectively validate any non-production feature across multiple environments, ensuring comprehensive testing coverage.
+
+Acceptance Criteria:
+- Grant access to at least 3 additional environments (e.g., Development, QA, and UAT) for testing non-production features.
+- Ensure that all test features are fully functional and accessible in these environments without any critical issues.
+- Provide documentation outlining the process for accessing and testing features in each environment.
+
+Test Outline:
+- Verify that access to the specified additional environments is granted and operational for testing purposes.
+- Conduct tests on non-production features in each environment to confirm functionality and report any issues encountered.
+- Review the documentation to ensure it accurately reflects the access process and testing procedures.","it (ISO 29148)
+that (ISO 29148)
+these (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,3,5,2.0,4,5,1.0,—
+US068,"As a FABS user, I want to submission errors to accurately represent FABS errors, so that I know why my submission didn't work.","User Story:
+As a FABS user, I want submission error messages to clearly reflect the specific FABS errors encountered, so that I can understand the reasons behind any submission failures and take appropriate corrective actions.
+
+Acceptance Criteria:
+- Error messages must include specific error codes and descriptions that correspond to FABS standards.
+- At least 90% of submission errors should provide actionable feedback to guide users on how to resolve the issues.
+- Ensure that error messages are displayed within 2 seconds of submission failure to minimize user frustration.
+
+Test Outline:
+- Review the error messages generated during submission attempts to verify they align with FABS error codes and descriptions.
+- Conduct user testing to assess whether users can successfully identify and resolve issues based on the provided error feedback.
+- Measure the response time for error message display to ensure it meets the 2-second requirement.","it (ISO 29148)
+that (ISO 29148)
+appropriate (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US069,"As a FABS user, I want the frontend URLs to more accurately reflect the page I'm accessing, so that I'm not confused.","User Story:
+As a FABS user, I want the frontend URLs to clearly represent the specific pages I am accessing, so that I can navigate the application without confusion and easily understand my current location within the site.
+
+Acceptance Criteria:
+- Ensure that all frontend URLs are structured to include relevant page identifiers, improving clarity and context.
+- Conduct user testing to achieve at least 90% user satisfaction regarding URL clarity and navigation ease.
+- Implement a URL structure that adheres to best practices, with no more than 3 levels of hierarchy for each page.
+
+Test Outline:
+- Review the URL structure for all pages to confirm they accurately reflect the content and purpose of each page.
+- Gather user feedback through surveys or interviews to assess their understanding of the URLs and overall navigation experience.
+- Analyze the URL hierarchy to ensure compliance with the specified best practices and levels.","best (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)
+best (NASA ARM)
+more (NASA ARM)",4,4,0.0,3,5,2.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US070,"As an Agency user, I want all historical Financial Assistance data loaded for FABS go-live.","User Story:
+As an Agency user, I want to ensure that all historical Financial Assistance data is fully loaded and accessible for the FABS go-live event so that I can effectively utilize this information for reporting and decision-making.
+
+Acceptance Criteria:
+- Confirm that 100% of historical Financial Assistance data is migrated and available in the system prior to the go-live date.
+- Validate that the data integrity is maintained, with no discrepancies or missing records in the loaded dataset.
+- Ensure that all relevant stakeholders can access the historical data without any performance issues during the go-live.
+
+Test Outline:
+- Conduct a comprehensive audit of the loaded data to verify that all historical records are present and accurate.
+- Perform user acceptance testing with key stakeholders to confirm that they can access the data seamlessly.
+- Monitor system performance during the go-live to ensure that there are no delays or issues when accessing the historical data.","this (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,4,2.0,2,4,2.0,2,4,2.0,2,5,3.0,3,5,2.0,2,5,3.0,2,4,2.0,—
+US071,"As a Developer , I want the historical FPDS data loader to include both extracted historical data and FPDS feed data.","User Story:
+As a Developer , I want the historical FPDS data loader to integrate both the extracted historical data and the latest FPDS feed data so that I can ensure comprehensive data availability for analysis and reporting.
+
+Acceptance Criteria:
+- The data loader must successfully extract and incorporate at least 95% of the historical FPDS data.
+- The integration process should include the most recent FPDS feed data, ensuring updates occur within 24 hours of data availability.
+- The system should validate that the combined dataset is complete and accurate, with no discrepancies exceeding 2% between the historical and feed data.
+
+Test Outline:
+- Run the data loader and verify that it extracts and loads the required historical data, checking for completeness against a predefined dataset.
+- Monitor the integration process to confirm that the latest FPDS feed data is included within the specified time frame.
+- Conduct data validation checks to ensure that the combined dataset meets the accuracy criteria.","most (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US072,"As an Agency user, I want historical FPDS data loaded.","User Story:
+As an Agency user, I want to have historical FPDS (Federal Procurement Data System) data integrated into the system so that I can analyze past procurement trends and make informed decisions based on comprehensive data insights.
+
+Acceptance Criteria:
+- Ensure that historical FPDS data is fully loaded and accessible within the system by a specified deadline.
+- Validate that the data includes at least 5 years of historical records for comprehensive analysis.
+- Confirm that the data is searchable and filterable by key parameters such as date, agency, and contract value.
+
+Test Outline:
+- Check the system to verify that the historical FPDS data is present and accessible by the deadline.
+- Review the dataset to ensure it contains a minimum of 5 years of records.
+- Test the search and filter functionalities to confirm they work correctly with the loaded FPDS data.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,4,2.0,2,4,2.0,2,4,2.0,2,5,3.0,3,5,2.0,2,5,3.0,2,4,2.0,—
+US073,"As an Agency user, I want to accurately see who created a submission, so that I'm not confused about who last updated a submission.","User Story:
+As an Agency user, I want to clearly identify the creator of each submission so that I can easily understand who last modified it, reducing any potential confusion regarding updates.
+
+Acceptance Criteria:
+- Display the creator's name prominently next to each submission, ensuring it is visible at all times.
+- Include a timestamp indicating the last update made to the submission, formatted to show the date and time clearly.
+- Ensure that the creator's information is updated in real-time whenever a submission is modified.
+
+Test Outline:
+- Verify that the creator's name is correctly displayed for each submission in the user interface.
+- Check that the last update timestamp reflects the most recent changes made to the submission.
+- Test the system to confirm that any modifications to a submission update the creator's information accurately.","most (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,4,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US074,"As an agency user, I want to get File F in the correct format.","User Story:
+As an agency user, I want to receive File F in the specified format so that I can utilize it effectively for my projects without any compatibility issues.
+
+Acceptance Criteria:
+- Ensure that File F is delivered in the requested format (e.g., PDF, DOCX, CSV) as specified by the user.
+- Confirm that the file size does not exceed 10MB to facilitate easy sharing and downloading.
+- Validate that the content of File F is accurate and complete, with no missing data or formatting errors.
+
+Test Outline:
+- Check the format of the delivered File F to ensure it matches the user's request.
+- Measure the file size to confirm it is within the acceptable limit.
+- Review the content of File F for accuracy and completeness against the original data source.","easy (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,4,2.0,1,4,3.0,2,4,2.0,2,5,3.0,4,5,1.0,1,5,4.0,2,4,2.0,—
+US075,"As an Agency user, I want to better understand my file-level errors.","User Story:
+As an Agency user, I want to gain comprehensive insights into my file-level errors so that I can quickly identify and resolve issues, enhancing overall operational efficiency.
+
+Acceptance Criteria:
+- Provide a detailed error report that categorizes file-level errors by type and frequency, allowing for targeted troubleshooting.
+- Ensure that the error insights are updated in real-time, with a refresh rate of no more than 5 minutes.
+- Include a user-friendly interface that allows filtering and sorting of errors based on severity and date.
+
+Test Outline:
+- Review the generated error report to confirm it accurately categorizes and displays file-level errors.
+- Monitor the update frequency of the error insights to ensure it adheres to the 5-minute refresh requirement.
+- Test the filtering and sorting functionalities to verify they work as intended and enhance user experience.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",2,4,2.0,2,4,2.0,2,4,2.0,2,5,3.0,4,5,1.0,1,5,4.0,2,4,2.0,—
+US076,"As a Developer , I want to provide FABS groups that function under the FREC paradigm.","User Story:
+As a Developer , I want to implement FABS groups that operate effectively within the FREC framework so that we can enhance collaboration and streamline processes across teams.
+
+Acceptance Criteria:
+- Establish at least 3 distinct FABS groups that align with the FREC principles within the next quarter.
+- Ensure that each FABS group meets a minimum participation rate of 80% from relevant stakeholders.
+- Document and share the outcomes of each FABS group session, with at least 2 actionable insights generated per session.
+
+Test Outline:
+- Review the formation and structure of the FABS groups to confirm alignment with the FREC framework.
+- Track attendance and participation rates to verify that the 80% threshold is met.
+- Analyze the documentation from each session to ensure actionable insights are recorded and shared.","that (ISO 29148)
+can (NASA ARM)",3,4,1.0,2,5,3.0,2,5,3.0,2,5,3.0,3,5,2.0,2,5,3.0,2,5,3.0,—
+US077,"As a tester, I want to ensure that FABS is deriving fields properly through a robust test file plus a follow up check.","User Story:
+As a tester, I want to validate that the FABS system accurately derives fields using a comprehensive test file, followed by a thorough verification process, so that we can ensure data integrity and system reliability.
+
+Acceptance Criteria:
+- Create a detailed test file that covers at least 95% of the field derivation scenarios.
+- Conduct a follow-up verification check to confirm that all derived fields match expected outcomes with a success rate of 100%.
+- Document any discrepancies found during testing and ensure they are resolved before final approval.
+
+Test Outline:
+- Execute the test file and log the results to verify that all field derivations are processed correctly.
+- Perform a secondary review of the derived fields against expected results to ensure complete accuracy.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,3,5,2.0,2,5,3.0,4,5,1.0,3,5,2.0,3,5,2.0,—
+US078,"As an owner, I only want zero-padded fields, so that I can justify padding.","User Story:
+As an owner, I want all fields to be formatted with zero-padding so that I can ensure consistent data presentation and facilitate accurate data justification.
+
+Acceptance Criteria:
+- All numeric fields must display with leading zeros, ensuring uniformity across the dataset.
+- Validate that the zero-padding is applied correctly for all relevant fields, with a minimum width of 5 characters.
+- Confirm that any data entry or export maintains the zero-padded format without loss of leading zeros.
+
+Test Outline:
+- Review the data entries to check that all numeric fields are zero-padded as specified.
+- Test the data export functionality to ensure that the zero-padding remains intact in the exported files.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,4,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US079,"As a Broker user, I want to submit records for individual recipients without receiving a DUNS error.","User Story:
+As a Broker user, I want to submit records for individual recipients without encountering a DUNS error so that I can ensure accurate processing and compliance with data submission requirements.
+
+Acceptance Criteria:
+- Ensure that the submission process for individual recipient records does not trigger any DUNS error messages.
+- Validate that 100% of submitted records are processed successfully without errors related to DUNS.
+- Provide a confirmation response for each successful record submission within 2 seconds.
+
+Test Outline:
+- Attempt to submit records for individual recipients and monitor for any DUNS error messages during the process.
+- Review the submission logs to confirm that all records submitted are processed without DUNS-related errors.
+- Measure the response time for confirmation of successful submissions to ensure it meets the 2-second requirement.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,3,5,2.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US080,"As a user, I want more information about how many rows will be published prior to deciding whether to publish.","User Story:
+As a user, I want to receive detailed information regarding the number of rows that will be published before making my decision to proceed with the publication, so that I can assess the impact and relevance of the data.
+
+Acceptance Criteria:
+- Display an estimated count of rows to be published before the user initiates the publication process.
+- Provide a breakdown of the data categories included in the publication for better clarity.
+- Ensure that the information is updated in real-time to reflect any changes in the dataset prior to publication.
+
+Test Outline:
+- Verify that the estimated row count is accurately displayed on the user interface before the publication action is taken.
+- Check that the breakdown of data categories is clear and accessible to the user.
+- Confirm that any updates to the dataset are reflected in the row count in real-time.","that (ISO 29148)
+better (ISO 29148)
+can (NASA ARM)
+better (NASA ARM)",4,4,0.0,3,4,1.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US081,"As a Developer, I want to prevent duplicate transactions from being published and deal with the time gap between validation and the publishing decision.","User Story:
+As a Developer, I want to implement a mechanism to eliminate duplicate transactions from being published while effectively managing the time lag between transaction validation and the final publishing decision, ensuring data integrity and consistency.
+
+Acceptance Criteria:
+- Establish a system that identifies and blocks at least 95% of duplicate transactions before they are published.
+- Reduce the time gap between validation and publishing to a maximum of 1 second.
+- Log all transactions that are flagged as duplicates for auditing purposes, ensuring traceability.
+
+Test Outline:
+- Test the duplicate detection system by simulating multiple transactions to confirm that at least 95% are correctly identified and blocked.
+- Measure the time taken from transaction validation to publishing to ensure it does not exceed the 1-second threshold.
+- Review the logs to verify that all flagged duplicate transactions are recorded accurately.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)",3,4,1.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US082,"As a FABS user, I want to submit a citywide as a PPoPZIP and pass validations.","User Story:
+As a FABS user, I want to submit a citywide request categorized as a PPoPZIP and ensure that it successfully passes all validation checks so that my submission is processed without errors.
+
+Acceptance Criteria:
+- The submission must include all required fields and adhere to the PPoPZIP format.
+- All validation rules must be met, with a success rate of 100% for submissions.
+- Confirmation of successful submission should be received within 2 minutes of submission.
+
+Test Outline:
+- Review the submitted data to ensure it meets the PPoPZIP criteria and contains all necessary information.
+- Run validation checks on the submission to confirm that it passes all specified rules.
+- Monitor the time taken to receive confirmation of the submission to ensure it is within the 2-minute timeframe.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)",2,4,2.0,2,4,2.0,2,5,3.0,2,5,3.0,4,5,1.0,2,5,3.0,2,5,3.0,—
+US083,"As a Broker user, I want to have updated error codes that accurately reflect the logic and provide enough information, so that I can fix my submission.","User Story:
+As a Broker user, I want to receive updated error codes that precisely align with the underlying logic and offer comprehensive information, so that I can efficiently identify and rectify issues in my submission.
+
+Acceptance Criteria:
+- Ensure that all error codes are updated to reflect the latest business logic with a 100% accuracy rate.
+- Each error code must include a detailed description that provides actionable insights, allowing users to resolve issues effectively.
+- Implement a feedback mechanism to track user satisfaction with the clarity of error codes, aiming for at least an 80% positive response rate.
+
+Test Outline:
+- Review the list of error codes to confirm that they match the current business logic and are accurately documented.
+- Conduct user testing to evaluate the clarity and usefulness of the error descriptions, collecting feedback for analysis.
+- Analyze the feedback data to ensure that at least 80% of users find the error codes helpful in resolving their submission issues.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US084,"As an agency user, I want to leave off the last 4 digits of the ZIP without an error, so that I can complete my submissions.","User Story:
+As an agency user, I want to submit my forms without including the last 4 digits of the ZIP code so that I can successfully complete my submissions without encountering errors.
+
+Acceptance Criteria:
+- The system must accept submissions with only the first 5 digits of the ZIP code without generating any error messages.
+- Ensure that at least 95% of submissions with truncated ZIP codes are processed successfully.
+- Provide clear feedback to users indicating that the last 4 digits are optional during the submission process.
+
+Test Outline:
+- Attempt to submit forms using only the first 5 digits of the ZIP code and verify that no errors occur.
+- Track the success rate of submissions with truncated ZIP codes to ensure it meets the 95% threshold.
+- Review user interface messages to confirm that they clearly communicate the optional nature of the last 4 digits.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,4,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US085,"As a FABS user, I want to make sure the historical data includes all necessary columns, so that the information in the database is correct.","User Story:
+As a FABS user, I want to ensure that the historical data encompasses all required columns so that the integrity and accuracy of the information stored in the database are maintained.
+
+Acceptance Criteria:
+- Verify that all essential columns are present in the historical data schema, with a minimum of 10 key fields identified.
+- Conduct a data audit to confirm that 100% of the historical records contain valid entries for each required column.
+- Ensure that any missing columns are documented and addressed within 2 weeks of identification.
+
+Test Outline:
+- Review the historical data schema to check for the presence of all specified columns.
+- Perform a sample audit of historical records to validate that each required column is populated correctly.
+- Track the resolution of any identified missing columns to ensure timely updates.","that (ISO 29148)
+all (ISO 29148)
+timely (NASA ARM)",3,4,1.0,2,4,2.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US086,"As a data user, I want to access two additional fields from the FPDS data pull.","User Story:
+As a data user, I want to retrieve two additional fields from the FPDS data extraction so that I can enhance my analysis and gain deeper insights into the dataset.
+
+Acceptance Criteria:
+- Successfully access and retrieve the specified two additional fields from the FPDS data pull.
+- Ensure that the new fields are integrated into the existing data structure without any loss of data integrity.
+- Validate that the additional fields are available for querying and reporting within 24 hours of the request.
+
+Test Outline:
+- Confirm that the two additional fields are present in the FPDS data pull by running a query.
+- Check the data integrity by comparing the new dataset with the previous version to ensure no data loss occurred.
+- Test the availability of the new fields in reporting tools to ensure they can be utilized effectively.","that (ISO 29148)
+can (NASA ARM)",3,4,1.0,2,4,2.0,2,5,3.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US087,"As a FABS user, I want additional helpful info in the submission dashboard, so that I can better manage submissions and IG requests.","User Story:
+As a FABS user, I want to access enhanced informational features in the submission dashboard so that I can effectively manage submissions and IG requests, leading to improved workflow efficiency.
+
+Acceptance Criteria:
+- Display a summary of submission statuses, including counts of pending, approved, and rejected submissions.
+- Provide real-time updates on IG requests, showing the current status and estimated processing time.
+- Include a search and filter functionality that allows users to quickly locate specific submissions based on criteria such as date, status, or requester.
+
+Test Outline:
+- Verify that the submission dashboard shows an accurate summary of submission statuses with the correct counts.
+- Check that real-time updates on IG requests are reflected accurately and include estimated processing times.
+- Test the search and filter functionality to ensure it returns relevant results based on user input.","it (ISO 29148)
+that (ISO 29148)
+improved (ISO 29148)
+can (NASA ARM)
+improved (NASA ARM)",2,4,2.0,2,4,2.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US088,"As a FABS user, I want to download the uploaded FABS file, so that I can get the uploaded file.","User Story:
+As a FABS user, I want to download the files I have uploaded to the FABS system so that I can easily access and utilize these files for my needs.
+
+Acceptance Criteria:
+- Successfully initiate the download process for the uploaded FABS file with a single click.
+- Ensure that the file downloads within 10 seconds of the request.
+- Confirm that the downloaded file matches the original uploaded file in size and content.
+
+Test Outline:
+- Test the download functionality by clicking the download button and measuring the time taken for the file to start downloading.
+- Compare the size and content of the downloaded file against the original file to ensure they are identical.","that (ISO 29148)
+these (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US089,"As a Developer I want to quickly access Broker application data, so that I can investigate issues.","User Story:
+As a Developer , I want to efficiently retrieve data from the Broker application so that I can promptly diagnose and resolve issues, minimizing downtime and enhancing system reliability.
+
+Acceptance Criteria:
+- Access to Broker application data must be established within 3 seconds of initiating the request.
+- The data retrieval process should allow for filtering by at least 5 different parameters to streamline investigations.
+- Ensure that the data returned includes relevant timestamps and error codes for at least 90% of the requests.
+
+Test Outline:
+- Measure the time taken to access Broker application data to confirm it meets the 3-second requirement.
+- Test the filtering functionality by applying various parameters and verifying the accuracy of the returned data.
+- Review the data output to ensure that it consistently includes timestamps and error codes for the majority of requests.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,4,1.0,2,4,2.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US090,"As a Developer , I want to determine the best way to load historical FPDS data, so that I can load all FPDS data since 2007.","User Story:
+As a Developer , I want to identify the most efficient method for loading historical FPDS data so that I can successfully retrieve and process all FPDS records dating back to 2007 without performance degradation.
+
+Acceptance Criteria:
+- Establish a loading strategy that allows for the retrieval of 100% of FPDS data from 2007 to the present.
+- Ensure that the data loading process completes within a maximum of 30 minutes.
+- Validate that the loaded data maintains a minimum accuracy rate of 99% compared to the original dataset.
+
+Test Outline:
+- Test the loading strategy by executing the data retrieval process and measuring the total time taken to complete.
+- Cross-reference a sample of the loaded data against the original dataset to confirm accuracy and completeness.
+- Monitor system performance during the loading process to ensure there are no significant slowdowns or errors.","most (ISO 29148)
+efficient (ISO 29148)
+that (ISO 29148)
+significant (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,2,4,2.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US091,"As a FABS user, I want the language on FABS pages to be appropriate for me, so that I am not confused.","User Story:
+As a FABS user, I want the language used on FABS pages to be tailored to my understanding, so that I can navigate the platform confidently without any confusion.
+
+Acceptance Criteria:
+- Ensure that all terminology and phrases used on FABS pages are clear and relevant to the target user demographic.
+- Conduct user testing with at least 20 FABS users to gather feedback on language clarity and appropriateness.
+- Achieve a user satisfaction score of 85% or higher regarding the clarity of language used on the pages.
+
+Test Outline:
+- Review the language on FABS pages and compare it against user feedback to identify areas of confusion.
+- Analyze the results from user testing sessions to determine if the language meets the established clarity criteria.
+- Survey users post-implementation to measure satisfaction levels with the language used on the platform.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US092,"As a FABS user, I do not want  DABS banner messages and vice versa, so that I have the appropriate information for my application.","User Story:
+As a FABS user, I want to ensure that DABS banner messages are not displayed in my interface, and conversely, that FABS messages are not shown to DABS users, so that I receive only the relevant information necessary for my application.
+
+Acceptance Criteria:
+- DABS banner messages must be completely hidden from FABS users' interfaces.
+- FABS banner messages must not appear in DABS users' interfaces.
+- Confirm that users only see the appropriate banner messages based on their application type.
+
+Test Outline:
+- Test the user interface for FABS users to verify that no DABS banner messages are present.
+- Test the user interface for DABS users to ensure that FABS banner messages are absent.
+- Conduct user feedback sessions to confirm that users are receiving only the relevant information for their application.","that (ISO 29148)
+appropriate (ISO 29148)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US093,"As a FABS user, I want to have read-only access to DABS, so that I can view DABS pages without wanting two sets of permissions.","User Story:
+As a FABS user, I want to obtain read-only access to DABS so that I can efficiently view DABS pages without the need for managing multiple sets of permissions, streamlining my workflow.
+
+Acceptance Criteria:
+- Grant read-only access to DABS for all FABS users, ensuring no additional permissions are required.
+- Confirm that FABS users can access all relevant DABS pages without encountering permission errors.
+- Ensure that the read-only access is implemented within 2 weeks of the request.
+
+Test Outline:
+- Verify that FABS users can log in to DABS and access the designated pages without needing extra permissions.
+- Check for any permission errors when FABS users attempt to view DABS content.
+- Monitor the implementation timeline to ensure access is granted within the specified 2-week period.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,5,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US094,"As a FABS user, I want to have my validations run in a reasonable amount of time.","User Story:
+As a FABS user, I want my validation processes to execute within an acceptable timeframe so that I can efficiently complete my tasks without unnecessary delays.
+
+Acceptance Criteria:
+- Ensure that all validation processes complete within a maximum of 3 seconds for 95% of the cases (p95).
+- Reduce the average validation time to 1 second or less across all user scenarios.
+- Implement a monitoring system to track validation times and alert if they exceed the defined thresholds.
+
+Test Outline:
+- Measure the completion time of validation processes to confirm that 95% of them meet the 3-second requirement.
+- Calculate the average validation time across various scenarios to ensure it is 1 second or less.
+- Review the monitoring system's alerts to verify that it accurately reports any validation times that exceed the specified limits.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)
+less (NASA ARM)",3,5,2.0,1,4,3.0,2,5,3.0,2,5,3.0,4,5,1.0,1,5,4.0,2,5,3.0,—
+US095,"As a FABS user, I want to see correct status labels on the Submission Dashboard, so that I can quickly see my submission history.","User Story:
+As a FABS user, I want to view accurate status labels on the Submission Dashboard so that I can efficiently track and review my submission history without confusion.
+
+Acceptance Criteria:
+- Ensure that all status labels accurately reflect the current state of each submission, with a 100% accuracy rate.
+- Implement a user-friendly interface that allows users to filter submissions by status, achieving a response time of ≤3 seconds for filtering actions.
+- Provide a tooltip or help section that explains each status label, ensuring that at least 90% of users can correctly interpret the labels based on user feedback.
+
+Test Outline:
+- Review the status labels on the Submission Dashboard to confirm they match the actual submission states.
+- Measure the time taken to filter submissions by status and ensure it meets the performance criteria.
+- Conduct a user survey to assess the clarity of the status labels and the effectiveness of the tooltip or help section.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,5,2.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US096,"As an agency user, I want to know when the submission periods start and end, so that I know when the submission starts and ends.","User Story:
+As an agency user, I want to receive clear notifications regarding the start and end dates of submission periods so that I can effectively plan and manage my submissions within the designated timeframes.
+
+Acceptance Criteria:
+- Notifications must be sent at least 7 days prior to the start of each submission period.
+- A reminder should be issued 1 day before the submission period ends.
+- The submission period dates must be clearly displayed on the agency dashboard for easy reference.
+
+Test Outline:
+- Verify that notifications are sent out 7 days before the start of the submission period.
+- Check that a reminder notification is received 1 day before the submission period closes.
+- Ensure that the submission period dates are prominently displayed on the agency dashboard for user visibility.","easy (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,4,2.0,2,4,2.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US097,"As an agency user, I want a landing page to navigate to either FABS or DABS pages, so that I can access both sides of the site.","User Story:
+As an agency user, I want a dedicated landing page that provides clear navigation options to both the FABS and DABS pages, so that I can efficiently access all relevant sections of the site without confusion.
+
+Acceptance Criteria:
+- The landing page must include distinct and easily identifiable links to both the FABS and DABS pages.
+- Navigation to either page should occur within 2 seconds of clicking the link.
+- The landing page should be accessible on all devices, ensuring a responsive design that maintains functionality across screen sizes.
+
+Test Outline:
+- Verify that the landing page contains visible and functional links to both FABS and DABS pages.
+- Measure the time taken to navigate to each page after clicking the respective link to ensure it meets the performance criterion.
+- Test the landing page on various devices to confirm that it is fully responsive and user-friendly.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,4,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US098,"As an agency user, I want to submit my data elements surrounded by quotation marks, so that Excel won't strip off leading and trailing zeroes.","User Story:
+As an agency user, I want to submit my data elements enclosed in quotation marks so that Excel retains leading and trailing zeroes, ensuring data integrity and accuracy in my reports.
+
+Acceptance Criteria:
+- All submitted data elements must be formatted with quotation marks to prevent Excel from altering their values.
+- Verify that at least 95% of data elements maintain their original formatting when imported into Excel.
+- Ensure that users receive a confirmation message indicating successful submission of data with the correct formatting.
+
+Test Outline:
+- Test the submission process by inputting various data elements and checking if they are correctly enclosed in quotation marks.
+- Import the submitted data into Excel and confirm that leading and trailing zeroes are preserved in at least 95% of cases.
+- Review the confirmation message received by users to ensure it accurately reflects the successful submission of data.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)",3,4,1.0,3,4,1.0,4,4,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—

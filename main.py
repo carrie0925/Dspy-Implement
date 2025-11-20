@@ -34,7 +34,7 @@ def _load_user_stories(data_path: Path):
     return norm
 
 def main():
-    default_path = Path("data/g10-scrumalliance.json") # change dataset
+    default_path = Path("data/g21-badcamp.json") # change dataset
     arg_path = Path(sys.argv[1]) if len(sys.argv) > 1 else None
     env_path = Path(os.getenv("USER_STORIES_JSON", "")) if os.getenv("USER_STORIES_JSON") else None
     data_path = env_path or arg_path or default_path

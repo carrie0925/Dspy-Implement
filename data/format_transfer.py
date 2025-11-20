@@ -2,8 +2,8 @@ import json
 from pathlib import Path
 
 # === 路徑設定（如需自訂請改這兩行）===
-INPUT_TXT  = Path("g10-scrumalliance.txt")        # 第二個附件（逐行 user story）
-OUTPUT_JSON = Path("g10-scrumalliance.json")  # 轉出的 JSON 檔
+INPUT_TXT  = Path("g21-badcamp.txt")        # 第二個附件（逐行 user story）
+OUTPUT_JSON = Path("g21-badcamp.json")  # 轉出的 JSON 檔
 
 def txt_to_json(input_path: Path, output_path: Path):
     if not input_path.exists():

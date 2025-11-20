@@ -1,6 +1,0 @@
-﻿id,status,rounds,overall_before,overall_after,final_text,I_before,I_after,delta_I,N_before,N_after,delta_N,V_before,V_after,delta_V,E_before,E_after,delta_E,S_before,S_after,delta_S,T_before,T_after,delta_T,delta_overall
-US001,done,2,3,3,"As a site member, I want to describe myself on my own page in a semi-structured way, so that others can learn about me.",3,3,0.0,3,3,0.0,3,3,0.0,3,3,0.0,3,3,0.0,3,3,0.0,0.0
-US002,done,2,3,3,"As a site member, I want to fill out an application to become a Certified Scrum Practitioner, so that I can earn that designation.",3,3,0.0,3,3,0.0,3,3,0.0,3,3,0.0,3,3,0.0,3,3,0.0,0.0
-US003,done,2,3,3,"As a Practitioner, I want to include additional details about me in my profile page, so that I can showcase my experience.",3,3,0.0,3,3,0.0,3,3,0.0,3,3,0.0,3,3,0.0,3,3,0.0,0.0
-US004,done,2,3,3,"As a site member, I want to fill out an application to become a Certified Scrum Trainer, so that I can teach CSM and CSPO courses and certify others.",3,3,0.0,3,3,0.0,3,3,0.0,3,3,0.0,3,3,0.0,3,3,0.0,0.0
-US005,done,2,3,3,"As a Trainer, I want to include additional details in my profile page about me, so that others can learn about me and decide if I am the right trainer for them.",3,3,0.0,3,3,0.0,3,3,0.0,3,3,0.0,3,3,0.0,3,3,0.0,0.0

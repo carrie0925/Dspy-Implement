@@ -1,0 +1,861 @@
+﻿ID,Original User Story,Rewritten User Story,Fuzzy Terms (with source),I_before,I_after,delta_I,N_before,N_after,delta_N,V_before,V_after,delta_V,E_before,E_after,delta_E,S_before,S_after,delta_S,T_before,T_after,delta_T,overall_before,overall_after,delta_overall,Low-score Explanation (<2)
+US001,"As a Public User, I want to Search for Information, so that I can obtain publicly available information concerning properties, County services, processes and other general information.","User Story:
+As a Public User, I want to efficiently search for information regarding properties, county services, processes, and other general inquiries so that I can easily access relevant and publicly available data to make informed decisions.
+
+Acceptance Criteria:
+- The search functionality must return results within 3 seconds for at least 95% of queries.
+- Users should be able to filter search results by category (e.g., properties, services, processes) with at least 80% accuracy in relevance.
+- The system should provide at least 10 relevant results for each search query to ensure comprehensive information access.
+
+Test Outline:
+- Measure the response time of the search function to confirm it meets the 3-second requirement for 95% of searches.
+- Conduct user testing to evaluate the accuracy of the filtering options and ensure they meet the 80% relevance threshold.
+- Perform multiple search queries to verify that at least 10 relevant results are consistently returned for each query.","it (ISO 29148)
+that (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US002,"As a ProspectiveApplicant, I want to research requirements and to select a service, so that I can find the relevant service and/or application type to initiate via the online portal.","User Story:
+As a ProspectiveApplicant, I want to thoroughly investigate the requirements and choose a specific service type, so that I can efficiently identify the appropriate service or application to initiate through the online portal.
+
+Acceptance Criteria:
+- Access a comprehensive list of services with detailed requirements available for review.
+- Successfully filter and select a service type based on personal criteria within 3 minutes.
+- Ensure that the selected service type provides clear instructions for the next steps in the application process.
+
+Test Outline:
+- Verify that the list of services is complete and includes all necessary requirements for each option.
+- Measure the time taken to filter and select a service type to confirm it meets the 3-minute target.
+- Check that the instructions for the next steps are clearly displayed after a service type is selected.","it (ISO 29148)
+that (ISO 29148)
+appropriate (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US003,"As an Applicant, I want to Request PreApplication Assistance, so that I can receive a response to a request for a meeting or information that is a result of the preapplication assistance.","User Story:
+As an Applicant, I want to seek pre-application assistance so that I can obtain timely responses regarding meetings or information related to my application process.
+
+Acceptance Criteria:
+- Submit a request for pre-application assistance and receive an acknowledgment within 24 hours.
+- Ensure that a meeting or information request is scheduled or provided within 3 business days of the initial request.
+- Track the status of the pre-application assistance request to confirm that it is addressed within the specified timeframe.
+
+Test Outline:
+- Verify that an acknowledgment email is sent within the 24-hour window after the request submission.
+- Check the scheduling system to confirm that a meeting or information is arranged within the 3-day period.
+- Review the request tracking system to ensure that the status updates are provided as expected.","it (ISO 29148)
+that (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,4,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US004,"As a Customer, I want to Create a Customer Portal User Account, so that I can log on to the Customer Portal and perform transactions that first require user authentication.","User Story:
+As a Customer, I want to establish a user account for the Customer Portal so that I can securely log in and execute transactions that necessitate user authentication, enhancing my overall experience.
+
+Acceptance Criteria:
+- Successfully complete the account creation process, including email verification, within 10 minutes.
+- Ensure that the user can log in to the Customer Portal with their new account credentials without errors.
+- Confirm that the user can perform at least 3 different types of transactions post-authentication.
+
+Test Outline:
+- Verify the account creation process by checking if the email verification link is sent and activated within the specified time.
+- Attempt to log in with the newly created account to ensure successful access to the portal.
+- Test the execution of various transactions to confirm that the user can perform them after logging in.","that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US005,"As an Applicant, I want to Submit Application, so that I can provide my information, plans and/or documents to initiate a transaction with the County.","User Story:
+As an Applicant, I want to submit my application online so that I can efficiently provide my personal information, plans, and necessary documents to initiate a transaction with the County, ensuring a streamlined process.
+
+Acceptance Criteria:
+- Successfully upload all required documents and information in a single submission.
+- Receive a confirmation notification within 10 minutes of submission indicating the application has been received.
+- Ensure that the application is processed within 5 business days, with the option to track its status online.
+
+Test Outline:
+- Verify that all required fields and documents can be submitted through the online application form.
+- Check the applicant's email for a confirmation notification within the specified time frame after submission.
+- Monitor the application processing time to confirm it meets the 5 business day requirement and validate the online tracking feature.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,4,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US006,"As an Applicant, I want to Submit Supporting Documentation, so that I can satisfy documentation requirements for my application.","User Story:
+As an Applicant, I want to upload supporting documentation for my application so that I can meet all necessary documentation requirements and expedite the review process.
+
+Acceptance Criteria:
+- Successfully upload all required supporting documents in the specified formats (e.g., PDF, JPEG) without errors.
+- Receive a confirmation notification upon successful submission of the documentation within 2 minutes.
+- Ensure that all uploaded documents are accessible for review by the application processing team within 5 minutes of submission.
+
+Test Outline:
+- Test the upload functionality by submitting various document types to confirm they meet the format requirements.
+- Monitor the time taken to receive the confirmation notification after submission to ensure it is within the specified timeframe.
+- Verify that the application processing team can access the uploaded documents promptly after submission.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,4,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US007,"As an Applicant, I want to Pay Fee, so that I can satisfy outstanding charge associated with the service requested or received from the County.","User Story:
+As an Applicant, I want to complete my fee payment online so that I can promptly settle any outstanding charges related to the services I have requested or received from the County, ensuring compliance and avoiding delays.
+
+Acceptance Criteria:
+- The payment process must allow applicants to pay fees securely online within 5 minutes.
+- Confirmation of payment should be sent to the applicant's email within 2 minutes of transaction completion.
+- The system must accurately reflect the updated account status, showing that the outstanding charge has been cleared immediately after payment.
+
+Test Outline:
+- Test the online payment system to ensure that the fee payment can be completed within the specified time frame.
+- Verify that a confirmation email is received by the applicant within the designated time after payment.
+- Check the applicant's account status to confirm that the outstanding charge is updated in real-time post-payment.","that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,4,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US008,"As an Applicant, I want to Check the Status of a transaction, so that I can understand where the provisioning of my service is in the process, such as information related to service levels, fees, plan review, permit, or inspection results.","User Story:
+As an Applicant, I want to track the status of my transaction so that I can gain clear insights into the provisioning process of my service, including details on service levels, associated fees, plan reviews, permits, and inspection outcomes.
+
+Acceptance Criteria:
+- Provide real-time updates on the transaction status, including at least 5 key milestones (e.g., service level confirmation, fee assessment, plan review completion, permit approval, and inspection results).
+- Ensure that the status information is accessible within 2 clicks from the main dashboard.
+- Allow users to receive notifications via email or SMS for any changes in the transaction status.
+
+Test Outline:
+- Verify that the transaction status updates reflect the defined milestones and are displayed accurately.
+- Check the navigation path to ensure users can access the status information within the specified number of clicks.
+- Test the notification system to confirm that users receive alerts for any status changes in a timely manner.","that (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,4,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US009,"As an Applicant, I want to Modify my Application, so that I can successfully change information on an application.","User Story:
+As an Applicant, I want to update my application details so that I can ensure that all my information is accurate and up-to-date, increasing my chances of a successful application.
+
+Acceptance Criteria:
+- The system must allow applicants to modify at least 5 key fields in their application.
+- Changes should be saved successfully, with a confirmation message displayed within 3 seconds of submission.
+- Applicants must be able to review their updated application to verify that all changes are reflected accurately.
+
+Test Outline:
+- Attempt to modify various fields in the application and confirm that the system allows changes to the specified number of fields.
+- Check the response time for the confirmation message after submitting changes to ensure it meets the time requirement.
+- Review the application post-modification to ensure that all updates are correctly displayed.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,4,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US010,"As a Staff member, I want to Perform a Completeness Review, so that I can validate when an application is complete and eligible for further technical review.","User Story:
+As a Staff member, I want to conduct a thorough Completeness Review of applications so that I can accurately determine their readiness for subsequent technical evaluations, ensuring a streamlined review process.
+
+Acceptance Criteria:
+- Review all required application components and confirm that 100% of necessary documents are submitted.
+- Ensure that the review process is completed within 48 hours of application receipt.
+- Document and communicate the completeness status to the applicant, achieving a response rate of 95% or higher.
+
+Test Outline:
+- Verify that all required documents are present in the application by cross-referencing with the checklist.
+- Track the time taken to complete the review and confirm it meets the 48-hour requirement.
+- Check the communication logs to ensure that the completeness status is sent to applicants within the specified timeframe.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,5,2.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US011,"As a Staff member, I want to Record an Internal Note, so that I can share information with other Staff collaborating on the record.","User Story:
+As a Staff member, I want to document an internal note within the system so that I can effectively communicate important information to other staff members who are collaborating on the same record, enhancing teamwork and information sharing.
+
+Acceptance Criteria:
+- Successfully create an internal note that can be accessed by all relevant staff members involved in the record.
+- Ensure that the internal note is saved and retrievable within 2 seconds of submission.
+- Allow for a maximum of 500 characters in the internal note to ensure concise and relevant information sharing.
+
+Test Outline:
+- Verify that an internal note can be created and is visible to all designated staff members associated with the record.
+- Measure the time taken to save the internal note to confirm it meets the 2-second retrieval requirement.
+- Check that the character limit for the internal note is enforced, preventing submissions that exceed 500 characters.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US012,"As a Staff member, I want to Assign an Application for Detailed Review, so that I can review the for compliance and subsequently approved or denied.","User Story:
+As a Staff member, I want to assign an application for a comprehensive review so that I can evaluate it for compliance and make informed decisions regarding its approval or denial.
+
+Acceptance Criteria:
+- Successfully assign the application for review, ensuring that it is logged in the system within 2 minutes of the assignment.
+- Complete the compliance review process within 48 hours, providing a clear decision on approval or denial.
+- Document the rationale for the decision in the system, ensuring that all compliance criteria are addressed.
+
+Test Outline:
+- Verify that the application assignment is recorded in the system with a timestamp.
+- Check the review completion time to ensure it falls within the 48-hour window.
+- Review the documentation to confirm that the decision rationale is comprehensive and meets compliance standards.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US013,"As a Staff member, I want to Apply a Hold, so that I can prevent progression through the workflow or other actions in the system until the issue is resolved.","User Story:
+As a Staff member, I want to implement a Hold on specific cases so that I can effectively halt any progression through the workflow or other system actions until the identified issue is fully resolved.
+
+Acceptance Criteria:
+- Successfully apply a Hold status to a case, preventing any further actions for a minimum of 24 hours or until the issue is addressed.
+- Ensure that all relevant stakeholders are notified of the Hold status within 1 hour of application.
+- Confirm that the system accurately reflects the Hold status, preventing any workflow progression during this period.
+
+Test Outline:
+- Verify that a Hold can be applied to a case and that it remains in effect for the specified duration.
+- Check the notification system to ensure that all stakeholders receive alerts regarding the Hold status within the designated timeframe.
+- Test the workflow to confirm that no actions can be taken on the case while it is under Hold.","it (ISO 29148)
+this (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,5,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US014,"As a Staff member, I want to Remove a Hold, so that I can allow progression through the workflow or other actions in the system now that the issue has been resolved.","User Story:
+As a Staff member, I want to lift a hold on a case so that I can facilitate the progression of the workflow and enable other necessary actions in the system, ensuring that operations continue smoothly after resolving the underlying issue.
+
+Acceptance Criteria:
+- Successfully identify and select the hold to be removed from the system.
+- Confirm that the hold is lifted, allowing the workflow to proceed within 2 minutes of the action.
+- Ensure that all subsequent actions in the system are accessible and functional post-removal of the hold.
+
+Test Outline:
+- Verify that the hold can be selected and removed without errors in the system.
+- Measure the time taken to lift the hold and confirm it meets the 2-minute requirement.
+- Test the functionality of subsequent actions in the workflow to ensure they are operational after the hold is removed.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US015,"As a Staff member, I want to Send a Formal Response to Applicant, so that I can satisfy communication and records responsibilities.","User Story:
+As a Staff member, I want to issue a formal response to each applicant so that I can fulfill my communication obligations and maintain accurate records for compliance and future reference.
+
+Acceptance Criteria:
+- Ensure that a formal response is generated and sent to the applicant within 48 hours of application receipt.
+- Confirm that the response includes all necessary details such as application status, next steps, and contact information for inquiries.
+- Maintain a log of all sent responses to ensure records are up-to-date and accessible for auditing purposes.
+
+Test Outline:
+- Track the time taken to send the formal response after receiving an application to verify compliance with the 48-hour requirement.
+- Review the content of the response to ensure it contains all required information as specified in the acceptance criteria.
+- Check the response log to confirm that all communications are recorded accurately and can be retrieved when needed.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US016,"As a Staff member, I want to Track  the Draft Proffers, so that I can preserve the history of draft proffer statements submitted by the Applicant.","User Story:
+As a Staff member, I want to monitor the history of draft proffer statements submitted by applicants so that I can maintain a comprehensive record for future reference and ensure accountability in the application process.
+
+Acceptance Criteria:
+- Implement a tracking system that logs each draft proffer statement submission with a timestamp and applicant details.
+- Ensure that the history of draft proffers is accessible for review within 24 hours of submission.
+- Provide a user-friendly interface that allows staff to filter and search through draft proffer records by applicant name or submission date.
+
+Test Outline:
+- Verify that each draft proffer statement submission is recorded accurately with the required details.
+- Check the accessibility of the draft proffer history to confirm it is available within the specified time frame.
+- Test the filtering and search functionality to ensure staff can easily locate specific draft proffer statements.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US017,"As a Staff member, I want to Manage Approved Proffers, so that I can ensure compliance with and satisfaction of the proffer in the future.","User Story:
+As a Staff member, I want to oversee and manage approved proffers so that I can guarantee ongoing compliance and enhance stakeholder satisfaction with the proffer agreements.
+
+Acceptance Criteria:
+- Maintain a comprehensive record of all approved proffers, ensuring that updates are made within 24 hours of any changes.
+- Conduct quarterly reviews of proffer compliance, achieving at least a 90% satisfaction rate from stakeholders.
+- Implement a tracking system that alerts staff to any proffer-related deadlines or compliance issues at least 7 days in advance.
+
+Test Outline:
+- Verify that the record-keeping system is updated promptly and accurately reflects all approved proffers.
+- Review the results of quarterly compliance assessments to confirm the satisfaction rate meets or exceeds the target.
+- Test the alert system to ensure notifications are sent out on time for upcoming deadlines or compliance checks.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US018,"As a Staff member, I want to Manage Ordinances, so that I can maintain accurate ordinance information in the System.","User Story:
+As a Staff member, I want to efficiently manage ordinances within the system so that I can ensure the accuracy and up-to-date status of ordinance information, facilitating better compliance and reporting.
+
+Acceptance Criteria:
+- Successfully add, update, or delete ordinance records with a confirmation of changes reflected in the system within 2 minutes.
+- Ensure that all ordinance information is accessible and retrievable with a search response time of 3 seconds or less.
+- Implement a validation process that guarantees 100% accuracy in ordinance data entry and updates.
+
+Test Outline:
+- Test the functionality of adding, updating, and deleting ordinance records to confirm that changes are processed within the specified time frame.
+- Measure the search response time for ordinance information to ensure it meets the 3-second requirement.
+- Conduct data entry audits to verify that all ordinance information is accurate and compliant with established standards.","it (ISO 29148)
+that (ISO 29148)
+better (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)
+better (NASA ARM)
+less (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US019,"As a Staff member, I want to Schedule a Meeting, so that I can bring the required parties together at a specific date/time to address an issue.","User Story:
+As a Staff member, I want to efficiently schedule a meeting so that I can coordinate with all necessary participants at a designated date and time to effectively resolve an ongoing issue.
+
+Acceptance Criteria:
+- Successfully create a meeting invitation that includes all required attendees and specifies the date and time.
+- Ensure that all invited participants receive the meeting notification within 10 minutes of scheduling.
+- Confirm that at least 80% of the invited attendees accept the meeting request.
+
+Test Outline:
+- Verify that the meeting invitation is generated and sent to all required parties upon scheduling.
+- Check the participants' inboxes to confirm they received the meeting notification within the specified time frame.
+- Track the acceptance rate of the meeting invitations to ensure it meets or exceeds the target of 80%.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US020,"As a staff member, I want to denote an application with a Final Action status. So that I can finish it.","User Story:
+As a staff member, I want to mark an application with a ""Final Action"" status so that I can effectively complete the processing and ensure it is officially closed.
+
+Acceptance Criteria:
+- The application must be successfully updated to reflect the ""Final Action"" status in the system.
+- A confirmation message should be displayed to the staff member upon successful status change.
+- The application should no longer appear in the active processing queue after being marked as ""Final Action.""
+
+Test Outline:
+- Verify that the application status can be changed to ""Final Action"" and check the system for the updated status.
+- Ensure that a confirmation message is received immediately after the status update.
+- Check the active processing queue to confirm that the application is no longer listed after the status change.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,4,1.0,2,4,2.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US021,"As a Planning Staff member, I want to Conduct and Track Plan Amendments and Planning Studies, so that I can record work in process, outcome, and location-based information related to the Plan(s).","User Story:
+As a Planning Staff member, I want to systematically conduct and monitor plan amendments and planning studies so that I can accurately document work in progress, outcomes, and location-specific data related to the plans.
+
+Acceptance Criteria:
+- Implement a tracking system that logs at least 95% of all plan amendments and studies conducted.
+- Ensure that all recorded data includes detailed information on work in progress, outcomes, and specific locations, with a minimum of 3 data points per entry.
+- Generate a report summarizing the amendments and studies, which can be accessed within 24 hours of data entry.
+
+Test Outline:
+- Review the tracking system to confirm that it captures and logs the required percentage of plan amendments and studies.
+- Validate that each entry contains the necessary details on work in progress, outcomes, and location data.
+- Check the report generation process to ensure it is completed and accessible within the specified time frame.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,3,5,2.0,2,5,3.0,3,5,2.0,—
+US022,"As a Planning Staff member, I want to Generate Planning-related Reports, so that I can access, analyze and/or export the needed information in the format I requested.","User Story:
+As a Planning Staff member, I want to create comprehensive planning-related reports so that I can efficiently access, analyze, and export the required information in my preferred format, enhancing decision-making processes.
+
+Acceptance Criteria:
+- Generate reports that include at least 5 key planning metrics relevant to current projects.
+- Allow users to export reports in at least 3 different formats (e.g., PDF, Excel, CSV).
+- Ensure that reports can be generated within 10 seconds of the request to maintain workflow efficiency.
+
+Test Outline:
+- Verify that the generated reports contain the specified key metrics by cross-referencing with project data.
+- Test the export functionality to confirm that reports can be successfully saved in the selected formats.
+- Measure the time taken to generate reports to ensure it meets the 10-second requirement.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US023,"As a Planning Staff member, I want to Evaluate Consistency with the Comprehensive Plan, so that I can complete my required review of a plan set and/or application.","User Story:
+As a Planning Staff member, I want to assess the alignment of proposed plans with the Comprehensive Plan so that I can efficiently finalize my review of the plan set and/or application, ensuring compliance with established guidelines.
+
+Acceptance Criteria:
+- Conduct a thorough evaluation of at least 5 key elements of the Comprehensive Plan for each submitted application.
+- Document findings and provide feedback within 10 business days of receiving the plan set.
+- Ensure that at least 90% of reviewed applications demonstrate clear consistency with the Comprehensive Plan.
+
+Test Outline:
+- Review the evaluation reports to confirm that all key elements have been assessed for each application.
+- Track the time taken to complete the review process to ensure it meets the 10-day requirement.
+- Analyze the percentage of applications that align with the Comprehensive Plan based on the documented findings.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,5,1.0,3,5,2.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US024,"As a Staff member, I want to Perform a Staff Review, so that I can validate compliance of an application with the Zoning Ordinance and impact approval/denial of the application accordingly.","User Story:
+As a Staff member, I want to conduct a comprehensive Staff Review of applications so that I can ensure compliance with the Zoning Ordinance, which will directly influence the approval or denial of the application based on established criteria.
+
+Acceptance Criteria:
+- Review all relevant documentation and assess compliance with at least 95% of the Zoning Ordinance requirements.
+- Document findings and recommendations within 3 business days of receiving the application.
+- Ensure that the review process includes a checklist that covers all critical compliance areas, with at least 10 key points evaluated.
+
+Test Outline:
+- Verify that the compliance assessment meets the 95% threshold by cross-referencing with the Zoning Ordinance.
+- Check the timeline to confirm that documentation of findings is completed within the 3-day timeframe.
+- Review the checklist used during the Staff Review to ensure it includes all 10 key compliance points.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,5,2.0,3,4,1.0,4,5,1.0,3,5,2.0,3,5,2.0,2,5,3.0,3,5,2.0,—
+US025,"As a Zoning Staff member, I want to Process the Requests for Zoning Information, so that I can capture my response to the request in the system and also send a communication from the system to the Applicant.","User Story:
+As a Zoning Staff member, I want to efficiently process requests for zoning information so that I can accurately document my responses in the system and automatically communicate the information to the applicant.
+
+Acceptance Criteria:
+- Each zoning request must be logged in the system with a timestamp and unique request ID.
+- The system should generate and send a confirmation email to the applicant within 10 minutes of processing the request.
+- Ensure that at least 95% of requests are processed and communicated within a 24-hour timeframe.
+
+Test Outline:
+- Verify that each request is recorded in the system with the correct details and timestamps.
+- Check the email logs to confirm that confirmation emails are sent to applicants within the specified time limit.
+- Measure the processing time for requests to ensure that the 24-hour response goal is met for the majority of requests.","that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US026,"As a Zoning Staff member, I want to Issue the Zoning-Related Permits, so that I can satisfy an Applicant's request for service that has proven to be eligible and in compliance with the Zoning Ordinance.","User Story:
+As a Zoning Staff member, I want to efficiently issue zoning-related permits so that I can promptly fulfill an applicant's service request that meets all eligibility criteria and complies with the Zoning Ordinance.
+
+Acceptance Criteria:
+- Verify that 100% of issued permits are compliant with the Zoning Ordinance requirements.
+- Process and issue permits within a maximum of 10 business days from the application submission date.
+- Maintain a record of at least 95% applicant satisfaction based on feedback regarding the permit issuance process.
+
+Test Outline:
+- Review a sample of issued permits to ensure they meet all compliance standards outlined in the Zoning Ordinance.
+- Track the time taken from application submission to permit issuance to confirm it does not exceed the 10-day limit.
+- Conduct a survey of applicants to assess satisfaction levels and ensure they meet or exceed the 95% threshold.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,5,2.0,4,5,1.0,3,5,2.0,3,5,2.0,2,5,3.0,3,5,2.0,—
+US027,"As a Staff member, I want to Develop a Staff Report, so that I can publish and distribute the report according to business rules.","User Story:
+As a Staff member, I want to create a comprehensive Staff Report so that I can efficiently publish and distribute it in compliance with established business rules, ensuring all stakeholders receive the necessary information.
+
+Acceptance Criteria:
+- The report must include all required sections as per the business rules, ensuring completeness and accuracy.
+- The report should be generated and ready for distribution within 24 hours of the request.
+- A distribution list must be established, ensuring that at least 90% of relevant stakeholders receive the report.
+
+Test Outline:
+- Review the generated Staff Report to confirm that all required sections are included and adhere to business rules.
+- Track the time taken from the request to the report's readiness to ensure it meets the 24-hour deadline.
+- Verify the distribution list and confirm that at least 90% of stakeholders have received the report through follow-up communication.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US028,"As a Staff member, I want to Manage Hearing Calendars, so that I can track hearing-related activities and due dates.","User Story:
+As a Staff member, I want to efficiently manage hearing calendars so that I can effectively monitor hearing-related activities and ensure all due dates are met, enhancing overall operational efficiency.
+
+Acceptance Criteria:
+- Ability to create, update, and delete hearing calendar entries with a user-friendly interface.
+- Notifications for upcoming hearing activities must be sent at least 48 hours in advance.
+- A summary report of all scheduled hearings and their due dates should be accessible within 1 click.
+
+Test Outline:
+- Test the functionality to create, update, and delete calendar entries to ensure all actions are performed correctly.
+- Verify that notifications are received 48 hours prior to each scheduled hearing.
+- Check the accessibility and accuracy of the summary report for scheduled hearings and due dates.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US029,"As a Staff member, I want to Assign a Hearing Date, so that I can present the application to the appropriate governing body within the timelines dictated by the relevant County rules and procedures.","User Story:
+As a Staff member, I want to schedule a Hearing Date so that I can ensure the application is presented to the relevant governing body within the deadlines established by the applicable County regulations and procedures.
+
+Acceptance Criteria:
+- Assign a Hearing Date that complies with the County's timeline requirements, ensuring it is set at least 14 days in advance of the hearing.
+- Confirm that all necessary notifications are sent to stakeholders at least 7 days prior to the Hearing Date.
+- Track and document the scheduling process to ensure adherence to County rules, with a completion rate of 100% for all scheduled hearings.
+
+Test Outline:
+- Review the scheduled Hearing Date against the County's timeline requirements to verify compliance.
+- Check the notification logs to ensure all stakeholders received their notifications within the specified timeframe.
+- Audit the scheduling documentation to confirm that all hearings are recorded and meet the established criteria.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US030,"As a Staff member, I want to Manage Affidavits, so that I can ensure compliance with the requirements prior to the hearing.","User Story:
+As a Staff member, I want to efficiently manage affidavits to ensure that all compliance requirements are met before the hearing, thereby minimizing the risk of delays or legal issues.
+
+Acceptance Criteria:
+- Verify that 100% of affidavits are reviewed for compliance at least 48 hours prior to the hearing.
+- Track and document any compliance issues identified, aiming for a resolution rate of 90% before the hearing date.
+- Implement a system to notify staff of any outstanding affidavits that require attention, ensuring that no more than 5% remain unaddressed.
+
+Test Outline:
+- Review the compliance status of affidavits to confirm that all have been assessed within the required timeframe.
+- Analyze the documentation of compliance issues to ensure that the resolution rate meets the target.
+- Check the notification system to verify that alerts are sent for any affidavits that are still pending review.","that (ISO 29148)
+all (ISO 29148)
+more (NASA ARM)",4,4,0.0,3,4,1.0,4,4,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US031,"As an Applicant, I want to Satisfy Hearing Requirements, so that I can ensure all pre-hearing requirements are satisfied in time for the hearing.","User Story:
+As an Applicant, I want to fulfill all hearing requirements promptly so that I can guarantee that all pre-hearing obligations are completed well in advance of the scheduled hearing date.
+
+Acceptance Criteria:
+- Confirm that all required documents are submitted at least 7 days before the hearing.
+- Ensure that all necessary fees are paid and receipts are obtained prior to the hearing date.
+- Verify that any additional information requested by the hearing authority is provided within 48 hours of the request.
+
+Test Outline:
+- Review the submission logs to check that all documents were submitted on time.
+- Cross-check payment records to confirm that all fees were settled before the deadline.
+- Track the response time for additional information requests to ensure compliance with the 48-hour requirement.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,4,2.0,2,4,2.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US032,"As a Staff member, I want to Prepare for and Support Hearing Execution, so that I can ensure all pre-hearing requirements are satisfied and staff and Applicant are ready for the hearing.","User Story:
+As a Staff member, I want to effectively prepare for and facilitate the execution of hearings so that I can guarantee that all pre-hearing requirements are met and both the staff and the Applicant are fully prepared for a successful hearing.
+
+Acceptance Criteria:
+- Confirm that 100% of pre-hearing documentation is completed and submitted at least 48 hours prior to the hearing.
+- Ensure that all relevant staff members have received and reviewed the hearing agenda and their roles at least 24 hours before the hearing.
+- Verify that the Applicant has been briefed on the hearing process and requirements, with a follow-up confirmation at least 12 hours before the hearing.
+
+Test Outline:
+- Audit the pre-hearing documentation to ensure all required materials are submitted on time.
+- Conduct a checklist review with staff to confirm their understanding of the agenda and responsibilities.
+- Communicate with the Applicant to confirm their understanding of the hearing process and document the follow-up confirmation.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,3,5,2.0,2,5,3.0,3,5,2.0,—
+US033,"As a Staff member, I want to Capture a Hearing Decision, so that I can enforce the system.","User Story:
+As a Staff member, I want to accurately document a hearing decision so that I can effectively enforce the system's regulations and ensure compliance.
+
+Acceptance Criteria:
+- Successfully record the hearing decision in the system within 10 minutes of the conclusion of the hearing.
+- Ensure that the documented decision includes all relevant details, such as date, parties involved, and outcome, with a minimum of 95% accuracy.
+- Confirm that the decision is accessible to authorized users within 5 minutes of being recorded.
+
+Test Outline:
+- Track the time taken to document the hearing decision to verify it meets the 10-minute requirement.
+- Review the recorded decision for completeness and accuracy against the original hearing notes.
+- Check the system access logs to ensure that the decision is available to authorized users within the specified timeframe.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US034,"As a Staff member, I want to Process the Appeals, so that I can track the outcome and record the impact on the relevant records.","User Story:
+As a Staff member, I want to efficiently process appeals so that I can accurately track their outcomes and document the impact on the associated records for better accountability and reporting.
+
+Acceptance Criteria:
+- Each appeal must be processed within 48 hours of submission to ensure timely tracking.
+- The outcome of each appeal should be recorded in the system with a success rate of at least 90%.
+- All relevant records must be updated to reflect the impact of the appeal within 24 hours of processing.
+
+Test Outline:
+- Monitor the time taken to process appeals and verify that 95% are completed within the 48-hour timeframe.
+- Review the recorded outcomes of appeals to ensure that at least 90% are accurately documented.
+- Check the associated records to confirm that updates reflecting the appeal's impact are made within the specified 24-hour period.","that (ISO 29148)
+better (ISO 29148)
+all (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)
+better (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US035,"As a Plan Review Staff member, I want to Assign Plans for Review, so that I can ensure plans have been assigned to the appropriate Plan Reviewer.","User Story:
+As a Plan Review Staff member, I want to efficiently assign plans to the correct Plan Reviewer so that I can guarantee that each plan is evaluated by the most qualified reviewer, enhancing the review process's accuracy and speed.
+
+Acceptance Criteria:
+- Successfully assign plans to reviewers based on their expertise, with a target of ≥90% accuracy in reviewer assignments.
+- Ensure that all assigned plans are acknowledged by the reviewers within 24 hours of assignment.
+- Track and report the average time taken for each plan to be reviewed, aiming for a completion rate of ≥80% within the designated review period.
+
+Test Outline:
+- Review the assignment logs to confirm that plans are allocated to the appropriate reviewers based on their qualifications.
+- Check the acknowledgment timestamps to ensure that all reviewers confirm receipt of their assigned plans within the specified timeframe.
+- Analyze the review completion times to verify that the average meets or exceeds the target completion rate.","most (ISO 29148)
+that (ISO 29148)
+appropriate (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US036,"As a Plan Review Staff Supervisor, I want to Manage Plan Reviewer Workload, so that I can monitor and effectively adjust workload as necessary and ensure service levels are met","User Story:
+As a Plan Review Staff Supervisor, I want to oversee and optimize the workload of plan reviewers so that I can proactively monitor performance, make necessary adjustments, and guarantee that service level agreements (SLAs) are consistently met.
+
+Acceptance Criteria:
+- Implement a workload tracking system that provides real-time data on each plan reviewer's current assignments and progress.
+- Ensure that workload adjustments are made within 24 hours of identifying any discrepancies in service levels.
+- Achieve a minimum of 90% adherence to established service level targets across all plan reviewers.
+
+Test Outline:
+- Review the workload tracking system to confirm it accurately reflects each reviewer's assignments and progress.
+- Monitor the response time for making workload adjustments and verify that it meets the 24-hour requirement.
+- Analyze service level adherence reports to ensure that at least 90% of reviewers are meeting their targets.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US037,"As an Applicant, I want to Request a Plan Review Meeting, so that I can meet with the Plan Review Staff regarding the plan review.","User Story:
+As an Applicant, I want to schedule a plan review meeting with the Plan Review Staff so that I can discuss my project details and receive timely feedback on the plan review process.
+
+Acceptance Criteria:
+- Successfully submit a request for a plan review meeting through the designated platform.
+- Receive a confirmation of the meeting request within 24 hours.
+- Ensure the meeting is scheduled within 5 business days of the request.
+
+Test Outline:
+- Verify that the request submission process is functional and that the applicant receives a confirmation notification.
+- Check the scheduling system to confirm that the meeting is set within the specified timeframe.","that (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,3,-1.0,3,4,1.0,4,4,0.0,2,4,2.0,3,4,1.0,—
+US038,"As a Plan Review Staff member, I want to successfully Conduct a Plan Review Meeting with the Applicant and record the outcome, so that I can listen to it again.","User Story:
+As a Plan Review Staff member, I want to effectively facilitate a Plan Review Meeting with the Applicant and document the meeting's outcomes, so that I can revisit the discussion for clarity and follow-up actions.
+
+Acceptance Criteria:
+- Successfully schedule and conduct the Plan Review Meeting with the Applicant, ensuring all relevant stakeholders are present.
+- Accurately record the meeting outcomes, including key decisions and action items, in a structured format.
+- Ensure that the recorded meeting is accessible for playback within 24 hours of the meeting's conclusion.
+
+Test Outline:
+- Confirm that the meeting was scheduled and attended by all necessary participants.
+- Review the documented outcomes to ensure they capture all critical points discussed during the meeting.
+- Test the playback functionality of the recorded meeting to verify it is accessible and operational within the specified timeframe.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,4,0.0,3,4,1.0,4,4,0.0,2,4,2.0,3,4,1.0,—
+US039,"As a Plan Review Staff member, I want to Review Plans, so that I can review them for compliance and either approve, or fail or deny the plans and record any conditions, clearances, or corrections needed from the Applicant.","User Story:
+As a Plan Review Staff member, I want to evaluate submitted plans for compliance with regulations so that I can either approve them or provide detailed feedback on any conditions, clearances, or corrections required from the applicant.
+
+Acceptance Criteria:
+- Review each plan within a maximum of 10 business days to ensure timely feedback.
+- Document and communicate any compliance issues or required corrections to the applicant within 2 business days of the review.
+- Maintain a record of all approvals, denials, and conditions for at least 5 years for auditing purposes.
+
+Test Outline:
+- Track the time taken to review each plan to ensure it meets the 10-day requirement.
+- Check the communication logs to confirm that feedback on compliance issues is provided within the 2-day timeframe.
+- Review the documentation system to ensure all records of plan reviews are accurately maintained for the required duration.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",3,5,2.0,3,5,2.0,4,5,1.0,3,5,2.0,3,5,2.0,2,5,3.0,3,5,2.0,—
+US040,"As an Applicant, I want to Resubmit Plans, so that I can review revised plans.","User Story:
+As an Applicant, I want to resubmit my plans for review so that I can receive feedback on the revised versions and ensure they meet the necessary requirements.
+
+Acceptance Criteria:
+- Successfully upload the revised plans through the designated submission portal.
+- Receive confirmation of the resubmission within 10 minutes of submission.
+- Ensure that the revised plans are reviewed and feedback is provided within 5 business days.
+
+Test Outline:
+- Verify that the resubmission process allows for the successful upload of plans without errors.
+- Check for the confirmation notification to ensure it is received within the specified time frame.
+- Track the review timeline to confirm that feedback is delivered within the 5 business days.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,4,2.0,2,5,3.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US041,"As a Plan Review Staff Member, I want to Review the Code Modifications submitted by the Applicant, so that I can review the request and if approved, associate it with the appropriate project.","User Story:
+As a Plan Review Staff Member, I want to evaluate the code modifications submitted by the applicant so that I can make informed decisions on the request and, if approved, link it to the correct project for efficient tracking and implementation.
+
+Acceptance Criteria:
+- Successfully access and review all submitted code modifications within 24 hours of submission.
+- Document the review findings and decisions, ensuring that at least 90% of requests are processed within the established timeframe.
+- Ensure that approved modifications are accurately associated with the corresponding project in the system.
+
+Test Outline:
+- Track the time taken to access and review the submitted code modifications to confirm compliance with the 24-hour requirement.
+- Review the documentation of findings to ensure that at least 90% of requests are processed and recorded properly.
+- Verify that the approved modifications are correctly linked to the appropriate project by checking the project records.","efficient (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+appropriate (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US042,"As a Plan Review Staff member, I want to Track the Completion of Required Plan Reviews, so that I can ensure all plan review tasks are completed, results have been sent to the Applicant and any downstream steps are initiated such has a final review or payment for permit issuance.","User Story:
+As a Plan Review Staff member, I want to monitor the status of all required plan reviews so that I can guarantee that each review task is finalized, results are communicated to the applicant, and subsequent actions, such as final reviews or permit payment processing, are promptly initiated.
+
+Acceptance Criteria:
+- Track the completion status of 100% of required plan reviews to ensure none are overlooked.
+- Confirm that results are sent to the applicant within 2 business days of review completion.
+- Initiate downstream processes, including final reviews or payment requests, within 1 business day after results are communicated.
+
+Test Outline:
+- Review the tracking system to ensure it accurately reflects the completion status of all plan reviews.
+- Check the timestamps of when results are sent to applicants to verify compliance with the 2-day requirement.
+- Monitor the initiation of downstream steps to ensure they occur within the specified 1-day timeframe after results are sent.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,3,5,2.0,2,5,3.0,3,5,2.0,—
+US043,"As a Development Staff member, I want to Issue a Development-related Permit, so that I can grant the request to the Applicant to begin work","User Story:
+As a Development Staff member, I want to process and issue a Development-related Permit efficiently so that I can promptly authorize the Applicant to commence their work without unnecessary delays.
+
+Acceptance Criteria:
+- Ensure that the permit application is reviewed and processed within 3 business days of submission.
+- Confirm that all required documentation is verified and complete before issuing the permit.
+- Track and report the number of permits issued monthly to ensure compliance with departmental goals.
+
+Test Outline:
+- Monitor the time taken from application submission to permit issuance to verify adherence to the 3-day processing time.
+- Review the checklist of required documents to ensure all are accounted for before the permit is granted.
+- Generate a monthly report detailing the number of permits issued to assess performance against targets.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US044,"As a Staff member, I want to Manage Bonds, so that I can track and manage bonds throughout the lifecycle of the project until release.","User Story:
+As a Staff member, I want to effectively manage bonds throughout their entire lifecycle, so that I can ensure accurate tracking and oversight until the project's release, ultimately enhancing project success and compliance.
+
+Acceptance Criteria:
+- Implement a system that allows for real-time tracking of bond statuses at each lifecycle stage.
+- Ensure that all bond-related data is updated and accessible within 24 hours of any changes.
+- Provide a reporting feature that generates comprehensive bond management reports at least once a week.
+
+Test Outline:
+- Verify that the bond tracking system accurately reflects the current status of each bond in real-time.
+- Check the timeliness of data updates to confirm they occur within the 24-hour window.
+- Review the generated reports for completeness and accuracy to ensure they meet the weekly requirement.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US045,"As an Applicant, I want to Complete Building Development Project, so that I can receive any posted bond and/or obtain occupancy.","User Story:
+As an Applicant, I want to finalize the Building Development Project so that I can secure any posted bond and obtain the necessary occupancy permit for my property.
+
+Acceptance Criteria:
+- Successfully complete all required inspections and approvals for the building project.
+- Ensure that all documentation related to the bond is submitted and processed within 10 business days.
+- Obtain the occupancy permit within 5 business days after project completion.
+
+Test Outline:
+- Verify that all inspections have been completed and approved by the relevant authorities.
+- Check the status of the bond documentation to confirm it has been processed within the specified timeframe.
+- Confirm receipt of the occupancy permit following the completion of the project.","secure (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,4,2.0,2,4,2.0,3,4,1.0,2,5,3.0,3,5,2.0,2,5,3.0,2,4,2.0,—
+US046,"As an Applicant, I want to Complete Building Development Project, so that I can receive any posted bond and/or obtain occupancy.","User Story:
+As an Applicant, I want to finalize the Building Development Project so that I can secure any posted bond and obtain the necessary occupancy permit for my property.
+
+Acceptance Criteria:
+- Successfully complete all required inspections and approvals for the building project.
+- Ensure that all documentation related to the bond is submitted and processed within 10 business days.
+- Obtain the occupancy permit within 5 business days after project completion.
+
+Test Outline:
+- Verify that all inspections have been completed and approved by the relevant authorities.
+- Check the status of the bond documentation to confirm it has been processed within the specified timeframe.
+- Confirm receipt of the occupancy permit following the completion of the project.","secure (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,4,2.0,2,4,2.0,3,4,1.0,2,5,3.0,3,5,2.0,2,5,3.0,2,4,2.0,—
+US047,"As a Customer, I want to Request Inspection, so that a County inspector is assigned to perform an inspection of my project.","User Story:
+As a Customer, I want to submit a request for an inspection so that a qualified county inspector can be assigned to evaluate my project in a timely manner.
+
+Acceptance Criteria:
+- Successfully submit an inspection request through the designated platform.
+- Receive confirmation of the inspection request within 24 hours.
+- Ensure that a county inspector is assigned and scheduled to perform the inspection within 3 business days of the request.
+
+Test Outline:
+- Verify that the inspection request submission process is functional and user-friendly.
+- Check for the confirmation email or notification received within the specified timeframe.
+- Confirm that an inspector is assigned and the inspection date is communicated to the customer within the target period.","that (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",4,5,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US048,"As an Inspection Staff member, I want to Create an Inspection, so that I can schedule and assign the inspection.","User Story:
+As an Inspection Staff member, I want to initiate the creation of an inspection so that I can effectively schedule and assign the inspection tasks to the appropriate personnel.
+
+Acceptance Criteria:
+- Successfully create an inspection record that includes all necessary details such as date, time, and location.
+- Ensure that the inspection can be scheduled within 24 hours of creation.
+- Assign the inspection to at least one qualified inspector from the available staff list.
+
+Test Outline:
+- Verify that an inspection record is created with all required fields populated correctly.
+- Check that the scheduling feature allows for inspections to be set within the 24-hour timeframe.
+- Confirm that the assignment process successfully links the inspection to the selected inspector(s).","that (ISO 29148)
+appropriate (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,3,-1.0,3,4,1.0,4,4,0.0,2,4,2.0,3,4,1.0,—
+US049,"As an Inspection Staff Supervisor, I want to Assign Inspections, so that I can make sure the appropriate Inspector receives the work.","User Story:
+As an Inspection Staff Supervisor, I want to efficiently assign inspections to qualified inspectors so that I can ensure that the right inspector is allocated to each task, enhancing workflow and accountability.
+
+Acceptance Criteria:
+- Successfully assign inspections to inspectors based on their expertise and availability, with a target of 90% matching accuracy.
+- Track and report the assignment process, ensuring that all inspections are assigned within 15 minutes of being logged.
+- Confirm that inspectors receive notifications of their assigned inspections within 5 minutes of the assignment.
+
+Test Outline:
+- Review the assignment logs to verify that inspections are matched to inspectors based on criteria and that the accuracy meets the target.
+- Measure the time taken from logging an inspection to its assignment to ensure it falls within the 15-minute window.
+- Check the notification system to confirm that inspectors receive their assignments promptly within the specified time frame.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,4,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US050,"As an Inspection Supervisor, I want to Manage Inspector Workload, so that I can meet service level and quality requirements.","User Story:
+As an Inspection Supervisor, I want to effectively manage the workload of inspectors so that I can consistently meet service level agreements (SLAs) and maintain high-quality standards in inspections.
+
+Acceptance Criteria:
+- Achieve a workload distribution that ensures no inspector exceeds 40 inspections per week.
+- Maintain an average inspection completion rate of 95% within the designated SLA timeframe.
+- Implement a tracking system that provides real-time visibility into inspector workloads and performance metrics.
+
+Test Outline:
+- Review the weekly inspection assignments to confirm that no inspector's workload surpasses the established limit.
+- Analyze the completion rates of inspections to ensure they meet or exceed the 95% target within the SLA.
+- Validate the functionality of the tracking system by checking for accurate and timely updates on inspector workloads.","that (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",2,4,2.0,2,4,2.0,3,4,1.0,2,5,3.0,3,5,2.0,2,5,3.0,2,4,2.0,—
+US051,"As an Inspector, I want to Conduct Inspections, so that I can validate Customer compliance with code and regulations and provide results of the inspection to the Customer.","User Story:
+As an Inspector, I want to perform thorough inspections to ensure that customers comply with relevant codes and regulations, enabling me to deliver accurate and actionable inspection results to the customers.
+
+Acceptance Criteria:
+- Complete a minimum of 10 inspections per week, ensuring each inspection adheres to established compliance standards.
+- Document and provide detailed inspection results to customers within 48 hours of completing the inspection.
+- Achieve a customer satisfaction rating of 90% or higher based on feedback regarding the clarity and usefulness of the inspection results.
+
+Test Outline:
+- Track the number of inspections conducted weekly to verify that the target is met.
+- Review the documentation process to ensure that results are delivered within the specified timeframe.
+- Collect and analyze customer feedback to assess satisfaction levels regarding the inspection results.",that (ISO 29148),3,4,1.0,3,5,2.0,4,4,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US052,"As an Enforcement Staff member, I want to Issue a Notice of Violation, so that I can provide formal communication to the responsible party.","User Story:
+As an Enforcement Staff member, I want to formally issue a Notice of Violation so that I can ensure clear and documented communication with the responsible party regarding their non-compliance.
+
+Acceptance Criteria:
+- Generate a Notice of Violation document that includes all necessary details such as violation type, date, and responsible party information.
+- Ensure that the notice is sent to the responsible party within 24 hours of the violation being identified.
+- Track and confirm receipt of the Notice of Violation by the responsible party within 5 business days.
+
+Test Outline:
+- Review the generated Notice of Violation to verify that it contains all required information.
+- Monitor the timeline to ensure the notice is dispatched within the specified 24-hour window.
+- Follow up with the responsible party to confirm they received the notice within the 5-day timeframe.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,4,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US053,"As a l Staff member, I want to search for Property information, so that I can obtain all associated current and historic owners, permits, and applications.","User Story:
+As a l Staff member, I want to efficiently search for property information so that I can access comprehensive details about all current and historical owners, permits, and applications related to the property.
+
+Acceptance Criteria:
+- The search functionality must return property information within 3 seconds for 95% of queries.
+- The system should display a complete list of current and historical owners, permits, and applications associated with the property.
+- Users must be able to filter search results by date range and type of permit or application.
+
+Test Outline:
+- Measure the response time of the search functionality to ensure it meets the 3-second criterion for 95% of searches.
+- Verify that the search results include all relevant details about owners, permits, and applications.
+- Test the filtering options to confirm they work correctly and return accurate results based on user input.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US054,"As a Staff member, I need to be notified when Geospatial attributes change, so that I can ensure that I am reviewing the permit/application to the most current data and appropriate standards.","User Story:
+As a Staff member, I need to receive real-time notifications when there are changes to geospatial attributes so that I can review permits and applications based on the most up-to-date data and adhere to the relevant standards.
+
+Acceptance Criteria:
+- Notifications must be triggered within 1 minute of any change to geospatial attributes.
+- Ensure that at least 95% of notifications are delivered successfully to the staff member's preferred communication channel.
+- Provide a summary of changes in the notification, including the specific attributes that were modified.
+
+Test Outline:
+- Monitor the system to confirm that notifications are sent within the specified time frame after a geospatial attribute change.
+- Track the delivery success rate of notifications to ensure it meets or exceeds the 95% threshold.
+- Review the content of the notifications to verify that they include a clear summary of the changes made.","most (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US055,"As a County Staff Member, I want to create a custom query/report outside of the common querying/reporting functionality, so that I can fulfill a request.","User Story:
+As a County Staff Member, I want to generate a tailored query or report independently from the standard querying and reporting tools, so that I can efficiently address specific requests and provide accurate data insights.
+
+Acceptance Criteria:
+- The system must allow the creation of custom queries with at least 5 different filtering options.
+- The generated report should be exportable in at least 3 formats (e.g., PDF, Excel, CSV).
+- The custom query process should not exceed 10 minutes from initiation to report generation.
+
+Test Outline:
+- Test the functionality by creating a custom query and verifying that it includes the required filtering options.
+- Attempt to export the generated report in the specified formats to ensure compatibility.
+- Measure the time taken from starting the custom query to receiving the final report to confirm it meets the time requirement.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US056,"As a Staff member, I want to create each condo unit, so that I can associate it to the child parcel and address after the condominiums are recorded in the system.","User Story:
+As a Staff member, I want to systematically create each condominium unit in the system so that I can accurately link it to the corresponding child parcel and address once the condominiums are officially recorded.
+
+Acceptance Criteria:
+- Each condominium unit must be created with a unique identifier and associated details within 10 minutes of the condominium's recording.
+- Ensure that the linkage between the condominium units and their respective child parcels is established with 100% accuracy.
+- Validate that the address information for each condominium unit is correctly associated and retrievable within the system.
+
+Test Outline:
+- Track the time taken to create each condominium unit to ensure it meets the 10-minute requirement.
+- Review the database entries to confirm that all condominium units are correctly linked to their child parcels.
+- Conduct a search for each condominium unit to verify that the associated address information is accurate and accessible.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US057,"As a Technical Staff member, I want to update the GIS Property Management, so that I can successfully update the transactional Parcel Pin to reference the GIS layer where the Split or Merged Parcel Pin exists.","User Story:
+As a Technical Staff member, I want to enhance the GIS Property Management system so that I can accurately update the transactional Parcel Pin to link it with the corresponding GIS layer that contains the Split or Merged Parcel Pin, ensuring data integrity and consistency.
+
+Acceptance Criteria:
+- Successfully update the Parcel Pin to reference the correct GIS layer for at least 95% of transactions.
+- Ensure that the update process completes within a maximum of 3 minutes for each transaction.
+- Validate that all changes are logged and can be audited for at least 30 days post-update.
+
+Test Outline:
+- Review a sample of updated Parcel Pins to confirm they correctly reference the appropriate GIS layer.
+- Measure the time taken for the update process to ensure it meets the 3-minute requirement.
+- Check the audit logs to verify that all updates are recorded accurately and are retrievable within the specified timeframe.","it (ISO 29148)
+that (ISO 29148)
+appropriate (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,3,5,2.0,2,5,3.0,3,5,2.0,—
+US058,"As a Staff member, I want to Send or Post Citations and Fines, so that I can successfully send the Notice Of Violation document to the property owner and log information about the action.","User Story:
+As a Staff member, I want to efficiently send or post citations and fines so that I can ensure the Notice of Violation document is delivered to the property owner and accurately log all relevant information regarding the action taken.
+
+Acceptance Criteria:
+- Successfully send or post the Notice of Violation to the property owner within 24 hours of the citation issuance.
+- Log all actions taken, including timestamps and recipient details, with 100% accuracy in the system.
+- Ensure that at least 95% of notices are acknowledged by the property owners within 7 days of sending.
+
+Test Outline:
+- Track the time taken from citation issuance to the delivery of the Notice of Violation to confirm it meets the 24-hour requirement.
+- Review the logged information in the system to verify that all details are recorded accurately.
+- Monitor the acknowledgment rate of notices by property owners to ensure it meets or exceeds the 95% target.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—

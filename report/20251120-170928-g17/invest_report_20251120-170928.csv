@@ -1,0 +1,925 @@
+﻿ID,Original User Story,Rewritten User Story,Fuzzy Terms (with source),I_before,I_after,delta_I,N_before,N_after,delta_N,V_before,V_after,delta_V,E_before,E_after,delta_E,S_before,S_after,delta_S,T_before,T_after,delta_T,overall_before,overall_after,delta_overall,Low-score Explanation (<2)
+US001,"As an app developer, I want to include the code of a dataset type in my app artifact and create a dataset of that type when deploying the app.","User Story:
+As an app developer, I want to embed the code for a specific dataset type within my application artifact so that I can automatically generate a dataset of that type during the app deployment process, ensuring seamless integration and functionality.
+
+Acceptance Criteria:
+- The dataset type code must be successfully included in the application artifact prior to deployment.
+- A new dataset of the specified type should be created automatically upon deployment, with a confirmation of successful creation.
+- The dataset must be accessible and functional within the app immediately after deployment.
+
+Test Outline:
+- Verify that the dataset type code is present in the application artifact by inspecting the deployment package.
+- Check the deployment logs to confirm that the dataset was created successfully during the deployment process.
+- Test the accessibility and functionality of the newly created dataset within the app to ensure it operates as intended.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US002,"As an app developer, I want to deploy a new version of a dataset type as part of deploying a new version of the app that includes it and I expect that all dataset instances of that type that were created as part of the app deployment start using the new code.","User Story:
+As an app developer, I want to implement a new version of a dataset type during the app deployment process so that all instances of that dataset type created with the app utilize the updated code seamlessly.
+
+Acceptance Criteria:
+- Ensure that the new dataset type version is successfully integrated and deployed alongside the app update.
+- Verify that 100% of the dataset instances created post-deployment are utilizing the new version of the dataset type.
+- Confirm that no errors occur during the transition to the new dataset version for existing instances.
+
+Test Outline:
+- Check the deployment logs to ensure the new dataset type version was included in the app deployment.
+- Validate that all newly created dataset instances reflect the updated code by reviewing their properties.
+- Monitor for any error messages or issues reported during the transition to ensure a smooth upgrade process.","that (ISO 29148)
+all (ISO 29148)",3,4,1.0,3,4,1.0,3,4,1.0,3,5,2.0,3,5,2.0,2,5,3.0,3,4,1.0,—
+US003,"As an app developer, I want to deploy a new version of a dataset type as part of an app artifact, without affecting other datasets of this type.","User Story:
+As an app developer, I want to implement a new version of a specific dataset type within an app artifact so that I can enhance functionality without disrupting the existing datasets of the same type.
+
+Acceptance Criteria:
+- Ensure that the deployment of the new dataset version does not impact the performance or availability of existing datasets.
+- Validate that the new dataset version is successfully integrated and accessible within the app without any errors.
+- Confirm that all existing datasets maintain their integrity and functionality post-deployment.
+
+Test Outline:
+- Monitor the performance metrics of existing datasets before and after the deployment to ensure no degradation occurs.
+- Test the accessibility of the new dataset version to verify it is functioning correctly within the app.
+- Conduct a review of existing datasets to ensure they remain operational and unaffected by the new deployment.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,3,3,0.0,2,4,2.0,4,4,0.0,2,4,2.0,3,4,1.0,—
+US004,"As an app developer, I want to explore a dataset instance of a type that was deployed as part of an app.","User Story:
+As an app developer, I want to investigate a specific instance of a dataset type that has been deployed within the application so that I can analyze its structure and content for better integration and functionality.
+
+Acceptance Criteria:
+- Access the deployed dataset instance within the app environment without encountering errors.
+- Retrieve and display at least 10 key attributes of the dataset instance for analysis.
+- Ensure that the dataset instance can be queried for insights, returning results within 3 seconds.
+
+Test Outline:
+- Verify that the dataset instance is accessible through the app's interface without any issues.
+- Check that the key attributes of the dataset are correctly displayed and match the expected schema.
+- Conduct a query on the dataset instance and measure the response time to confirm it meets the performance criteria.","it (ISO 29148)
+that (ISO 29148)
+better (ISO 29148)
+can (NASA ARM)
+better (NASA ARM)",2,4,2.0,2,4,2.0,2,4,2.0,2,5,3.0,4,5,1.0,2,5,3.0,2,4,2.0,—
+US005,"As an app developer, I want to ensure that when I deploy an artifact without creating an app this will not create any dataset types or instances.","User Story:
+As an app developer, I want to guarantee that deploying an artifact without the creation of an app does not result in the generation of any dataset types or instances, ensuring a clean deployment process.
+
+Acceptance Criteria:
+- Confirm that no dataset types are created during the deployment of an artifact when an app is not instantiated.
+- Validate that no dataset instances are generated as a result of the artifact deployment without an associated app.
+- Ensure that the deployment process logs clearly indicate the absence of dataset type and instance creation.
+
+Test Outline:
+- Review the deployment logs to verify that no dataset types were created during the artifact deployment.
+- Check the database or storage system to confirm that no new dataset instances were generated post-deployment.
+- Conduct a test deployment of an artifact without an app and monitor the outcomes to ensure compliance with the acceptance criteria.",that (ISO 29148),3,4,1.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US006,"As an app developer, I want to share a dataset type across multiple applications that include the dataset type's code in their artifacts.","User Story:
+As an app developer, I want to enable the sharing of a specific dataset type across various applications, ensuring that the dataset type's code is included in their build artifacts, so that all applications can utilize consistent data structures and functionalities.
+
+Acceptance Criteria:
+- The dataset type's code must be integrated into the build artifacts of at least 3 different applications.
+- Ensure that any updates to the dataset type are automatically reflected in all applications using it within 24 hours.
+- Validate that all applications can access and utilize the shared dataset type without any compatibility issues.
+
+Test Outline:
+- Review the build artifacts of the applications to confirm the inclusion of the dataset type's code.
+- Monitor the update process to ensure that changes to the dataset type propagate to all applications within the specified timeframe.
+- Conduct functionality tests in each application to verify seamless access and usage of the shared dataset type.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,3,4,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US007,"As an app developer, I want to ensure that when I deploy a new version of an app that includes a shared dataset type that all dataset instances created by this app start using the new code but all dataset instances created by other apps remain unchanged.","User Story:
+As an app developer, I want to implement a versioning mechanism for shared dataset types so that all instances created by my app automatically adopt the new code upon deployment, while ensuring that instances from other applications remain unaffected.
+
+Acceptance Criteria:
+- Upon deploying a new version, all dataset instances created by the app must reflect the updates within 5 minutes.
+- Verify that no changes are applied to dataset instances created by other applications, maintaining their original functionality.
+- Document the versioning process to ensure clarity on how updates are managed and rolled out.
+
+Test Outline:
+- Deploy a new version of the app and monitor the dataset instances to confirm they are updated as expected.
+- Check instances created by other apps to ensure they remain unchanged and function as intended.
+- Review the documentation for the versioning process to ensure it accurately describes the update mechanism.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)",3,4,1.0,3,4,1.0,3,4,1.0,3,5,2.0,3,5,2.0,2,5,3.0,3,4,1.0,—
+US008,"As an app developer, I want to ensure that when I deploy a new version of an app that includes an older version of a dataset type deployed by another app and I expect that the dataset instances created by this app use the dataset type code included in this app.","User Story:
+As an app developer, I want to guarantee that when I release a new version of my application that incorporates a previously deployed dataset type from another application, the dataset instances generated by my app will utilize the dataset type code embedded within my new version.
+
+Acceptance Criteria:
+- Confirm that the dataset type code from the new app version is correctly integrated and recognized by the system.
+- Ensure that all dataset instances created by the new app version reference the intended dataset type code, with a success rate of 100%.
+- Validate that no instances of the older dataset type code are used in the new dataset instances post-deployment.
+
+Test Outline:
+- Review the deployment logs to verify that the new dataset type code is included and correctly deployed.
+- Create multiple dataset instances using the new app version and check that they all reference the correct dataset type code.
+- Conduct a comprehensive audit of the dataset instances to ensure that none are linked to the older dataset type code.","that (ISO 29148)
+all (ISO 29148)",2,4,2.0,2,4,2.0,2,4,2.0,2,5,3.0,3,5,2.0,2,5,3.0,2,4,2.0,—
+US009,"As an app developer, I want to ensure that when I deploy a new version of an app that includes a different version of a dataset type deployed by another app and this app shares a dataset instance of this type with the other app the deployment will fail with a version conflict error.","User Story:
+As an app developer, I want to implement a version conflict detection mechanism during app deployment so that if my new app version includes a different dataset version shared with another app, the deployment will automatically fail, preventing potential data inconsistencies.
+
+Acceptance Criteria:
+- The deployment process must check for version compatibility of the shared dataset type and trigger a conflict error if discrepancies are found.
+- A clear error message must be generated, indicating the specific version conflict and the apps involved.
+- The deployment should log the conflict details for further analysis and resolution.
+
+Test Outline:
+- Deploy a new version of the app with an incompatible dataset version and verify that the deployment fails with the appropriate conflict error.
+- Check the error message for clarity and accuracy regarding the version conflict.
+- Review the deployment logs to ensure that the conflict details are recorded correctly for troubleshooting.","that (ISO 29148)
+appropriate (ISO 29148)",3,4,1.0,3,4,1.0,3,4,1.0,3,5,2.0,3,5,2.0,2,5,3.0,3,4,1.0,—
+US010,"As an app developer, I want to share a dataset type that I had previously deployed as part of an app.","User Story:
+As an app developer, I want to publish a previously deployed dataset type from my application so that other developers can leverage it for their projects, enhancing collaboration and data utilization.
+
+Acceptance Criteria:
+- Successfully share the dataset type with a unique identifier that can be accessed by other developers.
+- Ensure that the dataset type is documented with clear usage instructions and examples.
+- Track the number of developers who access or utilize the shared dataset type within the first month of publication.
+
+Test Outline:
+- Verify that the dataset type is accessible via the provided unique identifier by attempting to retrieve it.
+- Review the documentation for completeness and clarity, ensuring it meets the standards for developer usability.
+- Monitor access logs to count the number of unique developers who interact with the dataset type after it has been shared.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,4,2.0,2,5,3.0,2,4,2.0,2,5,3.0,4,5,1.0,2,5,3.0,2,5,3.0,—
+US011,"As a dataset developer, I want to deploy a dataset type independent from any app and allow apps to create and use dataset instances of that type.","User Story:
+As a dataset developer, I want to implement a dataset type that operates independently of any specific application, enabling various applications to create and utilize instances of that dataset type seamlessly.
+
+Acceptance Criteria:
+- The dataset type must be deployable without reliance on any particular application, ensuring flexibility.
+- At least 3 different applications should be able to create instances of the dataset type within 2 weeks of deployment.
+- The dataset instances must be accessible and usable by the applications with a response time of less than 1 second for data retrieval.
+
+Test Outline:
+- Verify that the dataset type can be deployed independently by testing its installation process without any app dependencies.
+- Check that at least 3 applications can successfully create instances of the dataset type and document the time taken for each.
+- Measure the response time for data retrieval from the dataset instances to ensure it meets the specified performance criteria.","it (ISO 29148)
+that (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)
+less (NASA ARM)",3,4,1.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US012,"As a dataset developer, I want to have the option of forcing applications to have the dataset code injected at runtime.","User Story:
+As a dataset developer, I want the capability to enforce runtime injection of dataset code into applications so that I can ensure consistent data handling and integration across various platforms.
+
+Acceptance Criteria:
+- Provide a configuration option that allows developers to enable or disable runtime dataset code injection.
+- Ensure that applications utilizing this feature can successfully load the dataset code without errors in 95% of test cases.
+- Document the implementation process and provide examples to facilitate adoption by at least 80% of the development team.
+
+Test Outline:
+- Test the configuration option to confirm it correctly enables or disables the dataset code injection.
+- Run a series of applications with the feature enabled to verify that the dataset code loads correctly in the specified percentage of cases.
+- Review the documentation and examples to ensure clarity and completeness, gathering feedback from the development team on usability.","it (ISO 29148)
+this (ISO 29148)
+that (ISO 29148)
+capability to (NASA ARM)
+can (NASA ARM)",3,4,1.0,2,5,3.0,2,5,3.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US013,"As a dataset developer, I want to have an archetype that helps me package my dataset type properly.","User Story:
+As a dataset developer, I want to utilize a predefined archetype that guides me in structuring and packaging my dataset type effectively so that I can ensure consistency and compliance with industry standards.
+
+Acceptance Criteria:
+- The archetype must include at least 5 key attributes that are essential for proper dataset packaging.
+- Documentation for the archetype should be available, detailing usage instructions and best practices.
+- The archetype should be validated against at least 3 different dataset types to ensure versatility and reliability.
+
+Test Outline:
+- Review the archetype to confirm it contains the required key attributes for dataset packaging.
+- Check the availability and clarity of the documentation to ensure it provides comprehensive guidance.
+- Test the archetype with various dataset types and verify that it meets the validation criteria.","best (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)
+best (NASA ARM)",3,4,1.0,2,3,1.0,2,4,2.0,2,4,2.0,4,4,0.0,2,4,2.0,3,4,1.0,—
+US014,"As a dataset developer, I want to separate the interface from the implementation of a dataset type.","User Story:
+As a dataset developer, I want to decouple the interface from the implementation of a dataset type so that I can enhance modularity and facilitate easier updates or changes without affecting dependent components.
+
+Acceptance Criteria:
+- Define a clear interface for the dataset type that outlines all required methods and properties.
+- Implement the dataset type in a way that adheres to the defined interface, ensuring no direct dependencies on the implementation details.
+- Ensure that at least 90% of existing functionalities remain intact after the separation is completed.
+
+Test Outline:
+- Review the interface documentation to confirm that all necessary methods and properties are included and clearly defined.
+- Conduct unit tests to verify that the implementation complies with the interface and functions correctly without any direct dependencies.
+- Perform regression testing to ensure that existing functionalities are preserved and operate as expected.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,2,4,2.0,2,5,3.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US015,"As an app developer, I want to only depend on the interface of a dataset type in my app and have the system inject the implementation at runtime.","User Story:
+As an app developer, I want to rely solely on the interface of a dataset type within my application, allowing the system to dynamically inject the appropriate implementation at runtime, thereby enhancing flexibility and reducing coupling.
+
+Acceptance Criteria:
+- Ensure that the application can function correctly with any implementation of the dataset interface without requiring code changes.
+- Validate that the correct implementation is injected at runtime based on configuration settings or context.
+- Confirm that the application maintains performance benchmarks with the injected implementations, ensuring no degradation in response time or resource usage.
+
+Test Outline:
+- Test the application with multiple implementations of the dataset interface to verify functionality remains consistent.
+- Check the configuration settings to ensure the correct implementation is selected and injected during runtime.
+- Measure the application's performance metrics to ensure they meet predefined standards with the injected implementations.","that (ISO 29148)
+appropriate (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,3,4,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US016,"As an app developer, I want to write unit tests for an app that depends on the interface of a dataset type.","User Story:
+As an app developer, I want to create comprehensive unit tests for the application that relies on the specific interface of a dataset type, ensuring that all functionalities are validated and any potential issues are identified early in the development process.
+
+Acceptance Criteria:
+- Develop at least 10 unit tests that cover all critical methods and properties of the dataset interface.
+- Achieve a minimum code coverage of 90% for the dataset interface through these unit tests.
+- Ensure that all unit tests pass successfully without any errors or failures.
+
+Test Outline:
+- Run the unit tests and verify that all 10 tests execute and pass without any issues.
+- Use a code coverage tool to confirm that the coverage for the dataset interface meets or exceeds the 90% threshold.","that (ISO 29148)
+these (ISO 29148)
+all (ISO 29148)",2,4,2.0,2,4,2.0,2,4,2.0,2,5,3.0,4,5,1.0,2,5,3.0,2,4,2.0,—
+US017,"As a dataset developer, I want to assign explicit versions to the code of a dataset type.","User Story:
+As a dataset developer, I want to implement a versioning system for the code associated with each dataset type so that I can track changes effectively and ensure consistency across different iterations.
+
+Acceptance Criteria:
+- Each dataset type must have a unique version identifier assigned, following a semantic versioning format (e.g., v1.0.0).
+- The versioning system should allow for at least 5 major, 10 minor, and 15 patch updates without conflicts.
+- Documentation must be updated to reflect the version history and changes made for each dataset type.
+
+Test Outline:
+- Verify that each dataset type has a version identifier that adheres to the semantic versioning format.
+- Check the versioning system to ensure it accommodates the specified number of updates without issues.
+- Review the documentation to confirm that it accurately reflects the version history and associated changes.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US018,"As a dataset developer, I want to deploy a new version of a dataset type without affecting the dataset instances of that type.","User Story:
+As a dataset developer, I want to implement a new version of a dataset type while ensuring that existing dataset instances remain unaffected, so that users can continue to access and utilize their data without interruption.
+
+Acceptance Criteria:
+- The new version of the dataset type must be deployed with a versioning system that allows for backward compatibility with existing instances.
+- Ensure that at least 95% of existing dataset instances function correctly without any errors post-deployment.
+- Provide documentation detailing the changes in the new version and instructions for users to transition smoothly.
+
+Test Outline:
+- Validate that existing dataset instances operate as expected after the new version is deployed by running a series of functional tests.
+- Review the versioning system to confirm that it supports backward compatibility and does not disrupt current instances.
+- Check user feedback and support tickets for any issues related to the deployment to ensure minimal disruption.","it (ISO 29148)
+that (ISO 29148)
+minimal (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US019,"As an app developer, I want to create a dataset instance with a specific version of a dataset type.","User Story:
+As an app developer, I want to instantiate a dataset with a designated version of a specific dataset type so that I can ensure compatibility and leverage the latest features or fixes available in that version.
+
+Acceptance Criteria:
+- Successfully create a dataset instance using a specified version of the dataset type without errors.
+- Validate that the dataset instance reflects the correct version by checking version metadata.
+- Ensure that the dataset instance can be accessed and utilized by the application within 2 seconds of creation.
+
+Test Outline:
+- Attempt to create a dataset instance with a defined version and confirm that the operation completes successfully.
+- Retrieve and verify the version metadata of the created dataset instance to ensure it matches the specified version.
+- Measure the time taken to access the dataset instance post-creation to ensure it meets the performance criteria.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US020,"As a dataset developer, I want to explore a dataset instance created from a dataset type that was deployed by itself.","User Story:
+As a dataset developer, I want to analyze a specific instance of a dataset that has been independently deployed from its dataset type so that I can validate its structure and ensure it meets the required specifications for further development.
+
+Acceptance Criteria:
+- Successfully access and explore the dataset instance created from the deployed dataset type.
+- Confirm that the dataset instance adheres to the defined schema and data quality standards.
+- Document any discrepancies or issues found during the exploration process for resolution.
+
+Test Outline:
+- Verify access to the dataset instance and ensure it is operational.
+- Check the dataset instance against the schema to confirm compliance with the expected structure.
+- Review and log any findings or issues encountered during the exploration for follow-up actions.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,4,1.0,2,4,2.0,2,4,2.0,2,4,2.0,4,4,0.0,2,4,2.0,3,4,1.0,—
+US021,"As a dataset developer, I want to delete outdated versions of a dataset type and I expect this to fail if there are any dataset instances with that version of the type.","User Story:
+As a dataset developer, I want to remove obsolete versions of a specific dataset type so that I can maintain a clean and efficient data environment, ensuring that only relevant versions are available for use.
+
+Acceptance Criteria:
+- Attempting to delete a dataset version must result in a failure if there are any existing dataset instances associated with that version.
+- The system should provide a clear error message indicating the presence of dependent dataset instances that prevent deletion.
+- The deletion process must log the attempt and the reason for failure for auditing purposes.
+
+Test Outline:
+- Initiate a deletion request for a dataset version that has active instances and verify that the operation fails as expected.
+- Check that the appropriate error message is displayed to the user, detailing the reason for the failure.
+- Review the system logs to confirm that the deletion attempt and its failure reason are recorded accurately.","efficient (ISO 29148)
+that (ISO 29148)
+appropriate (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US022,"As a dataset developer, I want to list all dataset instances that use a dataset type or a specific version of a type.","User Story:
+As a dataset developer, I want to retrieve a comprehensive list of all dataset instances associated with a specific dataset type or a designated version of that type, so that I can efficiently manage and analyze the datasets relevant to my projects.
+
+Acceptance Criteria:
+- Successfully query and return all dataset instances linked to the specified dataset type.
+- Accurately filter and display dataset instances that correspond to a particular version of the dataset type.
+- Ensure the response time for retrieving the dataset instances does not exceed 3 seconds.
+
+Test Outline:
+- Execute a query to list dataset instances by dataset type and verify that all relevant instances are included in the results.
+- Test the filtering functionality by specifying a version and confirm that only instances matching that version are returned.
+- Measure the response time of the query to ensure it meets the performance criterion.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,3,5,2.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US023,"As a data scientist, I want to be able to create a dataset instance of an existing dataset type without writing code.","User Story:
+As a data scientist, I want to effortlessly generate a dataset instance from a predefined dataset type through a user-friendly interface, so that I can focus on analysis rather than coding, thereby increasing my productivity.
+
+Acceptance Criteria:
+- Provide a graphical interface that allows the creation of a dataset instance without any coding required.
+- Ensure that the dataset instance can be created in under 3 minutes from the selection of the dataset type.
+- Validate that the created dataset instance accurately reflects the properties and structure of the selected dataset type.
+
+Test Outline:
+- Test the graphical interface to confirm that a dataset instance can be created without writing any code.
+- Measure the time taken from the start of the dataset creation process to completion to ensure it meets the 3-minute requirement.
+- Review the properties of the created dataset instance to verify that they match the specifications of the chosen dataset type.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,5,1.0,3,4,1.0,3,5,2.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US024,"As a data scientist, I want to be able to upgrade a dataset instance to a new version of its code.","User Story:
+As a data scientist, I want to upgrade a dataset instance to the latest version of its code so that I can leverage improved features and enhancements for more accurate data analysis.
+
+Acceptance Criteria:
+- The upgrade process must allow for seamless transition to the new code version without data loss.
+- The system should provide a confirmation message upon successful upgrade completion.
+- The upgraded dataset instance must maintain compatibility with existing data queries and analytics tools.
+
+Test Outline:
+- Execute the upgrade process and verify that no data is lost during the transition.
+- Check for a confirmation message indicating the successful upgrade of the dataset instance.
+- Run existing data queries against the upgraded instance to ensure compatibility and correct functionality.","that (ISO 29148)
+improved (ISO 29148)
+can (NASA ARM)
+improved (NASA ARM)
+more (NASA ARM)",3,4,1.0,2,3,1.0,2,4,2.0,2,4,2.0,4,4,0.0,2,4,2.0,3,4,1.0,—
+US025,"As a hydrator user, I want to create a pipeline that reads or writes an existing dataset instance.","User Story:
+As a hydrator user, I want to develop a data pipeline that can efficiently read from or write to an existing dataset instance, enabling seamless data integration and processing.
+
+Acceptance Criteria:
+- The pipeline must successfully read data from the specified dataset instance with a minimum accuracy of 95%.
+- The pipeline should be able to write data back to the dataset instance without errors, achieving a success rate of 100%.
+- The entire read/write operation should complete within a maximum time frame of 10 seconds.
+
+Test Outline:
+- Validate the accuracy of the data read from the dataset instance by comparing it against the original data.
+- Monitor the write operation to ensure that all data is correctly saved to the dataset instance and no errors occur.
+- Measure the total time taken for the read/write operations to confirm it meets the specified time limit.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)",4,4,0.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US026,"As a hydrator user, I want to create a pipeline that reads or writes a new dataset instance and I want to create that dataset instance as part of pipeline creation.","User Story:
+As a hydrator user, I want to establish a data pipeline that can both read from and write to a new dataset instance, ensuring that the creation of this dataset instance is integrated into the pipeline setup process.
+
+Acceptance Criteria:
+- The pipeline creation process must include an option to define and create a new dataset instance simultaneously.
+- The pipeline should successfully read from the newly created dataset instance within 5 minutes of its creation.
+- The pipeline must be able to write data to the new dataset instance without errors, achieving a success rate of 95% or higher.
+
+Test Outline:
+- Verify that the pipeline creation interface allows for the definition and creation of a new dataset instance.
+- Monitor the time taken for the pipeline to read from the newly created dataset instance to ensure it meets the 5-minute requirement.
+- Test the writing functionality to the new dataset instance and confirm that at least 95% of attempts succeed without errors.","it (ISO 29148)
+this (ISO 29148)
+that (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)",3,4,1.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US027,"As a hydrator user, I want to specify an explicit version of the dataset types of the dataset instances created by my pipeline and I expect pipeline creation to fail if that results in incompatible upgrade of an existing dataset instance that is shared with other apps or pipelines.","User Story:
+As a hydrator user, I want to define a specific version for the dataset types associated with the dataset instances generated by my pipeline, so that the pipeline creation process will fail if it leads to an incompatible upgrade of an existing dataset instance that is utilized by other applications or pipelines.
+
+Acceptance Criteria:
+- The system must validate the specified dataset type version against existing instances and reject the pipeline creation if an incompatibility is detected.
+- Provide a clear error message indicating the reason for the failure when an incompatible version is specified.
+- Ensure that the validation process completes within 2 seconds to maintain a smooth user experience.
+
+Test Outline:
+- Attempt to create a pipeline with a specified dataset type version that is known to be incompatible with an existing instance and verify that the creation fails.
+- Check that the error message returned clearly explains the incompatibility issue.
+- Measure the time taken for the validation process to ensure it meets the 2-second requirement.","it (ISO 29148)
+that (ISO 29148)",3,5,2.0,3,4,1.0,3,5,2.0,3,5,2.0,3,5,2.0,2,5,3.0,3,5,2.0,—
+US028,"As a hydrator user, I want to explore the datasets created by my pipeline.","User Story:
+As a hydrator user, I want to access and analyze the datasets generated by my data pipeline so that I can derive insights and make informed decisions based on the data.
+
+Acceptance Criteria:
+- Successfully list all datasets created by the pipeline with metadata including creation date and size.
+- Enable filtering options to sort datasets by parameters such as date, size, and type.
+- Provide a preview feature for at least 10% of the dataset content to facilitate quick analysis.
+
+Test Outline:
+- Verify that all datasets are displayed with the correct metadata after the pipeline execution.
+- Test the filtering functionality to ensure it works accurately for different parameters.
+- Check the preview feature to confirm that it displays a sample of the dataset content as specified.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,2,4,2.0,2,5,3.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US029,"As a hydrator user, I want to ensure that all dataset instances created by apps are available as sinks and sources for pipelines.","User Story:
+As a hydrator user, I want to guarantee that every dataset instance generated by applications is accessible as both sinks and sources for data pipelines, ensuring seamless data flow and integration.
+
+Acceptance Criteria:
+- All dataset instances created by applications must be listed as available sources within 5 minutes of creation.
+- Each dataset instance should be verifiable as a sink option for pipelines within the same time frame.
+- Ensure that at least 95% of dataset instances are correctly identified and accessible as both sinks and sources.
+
+Test Outline:
+- Monitor the creation of dataset instances and check the availability of these instances as sources within the specified time limit.
+- Validate that the dataset instances are also listed as sinks by reviewing the pipeline configuration options.
+- Conduct a random sampling of dataset instances to confirm that they meet the accessibility criteria for both sinks and sources.","that (ISO 29148)
+these (ISO 29148)
+all (ISO 29148)
+every (ISO 29148)",3,4,1.0,3,4,1.0,3,4,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US030,"As an app developer, I want to ensure that all dataset instances created by Hydrator pipelines are accessible to the app.","User Story:
+As an app developer, I want to guarantee that every dataset instance generated by Hydrator pipelines is readily accessible to the application, ensuring seamless integration and functionality.
+
+Acceptance Criteria:
+- Confirm that 100% of dataset instances created by Hydrator pipelines are retrievable by the app.
+- Implement a monitoring system to track access attempts to dataset instances, aiming for a success rate of ≥95%.
+- Ensure that the access latency for retrieving dataset instances does not exceed 1 second.
+
+Test Outline:
+- Conduct tests to verify that all dataset instances can be accessed by the app without any errors.
+- Analyze the monitoring logs to ensure that the success rate of access attempts meets or exceeds the target.
+- Measure the time taken to retrieve dataset instances and confirm that it remains within the specified latency threshold.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+every (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US031,"As a plugin developer, I want to include the code for a dataset type in the plugin artifact, so that when a pipeline using this plugin is created a dataset instance of that type is created and it is explorable and available to apps.","User Story:
+As a plugin developer, I want to embed the code for a specific dataset type within the plugin artifact, so that when a pipeline utilizing this plugin is instantiated, a corresponding dataset instance of that type is automatically generated, making it easily explorable and accessible to applications.
+
+Acceptance Criteria:
+- The plugin artifact must successfully include the code for the dataset type, ensuring it is part of the deployment package.
+- Upon creating a pipeline with the plugin, a dataset instance of the specified type should be generated within 2 minutes.
+- The dataset instance must be fully explorable and available to at least 3 different applications immediately after creation.
+
+Test Outline:
+- Verify that the plugin artifact contains the correct code for the dataset type by inspecting the deployment package.
+- Measure the time taken from pipeline creation to dataset instance generation to ensure it meets the 2-minute requirement.
+- Check the accessibility of the dataset instance across the specified applications to confirm it is explorable.","it (ISO 29148)
+this (ISO 29148)
+that (ISO 29148)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US032,"As a plugin developer, I want to use a custom dataset type that was deployed independently or as part of an app inside the plugin.","User Story:
+As a plugin developer, I want to integrate a custom dataset type that can be deployed either independently or bundled within an application, so that I can enhance the plugin's functionality and provide tailored data solutions for users.
+
+Acceptance Criteria:
+- The custom dataset type must be deployable independently, allowing for flexible integration into various environments.
+- The dataset type should also be able to be packaged with the application, ensuring seamless access within the plugin.
+- Documentation must be provided to guide developers on how to implement and utilize the custom dataset type effectively.
+
+Test Outline:
+- Verify that the custom dataset type can be deployed independently and confirm its functionality in a standalone environment.
+- Test the integration of the dataset type within an application to ensure it operates correctly within the plugin context.
+- Review the provided documentation for clarity and completeness, ensuring it effectively supports developers in implementation.","it (ISO 29148)
+that (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)",4,4,0.0,3,4,1.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US033,"As a plugin developer, I want to upgrade the code of a dataset type used by a dataset instance created by that plugin when I deploy a new version of the plugin and update the pipeline to use that version.","User Story:
+As a plugin developer, I want to enhance the code of a specific dataset type utilized by instances created through my plugin when I deploy a new version, ensuring that the associated pipeline is updated to leverage the latest features and improvements.
+
+Acceptance Criteria:
+- The dataset type code must be successfully upgraded with each new plugin version deployment.
+- The pipeline must be updated to reference the new version of the plugin within 24 hours of deployment.
+- Ensure that all existing dataset instances are compatible with the updated dataset type without any loss of functionality.
+
+Test Outline:
+- Verify that the dataset type code reflects the changes made in the new plugin version after deployment.
+- Check the pipeline configuration to confirm it points to the latest plugin version within the specified timeframe.
+- Test existing dataset instances to ensure they function correctly with the upgraded dataset type.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)",3,4,1.0,3,4,1.0,3,4,1.0,2,5,3.0,3,5,2.0,2,5,3.0,3,4,1.0,—
+US034,"As a pipeline developer, I want to upgrade a dataset instance to a newer version of the code after the pipeline was created.","User Story:
+As a pipeline developer, I want to seamlessly upgrade a dataset instance to the latest version of the code after the pipeline has been established, ensuring that the dataset benefits from the latest features and improvements.
+
+Acceptance Criteria:
+- The upgrade process must be completed without any downtime, maintaining continuous access to the dataset.
+- The upgraded dataset instance should reflect the new code version within 10 minutes of initiating the upgrade.
+- All existing functionalities of the dataset must remain intact and operational post-upgrade, with no critical errors reported.
+
+Test Outline:
+- Monitor the upgrade process to confirm that there is no interruption in access to the dataset during the transition.
+- Track the time taken for the upgrade to ensure it completes within the specified 10-minute window.
+- Conduct a series of tests on the upgraded dataset to verify that all functionalities are working as expected without any issues.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)",4,4,0.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US035,"As a dataset developer, I want to have the option of implementing an upgrade step for when a dataset instance is upgraded to a new version of the dataset type.","User Story:
+As a dataset developer, I want the capability to implement an upgrade procedure when transitioning a dataset instance to a new version of its dataset type, ensuring a seamless migration and maintaining data integrity.
+
+Acceptance Criteria:
+- Provide a clear mechanism to define and execute upgrade steps during the dataset version transition.
+- Ensure that the upgrade process can be completed without data loss, with a success rate of 100% for all instances.
+- Document the upgrade steps and their expected outcomes for at least 90% of dataset types.
+
+Test Outline:
+- Test the upgrade procedure on multiple dataset instances to confirm that the defined steps execute correctly and data remains intact.
+- Monitor the success rate of the upgrade process across various dataset types to ensure it meets the 100% success criterion.
+- Review the documentation for clarity and completeness, ensuring it covers at least 90% of the dataset types.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+capability to (NASA ARM)
+can (NASA ARM)",4,4,0.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US036,"As a dataset developer, I want to have a way to reject an upgrade of a dataset instance to a newer version of it type if the upgrade is not compatible.","User Story:
+As a dataset developer, I want to implement a mechanism that allows me to reject the upgrade of a dataset instance to a newer version if it is determined to be incompatible, ensuring data integrity and system stability.
+
+Acceptance Criteria:
+- The system must automatically assess compatibility and provide a rejection notification if the upgrade fails compatibility checks.
+- A detailed error message must be generated, outlining the specific reasons for the incompatibility.
+- The rejection process should be completed within 2 seconds to minimize disruption during the upgrade attempt.
+
+Test Outline:
+- Test the upgrade process with various dataset instances to confirm that incompatible upgrades are correctly identified and rejected.
+- Verify that the error messages generated during the rejection process accurately reflect the reasons for incompatibility.
+- Measure the time taken for the rejection process to ensure it meets the 2-second requirement.","it (ISO 29148)
+that (ISO 29148)",4,4,0.0,3,4,1.0,3,4,1.0,2,5,3.0,3,5,2.0,2,5,3.0,3,4,1.0,—
+US037,"As a dataset developer, I want to have the option of implementing a migration procedure that can be run after an upgrade of a dataset instance to a new version of it type.","User Story:
+As a dataset developer, I want to implement a migration procedure that can be executed post-upgrade of a dataset instance to a new version of its type, ensuring seamless transitions and data integrity.
+
+Acceptance Criteria:
+- The migration procedure must be configurable and able to run automatically after a dataset instance upgrade.
+- Documented success criteria must be established, ensuring that at least 95% of dataset instances migrate without errors.
+- The migration process should complete within a maximum of 10 minutes for datasets of up to 1 million records.
+
+Test Outline:
+- Verify that the migration procedure can be triggered automatically after an upgrade and check for successful execution logs.
+- Monitor the migration process to ensure that at least 95% of instances complete without any errors.
+- Measure the time taken for the migration process to confirm it does not exceed the 10-minute threshold for datasets of the specified size.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,3,4,1.0,2,5,3.0,3,5,2.0,2,5,3.0,3,4,1.0,—
+US038,"As a developer, I want to take a dataset offline, so that I can perform a long-running maintenance or migration procedure.","User Story:
+As a developer, I want to temporarily take a dataset offline so that I can execute extensive maintenance or migration tasks without impacting system performance or user access.
+
+Acceptance Criteria:
+- Successfully initiate the offline process for the dataset, ensuring no active connections remain within 2 minutes.
+- Complete the maintenance or migration procedure within a maximum timeframe of 4 hours.
+- Confirm that the dataset is restored and fully operational, with all data integrity checks passed, within 30 minutes after the maintenance is completed.
+
+Test Outline:
+- Monitor the system to verify that all connections to the dataset are terminated within the specified time frame.
+- Track the duration of the maintenance or migration process to ensure it does not exceed the 4-hour limit.
+- Conduct data integrity checks post-restoration to confirm that the dataset is functioning correctly and all data is intact.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,5,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US039,"As a dataset developer, I want to implement custom administrative operations such as ""compaction"" or ""rebalance"" that are no common to all dataset types.","User Story:
+As a dataset developer, I want to create and execute specialized administrative operations, such as ""compaction"" and ""rebalance,"" that cater to the unique requirements of different dataset types, ensuring optimal performance and resource utilization.
+
+Acceptance Criteria:
+- Implement the ""compaction"" operation that reduces storage usage by at least 30% for applicable dataset types.
+- Develop the ""rebalance"" operation to evenly distribute data across nodes, achieving a maximum variance of 10% in data distribution.
+- Ensure that both operations can be executed without downtime, maintaining system availability at 99.9%.
+
+Test Outline:
+- Measure the storage usage before and after the ""compaction"" operation to confirm a reduction of at least 30%.
+- Analyze data distribution before and after the ""rebalance"" operation to verify that the variance does not exceed 10%.
+- Monitor system uptime during the execution of both operations to ensure it remains at or above 99.9%.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,3,4,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US040,"As an app developer, I want to perform custom administrative operations on dataset instances from my app and the CLI and REST or the UI.","User Story:
+As an app developer, I want to execute tailored administrative operations on dataset instances through my application, the command-line interface (CLI), REST API, or the user interface (UI) so that I can efficiently manage data and enhance application functionality.
+
+Acceptance Criteria:
+- Enable the execution of at least 5 distinct administrative operations on dataset instances via the app, CLI, REST API, and UI.
+- Ensure that each operation can be completed with a success rate of 95% or higher across all interfaces.
+- Provide comprehensive documentation for each operation, detailing usage examples and expected outcomes.
+
+Test Outline:
+- Test each administrative operation across all platforms (app, CLI, REST, UI) to confirm functionality and success rates.
+- Review the documentation for clarity and completeness, ensuring it covers all operations and includes examples.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,4,2.0,2,4,2.0,2,4,2.0,2,5,3.0,4,5,1.0,2,5,3.0,2,4,2.0,—
+US041,"As a user, I want to find out what properties are supported by the dataset type what values are allowed and what the defaults are when creating a dataset instance.","User Story:
+As a user, I want to identify the supported properties of a specific dataset type, including the permissible values and default settings, so that I can accurately create a dataset instance tailored to my analysis needs.
+
+Acceptance Criteria:
+- Provide a comprehensive list of all properties supported by the dataset type, including at least 10 distinct properties.
+- Clearly outline the allowed values for each property, ensuring that there are no more than 5 options per property.
+- Specify the default values for each property when a new dataset instance is created, with at least 80% of properties having defined defaults.
+
+Test Outline:
+- Review the documentation or API response to confirm that all properties and their allowed values are accurately listed.
+- Validate that the default values are correctly applied when creating a new dataset instance through a test case.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",3,4,1.0,3,4,1.0,3,5,2.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US042,"As a user, I want to specify the schema of a dataset in a uniform way across all dataset types.","User Story:
+As a user, I want to define the schema of a dataset consistently across all dataset types so that I can ensure uniformity and reduce errors in data handling and processing.
+
+Acceptance Criteria:
+- Provide a standardized schema definition format that can be applied to at least 90% of dataset types.
+- Ensure that the schema validation process can identify and flag inconsistencies in less than 2 seconds.
+- Allow users to preview the schema structure before finalizing it, with a success rate of 95% for correct schema application.
+
+Test Outline:
+- Test the schema definition format against various dataset types to confirm it meets the uniformity requirement.
+- Measure the time taken for schema validation to ensure it is within the specified limit.
+- Conduct user testing to verify that the schema preview feature accurately reflects the intended structure and is successfully applied.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)
+less (NASA ARM)",4,4,0.0,3,4,1.0,3,5,2.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US043,"As a user, I want to specify schema as a JSON string.","User Story:
+As a user, I want to define the schema using a JSON string format so that I can easily customize and validate the data structure according to my specific requirements.
+
+Acceptance Criteria:
+- The system must accept a JSON string input for schema definition without errors.
+- The provided JSON schema should be validated against predefined rules, ensuring it meets the required structure.
+- Users should receive a confirmation message indicating successful schema specification within 2 seconds of submission.
+
+Test Outline:
+- Submit a valid JSON string and verify that the system accepts it without any validation errors.
+- Test various JSON schemas to ensure they are validated correctly against the rules.
+- Measure the response time for confirmation messages to ensure it meets the 2-second requirement.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,3,5,2.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US044,"As a user, I want to specify schema as a SQL schema string.","User Story:
+As a user, I want to define the database schema using a SQL schema string format so that I can easily create and manage database structures in a standardized way.
+
+Acceptance Criteria:
+- The system must accept a valid SQL schema string and parse it without errors.
+- The defined schema should be stored in the database and retrievable for future modifications.
+- Users should receive confirmation of successful schema creation or an error message detailing any issues with the provided SQL string.
+
+Test Outline:
+- Input a variety of valid SQL schema strings and verify that they are accepted and parsed correctly.
+- Check the database to ensure that the schema is stored accurately and can be retrieved.
+- Test invalid SQL schema strings to confirm that appropriate error messages are generated.","it (ISO 29148)
+that (ISO 29148)
+appropriate (ISO 29148)
+can (NASA ARM)",3,4,1.0,2,4,2.0,2,5,3.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US045,"As a user, I want to configure time-to-live in a uniform way across all dataset types.","User Story:
+As a user, I want to establish a consistent time-to-live (TTL) configuration across all dataset types so that I can manage data retention policies uniformly, ensuring clarity and reducing the risk of errors.
+
+Acceptance Criteria:
+- Implement a standardized TTL setting that can be applied to all dataset types without discrepancies.
+- Ensure that users can view and modify the TTL settings for each dataset type through a single interface.
+- Validate that changes to the TTL settings are reflected across all relevant datasets within 5 minutes of configuration.
+
+Test Outline:
+- Test the application of the TTL setting to various dataset types to confirm uniformity in configuration.
+- Check the user interface to ensure that all dataset types display the TTL settings correctly and allow for modifications.
+- Monitor the system to verify that updates to the TTL settings propagate to all datasets within the specified time frame.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US046,"As a user, I want to see the properties that were used to configure a dataset instance.","User Story:
+As a user, I want to view the configuration properties of a dataset instance so that I can understand its setup and make informed decisions based on its parameters.
+
+Acceptance Criteria:
+- Display a comprehensive list of all properties used to configure the dataset instance, including data types and values.
+- Ensure that the properties are accessible within 3 clicks from the main interface.
+- Provide a search functionality to filter properties by name or value for quick reference.
+
+Test Outline:
+- Navigate through the interface to confirm that the properties list is visible and complete within the specified number of clicks.
+- Test the search functionality to ensure it accurately filters properties based on user input.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,3,5,2.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US047,"As a user, I want to find out what properties of a dataset can be updated.","User Story:
+As a user, I want to identify which properties of a dataset are eligible for updates so that I can ensure data accuracy and maintain the integrity of my analyses.
+
+Acceptance Criteria:
+- Provide a comprehensive list of all dataset properties that can be modified.
+- Ensure that the update eligibility is clearly documented for at least 90% of the dataset properties.
+- Allow users to filter properties based on their update status (modifiable vs. non-modifiable).
+
+Test Outline:
+- Review the documentation to confirm that it includes a complete list of updateable properties.
+- Conduct a sample check to verify that at least 90% of properties have clear update eligibility information.
+- Test the filtering functionality to ensure users can easily distinguish between modifiable and non-modifiable properties.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,2,4,2.0,2,5,3.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US048,"As a user, I want to update the properties of a dataset instance and I expect this to fail if the new properties are not compatible with a meaningful error message.","User Story:
+As a user, I want to modify the properties of a dataset instance so that I receive a clear and informative error message if the new properties are incompatible, ensuring I can make necessary adjustments.
+
+Acceptance Criteria:
+- Attempting to update the dataset properties must trigger a validation check for compatibility.
+- If the properties are incompatible, an error message must be displayed that clearly explains the reason for the failure.
+- The error message should include specific details about which properties caused the incompatibility, allowing for easy correction.
+
+Test Outline:
+- Execute an update on the dataset instance with incompatible properties and verify that the validation check is performed.
+- Confirm that the error message is displayed and contains clear, actionable information regarding the incompatibility.
+- Test various incompatible scenarios to ensure the error messaging is consistent and informative across different cases.","easy (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US049,"As a user, I want to update a single property of a dataset instance without knowing all other properties.","User Story:
+As a user, I want to modify a specific property of a dataset instance without needing to provide values for all other properties, so that I can efficiently manage data updates without unnecessary complexity.
+
+Acceptance Criteria:
+- The system must allow updates to a single property while retaining the existing values of all other properties.
+- The update operation should complete successfully within 2 seconds for a dataset instance with up to 100 properties.
+- The user should receive a confirmation message indicating the successful update of the specified property.
+
+Test Outline:
+- Attempt to update a single property of a dataset instance and verify that the other properties remain unchanged.
+- Measure the time taken for the update operation to ensure it meets the 2-second requirement.
+- Check that the confirmation message is displayed to the user after the update is completed.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,5,1.0,4,4,0.0,4,5,1.0,4,5,1.0,4,5,1.0,3,5,2.0,4,5,1.0,—
+US050,"As a user, I want to remove a single property of a dataset instance without knowing all other properties.","User Story:
+As a user, I want to delete a specific property from a dataset instance without needing to be aware of the other properties present, so that I can efficiently manage data without unnecessary complexity.
+
+Acceptance Criteria:
+- Provide a user interface that allows the selection of a single property for removal from the dataset instance.
+- Ensure that the removal action can be executed successfully without requiring the user to input or view other properties.
+- Confirm that the dataset instance reflects the change accurately, with the specified property removed.
+
+Test Outline:
+- Test the user interface to verify that it allows for the selection and removal of a single property.
+- Execute the removal action and check that no other properties are affected in the dataset instance.
+- Validate that the dataset instance is updated correctly by retrieving it post-removal and confirming the specified property is no longer present.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,5,1.0,3,4,1.0,3,5,2.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US051,"As a user, I want to trigger a migration process for a dataset if updating its properties requires that.","User Story:
+As a user, I want to initiate a dataset migration process when updating its properties necessitates it, ensuring that the data remains consistent and accessible throughout the update.
+
+Acceptance Criteria:
+- The system must identify and flag datasets that require migration based on property updates.
+- Users should be able to trigger the migration process with a single action, such as a button click.
+- The migration process must complete successfully, with a confirmation message provided to the user within 10 minutes of initiation.
+
+Test Outline:
+- Test the system's ability to detect property updates that require migration and verify the flagging mechanism.
+- Simulate the user action to trigger the migration and confirm that it initiates correctly.
+- Monitor the migration process to ensure it completes within the specified time frame and check for the confirmation message.","it (ISO 29148)
+that (ISO 29148)
+be able to (NASA ARM)",4,4,0.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US052,"As a user, I want to ensure that if reconfiguration of a dataset fails then no changes have taken effect, so that all steps required to reconfigure a dataset must be done as a single atomic action.","User Story:
+As a user, I want to guarantee that if the reconfiguration of a dataset encounters an error, then no modifications are applied, ensuring that all reconfiguration steps are executed as a single atomic transaction.
+
+Acceptance Criteria:
+- Confirm that if any step in the dataset reconfiguration fails, all previous changes are rolled back, maintaining the original dataset state.
+- Validate that the system logs an error message detailing the failure reason for transparency.
+- Ensure that the user receives a notification indicating the reconfiguration status, whether successful or failed.
+
+Test Outline:
+- Simulate a failure during the reconfiguration process and verify that no changes are reflected in the dataset.
+- Check the system logs to ensure the error message is recorded accurately.
+- Test the user notification system to confirm that users are informed of the reconfiguration outcome.","that (ISO 29148)
+all (ISO 29148)",4,4,0.0,2,4,2.0,4,4,0.0,4,5,1.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US053,"As an app developer, I want to ensure that application creation fails if any of its datasets cannot be created.","User Story:
+As an app developer, I want to implement a validation mechanism that prevents the application from being created if any associated datasets fail to initialize, ensuring data integrity and application reliability.
+
+Acceptance Criteria:
+- The application creation process must validate all datasets, and if any dataset fails to create, the application creation must be aborted.
+- An error message must be generated that clearly indicates which dataset(s) failed to create, providing actionable feedback to the developer.
+- The system should log all dataset creation failures for auditing and troubleshooting purposes.
+
+Test Outline:
+- Attempt to create an application with a mix of valid and invalid datasets and verify that the creation process fails as expected.
+- Check that the appropriate error message is displayed, detailing the specific dataset(s) that caused the failure.
+- Review the system logs to confirm that all dataset creation failures are accurately recorded.","that (ISO 29148)
+appropriate (ISO 29148)
+all (ISO 29148)",3,4,1.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US054,"As an app developer, I want to ensure that application redeployment fails if any of its datasets cannot be reconfigured.","User Story:
+As an app developer, I want to implement a safeguard that prevents application redeployment if any datasets fail to reconfigure, ensuring system integrity and reliability.
+
+Acceptance Criteria:
+- The redeployment process must automatically halt if any dataset reconfiguration encounters an error.
+- An error log should be generated detailing which datasets failed to reconfigure, with timestamps for tracking.
+- A notification must be sent to the development team within 2 minutes of the redeployment failure to facilitate prompt resolution.
+
+Test Outline:
+- Simulate a redeployment with a known dataset configuration error and verify that the process fails as expected.
+- Check the error log to confirm that it accurately reflects the failed datasets and includes the correct timestamps.
+- Monitor for the notification to the development team and ensure it is received within the specified time frame.","it (ISO 29148)
+that (ISO 29148)",3,4,1.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US055,"As an app developer, I want to tolerate existing datasets if their properties are different but compatible when creating a dataset as part of app deployment.","User Story:
+As an app developer, I want to ensure that the application can accommodate existing datasets with varying properties, provided they are compatible, during the dataset creation process as part of the app deployment. This will enhance flexibility and reduce deployment issues.
+
+Acceptance Criteria:
+- The application must successfully identify and accept datasets with at least 80% property compatibility.
+- Documented guidelines must be provided for developers outlining the acceptable property variations for dataset compatibility.
+- A validation report should be generated post-deployment, confirming that all datasets meet the compatibility criteria.
+
+Test Outline:
+- Test the application with multiple datasets that have varying properties to confirm successful acceptance based on compatibility.
+- Review the documentation to ensure it clearly defines the property variations allowed for compatibility.
+- Generate and analyze the validation report to verify that it accurately reflects the compatibility status of all datasets used.","it (ISO 29148)
+this (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US056,"As a pipeline designer, I want to get a meaningful error message when pipeline creation fails when I use an existing dataset as a sink or source, so that I know that the schema or any other property of the dataset is incompatible with what the pipeline requires.","User Story:
+As a pipeline designer, I want to receive a clear and informative error message when the creation of a pipeline fails due to the use of an existing dataset as a source or sink, so that I can quickly identify and resolve any schema or property incompatibilities that prevent successful pipeline execution.
+
+Acceptance Criteria:
+- An error message must be generated that specifies the exact reason for the failure, including details about the incompatible schema or properties.
+- The error message should be displayed within 2 seconds of the pipeline creation attempt.
+- The system must log the error details for further analysis and troubleshooting.
+
+Test Outline:
+- Attempt to create a pipeline using an existing dataset with known incompatibilities and verify that the appropriate error message is displayed.
+- Measure the time taken for the error message to appear after the creation attempt to ensure it meets the 2-second requirement.
+- Check the system logs to confirm that the error details are recorded accurately for future reference.","it (ISO 29148)
+that (ISO 29148)
+appropriate (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US057,"As a user, I want to specify as part of dataset configuration whether it is explorable.","User Story:
+As a user, I want to define whether a dataset is explorable during the configuration process so that I can control the accessibility and interactivity of the data for better analysis and insights.
+
+Acceptance Criteria:
+- Provide an option in the dataset configuration to mark it as explorable or non-explorable.
+- Ensure that the explorable status is saved and reflected in the dataset settings upon configuration completion.
+- Validate that users can filter and view datasets based on their explorable status in the data management interface.
+
+Test Outline:
+- Check the dataset configuration interface to confirm the presence of the explorable option.
+- Review the dataset settings after configuration to ensure the explorable status is accurately saved.
+- Test the filtering functionality in the data management interface to verify that datasets can be sorted by their explorable status.","it (ISO 29148)
+that (ISO 29148)
+better (ISO 29148)
+can (NASA ARM)
+better (NASA ARM)",4,4,0.0,3,4,1.0,3,5,2.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US058,"As a user, I want to specify the explore schema separately.","User Story:
+As a user, I want the ability to define the explore schema independently so that I can customize my data exploration experience according to specific requirements and preferences.
+
+Acceptance Criteria:
+- Provide an interface that allows users to create and modify the explore schema with at least 5 customizable fields.
+- Ensure that changes to the explore schema are saved and can be retrieved within 10 seconds.
+- Allow users to preview the effects of schema changes in real-time before finalizing their selections.
+
+Test Outline:
+- Test the interface to confirm that users can successfully create and modify the explore schema with the specified fields.
+- Measure the time taken to save and retrieve the explore schema to ensure it meets the 10-second requirement.
+- Validate that the preview feature accurately reflects the changes made to the schema in real-time.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,4,1.0,2,4,2.0,2,5,3.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US059,"As a user, I want to ensure that dataset creation fails if the dataset cannot be enabled for explore.","User Story:
+As a user, I want to guarantee that the creation of a dataset is unsuccessful if it cannot be enabled for exploration, ensuring data integrity and usability.
+
+Acceptance Criteria:
+- The dataset creation process must validate that the dataset can be enabled for exploration before completion.
+- If the dataset cannot be enabled, an error message must be displayed, clearly indicating the reason for the failure.
+- The dataset creation attempt should log the failure event for auditing purposes.
+
+Test Outline:
+- Attempt to create a dataset that does not meet the exploration criteria and verify that the creation fails.
+- Check that the appropriate error message is displayed to the user when the dataset creation fails.
+- Review the logs to confirm that the failure event is recorded with relevant details.","it (ISO 29148)
+that (ISO 29148)
+appropriate (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US060,"As a user, I want to ensure that dataset reconfiguration fails if the corresponding update of the explore table fails.","User Story:
+As a user, I want to guarantee that the reconfiguration of a dataset is aborted if the associated update to the explore table encounters an error, ensuring data integrity and preventing inconsistencies.
+
+Acceptance Criteria:
+- The dataset reconfiguration process must automatically fail if the explore table update does not complete successfully.
+- An error message should be generated and displayed to the user, indicating the reason for the failure.
+- The system must log the failure event for auditing and troubleshooting purposes.
+
+Test Outline:
+- Simulate a failure in the explore table update and verify that the dataset reconfiguration process is halted.
+- Check that the appropriate error message is presented to the user upon failure.
+- Review the system logs to confirm that the failure event has been recorded accurately.","that (ISO 29148)
+appropriate (ISO 29148)",4,4,0.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US061,"As a user, I want to ensure that a dataset operation fails if it fails to make its required changes to explore.","User Story:
+As a user, I want to guarantee that any dataset operation is marked as failed if it does not successfully implement the necessary changes to the exploration process, ensuring data integrity and reliability.
+
+Acceptance Criteria:
+- The system must return a failure status for any dataset operation that does not achieve the required modifications.
+- An error message should be generated that clearly outlines the reason for the failure, providing actionable feedback.
+- The operation log must record all failed attempts, including timestamps and specific error details for future reference.
+
+Test Outline:
+- Execute a dataset operation that intentionally fails and verify that the system correctly identifies and reports the failure.
+- Check that the error message generated is clear and informative, detailing the nature of the failure.
+- Review the operation log to ensure that the failed attempt is recorded with the appropriate details.","it (ISO 29148)
+that (ISO 29148)
+appropriate (ISO 29148)
+all (ISO 29148)",4,4,0.0,3,4,1.0,3,4,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US062,"As a user, I want to ensure that an update of explore never leads to silent loss of data or data available for explore.","User Story:
+As a user, I want to guarantee that any updates to the explore feature do not result in unnoticed data loss or unavailability of data for exploration, ensuring data integrity and reliability.
+
+Acceptance Criteria:
+- Implement a validation process that checks for data integrity before and after each update, ensuring no data is lost.
+- Establish a monitoring system that alerts users within 1 hour if any data becomes unavailable post-update.
+- Conduct user acceptance testing (UAT) with at least 10 users to confirm that no data loss occurs during the update process.
+
+Test Outline:
+- Review logs and reports to verify that the validation process successfully identifies any discrepancies in data before and after updates.
+- Monitor the alert system to ensure it triggers notifications within the specified time frame if data becomes unavailable.
+- Gather feedback from UAT participants to confirm their experience of data availability and integrity during the update.","it (ISO 29148)
+that (ISO 29148)",3,4,1.0,2,5,3.0,2,4,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US063,"As a user, I want to enable explore for a dataset that was not configured for explore initially.","User Story:
+As a user, I want to activate the exploration feature for a dataset that was not originally set up for exploration so that I can analyze the data more effectively and derive actionable insights.
+
+Acceptance Criteria:
+- Successfully enable the exploration feature for the specified dataset within 10 minutes of the request.
+- Ensure that the dataset is fully accessible for exploration, allowing for at least 5 different analytical queries to be executed without errors.
+- Confirm that the exploration feature provides visualizations and insights that meet user requirements, with at least 80% user satisfaction based on feedback.
+
+Test Outline:
+- Track the time taken to enable the exploration feature and verify it is within the 10-minute timeframe.
+- Execute multiple analytical queries on the dataset to ensure functionality and error-free performance.
+- Collect user feedback on the exploration feature's effectiveness and satisfaction level to assess if it meets the 80% threshold.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",4,4,0.0,3,5,2.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US064,"As a user, I want to disable explore for a dataset that was configured for explore initially.","User Story:
+As a user, I want the ability to disable the exploration feature for a dataset that was originally set up for exploration, so that I can control access and prevent unnecessary data analysis when it is no longer needed.
+
+Acceptance Criteria:
+- Provide a clear option to disable the explore feature for the specified dataset within the user interface.
+- Ensure that the change is reflected in the dataset settings and is saved successfully.
+- Confirm that users can no longer access the explore functionality for the dataset after it has been disabled.
+
+Test Outline:
+- Verify that the option to disable the explore feature is available and functional in the dataset settings.
+- Check that the setting is saved correctly and persists after refreshing the page or logging out and back in.
+- Attempt to access the explore feature for the dataset after disabling it to ensure it is no longer available.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
