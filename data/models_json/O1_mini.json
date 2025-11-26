@@ -1,0 +1,1682 @@
+[
+  {
+    "id": "A1US1O1",
+    "description": "As a passenger, I want the AV to detect hazards in real-time using AI sensors, so that my safety is ensured."
+  },
+  {
+    "id": "A1US2O1",
+    "description": "As a fleet manager, I want to monitor AV performance data via IoT, so that I can proactively manage maintenance."
+  },
+  {
+    "id": "A1US3O1",
+    "description": "As a driver, I want the AV to predict and prevent collisions using AI, so that accidents are significantly reduced."
+  },
+  {
+    "id": "A1US4O1",
+    "description": "As a transportation executive, I want the AV to optimize fuel consumption with AI, so that operational costs are minimized."
+  },
+  {
+    "id": "A1US5O1",
+    "description": "As a passenger, I want the AV to navigate autonomously through traffic using AI and IoT, so that my travel is seamless and stress-free."
+  },
+  {
+    "id": "A1US6O1",
+    "description": "As a commuter, I want the AV to handle driving tasks autonomously, so that I can use my travel time productively."
+  },
+  {
+    "id": "A1US7O1",
+    "description": "As an environmental advocate, I want the AV to reduce emissions through AI-optimized routes, so that it contributes to a cleaner environment."
+  },
+  {
+    "id": "A1US8O1",
+    "description": "As a software engineer, I want the AV to efficiently process large-scale sensor data using AI and IoT, so that it makes informed decisions quickly."
+  },
+  {
+    "id": "A1US9O1",
+    "description": "As a business strategist, I want to leverage AI and IoT in AVs to explore new market opportunities, so that the company can expand its revenue streams."
+  },
+  {
+    "id": "A1US10O1",
+    "description": "As a network administrator, I want the AV to maintain low-latency connectivity through IoT, so that it can communicate effectively for safe operations."
+  },
+  {
+    "id": "A2US1O1",
+    "description": "As a parent, I want to receive real-time alerts when my child shows aggressive behavior, so I can intervene immediately."
+  },
+  {
+    "id": "A2US2O1",
+    "description": "As a teacher, I want daily reports on students' aggression levels from wearable sensors, so I can implement effective classroom strategies."
+  },
+  {
+    "id": "A2US3O1",
+    "description": "As a clinician, I want access to detailed logs of a child's aggressive incidents, so I can create personalized intervention plans."
+  },
+  {
+    "id": "A2US4O1",
+    "description": "As a researcher, I want to analyze aggregated sensor data from multiple participants, so I can study the triggers of aggression in children."
+  },
+  {
+    "id": "A2US5O1",
+    "description": "As a school administrator, I want to monitor overall aggression data across the school, so I can develop policies to enhance safety."
+  },
+  {
+    "id": "A2US6O1",
+    "description": "As a child with ADHD, I want to wear a comfortable activity monitor, so my behavior is tracked without feeling uncomfortable."
+  },
+  {
+    "id": "A2US7O1",
+    "description": "As a data scientist, I want the machine learning model to accurately distinguish between aggressive and non-aggressive activities, so the system reliably identifies true aggression incidents."
+  },
+  {
+    "id": "A2US8O1",
+    "description": "As a guardian, I want to view trends of my child's aggression incidents over time, so I can understand and support their behavioral development."
+  },
+  {
+    "id": "A2US9O1",
+    "description": "As a privacy officer, I want all sensor data to be securely stored and access-controlled, so children's privacy is protected."
+  },
+  {
+    "id": "A2US10O1",
+    "description": "As a software developer, I want to integrate sensor data with existing health management systems, so comprehensive support services can be provided seamlessly"
+  },
+  {
+    "id": "A3US1O1",
+    "description": "As a social media moderator, I want real-time alerts of aggressive tweets, so I can promptly address and remove harmful content."
+  },
+  {
+    "id": "A3US2O1",
+    "description": "As a platform administrator, I want the aggression detection system to scale efficiently with Twitter’s data volume, so it can handle up to 778 million tweets daily using minimal resources."
+  },
+  {
+    "id": "A3US3O1",
+    "description": "As a data scientist, I want the machine learning classifiers to adapt incrementally with new data, so the detection accuracy remains high as aggressive behavior evolves."
+  },
+  {
+    "id": "A3US4O1",
+    "description": "As a researcher, I want to analyze detected aggression, sarcasm, racism, and sexism in real-time, so I can study trends and patterns in online behavior."
+  },
+  {
+    "id": "A3US5O1",
+    "description": "As a user, I want aggressive content to be minimized on my Twitter feed, so my online experience is safer and more positive."
+  },
+  {
+    "id": "A3US6O1",
+    "description": "As a compliance officer, I want detailed reports on detected aggressive behavior, so I can ensure the platform adheres to community guidelines and regulations."
+  },
+  {
+    "id": "A3US7O1",
+    "description": "As a developer, I want the framework to integrate seamlessly with existing Twitter infrastructure, so deployment is efficient and does not disrupt service."
+  },
+  {
+    "id": "A3US8O1",
+    "description": "As a content strategist, I want insights from aggression detection to inform policy updates, so the platform can proactively manage evolving online threats."
+  },
+  {
+    "id": "A3US9O1",
+    "description": "As a marketer, I want to ensure that aggressive or harmful content does not appear alongside advertisements, so brand safety is maintained on the platform."
+  },
+  {
+    "id": "A3US10O1",
+    "description": "As a cybersecurity analyst, I want the system to detect and report coordinated aggressive campaigns, so I can mitigate large-scale harassment or abuse efforts effectively."
+  },
+  {
+    "id": "A4US1O1",
+    "description": "As a military commander, I want autonomous drones to conduct reconnaissance missions, so that I can gather real-time intelligence without risking personnel."
+  },
+  {
+    "id": "A4US2O1",
+    "description": "As a drone operator, I want AI-driven drones to adapt to changing battlefield conditions, so that missions remain effective under dynamic scenarios."
+  },
+  {
+    "id": "A4US3O1",
+    "description": "As a GIS specialist, I want drones integrated with GIS systems, so that they can utilize geospatial data for precise navigation and targeting."
+  },
+  {
+    "id": "A4US4O1",
+    "description": "As a cybersecurity analyst, I want AI-powered drones to detect and respond to cyber threats autonomously, so that our defense systems remain secure against digital attacks."
+  },
+  {
+    "id": "A4US5O1",
+    "description": "As a logistics coordinator, I want autonomous drones to manage supply deliveries in combat zones, so that frontline units receive necessary resources promptly."
+  },
+  {
+    "id": "A4US6O1",
+    "description": "As a strategic planner, I want drones equipped with AI to analyze and predict enemy movements, so that I can make informed decisions to counteract threats."
+  },
+  {
+    "id": "A4US7O1",
+    "description": "As a communications officer, I want drones to be integrated with C5ISR systems, so that they can seamlessly share information across all command and control networks."
+  },
+  {
+    "id": "A4US8O1",
+    "description": "As a field commander, I want AI-enabled drones to perform search and rescue operations, so that injured personnel can be located and evacuated swiftly."
+  },
+  {
+    "id": "A4US9O1",
+    "description": "As an interoperability coordinator, I want drones from different allied forces to communicate and operate cohesively, so that joint missions are more efficient and effective."
+  },
+  {
+    "id": "A4US10O1",
+    "description": "As a defense strategist, I want AI-powered drones to learn from each mission, so that their performance improves continuously and adapts to emerging threats."
+  },
+  {
+    "id": "A5US1O1",
+    "description": "As a nurse, I want the GoCart to deliver blood and urine samples to the pathology lab, so I can save time and reduce manual handling of specimens."
+  },
+  {
+    "id": "A5US2O1",
+    "description": "As a dietary staff member, I want the GoCart to transport meals to residents, so I can focus more on meal preparation and patient care."
+  },
+  {
+    "id": "A5US3O1",
+    "description": "As a facility manager, I want to monitor the GoCart’s delivery routes in real-time, so I can ensure efficient operation and address any issues promptly."
+  },
+  {
+    "id": "A5US4O1",
+    "description": "As a laboratory technician, I want the GoCart to notify me upon arrival of samples, so I can process them without delays."
+  },
+  {
+    "id": "A5US5O1",
+    "description": "As a residential care staff member, I want the GoCart to have a user-friendly interface, so I can easily schedule and track meal deliveries."
+  },
+  {
+    "id": "A5US6O1",
+    "description": "As a patient, I want the GoCart to operate safely around me, so I feel secure and comfortable with its presence in the facility."
+  },
+  {
+    "id": "A5US7O1",
+    "description": "As a technician, I want the GoCart to have easy maintenance access, so I can perform repairs and updates without disrupting its functionality."
+  },
+  {
+    "id": "A5US8O1",
+    "description": "As a security officer, I want the GoCart to have secure access controls, so sensitive deliveries are protected from unauthorized access."
+  },
+  {
+    "id": "A5US9O1",
+    "description": "As a manager, I want to receive feedback from staff and patients about the GoCart’s performance, so I can make informed decisions on necessary improvements."
+  },
+  {
+    "id": "A5US10O1",
+    "description": "As an IT specialist, I want the GoCart to integrate seamlessly with our existing hospital information systems, so data flows smoothly and operations are streamlined."
+  },
+  {
+    "id": "A6US1O1",
+    "description": "As a driver, I want the ADAS to adapt to my driving style, so that the system feels more intuitive and personalized to my behavior."
+  },
+  {
+    "id": "A6US2O1",
+    "description": "As a safety engineer, I want the ADAS to accurately predict driver intentions, so that forward collision avoidance measures can be activated proactively."
+  },
+  {
+    "id": "A6US3O1",
+    "description": "As a vehicle manufacturer, I want the ADAS to integrate seamlessly with existing vehicle systems, so that it enhances overall vehicle performance without compatibility issues."
+  },
+  {
+    "id": "A6US4O1",
+    "description": "As a developer, I want to use Gaussian Mixture Models to analyze driving data, so that the ADAS can effectively recognize and adapt to different driving behaviors."
+  },
+  {
+    "id": "A6US5O1",
+    "description": "As a tester, I want to simulate various braking scenarios in a driving simulator, so that I can validate the performance and reliability of the personalized ADAS."
+  },
+  {
+    "id": "A6US6O1",
+    "description": "As a user experience designer, I want the ADAS to provide clear feedback to drivers, so that users understand when and why the system is taking action to avoid collisions."
+  },
+  {
+    "id": "A6US7O1",
+    "description": "As a data analyst, I want to collect and analyze driving behavior data, so that I can continuously improve the accuracy of the ADAS's intention recognition."
+  },
+  {
+    "id": "A6US8O1",
+    "description": "As a regulatory compliance officer, I want the personalized ADAS to meet all safety standards, so that the system is legally approved for use in vehicles."
+  },
+  {
+    "id": "A6US9O1",
+    "description": "As a fleet manager, I want the ADAS to enhance driver safety and reduce collision risks, so that overall fleet performance and safety metrics improve."
+  },
+  {
+    "id": "A6US10O1",
+    "description": "As a driver, I want the ADAS to learn from my braking patterns, so that autonomous emergency braking is more effective and less intrusive during normal driving conditions."
+  },
+  {
+    "id": "A7US1O1",
+    "description": "As an individual, I want to receive early alerts about potential mental health issues, so I can seek timely support and maintain my well-being."
+  },
+  {
+    "id": "A7US2O1",
+    "description": "As a mental health professional, I want access to predictive analytics on patients' mental states, so I can provide proactive and personalized care."
+  },
+  {
+    "id": "A7US3O1",
+    "description": "As a researcher, I want to analyze data from various target groups using machine learning algorithms, so I can identify trends and improve mental health interventions."
+  },
+  {
+    "id": "A7US4O1",
+    "description": "As a school counselor, I want to monitor the mental health of high school students through AI insights, so I can address issues like stress and anxiety early."
+  },
+  {
+    "id": "A7US5O1",
+    "description": "As a company HR manager, I want to utilize AI tools to assess the mental well-being of employees, so I can implement programs to reduce burnout and improve productivity."
+  },
+  {
+    "id": "A7US6O1",
+    "description": "As a developer, I want to integrate multiple machine learning models into the mental health prediction system, so it can accurately identify different mental health conditions."
+  },
+  {
+    "id": "A7US7O1",
+    "description": "As a data analyst, I want to validate cluster labels with Mean Opinion Scores, so I can ensure the accuracy and reliability of the mental health predictions."
+  },
+  {
+    "id": "A7US8O1",
+    "description": "As a college student, I want to use a confidential AI-based tool to assess my mental health, so I can understand and manage my emotional and psychological well-being."
+  },
+  {
+    "id": "A7US9O1",
+    "description": "As a healthcare administrator, I want the AI system to handle real-time data from questionnaires, so it can efficiently monitor and support large populations."
+  },
+  {
+    "id": "A7US10O1",
+    "description": "As a policy maker, I want insights from the AI-driven mental health system, so I can develop informed policies to address mental health challenges in various communities"
+  },
+  {
+    "id": "A8US1O1",
+    "description": "As a healthcare provider, I want the system to automatically detect unusual health metrics from wearable sensors, so I can respond promptly to potential health issues."
+  },
+  {
+    "id": "A8US2O1",
+    "description": "As a patient, I want my wearable device to monitor my vital signs continuously, so I can receive early warnings of any abnormal health conditions."
+  },
+  {
+    "id": "A8US3O1",
+    "description": "As a data analyst, I want to visualize anomaly patterns detected by K-means and K-medoids algorithms, so I can identify trends and improve patient care strategies."
+  },
+  {
+    "id": "A8US4O1",
+    "description": "As a system administrator, I want the anomaly detection system to integrate seamlessly with existing healthcare IT infrastructure, so data flows smoothly and securely."
+  },
+  {
+    "id": "A8US5O1",
+    "description": "As a caregiver in a remote area, I want real-time alerts of patient anomalies, so I can provide timely assistance even when I'm not physically present."
+  },
+  {
+    "id": "A8US6O1",
+    "description": "As a healthcare manager, I want detailed reports on detected anomalies, so I can evaluate the effectiveness of our monitoring services and make informed decisions."
+  },
+  {
+    "id": "A8US7O1",
+    "description": "As a software developer, I want to implement scalable K-means and K-medoids clustering algorithms, so the system can handle increasing amounts of sensor data efficiently."
+  },
+  {
+    "id": "A8US8O1",
+    "description": "As a privacy officer, I want all patient data to be anonymized and securely stored, so patient privacy is maintained while using the anomaly detection system."
+  },
+  {
+    "id": "A8US9O1",
+    "description": "As a researcher, I want to analyze the performance of different clustering algorithms in detecting health anomalies, so I can contribute to improving machine learning models in healthcare."
+  },
+  {
+    "id": "A8US10O1",
+    "description": "As a patient, I want the wearable device to provide feedback on my health status based on detected anomalies, so I can take proactive measures to maintain my well-being."
+  },
+  {
+    "id": "A9US1O1",
+    "description": "As a cardiologist, I want the system to quickly analyze patient data using incremental Fuzzy SVM, so I can receive timely and accurate heart disease diagnoses."
+  },
+  {
+    "id": "A9US2O1",
+    "description": "As a data scientist, I want to apply Principal Component Analysis (PCA) for dimensionality reduction, so the model can process large medical datasets efficiently without losing critical information."
+  },
+  {
+    "id": "A9US3O1",
+    "description": "As a healthcare administrator, I want the diagnostic system to reduce computation time, so that more patients can be evaluated promptly without increasing resource costs."
+  },
+  {
+    "id": "A9US4O1",
+    "description": "As a patient, I want my heart disease diagnosis to be accurate and delivered swiftly, so I can begin appropriate treatment without unnecessary delays."
+  },
+  {
+    "id": "A9US5O1",
+    "description": "As a software developer, I want to implement incremental learning techniques in the Fuzzy SVM model, so the system can continuously improve its accuracy with new data without extensive reprocessing."
+  },
+  {
+    "id": "A9US6O1",
+    "description": "As a medical researcher, I want to utilize both unsupervised and supervised learning techniques, so I can enhance the predictive capabilities and robustness of the heart disease diagnosis model."
+  },
+  {
+    "id": "A9US7O1",
+    "description": "As a clinical decision support specialist, I want the system to handle missing values effectively using imputation techniques, so that incomplete patient data does not compromise diagnosis accuracy."
+  },
+  {
+    "id": "A9US8O1",
+    "description": "As an IT manager in a healthcare facility, I want the heart disease prediction system to integrate seamlessly with existing electronic health records (EHR), so that patient data flows smoothly and securely between systems."
+  },
+  {
+    "id": "A9US9O1",
+    "description": "As a quality assurance officer, I want to validate the model’s performance on real-world datasets like Cleveland and Statlog, so I can ensure its reliability and effectiveness in clinical settings."
+  },
+  {
+    "id": "A9US10O1",
+    "description": "As a medical educator, I want to use the predictive system as a teaching tool, so that students can learn about the application of machine learning techniques in disease diagnosis and understand the trade-offs between computation time and accuracy."
+  },
+  {
+    "id": "A10US1O1",
+    "description": "As a diabetic patient, I want to receive alerts about imminent blood glucose changes, so I can take preventive actions to maintain my health."
+  },
+  {
+    "id": "A10US2O1",
+    "description": "As an endocrinologist, I want access to my patients' predicted blood glucose trends, so I can adjust their treatment plans proactively."
+  },
+  {
+    "id": "A10US3O1",
+    "description": "As a healthcare app developer, I want to integrate the prediction model into mobile applications, so patients can easily monitor their blood glucose levels in real-time."
+  },
+  {
+    "id": "A10US4O1",
+    "description": "As a diabetes researcher, I want to analyze the prediction model’s performance against expert assessments, so I can validate and improve its accuracy."
+  },
+  {
+    "id": "A10US5O1",
+    "description": "As a caregiver, I want to receive notifications when a patient’s blood glucose is predicted to drop, so I can assist them in managing their condition promptly."
+  },
+  {
+    "id": "A10US6O1",
+    "description": "As a data scientist, I want to use patient-specific data to train the Support Vector Regression model, so the predictions are tailored and more accurate for each individual."
+  },
+  {
+    "id": "A10US7O1",
+    "description": "As a patient using a continuous glucose monitor (CGM), I want the prediction model to seamlessly integrate with my device, so I can receive timely warnings without additional steps."
+  },
+  {
+    "id": "A10US8O1",
+    "description": "As a healthcare administrator, I want the prediction system to generate reports on hypoglycemic events, so I can monitor the effectiveness of diabetes management programs."
+  },
+  {
+    "id": "A10US9O1",
+    "description": "As a software engineer, I want to ensure the prediction model has a user-friendly interface, so patients of all technical abilities can easily understand and act on the alerts."
+  },
+  {
+    "id": "A10US10O1",
+    "description": "As a quality assurance specialist, I want to test the precision of the prediction model in various scenarios, so I can minimize false alarms and ensure patient safety."
+  },
+  {
+    "id": "A11US1O1",
+    "description": "As a security engineer, I want to generate accurate printed CDP from digital templates, so that anti-counterfeiting features are reliably produced across various printing devices."
+  },
+  {
+    "id": "A11US2O1",
+    "description": "As a quality assurance specialist, I want the system to support both paired and unpaired training data, so that I can train the digital twin flexibly with available datasets."
+  },
+  {
+    "id": "A11US3O1",
+    "description": "As a machine learning engineer, I want the digital twin to use variational approximations of mutual information, so that the encoder and decoder efficiently exchange information within the model."
+  },
+  {
+    "id": "A11US4O1",
+    "description": "As a product manager, I want the digital twin architecture to be scalable and adaptable to multiple printing and imaging devices, so that it can be deployed in various practical setups without significant modifications."
+  },
+  {
+    "id": "A11US5O1",
+    "description": "As a data scientist, I want the model to extend architectures like pix2pix and CycleGAN for image-to-image translation, so that I can leverage proven techniques while enhancing CDP modeling capabilities."
+  },
+  {
+    "id": "A11US6O1",
+    "description": "As a system architect, I want the digital twin to handle hybrid datasets combining paired and unpaired data, so that the model training process is more robust and inclusive of diverse data sources."
+  },
+  {
+    "id": "A11US7O1",
+    "description": "As a researcher, I want to evaluate the influence of various architectural factors, metrics, and discriminators on system performance, so that I can optimize the digital twin for accurate CDP generation and prediction."
+  },
+  {
+    "id": "A11US8O1",
+    "description": "As an anti-counterfeiting specialist, I want the digital twin to accurately predict printed CDP back to their digital versions, so that I can effectively verify the authenticity of printed materials."
+  },
+  {
+    "id": "A11US9O1",
+    "description": "As a technical lead, I want the system to be compatible with any type of printing and imaging devices, so that the digital twin can be universally applied across different technologies and platforms."
+  },
+  {
+    "id": "A11US10O1",
+    "description": "As a competitive analyst, I want the digital twin to include comparison capabilities with state-of-the-art image-to-image translation methods, so that I can assess its performance against industry standards."
+  },
+  {
+    "id": "A12US1O1",
+    "description": "As a public health official, I want to use the Firearm Violence Vulnerability Index (FVVI) to identify high-risk communities, so that I can target prevention efforts effectively."
+  },
+  {
+    "id": "A12US2O1",
+    "description": "As a data scientist, I want to develop the FVVI using XGBoost with population characteristics, so that the model accurately predicts firearm violence rates in urban census tracts."
+  },
+  {
+    "id": "A12US3O1",
+    "description": "As a policymaker, I want access to the FVVI’s predictions, so that I can allocate resources to areas most vulnerable to firearm violence."
+  },
+  {
+    "id": "A12US4O1",
+    "description": "As a community leader, I want to understand the factors influencing the FVVI, so that I can address underlying social issues contributing to firearm violence."
+  },
+  {
+    "id": "A12US5O1",
+    "description": "As a researcher, I want the FVVI to fill data gaps in firearm assault information, so that I can conduct more comprehensive studies on violence prevention."
+  },
+  {
+    "id": "A12US6O1",
+    "description": "As a public safety analyst, I want the FVVI to forecast shooting incident rates at a granular geographic level, so that I can implement timely interventions."
+  },
+  {
+    "id": "A12US7O1",
+    "description": "As a grant writer, I want to utilize the FVVI’s standardized risk assessments, so that I can secure funding for targeted violence prevention programs."
+  },
+  {
+    "id": "A12US8O1",
+    "description": "As a city planner, I want to integrate FVVI data into urban development plans, so that I can create safer community environments."
+  },
+  {
+    "id": "A12US9O1",
+    "description": "As a law enforcement strategist, I want to leverage the FVVI to identify hotspots for firearm violence, so that I can deploy resources more efficiently."
+  },
+  {
+    "id": "A12US10O1",
+    "description": "As a public health researcher, I want the FVVI to incorporate diverse population characteristics, so that the model remains robust and inclusive across different urban settings."
+  },
+  {
+    "id": "A13US1O1",
+    "description": "As a neurologist, I want to utilize the AI-DrugNet framework to identify repurposed drugs for Alzheimer's disease, so that I can offer new therapeutic options to my patients."
+  },
+  {
+    "id": "A13US2O1",
+    "description": "As a pharmaceutical researcher, I want to leverage the deep learning-based prediction framework, so that I can discover effective drug combinations for treating complex neurological disorders."
+  },
+  {
+    "id": "A13US3O1",
+    "description": "As a data scientist, I want to build and analyze a drug-target pair (DTP) network using multiple drug and target features, so that I can uncover meaningful associations within the AD disease network."
+  },
+  {
+    "id": "A13US4O1",
+    "description": "As a bioinformatician, I want to integrate drug-drug, target-target, and drug-target relationships into the AI-DrugNet model, so that the framework can generate comprehensive features for accurate drug prediction."
+  },
+  {
+    "id": "A13US5O1",
+    "description": "As a clinical trial coordinator, I want to use AI-DrugNet to identify potential repurposed drug therapies, so that I can design and initiate clinical trials more efficiently for Alzheimer's disease."
+  },
+  {
+    "id": "A13US6O1",
+    "description": "As a pharmacologist, I want the prediction framework to generalize to other diseases, so that I can apply the same methodology to discover drug combinations for various complex conditions."
+  },
+  {
+    "id": "A13US7O1",
+    "description": "As a healthcare policymaker, I want to adopt the AI-DrugNet framework for drug repurposing, so that I can support cost-effective and timely therapeutic developments for public health."
+  },
+  {
+    "id": "A13US8O1",
+    "description": "As a machine learning engineer, I want to develop and refine the AI-DrugNet model, so that it exhibits robust predictive performance in identifying effective drug therapies."
+  },
+  {
+    "id": "A13US9O1",
+    "description": "As a medical researcher, I want to explore the associations between drug-target pairs within the AD network, so that I can better understand the mechanisms underlying Alzheimer's disease progression."
+  },
+  {
+    "id": "A13US10O1",
+    "description": "As a biotech entrepreneur, I want to implement the AI-DrugNet framework in my startup, so that I can accelerate the discovery of innovative drug therapies for neurological and developmental disorders."
+  },
+  {
+    "id": "A14US1O1",
+    "description": "As a city planner, I want to use the XGBoost model to predict taxi and Uber ridership across NYC zip codes, so that I can optimize the placement of transportation resources."
+  },
+  {
+    "id": "A14US2O1",
+    "description": "As a transportation analyst, I want to analyze the spatiotemporal distribution of yellow, green, and Uber pickups, so that I can understand usage patterns across different boroughs."
+  },
+  {
+    "id": "A14US3O1",
+    "description": "As a taxi company manager, I want to leverage predictive insights from the XGBoost model, so that I can determine the optimal number of taxis to dispatch to meet demand."
+  },
+  {
+    "id": "A14US4O1",
+    "description": "As a data scientist, I want to implement machine learning algorithms like XGBoost and random forest on the ridership dataset, so that I can accurately forecast transportation trends."
+  },
+  {
+    "id": "A14US5O1",
+    "description": "As a decision-maker, I want access to ridership predictions and trends, so that I can make informed policies to enhance transportation services in NYC."
+  },
+  {
+    "id": "A14US6O1",
+    "description": "As a Uber operations manager, I want to understand the rising trend of Uber pickups in Manhattan and outer boroughs, so that I can strategically expand our services."
+  },
+  {
+    "id": "A14US7O1",
+    "description": "As a public transportation advocate, I want to visualize ridership shifts over time, so that I can advocate for balanced transportation options across all boroughs."
+  },
+  {
+    "id": "A14US8O1",
+    "description": "As a urban economist, I want to study the dominance of yellow taxis in Manhattan and Queens versus green taxis in Brooklyn and the Bronx, so that I can analyze market preferences and economic factors."
+  },
+  {
+    "id": "A14US9O1",
+    "description": "As a software developer, I want to integrate the XGBoost model's predictions into a user-friendly dashboard, so that stakeholders can easily access and interpret the data."
+  },
+  {
+    "id": "A14US10O1",
+    "description": "As a researcher, I want to evaluate the performance of different regression models on the NYC ridership data, so that I can validate the effectiveness of XGBoost in capturing complex feature dependencies."
+  },
+  {
+    "id": "A15US1O1",
+    "description": "As a government policy analyst, I want to use machine learning models to predict individuals' annual incomes based on their lifestyles, so that I can design targeted poverty reduction programs to address economic inequality."
+  },
+  {
+    "id": "A15US2O1",
+    "description": "As a data scientist, I want to apply data mining strategies to analyze income distribution, so that I can identify key factors contributing to the wealth and income gap in the United States."
+  },
+  {
+    "id": "A15US3O1",
+    "description": "As an economist, I want to forecast income trends using machine learning, so that I can assess the effectiveness of policies aimed at reducing economic inequality and poverty."
+  },
+  {
+    "id": "A15US4O1",
+    "description": "As a social worker, I want access to income prediction insights, so that I can better support individuals and families in need by understanding their financial situations and lifestyle factors."
+  },
+  {
+    "id": "A15US5O1",
+    "description": "As a financial planner, I want to leverage income forecasting tools, so that I can provide personalized financial advice to clients based on predicted income levels and lifestyle choices."
+  },
+  {
+    "id": "A15US6O1",
+    "description": "As a policy maker, I want to utilize machine learning forecasts of annual income, so that I can implement informed strategies that promote financial stability and reduce poverty across different demographics."
+  },
+  {
+    "id": "A15US7O1",
+    "description": "As a nonprofit organization leader, I want to analyze income prediction data, so that I can develop programs that effectively target and alleviate economic disparities within communities."
+  },
+  {
+    "id": "A15US8O1",
+    "description": "As a machine learning engineer, I want to develop and refine models that predict annual income based on lifestyle data, so that the predictions are accurate and can inform various socio-economic initiatives."
+  },
+  {
+    "id": "A15US9O1",
+    "description": "As a researcher in economic justice, I want to explore the relationship between lifestyle factors and income levels using data mining techniques, so that I can contribute to understanding and addressing pay uniformity issues."
+  },
+  {
+    "id": "A15US10O1",
+    "description": "As a human resources manager, I want to use income forecasting tools, so that I can ensure equitable salary structures and identify potential areas of financial improvement within the organization."
+  },
+  {
+    "id": "A16US1O1",
+    "description": "As a neonatal clinician, I want to use the NCDS to non-invasively diagnose unhealthy newborns through their cry audio signals, so that I can quickly identify and address health issues."
+  },
+  {
+    "id": "A16US2O1",
+    "description": "As a biomedical engineer, I want to integrate MFCC, AAM, and prosody feature sets into the NCDS, so that the system can accurately analyze different levels of cry audio signals."
+  },
+  {
+    "id": "A16US3O1",
+    "description": "As a machine learning specialist, I want to apply probabilistic neural networks and support vector machines to the NCDS, so that the model can effectively classify healthy and unhealthy newborns."
+  },
+  {
+    "id": "A16US4O1",
+    "description": "As a researcher, I want to include diverse pathologies in the unhealthy newborn group, so that the NCDS can handle real-world diagnostic scenarios."
+  },
+  {
+    "id": "A16US5O1",
+    "description": "As a data scientist, I want to fuse AAM and MFCC feature sets in the NCDS, so that the system achieves an F-measure of over 80% in diagnosing unhealthy newborns."
+  },
+  {
+    "id": "A16US6O1",
+    "description": "As a healthcare provider, I want the NCDS to operate non-invasively, so that newborns are not subjected to uncomfortable or risky diagnostic procedures."
+  },
+  {
+    "id": "A16US7O1",
+    "description": "As a product manager, I want the NCDS to incorporate novel AAM features, so that the system offers innovative diagnostic capabilities not previously available."
+  },
+  {
+    "id": "A16US8O1",
+    "description": "As a quality assurance analyst, I want to validate the NCDS performance using both training and validation datasets, so that I can ensure the system's reliability and accuracy."
+  },
+  {
+    "id": "A16US9O1",
+    "description": "As a parent advocate, I want the NCDS to provide early detection of potential health issues in newborns, so that parents can receive timely interventions and support."
+  },
+  {
+    "id": "A16US10O1",
+    "description": "As a software developer, I want to design the NCDS to handle various feature sets and machine learning models, so that the system remains flexible and scalable for future enhancements."
+  },
+  {
+    "id": "A17US1O1",
+    "description": "As a sleep clinician, I want to use the apnea and hypopnea prediction system, so that I can proactively manage and treat patients with obstructive sleep apnea (OSA)."
+  },
+  {
+    "id": "A17US2O1",
+    "description": "As a biomedical engineer, I want to integrate LAMSTAR artificial neural networks with polysomnography data, so that the prediction system can accurately forecast apnea and hypopnea episodes."
+  },
+  {
+    "id": "A17US3O1",
+    "description": "As a data scientist, I want to apply wavelet transform–based preprocessing to physiological signals, so that I can enhance the accuracy of the neural network predictions."
+  },
+  {
+    "id": "A17US4O1",
+    "description": "As a patient with OSA, I want the prediction system to alert me of upcoming apnea or hypopnea episodes, so that I can take preventive actions to improve my sleep quality."
+  },
+  {
+    "id": "A17US5O1",
+    "description": "As a healthcare administrator, I want to implement the apnea and hypopnea prediction system in our sleep clinics, so that we can enhance patient care and treatment outcomes."
+  },
+  {
+    "id": "A17US6O1",
+    "description": "As a medical researcher, I want to analyze the most important physiological signals for prediction, so that I can better understand the mechanisms underlying apnea and hypopnea events."
+  },
+  {
+    "id": "A17US7O1",
+    "description": "As a software developer, I want to optimize the LAMSTAR neural network for real-time prediction, so that the system can provide timely alerts during both non-REM and REM sleep."
+  },
+  {
+    "id": "A17US8O1",
+    "description": "As a clinical trial coordinator, I want to evaluate the system’s sensitivity and specificity, so that I can validate its effectiveness in predicting apnea and hypopnea episodes."
+  },
+  {
+    "id": "A17US9O1",
+    "description": "As a healthcare provider, I want to access detailed reports on predicted apnea and hypopnea events, so that I can tailor treatment plans to individual patient needs."
+  },
+  {
+    "id": "A17US10O1",
+    "description": "As a quality assurance specialist, I want to monitor the prediction system’s performance metrics, so that I can ensure its reliability and accuracy in clinical settings."
+  },
+  {
+    "id": "A18US1O1",
+    "description": "As a radiologist, I want to use the CNN-based classification system to accurately identify tuberculosis and other diseases from chest radiographs, so that I can provide timely and precise diagnoses to patients."
+  },
+  {
+    "id": "A18US2O1",
+    "description": "As a machine learning engineer, I want to implement transfer learning with pre-trained CNN models on the CheXpert dataset, so that I can efficiently develop a robust disease classification tool without extensive training time."
+  },
+  {
+    "id": "A18US3O1",
+    "description": "As a healthcare administrator, I want to integrate the proposed CNN classification method into our clinical workflow, so that we can enhance early diagnosis and improve patient outcomes for multiple chest diseases."
+  },
+  {
+    "id": "A18US4O1",
+    "description": "As a software developer, I want to utilize TensorFlow to train and validate the CNN models, so that I can ensure the system performs reliably and meets clinical standards."
+  },
+  {
+    "id": "A18US5O1",
+    "description": "As a public health official, I want to deploy the CNN-based TB classification tool in various healthcare settings, so that we can monitor and control the spread of tuberculosis more effectively."
+  },
+  {
+    "id": "A18US6O1",
+    "description": "As a medical researcher, I want to compare the AUC metrics of different pre-trained CNN models, so that I can determine the most effective architecture for disease classification in chest radiographs."
+  },
+  {
+    "id": "A18US7O1",
+    "description": "As a patient, I want to receive quick and accurate diagnoses through automated chest radiograph analysis, so that I can begin appropriate treatment without unnecessary delays."
+  },
+  {
+    "id": "A18US8O1",
+    "description": "As a quality assurance specialist, I want to evaluate the performance of the CNN models in classifying multiple diseases, so that I can ensure the system maintains high accuracy and reliability in a clinical environment."
+  },
+  {
+    "id": "A18US9O1",
+    "description": "As a clinical decision-maker, I want access to a tool that can classify diseases like atelectasis, edema, and tuberculosis with high AUC scores, so that I can make informed treatment decisions based on precise diagnostic information."
+  },
+  {
+    "id": "A18US10O1",
+    "description": "As a product manager, I want to develop and market the CNN-based chest radiograph classification system, so that healthcare providers can adopt an effective early diagnosis tool to improve patient care and streamline clinical processes."
+  },
+  {
+    "id": "A19US1O1",
+    "description": "As a risk manager, I want to utilize the random forest model to predict credit card defaults, so that I can effectively mitigate credit risks for the bank."
+  },
+  {
+    "id": "A19US2O1",
+    "description": "As a data scientist, I want to implement and compare logistic regression, decision tree (rpart), and random forest algorithms, so that I can determine the most accurate method for predicting credit card defaults."
+  },
+  {
+    "id": "A19US3O1",
+    "description": "As a credit analyst, I want access to predictive analytics tools that identify key factors influencing credit defaults, so that I can make informed decisions when granting credit."
+  },
+  {
+    "id": "A19US4O1",
+    "description": "As a software developer, I want to integrate the random forest prediction model into the bank’s existing credit management system, so that real-time credit risk assessments can be performed efficiently."
+  },
+  {
+    "id": "A19US5O1",
+    "description": "As a financial officer, I want to understand the accuracy and Area Under Curve (AUC) metrics of different prediction models, so that I can choose the best model for assessing credit risk."
+  },
+  {
+    "id": "A19US6O1",
+    "description": "As a compliance officer, I want the credit default prediction system to adhere to regulatory standards, so that the bank remains compliant while managing credit risks."
+  },
+  {
+    "id": "A19US7O1",
+    "description": "As a marketing manager, I want insights from the credit default predictions, so that I can tailor credit card offers to low-risk customers and reduce default rates."
+  },
+  {
+    "id": "A19US8O1",
+    "description": "As a business intelligence analyst, I want to visualize the factors contributing to credit card defaults, so that stakeholders can easily interpret and act on the data-driven insights."
+  },
+  {
+    "id": "A19US9O1",
+    "description": "As a customer service manager, I want to use the prediction model’s insights to proactively address potential default risks, so that we can offer support to customers before defaults occur."
+  },
+  {
+    "id": "A19US10O1",
+    "description": "As a product manager, I want to leverage the high accuracy of the random forest model, so that I can develop reliable credit risk assessment tools that enhance the bank’s financial stability."
+  },
+  {
+    "id": "A20US1O1",
+    "description": "As a public health official, I want to use machine learning models to predict individuals at risk of drug abuse based on personality traits and demographics, so that I can implement targeted prevention programs."
+  },
+  {
+    "id": "A20US2O1",
+    "description": "As a data scientist, I want to apply logistic regression, decision tree, and random forest algorithms to drug consumption data, so that I can identify the most accurate model for predicting drug abuse."
+  },
+  {
+    "id": "A20US3O1",
+    "description": "As a social worker, I want access to predictive insights on drug abuse risk factors, so that I can provide better support and intervention strategies to at-risk individuals."
+  },
+  {
+    "id": "A20US4O1",
+    "description": "As a policymaker, I want to understand the impact of sensation seeking and environmental factors on drug abuse, so that I can develop effective policies to mitigate these risks."
+  },
+  {
+    "id": "A20US5O1",
+    "description": "As a healthcare provider, I want to identify patients with high risk of drug abuse using predictive models, so that I can offer timely counseling and treatment options."
+  },
+  {
+    "id": "A20US6O1",
+    "description": "As a researcher, I want to analyze the influence of the Big Five personality traits on drug abuse, so that I can contribute to the academic understanding of addiction behaviors."
+  },
+  {
+    "id": "A20US7O1",
+    "description": "As a machine learning engineer, I want to integrate random forest models into our drug abuse prediction system, so that we can achieve higher accuracy and reliability in our predictions."
+  },
+  {
+    "id": "A20US8O1",
+    "description": "As a nonprofit organization leader, I want to leverage predictive analytics to identify communities vulnerable to drug abuse, so that we can allocate resources effectively for prevention efforts."
+  },
+  {
+    "id": "A20US9O1",
+    "description": "As a mental health counselor, I want to utilize prediction models that consider both personal and environmental factors, so that I can tailor my interventions to address the root causes of drug abuse."
+  },
+  {
+    "id": "A20US10O1",
+    "description": "As a education administrator, I want to understand how demographic information influences drug abuse rates, so that I can develop educational programs that address these specific risk factors."
+  },
+  {
+    "id": "A21US1O1",
+    "description": "As an online marketplace manager, I want to analyze racial and gender biases in worker evaluations on TaskRabbit and Fiverr, so that I can implement policies to promote fair employment practices."
+  },
+  {
+    "id": "A21US2O1",
+    "description": "As a freelancer, I want assurance that my gender and race do not negatively impact my customer reviews and search rankings, so that I have equal opportunities to succeed on the platform."
+  },
+  {
+    "id": "A21US3O1",
+    "description": "As a data scientist, I want to examine the correlation between worker demographics and customer ratings, so that I can identify and address potential biases in the evaluation system."
+  },
+  {
+    "id": "A21US4O1",
+    "description": "As a policy maker, I want to understand the extent of discrimination in online freelancing marketplaces, so that I can develop regulations to ensure equitable treatment of all workers."
+  },
+  {
+    "id": "A21US5O1",
+    "description": "As a diversity and inclusion officer, I want tools to monitor and mitigate bias in worker evaluations, so that the platform fosters an inclusive and fair environment for all users."
+  },
+  {
+    "id": "A21US6O1",
+    "description": "As a customer support manager, I want to train support staff to recognize and address biased customer reviews, so that workers are treated fairly and discrimination is minimized."
+  },
+  {
+    "id": "A21US7O1",
+    "description": "As a user experience designer, I want to redesign search ranking algorithms to reduce bias based on gender and race, so that all workers have an equal chance of being discovered by clients."
+  },
+  {
+    "id": "A21US8O1",
+    "description": "As an anti-discrimination advocate, I want to highlight findings of bias in online freelance marketplaces, so that awareness is raised and corrective actions are encouraged."
+  },
+  {
+    "id": "A21US9O1",
+    "description": "As an academic researcher, I want access to anonymized worker and review data from TaskRabbit and Fiverr, so that I can conduct studies on discrimination in digital economies."
+  },
+  {
+    "id": "A21US10O1",
+    "description": "As an HR manager for a freelancing platform, I want to implement bias detection and correction mechanisms in worker evaluations, so that our platform supports equal opportunity and fairness for all users."
+  },
+  {
+    "id": "A22US1O1",
+    "description": "As a client on an online marketplace, I want a multidimensional assessment framework to evaluate freelancers, so that I can make more informed hiring decisions beyond biased ratings."
+  },
+  {
+    "id": "A22US2O1",
+    "description": "As a freelance worker, I want my past job performances to be considered in my evaluations, so that my true abilities and work quality are accurately reflected to potential clients."
+  },
+  {
+    "id": "A22US3O1",
+    "description": "As a platform manager, I want to implement a comprehensive assessment system, so that the hiring process becomes more efficient and trustworthy for both clients and freelancers."
+  },
+  {
+    "id": "A22US4O1",
+    "description": "As a data scientist, I want to analyze large datasets of job applications and outcomes, so that I can refine the multidimensional assessment framework to better predict freelancer performance."
+  },
+  {
+    "id": "A22US5O1",
+    "description": "As a hiring manager, I want detailed insights into multiple dimensions of a freelancer’s capabilities, so that I can select the most suitable candidate for each specific job requirement."
+  },
+  {
+    "id": "A22US6O1",
+    "description": "As a quality assurance specialist, I want the assessment framework to outperform baseline algorithms, so that I can ensure the platform consistently provides high-quality freelancer evaluations."
+  },
+  {
+    "id": "A22US7O1",
+    "description": "As a freelancer, I want a fair and transparent evaluation system, so that my chances of being hired are based on my actual skills and past performance rather than inflated ratings."
+  },
+  {
+    "id": "A22US8O1",
+    "description": "As a marketing manager for the platform, I want to promote the new assessment framework, so that we can attract both high-quality freelancers and discerning clients seeking reliable hiring tools."
+  },
+  {
+    "id": "A22US9O1",
+    "description": "As a user experience designer, I want to create an intuitive interface for the assessment framework, so that clients can easily understand and utilize the multidimensional evaluations during their hiring process."
+  },
+  {
+    "id": "A22US10O1",
+    "description": "As an academic researcher, I want access to the assessment framework’s evaluation data, so that I can study its effectiveness in improving hiring outcomes in online labor marketplaces."
+  },
+  {
+    "id": "A23US1O1",
+    "description": "As a web user, I want to understand how different search engines prioritize content, so that I can make informed decisions about which results to trust and explore."
+  },
+  {
+    "id": "A23US2O1",
+    "description": "As a transparency advocate, I want to use the PAWS platform to analyze search engine biases, so that I can promote fair and unbiased access to web information."
+  },
+  {
+    "id": "A23US3O1",
+    "description": "As a data scientist, I want to leverage PAWS to measure content emphasis across search engines, so that I can study the correlation between search rankings and content features."
+  },
+  {
+    "id": "A23US4O1",
+    "description": "As a journalist, I want to identify if search engines favor certain news sites or viewpoints, so that I can report on potential biases in information dissemination."
+  },
+  {
+    "id": "A23US5O1",
+    "description": "As a search engine developer, I want to utilize insights from PAWS, so that I can improve our ranking algorithms to ensure balanced and fair search results."
+  },
+  {
+    "id": "A23US6O1",
+    "description": "As a policy maker, I want to understand the influence of search engine rankings on public opinion, so that I can develop regulations that promote transparency and fairness."
+  },
+  {
+    "id": "A23US7O1",
+    "description": "As a marketing analyst, I want to determine if search engines prioritize pages with our advertisements, so that I can optimize our advertising strategies accordingly."
+  },
+  {
+    "id": "A23US8O1",
+    "description": "As an academic researcher, I want to apply PAWS to various search engines, so that I can conduct comprehensive studies on search engine behavior and content emphasis."
+  },
+  {
+    "id": "A23US9O1",
+    "description": "As a competitor in the search engine market, I want to analyze how our ranking algorithms compare to others using PAWS, so that I can identify areas for improvement and differentiation."
+  },
+  {
+    "id": "A23US10O1",
+    "description": "As a privacy-conscious user, I want to be informed when search engines favor certain points of view or advertisements, so that I can seek a more balanced perspective in my searches."
+  },
+  {
+    "id": "A24US1O1",
+    "description": "As a researcher, I want automated extraction of my profile from the Web, so that my academic information is accurately represented in the ArnetMiner system."
+  },
+  {
+    "id": "A24US2O1",
+    "description": "As a digital library manager, I want to integrate publication data into the academic network, so that the system provides a comprehensive view of research outputs."
+  },
+  {
+    "id": "A24US3O1",
+    "description": "As a data scientist, I want a probabilistic framework to resolve name ambiguities, so that researcher profiles are accurately matched to their publications."
+  },
+  {
+    "id": "A24US4O1",
+    "description": "As an academic network modeler, I want to simultaneously model topics, authors, and publication venues, so that the system accurately reflects the relationships within the academic community."
+  },
+  {
+    "id": "A24US5O1",
+    "description": "As a university administrator, I want to access expertise search services, so that I can identify experts within specific research areas for collaboration or consultation."
+  },
+  {
+    "id": "A24US6O1",
+    "description": "As a scholar, I want people association search capabilities, so that I can discover potential collaborators and understand the connections within my field."
+  },
+  {
+    "id": "A24US7O1",
+    "description": "As a system architect, I want a unified tagging approach to extract researcher profiles, so that the system can efficiently handle large-scale data from diverse Web sources."
+  },
+  {
+    "id": "A24US8O1",
+    "description": "As a librarian, I want the ArnetMiner system to integrate seamlessly with existing digital libraries, so that users have unified access to comprehensive academic data."
+  },
+  {
+    "id": "A24US9O1",
+    "description": "As a user experience designer, I want the architecture of the ArnetMiner system to support intuitive search services, so that users can easily navigate and utilize the academic network."
+  },
+  {
+    "id": "A24US10O1",
+    "description": "As a research evaluator, I want empirical evaluations of the system’s methods, so that I can trust the accuracy and reliability of the academic network data provided."
+  },
+  {
+    "id": "A25US1O1",
+    "description": "As a customer, I want personalized product recommendations based on my browsing and purchasing history, so that I can easily find items that match my interests and needs."
+  },
+  {
+    "id": "A25US2O1",
+    "description": "As a data scientist, I want to implement the item-to-item collaborative filtering algorithm, so that I can generate high-quality recommendations that scale efficiently with large datasets."
+  },
+  {
+    "id": "A25US3O1",
+    "description": "As a software engineer, I want the recommendation system to perform real-time computations, so that customers receive up-to-date suggestions instantly as they interact with the website."
+  },
+  {
+    "id": "A25US4O1",
+    "description": "As a product manager, I want to compare different recommendation algorithms, including traditional collaborative filtering and cluster models, so that I can select the most effective approach for our e-commerce platform."
+  },
+  {
+    "id": "A25US5O1",
+    "description": "As a system architect, I want to design a scalable recommendation infrastructure that operates independently of the number of users and items, so that the system remains efficient as our product catalog and user base grow."
+  },
+  {
+    "id": "A25US6O1",
+    "description": "As a marketing specialist, I want to leverage personalized recommendations to increase customer engagement and sales, so that we can enhance the shopping experience and drive revenue growth."
+  },
+  {
+    "id": "A25US7O1",
+    "description": "As an e-commerce manager, I want to analyze the performance of the item-to-item collaborative filtering algorithm, so that I can ensure it consistently delivers relevant and accurate product suggestions to our customers."
+  },
+  {
+    "id": "A25US8O1",
+    "description": "As a UX designer, I want to integrate seamless recommendation features into the online store interface, so that customers can effortlessly discover new products without feeling overwhelmed."
+  },
+  {
+    "id": "A25US9O1",
+    "description": "As a business analyst, I want to track the effectiveness of various recommendation methods, so that I can provide insights into which strategies yield the highest conversion rates and customer satisfaction."
+  },
+  {
+    "id": "A25US10O1",
+    "description": "As a developer, I want to optimize the recommendation algorithm for massive data sets, so that our platform can handle increasing amounts of user interactions and product listings without performance degradation."
+  },
+  {
+    "id": "A26US1O1",
+    "description": "As a e-commerce customer, I want personalized justifications for product recommendations, so that I can understand why certain items match my interests and make informed purchasing decisions."
+  },
+  {
+    "id": "A26US2O1",
+    "description": "As a recommendation system developer, I want to implement extractive methods to identify relevant review segments, so that the system can generate accurate and meaningful justifications for recommendations."
+  },
+  {
+    "id": "A26US3O1",
+    "description": "As a data scientist, I want to construct large-scale personalized recommendation justification datasets, so that I can train models that provide tailored explanations to users."
+  },
+  {
+    "id": "A26US4O1",
+    "description": "As a UX designer, I want recommendation justifications to cover different aspects of products, so that users receive comprehensive and varied explanations that enhance their browsing experience."
+  },
+  {
+    "id": "A26US5O1",
+    "description": "As a product manager, I want to leverage personalized generation models to create diverse justifications, so that our recommendation system stands out by offering convincing and varied explanations to users."
+  },
+  {
+    "id": "A26US6O1",
+    "description": "As a machine learning engineer, I want to develop a reference-based Seq2Seq model with aspect-planning, so that the system can generate justifications that address multiple facets of user preferences."
+  },
+  {
+    "id": "A26US7O1",
+    "description": "As a content strategist, I want aspect-conditional masked language models to generate explanations based on historical justification templates, so that the justifications remain relevant and contextually appropriate for each user."
+  },
+  {
+    "id": "A26US8O1",
+    "description": "As a quality assurance specialist, I want to evaluate the  and diversity of generated justifications, so that I can ensure the explanations effectively support users' decision-making processes."
+  },
+  {
+    "id": "A26US9O1",
+    "description": "As a research scientist, I want to experiment with new datasets and generation methods for recommendation justifications, so that I can advance the field of explainable AI and improve user trust in recommendation systems."
+  },
+  {
+    "id": "A26US10O1",
+    "description": "As an academic researcher, I want to analyze the performance of personalized generation models on real-world datasets, so that I can validate their effectiveness in producing convincing and diverse justifications for recommendations."
+  },
+  {
+    "id": "A27US1O1",
+    "description": "As a recommendation system developer, I want to implement an RNN-based approach for session-based recommendations, so that I can provide more accurate suggestions for users with short interaction histories."
+  },
+  {
+    "id": "A27US2O1",
+    "description": "As a data scientist, I want to apply recurrent neural networks to model entire user sessions, so that I can capture the sequence of user interactions for improved recommendation accuracy."
+  },
+  {
+    "id": "A27US3O1",
+    "description": "As a product manager for an e-commerce platform, I want to leverage session-based RNN recommendations, so that I can enhance user engagement and increase conversion rates on our website."
+  },
+  {
+    "id": "A27US4O1",
+    "description": "As a machine learning engineer, I want to incorporate a ranking loss function into our RNN model, so that the recommendations are better aligned with user preferences and ."
+  },
+  {
+    "id": "A27US5O1",
+    "description": "As a UX designer, I want the recommendation system to provide timely and relevant suggestions based on current session data, so that users have a seamless and satisfying browsing experience."
+  },
+  {
+    "id": "A27US6O1",
+    "description": "As a business analyst, I want to evaluate the performance of RNN-based recommendations against traditional matrix factorization methods, so that I can demonstrate the value of our new approach to stakeholders."
+  },
+  {
+    "id": "A27US7O1",
+    "description": "As a software architect, I want to modify classic RNN architectures to suit session-based recommendation tasks, so that the system remains efficient and scalable for real-time applications."
+  },
+  {
+    "id": "A27US8O1",
+    "description": "As a marketing strategist, I want to use more accurate session-based recommendations, so that I can tailor promotional campaigns to individual user behaviors and preferences."
+  },
+  {
+    "id": "A27US9O1",
+    "description": "As a researcher in recommender systems, I want to explore the effectiveness of RNNs on different datasets, so that I can validate the improvements over widely used traditional approaches."
+  },
+  {
+    "id": "A27US10O1",
+    "description": "As a customer support manager, I want the recommendation system to adapt quickly to short-term user interactions, so that I can ensure users receive relevant assistance and product suggestions during their browsing sessions."
+  },
+  {
+    "id": "A28US1O1",
+    "description": "As a dating app user, I want recommendations based on objective evaluations from speed dating events, so that I can find more compatible and genuine matches beyond self-portrayed profiles."
+  },
+  {
+    "id": "A28US2O1",
+    "description": "As a product manager for a dating platform, I want to integrate speed dating data into our recommender system, so that we can enhance match accuracy and user satisfaction."
+  },
+  {
+    "id": "A28US3O1",
+    "description": "As a data scientist, I want to apply SMOTE oversampling to the speed dating dataset, so that I can address class imbalance and improve the reliability of match predictions."
+  },
+  {
+    "id": "A28US4O1",
+    "description": "As a user experience designer, I want to build an objective profile library from speed dating ratings, so that users receive recommendations based on real-life interactions and evaluations."
+  },
+  {
+    "id": "A28US5O1",
+    "description": "As a machine learning engineer, I want to develop a random forest regression-based reciprocal recommender, so that our system can achieve high match prediction accuracy and outperform existing algorithms."
+  },
+  {
+    "id": "A28US6O1",
+    "description": "As a researcher in online dating behaviors, I want to explore the discrepancy between self-portrayed profiles and objective likeability ratings, so that I can understand factors influencing successful matches."
+  },
+  {
+    "id": "A28US7O1",
+    "description": "As a marketing strategist, I want to highlight the use of objective speed dating data in our recommender system, so that we can attract users seeking more authentic and effective matchmaking solutions."
+  },
+  {
+    "id": "A28US8O1",
+    "description": "As a quality assurance specialist, I want to evaluate the effectiveness of the combined objective profile library and SMOTE oversampling, so that I can ensure our recommender system maintains high performance and accuracy."
+  },
+  {
+    "id": "A28US9O1",
+    "description": "As a software developer, I want to implement the reciprocal recommender algorithm, so that users receive personalized and mutually compatible match suggestions in real-time."
+  },
+  {
+    "id": "A28US10O1",
+    "description": "As an academic collaborator, I want access to the objective profile library and match prediction results, so that I can conduct further studies on improving matchmaking algorithms and understanding relationship dynamics."
+  },
+  {
+    "id": "A29US1O1",
+    "description": "As an economic historian, I want to accurately link historical census records, so that I can study intergenerational mobility and long-term socioeconomic trends."
+  },
+  {
+    "id": "A29US2O1",
+    "description": "As a data scientist, I want to apply machine learning classification and text comparison techniques to record linkage, so that I can minimize false positives and negatives in historical data matching."
+  },
+  {
+    "id": "A29US3O1",
+    "description": "As a genealogist, I want a standardized and transparent census matching technique, so that I can consistently replicate record linkages across various historical datasets."
+  },
+  {
+    "id": "A29US4O1",
+    "description": "As a research librarian, I want guidance on the optimal size of training data for record linkage, so that I can support scholars in constructing unbiased linked datasets."
+  },
+  {
+    "id": "A29US5O1",
+    "description": "As a software developer, I want to implement the described RNN-based approach for session-based recommendations, so that I can provide more accurate suggestions for users with short interaction histories."
+  },
+  {
+    "id": "A29US6O1",
+    "description": "As an archivist, I want to extract subsets of possible matches for each record, so that researchers can efficiently focus on the most relevant links in large historical databases."
+  },
+  {
+    "id": "A29US7O1",
+    "description": "As a policy analyst, I want access to unbiased linked census datasets, so that I can analyze the long-run effects of early life conditions and discrimination on economic outcomes."
+  },
+  {
+    "id": "A29US8O1",
+    "description": "As a machine learning engineer, I want to develop and refine algorithms that mimic well-trained researchers in linking historical records, so that the matching process remains accurate and reliable."
+  },
+  {
+    "id": "A29US9O1",
+    "description": "As an academic researcher, I want to replicate the census matching technique in different historical contexts, so that I can apply it to a variety of studies on assimilation and educational returns."
+  },
+  {
+    "id": "A29US10O1",
+    "description": "As a doctoral student, I want to utilize the described record linkage method in my research, so that I can explore new avenues in economic history using comprehensive and accurately linked data."
+  },
+  {
+    "id": "A30US1O1",
+    "description": "As a law enforcement officer, I want to use machine learning models to predict the likelihood of criminal recidivism, so that I can implement targeted interventions to prevent repeat offenses."
+  },
+  {
+    "id": "A30US2O1",
+    "description": "As a data scientist, I want to develop and refine Decision Tree models using convict data, so that I can accurately identify key factors influencing recidivism rates."
+  },
+  {
+    "id": "A30US3O1",
+    "description": "As a correctional facility administrator, I want to leverage predictive models to assess the risk of inmates committing future crimes, so that I can tailor rehabilitation programs accordingly."
+  },
+  {
+    "id": "A30US4O1",
+    "description": "As a policymaker, I want insights from recidivism prediction models, so that I can formulate effective criminal justice policies aimed at reducing repeat offenses."
+  },
+  {
+    "id": "A30US5O1",
+    "description": "As a criminal justice researcher, I want to analyze the main factors affecting recidivism, so that I can contribute to the development of evidence-based strategies for crime prevention."
+  },
+  {
+    "id": "A30US6O1",
+    "description": "As a blockchain developer, I want to explore the integration of distributed ledger technology in predictive criminology, so that I can enhance the transparency and security of recidivism data."
+  },
+  {
+    "id": "A30US7O1",
+    "description": "As a probation officer, I want access to predictive tools that identify high-risk individuals, so that I can prioritize monitoring and support for those most likely to reoffend."
+  },
+  {
+    "id": "A30US8O1",
+    "description": "As an IT specialist in a penitentiary institution, I want to implement Decision Tree models within our information systems, so that staff can easily access recidivism risk assessments for decision-making support."
+  },
+  {
+    "id": "A30US9O1",
+    "description": "As a public safety advocate, I want to understand the factors that contribute to recidivism, so that I can promote community programs that address these underlying issues."
+  },
+  {
+    "id": "A30US10O1",
+    "description": "As a legal advisor, I want to utilize predictive models to assess the risk of recidivism for clients, so that I can provide informed recommendations during parole hearings and sentencing."
+  },
+  {
+    "id": "A31US1O1",
+    "description": "As a search engine developer, I want to implement advertisement identification algorithms, so that we can deliver cleaner and more relevant search results to users."
+  },
+  {
+    "id": "A31US2O1",
+    "description": "As an internet security specialist, I want to deploy ad detection methods, so that we can protect users from malicious advertisements and enhance overall online safety."
+  },
+  {
+    "id": "A31US3O1",
+    "description": "As a web browser developer, I want to integrate ad identification features, so that users can easily manage and block unwanted advertisements while browsing."
+  },
+  {
+    "id": "A31US4O1",
+    "description": "As an educator, I want to use ad detection tools in my curriculum, so that students can learn about internet safety and the impact of advertisements on web content."
+  },
+  {
+    "id": "A31US5O1",
+    "description": "As a digital marketer, I want to understand how advertisements are identified on web pages, so that I can optimize ad placements and improve campaign effectiveness."
+  },
+  {
+    "id": "A31US6O1",
+    "description": "As a privacy advocate, I want to utilize advertisement identification techniques, so that I can help users reduce unwanted tracking and protect their online privacy."
+  },
+  {
+    "id": "A31US7O1",
+    "description": "As a data scientist, I want to analyze and refine ad prediction approaches, so that I can develop more accurate and efficient methods for identifying advertisements on web pages."
+  },
+  {
+    "id": "A31US8O1",
+    "description": "As a content creator, I want to identify and manage advertisements on my website, so that I can maintain control over my content and revenue streams."
+  },
+  {
+    "id": "A31US9O1",
+    "description": "As a product manager for a security software company, I want to incorporate ad identification features into our products, so that we can offer comprehensive protection against unwanted advertisements and malware."
+  },
+  {
+    "id": "A31US10O1",
+    "description": "As a researcher in web technologies, I want to evaluate the effectiveness of different ad prediction methods, so that I can contribute to the advancement of advertisement filtering systems."
+  },
+  {
+    "id": "A32US1O1",
+    "description": "As an NLP researcher, I want to develop multi-task learning models that integrate sentiment analysis and sarcasm detection, so that I can enhance the accuracy of stance detection in text analysis."
+  },
+  {
+    "id": "A32US2O1",
+    "description": "As a data scientist, I want to implement Parallel Multi-Task Learning (PMTL) and Sequential Multi-Task Learning (SMTL) models, so that I can improve the performance of stance detection algorithms on social media data."
+  },
+  {
+    "id": "A32US3O1",
+    "description": "As a social media analyst, I want automated stance detection tools that account for brevity and informality, so that I can accurately gauge public opinions and attitudes toward specific topics."
+  },
+  {
+    "id": "A32US4O1",
+    "description": "As a product manager for an opinion analysis platform, I want to incorporate Transformer-based architectures with multi-task learning, so that our tool can provide state-of-the-art stance detection capabilities to users."
+  },
+  {
+    "id": "A32US5O1",
+    "description": "As a machine learning engineer, I want to explore and apply different task weighting techniques in multi-task learning models, so that I can optimize the integration of sentiment, stance, and sarcasm detection tasks for better performance."
+  },
+  {
+    "id": "A32US6O1",
+    "description": "As an academic instructor, I want to use the SMTL-HW model as a case study in my Natural Language Processing course, so that students can learn about the advancements in multi-task learning for stance detection."
+  },
+  {
+    "id": "A32US7O1",
+    "description": "As a software developer, I want to implement an accessible architecture for multi-task learning models, so that my team can efficiently deploy stance detection systems in real-world applications."
+  },
+  {
+    "id": "A32US8O1",
+    "description": "As a linguist, I want to analyze the interaction between sentiment, stance, and sarcasm in text, so that I can better understand the nuances of human communication in digital environments."
+  },
+  {
+    "id": "A32US9O1",
+    "description": "As a marketing analyst, I want to leverage enhanced stance detection models, so that I can gain deeper insights into consumer attitudes and tailor marketing strategies accordingly."
+  },
+  {
+    "id": "A32US10O1",
+    "description": "As an AI ethics specialist, I want to evaluate the fairness and bias of multi-task learning models in stance detection, so that I can ensure the ethical deployment of these technologies in diverse linguistic contexts."
+  },
+  {
+    "id": "A33US1O1",
+    "description": "As a journalist, I want semantic annotations of news articles, so that I can easily reference contextual backgrounds and compare current events with past similar occurrences."
+  },
+  {
+    "id": "A33US2O1",
+    "description": "As a news editor, I want a semantic search engine with structured data filters, so that I can efficiently find precise facts and relevant information for writing accurate stories."
+  },
+  {
+    "id": "A33US3O1",
+    "description": "As a software developer, I want to integrate Wikidata-based semantic annotations into our news platform, so that users can experience enhanced search capabilities and richer content interactions."
+  },
+  {
+    "id": "A33US4O1",
+    "description": "As a data analyst at a news agency, I want to utilize structured data search features, so that I can generate insightful reports and identify trends across various event schemas."
+  },
+  {
+    "id": "A33US5O1",
+    "description": "As a researcher, I want to access both keyword-based and structured data searches, so that I can conduct comprehensive studies on the portrayal of different types of events in the media."
+  },
+  {
+    "id": "A33US6O1",
+    "description": "As a news consumer, I want to use a semantic search engine to filter news articles by specific event properties, so that I can quickly find information relevant to my interests and needs."
+  },
+  {
+    "id": "A33US7O1",
+    "description": "As a content manager, I want automated semantic annotations for incoming news articles, so that our team can maintain a well-organized and easily searchable content library."
+  },
+  {
+    "id": "A33US8O1",
+    "description": "As a knowledge base specialist, I want to leverage Wikidata for enriching news articles with accurate and up-to-date semantic information, so that the integrity and reliability of our news content are enhanced."
+  },
+  {
+    "id": "A33US9O1",
+    "description": "As a librarian, I want to provide journalists and researchers with access to a semantic search engine, so that they can efficiently locate and utilize precise information from a vast array of news sources."
+  },
+  {
+    "id": "A33US10O1",
+    "description": "As a product manager for a news aggregation service, I want to implement a semantic search engine that supports both keyword and structured data searches, so that we can offer users a powerful tool for discovering and exploring news content."
+  },
+  {
+    "id": "A34US1O1",
+    "description": "As a cybersecurity analyst, I want to utilize deep neural networks for intrusion detection, so that I can accurately identify and classify evolving cyberattacks in real-time."
+  },
+  {
+    "id": "A34US2O1",
+    "description": "As a data scientist, I want to benchmark various machine learning algorithms on multiple public malware datasets, so that I can determine the most effective models for detecting future threats."
+  },
+  {
+    "id": "A34US3O1",
+    "description": "As a network administrator, I want an IDS that scales efficiently with large volumes of data, so that my organization remains protected against high-volume and sophisticated cyberattacks."
+  },
+  {
+    "id": "A34US4O1",
+    "description": "As a security researcher, I want to systematically update and evaluate malware datasets, so that my studies reflect the latest attack methods and improve IDS accuracy."
+  },
+  {
+    "id": "A34US5O1",
+    "description": "As a machine learning engineer, I want to optimize DNN hyperparameters using methods applied to the KDDCup 99 dataset, so that my IDS models achieve optimal performance and reliability."
+  },
+  {
+    "id": "A34US6O1",
+    "description": "As a cybersecurity team leader, I want comprehensive evaluations of DNNs and classical classifiers across various benchmark datasets, so that I can select the best algorithm for our organization's intrusion detection needs."
+  },
+  {
+    "id": "A34US7O1",
+    "description": "As a software developer, I want to implement flexible DNN models that learn high-dimensional feature representations, so that my IDS can adapt to dynamic network behaviors and rapidly evolving attacks."
+  },
+  {
+    "id": "A34US8O1",
+    "description": "As an academic researcher, I want to conduct detailed performance analyses of machine learning algorithms on datasets like NSL-KDD, UNSW-NB15, Kyoto, WSN-DS, and CICIDS 2017, so that I can contribute to advancing the field of intrusion detection."
+  },
+  {
+    "id": "A34US9O1",
+    "description": "As a security operations center (SOC) manager, I want an automated IDS that classifies cyberattacks promptly, so that my team can respond swiftly and effectively to security incidents."
+  },
+  {
+    "id": "A34US10O1",
+    "description": "As a policy maker, I want evidence-based studies identifying the best-performing IDS algorithms across various datasets, so that I can recommend robust cybersecurity measures for organizations to implement."
+  },
+  {
+    "id": "A35US1O1",
+    "description": "As a sales manager, I want accurate sales predictions using the ARIMA model, so that I can optimize our planning processes and maximize revenue."
+  },
+  {
+    "id": "A35US2O1",
+    "description": "As a logistics coordinator, I want precise sales forecasts, so that I can efficiently manage outgoing invoices and uninvoiced shipments to reduce costs."
+  },
+  {
+    "id": "A35US3O1",
+    "description": "As a data engineer, I want to build a data mart on top of our data warehouse, so that we can seamlessly integrate daily loads of invoices and shipments data for accurate tracking."
+  },
+  {
+    "id": "A35US4O1",
+    "description": "As a business analyst, I want weekly aggregated sales data, so that I can identify trends and make informed decisions based on the most useful time intervals."
+  },
+  {
+    "id": "A35US5O1",
+    "description": "As a IT specialist, I want to ensure the data preparation process is robust, so that our sales predictions are based on high-quality and reliable data."
+  },
+  {
+    "id": "A35US6O1",
+    "description": "As a financial planner, I want to track each product's sales market, customer, quantity, and date, so that I can analyze performance and forecast future demand accurately."
+  },
+  {
+    "id": "A35US7O1",
+    "description": "As a warehouse manager, I want sales predictions to align with logistics planning, so that we can optimize inventory levels and reduce storage costs."
+  },
+  {
+    "id": "A35US8O1",
+    "description": "As a CEO of a wholesale company, I want a successful ongoing planning process based on reliable sales predictions, so that our organization can thrive in a competitive B2B environment."
+  },
+  {
+    "id": "A35US9O1",
+    "description": "As a customer relationship manager, I want to use sales forecasts to anticipate customer needs, so that we can enhance customer satisfaction and loyalty."
+  },
+  {
+    "id": "A35US10O1",
+    "description": "As a operations manager, I want detailed insights from the data mart on outgoing invoices and shipments, so that I can streamline our sales and logistics processes for better efficiency."
+  },
+  {
+    "id": "A36US1O1",
+    "description": "As a transportation analyst, I want to classify moving vehicle types using wireless sensor networks, so that I can monitor and analyze traffic patterns effectively."
+  },
+  {
+    "id": "A36US2O1",
+    "description": "As a data scientist, I want access to the extensive real-world dataset of raw time series and spectral feature vectors, so that I can develop and test advanced vehicle classification models."
+  },
+  {
+    "id": "A36US3O1",
+    "description": "As a network engineer, I want to implement a distributed wireless sensor network for vehicle classification, so that I can ensure scalable and reliable data collection across various locations."
+  },
+  {
+    "id": "A36US4O1",
+    "description": "As a machine learning researcher, I want to utilize the preprocessed spectral feature vectors, so that I can enhance the accuracy of vehicle type classification algorithms."
+  },
+  {
+    "id": "A36US5O1",
+    "description": "As a system developer, I want to replicate the data collection and preprocessing procedures detailed in the study, so that I can build a similar vehicle classification system for my project."
+  },
+  {
+    "id": "A36US6O1",
+    "description": "As an urban planner, I want to use classified vehicle data from wireless sensor networks, so that I can make informed decisions on infrastructure development and traffic management."
+  },
+  {
+    "id": "A36US7O1",
+    "description": "As a quality assurance specialist, I want to evaluate the baseline classification results using the maximum likelihood classifier, so that I can benchmark the performance of new classification models."
+  },
+  {
+    "id": "A36US8O1",
+    "description": "As a security analyst, I want to classify types of moving vehicles in real-time, so that I can enhance surveillance and identify suspicious activities efficiently."
+  },
+  {
+    "id": "A36US9O1",
+    "description": "As a researcher, I want to understand the data collection and feature extraction methods used in the study, so that I can apply similar techniques to my own vehicle classification research."
+  },
+  {
+    "id": "A36US10O1",
+    "description": "As a software engineer, I want to develop a user-friendly interface for visualizing classified vehicle types, so that stakeholders can easily interpret and utilize the traffic data for decision-making."
+  },
+  {
+    "id": "A37US1O1",
+    "description": "As a fantasy sports enthusiast, I want to access visualizations and statistical analytics, so that I can make informed decisions when selecting and investing in players."
+  },
+  {
+    "id": "A37US2O1",
+    "description": "As a casual fantasy sports player, I want tools that counteract favoritism bias, so that my team selections are based on performance data rather than personal team allegiance."
+  },
+  {
+    "id": "A37US3O1",
+    "description": "As a data analyst, I want to utilize data from the Fantasy Premier League (FPL) API, so that I can generate actionable insights for improving player investment strategies."
+  },
+  {
+    "id": "A37US4O1",
+    "description": "As a sports blogger, I want to incorporate advanced statistical measures into my content, so that I can provide my audience with deeper analyses and recommendations for their fantasy teams."
+  },
+  {
+    "id": "A37US5O1",
+    "description": "As a fantasy league manager, I want to implement data-driven decision-making tools, so that I can enhance the competitiveness and fairness of my league."
+  },
+  {
+    "id": "A37US6O1",
+    "description": "As a software developer, I want to integrate statistical analysis and data science techniques into fantasy sports platforms, so that users can benefit from enhanced decision-support features."
+  },
+  {
+    "id": "A37US7O1",
+    "description": "As a marketing strategist for a fantasy sports platform, I want to highlight the use of advanced analytics in our services, so that we can attract users seeking more sophisticated tools for team management."
+  },
+  {
+    "id": "A37US8O1",
+    "description": "As an educator in sports management, I want to use fantasy sports data and analytics as teaching tools, so that students can learn about data-driven decision-making in a real-world context."
+  },
+  {
+    "id": "A37US9O1",
+    "description": "As a user experience designer, I want to create intuitive dashboards that display key statistical measures and visualizations, so that users can easily interpret data to make better player selections."
+  },
+  {
+    "id": "A37US10O1",
+    "description": "As a researcher, I want to analyze the effectiveness of statistical and analytical tools in reducing favoritism bias, so that I can contribute to the development of more objective fantasy sports strategies."
+  },
+  {
+    "id": "A38US1O1",
+    "description": "As a recruiter, I want to automatically segregate candidates based on eligibility criteria, so that I can efficiently shortlist suitable applicants without manual effort."
+  },
+  {
+    "id": "A38US2O1",
+    "description": "As an HR manager, I want to evaluate candidates' personalities through an online MCQ test, so that I can ensure their fit within the organizational culture."
+  },
+  {
+    "id": "A38US3O1",
+    "description": "As a software developer, I want to develop an online application for candidate registration and personality analysis, so that the recruitment process is streamlined and automated."
+  },
+  {
+    "id": "A38US4O1",
+    "description": "As a data scientist, I want to use logistic regression to analyze candidate data, so that recruitment decisions are fair and based on data-driven insights."
+  },
+  {
+    "id": "A38US5O1",
+    "description": "As a candidate, I want to take a personality quiz online, so that I can demonstrate my suitability for the job beyond my resume."
+  },
+  {
+    "id": "A38US6O1",
+    "description": "As an admin, I want to receive personality quiz results and eligibility analyses, so that I can make informed hiring decisions."
+  },
+  {
+    "id": "A38US7O1",
+    "description": "As a system administrator, I want the application to securely handle candidate CV uploads and quiz responses, so that candidate data is protected."
+  },
+  {
+    "id": "A38US8O1",
+    "description": "As an HR analyst, I want to compare candidates' CV data against trained datasets, so that I can assess their professional eligibility accurately."
+  },
+  {
+    "id": "A38US9O1",
+    "description": "As a candidate, I want to receive feedback on my personality quiz results, so that I can understand my strengths and areas for improvement."
+  },
+  {
+    "id": "A38US10O1",
+    "description": "As a company, I want to reduce hiring bias by using an automated system, so that recruitment decisions are based on objective criteria and personality fit."
+  },
+  {
+    "id": "A39US1O1",
+    "description": "As a music curator, I want to use a machine learning model to predict playlist success, so that I can create more engaging and popular playlists for listeners."
+  },
+  {
+    "id": "A39US2O1",
+    "description": "As a digital music platform manager, I want to integrate playlist success predictions into our system, so that we can enhance user satisfaction and retention through optimized playlist recommendations."
+  },
+  {
+    "id": "A39US3O1",
+    "description": "As a data scientist, I want to analyze various musical characteristics of songs, so that I can improve the accuracy of our playlist success prediction model."
+  },
+  {
+    "id": "A39US4O1",
+    "description": "As a marketing strategist for a music streaming service, I want to leverage insights from playlist success predictions, so that I can develop targeted campaigns that promote popular playlists and increase user engagement."
+  },
+  {
+    "id": "A39US5O1",
+    "description": "As a music enthusiast, I want personalized playlist recommendations based on predicted success factors, so that I can enjoy a more tailored and enjoyable music-listening experience."
+  },
+  {
+    "id": "A39US6O1",
+    "description": "As a product manager, I want to utilize the machine learning-based approach to forecast playlist popularity, so that we can prioritize and feature playlists that are more likely to succeed."
+  },
+  {
+    "id": "A39US7O1",
+    "description": "As a user experience designer, I want to incorporate success prediction insights into the playlist creation interface, so that users can receive guidance on building playlists that resonate with their audience."
+  },
+  {
+    "id": "A39US8O1",
+    "description": "As an industry analyst, I want to study the factors driving playlist success, so that I can provide valuable recommendations to music producers and streaming services on effective playlist strategies."
+  },
+  {
+    "id": "A39US9O1",
+    "description": "As a software engineer, I want to implement the machine learning model with high accuracy rates, so that our platform can reliably predict and promote successful playlists in real-time."
+  },
+  {
+    "id": "A39US10O1",
+    "description": "As a music producer, I want to understand the characteristics that make playlists successful, so that I can curate collections of songs that maximize listener engagement and satisfaction."
+  },
+  {
+    "id": "A40US1O1",
+    "description": "As a social network user, I want my account to be automatically monitored for unusual login behavior, so that I can be alerted and protected from potential compromises."
+  },
+  {
+    "id": "A40US2O1",
+    "description": "As a cybersecurity analyst, I want to implement anomaly detection models based on historical login data, so that I can effectively identify and prevent compromised accounts."
+  },
+  {
+    "id": "A40US3O1",
+    "description": "As a platform administrator for an online social network, I want to integrate anomaly-based security measures, so that I can safeguard user trust relationships and maintain platform integrity."
+  },
+  {
+    "id": "A40US4O1",
+    "description": "As a data scientist, I want to train and validate anomaly detection models using login data from Pokec, so that I can ensure high sensitivity and specificity in detecting compromised accounts."
+  },
+  {
+    "id": "A40US5O1",
+    "description": "As a software developer, I want to develop real-time monitoring systems that detect sudden changes in user login behavior, so that I can provide immediate protection against account compromises."
+  },
+  {
+    "id": "A40US6O1",
+    "description": "As a privacy officer, I want to ensure that login data used for anomaly detection is handled securely and in compliance with data protection regulations, so that user privacy is maintained."
+  },
+  {
+    "id": "A40US7O1",
+    "description": "As a product manager, I want to leverage anomaly detection results to enhance the security features of our social network platform, so that we can offer a safer environment for our users."
+  },
+  {
+    "id": "A40US8O1",
+    "description": "As a user support specialist, I want to receive notifications about potentially compromised accounts, so that I can proactively assist users in securing their accounts."
+  },
+  {
+    "id": "A40US9O1",
+    "description": "As a security operations center (SOC) manager, I want to track the performance of anomaly detection models using metrics like sensitivity, specificity, and accuracy, so that I can continuously improve our account protection strategies."
+  },
+  {
+    "id": "A40US10O1",
+    "description": "As a researcher in cybersecurity, I want to analyze the effectiveness of anomaly detection models on large-scale social network data, so that I can contribute to developing more robust methods for preventing account compromises."
+  },
+  {
+    "id": "A41US1O1",
+    "description": "As a machine learning researcher, I want access to the ISIA Food-500 dataset with 500 categories and 399,726 images, so that I can develop and train advanced food recognition algorithms."
+  },
+  {
+    "id": "A41US2O1",
+    "description": "As a diet management app developer, I want to integrate a comprehensive food recognition system, so that users can accurately track their food intake using images."
+  },
+  {
+    "id": "A41US3O1",
+    "description": "As a self-service restaurant operator, I want to implement a robust food recognition system, so that customers can easily identify and select menu items through image-based interfaces."
+  },
+  {
+    "id": "A41US4O1",
+    "description": "As a computer vision engineer, I want to utilize the stacked global-local attention network, so that I can enhance the accuracy and discriminative power of food image classifications."
+  },
+  {
+    "id": "A41US5O1",
+    "description": "As a data scientist, I want to leverage hybrid spatial-channel attention mechanisms, so that I can extract more detailed and relevant features from food images for better recognition performance."
+  },
+  {
+    "id": "A41US6O1",
+    "description": "As a benchmark dataset curator, I want to use the ISIA Food-500 dataset as a standard for evaluating food recognition models, so that I can ensure consistency and comparability across different research studies."
+  },
+  {
+    "id": "A41US7O1",
+    "description": "As a multimedia application developer, I want to incorporate multi-scale regional features from attentional regions, so that my application can accurately recognize ingredients and detailed aspects of food items."
+  },
+  {
+    "id": "A41US8O1",
+    "description": "As a academic instructor, I want to utilize the ISIA Food-500 dataset in my curriculum, so that students can work with a comprehensive and large-scale dataset for projects and assignments in food recognition."
+  },
+  {
+    "id": "A41US9O1",
+    "description": "As a quality assurance specialist, I want to evaluate the effectiveness of the stacked global-local attention network on multiple benchmark datasets, so that I can validate its performance and reliability for deployment in real-world applications."
+  },
+  {
+    "id": "A41US10O1",
+    "description": "As a technology innovator, I want to adopt the proposed food recognition method as a strong baseline, so that I can build upon it to create state-of-the-art solutions for various food-related multimedia applications."
+  },
+  {
+    "id": "A42US1O1",
+    "description": "As a Virginia public health official, I want a data-driven model that recommends optimal locations for mobile vaccination sites, so that I can effectively target and increase vaccination rates in under-vaccinated populations."
+  },
+  {
+    "id": "A42US2O1",
+    "description": "As a data scientist, I want to integrate fine-grained mobility data with US Census and vaccination uptake data, so that I can accurately identify locations frequented by unvaccinated individuals for vaccine site placement."
+  },
+  {
+    "id": "A42US3O1",
+    "description": "As a policy maker, I want to deploy mobile vaccination sites based on real-time model recommendations, so that I can address healthcare disparities and reduce the spread of COVID-19 variants in vulnerable communities."
+  },
+  {
+    "id": "A42US4O1",
+    "description": "As a community leader in a rural area, I want accessible mobile vaccination sites near our community, so that more residents can get vaccinated without traveling long distances."
+  },
+  {
+    "id": "A42US5O1",
+    "description": "As a mobile vaccination site coordinator, I want to know which locations maximize vaccine uptake among hesitant demographic groups, so that I can allocate resources where they are most needed and effective."
+  },
+  {
+    "id": "A42US6O1",
+    "description": "As a healthcare provider, I want data-driven placement of vaccination sites, so that I can see higher vaccination rates in targeted areas and better protect my patients from COVID-19."
+  },
+  {
+    "id": "A42US7O1",
+    "description": "As an urban planner, I want to use the model's recommendations for mobile vaccination sites, so that I can incorporate public health strategies into city planning and infrastructure development."
+  },
+  {
+    "id": "A42US8O1",
+    "description": "As a demographic researcher, I want to analyze the impact of customized vaccination site placement across different demographic groups, so that I can study and understand the effectiveness of tailored public health interventions."
+  },
+  {
+    "id": "A42US9O1",
+    "description": "As a member of the general public in an under-vaccinated area, I want convenient access to mobile vaccination sites recommended by data models, so that I can easily get vaccinated and protect my community from COVID-19."
+  },
+  {
+    "id": "A42US10O1",
+    "description": "As a developer of public health technologies, I want to build real-time, mobility-aware models for vaccine site placement, so that public health officials can utilize advanced tools to combat pandemics more effectively."
+  }
+]
