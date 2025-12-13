@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-assertion_rules.py (Route B: native 1–5 scale)
 
 Purpose
 -------
