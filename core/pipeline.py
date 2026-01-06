@@ -9,6 +9,9 @@ pipeline.py — DSPy-based INVEST Optimizer (1–5 scale, diversity + teleprompt
 - Outputs: original/rewritten, rubric text, fuzzy terms, low-score notes, final scores
 """
 
+# import os
+# os.environ["DSP_CACHEBOOL"] = "False" # 強制關閉 DSPy 緩存
+
 from typing import List, Dict, Any, Tuple, Optional
 from dataclasses import dataclass
 import os, json, re, importlib.util
@@ -44,22 +47,31 @@ INVEST_RUBRIC_15, INVEST_THRESHOLDS, INVEST_WEIGHTS = _load_invest_rules()
 # =========================
 # LM settings fallback
 # =========================
+# 在 pipeline.py 前段
+
 def configure_default_lm():
+    # 強制關閉 DSPy 緩存，確保每次都真的呼叫 OpenAI
+    os.environ["DSP_CACHEBOOL"] = "False" 
+    
     try:
         lm = getattr(dspy.settings, "lm", None)
     except Exception:
         lm = None
+        
     if lm is None:
         api_key = os.getenv("OPENAI_API_KEY")
         if not api_key:
-            print("[WARN] OPENAI_API_KEY 未設定。請 export OPENAI_API_KEY。")
-        print("[INFO] Configuring default LM: openai/gpt-4o-mini (temperature=0.8)")
+            # 原本只是 print warning，現在直接報錯，避免空轉
+            raise ValueError("[CRITICAL] OPENAI_API_KEY is missing! The system cannot run.")
+            
+        print("[INFO] Configuring default LM: openai/gpt-4o-mini (temperature=0.7)")
         dspy.settings.configure(
             lm=dspy.LM(
                 "openai/gpt-4o-mini",
                 api_key=api_key,
-                temperature=0.8,
-                max_tokens=512
+                temperature=0.7,
+                max_tokens=1000, # 增加 token 數以防截斷 JSON
+                cache=False      # 再次確認關閉 cache
             )
         )
 
@@ -446,12 +458,30 @@ class InvestScorer(dspy.Module):
 
     # --- __call__ (與您提供的版本相同) ---
     def __call__(self, text: str) -> Dict[str, Any]:
-        # 假設 CALLS 已定義
         CALLS["scorer"] += 1
-        llm_out = self.predict(input_text=text)
+        
+        # --- DEBUG START: 檢查 LLM 是否真的在跑 ---
+        try:
+            llm_out = self.predict(input_text=text)
+            # 檢查是否回傳了空字串，這通常代表 API Key 沒設對或是用了 DummyLM
+            if not llm_out.result_json or len(llm_out.result_json) < 5:
+                print(f"\n[ERROR] LLM returned empty/invalid JSON for text: {text[:30]}...")
+                print(f"[DEBUG] Raw output: {llm_out}")
+        except Exception as e:
+            print(f"\n[CRITICAL] LLM call failed: {e}")
+            llm_out = type('obj', (object,), {'result_json': '{}'}) # Fallback to empty to allow debugging
+        # --- DEBUG END ---
+
         llm_obj = self.parse_json(llm_out.result_json)
+        
+        # 如果 LLM 解析失敗，原本會靜默失敗，現在我們讓它印出警告
+        if not llm_obj and STRICT:
+             print(f"[WARN] JSON parse failed, falling back to heuristics only. Raw: {llm_out.result_json}")
+
         heu_scores, heu_reasons = self.heuristic_scores_from_rubric(text)
         fused = self.fuse(llm_obj, heu_scores, text)
+        
+        # ... (後面的程式碼保持不變)
         for d in ["I","N","V","E","S","T"]:
             prefix = (" | " if fused["reasons"].get(d) else "")
             fused["reasons"][d] = (fused["reasons"].get(d) or "") + prefix + f"HEU: {heu_reasons[d]}"
@@ -689,6 +719,13 @@ def run_batch_optimization(
                 # 第一次用 original，之後用當前 best 當 seed 改寫
                 seed_text = original_text if _try == 0 else best_text
                 cand_text = rewriter(seed_text)
+
+                if _try == 0 and _round == 0:
+                     print(f"\n[DEBUG CHECK] Original: {seed_text[:50]}...")
+                     print(f"[DEBUG CHECK] Rewritten: {cand_text[:50]}...")
+                     if seed_text == cand_text:
+                         print("[WARN] Rewriter returned identical text! (LLM might be failing)")
+
                 cand_m    = scorer(cand_text)
                 div       = jaccard_diversity(original_text, cand_text)
 

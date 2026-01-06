@@ -16,46 +16,51 @@ DIM_KEYS = ["I", "N", "V", "E", "S", "T"]
 # --- INVEST Rubric (1–5 Scale) ------------------------------------------------
 INVEST_RUBRIC_15 = {
   "I": {
-    "1": "The user story is strongly dependent on other stories; it cannot be developed or delivered independently.",
-    "2": "The user story's independence is unclear or partially constrained by external workflows, preventing standalone development.",
-    "3": "The user story is logically separate, but implicit dependencies or sequencing constraints still need clarification.",
-    "4": "The user story is explicitly independent with clearly defined boundaries, making it feasible to develop without blocking others.",
-    "5": "The user story demonstrates full autonomy with no technical, business, or sequencing dependencies, enabling immediate and flexible deployment."
+    "1": "The story is explicitly blocked by or dependent on the completion of other specific stories. It cannot be started until others are finished.",
+    "2": "The story can be technically started, but its functional logic relies heavily on the implementation details of another story (e.g., 'similar to story #5').",
+    "3": "The story is functionally distinct but part of a strict workflow sequence. It requires data or state from a previous step but isn't code-dependent.",
+    "4": "The story allows for parallel development. Dependencies are minimized to standard interface agreements (APIs) rather than functional blocks.",
+    "5": "The story can be prioritized, developed, tested, and deployed in any order without any friction or external blockers."
   },
+  
   "N": {
-    "1": "The user story is overly prescriptive or written like a specification, leaving no room for negotiation or refinement.",
-    "2": "The user story includes minimal context; scope is partially negotiable but still rigid or ambiguous.",
-    "3": "The user story describes a meaningful requirement but requires collaborative refinement to finalize scope.",
-    "4": "The user story is well-structured, high-level, and clearly open to feedback and negotiation between stakeholders.",
-    "5": "The user story expresses a high-level need with optimal clarity and flexibility, enabling effective negotiation while preventing premature scope lock-in."
+    "1": "The story dictates specific technical implementations (e.g., SQL queries, database fields, specific algorithms), leaving no room for discussion.",
+    "2": "The story restricts the solution to specific UI elements (e.g., 'click the blue button at top-right') rather than user intent.",
+    "3": "The story focuses on 'how' the system behaves rather than 'what' the user needs. The solution is proposed, but details can be tweaked.",
+    "4": "The story clearly states the user's goal. Technical implementation is open, though some functional constraints are mentioned.",
+    "5": "The story defines a pure business problem or user need. It invites the team to co-create the best solution (UI/Tech) during refinement."
   },
+  
   "V": {
-    "1": "The user story provides little or no user-visible value; the benefit is vague, generic, or not tied to a real outcome.",
-    "2": "The user story states value but it remains fuzzy, qualitative, or non-measurable (e.g., 'so it's easier', 'so I can learn').",
-    "3": "The user story delivers a clear qualitative user benefit but lacks measurable impact or business alignment.",
-    "4": "The user story conveys strong, identifiable value aligned with user or business goals.",
-    "5": "The user story provides explicit, measurable, and outcome-driven value, exceeding functional correctness and clearly supporting a business objective."
+    "1": "Describes a developer task (e.g., 'refactor code', 'create table') with no discernible user or business value.",
+    "2": "The value statement repeats the feature (e.g., 'I want to login so that I am logged in'). The 'Why' adds no new information.",
+    "3": "The value is understandable by context but vague or generic (e.g., 'to save time', 'for better UX') without specific justification.",
+    "4": "Clearly articulates a specific benefit to a specific persona (e.g., 'so that I don't lose my work during connection loss').",
+    "5": "The value is tied to a measurable business objective or key result (e.g., 'reduce support tickets by 10%', 'increase conversion')."
   },
+  
   "E": {
-    "1": "The user story lacks sufficient clarity or detail to be estimated; major uncertainties prevent meaningful sizing.",
-    "2": "The user story is partly understandable and estimation is possible but highly uncertain due to missing boundaries or logic.",
-    "3": "The user story contains enough detail for a coarse estimate but still requires clarification to reduce estimation risk.",
-    "4": "The user story is well-defined with clearly articulated functional logic, enabling accurate and low-risk estimation.",
-    "5": "The user story is fully detailed and unambiguous across functional and non-functional aspects, allowing precise estimation with minimal uncertainty."
+    "1": "Lacks critical information. The team cannot understand what is being asked (e.g., 'make it better'). Estimation is impossible.",
+    "2": "Contains subjective terms (e.g., 'fast', 'easy', 'user-friendly') that make the scope elastic and high-risk.",
+    "3": "The core requirement is clear, but edge cases, error handling, or non-functional requirements are missing.",
+    "4": "Functional and non-functional boundaries are clear. The team can estimate with high confidence, barring minor clarifications.",
+    "5": "Fully detailed with no known unknowns. All developers share a consistent understanding of the scope and effort involved."
   },
+  
   "S": {
-    "1": "The user story is too large, broad, or complex to be completed within a single Sprint.",
-    "2": "The user story could fit in a Sprint only after significant decomposition or by combining with other tasks.",
-    "3": "The user story fits within a Sprint but still includes multiple steps that may introduce overhead.",
-    "4": "The user story is appropriately sized to balance development and testing within a Sprint.",
-    "5": "The user story represents a minimal, atomic, user-meaningful increment, reflecting the smallest unit of deliverable value."
+    "1": "Covers an entire module or workflow. Impossible to complete in a single iteration (Sprint). Needs major breakdown.",
+    "2": "Contains multiple distinct user goals or verbs (e.g., 'Search AND View AND Edit'). High cognitive load.",
+    "3": "A single user goal but involves complex logic or multiple variations (e.g., 'Search with 10 different filters').",
+    "4": "A single user goal with a strictly limited scope/scenario (e.g., 'Search by Name only'). Fits comfortably in a sprint.",
+    "5": "The smallest possible slice of functionality that still provides value. Extremely low risk and quick to deliver."
   },
+  
   "T": {
-    "1": "The user story lacks any acceptance criteria or observable outcomes, making verification impossible.",
-    "2": "The user story references expected behavior but provides no concrete or actionable acceptance tests.",
-    "3": "The user story includes partial or draft acceptance tests that require refinement or stakeholder validation.",
-    "4": "The user story contains clear, verifiable acceptance tests that are complete but not yet validated by all parties.",
-    "5": "The user story includes fully validated, precise, and unambiguous acceptance tests, ensuring complete verification of requirements."
+    "1": "No criteria provided, or criteria are purely subjective (e.g., 'must look modern').",
+    "2": "Expected behavior is implied in the description but not explicitly listed as acceptance criteria.",
+    "3": "Acceptance criteria exist as a prose list (bullet points) but may lack precision or cover only the 'Happy Path'.",
+    "4": "Covers both success and failure scenarios clearly. Testers know exactly what to check.",
+    "5": "Criteria are written in a format ready for automation (e.g., Gherkin/Given-When-Then), with quantified metrics and data examples."
   }
 }
 
