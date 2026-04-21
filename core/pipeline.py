@@ -696,7 +696,7 @@ def compile_scorer_with_teleprompt(base_scorer: InvestScorer, fewshot_k: int = 4
         tele = dspy.BootstrapFewShot(
             metric=scorer_match_metric, 
             max_labeled_demos=fewshot_k,
-            max_bootstrapped_demos=2, 
+            max_bootstrapped_demos=6, 
             max_rounds=max_rounds,
             teacher_settings=({"lm": teacher_lm} if teacher_lm else None)
         )
