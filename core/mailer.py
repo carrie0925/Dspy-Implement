@@ -34,14 +34,17 @@ def send_survey_links(email_list, exp_id):
             您好：
             
             感謝您參與本次 User Story 優化研究。
-            請點擊以下連結開始進行 A/B 版本對照評估：
+            請點擊以下連結開始進行易用性問卷填寫：
             {survey_url}
             
             您的實驗編號為：{exp_id}
-            (進入系統後請選擇您的 Email 以開始評估)
+            進入系統後請選擇您的 Email 以開始評估，並且在完成問卷前都不要關閉網頁
+            填寫時間約30-40分鐘，填寫完畢後請將實驗編號截圖提供給計畫主持人(鄭慈昱)，即可完成填寫金領取。
             
+            若有任何問題，歡迎直接回覆此信箱與我聯繫
             祝好，
-            研究小組
+            國立清華大學服務科學研究所 鄭慈昱
+            
             """
             msg.attach(MIMEText(body, 'plain'))
             server.send_message(msg)
