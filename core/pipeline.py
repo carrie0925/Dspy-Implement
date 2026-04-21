@@ -50,7 +50,6 @@ INVEST_RUBRIC_15, INVEST_THRESHOLDS, INVEST_WEIGHTS = _load_invest_rules()
 # 在 pipeline.py 前段
 
 def configure_default_lm():
-    # 強制關閉 DSPy 緩存，確保每次都真的呼叫 OpenAI
     os.environ["DSP_CACHEBOOL"] = "False" 
     
     try:
@@ -61,7 +60,6 @@ def configure_default_lm():
     if lm is None:
         api_key = os.getenv("OPENAI_API_KEY")
         if not api_key:
-            # 原本只是 print warning，現在直接報錯，避免空轉
             raise ValueError("[CRITICAL] OPENAI_API_KEY is missing! The system cannot run.")
             
         print("[INFO] Configuring default LM: openai/gpt-4o-mini (temperature=0.7)")
@@ -79,11 +77,121 @@ configure_default_lm()
 
 # ===== seeds =====
 TRAIN_SEEDS = [
-    {"input_text": "As a user, I want to reset my password via email so that I can regain access.\nAcceptance Criteria:\n- Request reset link via email\n- Receive email\n- Reset succeeds"},
-    {"input_text": "Improve dashboard performance.\nAcceptance Criteria:\n- Current p95=5s; target p95<=2s\n- Reduce initial DB calls to <=8\n- Cache top 3 widgets on first paint"}
+    # 範例 1: 聚焦 V (價值) — 明確的業務成果
+    {
+        "input_text": "As a user, I want to log in with my account.",
+        "improved_text": (
+            "User Story:\nAs a premium subscriber, I want to log in using biometric MFA "
+            "so that I can access my secure vault in under 2 seconds and reduce password-reset support tickets by 10%.\n"
+            "Acceptance Criteria:\n"
+            "- The authentication process from sensor touch to home screen display must complete within 2.0 seconds.\n"
+            "- A 'Retry' option must automatically appear if the biometric token is not validated within 3 attempts.\n"
+            "Test Outline:\n"
+            "- Use a performance monitor to track end-to-end latency during 50 consecutive successful logins.\n"
+            "- Verify that the system correctly triggers the account lock or retry flow after 3 failed fingerprint matches."
+        )
+    },
+    # 範例 2: 聚焦 E (可估計) — 數值化的範疇邊界
+    {
+        "input_text": "Improve the dashboard loading speed.",
+        "improved_text": (
+            "User Story:\nAs a finance manager, I want the real-time revenue dashboard to load for the current fiscal year "
+            "so that I can make investment decisions based on data with less than 5 minutes of latency.\n"
+            "Acceptance Criteria:\n"
+            "- The dashboard must render all 6 primary KPI widgets within 3 seconds for datasets up to 100,000 records.\n"
+            "- Data staleness must not exceed 300 seconds; an indicator must show the 'Last Sync' server time.\n"
+            "Test Outline:\n"
+            "- Load the dashboard with a 100k row test database and measure the LCP (Largest Contentful Paint) timing.\n"
+            "- Verify the data sync interval by checking the network logs for API polling frequency every 5 minutes."
+        )
+    },
+    # 範例 3: 聚焦 S (規模) — 原子化的單一功能
+    {
+        "input_text": "Update the user's profile and settings.",
+        "improved_text": (
+            "User Story:\nAs a frequent traveler, I want to save my passport number to my profile "
+            "so that I can auto-fill international flight bookings and save 3 minutes per transaction.\n"
+            "Acceptance Criteria:\n"
+            "- The passport field must validate against international formats and mask all but the last 4 digits upon saving.\n"
+            "- Saved data must be encrypted at rest and only decrypted when passed to the secure Booking API.\n"
+            "Test Outline:\n"
+            "- Input 3 different valid international passport formats and verify they are correctly masked in the UI.\n"
+            "- Inspect the database record to ensure the passport number is stored as an encrypted string."
+        )
+    },
+    # 範例 4: 聚焦 T (可測試) — 確定性的通過條件
+    {
+        "input_text": "The search function should be more reliable.",
+        "improved_text": (
+            "User Story:\nAs a catalog admin, I want to search for products by a specific SKU prefix "
+            "so that I can identify stock errors without manually checking each item in the 50,000-unit inventory.\n"
+            "Acceptance Criteria:\n"
+            "- Searching for a 4-character prefix (e.g., 'ABC-') must return all matching SKUs in < 500ms.\n"
+            "- If no results match, the system must display the exact message: 'No SKU matching this prefix was found'.\n"
+            "Test Outline:\n"
+            "- Execute a search for 'SKU-001' and verify that only the exact match and its variants appear in the results list.\n"
+            "- Test the empty state by entering a non-existent string and asserting the specific error message is displayed."
+        )
+    },
+    # 範例 5: V + E 複合強化 — 業務目標與資源範疇
+    {
+        "input_text": "Export the report to CSV.",
+        "improved_text": (
+            "User Story:\nAs a data auditor, I want to export the monthly transaction log to a CSV format "
+            "so that I can complete the mandatory compliance audit within our 24-hour internal deadline.\n"
+            "Acceptance Criteria:\n"
+            "- The export must handle up to 50,000 rows and download must start within 10 seconds of the request.\n"
+            "- The CSV file must include the 'Checksum' column to verify data integrity against the source DB.\n"
+            "Test Outline:\n"
+            "- Run a bulk export for a 50k row dataset and verify that the download initiates before the 10s timeout.\n"
+            "- Open the CSV and compare the checksum value with the database hash to ensure no data corruption."
+        )
+    },
+    # 範例 6: S + T 複合強化 — 單一動作與精確驗證
+    {
+        "input_text": "Add a notification system.",
+        "improved_text": (
+            "User Story:\nAs a site member, I want to receive a push notification when someone replies to my post "
+            "so that I can engage in the conversation immediately and increase daily active sessions.\n"
+            "Acceptance Criteria:\n"
+            "- Notifications must be delivered to the device's OS tray within 15 seconds of the reply event.\n"
+            "- Tapping the notification must redirect the user directly to the specific reply anchor on the page.\n"
+            "Test Outline:\n"
+            "- Post a reply to a test user's thread and use a stopwatch to verify notification arrival within 15 seconds.\n"
+            "- Click the push notification on a mobile device and verify the app opens at the correct scroll position."
+        )
+    },
+    # 範例 7 (新增): 聚焦 I + N 的平衡優化
+    {
+    "input_text": "Add a dropdown to the checkout page that calls a specific discount API from the marketing service.",
+    "improved_text": (
+        "User Story:\nAs a shopper, I want to apply a valid promotion code during checkout "
+        "so that I can reduce the total purchase price based on my available discounts.\n"
+        "Acceptance Criteria:\n"
+        "- The discount must be applied to the subtotal before taxes and shipping fees are calculated.\n"
+        "- The system must display a specific error message if the entered code is expired or invalid for the cart items.\n"
+        "Test Outline:\n"
+        "- Apply a 10% discount code to a $100 cart and verify the subtotal updates to $90 correctly.\n"
+        "- Enter an expired coupon code and verify that no discount is applied and a validation error appears."
+        )
+    }
+
 ]
 DEV_SEEDS = [
-    {"input_text": "As an admin, I want to export users to CSV so that I can analyze data offline.\nAcceptance Criteria:\n- Button 'Export CSV'\n- Only active users\n- Fields accurate"}
+    # 1. 混合目標 (S/I 債): 同時包含搜尋、篩選與購買
+    {"input_text": "As a user, I want to search for products, filter by category, and add them to my cart."},
+    # 2. 技術綁定 (N/V 債): 規定使用 SQL 和特定的 UI 元件
+    {"input_text": "The system should use a SQL query to show a blue modal for age verification over 18."},
+    # 3. 虛假價值 (V 債): "so that I am logged in"
+    {"input_text": "As a member, I want to log in with my username so that I am logged in and can use the site."},
+    # 4. 模糊範圍 (E/T 債): "fast", "reliable", "intuitive"
+    {"input_text": "The reporting dashboard should be fast, reliable, and intuitive for the finance team."},
+    # 5. 相依性 (I 債): 明確依賴另一個尚未完成的功能
+    {"input_text": "As a user, I want to apply a discount using the same rules as the membership upgrade flow."},
+    # 6. 純技術任務 (V/T 債): 沒有角色、沒有業務價值的開發任務
+    {"input_text": "Refactor the database schema for the order table to improve query performance."},
+    # 範例 7 (新增): 測試 I + N 的技術債識別
+    {"input_text": "The system should use a pop-up modal on the homepage to show a specific banner from the advertising engine."}
 ]
 
 # ===== env flags / knobs =====
@@ -405,20 +513,45 @@ class InvestScorer(dspy.Module):
     # ========================================================================
 
     # --- parse LLM json (與您提供的版本相同) ---
+    # core/pipeline.py
+
+    # core/pipeline.py 中的 InvestScorer 類別內
+
     def parse_json(self, raw_json: str) -> Dict[str, Any]:
+        import json
+        obj = {}
         try:
+            # 第一次嘗試解析
             obj = json.loads(raw_json)
+            
+            # [關鍵] 處理雙重編碼：如果解析出來還是字串，再解析一次
+            if isinstance(obj, str):
+                obj = json.loads(obj)
+                
         except Exception:
+            # 備援機制：嘗試從雜訊中提取 {} 區塊
             try:
-                s, e = raw_json.find("{"), raw_json.rfind("}")
-                obj = json.loads(raw_json[s:e+1]) if s>=0 and e>=0 else {}
+                import re
+                match = re.search(r'(\{.*\})', raw_json, re.DOTALL)
+                if match:
+                    obj = json.loads(match.group(1))
+                    if isinstance(obj, str): # 二次檢查雙重編碼
+                        obj = json.loads(obj)
             except Exception:
                 obj = {}
-        dims = ["I","N","V","E","S","T"]
+
+        # 最終防線：確保一定是字典，避免後續 .get() 報錯
+        if not isinstance(obj, dict):
+            obj = {}
+
+        # 分數校準與範圍限制 (1-5)
+        dims = ["I", "N", "V", "E", "S", "T"]
         for k in ["overall", *dims]:
             obj[k] = self._clamp_int15(obj.get(k))
+        
         if not isinstance(obj.get("reasons"), dict):
             obj["reasons"] = {}
+            
         return obj
 
     # --- _weighted_overall (與您提供的版本相同) ---
@@ -505,24 +638,77 @@ class UserStoryRewriter(dspy.Module):
             best = rewritten
         return best
 
-# ===== Teleprompt =====
-def compile_scorer_with_teleprompt(base_scorer: InvestScorer, fewshot_k: int = 4, max_rounds: int = 1, metric_fn=None, teacher_lm=None) -> InvestScorer:
-    trainset = []
-    for ex in TRAIN_SEEDS:
-        y = base_scorer(ex["input_text"])
-        trainset.append(dspy.Example(input_text=ex["input_text"], result_json=json.dumps(y, ensure_ascii=False)).with_inputs("input_text"))
-    print(f"[DEBUG] scorer teleprompt trainset size = {len(trainset)}")
+def scorer_match_metric(reference, prediction, trace=None):
+    """
+    [Metric] 比較 LLM 預測與專家分數的對齊程度
+    """
+    import json
+    try:
+        ref_scores = json.loads(reference.result_json)
+        pred_scores = json.loads(prediction.result_json)
+        
+        dims = ["I", "N", "V", "E", "S", "T", "overall"]
+        errors = []
+        for d in dims:
+            r_val = int(ref_scores.get(d, 0))
+            p_val = int(pred_scores.get(d, 0))
+            errors.append(abs(r_val - p_val))
+            
+        avg_error = sum(errors) / len(errors)
+        # 1.0 代表完美對齊專家
+        return max(0.0, 1.0 - (avg_error / 4.0)) 
+    except Exception:
+        return 0.0
+
+# core/pipeline.py
+
+def compile_scorer_with_teleprompt(base_scorer: InvestScorer, fewshot_k: int = 4, max_rounds: int = 1, teacher_lm=None) -> InvestScorer:
+    import json
+    import sys
+    import os
+
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    if current_dir not in sys.path:
+        sys.path.append(current_dir)
 
     try:
-        tele = dspy.BootstrapFewShot(metric=metric_fn, max_labeled_demos=min(fewshot_k, len(trainset)),
-                                     max_bootstrapped_demos=min(4, len(trainset)), max_rounds=max_rounds,
-                                     teacher_settings=({"lm": teacher_lm} if teacher_lm else None))
-        print("[DEBUG] starting scorer teleprompt.compile()")
-        compiled = tele.compile(student=base_scorer.predict, trainset=trainset)
-        base_scorer.predict = compiled
-        print("[DEBUG] scorer teleprompt.compile() finished OK")
+        # 改為讀取數據列表
+        from examples_invest import GOOD_EXAMPLES, BAD_EXAMPLES
+        expert_data = GOOD_EXAMPLES + BAD_EXAMPLES
+    except ImportError as e:
+        print(f"[ERROR] 匯入專家範例失敗: {e}")
+        return base_scorer
+
+    trainset = []
+    for ex in expert_data:
+        # 統一在此處進行 json.dumps，確保格式一致
+        trainset.append(
+            dspy.Example(
+                input_text=ex["input_text"], 
+                result_json=json.dumps(ex["scores"], ensure_ascii=False)
+            ).with_inputs("input_text")
+        )
+    
+    print(f"[DEBUG] Scorer Calibration: Using {len(trainset)} examples.")
+
+    try:
+        # 執行校準優化
+        tele = dspy.BootstrapFewShot(
+            metric=scorer_match_metric, 
+            max_labeled_demos=fewshot_k,
+            max_bootstrapped_demos=2, 
+            max_rounds=max_rounds,
+            teacher_settings=({"lm": teacher_lm} if teacher_lm else None)
+        )
+        
+        print("[DEBUG] Scorer Calibration: Optimization starting...")
+        compiled_predict = tele.compile(student=base_scorer.predict, trainset=trainset)
+        base_scorer.predict = compiled_predict
+        print("[DEBUG] Scorer Calibration: Alignment successful.")
+        
     except Exception as e:
-        print(f"[WARN] compile_scorer_with_teleprompt failed: {e}")
+        print(f"[WARN] Scorer Calibration failed: {e}")
+        
     return base_scorer
 
 def compile_rewriter_with_teleprompt(base_rewriter: UserStoryRewriter, scorer: InvestScorer, fewshot_k: int = 4, max_rounds: int = 1, metric_fn=None, teacher_lm=None) -> UserStoryRewriter:
@@ -660,22 +846,27 @@ def run_batch_optimization(
         f"min_diversity={cfg.min_diversity}"
     )
 
-    base_scorer   = InvestScorer()
+# pipeline.py 內的 run_batch_optimization 片段
+
+    # 1. 實例化
+    base_scorer = InvestScorer()
     base_rewriter = UserStoryRewriter()
 
-    # === 先用少量 seed 讓 DSPy 調 scorer / rewriter ===
     if cfg.use_dspy:
-        print("[DEBUG] DSPy teleprompt branch enabled.")
-        scorer   = compile_scorer_with_teleprompt(
-            base_scorer,
-            fewshot_k=cfg.fewshot_k,
-            max_rounds=cfg.max_rounds,
+        # 2. 先校準評分器 (基準校正)
+        # 這裡會讀取 examples_invest.py，讓 Baseline 評分變嚴格
+        scorer = compile_scorer_with_teleprompt(
+            base_scorer, 
+            fewshot_k=cfg.fewshot_k
         )
+        
+        # 3. 再優化改寫器 (改寫優化)
+        # 此時的 rewriter 會在「嚴格的評分標準」下學習如何真正消除 RTD
         rewriter = compile_rewriter_with_teleprompt(
-            base_rewriter,
-            scorer,
+            base_rewriter, 
+            scorer, 
             fewshot_k=cfg.fewshot_k,
-            max_rounds=cfg.max_rounds,
+            max_rounds=cfg.max_rounds
         )
 
         # 在 DEV_SEEDS 上看一下 baseline vs 優化後差多少

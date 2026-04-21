@@ -1,0 +1,42 @@
+[
+  {
+    "id": "US001",
+    "description": "As a site member, I want to describe myself on my own page in a semi-structured way, so that others can learn about me."
+  },
+  {
+    "id": "US002",
+    "description": "As a site member, I want to fill out an application to become a Certified Scrum Practitioner, so that I can earn that designation."
+  },
+  {
+    "id": "US003",
+    "description": "As a Practitioner, I want to include additional details about me in my profile page, so that I can showcase my experience."
+  },
+  {
+    "id": "US004",
+    "description": "As a site member, I want to fill out an application to become a Certified Scrum Trainer, so that I can teach CSM and CSPO courses and certify others."
+  },
+  {
+    "id": "US005",
+    "description": "As a Trainer, I want to include additional details in my profile page about me, so that others can learn about me and decide if I am the right trainer for them."
+  },
+  {
+    "id": "US006",
+    "description": "As a Practitioner, I want to write an article for the site with a small graphic shown with the article showing my CSP or CST status, so that others know my certifications when reading."
+  },
+  {
+    "id": "US007",
+    "description": "As a trainer, I want to list my upcoming classes in my profile and include a link to a detailed page about each, so that prospective attendees can find my courses."
+  },
+  {
+    "id": "US008",
+    "description": "As a site member, I want to view the profiles of other members, so that I can find others I might want to connect with."
+  },
+  {
+    "id": "US009",
+    "description": "As a site member, I want to search for profiles based on a few fields, so that I can find others I might want to connect with."
+  },
+  {
+    "id": "US010",
+    "description": "As a site member, I want to mark my profile as private in which case only my name will appear, so that no one can learn things about me I don't want shared."
+  }
+]

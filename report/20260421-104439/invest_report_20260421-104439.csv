@@ -1,0 +1,1427 @@
+﻿ID,Original User Story,Rewritten User Story,Fuzzy Terms (with source),I_before,I_after,delta_I,N_before,N_after,delta_N,V_before,V_after,delta_V,E_before,E_after,delta_E,S_before,S_after,delta_S,T_before,T_after,delta_T,overall_before,overall_after,delta_overall,Low-score Explanation (<2)
+US001,"As a site member, I want to describe myself on my own page in a semi-structured way, so that others can learn about me.","User Story:
+As a site member, I want to have the ability to create a semi-structured personal description on my profile page so that others can easily learn about my interests, skills, and background, enhancing community engagement by at least 20%.
+
+Acceptance Criteria:
+- The personal description section must allow for a minimum of 5 predefined fields (e.g., interests, skills, background, hobbies, and goals) to guide users in providing structured information.
+- Users should be able to input a total of up to 500 characters for each field, ensuring sufficient detail while maintaining clarity.
+- At least 75% of users should indicate that the semi-structured format helps them better understand other members in a post-implementation survey.
+
+Test Outline:
+- Verify that the profile page includes the required fields and character limits for user descriptions.
+- Conduct user testing to ensure that the semi-structured format is intuitive and easy to use.
+- Analyze survey results to measure user satisfaction with the new description feature.","easy (ISO 29148)
+easy to use (ISO 29148)
+intuitive (ISO 29148)
+that (ISO 29148)
+better (ISO 29148)
+be able to (NASA ARM)
+easy to (NASA ARM)
+can (NASA ARM)
+better (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US002,"As a site member, I want to fill out an application to become a Certified Scrum Practitioner, so that I can earn that designation.","User Story:
+As a site member, I want to complete an application process to obtain the Certified Scrum Practitioner designation so that I can enhance my professional credentials and increase my career opportunities by at least 20%.
+
+Acceptance Criteria:
+- The application form must be accessible online and include at least 5 sections covering personal information, experience, education, and references.
+- The application should be submitted successfully within 10 minutes, with a confirmation email sent to the applicant immediately upon submission.
+- At least 85% of applicants should report that the application process is clear and user-friendly in follow-up feedback.
+
+Test Outline:
+- Verify that the application form is fully functional and includes all required sections.
+- Measure the time taken for users to complete the application to ensure it meets the 10-minute target.
+- Collect and analyze feedback from applicants regarding their experience with the application process.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US003,"As a Practitioner, I want to include additional details about me in my profile page, so that I can showcase my experience.","User Story:
+As a Practitioner, I want to enhance my profile page by adding more detailed information about my professional background, skills, and accomplishments so that I can effectively showcase my experience and increase my visibility to potential clients by at least 25%.
+
+Acceptance Criteria:
+- The profile page must allow for the inclusion of at least 5 new fields, such as certifications, work history, skills, projects, and a personal statement.
+- Users should be able to edit and save their profile details within 2 minutes, ensuring a smooth update process.
+- At least 75% of users should report that the additional details significantly improve their chances of being contacted by clients in follow-up surveys.
+
+Test Outline:
+- Verify that the profile page includes the new fields for additional details and that they are user-friendly.
+- Measure the time taken for users to complete the profile update process.
+- Conduct user surveys to evaluate the perceived impact of the enhanced profile on client engagement.","that (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)
+more (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US004,"As a site member, I want to fill out an application to become a Certified Scrum Trainer, so that I can teach CSM and CSPO courses and certify others.","User Story:
+As a site member, I want to complete an application process to become a Certified Scrum Trainer so that I can effectively teach Certified Scrum Master (CSM) and Certified Scrum Product Owner (CSPO) courses, enabling me to certify at least 100 new Scrum practitioners annually and contribute to the growth of agile methodologies.
+
+Acceptance Criteria:
+- The application form must include sections for personal information, relevant experience, and training qualifications, with a completion time of no more than 15 minutes.
+- Applicants should receive confirmation of their application status within 5 business days of submission.
+- At least 90% of applicants should report that the application process is clear and user-friendly in follow-up surveys.
+
+Test Outline:
+- Review the application form to ensure all required sections are present and assess the estimated completion time.
+- Track the time taken to send confirmation emails after application submission to ensure compliance with the 5-day requirement.
+- Conduct surveys with applicants to evaluate their experience and satisfaction with the application process.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",4,4,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US005,"As a Trainer, I want to include additional details in my profile page about me, so that others can learn about me and decide if I am the right trainer for them.","User Story:
+As a Trainer, I want to enhance my profile page with comprehensive details about my qualifications, experience, and training style so that potential clients can make informed decisions about my suitability as their trainer, increasing my client engagement by at least 20%.
+
+Acceptance Criteria:
+- The profile page must include sections for my professional background, certifications, training philosophy, and client testimonials.
+- Each section should contain a minimum of 150 words to provide sufficient detail for prospective clients.
+- The profile should be updated and live within 24 hours of submission to ensure timely access to information.
+
+Test Outline:
+- Review the profile page to confirm that all required sections are present and contain the specified word count.
+- Monitor client inquiries and engagement metrics to assess the impact of the enhanced profile on attracting new clients.","that (ISO 29148)
+all (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",4,4,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US006,"As a Practitioner, I want to write an article for the site with a small graphic shown with the article showing my CSP or CST status, so that others know my certifications when reading.","User Story:
+As a Practitioner, I want to publish an article on the site that includes a small graphic displaying my Certified Scrum Professional (CSP) or Certified Scrum Trainer (CST) status, so that readers can easily recognize my qualifications, thereby enhancing my credibility and potentially increasing engagement with my content by at least 20%.
+
+Acceptance Criteria:
+- The article must feature a graphic that clearly indicates my CSP or CST status, adhering to the site's branding guidelines.
+- The graphic should be visible and properly formatted on both desktop and mobile versions of the site.
+- At least 75% of readers should indicate in feedback that the certification graphic positively influenced their perception of my expertise.
+
+Test Outline:
+- Review the article layout to ensure the certification graphic is correctly displayed and meets branding standards.
+- Test the article on various devices to confirm the graphic's visibility and formatting.
+- Collect reader feedback to evaluate the impact of the certification graphic on their perception of the article's author.","that (ISO 29148)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US007,"As a trainer, I want to list my upcoming classes in my profile and include a link to a detailed page about each, so that prospective attendees can find my courses.","User Story:
+As a trainer, I want to display my upcoming classes on my profile along with links to detailed pages for each course so that potential attendees can easily access information about my offerings, increasing class enrollment by at least 20%.
+
+Acceptance Criteria:
+- The profile must showcase a list of at least 5 upcoming classes with the date, time, and brief description for each.
+- Each class entry should include a clickable link that directs users to a detailed page containing comprehensive information, including syllabus, prerequisites, and registration details.
+- Track the number of clicks on the class links, aiming for at least a 50% click-through rate from profile views.
+
+Test Outline:
+- Verify that the profile displays the required number of upcoming classes with accurate details.
+- Check that all links direct users to the correct detailed pages and that those pages load within 2 seconds.
+- Analyze click-through data to assess user engagement with the class listings.","that (ISO 29148)
+those (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,5,1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US008,"As a site member, I want to view the profiles of other members, so that I can find others I might want to connect with.","User Story:
+As a site member, I want to access and view the profiles of other members so that I can identify potential connections and expand my network, increasing my engagement on the platform by at least 25%.
+
+Acceptance Criteria:
+- Each member's profile must display at least 5 key details, including name, profile picture, interests, location, and mutual connections.
+- The profile viewing feature should load within 2 seconds for 95% of users.
+- At least 75% of users should express satisfaction with the profile viewing experience in follow-up surveys.
+
+Test Outline:
+- Verify that each member's profile includes the required key details.
+- Measure the loading time of profiles to ensure compliance with the 2-second target.
+- Conduct user surveys to evaluate satisfaction levels regarding the profile viewing functionality.","that (ISO 29148)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US009,"As a site member, I want to search for profiles based on a few fields, so that I can find others I might want to connect with.","User Story:
+As a site member, I want to utilize a profile search feature that allows me to filter profiles based on specific fields such as location, interests, and professional background so that I can efficiently discover potential connections, increasing my networking opportunities by at least 25%.
+
+Acceptance Criteria:
+- The search functionality must allow filtering by at least 3 fields: location, interests, and professional background.
+- Search results should be generated within 2 seconds of applying filters, ensuring a smooth user experience.
+- At least 75% of users should indicate in feedback surveys that the search feature significantly aids in finding relevant profiles.
+
+Test Outline:
+- Verify that the search feature includes the specified fields for filtering profiles.
+- Measure the response time for search results after filters are applied to ensure compliance with the 2-second requirement.
+- Conduct user feedback sessions to evaluate the effectiveness of the profile search feature in facilitating connections.","that (ISO 29148)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US010,"As a site member, I want to mark my profile as private in which case only my name will appear, so that no one can learn things about me I don't want shared.","User Story:
+As a site member, I want the option to set my profile to private, ensuring that only my name is visible to other users, so that I can protect my personal information and maintain my privacy, reducing unwanted attention by at least 50%.
+
+Acceptance Criteria:
+- The private profile setting must hide all personal details except for the user's name, with a toggle option easily accessible in the account settings.
+- Users should receive a confirmation message when they successfully change their profile to private, ensuring clarity of the action taken.
+- At least 75% of users should express satisfaction with the privacy feature in a follow-up survey conducted one month after implementation.
+
+Test Outline:
+- Verify that the profile privacy setting effectively hides all personal information except the name when activated.
+- Check that users receive a confirmation message upon changing their profile status to private.
+- Conduct a survey to measure user satisfaction regarding the privacy feature and its effectiveness.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US011,"As a site member, I want to mark my email address as private even if the rest of my profile is not, so that no one can contact me.","User Story:
+As a site member, I want the option to designate my email address as private, regardless of the visibility settings of my other profile information, so that I can maintain my privacy and prevent unsolicited contact from other users.
+
+Acceptance Criteria:
+- Users must have a clear toggle option to mark their email address as private, which should be easily accessible in the account settings.
+- When the email is marked as private, it should not be visible to any other users, ensuring 100% confidentiality.
+- At least 85% of users should indicate satisfaction with the privacy feature in a follow-up survey conducted within one month of implementation.
+
+Test Outline:
+- Verify that the toggle for marking the email as private is functional and easily found in the account settings.
+- Check that the email address is not displayed to other users when the privacy setting is activated.
+- Conduct a survey to measure user satisfaction regarding the privacy feature and its effectiveness.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US012,"As a site member, I want to send an email to any member via a form, so that we can connect.","User Story:
+As a site member, I want to utilize a user-friendly email form to send messages to any other member, enabling seamless communication and fostering connections within the community, with a goal of increasing member interactions by at least 25%.
+
+Acceptance Criteria:
+- The email form must allow users to input a recipient's username, subject line, and message body, with a maximum character limit of 500 for the message.
+- Emails should be sent successfully within 2 seconds of submission, with a confirmation notification displayed to the sender.
+- At least 75% of users should report satisfaction with the email feature in follow-up surveys, indicating it enhances their ability to connect with others.
+
+Test Outline:
+- Verify that the email form captures all required fields and adheres to the character limit for messages.
+- Measure the time taken for the email to be sent and the confirmation notification to appear.
+- Conduct user surveys to evaluate the effectiveness and satisfaction of the email communication feature.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)",5,4,-1.0,4,4,0.0,5,4,-1.0,4,5,1.0,5,5,0.0,3,5,2.0,4,4,0.0,—
+US013,"As a site administrator, I want to read practicing and training applications and approve or reject them, so that only applicants who qualify can become CSPs or CSTs.","User Story:
+As a site administrator, I want to review and evaluate applications for practicing and training positions so that I can approve or reject candidates based on their qualifications, ensuring that only eligible individuals become Certified Service Providers (CSPs) or Certified Service Trainers (CSTs), thereby maintaining a high standard of service quality.
+
+Acceptance Criteria:
+- The application review process must allow for a decision (approve or reject) to be made within 48 hours of submission for at least 90% of applications.
+- A standardized scoring rubric must be implemented to assess qualifications, ensuring consistency in evaluations across all applications.
+- At least 95% of approved candidates should meet the performance benchmarks set for CSPs and CSTs within their first 6 months of service.
+
+Test Outline:
+- Track the time taken to review and decide on applications to ensure compliance with the 48-hour target.
+- Review the scoring rubric application on a sample of applications to confirm consistency in evaluations.
+- Monitor the performance of newly approved CSPs and CSTs to verify that 95% meet the established benchmarks.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,4,-1.0,3,5,2.0,4,5,1.0,—
+US014,"As a site administrator, I want to edit any site member profile, so that I can correct problems for members.","User Story:
+As a site administrator, I want the capability to edit any member's profile on the site so that I can promptly address and rectify issues for members, ensuring a seamless user experience and maintaining a member satisfaction rate of at least 90%.
+
+Acceptance Criteria:
+- The system must allow administrators to access and modify all fields in a member's profile, including contact information, preferences, and account status.
+- Changes made to a member's profile should be saved and reflected in the system within 2 seconds.
+- A log of all profile edits must be maintained, with timestamps and the administrator's ID, to ensure accountability and transparency.
+
+Test Outline:
+- Verify that the administrator can access and edit all necessary fields in a member's profile.
+- Measure the time taken for changes to be saved and displayed in the system after editing.
+- Review the edit log to ensure it accurately records all modifications made to member profiles.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+capability to (NASA ARM)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US015,"As a site visitor, I want to read current news on the home page, so that I stay current on agile news.","User Story:
+As a site visitor, I want to access a dedicated section for current news on the home page so that I can stay informed about the latest developments in agile methodologies, enhancing my knowledge and engagement with the content by at least 25%.
+
+Acceptance Criteria:
+- The news section must display at least 5 of the most recent articles related to agile practices, updated daily.
+- Each article should include a publication date and a brief summary of no more than 100 words to provide context.
+- User engagement metrics should show a minimum increase of 25% in time spent on the home page after the news section is implemented.
+
+Test Outline:
+- Verify that the news section is present on the home page and displays the required number of articles.
+- Check that each article includes the publication date and summary as specified.
+- Analyze user engagement data to assess the increase in time spent on the home page post-implementation.","most (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US016,"As a site visitor, I want to access old news that is no longer on the home page, so that I can access things I remember from the past or that others mention to me.","User Story:
+As a site visitor, I want to have access to archived news articles that are no longer featured on the homepage so that I can easily retrieve information I recall or that others reference, enhancing my overall engagement with the site by at least 20%.
+
+Acceptance Criteria:
+- The archive must contain at least 12 months of past news articles, organized by date and category for easy navigation.
+- Users should be able to search the archive using keywords, with results displayed within 2 seconds.
+- At least 75% of users should indicate that the archive feature improves their ability to find relevant past news in user feedback surveys.
+
+Test Outline:
+- Verify that the archive includes news articles from the past year and is organized effectively.
+- Measure the response time for search queries within the archive to ensure it meets the 2-second requirement.
+- Conduct user feedback surveys to assess the perceived value of the archive feature in retrieving past news.","easy (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)",5,5,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US017,"As a site visitor, I want to email news items to the editor, so that they can be considered for publication.","User Story:
+As a site visitor, I want the ability to email news items directly to the editor so that my submissions can be reviewed for potential publication, increasing community engagement and contributing to a 20% rise in user-generated content.
+
+Acceptance Criteria:
+- The email submission form must be easily accessible from the homepage and include fields for the news item title, content, and the submitter's contact information.
+- Users should receive a confirmation email within 5 minutes of submission, acknowledging receipt of their news item.
+- At least 75% of users should report satisfaction with the submission process in follow-up surveys.
+
+Test Outline:
+- Verify that the email submission form is functional and accessible from the homepage.
+- Measure the time taken to send confirmation emails after a news item is submitted.
+- Conduct user surveys to evaluate the ease of use and satisfaction with the submission process.","that (ISO 29148)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US018,"As a site editor, I want to set the following dates on a news item: Start Publishing Date, Old News Date, Stop Publishing Date, so that articles are published on and through appropriate dates.","User Story:
+As a site editor, I want to configure the Start Publishing Date, Old News Date, and Stop Publishing Date for each news item so that articles are published and removed from visibility on the correct dates, ensuring that content remains relevant and up-to-date, thereby increasing reader engagement by at least 20%.
+
+Acceptance Criteria:
+- The system must allow the editor to set the Start Publishing Date and Stop Publishing Date with a calendar interface, ensuring dates are selectable within a range of 1 year.
+- The Old News Date must be configurable to automatically change the status of articles to ""old"" after a specified period, with a minimum of 30 days from the Start Publishing Date.
+- At least 90% of articles should adhere to the specified publishing dates without manual intervention, as verified by a monthly audit.
+
+Test Outline:
+- Test the calendar interface to ensure it allows for the selection of dates within the specified range.
+- Verify that articles transition to ""old"" status correctly after the Old News Date is reached.
+- Conduct an audit of published articles to confirm compliance with the set publishing dates.","it (ISO 29148)
+that (ISO 29148)",4,4,0.0,4,4,0.0,5,5,0.0,4,4,0.0,5,5,0.0,3,5,2.0,4,4,0.0,—
+US019,"As a site member, I want to subscribe to an RSS feed of news, so that I remain sufficiently and easily informed.","User Story:
+As a site member, I want to subscribe to an RSS feed for news updates so that I can effortlessly stay informed about the latest developments, increasing my engagement with the site by at least 25%.
+
+Acceptance Criteria:
+- The RSS feed must provide updates at least 3 times per week, covering a variety of topics relevant to site members.
+- Users should be able to subscribe to the RSS feed with a single click, and confirmation of subscription should be received within 5 seconds.
+- At least 70% of subscribers should report that the RSS feed significantly enhances their awareness of site-related news in follow-up surveys.
+
+Test Outline:
+- Verify that the RSS feed is updated at the specified frequency and includes diverse topics.
+- Measure the time taken for users to receive confirmation after subscribing to the feed.
+- Conduct surveys to assess user satisfaction and perceived value of the RSS feed in keeping them informed.","that (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)",4,5,1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US020,"As a site editor, I want to assign priority numbers to news items, so that I can indicate which articles I want featured most prominently on the site.","User Story:
+As a site editor, I want to assign priority numbers to news articles so that I can clearly indicate which items should be featured prominently on the homepage, thereby increasing visibility and engagement with top stories by at least 25%.
+
+Acceptance Criteria:
+- The system must allow the assignment of priority numbers ranging from 1 to 10 for each news item.
+- Articles with higher priority numbers should automatically be displayed at the top of the news section within 2 seconds of being updated.
+- At least 85% of users should report that the priority system effectively highlights important news in user feedback surveys.
+
+Test Outline:
+- Verify that the priority assignment feature allows for numbers between 1 and 10 and updates the display order accordingly.
+- Measure the time taken for the homepage to reflect changes in article priority after updates are made.
+- Conduct user feedback surveys to evaluate the effectiveness of the priority system in enhancing article visibility.","that (ISO 29148)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US021,"As a site visitor, I want to see a list of all upcoming Certification Courses and can page through them if there are a lot, so that I can choose the best course for me.","User Story:
+As a site visitor, I want to access a comprehensive list of all upcoming Certification Courses with pagination functionality so that I can easily browse through the options and select the course that best fits my needs, increasing my course enrollment likelihood by at least 20%.
+
+Acceptance Criteria:
+- The list must display at least 20 courses per page, with a clear pagination control allowing navigation through a minimum of 5 pages.
+- Each course entry should include essential details such as course title, date, duration, and a brief description.
+- User engagement metrics should show a 20% increase in course inquiries or enrollments within 3 months of implementing the feature.
+
+Test Outline:
+- Verify that the course list displays the correct number of courses per page and that pagination controls function properly.
+- Check that all necessary course details are present and accurately displayed for each entry.
+- Analyze user engagement data to assess the impact of the new feature on course inquiries and enrollments.","best (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)
+best (NASA ARM)",4,4,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US022,"As a site visitor, I want to see a list of all upcoming Other Courses and can page through them if necessary, so that I can choose the best course for me.","User Story:
+As a site visitor, I want to access a comprehensive list of all upcoming courses categorized as ""Other Courses"" and have the ability to navigate through multiple pages if necessary, so that I can easily identify and select the course that best fits my interests, increasing my course enrollment likelihood by at least 20%.
+
+Acceptance Criteria:
+- The list must display at least 15 upcoming courses per page, with a pagination feature allowing users to navigate through a minimum of 5 pages.
+- Each course entry should include essential details such as course title, date, duration, and a brief description.
+- User engagement metrics should show a 20% increase in course inquiries or enrollments within 3 months of implementing the feature.
+
+Test Outline:
+- Verify that the list displays the required number of courses per page and that pagination functions correctly.
+- Check that all necessary course details are present and accurately displayed for each entry.
+- Analyze user engagement data to assess the impact of the new feature on course inquiries and enrollments.","best (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)
+best (NASA ARM)",4,4,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US023,"As a site visitor, I want to see a list of all upcoming Events, so that I can decide if I want to attend any.","User Story:
+As a site visitor, I want to access a comprehensive list of all upcoming events displayed on the website so that I can evaluate which events I may want to attend, increasing my engagement with the site by at least 25%.
+
+Acceptance Criteria:
+- The events list must include at least 15 upcoming events, with details such as date, time, location, and a brief description for each event.
+- The events should be sortable by date and category, with filters available to narrow down options based on user preferences.
+- At least 70% of visitors should indicate in feedback surveys that the events list helped them make informed decisions about attendance.
+
+Test Outline:
+- Verify that the events list displays a minimum of 15 upcoming events with all required details.
+- Test the sorting and filtering functionality to ensure it works correctly and efficiently.
+- Conduct user feedback surveys to measure the effectiveness of the events list in aiding decision-making.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)
+may (NASA ARM)",5,5,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US024,"As a trainer, I want to create a new course or event, so that site visitors can see it.","User Story:
+As a trainer, I want to develop and publish a new course or event on the platform so that site visitors can easily discover and enroll in it, increasing course enrollment by at least 25% within the first month of launch.
+
+Acceptance Criteria:
+- The course or event must be created with a detailed description, including objectives, duration, and prerequisites, and published within 2 business days.
+- The new course or event should be prominently displayed on the homepage and in the relevant category section, ensuring visibility to at least 90% of site visitors.
+- Track enrollment numbers and achieve at least a 25% increase in sign-ups compared to the previous course launch within the first month.
+
+Test Outline:
+- Review the course or event listing to ensure all required information is included and accurately presented.
+- Monitor website analytics to confirm that the new course or event is receiving adequate visibility and track enrollment metrics post-launch.","it (ISO 29148)
+that (ISO 29148)
+adequate (ISO 29148)
+all (ISO 29148)
+adequate (NASA ARM)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US025,"As a trainer, I want to create an Other Course or Event I am charged a listing fee for that activity, so that I don't list events I don't really intend to hold.","User Story:
+As a trainer, I want to establish a listing fee for creating an Other Course or Event so that I can ensure that only serious and intended events are posted, reducing the number of uncommitted listings by at least 50%.
+
+Acceptance Criteria:
+- A listing fee must be implemented, with a minimum charge of $50 for each event or course created.
+- The system should track and report the number of events listed before and after the fee implementation, aiming for a reduction of at least 50% in unverified listings.
+- User feedback should indicate that at least 85% of trainers feel the fee encourages more commitment to hosting events.
+
+Test Outline:
+- Verify that the listing fee is correctly applied during the event creation process.
+- Analyze the data on event listings to compare the number of serious listings before and after the fee is introduced.
+- Conduct surveys with trainers to assess their perceptions of the fee's impact on event commitment.","that (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",4,4,0.0,4,4,0.0,5,5,0.0,4,5,1.0,4,5,1.0,3,5,2.0,4,5,1.0,—
+US026,"As a site administrator, I want to create an Other Course or Event that is not charged a listing fee, so that the Scrum Alliance doesn't charge itself for Scrum Gatherings that it puts on.","User Story:
+As a site administrator, I want to establish a listing for an Other Course or Event that incurs no listing fee, ensuring that the Scrum Alliance can host Scrum Gatherings without incurring additional costs, thereby maintaining budget efficiency and promoting more events.
+
+Acceptance Criteria:
+- The listing process for Other Courses or Events must be clearly defined and accessible, with no associated fees for at least 100% of Scrum Gatherings organized by the Scrum Alliance.
+- The system should automatically categorize these events to differentiate them from fee-based listings.
+- At least 90% of event organizers should confirm that the no-fee listing process is straightforward and beneficial in post-event feedback.
+
+Test Outline:
+- Review the listing process to ensure it allows for the creation of fee-free events without complications.
+- Monitor the categorization of events to confirm that they are correctly identified as Other Courses or Events.
+- Collect feedback from event organizers to evaluate their satisfaction with the no-fee listing feature.","it (ISO 29148)
+that (ISO 29148)
+these (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",4,4,0.0,3,4,1.0,5,4,-1.0,3,5,2.0,4,5,1.0,2,5,3.0,4,4,0.0,—
+US027,"As a site administrator, I want to set the listing fee per Other Course or Event, so that we have flexibility on what to charge in the future.","User Story:
+As a site administrator, I want the capability to establish and adjust the listing fee for each Other Course or Event individually, so that we can strategically optimize our pricing model and increase revenue by at least 20% over the next fiscal year.
+
+Acceptance Criteria:
+- The system must allow for the setting of listing fees ranging from $5 to $100 for each course or event.
+- Changes to the listing fee should be reflected in the system within 5 minutes of being updated.
+- A report should be generated monthly to analyze the impact of fee adjustments on course/event enrollment and overall revenue.
+
+Test Outline:
+- Verify that the listing fee can be set and modified within the specified range for various courses and events.
+- Check that the updated fees are displayed correctly on the site within the 5-minute timeframe.
+- Review the monthly revenue report to assess the correlation between listing fees and enrollment figures.","that (ISO 29148)
+capability to (NASA ARM)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US028,"As a trainer, I want to update one of my existing courses or events, so that it reflects accurate information.","User Story:
+As a trainer, I want to revise the content of one of my existing courses or events to ensure it contains accurate and up-to-date information, thereby increasing participant satisfaction and knowledge retention by at least 20%.
+
+Acceptance Criteria:
+- The course or event materials must be updated to reflect the latest information and best practices, with changes documented and approved by a subject matter expert.
+- All updates should be completed and published at least 2 weeks prior to the next scheduled session.
+- Post-event feedback should indicate that at least 85% of participants found the information relevant and useful.
+
+Test Outline:
+- Review the updated course materials against the latest industry standards to confirm accuracy.
+- Check the publication date of the updated materials to ensure compliance with the 2-week deadline.
+- Analyze participant feedback to measure satisfaction and relevance of the updated content.","best (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+best (NASA ARM)",4,4,0.0,3,4,1.0,4,4,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US029,"As a trainer, I want to delete one of my courses or events, so that it's no longer listed if I cancel for some reason.","User Story:
+As a trainer, I want the ability to remove a specific course or event from my listing so that it is no longer visible to users, ensuring that outdated or canceled offerings do not mislead potential participants and maintaining an accurate schedule.
+
+Acceptance Criteria:
+- The system must allow trainers to delete a course or event with a confirmation prompt to prevent accidental deletions.
+- Deleted courses or events should be removed from the listing within 5 seconds of the action being confirmed.
+- A notification should be sent to the trainer confirming the successful deletion of the course or event.
+
+Test Outline:
+- Test the deletion process to ensure that the confirmation prompt appears and that the course or event is removed from the listing within the specified time.
+- Verify that the notification is received by the trainer after a successful deletion.","it (ISO 29148)
+that (ISO 29148)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US030,"As a trainer, I want to copy one of my courses or events, so that I can create a new one.","User Story:
+As a trainer, I want the ability to duplicate an existing course or event so that I can efficiently create a new course with similar content, reducing my setup time by at least 50% and allowing me to focus on enhancing the learning experience.
+
+Acceptance Criteria:
+- The duplication feature must allow for the copying of all course materials, including descriptions, schedules, and participant lists, with a success rate of 95% in preserving original content.
+- Users should be able to make edits to the duplicated course within 2 minutes of copying it.
+- At least 85% of trainers should express satisfaction with the duplication process in feedback surveys conducted after implementation.
+
+Test Outline:
+- Test the duplication feature to ensure all relevant course materials are copied accurately.
+- Measure the time taken for trainers to edit the duplicated course after copying.
+- Collect and analyze feedback from trainers regarding their experience with the duplication feature.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US031,"As a site admin, I want to delete any course or event, so that I can remove things that will no longer occur.","User Story:
+As a site admin, I want the capability to delete any course or event from the platform so that I can efficiently manage content and ensure that only relevant offerings are displayed, reducing clutter by at least 50%.
+
+Acceptance Criteria:
+- The deletion process must allow for the removal of courses or events with a confirmation step to prevent accidental deletions.
+- The system should update the content list within 2 seconds after a deletion is confirmed.
+- A log of deleted items must be maintained, allowing for recovery of deleted courses or events within 30 days.
+
+Test Outline:
+- Test the deletion process to ensure it includes a confirmation step and successfully removes the selected course or event.
+- Measure the time taken for the content list to refresh after a deletion is executed.
+- Verify that the log accurately records deleted items and allows for recovery within the specified timeframe.","it (ISO 29148)
+that (ISO 29148)
+capability to (NASA ARM)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US032,"As a site editor, I want to update any course or event, so that I can fix things the original author hasn't.","User Story:
+As a site editor, I want the capability to modify any course or event details so that I can correct inaccuracies or enhance the content that the original author may have overlooked, ensuring that all information is accurate and up-to-date, which will improve user trust and engagement by at least 20%.
+
+Acceptance Criteria:
+- The editing interface must allow for updates to at least 5 key fields, including title, description, date, time, and location.
+- Changes made by the editor should be saved and reflected on the site within 2 minutes of submission.
+- User feedback should indicate a satisfaction rate of 85% or higher regarding the accuracy and relevance of course and event information after updates.
+
+Test Outline:
+- Verify that the editing interface provides access to all 5 key fields for modification.
+- Measure the time taken for changes to appear on the site after submission to ensure compliance with the 2-minute requirement.
+- Conduct user surveys to evaluate satisfaction with the accuracy of information post-editing.","that (ISO 29148)
+all (ISO 29148)
+capability to (NASA ARM)
+can (NASA ARM)
+may (NASA ARM)",4,4,0.0,3,4,1.0,5,5,0.0,3,5,2.0,4,5,1.0,2,5,3.0,4,5,1.0,—
+US033,"As a trainer, I want to turn a course into an event or an event into a course, so that I can correctly classify anything that was entered incorrectly.","User Story:
+As a trainer, I want the capability to convert a course into an event or vice versa, so that I can accurately categorize all entries and ensure that 100% of the training materials are correctly classified, enhancing the organization and accessibility of our offerings.
+
+Acceptance Criteria:
+- The system must allow for seamless conversion between courses and events with a success rate of 99% in maintaining all associated data.
+- Users should be able to complete the conversion process within 2 minutes, ensuring efficiency in managing training materials.
+- Post-conversion feedback should indicate that at least 85% of users find the classification process intuitive and effective.
+
+Test Outline:
+- Test the conversion functionality with various courses and events to ensure data integrity and successful classification.
+- Measure the time taken for users to complete the conversion process to confirm it meets the 2-minute requirement.
+- Collect user feedback to evaluate the ease of use and effectiveness of the classification feature.","effective (ISO 29148)
+intuitive (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+be able to (NASA ARM)
+capability to (NASA ARM)
+effective (NASA ARM)
+can (NASA ARM)",4,4,0.0,3,4,1.0,5,5,0.0,3,5,2.0,4,5,1.0,2,5,3.0,4,5,1.0,—
+US034,"As a site visitor, I want to have an advanced search option that lets me fill in a form of search criteria, so that I can quickly find what I am looking for.","User Story:
+As a site visitor, I want an advanced search feature that allows me to input specific search criteria through a detailed form so that I can efficiently locate the information or products I need, reducing my search time by at least 40%.
+
+Acceptance Criteria:
+- The advanced search form must include at least 5 customizable fields, such as keywords, categories, date ranges, and other relevant filters.
+- The search results should be generated within 2 seconds after submitting the form.
+- At least 85% of users should indicate that the advanced search option significantly improves their ability to find relevant content in user feedback surveys.
+
+Test Outline:
+- Verify that the advanced search form contains the required fields and allows for user input.
+- Measure the response time for search results after form submission to ensure it meets the 2-second requirement.
+- Conduct user feedback surveys to evaluate the effectiveness and usability of the advanced search feature.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",5,5,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US035,"As a site visitor, I want to view a course I can click on the trainer's name and be taken to the trainer's profile, so that I can read more about a trainer before registering for a course.","User Story:
+As a site visitor, I want to be able to click on a trainer's name associated with a course to access their profile, so that I can gather detailed information about the trainer's qualifications and experience before making a decision to register for a course, thereby increasing my confidence in the selection process by at least 25%.
+
+Acceptance Criteria:
+- Each course listing must include a clickable trainer's name that redirects to the trainer's profile page.
+- The trainer's profile should display at least 5 key qualifications, a brief biography, and user ratings with a minimum of 10 reviews.
+- At least 75% of users should indicate in feedback surveys that the trainer profiles positively influenced their course registration decisions.
+
+Test Outline:
+- Verify that clicking on the trainer's name successfully redirects to the correct profile page.
+- Check that the trainer's profile contains the required qualifications, biography, and user ratings.
+- Conduct user surveys to measure the impact of trainer profiles on course registration decisions.","that (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)",4,4,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US036,"As a site visitor, I want to subscribe to an RSS feed of upcoming courses and events, so that I am up to day without having to visit the site.","User Story:
+As a site visitor, I want to subscribe to an RSS feed that provides updates on upcoming courses and events so that I can stay informed without needing to frequently check the website, increasing my engagement with the content by at least 25%.
+
+Acceptance Criteria:
+- The RSS feed must include notifications for at least 10 upcoming courses and events, updated in real-time.
+- Users should be able to subscribe to the feed with a single click, and confirmation of subscription should be received within 5 seconds.
+- At least 70% of subscribers should report that the RSS feed effectively keeps them informed about new offerings in follow-up surveys.
+
+Test Outline:
+- Verify that the RSS feed includes the required number of upcoming courses and events and updates correctly.
+- Measure the time taken for users to receive subscription confirmation after clicking the subscribe button.
+- Conduct user surveys to evaluate the effectiveness of the RSS feed in keeping subscribers informed.","that (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)",4,4,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US037,"As a site visitor, I want to read FAQs, so that I can get quick answers.","User Story:
+As a site visitor, I want to access a comprehensive FAQ section so that I can quickly find answers to common questions, reducing my inquiry time by at least 50% and enhancing my overall experience on the site.
+
+Acceptance Criteria:
+- The FAQ section must contain at least 20 frequently asked questions covering key topics relevant to users.
+- Each question should have a clear and concise answer, with an average response length of no more than 150 words.
+- User feedback should indicate that at least 85% of visitors found the FAQ section helpful in resolving their queries.
+
+Test Outline:
+- Review the FAQ section to ensure it includes the required number of questions and that answers are concise and informative.
+- Conduct user surveys to measure the effectiveness of the FAQ section in providing quick answers to visitors.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US038,"As a site editor, I want to maintain a FAQ section, so that support gets fewer easily answered questions.","User Story:
+As a site editor, I want to establish and regularly update a comprehensive FAQ section so that the volume of easily answered questions directed to support is reduced by at least 40%, allowing the support team to focus on more complex inquiries.
+
+Acceptance Criteria:
+- The FAQ section must contain a minimum of 20 common questions and answers relevant to user inquiries.
+- The FAQ content should be reviewed and updated at least once every quarter to ensure accuracy and relevance.
+- User feedback should indicate that at least 75% of users found the FAQ section helpful in resolving their questions without needing to contact support.
+
+Test Outline:
+- Review the FAQ section to confirm it includes the required number of questions and answers.
+- Track the number of support inquiries before and after the FAQ section is implemented to measure the reduction in easily answered questions.
+- Conduct user surveys to evaluate the perceived usefulness of the FAQ section in addressing common concerns.","it (ISO 29148)
+that (ISO 29148)
+every (ISO 29148)
+more (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US039,"As a site visitor, I want to do a full-text search of the FAQs, so that I can find an answer quickly.","User Story:
+As a site visitor, I want to perform a full-text search across the FAQs section so that I can quickly locate answers to my questions, reducing the time spent searching by at least 50%.
+
+Acceptance Criteria:
+- The full-text search feature must return relevant results within 2 seconds for any query entered.
+- The search results should highlight matching keywords to enhance visibility and understanding.
+- At least 85% of users should indicate that the search functionality significantly improves their ability to find information in follow-up feedback.
+
+Test Outline:
+- Test the search feature with various queries to ensure results are returned within the 2-second timeframe.
+- Review the search results to confirm that keywords are highlighted appropriately.
+- Collect user feedback to evaluate the effectiveness of the full-text search in facilitating quick access to information.","that (ISO 29148)
+can (NASA ARM)",5,5,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US040,"As a site member, I want to download the latest training material and methodology PDFs, so that I have them.","User Story:
+As a site member, I want to have the ability to download the most recent training materials and methodology PDFs so that I can access up-to-date resources anytime, ensuring I stay informed and improve my skills by at least 20%.
+
+Acceptance Criteria:
+- The download section must provide access to at least 5 different training material PDFs and 3 methodology PDFs, all updated quarterly.
+- Users should be able to download each PDF within 5 seconds of clicking the download link.
+- At least 85% of site members should express satisfaction with the availability and accessibility of the training materials in follow-up feedback.
+
+Test Outline:
+- Verify that the download section contains the required number of training and methodology PDFs.
+- Measure the download time for each PDF to ensure it meets the 5-second requirement.
+- Conduct a survey to assess user satisfaction regarding the availability and quality of the training materials.","most (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)",4,4,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US041,"As a visitor, I want to download presentations, PDFs, etc. on Scrum, so that I can learn from them or use them.","User Story:
+As a visitor, I want the ability to download various resources such as presentations and PDFs on Scrum so that I can enhance my knowledge and apply best practices, aiming to increase my understanding of Scrum methodologies by at least 40%.
+
+Acceptance Criteria:
+- The platform must provide a minimum of 15 downloadable resources related to Scrum, including presentations and PDFs.
+- Downloads should be accessible with a single click and completed within 5 seconds for 95% of users.
+- At least 85% of users should indicate that the downloadable materials significantly contributed to their learning in follow-up feedback.
+
+Test Outline:
+- Verify that at least 15 resources are available for download and are relevant to Scrum.
+- Measure the download completion time to ensure it meets the 5-second requirement.
+- Conduct user feedback sessions to evaluate the perceived value of the downloadable resources in enhancing their Scrum knowledge.","best (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)
+best (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US042,"As a site member, I want to scroll through a listing of jobs, so that I can see if there any I am interested in.","User Story:
+As a site member, I want to have the ability to scroll through a comprehensive job listing so that I can easily identify positions that match my interests and qualifications, increasing my job application rate by at least 20%.
+
+Acceptance Criteria:
+- The job listing must display at least 50 job postings at a time, with options to filter by location, job type, and industry.
+- The scrolling experience should be smooth, with a loading time of no more than 2 seconds for additional job postings.
+- At least 75% of users should indicate in feedback surveys that the job listing feature helps them find relevant job opportunities more efficiently.
+
+Test Outline:
+- Verify that the job listing displays a minimum of 50 postings and includes filtering options.
+- Measure the loading time for additional job postings when scrolling to ensure it meets the 2-second requirement.
+- Conduct user feedback surveys to evaluate the effectiveness of the job listing in aiding job searches.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US043,"As a recruiter, I want to post a help wanted ad, so that I can attract candidates.","User Story:
+As a recruiter, I want to create and publish a detailed help wanted advertisement on multiple job platforms so that I can attract a diverse pool of qualified candidates, increasing the number of applications by at least 25% within the first month.
+
+Acceptance Criteria:
+- The job ad must include a clear job title, detailed responsibilities, required qualifications, and benefits, ensuring it meets industry standards.
+- The ad should be posted on at least 5 different job boards and social media platforms to maximize visibility.
+- Track the number of applications received within the first month, aiming for a minimum increase of 25% compared to previous job postings.
+
+Test Outline:
+- Review the job ad to ensure all required elements are included and clearly articulated.
+- Monitor the posting process to confirm that the ad is successfully published on the targeted platforms.
+- Analyze application data after one month to evaluate the increase in candidate applications.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US044,"As a site admin, I want to approve each help wanted ad before it gets to the site, so that we're sure of the quality of jobs being listed.","User Story:
+As a site admin, I want to implement a review process for all help wanted advertisements before they are published on the site so that we can ensure that 100% of job listings meet our quality standards, thereby enhancing the credibility of our platform.
+
+Acceptance Criteria:
+- Each job advertisement must be reviewed and approved within 24 hours of submission.
+- A quality checklist must be established, covering at least 5 key criteria that each ad must meet to be approved.
+- User feedback should indicate that at least 85% of job seekers find the quality of listings satisfactory in follow-up surveys.
+
+Test Outline:
+- Track the time taken for each job ad to be reviewed and approved to ensure compliance with the 24-hour requirement.
+- Review a sample of approved ads against the quality checklist to confirm adherence to the established criteria.
+- Conduct user surveys to gather feedback on the perceived quality of job listings.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",5,5,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US045,"As a site admin, I want to be emailed whenever a job is submitted, so that I am aware of it and can decide if I want to post it.","User Story:
+As a site admin, I want to receive an email notification each time a job is submitted so that I can promptly review the submission and determine whether to publish it, ensuring that I maintain control over job postings and respond to new opportunities within 5 minutes.
+
+Acceptance Criteria:
+- An email notification must be sent to the admin's registered email address within 1 minute of a job submission.
+- The email should include key details of the job submission, such as the job title, company name, and submission timestamp.
+- Admins should have the option to enable or disable email notifications through the site settings.
+
+Test Outline:
+- Submit a job and verify that an email notification is received within the 1-minute timeframe.
+- Check the content of the email to ensure it includes all required job details.
+- Test the functionality of enabling and disabling email notifications in the site settings.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US046,"As a site member, I want to subscribe to an RSS feed of jobs available, so that I can read them without visiting the site.","User Story:
+As a site member, I want to subscribe to an RSS feed that provides updates on available job listings so that I can conveniently access new opportunities without needing to visit the site, increasing my job application efficiency by at least 25%.
+
+Acceptance Criteria:
+- The RSS feed must include job postings updated in real-time, with new listings available within 5 minutes of being posted on the site.
+- Users should have the option to filter job alerts by category, location, and job type within the RSS feed settings.
+- At least 70% of subscribers should report that the RSS feed significantly enhances their ability to stay informed about job opportunities in follow-up surveys.
+
+Test Outline:
+- Verify that the RSS feed updates with new job postings within the specified 5-minute timeframe.
+- Check that users can successfully apply filters for job categories, locations, and types in their RSS feed settings.
+- Conduct user surveys to evaluate the perceived value and effectiveness of the RSS feed in job search activities.","that (ISO 29148)
+can (NASA ARM)",5,5,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US047,"As a site admin, I want to edit and delete help wanted ads, so that I can correct small problems or make sure each ad complies with site guidelines.","User Story:
+As a site admin, I want the capability to edit and delete help wanted advertisements so that I can promptly address any inaccuracies and ensure that all listings adhere to our site’s compliance standards, maintaining a quality rate of 100% for published ads.
+
+Acceptance Criteria:
+- The system must allow for edits to be made to any help wanted ad within 5 minutes of identifying an issue.
+- Deletion of ads should be completed within 2 minutes of the request, with a confirmation prompt to prevent accidental removals.
+- A compliance check should be implemented to flag any ads that do not meet site guidelines, with at least 95% accuracy in identifying non-compliant ads.
+
+Test Outline:
+- Test the editing functionality by making changes to a sample ad and verifying that updates are saved correctly within the 5-minute window.
+- Measure the time taken to delete an ad and ensure the confirmation prompt appears before final removal.
+- Review flagged ads to assess the effectiveness of the compliance check in identifying guideline violations.","that (ISO 29148)
+all (ISO 29148)
+capability to (NASA ARM)
+can (NASA ARM)",4,4,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US048,"As a site admin, I want to stop publishing jobs on the site 30 days after being posted, so that jobs that may have been filled aren't still listed when the hiring party forgets to come back and delete the ad.","User Story:
+As a site admin, I want to automatically remove job postings from the site 30 days after their initial publication so that outdated listings do not remain visible, thereby improving the relevance of job opportunities and increasing user trust by at least 20%.
+
+Acceptance Criteria:
+- Job postings must be automatically unpublished exactly 30 days after the posting date without requiring manual intervention.
+- A notification system should alert the hiring party 7 days before their job is scheduled to be unpublished, allowing them to take action if needed.
+- User feedback should indicate a 90% satisfaction rate regarding the accuracy and relevance of job listings in follow-up surveys.
+
+Test Outline:
+- Verify that job postings are removed from the site precisely 30 days after being published.
+- Check that notifications are sent to hiring parties 7 days prior to the unpublishing of their job ads.
+- Conduct user surveys to assess satisfaction with the accuracy of job listings post-implementation.",that (ISO 29148),4,4,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US049,"As a recruiter, I want to be able to extend an ad for another 30 days by visiting the site and updating the posting, so that my ad remains active.","User Story:
+As a recruiter, I want the capability to extend my job advertisement for an additional 30 days by accessing the site and updating the posting, ensuring that my ad remains visible to potential candidates and increases application rates by at least 20%.
+
+Acceptance Criteria:
+- The system must allow recruiters to extend the ad duration with a clear option available on the posting page.
+- The extension process should be completed within 2 minutes of initiating the update.
+- At least 75% of recruiters should report satisfaction with the ease of extending their job ads in follow-up feedback.
+
+Test Outline:
+- Verify that the option to extend the ad for 30 days is clearly visible and functional on the posting page.
+- Measure the time taken from the start of the extension process to its completion to ensure it meets the 2-minute requirement.
+- Conduct a survey to assess recruiter satisfaction regarding the ad extension feature.","it (ISO 29148)
+that (ISO 29148)
+capability to (NASA ARM)",4,4,0.0,4,4,0.0,5,4,-1.0,4,5,1.0,5,5,0.0,3,5,2.0,4,4,0.0,—
+US050,"As an advertiser, I want to be emailed a reminder seven day before an ad is about to expire, so that I can go extend the ad.","User Story:
+As an advertiser, I want to receive an email notification 7 days prior to the expiration of my advertisement so that I can proactively extend the ad, ensuring continuous visibility and maximizing my campaign effectiveness.
+
+Acceptance Criteria:
+- An automated email reminder must be sent exactly 7 days before the ad expiration date for 100% of active advertisements.
+- The email should include key details such as the ad title, expiration date, and a direct link to the extension page.
+- At least 85% of advertisers should confirm that the reminder helps them manage their ad campaigns more effectively in follow-up feedback.
+
+Test Outline:
+- Verify that the email reminder is triggered correctly for all active ads 7 days before expiration.
+- Check the content of the email to ensure it includes all necessary information and links.
+- Conduct a survey to assess advertiser satisfaction with the reminder system and its impact on ad management.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",4,4,0.0,4,4,0.0,5,4,-1.0,4,5,1.0,5,5,0.0,3,5,2.0,4,4,0.0,—
+US051,"As a site visitor, I want to read a new article on the front page about once a week, so that I am up on all the latest happenings.","User Story:
+As a site visitor, I want to see a new article featured on the front page at least once a week so that I can stay informed about the latest news and developments, increasing my engagement with the site by 25%.
+
+Acceptance Criteria:
+- A new article must be published and displayed on the front page every 7 days without fail.
+- The article should cover trending topics or significant events relevant to our audience, ensuring a minimum of 500 views within the first week of publication.
+- User feedback should indicate that at least 85% of visitors find the new content valuable and engaging in weekly surveys.
+
+Test Outline:
+- Track the publication schedule to confirm that a new article is posted every week.
+- Monitor article view counts to ensure they meet the 500-view target within the first week.
+- Conduct weekly surveys to gather visitor feedback on the perceived value of the new articles.","that (ISO 29148)
+significant (ISO 29148)
+every (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,5,5,0.0,3,5,2.0,4,5,1.0,1,5,4.0,3,5,2.0,—
+US052,"As the site editor, I want to include a teaser with each article, so that site visitors can decide if they want to read the rest.","User Story:
+As the site editor, I want to implement a teaser feature for each article that provides a brief summary of the content, enabling site visitors to quickly assess their interest and increasing the click-through rate by at least 20%.
+
+Acceptance Criteria:
+- Each article must have a teaser of no more than 150 characters that captures the main idea effectively.
+- Teasers should be displayed prominently on the homepage and article listing pages, ensuring visibility for at least 90% of visitors.
+- Monitor and report on the click-through rate of articles with teasers compared to those without, aiming for a minimum increase of 20%.
+
+Test Outline:
+- Review the implementation of the teaser feature to ensure it adheres to the 150-character limit and accurately summarizes the article.
+- Analyze website analytics to compare click-through rates before and after the teaser feature is introduced.
+- Conduct user feedback sessions to gather insights on the effectiveness and appeal of the teaser summaries.","it (ISO 29148)
+that (ISO 29148)
+those (ISO 29148)
+more (NASA ARM)",4,4,0.0,4,4,0.0,5,4,-1.0,4,5,1.0,5,5,0.0,3,5,2.0,4,4,0.0,—
+US053,"As a site member who has read a teaser on the front page, I want to read the entire article so that I can finish articles that appeal to me.","User Story:
+As a site member who has read a teaser on the front page, I want to access the full article seamlessly so that I can complete reading content that interests me, increasing my reading time by at least 25% and enhancing my overall satisfaction with the site.
+
+Acceptance Criteria:
+- The full article must be accessible with a single click from the teaser, with no more than 2 seconds of loading time.
+- Articles should be formatted for readability on both desktop and mobile devices, ensuring a consistent experience across platforms.
+- At least 85% of users should indicate in feedback surveys that they find the transition from teaser to full article smooth and user-friendly.
+
+Test Outline:
+- Test the click functionality from the teaser to the full article to ensure it meets the 2-second loading requirement.
+- Review the article formatting on various devices to confirm consistency and readability.
+- Conduct user feedback sessions to evaluate the perceived ease of accessing full articles from teasers.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US054,"As the site editor, I want to add an article to the site, so that the site has plenty of content.","User Story:
+As the site editor, I want to publish a new article on the website so that we can increase our content library by at least 5 articles per month, enhancing user engagement and improving our search engine ranking.
+
+Acceptance Criteria:
+- The article must be at least 800 words long and include relevant images or graphics to support the content.
+- The article should be optimized for SEO, achieving a keyword density of 1-2% for targeted keywords.
+- User engagement metrics, such as time spent on the article and shares on social media, should increase by at least 20% within the first month of publication.
+
+Test Outline:
+- Review the published article to ensure it meets the word count and includes appropriate multimedia elements.
+- Use SEO tools to analyze the article's keyword optimization and make adjustments as necessary.
+- Monitor user engagement metrics post-publication to evaluate the impact of the new content.","it (ISO 29148)
+that (ISO 29148)
+appropriate (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,4,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,4,1.0,—
+US055,"As a site editor, I want to set start publishing dates, old article date, and stop publishing dates for articles, so that articles appear only during appropriate periods.","User Story:
+As a site editor, I want to establish specific start and stop publishing dates, as well as designate the original publication dates for articles, so that content is displayed only during relevant timeframes, ensuring a 100% compliance with our content calendar and enhancing user engagement by at least 20%.
+
+Acceptance Criteria:
+- The system must allow editors to set a start date and an end date for each article, with the ability to schedule articles at least 30 days in advance.
+- The original publication date must be clearly displayed on the article page, ensuring transparency for readers.
+- At least 90% of articles should adhere to the scheduled publishing dates without any discrepancies in a quarterly review.
+
+Test Outline:
+- Verify that the date settings for start and stop publishing are functional and can be set for articles at least 30 days ahead.
+- Check that the original publication date is correctly displayed on the article page.
+- Review a sample of articles to ensure compliance with the scheduled publishing dates during the quarterly review.","that (ISO 29148)
+can (NASA ARM)",4,4,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US056,"As a site editor, I want to be able to designate whether or not an ever makes the home page, so that the best content is featured most prominently.","User Story:
+As a site editor, I want the capability to select which articles are featured on the homepage so that I can ensure that the top 5% of our content is highlighted, maximizing visibility and engagement with our audience.
+
+Acceptance Criteria:
+- The system must allow the editor to mark or unmark at least 10 articles for homepage display at any given time.
+- Changes made to the homepage content should be reflected in real-time, within 2 seconds of the editor's action.
+- A/B testing should show a minimum 20% increase in user engagement metrics (such as click-through rates) for articles featured on the homepage compared to those that are not.
+
+Test Outline:
+- Verify that the editor can successfully mark and unmark articles for the homepage.
+- Measure the time taken for changes to appear on the homepage after the editor's action.
+- Analyze user engagement metrics before and after implementing the homepage feature to assess the impact.","that (ISO 29148)
+those (ISO 29148)
+capability to (NASA ARM)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US057,"As the site editor, I want to have pretty good control over how the article, so that articles are visually appealing.","User Story:
+As the site editor, I want to have robust control over the formatting and layout of articles so that I can ensure they are visually appealing and engaging, leading to a 25% increase in reader retention and interaction.
+
+Acceptance Criteria:
+- The editing interface must provide at least 5 customizable formatting options, including font styles, colors, images, and layout templates.
+- Changes made to the article's appearance should be previewed in real-time, allowing for adjustments before publication.
+- Post-publication analytics should show a minimum of 25% increase in average time spent on articles compared to previous formats.
+
+Test Outline:
+- Verify that the editing interface includes the required formatting options and that they function correctly.
+- Test the real-time preview feature to ensure it accurately reflects changes made to the article.
+- Analyze reader engagement metrics to confirm the targeted increase in retention and interaction.","robust (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,4,1.0,2,4,2.0,4,4,0.0,2,5,3.0,4,5,1.0,1,5,4.0,3,4,1.0,—
+US058,"As a site visitor, I want to click the link from the article teaser to take me directly to the body of the article. not to another teaser setup, so that I can easily finish the article.","User Story:
+As a site visitor, I want to click on the link from the article teaser to be directed straight to the full article content instead of another teaser page, so that I can seamlessly read and complete the article, enhancing my reading experience and reducing navigation time by at least 25%.
+
+Acceptance Criteria:
+- The link from the teaser must lead directly to the full article without any intermediate pages for 100% of articles.
+- The transition from the teaser to the article should occur within 2 seconds for 95% of users.
+- User feedback should indicate that at least 85% of visitors find the navigation process straightforward and efficient in follow-up surveys.
+
+Test Outline:
+- Test the links from multiple article teasers to ensure they direct users to the correct full articles without redirection.
+- Measure the loading time for the full article after clicking the teaser link to confirm it meets the 2-second requirement.
+- Conduct user surveys to evaluate satisfaction with the navigation experience.","efficient (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US059,"As a site editor, I want to be able to indicate whether an article is publicly available or for members only, so that visitors are incentivized to become members.","User Story:
+As a site editor, I want to have the capability to designate articles as either publicly accessible or restricted to members only, so that we can encourage more visitors to sign up for membership, aiming for a 20% increase in membership conversions within the next quarter.
+
+Acceptance Criteria:
+- The article management system must include a toggle feature to set the visibility status of each article as ""Public"" or ""Members Only.""
+- Changes to the article's visibility should be reflected on the site within 2 seconds of being saved.
+- Track membership conversion rates before and after implementing this feature, with a target of achieving at least a 20% increase.
+
+Test Outline:
+- Verify that the toggle feature correctly updates the visibility status of articles in the content management system.
+- Measure the time taken for the visibility change to appear on the site after saving.
+- Analyze membership conversion data to assess the impact of the new visibility options on user sign-ups.","this (ISO 29148)
+that (ISO 29148)
+capability to (NASA ARM)
+can (NASA ARM)
+more (NASA ARM)",5,5,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US060,"As a site visitor, I want to be able to read some of your articles, so that I can learn without first joining the site.","User Story:
+As a site visitor, I want to access a selection of articles without needing to register, so that I can evaluate the content quality and relevance before committing to membership, increasing the likelihood of conversion by at least 20%.
+
+Acceptance Criteria:
+- At least 5 articles must be available for free access, covering a range of topics relevant to our audience.
+- Each article should be accessible without any login requirements, allowing visitors to read them in full.
+- Track the number of visitors who read the articles and convert to members, aiming for a conversion rate of 20% or higher within 3 months of implementation.
+
+Test Outline:
+- Verify that the specified number of articles is available for free access on the site.
+- Monitor user engagement metrics to assess how many visitors read the articles and subsequently register for membership.
+- Analyze conversion rates to determine the effectiveness of offering free content in attracting new members.","that (ISO 29148)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US061,"As a site member, I want to have full access to all articles, so that there is a benefit to being a member.","User Story:
+As a site member, I want to gain unrestricted access to the entire library of articles so that I can fully utilize my membership benefits, leading to a 25% increase in member retention rates.
+
+Acceptance Criteria:
+- All articles must be accessible to members without any restrictions or paywalls.
+- Implement a tracking system to monitor article access frequency, aiming for at least 70% of members to read at least one article per month.
+- Conduct member satisfaction surveys to achieve a satisfaction score of 85% or higher regarding the value of article access.
+
+Test Outline:
+- Verify that all articles are available to members and that no content is restricted.
+- Analyze access data to ensure that at least 70% of members engage with the articles monthly.
+- Gather feedback through surveys to assess member satisfaction with the article access feature.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",5,5,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US062,"As a site visitor, I want to do a full-text search of article body, title, and author name, so that I can find what I want.","User Story:
+As a site visitor, I want to perform a full-text search across the article body, title, and author name so that I can efficiently locate specific content, increasing my search success rate by at least 25%.
+
+Acceptance Criteria:
+- The search functionality must return results from the article body, title, and author name with an accuracy rate of 90% or higher.
+- Search results should be displayed within 2 seconds of submitting the query.
+- At least 75% of users should indicate that the full-text search feature significantly improves their ability to find relevant articles in user feedback surveys.
+
+Test Outline:
+- Conduct searches using various keywords to verify that results include relevant articles based on the specified criteria.
+- Measure the response time for search results to ensure it meets the 2-second requirement.
+- Analyze user feedback to determine satisfaction levels regarding the effectiveness of the full-text search feature.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,4,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US063,"As a site visitor, I want to subscribe to an RSS feed of articles, so that I can read them without visiting the site.","User Story:
+As a site visitor, I want the ability to subscribe to an RSS feed of articles so that I can conveniently receive updates and read new content without needing to visit the site, increasing my engagement with the content by at least 25%.
+
+Acceptance Criteria:
+- The RSS feed must include all new articles published on the site within 24 hours of posting.
+- Users should be able to subscribe to the RSS feed with a single click, and confirmation of subscription should be provided immediately.
+- At least 70% of subscribers should report that the RSS feed enhances their content consumption experience in follow-up surveys.
+
+Test Outline:
+- Verify that the RSS feed is updated with new articles within the specified 24-hour timeframe.
+- Test the subscription process to ensure it requires only one click and provides immediate confirmation.
+- Conduct surveys to measure subscriber satisfaction regarding the usefulness of the RSS feed.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US064,"As a site visitor, I want to post comments about articles, so that others can read them.","User Story:
+As a site visitor, I want the ability to post comments on articles so that I can share my thoughts and insights, fostering community engagement and increasing article interaction by at least 25%.
+
+Acceptance Criteria:
+- Users must be able to submit comments with a character limit of 500 characters or less.
+- The comment section should display the most recent 10 comments in real-time, updating within 2 seconds of a new submission.
+- At least 70% of users should express satisfaction with the commenting feature in follow-up feedback surveys.
+
+Test Outline:
+- Verify that users can submit comments within the specified character limit.
+- Measure the time taken for the comment section to refresh and display new comments.
+- Conduct user feedback surveys to evaluate satisfaction with the commenting functionality.","most (ISO 29148)
+that (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)
+less (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US065,"As a site editor, I want to have a prominent area on the home page where I can put special announcements not necessarily news or articles, so that I can give them additional exposure.","User Story:
+As a site editor, I want to establish a dedicated section on the home page for special announcements that are not limited to news or articles, so that I can increase their visibility and engagement by at least 25%.
+
+Acceptance Criteria:
+- The announcement area must be visually distinct and occupy at least 20% of the home page space.
+- Announcements should be easily editable, allowing for updates within 5 minutes of submission.
+- Track user interactions with the announcements, aiming for a click-through rate of at least 10% within the first month of implementation.
+
+Test Outline:
+- Review the home page layout to ensure the announcement area meets the specified size and visibility criteria.
+- Test the editing functionality to confirm that changes can be made within the 5-minute timeframe.
+- Analyze click-through data to evaluate user engagement with the announcements.","that (ISO 29148)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US066,"As a site editor, I want to have some flexibility as to where things appear, so that I can accommodate different types of content.","User Story:
+As a site editor, I want the ability to customize the placement of content elements on the page so that I can effectively accommodate various content types, enhancing the overall layout and user engagement by at least 20%.
+
+Acceptance Criteria:
+- The editing interface must allow for drag-and-drop functionality for at least 5 different content types (e.g., text, images, videos, widgets, and ads).
+- Changes in content placement should be saved automatically and reflected on the live site within 2 seconds.
+- User engagement metrics, such as time spent on page and click-through rates, should show a minimum improvement of 20% after implementing the flexible layout options.
+
+Test Outline:
+- Test the drag-and-drop functionality to ensure it works seamlessly for all specified content types.
+- Measure the time taken for changes to appear on the live site after being saved.
+- Analyze user engagement metrics before and after the implementation to confirm the expected improvements.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,4,4,0.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,4,5,1.0,—
+US067,"As a trainer, I want to see the upcoming courses are what I want visitors to notice, so that they register and there's a benefit to my membership.","User Story:
+As a trainer, I want the upcoming courses prominently displayed on the homepage so that visitors can easily notice and register for them, leading to a 25% increase in course registrations and enhancing the value of my membership.
+
+Acceptance Criteria:
+- The upcoming courses section must be visually highlighted and updated in real-time to reflect the next 5 scheduled courses.
+- Course registration should be completed within 2 clicks from the homepage to streamline the process.
+- Achieve a registration conversion rate of at least 20% from visitors who view the upcoming courses section.
+
+Test Outline:
+- Check the visibility and layout of the upcoming courses section on the homepage to ensure it stands out.
+- Track the number of clicks required for a user to register for a course from the homepage.
+- Analyze registration data to confirm the conversion rate from the upcoming courses section.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,5,5,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US068,"As a site visitor, I want to see new content when I come to the site, so that I come back more often.","User Story:
+As a site visitor, I want to be presented with fresh content each time I visit the site so that I am encouraged to return at least twice a week, increasing overall site engagement by 25%.
+
+Acceptance Criteria:
+- The homepage must display at least 5 new articles or updates each week, ensuring a diverse range of topics.
+- Implement a content rotation system that guarantees no article is repeated within a 30-day period.
+- Track user return rates, aiming for at least 60% of visitors to return within a week of their initial visit.
+
+Test Outline:
+- Review the homepage weekly to confirm the presence of 5 new articles or updates.
+- Analyze the content rotation logs to ensure compliance with the 30-day no-repeat policy.
+- Monitor user analytics to evaluate the percentage of returning visitors within the specified timeframe.",that (ISO 29148),5,5,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US069,"As a site visitor, I want to have articles that interest me and are easy to get to, so that I come to the site for my agile news and learning.","User Story:
+As a site visitor, I want to access a curated selection of articles tailored to my interests and easily navigable so that I can consistently return to the site for my agile news and learning, increasing my visit frequency by at least 25%.
+
+Acceptance Criteria:
+- The site must feature a personalized article recommendation system that updates based on user preferences and reading history, with at least 5 relevant articles displayed on the homepage.
+- Articles should be categorized into at least 4 distinct topics related to agile methodologies for easier navigation.
+- User engagement metrics should show a minimum of 50% of visitors returning to the site within a month after their initial visit.
+
+Test Outline:
+- Test the recommendation system to ensure it accurately reflects user interests and displays the required number of articles.
+- Verify that articles are correctly categorized and easily accessible from the homepage.
+- Analyze user return rates to confirm that at least 50% of visitors are coming back within the specified timeframe.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,5,5,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US070,"As a site visitor, I want to know as soon as I visit what on earth Scrum is and why it needs an alliance, so that I don't bounce immediately oﬀ the page.","User Story:
+As a site visitor, I want to immediately understand what Scrum is and the importance of forming an alliance around it as soon as I land on the page, so that I am engaged and less likely to leave the site, aiming for a bounce rate reduction of at least 20%.
+
+Acceptance Criteria:
+- The landing page must feature a clear and concise introduction to Scrum within the first 5 seconds of loading, including its definition and key benefits.
+- An engaging visual or infographic should be included to illustrate the concept of Scrum and the rationale for an alliance, ensuring it captures attention effectively.
+- User analytics should show that at least 70% of visitors scroll past the initial section of the page after the introduction is displayed.
+
+Test Outline:
+- Measure the loading time of the landing page to ensure the introduction appears within 5 seconds.
+- Analyze user engagement metrics to confirm that 70% of visitors interact with content beyond the introduction.
+- Gather feedback through user surveys to assess clarity and interest generated by the initial content.","it (ISO 29148)
+that (ISO 29148)
+less (NASA ARM)",3,4,1.0,3,4,1.0,5,5,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US071,"As a site visitor, I want to know as I glance around the home page what on earth a CSM is and why I'd want to be one, so that I read more.","User Story:
+As a site visitor, I want a clear and engaging overview of what a Customer Success Manager (CSM) is and the benefits of pursuing this role prominently displayed on the home page, so that I am encouraged to explore further and increase my likelihood of engaging with the content by at least 25%.
+
+Acceptance Criteria:
+- The home page must feature a concise definition of a CSM, no longer than 50 words, along with at least 3 key benefits of the role.
+- The information should be visually highlighted and easily accessible within 2 clicks from the home page.
+- At least 70% of visitors should indicate increased interest in the CSM role through a follow-up survey after viewing the content.
+
+Test Outline:
+- Review the home page to ensure the CSM overview is present and meets the word count and benefit criteria.
+- Track user navigation to confirm that the information is accessible within 2 clicks.
+- Conduct a survey to measure visitor interest levels before and after exposure to the CSM content.","this (ISO 29148)
+that (ISO 29148)",3,4,1.0,3,4,1.0,5,5,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US072,"As a site visitor, I want to be able to get back to the home page quickly and easily, so that I don't get lost navigating.","User Story:
+As a site visitor, I want a prominent and easily accessible home page button on every page so that I can return to the home page quickly, reducing my navigation time by at least 25% and enhancing my overall browsing experience.
+
+Acceptance Criteria:
+- The home page button must be visible on all pages and should be located in the top-left corner for consistency.
+- Clicking the home page button should redirect users to the home page within 1 second.
+- At least 85% of users should indicate in feedback surveys that they find it easy to navigate back to the home page.
+
+Test Outline:
+- Check the visibility and placement of the home page button on various pages of the site.
+- Measure the time taken for the home page to load after clicking the button.
+- Conduct user feedback sessions to evaluate the ease of navigation back to the home page.","easy (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+every (ISO 29148)
+easy to (NASA ARM)
+can (NASA ARM)",4,4,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US073,"As a site visitor, I want to see a list of the most popular items on the site, so that I am most likely to read the most important or best content.","User Story:
+As a site visitor, I want to access a curated list of the top 10 most popular items on the site so that I can easily engage with the most relevant and high-quality content, increasing my likelihood of interaction by at least 25%.
+
+Acceptance Criteria:
+- The list must display the top 10 items based on user engagement metrics, such as views and shares, updated at least once every 24 hours.
+- Each item in the list should include a brief description and a thumbnail image to enhance visual appeal and context.
+- At least 70% of visitors should report that the popular items list effectively guides them to valuable content in user feedback surveys.
+
+Test Outline:
+- Verify that the list accurately reflects the top 10 items based on the latest engagement data.
+- Check that the list updates correctly within the specified 24-hour timeframe.
+- Conduct user feedback surveys to evaluate the effectiveness of the popular items list in driving content engagement.","most (ISO 29148)
+that (ISO 29148)
+every (ISO 29148)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US074,"As a trainer, I want to be assured that no one can submit the same answers multiple time and skew my results, so that my ratings are accurate.","User Story:
+As a trainer, I want to implement a system that prevents users from submitting identical answers multiple times so that I can ensure the integrity of my ratings and maintain accuracy in the evaluation process, achieving at least a 95% reliability rate in the results.
+
+Acceptance Criteria:
+- The system must detect and block duplicate submissions from the same user within a 24-hour period.
+- An alert should be generated for any attempted duplicate submissions, informing the user of the restriction.
+- Post-evaluation audits should confirm that less than 5% of submissions are duplicates, ensuring data accuracy.
+
+Test Outline:
+- Test the submission process by attempting to submit the same answers multiple times from the same user account to verify that duplicates are blocked.
+- Review the system logs to ensure that alerts are generated for any duplicate submission attempts.
+- Analyze the final evaluation results to confirm that the percentage of duplicate submissions remains below the 5% threshold.","that (ISO 29148)
+can (NASA ARM)
+less (NASA ARM)",3,4,1.0,3,4,1.0,5,5,0.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US075,"As a trainer, I want to be notified about the results of surveys about my classes, so that I can read them.","User Story:
+As a trainer, I want to receive timely notifications regarding the results of surveys conducted about my classes so that I can review feedback and make data-driven improvements, aiming for a minimum 20% increase in participant satisfaction in future sessions.
+
+Acceptance Criteria:
+- Notifications must be sent within 24 hours of survey completion, ensuring prompt access to feedback.
+- The notification should summarize key metrics, including average satisfaction scores and common comments, in a clear format.
+- At least 75% of trainers should report that the feedback received is actionable and valuable for enhancing their training sessions.
+
+Test Outline:
+- Monitor the notification system to ensure alerts are dispatched within the 24-hour timeframe.
+- Review the content of notifications to confirm they include essential metrics and feedback summaries.
+- Conduct a survey with trainers to evaluate the perceived usefulness of the feedback notifications.","that (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US076,"As a site admin, I want to see the results for each trainer and averages for the class, so that I can identify any outliers or possible problems.","User Story:
+As a site admin, I want to access detailed performance results for each trainer along with average metrics for the entire class so that I can effectively identify outliers and potential issues, enabling timely interventions and improvements.
+
+Acceptance Criteria:
+- The system must display individual trainer results, including metrics such as completion rates and average scores, for at least 90% of classes.
+- Average class performance metrics should be calculated and updated in real-time, with results available within 2 seconds of data submission.
+- A report highlighting any outliers (e.g., trainers with performance below the 25th percentile) should be generated automatically after each class session.
+
+Test Outline:
+- Verify that the performance results for each trainer are accurately displayed and updated in the system.
+- Measure the time taken for average metrics to refresh after new data is submitted.
+- Review the generated report for accuracy in identifying outliers based on the defined criteria.","that (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",4,4,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US077,"As a site visitor, I want to see a trainer's rating, so that I choose a course from an appropriate trainer.","User Story:
+As a site visitor, I want to view the ratings of trainers for each course so that I can select a course taught by a highly-rated trainer, increasing my likelihood of satisfaction and course completion by at least 20%.
+
+Acceptance Criteria:
+- Each trainer's rating must be displayed prominently on the course page, using a 5-star system with decimal values for precision.
+- The rating should be based on at least 50 reviews to ensure reliability and credibility.
+- Users should report a 90% satisfaction rate regarding the clarity and usefulness of trainer ratings in post-course feedback surveys.
+
+Test Outline:
+- Check that the trainer ratings are visible and correctly formatted on the course pages.
+- Verify that the ratings are updated in real-time based on new reviews.
+- Conduct user surveys to evaluate the impact of trainer ratings on course selection decisions.","that (ISO 29148)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US078,"As a trainer, I want to show my rating up on my profile page, so that site visitors can choose wisely.","User Story:
+As a trainer, I want my rating prominently displayed on my profile page so that potential clients can make informed decisions based on my qualifications, ultimately increasing my client engagement by at least 20%.
+
+Acceptance Criteria:
+- The rating must be visually highlighted on the profile page, using a star rating system from 1 to 5 stars.
+- The rating should be updated in real-time based on user feedback, reflecting changes within 24 hours.
+- At least 75% of site visitors should indicate that the rating influenced their decision to contact me in follow-up surveys.
+
+Test Outline:
+- Verify that the rating is clearly visible and accurately reflects the current score on the profile page.
+- Monitor the update process to ensure ratings change within the specified 24-hour timeframe.
+- Conduct surveys with site visitors to assess the impact of the rating on their decision-making process.","that (ISO 29148)
+can (NASA ARM)",5,5,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US079,"As a site visitor, I want to view a section of the website that teaches me the basics of what Scrum is, so that I can learn that quickly.","User Story:
+As a site visitor, I want to access a dedicated section of the website that provides a comprehensive overview of Scrum fundamentals so that I can grasp the key concepts within 10 minutes, facilitating my understanding and application of Scrum methodologies.
+
+Acceptance Criteria:
+- The section must include at least 5 key topics related to Scrum, such as roles, events, and artifacts, each explained in clear, concise language.
+- Users should be able to complete a brief quiz at the end of the section to assess their understanding, with a target pass rate of 80% or higher.
+- The content should be designed for mobile and desktop viewing, ensuring a seamless experience across devices.
+
+Test Outline:
+- Review the content to confirm that it covers the required 5 key topics and is easy to understand.
+- Administer the quiz to a sample group of users to evaluate comprehension and ensure the 80% pass rate is achievable.
+- Test the section on various devices to ensure consistent accessibility and usability.","easy (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+be able to (NASA ARM)
+easy to (NASA ARM)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US080,"As a site editor, I want to create the content of the What Is Scrum section, so that it's there for visitors.","User Story:
+As a site editor, I want to develop comprehensive content for the ""What Is Scrum"" section so that visitors can gain a clear understanding of Scrum methodology, enhancing their knowledge and increasing site engagement by at least 20%.
+
+Acceptance Criteria:
+- The content must be at least 800 words, covering key concepts, roles, events, and artifacts of Scrum.
+- The section should include at least 3 visual aids (e.g., diagrams or infographics) to illustrate Scrum processes.
+- User engagement metrics should show a minimum of 50% of visitors spending more than 2 minutes on the page after the content is published.
+
+Test Outline:
+- Review the content for completeness and adherence to the 800-word requirement.
+- Check that the visual aids are correctly integrated and enhance the understanding of Scrum.
+- Analyze user engagement data to confirm that at least 50% of visitors meet the time spent criteria.","that (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,1,5,4.0,3,5,2.0,—
+US081,"As a site visitor, I want to view lists on the site of all Certified Scrum Masters, Practitioners, Trainers, and Certified Scrum Product Owners.","User Story:
+As a site visitor, I want to access a comprehensive list of all Certified Scrum Masters, Practitioners, Trainers, and Certified Scrum Product Owners on the site so that I can easily find qualified professionals, enhancing my ability to connect with the right experts and increasing my likelihood of making informed decisions by at least 25%.
+
+Acceptance Criteria:
+- The list must include at least 100 certified professionals, categorized by their roles (Scrum Masters, Practitioners, Trainers, Product Owners).
+- Each entry should display the professional's name, certification status, and a brief bio, with a loading time of no more than 2 seconds for the entire list.
+- User feedback should indicate that at least 85% of visitors find the list useful for their needs in follow-up surveys.
+
+Test Outline:
+- Verify that the list contains the required number of certified professionals and is correctly categorized.
+- Measure the loading time of the list to ensure it meets the 2-second requirement.
+- Conduct user surveys to evaluate the perceived usefulness of the list in helping visitors connect with certified professionals.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",3,4,1.0,3,4,1.0,3,5,2.0,3,5,2.0,4,4,0.0,2,5,3.0,3,5,2.0,—
+US082,"As a CSM, I want to have my name listed in the registry without becoming a member of the site, so that employers or others can verify my certification.","User Story:
+As a CSM, I want my name to be included in the certification registry without requiring full membership on the site, so that potential employers and stakeholders can easily verify my certification status, increasing my professional visibility by at least 25%.
+
+Acceptance Criteria:
+- My name must be searchable in the registry within 24 hours of submission without needing a membership account.
+- The registry should display my certification details, including the certification date and issuing organization, ensuring transparency.
+- At least 90% of users searching for certified professionals should be able to locate my name in the registry based on feedback collected after implementation.
+
+Test Outline:
+- Confirm that my name appears in the registry within the specified 24-hour timeframe after submission.
+- Verify that all relevant certification details are correctly displayed alongside my name in the registry.
+- Conduct user feedback sessions to assess the ease of finding certified professionals in the registry.","that (ISO 29148)
+all (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)",4,4,0.0,3,4,1.0,5,5,0.0,3,5,2.0,4,5,1.0,2,5,3.0,4,5,1.0,—
+US083,"As a trainer, I want to load an Excel file into the site, so that the course participants are added to the Scrum Alliance records.","User Story:
+As a trainer, I want to upload an Excel file to the platform so that I can efficiently add course participants to the Scrum Alliance records, ensuring that at least 95% of participants are accurately registered within 5 minutes of file upload.
+
+Acceptance Criteria:
+- The system must support Excel file uploads with a maximum size of 5 MB and allow for a minimum of 100 participant entries per file.
+- The upload process should validate the data and provide feedback on any errors within 2 minutes.
+- A confirmation report should be generated, showing the number of successfully added participants, with a target accuracy rate of 98% or higher.
+
+Test Outline:
+- Test the upload functionality with various Excel files to ensure compatibility and adherence to size and entry requirements.
+- Measure the time taken for the system to validate the uploaded data and provide error feedback.
+- Review the confirmation report to verify the accuracy of participant registrations against the uploaded data.","that (ISO 29148)
+can (NASA ARM)",5,5,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US084,"As a site admin, I want to view all classes in a pending state, so that I can approve any that need to be approved.","User Story:
+As a site admin, I want to access a comprehensive list of all classes currently in a pending approval state so that I can efficiently review and approve those that meet our criteria, aiming to reduce the approval time by at least 40%.
+
+Acceptance Criteria:
+- The system must display all classes in a pending state with relevant details such as class name, submission date, and instructor information.
+- The list should be filterable by submission date and instructor, allowing for quick navigation and review.
+- Approval actions should be completed within 2 clicks for each class, ensuring a streamlined process.
+
+Test Outline:
+- Verify that the pending classes list includes all necessary details and is updated in real-time.
+- Test the filtering functionality to ensure it works correctly for both submission date and instructor.
+- Measure the number of clicks required to approve a class to confirm it meets the 2-click requirement.","it (ISO 29148)
+that (ISO 29148)
+those (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US085,"As a site admin, I want to move people in a trainer's class from a pending state to the registry once I have received proof of payment from the trainer.","User Story:
+As a site admin, I want to transition participants in a trainer's class from a pending status to the official registry upon receiving verified proof of payment from the trainer so that I can maintain accurate records and ensure that only confirmed participants are enrolled, reducing administrative errors by at least 25%.
+
+Acceptance Criteria:
+- The system must automatically update the status of participants from pending to registered within 5 minutes of receiving valid proof of payment.
+- An email notification should be sent to both the trainer and the participants confirming the status change.
+- A report should be generated weekly to track the number of participants moved to the registry, aiming for a minimum of 90% accuracy in status updates.
+
+Test Outline:
+- Verify that the status change occurs within the 5-minute timeframe after proof of payment is received.
+- Check that email notifications are sent correctly to the relevant parties upon status updates.
+- Review the weekly report for accuracy in the number of participants transitioned to the registry.","that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,3,5,2.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US086,"As a CSM, I want to be sent an email welcoming me to the Scrum Alliance and with instructions to register or activate my membership once my name has been loaded to the registry.","User Story:
+As a CSM, I want to receive a welcome email from the Scrum Alliance that includes clear instructions for registering or activating my membership as soon as my name is added to the registry, ensuring I can start utilizing my membership benefits within 24 hours of registration.
+
+Acceptance Criteria:
+- The welcome email must be sent within 1 hour of my name being loaded into the registry.
+- The email should contain step-by-step instructions for registration or activation, with at least 3 actionable links.
+- At least 90% of new members should confirm they received the email and found the instructions clear in a follow-up survey.
+
+Test Outline:
+- Monitor the email system to ensure the welcome email is dispatched within the 1-hour timeframe.
+- Review the content of the email to verify it includes all necessary instructions and links.
+- Conduct a survey with new members to assess their receipt of the email and clarity of the instructions.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,4,4,0.0,4,4,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,4,0.0,—
+US087,"As a site editor, I want to edit the content of the email automatically sent to new Certified Scrum Masters and Product Owners, so that I don't need to involve a programmer on simple email edits.","User Story:
+As a site editor, I want to have the capability to modify the content of the automated emails sent to newly certified Scrum Masters and Product Owners without requiring assistance from a programmer, so that I can implement changes within 5 minutes, enhancing communication efficiency and reducing turnaround time for updates by at least 50%.
+
+Acceptance Criteria:
+- The email editing interface must allow for text changes, formatting adjustments, and the inclusion of dynamic fields (e.g., recipient name, certification date).
+- Edits made to the email content should be saved and reflected in the next automated email within 1 minute.
+- At least 90% of site editors should report satisfaction with the ease of use of the email editing tool in follow-up feedback.
+
+Test Outline:
+- Verify that the email editing interface provides all necessary features for content modification.
+- Measure the time taken for changes to be saved and reflected in the automated emails.
+- Conduct a survey among site editors to assess their satisfaction with the email editing process.","that (ISO 29148)
+all (ISO 29148)
+capability to (NASA ARM)
+can (NASA ARM)",4,4,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US088,"As a company, I want to join the Scrum Alliance by paying a corporate membership fee, so that I can show the company's support of Scrum.","User Story:
+As a company, I want to secure a corporate membership with the Scrum Alliance by paying the required membership fee so that I can demonstrate our company's commitment to Agile methodologies and Scrum practices, potentially increasing our project success rates by 20%.
+
+Acceptance Criteria:
+- Complete the membership application process and submit the corporate membership fee within 30 days.
+- Receive confirmation of membership from the Scrum Alliance within 5 business days of payment.
+- Achieve a measurable increase in team performance metrics, such as velocity or delivery time, by at least 15% within 6 months of joining.
+
+Test Outline:
+- Verify that the membership application is submitted and the fee is paid within the specified timeframe.
+- Confirm receipt of membership confirmation from the Scrum Alliance.
+- Track and analyze team performance metrics before and after joining to assess improvements.","secure (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US089,"As a corporatesponsor, I want to display my logo on a corporate sponsors page, so that others see the company's support of Scrum.","User Story:
+As a corporatesponsor, I want my company logo prominently displayed on the corporate sponsors page so that it increases visibility and recognition of our support for Scrum, aiming for at least a 25% increase in brand awareness among event attendees.
+
+Acceptance Criteria:
+- The logo must be displayed in a high-resolution format and occupy at least 10% of the page width.
+- The corporate sponsors page should receive a minimum of 1,000 unique views per month to ensure adequate exposure.
+- A post-event survey should indicate that at least 70% of attendees recognize our brand as a supporter of Scrum.
+
+Test Outline:
+- Check the logo's display size and resolution on the corporate sponsors page to ensure it meets the specified criteria.
+- Analyze web traffic data to confirm that the page achieves the target of 1,000 unique views monthly.
+- Conduct a survey with event attendees to measure brand recognition and support perception.","it (ISO 29148)
+that (ISO 29148)
+adequate (ISO 29148)
+adequate (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US090,"As a corporatesponsor, I want to make my logo randomly appear on the home page, so that others see the company's support of Scrum.","User Story:
+As a corporatesponsor, I want my logo to be displayed randomly on the homepage at least 5 times per hour, so that visitors can recognize my company's support for Scrum, increasing brand visibility and engagement by a minimum of 20%.
+
+Acceptance Criteria:
+- The logo must appear randomly on the homepage at least 5 times every hour during peak traffic times.
+- The display duration for each logo appearance should be no less than 10 seconds.
+- Track and report the number of impressions and clicks on the logo, aiming for at least a 2% click-through rate.
+
+Test Outline:
+- Monitor the homepage to ensure the logo appears the required number of times within the specified timeframe.
+- Measure the duration of each logo display to confirm it meets the 10-second requirement.
+- Analyze click-through data to evaluate the effectiveness of the logo placement in driving engagement.","it (ISO 29148)
+that (ISO 29148)
+every (ISO 29148)
+can (NASA ARM)
+less (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US091,"As a CSM, I want to be charged a fee once I am approved for Practitioner status, so that my certification status can be activated.","User Story:
+As a CSM, I want to incur a one-time fee upon receiving approval for Practitioner status so that my certification can be activated promptly, ensuring I can leverage my credentials to enhance client relationships and drive satisfaction.
+
+Acceptance Criteria:
+- The fee must be clearly communicated and should not exceed $200 to ensure affordability for all approved candidates.
+- The certification activation process should be completed within 24 hours of fee payment.
+- At least 90% of newly certified Practitioners should report satisfaction with the activation process in follow-up surveys.
+
+Test Outline:
+- Verify that the fee amount is displayed transparently during the approval process.
+- Track the time taken from fee payment to certification activation to ensure it meets the 24-hour requirement.
+- Conduct surveys with newly certified Practitioners to assess their satisfaction with the overall process.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US092,"As a CST, I want to pay an annual fee, so that my CST status is active.","User Story:
+As a CST, I want to pay an annual membership fee of $150 so that my CST status remains active, ensuring I have access to exclusive resources and support, which can enhance my service delivery by at least 20%.
+
+Acceptance Criteria:
+- The annual fee must be clearly communicated and available for payment through at least two different methods (e.g., credit card and PayPal).
+- Payment processing should be completed within 5 minutes, with confirmation sent via email.
+- At least 90% of CSTs should report satisfaction with the payment process in a follow-up survey.
+
+Test Outline:
+- Verify that the payment options are functional and accessible on the membership portal.
+- Measure the time taken from payment initiation to confirmation receipt.
+- Conduct a survey to assess CST satisfaction with the payment process and overall membership benefits.","that (ISO 29148)
+can (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US093,"As a site administrator, I want to set the annual fees for members, Practitioners and Trainers, so that fees can be set without involving a programmer.","User Story:
+As a site administrator, I want to have the capability to independently set and adjust the annual fees for members, practitioners, and trainers through an intuitive interface so that I can manage pricing efficiently without needing to rely on a programmer, ensuring that changes can be made within 5 minutes.
+
+Acceptance Criteria:
+- The interface must allow for the input of annual fees for each category (members, practitioners, trainers) with clear fields for each.
+- Changes to the fees should be saved and reflected on the site within 1 minute of submission.
+- At least 90% of administrators should report that the fee-setting process is straightforward and efficient in user feedback surveys.
+
+Test Outline:
+- Verify that the fee-setting interface is accessible and functional for all three categories.
+- Measure the time taken for fee changes to be saved and displayed on the site.
+- Conduct surveys with administrators to evaluate their satisfaction with the fee management process.","efficient (ISO 29148)
+intuitive (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+capability to (NASA ARM)
+can (NASA ARM)",4,4,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US094,"As a member, I want to receive a reminder and a link, so that I can renew my membership.","User Story:
+As a member, I want to receive an automated reminder along with a direct link to renew my membership so that I can ensure uninterrupted access to benefits, increasing renewal rates by at least 20%.
+
+Acceptance Criteria:
+- Members should receive a reminder email at least 7 days before their membership expiration date.
+- The email must include a clear and accessible link that directs members to the renewal page, with a 95% success rate in link functionality.
+- Track and report the percentage of members who renew their membership after receiving the reminder, aiming for a minimum of 20% increase compared to the previous renewal cycle.
+
+Test Outline:
+- Verify that reminder emails are sent out 7 days prior to expiration for a sample of members.
+- Test the functionality of the renewal link in the email to ensure it directs users to the correct page.
+- Analyze renewal statistics post-reminder to measure the increase in membership renewals.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,5,1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US095,"As a member, I want to have the system email me a new password or a password reminder since i have short-term memory problems.","User Story:
+As a member, I want the system to automatically send me an email with a new password or a password reminder so that I can securely access my account without frustration, ensuring I can log in successfully at least 95% of the time.
+
+Acceptance Criteria:
+- The system must send an email with a new password or reminder within 2 minutes of the request being made.
+- The email should include clear instructions on how to reset the password or retrieve the reminder.
+- At least 90% of users who request a password reset should report that the process was straightforward and effective in follow-up surveys.
+
+Test Outline:
+- Test the email functionality by requesting a password reset and measuring the time taken to receive the email.
+- Review the content of the email to ensure it contains clear instructions and meets user needs.
+- Conduct user feedback sessions to evaluate the clarity and effectiveness of the password reset process.","effective (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+effective (NASA ARM)
+can (NASA ARM)",5,5,0.0,4,4,0.0,4,5,1.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US096,"As a trainer, I want to read information of relevance only to trainers, so that the Scrum Alliance can share information with me easily.","User Story:
+As a trainer, I want to access a dedicated information portal that exclusively provides content relevant to trainers, so that the Scrum Alliance can efficiently share updates and resources tailored to my needs, enhancing my engagement with the community by at least 25%.
+
+Acceptance Criteria:
+- The portal must feature a section specifically for trainers, containing at least 5 categories of relevant information, such as training materials, event announcements, and best practices.
+- Information updates should be delivered to trainers within 24 hours of release, ensuring timely access to new resources.
+- At least 85% of trainers should express satisfaction with the relevance and usefulness of the information provided in follow-up surveys.
+
+Test Outline:
+- Verify that the portal includes the specified categories and that content is easily accessible.
+- Monitor the time taken for new information to be posted in the trainer section after its initial release.
+- Conduct surveys to gather feedback from trainers regarding the relevance and quality of the information shared.","best (ISO 29148)
+that (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)
+best (NASA ARM)",5,4,-1.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—
+US097,"As a site editor, I want to post information in a trainers-only section, so that only trainers see it.","User Story:
+As a site editor, I want to create a dedicated trainers-only section for posting information so that only authorized trainers can access this content, ensuring that sensitive information is protected and improving communication efficiency among trainers by at least 25%.
+
+Acceptance Criteria:
+- The trainers-only section must be accessible only to users with trainer roles, verified through user authentication.
+- All posts in this section should be timestamped and include an author tag to maintain accountability and clarity.
+- At least 90% of trainers should report that the section effectively meets their information needs in a feedback survey conducted after implementation.
+
+Test Outline:
+- Verify that only users with the trainer role can access the trainers-only section and its content.
+- Check that all posts display the correct timestamp and author information.
+- Conduct a survey among trainers to evaluate their satisfaction with the new section and its usefulness.","this (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,4,4,0.0,5,5,0.0,4,5,1.0,5,5,0.0,3,5,2.0,4,5,1.0,—

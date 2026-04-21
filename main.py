@@ -1,13 +1,9 @@
-"""
-Main entry for DSPy-based User Story Optimization (INVEST)
-No 'title' is required anywhere in the pipeline.
-"""
-
 import os
 import sys
 import json
 from pathlib import Path
 
+# 初始化語言模型
 from core.config_model import configure_lm
 configure_lm()
 
@@ -34,7 +30,8 @@ def _load_user_stories(data_path: Path):
     return norm
 
 def main():
-    default_path = Path("data/g10-scrumalliance-1.json") # change dataset
+    # 設定路徑 (優先權: 環境變數 > 命令列參數 > 預設路徑)
+    default_path = Path("data/g10-scrumalliance-1.json")
     arg_path = Path(sys.argv[1]) if len(sys.argv) > 1 else None
     env_path = Path(os.getenv("USER_STORIES_JSON", "")) if os.getenv("USER_STORIES_JSON") else None
     data_path = env_path or arg_path or default_path
@@ -43,13 +40,25 @@ def main():
     stories = _load_user_stories(data_path)
     print(f"Loaded {len(stories)} user stories from: {data_path}\n")
 
+    # 讀取執行參數
     max_rounds = int(os.getenv("INVEST_MAX_ROUNDS", "3"))
     fewshot_k  = int(os.getenv("INVEST_FEWSHOT_K", "4"))
     use_dspy   = os.getenv("USE_DSPY", "1") == "1"
 
     print("=== Step 2: Start optimization ===")
     print(f"(config) max_rounds={max_rounds}, fewshot_k={fewshot_k}, use_dspy={use_dspy}")
+    
+    # [新增] 印出 INVEST 維度定義，確保研究基準對齊
+    try:
+        from core.invest_rules import INVEST_RUBRIC
+        print("\n[INVEST Criteria Definitions]")
+        for key, info in INVEST_RUBRIC.items():
+            print(f"  {key} ({info['name']}): {info['description']}")
+        print("") # 換行
+    except Exception as e:
+        print(f"(warn) Could not print definitions: {e}")
 
+    # 執行優化流程
     optimized_results = run_batch_optimization(
         stories,
         max_rounds=max_rounds,
@@ -57,7 +66,7 @@ def main():
         use_dspy=use_dspy
     )
 
-    print("=== Step 3: Exporting report ===")
+    print("\n=== Step 3: Exporting report ===")
     df, run_dir = export_results_csv(optimized_results)
 
     print("=== Step 4: Summary ===")
