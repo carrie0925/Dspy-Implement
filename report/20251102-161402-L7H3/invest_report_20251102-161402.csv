@@ -1,0 +1,102 @@
+﻿ID,Original User Story,Rewritten User Story,Fuzzy Terms (with source),I_before,I_after,delta_I,N_before,N_after,delta_N,V_before,V_after,delta_V,E_before,E_after,delta_E,S_before,S_after,delta_S,T_before,T_after,delta_T,overall_before,overall_after,delta_overall,Low-score Explanation (<2)
+US001,"I want to describe myself on my own page in a semi-structured way, so that others can learn about me.","User Story:
+As an individual, I want to develop a well-organized yet adaptable profile overview on my personal site so that visitors can quickly grasp my background and interests.
+
+Acceptance Criteria:
+- Include key sections such as a personal biography, a list of skills, and a description of hobbies.
+- Create a visually appealing and user-friendly layout for optimal engagement.
+- Allow for easy content updates to keep the information current and relevant.
+
+Test Outline:
+- Review the webpage to ensure all key sections are present and logically structured.
+- Assess the visual design for effectiveness and user navigation ease.
+- Verify the functionality of the content update feature to ensure modifications can be made smoothly.","easy (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",1,2,1.0,1,2,1.0,2,2,0.0,0,2,2.0,2,2,0.0,0,2,2.0,1,2,1.0,—
+US002,"I want to fill out an application to become a Certified Scrum Practitioner, so that I can earn that designation.","User Story:
+As an aspiring Scrum professional, I aim to finalize my application for the Certified Scrum Practitioner credential to enhance my career opportunities and professional growth.
+
+Acceptance Criteria:
+- Successfully complete and submit the application form with all necessary details
+- Receive a confirmation notification indicating successful application submission
+- Attain the certification after fulfilling all required criteria
+
+Test Outline:
+- Confirm that the application form can be accurately filled out and submitted without any errors
+- Check for a confirmation email or notification following the submission
+- Verify that the certification is granted upon meeting all specified requirements","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,0,2,2.0,1,2,1.0,—
+US003,"As a Practitioner, I want to include additional details about me in my profile page, so that I can showcase my experience.","User Story:
+As a Practitioner, I want to enrich my profile page with more comprehensive information about my background, so that I can effectively highlight my expertise and experience to potential clients or employers.
+
+Acceptance Criteria:
+- Provide fields for adding certifications, skills, and work history.
+- Ensure that the profile updates are saved and displayed correctly.
+- Allow users to preview changes before finalizing their profile updates.
+
+Test Outline:
+- Verify that all new fields for additional details are functional and user-friendly.
+- Check that updates are accurately reflected on the profile after saving.
+- Test the preview feature to ensure it displays the profile accurately before submission.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,2,3,1.0,—
+US004,"As a site member, I want to fill out an application to become a Certified Scrum Trainer, so that I can teach CSM and CSPO courses and certify others.","User Story:
+As a site member, I aim to finalize my application for Scrum Trainer certification, which will empower me to teach CSM and CSPO courses and certify future professionals in the field.
+
+Acceptance Criteria:
+- Successfully complete and submit the application for Scrum Trainer certification.
+- Receive a confirmation notification indicating the application has been submitted.
+- Get updates regarding the application status within a defined timeframe.
+
+Test Outline:
+- Ensure the application form is user-friendly and can be submitted without any complications.
+- Confirm receipt of an acknowledgment email that verifies the application submission.
+- Track the response time for feedback on the application status to ensure it aligns with the specified timeframe.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US005,"As a Trainer, I want to include additional details in my profile page about me, so that others can learn about me and decide if I am the right trainer for them.","User Story:
+As a Trainer, I want to enrich my profile page with detailed personal information so that potential clients can better understand my qualifications and assess whether I meet their training needs.
+
+Acceptance Criteria:
+- Create distinct sections highlighting my certifications, work history, and training philosophy.
+- Include a personal statement that conveys my distinctive training approach and techniques.
+- Design the profile to be visually appealing and intuitive for seamless navigation.
+
+Test Outline:
+- Review the profile page to confirm the inclusion of the new sections.
+- Assess the clarity and impact of the personal statement.
+- Analyze the overall design and user-friendliness of the profile layout.","intuitive (ISO 29148)
+that (ISO 29148)
+better (ISO 29148)
+can (NASA ARM)
+better (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US006,"As the site editor, I want to have pretty good control over how the article, so that articles are visually appealing.","User Story:
+As a site editor, I desire extensive authority over the layout and aesthetics of articles to ensure that the material captivates and engages readers visually.
+
+Acceptance Criteria:
+- Allow for the selection and adjustment of font styles and sizes for headings and body text.
+- Offer functionality to reposition and resize images within the article as needed.
+- Provide a suite of text formatting options, including bullet points, quotes, and diverse styling features.
+
+Test Outline:
+- Verify that the editor can effectively change font styles and sizes.
+- Check that images can be repositioned and resized according to the editor's specifications.
+- Ensure that all text formatting options are functional and enhance the article's visual presentation.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",1,2,1.0,1,2,1.0,2,2,0.0,0,2,2.0,2,2,0.0,0,2,2.0,1,2,1.0,—
+US007,"As a site editor, I want to create the content of the What Is Scrum section, so that it's there for visitors.","User Story:
+As a site editor, I aim to develop the ""What Is Scrum"" section to provide our website visitors with insightful and valuable information about Scrum methodology.
+
+Acceptance Criteria:
+- Create and finalize the content for the ""What Is Scrum"" section.
+- Ensure the information is both captivating and informative for the target audience.
+- Publish the section on the website for public access.
+
+Test Outline:
+- Assess the drafted content for clarity and relevance to the audience's needs.
+- Confirm that the section is live and easily accessible on the website.
+- Gather visitor feedback to evaluate the content's effectiveness and relevance.",that (ISO 29148),2,2,0.0,1,2,1.0,2,2,0.0,0,2,2.0,2,2,0.0,0,2,2.0,1,2,1.0,—

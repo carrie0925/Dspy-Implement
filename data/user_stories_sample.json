@@ -18,5 +18,13 @@
   {
     "id": "US005",
     "description": "As a Trainer, I want to include additional details in my profile page about me, so that others can learn about me and decide if I am the right trainer for them."
+  },
+  {
+    "id": "US006",
+    "description": "As the site editor, I want to have pretty good control over how the article, so that articles are visually appealing."
+  },
+  {
+    "id": "US007",
+    "description": "As a site editor, I want to create the content of the What Is Scrum section, so that it's there for visitors."
   }
 ]

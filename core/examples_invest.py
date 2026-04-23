@@ -12,82 +12,73 @@ from dspy import Example
 # Good examples 
 # -----------------------------
 GOOD_EXAMPLES = [
-    Example(
-        input_text=(
-            "As a user, I want to reset my password via email so that I can regain access if I forget it. "
-            "Acceptance Criteria: User requests reset link, receives email, and successfully resets password."
-        ),
-        result_json=json.dumps({
+    {
+        "input_text": "As a trainer, I want to list my upcoming classes in my profile and include a link to a detailed page about each, so that prospective attendees can find my courses quickly.",
+        "scores": {
             "overall": 3,
-            "I": 3, "N": 3, "V": 3, "E": 3, "S": 3, "T": 3,
+            "I": 3, "N": 4, "V": 3, "E": 3, "S": 3, "T": 3,
             "reasons": {
-                "I": "Self-contained; no dependency on other stories.",
-                "N": "Goal-oriented description allows discussion of implementation.",
-                "V": "Clear end-user value in regaining account access.",
-                "E": "Effort easily estimated; common flow.",
-                "S": "Small scope; one feature.",
-                "T": "Includes clear testable acceptance criteria."
+                "overall": "Valuable, but combines listing + linking behavior; somewhat solution-shaped."
             }
-        })
-    ),
-    Example(
-        input_text=(
-            "As an admin, I want to export user data to CSV so that I can perform offline analysis. "
-            "Acceptance Criteria: Button 'Export to CSV' exports all active user records with accurate fields."
-        ),
-        result_json=json.dumps({
+        }
+    },
+    {
+        "input_text": "As a site admin, I want to stop publishing jobs on the site 30 days after being posted, so that jobs that may have been filled aren't still listed.",
+        "scores": {
+            "overall": 4,
+            "I": 4, "N": 4, "V": 5, "E": 5, "S": 4, "T": 4,
+            "reasons": {
+                "overall": "The best story; bounded, estimable, and objectively testable."
+            }
+        }
+    },
+    {
+        "input_text": "As a site editor, I want to set the following dates on a news item: Start Publishing Date, Old News Date, Stop Publishing Date, so that articles are published on and through appropriate dates.",
+        "scores": {
             "overall": 3,
-            "I": 3, "N": 3, "V": 3, "E": 3, "S": 3, "T": 3,
+            "I": 3, "N": 4, "V": 4, "E": 3, "S": 3, "T": 3,
             "reasons": {
-                "I": "Fully independent export function.",
-                "N": "Defines output and scope without enforcing technology.",
-                "V": "Clear business value for data analysis.",
-                "E": "Scope predictable; effort estimable.",
-                "S": "Single operation, small feature.",
-                "T": "Has precise acceptance condition."
+                "overall": "Good scope framing, but publishing logic is still incomplete and not fully testable from text alone"
             }
-        })
-    )
+        }
+    }
 ]
 
 # -----------------------------
 # Poor examples 
 # -----------------------------
 BAD_EXAMPLES = [
-    Example(
-        input_text=(
-            "Improve dashboard performance."
-        ),
-        result_json=json.dumps({
-            "overall": 1,
-            "I": 2, "N": 1, "V": 1, "E": 1, "S": 1, "T": 0,
+    {
+        "input_text": "Improve dashboard performance.",
+        "scores": {
+            "overall": 2,
+            "I": 2, "N": 3, "V": 1, "E": 2, "S": 3, "T": 4,
             "reasons": {
-                "I": "Too vague; may depend on multiple modules.",
-                "N": "No room for negotiation; lacks goal context.",
-                "V": "Does not express user or business value.",
-                "E": "No scope or estimation possible.",
-                "S": "Not a deliverable story.",
-                "T": "No acceptance test defined."
+                "overall": "As a site visitor, I want to see new content... (Benefit is circular)"
             }
-        })
-    ),
-    Example(
-        input_text=(
-            "Add OAuth2 authentication with JWT tokens and integrate with Redis cache layer for session tracking."
-        ),
-        result_json=json.dumps({
+        }
+    },
+    {
+        "input_text": "As a site visitor, I want to have articles that interest me and are easy to get to, so that I come to the site for my agile news.",
+        "scores": {
             "overall": 1,
-            "I": 2, "N": 0, "V": 1, "E": 1, "S": 1, "T": 1,
+            "I": 1, "N": 3, "V": 1, "E": 1, "S": 3, "T": 4,
             "reasons": {
-                "I": "Depends on multiple systems (Redis, JWT).",
-                "N": "Written as a technical specification; no discussion space.",
-                "V": "No user benefit; purely implementation.",
-                "E": "Too complex for estimation.",
-                "S": "Too large for one sprint.",
-                "T": "No clear validation steps."
+                "overall": "Very vague and highly subjective, not a workable story"
             }
-        })
-    )
+        }
+    },
+
+    {
+        "input_text": "As a trainer, I want to load an Excel file into the site, so that the course participants are added to the Scrum Alliance records.",
+        "scores": {
+            "overall": 2,
+            "I": 3, "N": 2, "V": 2, "E": 3, "S": 3, "T": 2,
+            "reasons": {
+                "overall": "Concrete action, but benefit is really system completion, not user value; also solution-constrained by “Excel file”"
+            }
+        }
+    }
 ]
 
 # -----------------------------

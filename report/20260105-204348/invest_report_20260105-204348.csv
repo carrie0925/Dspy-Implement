@@ -1,0 +1,1008 @@
+﻿ID,Original User Story,Rewritten User Story,Fuzzy Terms (with source),I_before,I_after,delta_I,N_before,N_after,delta_N,V_before,V_after,delta_V,E_before,E_after,delta_E,S_before,S_after,delta_S,T_before,T_after,delta_T,overall_before,overall_after,delta_overall,Low-score Explanation (<2)
+US001,"As a anonymoususer, I want to view a list of sponsors, so that I can thank all the awesome sponsors.","User Story:
+As a anonymoususer, I want to access a comprehensive list of sponsors so that I can express my gratitude to all the remarkable sponsors who support our initiatives.
+
+Acceptance Criteria:
+- The list of sponsors must be displayed clearly and be accessible without requiring user authentication.
+- The list should include at least 10 sponsors, with their names and logos visible.
+- A thank-you message or feature should be available for users to easily acknowledge each sponsor.
+
+Test Outline:
+- Verify that the list of sponsors is accessible to anonymous users without any login requirements.
+- Check that the list contains a minimum of 10 sponsors, ensuring all names and logos are correctly displayed.
+- Test the functionality of the thank-you feature to confirm it allows users to acknowledge sponsors effectively.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,5,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US002,"As a anonymoususer, I want to view a list of user profiles, so that I know who is attending the conference.","User Story:
+As a anonymoususer, I want to access a comprehensive list of user profiles attending the conference so that I can identify participants and network effectively.
+
+Acceptance Criteria:
+- The user profiles list must display at least 50% of the registered attendees.
+- Each profile should include key information such as name, title, and organization.
+- The list should load within 3 seconds to ensure a smooth user experience.
+
+Test Outline:
+- Verify that the list of user profiles includes at least half of the total registered attendees.
+- Check that each profile contains the required information fields.
+- Measure the loading time of the profiles list to confirm it meets the 3-second requirement.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US003,"As a trainingcoordinator, I want to email all the trainers at once from the website for info and updates, so that It is easier to use.","User Story:
+As a trainingcoordinator, I want to send a single email to all trainers directly from the website for information and updates, so that I can streamline communication and ensure timely dissemination of important details.
+
+Acceptance Criteria:
+- Implement a feature that allows the training coordinator to select and email all trainers with one action.
+- Ensure that the email is sent successfully to 100% of the trainers listed in the system.
+- Confirm that the email includes all relevant information and updates, with a clear subject line and body content.
+
+Test Outline:
+- Test the functionality by sending a test email to all trainers and verify that it is received by each trainer.
+- Review the content of the email to ensure it contains the necessary information and is formatted correctly.
+- Check the system logs to confirm that the email was sent without errors and to all intended recipients.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US004,"As a attendee, I want to have a very clear map where the buildings and rooms are, so that I can make it to class on time.","User Story:
+As a attendee, I want to access a detailed and user-friendly map that clearly indicates the locations of buildings and classrooms, so that I can navigate efficiently and arrive at my classes punctually.
+
+Acceptance Criteria:
+- The map must display all buildings and classrooms with clear labels and distinct markers.
+- Users should be able to zoom in and out on the map for better visibility, with a maximum zoom level that allows for detailed room identification.
+- The map should load within 3 seconds to ensure quick access for users.
+
+Test Outline:
+- Verify that the map includes all necessary locations and that labels are easily readable.
+- Test the zoom functionality to ensure it works smoothly and provides detailed views of the rooms.
+- Measure the loading time of the map to confirm it meets the 3-second requirement.","it (ISO 29148)
+that (ISO 29148)
+better (ISO 29148)
+all (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)
+better (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US005,"As a trainer, I want to edit my training node myself, so that the training coordinators don't have to and links to slides.","User Story:
+As a trainer, I want to independently modify my training node and update links to the associated slides so that training coordinators can focus on other tasks, enhancing overall efficiency in the training process.
+
+Acceptance Criteria:
+- Enable trainers to access and edit their training node content without requiring coordinator intervention.
+- Ensure that any changes made to the training node are saved and reflected in real-time.
+- Allow trainers to successfully link or update at least 3 slide presentations per training session.
+
+Test Outline:
+- Verify that trainers can log in and access the editing interface for their training nodes.
+- Check that changes made by trainers are saved and displayed correctly in the training node.
+- Test the functionality of linking slides by having trainers update links and confirming they work as intended.","that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US006,"As a trainee, I want to limit to one registration per day per authenticated user, so that we don't have duplicate spaces.","User Story:
+As a trainee, I want to enforce a restriction of one registration per day for each authenticated user, so that we can effectively prevent the creation of duplicate spaces and maintain data integrity.
+
+Acceptance Criteria:
+- Ensure that the system allows only one registration per authenticated user within a 24-hour period.
+- Implement a notification system to inform users when they attempt to register more than once in a day.
+- Track and log registration attempts to monitor compliance with the one-registration policy.
+
+Test Outline:
+- Attempt to register multiple times within a single day using the same authenticated user account to verify that the system blocks additional registrations.
+- Check that users receive a clear notification message when they exceed the registration limit.
+- Review the logs to confirm that all registration attempts are recorded accurately, reflecting the enforcement of the policy.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US007,"As a trainingcoordinator, I want to have an admin view that helps track registration status for each attendee so that, so that we can see if attendend, refunded, no show.","User Story:
+As a trainingcoordinator, I want to access an administrative dashboard that provides a comprehensive overview of each attendee's registration status so that we can effectively monitor attendance, manage refunds, and identify no-shows.
+
+Acceptance Criteria:
+- The admin view must display the registration status for each attendee, including categories such as ""Attended,"" ""Refunded,"" and ""No Show.""
+- The dashboard should update in real-time, reflecting any changes in registration status within 2 minutes of the event's conclusion.
+- The system must allow filtering and sorting of attendees based on their registration status for easier management.
+
+Test Outline:
+- Verify that the admin view accurately displays the registration status for all attendees after the event.
+- Check the update frequency of the dashboard to ensure it reflects changes within the specified time frame.
+- Test the filtering and sorting functionalities to confirm they work correctly for different registration statuses.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US008,"As a attendee, I want to be added to a training waitlist, so that so they can be considered for a class.","User Story:
+As a attendee, I want to enroll in a waitlist for a training session so that I can be prioritized for enrollment if spots become available, ensuring I have the opportunity to participate.
+
+Acceptance Criteria:
+- Successfully submit a request to join the training waitlist.
+- Receive a confirmation email within 10 minutes of being added to the waitlist.
+- Be notified of any available spots in the training class within 48 hours of the request.
+
+Test Outline:
+- Verify that the waitlist request is processed and the attendee receives a confirmation.
+- Check the attendee's email for the confirmation message within the specified time frame.
+- Monitor the communication process to ensure that notifications about available spots are sent within the 48-hour window.","that (ISO 29148)
+can (NASA ARM)",4,5,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US009,"As a trainee, I want to must accept the cancellation terms with a checkbox, so that they can be accountable..","User Story:
+As a trainee, I want to confirm my acceptance of the cancellation terms by checking a box, so that I can take responsibility for understanding the implications of my actions.
+
+Acceptance Criteria:
+- A checkbox must be present that requires the trainee to accept the cancellation terms before proceeding.
+- The system should not allow the trainee to continue without checking the acceptance box.
+- A confirmation message should be displayed upon successful acceptance of the terms.
+
+Test Outline:
+- Verify that the checkbox for accepting the cancellation terms is visible and functional on the interface.
+- Attempt to proceed without checking the box to ensure the system prevents continuation.
+- Check that a confirmation message appears after the checkbox is selected, indicating acceptance of the terms.","that (ISO 29148)
+can (NASA ARM)",4,4,0.0,2,3,1.0,4,4,0.0,3,4,1.0,4,4,0.0,2,4,2.0,3,4,1.0,—
+US010,"As a trainingcoordinator, I want to tie in a cancellation deadline to whatever registration / cancellation workflow exists, so that so we don't loose money or spots.","User Story:
+As a trainingcoordinator, I want to implement a cancellation deadline within the registration and cancellation workflow so that we can minimize financial losses and ensure optimal utilization of available spots.
+
+Acceptance Criteria:
+- Establish a clear cancellation deadline that is communicated to all participants at the time of registration.
+- Ensure that at least 90% of participants adhere to the cancellation policy by tracking compliance rates.
+- Implement a system that automatically updates available spots based on cancellations made before the deadline.
+
+Test Outline:
+- Review the registration process to confirm that the cancellation deadline is prominently displayed and acknowledged by participants.
+- Analyze cancellation data to measure the percentage of participants who comply with the deadline.
+- Monitor the availability of spots in real-time to verify that the system accurately reflects cancellations made prior to the deadline.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US011,"As a trainee, I want to add to ""my schedule"" if there is a schedule feature on the site, so that they can schedule their event experience.","User Story:
+As a trainee, I want to utilize the scheduling feature on the site to add events to ""my schedule"" so that I can effectively manage and organize my event experiences.
+
+Acceptance Criteria:
+- Confirm the presence of a scheduling feature on the site that allows event additions.
+- Ensure that users can successfully add at least 5 events to ""my schedule"" without errors.
+- Validate that the added events are displayed accurately in ""my schedule"" within 2 seconds of the action.
+
+Test Outline:
+- Check the site for the availability of the scheduling feature and document its functionality.
+- Attempt to add multiple events to ""my schedule"" and verify that the process completes without issues.
+- Measure the time taken for the events to appear in ""my schedule"" after addition to ensure it meets the specified response time.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,4,1.0,2,4,2.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US012,"As a trainee, I want to see which trainings I have signed up for, so that they can schedule their event experience.","User Story:
+As a trainee, I want to view a list of all the training sessions I have registered for, so that I can effectively plan and manage my event participation.
+
+Acceptance Criteria:
+- Display a comprehensive list of all signed-up training sessions, including dates and times.
+- Ensure that the list updates in real-time whenever a new training is added or an existing registration is modified.
+- Provide a filter option to sort training sessions by date, type, or status (upcoming, completed).
+
+Test Outline:
+- Verify that the list of registered training sessions is accessible and accurately reflects the user's current registrations.
+- Check that any changes to training registrations are immediately reflected in the displayed list.
+- Test the filtering functionality to ensure it works correctly for sorting by various criteria.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US013,"As a trainer, I want to have a view that is attached to their training node that shows all attendee information Trainers can see all class attendance at first because there are so little trainers and they are trusted with privacy, so that the training coordinator doesn't have to do all the work to get login info for environment setup.","User Story:
+As a trainer, I want to access a dedicated view linked to my training node that displays comprehensive attendee information, so that I can efficiently manage class attendance without burdening the training coordinator with login details for environment setup.
+
+Acceptance Criteria:
+- The view must present all attendee information, including names and attendance status, for each training session.
+- Ensure that the trainer can access this information immediately upon logging in, with no more than 2 clicks required to reach the attendee view.
+- Confirm that the privacy of attendee data is maintained, with access restricted to authorized trainers only.
+
+Test Outline:
+- Verify that the dedicated view is accessible from the trainer's dashboard and displays all relevant attendee information.
+- Check the number of clicks required to access the attendee information to ensure it meets the specified criteria.
+- Conduct a privacy audit to ensure that only authorized trainers can view the attendee data.","it (ISO 29148)
+this (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",3,5,2.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US014,"As a trainingcoordinator, I want to have an admin view where all trainee information is shown and can be filtered to show a single training session, so that I can see WTF is happening.","User Story:
+As a trainingcoordinator, I want to access an administrative dashboard that displays comprehensive trainee information and allows filtering by individual training sessions, so that I can effectively monitor and manage training activities.
+
+Acceptance Criteria:
+- The admin view must present a complete list of all trainees, including relevant details such as names, attendance, and performance metrics.
+- Implement a filtering option that enables the selection of a specific training session, ensuring that only related trainee information is displayed.
+- The dashboard should refresh in real-time to reflect any updates or changes in trainee status or session details.
+
+Test Outline:
+- Verify that the admin view successfully loads all trainee information without errors.
+- Test the filtering functionality to ensure it accurately narrows down the displayed information to a single training session.
+- Check for real-time updates in the dashboard when changes occur in trainee data or session information.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,3,5,2.0,2,5,3.0,3,5,2.0,—
+US015,"As a anonymoususer, I want to have a dedicated page for each class to learn more about the offering The following information must be shown: Logo, title, trainers, location, possibly a map view, datetime, skill level, registrations remaining, link to register for class. The URL path should be SEO friendly /training/training-title, so that I can choose the right class, AND the trainer can tweet and promote their class.","User Story:
+As a anonymoususer, I want to access a dedicated page for each training class so that I can easily find detailed information about the offerings and make informed decisions on which class to enroll in, while also enabling trainers to promote their classes effectively.
+
+Acceptance Criteria:
+- Each class page must display the following information: logo, title, trainers, location, a map view, date and time, skill level, remaining registrations, and a registration link.
+- The URL structure for each class page should be SEO-friendly, formatted as /training/training-title, to enhance search visibility and user accessibility.
+- Ensure that the page is optimized for sharing on social media, allowing trainers to tweet and promote their classes seamlessly.
+
+Test Outline:
+- Verify that all required information is present and correctly displayed on each class page.
+- Check the URL format to confirm it adheres to the specified SEO-friendly structure.
+- Test the sharing functionality to ensure that trainers can easily promote their classes on social media platforms.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,4,5,1.0,4,5,1.0,3,5,2.0,4,5,1.0,—
+US016,"As a anonymoususer, I want to have the training options clearly marked for the following information: day and time of training, title, short summary, trainers, level, number of registrations, remaining registrations, location of training, link to full details of the training, register now link, so that I can shop for training all with one page AND find their class on on one page.","User Story:
+As a anonymoususer, I want to have all training options distinctly displayed with essential details such as training day and time, title, brief summary, trainer information, skill level, total registrations, available spots, training location, a link to comprehensive training details, and a ""Register Now"" link, so that I can efficiently browse and select training sessions from a single page.
+
+Acceptance Criteria:
+- Each training option must clearly display the day and time, title, and a concise summary.
+- Information about trainers, skill level, total registrations, and remaining spots must be included for each session.
+- The training location and links to both full details and registration must be easily accessible for all training options.
+
+Test Outline:
+- Review the training options page to ensure all specified details are present and clearly marked for each training session.
+- Verify that the links to full training details and registration are functional and direct users to the correct pages.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,4,2.0,2,3,1.0,3,4,1.0,2,4,2.0,2,4,2.0,2,4,2.0,2,4,2.0,—
+US017,"As a anonymoususer, I want to have a training landing page with an intro section and a list of all training offerings and promote call for trainings, so that I can shop for training all with one page and we can have a call for trainings for selection.","User Story:
+As a anonymoususer, I want to access a comprehensive training landing page that includes an introductory section and a detailed list of all available training offerings, along with a prominent call for training submissions, so that I can easily explore training options in one place and facilitate the selection process for upcoming trainings.
+
+Acceptance Criteria:
+- The landing page must feature an engaging introductory section that clearly outlines the purpose and benefits of the training offerings.
+- A complete list of all training programs must be displayed, with at least 10 offerings available for users to browse.
+- A visible call for training submissions must be included, allowing users to submit their training proposals or requests directly from the page.
+
+Test Outline:
+- Review the landing page to ensure the introductory section effectively communicates the training offerings' value.
+- Verify that the list of training programs is complete and accessible, with at least 10 distinct offerings presented.
+- Test the functionality of the call for training submissions to confirm that users can successfully submit their proposals through the page.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,3,5,2.0,2,5,3.0,3,5,2.0,—
+US018,"As a anonymoususer, I want to have a link on the home page to a list of training options, so that I can take training.","User Story:
+As a anonymoususer, I want to access a prominently displayed link on the home page that directs me to a comprehensive list of available training options, so that I can easily find and enroll in relevant training programs to enhance my skills.
+
+Acceptance Criteria:
+- The home page must feature a clearly visible link to the training options list, ensuring it is accessible without any additional navigation steps.
+- The training options list should load within 3 seconds of clicking the link to provide a seamless user experience.
+- The list must include at least 10 distinct training programs categorized by skill level and topic for better user selection.
+
+Test Outline:
+- Check the home page to confirm the presence and visibility of the training options link.
+- Measure the loading time of the training options list to ensure it meets the 3-second requirement.
+- Review the training options list to verify that it contains a minimum of 10 programs, properly categorized for user convenience.","it (ISO 29148)
+that (ISO 29148)
+better (ISO 29148)
+can (NASA ARM)
+better (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US019,"As a anonymoususer, I want to find out where the coding lounge is and what time it is open, so that I can code with my friends.","User Story:
+As a anonymoususer, I want to easily locate the coding lounge and know its operating hours so that I can plan to code with my friends without any confusion.
+
+Acceptance Criteria:
+- Provide the exact location of the coding lounge, including room number or address.
+- Clearly state the opening hours of the coding lounge, specifying the days of the week and times (e.g., Monday to Friday, 9 AM to 9 PM).
+- Ensure that this information is accessible on the website or app within 3 clicks.
+
+Test Outline:
+- Check the website or app to confirm that the coding lounge's location is accurately displayed.
+- Verify that the operating hours are listed correctly and are easy to find.
+- Test the navigation process to ensure users can access this information within the specified number of clicks.","easy (ISO 29148)
+this (ISO 29148)
+that (ISO 29148)
+easy to (NASA ARM)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US020,"As a administrator, I want to refund sponsorship money that was processed via stripe, so that people get their monies back.","User Story:
+As a administrator, I want to process refunds for sponsorship payments made through Stripe so that users receive their funds back promptly and efficiently.
+
+Acceptance Criteria:
+- Successfully initiate a refund for sponsorship transactions processed via Stripe within 24 hours of the request.
+- Ensure that the refund amount matches the original transaction amount, with no discrepancies.
+- Confirm that users receive notification of the refund status within 1 hour of processing.
+
+Test Outline:
+- Verify that the refund process can be initiated and completed within the specified time frame.
+- Check the transaction records to ensure the refund amount is accurate and corresponds to the original payment.
+- Monitor user notifications to confirm that they receive timely updates regarding their refund status.","that (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US021,"As a authenticateduser, I want to find a link on the sponsorships page to become a $350 level sponsor, so that I can pay for and become a sponsor role.","User Story:
+As a authenticateduser, I want to easily locate a link on the sponsorships page to become a $350 level sponsor, so that I can complete my payment and officially assume the sponsor role.
+
+Acceptance Criteria:
+- The sponsorships page must prominently display a clear link for the $350 level sponsorship.
+- The link should be accessible within 2 clicks from the homepage.
+- Upon clicking the link, users should be directed to a secure payment page that confirms the sponsorship level and amount.
+
+Test Outline:
+- Navigate to the sponsorships page and verify the presence and visibility of the $350 sponsorship link.
+- Track the number of clicks required to reach the sponsorship link from the homepage to ensure it meets the criteria.
+- Test the link to confirm it redirects to the correct payment page and displays the sponsorship details accurately.","secure (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US022,"As a anonymoususer, I want to See a list of attendees associated with this company, so that I know who from this sponsor organization is attending.","User Story:
+As a anonymoususer, I want to view a comprehensive list of attendees linked to this company so that I can identify the representatives from the sponsoring organization who are participating in the event.
+
+Acceptance Criteria:
+- Display a complete list of attendees associated with the company, including their names and roles.
+- Ensure that the list is updated in real-time, reflecting any changes in attendee status.
+- Provide a search functionality to filter attendees by name or role for easier navigation.
+
+Test Outline:
+- Verify that the list of attendees is accessible and displays all relevant information as specified.
+- Check that the list updates automatically when new attendees register or existing ones change their status.
+- Test the search functionality to ensure it accurately filters the attendee list based on user input.","it (ISO 29148)
+this (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,4,0.0,3,4,1.0,4,4,0.0,2,4,2.0,3,4,1.0,—
+US023,"As a authenticateduser, I want to identify myself as and pay for a $350 company sponsorship, so that I can easily become a sponsor at this level without having to interface with badcamp personnel to get a sponsorship.","User Story:
+As a authenticateduser, I want to verify my identity and process a payment for a $350 company sponsorship, so that I can seamlessly secure my sponsorship at this level without needing to interact with BadCamp personnel.
+
+Acceptance Criteria:
+- Successfully authenticate the user’s identity before allowing the sponsorship payment.
+- Ensure the payment process for the $350 sponsorship is completed within 3 minutes.
+- Provide a confirmation receipt of the sponsorship payment immediately after the transaction.
+
+Test Outline:
+- Verify that the authentication process correctly identifies the user before proceeding to payment.
+- Measure the time taken to complete the payment process to ensure it meets the 3-minute requirement.
+- Check that a confirmation receipt is generated and sent to the user’s registered email address right after the payment is processed.","secure (ISO 29148)
+it (ISO 29148)
+this (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US024,"As a administrator, I want to create and maintain venues, so that I can provide location details to help users find what they're looking for.","User Story:
+As a administrator, I want to efficiently create and manage venue listings so that I can provide accurate location information, enhancing user experience and enabling users to easily find the venues they need.
+
+Acceptance Criteria:
+- Successfully create a new venue listing with all required details (name, address, contact information) within 5 minutes.
+- Update existing venue information and ensure changes are reflected in the system within 2 minutes.
+- Maintain an up-to-date database of venues with a minimum accuracy rate of 95% for location details.
+
+Test Outline:
+- Verify the time taken to create a new venue listing and ensure it meets the 5-minute requirement.
+- Check the system for updated venue information within the specified time frame after an edit is made.
+- Conduct a random audit of venue listings to confirm that at least 95% of the location details are accurate.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US025,"As a anonymoususer, I want to view venue details, so that I can get a sense of the location and see the events happening there.","User Story:
+As a anonymoususer, I want to access detailed information about venues so that I can understand the location better and discover upcoming events taking place there.
+
+Acceptance Criteria:
+- Display comprehensive venue details, including address, capacity, and amenities, within 3 seconds of the request.
+- Provide a list of at least 5 upcoming events at the venue, updated in real-time.
+- Ensure that venue information is accessible without requiring user registration or login.
+
+Test Outline:
+- Measure the time taken to load and display venue details to confirm it meets the 3-second requirement.
+- Verify that the list of upcoming events is accurate and includes at least 5 entries.
+- Check that users can view venue information without needing to create an account or log in.","it (ISO 29148)
+that (ISO 29148)
+better (ISO 29148)
+can (NASA ARM)
+better (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US026,"As a anonymoususer, I want to see a list of the sessions associated with sponsor attendees, so that I know where I can engage with this sponsor and where they are thought leaders.","User Story:
+As a anonymoususer, I want to access a comprehensive list of sessions linked to sponsor attendees so that I can identify opportunities for engagement and recognize their areas of expertise.
+
+Acceptance Criteria:
+- Display a list of all sessions associated with each sponsor attendee, ensuring it is updated in real-time.
+- Include at least 5 key details for each session, such as title, time, location, speaker names, and a brief description.
+- Ensure that the list is easily navigable and searchable, allowing users to filter by sponsor or session topic.
+
+Test Outline:
+- Verify that the session list is populated with accurate data related to sponsor attendees.
+- Check that each session entry contains the required details and is displayed correctly.
+- Test the search and filter functionality to ensure users can efficiently find specific sponsors or topics.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US027,"As a authenticateduser, I want to See a payment page to pay for my individual sponsorships as the third step of the registration process so that pay for my sponsorship.","User Story:
+As a authenticateduser, I want to access a dedicated payment page during the third step of the registration process so that I can efficiently complete my payment for individual sponsorships.
+
+Acceptance Criteria:
+- The payment page must be accessible only after successful authentication and completion of the first two registration steps.
+- The page should display a summary of the individual sponsorships selected, including total cost, before proceeding to payment.
+- The payment process must successfully process transactions with a confirmation message displayed within 3 seconds of submission.
+
+Test Outline:
+- Verify that the payment page is only accessible after the user has logged in and completed the prior registration steps.
+- Check that the sponsorship summary is correctly displayed on the payment page, including accurate pricing.
+- Test the payment submission to ensure that transactions are processed and confirmation messages are received within the specified time frame.","that (ISO 29148)
+can (NASA ARM)",4,5,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US028,"As a administrator, I want to assign sponsors to events, trainings and summits so that They will be featured on the sponsor detail page.","User Story:
+As a administrator, I want to allocate sponsors to various events, training sessions, and summits so that their branding and contributions are prominently displayed on the sponsor detail page, enhancing visibility and recognition.
+
+Acceptance Criteria:
+- Successfully assign at least 5 sponsors to each event, training, and summit.
+- Ensure that the sponsor detail page updates in real-time to reflect the assigned sponsors.
+- Verify that each sponsor's logo and information are correctly displayed on the detail page within 2 minutes of assignment.
+
+Test Outline:
+- Check the assignment process to confirm that a minimum of 5 sponsors can be allocated to each event, training, and summit.
+- Monitor the sponsor detail page for real-time updates after assignments are made.
+- Validate that the logos and details of the sponsors appear correctly on the page within the specified time frame.","that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US029,"As a anonymoususer, I want to see all events, trainings and summits that a sponsor is sponsoring so that I know where I can engage with this sponsor and where they are thought leaders.","User Story:
+As a anonymoususer, I want to access a comprehensive list of all events, training sessions, and summits sponsored by a specific sponsor so that I can identify opportunities to engage with them and recognize their areas of thought leadership.
+
+Acceptance Criteria:
+- Display a complete list of events, trainings, and summits associated with the selected sponsor.
+- Ensure that the information is updated in real-time, reflecting any new sponsorships within 24 hours.
+- Provide clear details for each event, including date, location, and a brief description of the sponsor's role.
+
+Test Outline:
+- Verify that the list of sponsored events is accessible and includes all relevant details.
+- Check the update frequency to confirm that new sponsorships are reflected within the specified time frame.
+- Ensure that users can easily navigate to the event details from the sponsor's profile.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,4,0.0,3,4,1.0,4,4,0.0,2,4,2.0,3,4,1.0,—
+US030,"As a authenticateduser, I want to Enter payment information and have my card charged for an individual sponsorship, so that I can pay for an individual sponsorship.","User Story:
+As a authenticateduser, I want to input my payment details and have my credit card processed for an individual sponsorship, so that I can successfully complete my payment for the sponsorship without any issues.
+
+Acceptance Criteria:
+- The payment form must accept and validate credit card information, ensuring all required fields are filled correctly.
+- The transaction should be processed within 3 seconds, confirming the charge to the user's card.
+- A confirmation message must be displayed to the user upon successful payment, including transaction details.
+
+Test Outline:
+- Test the payment form to ensure it correctly validates all necessary credit card information before submission.
+- Measure the time taken to process the payment and confirm it meets the 3-second requirement.
+- Verify that a confirmation message with transaction details is displayed to the user after the payment is successfully processed.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US031,"As a sponsor, I want to link BADCamp attendees to my sponsorship page, so that I can show off our level of attendance.","User Story:
+As a sponsor, I want to connect BADCamp attendees directly to my sponsorship page so that I can effectively showcase our participation level and enhance brand visibility.
+
+Acceptance Criteria:
+- Create a dedicated link to the sponsorship page that is easily accessible from the BADCamp attendee list.
+- Track the number of clicks on the sponsorship link to measure engagement, aiming for at least a 20% click-through rate.
+- Ensure that the sponsorship page highlights our attendance metrics and key contributions to the event.
+
+Test Outline:
+- Verify that the link to the sponsorship page is functional and prominently displayed in the attendee list.
+- Analyze click data to confirm that the click-through rate meets or exceeds the target of 20%.
+- Review the content on the sponsorship page to ensure it accurately reflects our attendance and contributions.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US032,"As a authenticateduser, I want to update my user profile, so that I can connect with other Drupalists at BADCamp.","User Story:
+As a authenticateduser, I want to modify my user profile information so that I can effectively network and engage with other Drupal enthusiasts at BADCamp.
+
+Acceptance Criteria:
+- Successfully update at least 3 key profile fields (e.g., name, bio, and interests) to reflect current information.
+- Ensure that the updated profile is visible to other users within 2 minutes of submission.
+- Confirm that the profile changes are saved and persist across sessions without any data loss.
+
+Test Outline:
+- Verify that the user can access the profile update feature and make changes to the specified fields.
+- Check the visibility of the updated profile by viewing it from another authenticated user’s account within the time frame.
+- Log out and log back in to ensure that the updated profile information remains intact.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US033,"As a anonymoususer, I want to sign up for the BADCamp newsletter, so that I can stay up to date with the latest communications about BADCamp.","User Story:
+As a anonymoususer, I want to register for the BADCamp newsletter so that I can receive timely updates and important announcements regarding BADCamp events and activities.
+
+Acceptance Criteria:
+- Successfully submit the newsletter sign-up form with a valid email address.
+- Confirm that a welcome email is sent to the provided email address within 10 minutes of registration.
+- Ensure that the user can unsubscribe from the newsletter at any time through a clear and accessible link in each email.
+
+Test Outline:
+- Verify that the sign-up form accepts and processes valid email addresses correctly.
+- Check the inbox of the registered email to confirm receipt of the welcome email within the specified time frame.
+- Test the unsubscribe functionality to ensure it works as intended and removes the user from the mailing list.","it (ISO 29148)
+that (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US034,"As a administrator, I want to tag my blog posts for consumption by Drupal Planet, so that they will be listed on the Drupal Planet blog.","User Story:
+As a administrator, I want to categorize my blog posts with appropriate tags for integration with Drupal Planet, so that they are effectively featured and accessible on the Drupal Planet blog, increasing visibility and readership.
+
+Acceptance Criteria:
+- Successfully apply relevant tags to each blog post before publication.
+- Ensure that tagged posts are automatically listed on the Drupal Planet blog within 10 minutes of posting.
+- Verify that at least 80% of tagged posts receive engagement (views or comments) within the first week of being published.
+
+Test Outline:
+- Check the tagging functionality to confirm that tags can be added and saved correctly for each blog post.
+- Monitor the Drupal Planet blog to ensure that new posts appear within the specified time frame after tagging.
+- Analyze engagement metrics for tagged posts to validate that the target engagement rate is met.","that (ISO 29148)
+appropriate (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US035,"As a administrator, I want to create blog posts, so that I can share the latest information about BADCamp with the public.","User Story:
+As a administrator, I want to publish blog posts so that I can effectively communicate the latest updates and information about BADCamp to the public, enhancing community engagement and awareness.
+
+Acceptance Criteria:
+- Successfully create and publish a blog post within 10 minutes of starting the process.
+- Ensure that each blog post includes at least 300 words and relevant images or media to enrich content quality.
+- Track and report the number of views and interactions on each blog post within 24 hours of publication.
+
+Test Outline:
+- Measure the time taken from the initiation of the blog post creation to its publication to ensure it meets the time criterion.
+- Review the content of the published blog post to confirm it meets the word count and media requirements.
+- Analyze the analytics dashboard to verify the number of views and interactions for each blog post within the specified timeframe.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US036,"As a anonymoususer, I want to read the blog, so that I can stay informed about all the latest happenings with BADCamp.","User Story:
+As a anonymoususer, I want to access the blog content so that I can stay updated on the latest news and events related to BADCamp, enhancing my engagement with the community.
+
+Acceptance Criteria:
+- Ensure that the blog is accessible without requiring user authentication.
+- Confirm that the latest blog posts are displayed prominently, with at least 5 recent articles available for reading.
+- Verify that the blog loads within 3 seconds to provide a seamless reading experience.
+
+Test Outline:
+- Attempt to access the blog without logging in to ensure it is publicly available.
+- Check the blog interface to confirm that the latest 5 posts are visible and easily accessible.
+- Measure the loading time of the blog page to ensure it meets the 3-second requirement.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US037,"As a sponsor, I want to sponsor a summit that matches my brand, so that I can get exposure to potential customers and otherwise tout my Drupal credentials.","User Story:
+As a sponsor, I want to support a summit that aligns with my brand values and target audience, so that I can increase visibility among potential customers and effectively showcase my expertise in Drupal.
+
+Acceptance Criteria:
+- Identify and select a summit that attracts at least 500 attendees from my target market.
+- Ensure that my brand is prominently featured in at least 3 marketing materials related to the summit.
+- Collect feedback from at least 50 attendees post-summit to assess brand recognition and perceived value.
+
+Test Outline:
+- Review the summit's attendee list and demographics to confirm alignment with my target audience.
+- Check the marketing materials to verify the presence and prominence of my brand's logo and messaging.
+- Conduct a survey with attendees to gather insights on brand exposure and the impact of sponsorship.","that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,5,2.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US038,"As a attendee, I want to register for a summit, so that I can reserve my seat at the summit.","User Story:
+As a attendee, I want to complete my registration for the summit online so that I can secure my seat and receive timely updates about the event.
+
+Acceptance Criteria:
+- Successfully submit the registration form with all required fields completed.
+- Receive a confirmation email within 10 minutes of registration to verify my seat reservation.
+- Ensure that the registration process allows for payment processing, if applicable, and confirms payment status.
+
+Test Outline:
+- Check that the registration form can be filled out and submitted without errors.
+- Monitor the email inbox to confirm receipt of the registration confirmation within the specified time frame.
+- Validate that the payment processing system works correctly and reflects the payment status accurately.","secure (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US039,"As a attendee, I want to get detailed directions to the summit venue, so that I can get to the summit easily on the day of the event.","User Story:
+As a attendee, I want to receive comprehensive directions to the summit venue so that I can navigate to the event location effortlessly on the day of the summit.
+
+Acceptance Criteria:
+- Provide step-by-step directions from at least three major transportation hubs to the venue.
+- Include estimated travel times for each route, ensuring they are accurate within a 10% margin.
+- Offer a downloadable map or digital guide that highlights key landmarks and public transport options.
+
+Test Outline:
+- Verify that the directions include detailed steps from the specified transportation hubs to the venue.
+- Check the accuracy of the estimated travel times against real-time traffic data.
+- Ensure the downloadable map or digital guide is accessible and clearly outlines the route and landmarks.","that (ISO 29148)
+can (NASA ARM)",4,5,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US040,"As a attendee, I want to see what summits I'm signed up for, so that I can confirm my attendence and prevent myself from accidentally double-booking with a training or another summit.","User Story:
+As a attendee, I want to view a list of summits I am registered for so that I can verify my attendance and avoid the risk of double-booking with other trainings or events.
+
+Acceptance Criteria:
+- Display a comprehensive list of all summits the attendee is signed up for, updated in real-time.
+- Ensure that the list includes key details such as summit dates, times, and locations for easy reference.
+- Provide a notification feature that alerts the attendee of any scheduling conflicts with other registered events.
+
+Test Outline:
+- Check the attendee's dashboard to confirm that the list of registered summits is accurate and up-to-date.
+- Validate that all relevant details (dates, times, locations) are clearly presented for each summit.
+- Simulate a scenario where the attendee registers for another event and verify that a conflict notification is triggered.","easy (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US041,"As a summit coordinator, I want to see a list of attendees signed up for my summit, so that I can communicate with my attendees by email prior to the event.","User Story:
+As a summit coordinator, I want to access a comprehensive list of registered attendees for my summit so that I can effectively communicate with them via email in advance of the event, ensuring they are well-informed and engaged.
+
+Acceptance Criteria:
+- The system must display a complete list of attendees who have signed up, including their names and email addresses.
+- The list should be exportable in a CSV format for easy email communication.
+- The attendee list must be updated in real-time to reflect any new registrations or cancellations.
+
+Test Outline:
+- Verify that the attendee list is accessible and includes all necessary information for each participant.
+- Check the functionality of the export feature to ensure the list can be downloaded in CSV format.
+- Monitor the system for real-time updates to the attendee list when new registrations occur.","easy (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US042,"As a summit coordinator, I want to list basic information about my summit, so that I can inform potential attendees on why they should attend my summit.","User Story:
+As a summit coordinator, I want to provide essential details about my summit so that I can effectively communicate the value and benefits to potential attendees, encouraging higher registration rates.
+
+Acceptance Criteria:
+- Include the summit date, location, and duration in the information provided.
+- Highlight at least 3 key topics or speakers that will attract attendees.
+- Ensure that the information is accessible on the summit website within 24 hours of publication.
+
+Test Outline:
+- Review the summit website to confirm that all basic information is clearly listed and accurate.
+- Check that the highlighted topics or speakers are prominently featured and engaging to the target audience.
+- Validate that the information is updated and accessible within the specified timeframe.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,4,0.0,3,4,1.0,4,4,0.0,2,4,2.0,3,4,1.0,—
+US043,"As a summit coordinator, I want to list sponsors for my summit, so that I can make sure sponsors feel rewarded and will be interested in sponsoring in future years.","User Story:
+As a summit coordinator, I want to compile a comprehensive list of sponsors for my summit so that I can ensure they feel valued and appreciated, increasing the likelihood of their continued support in future events.
+
+Acceptance Criteria:
+- Create a detailed list of all sponsors, including their contribution levels and contact information.
+- Implement a feedback mechanism to gather sponsor satisfaction ratings, aiming for at least 80% positive feedback.
+- Develop a follow-up communication plan to engage sponsors post-summit, ensuring at least 70% of them express interest in future sponsorship opportunities.
+
+Test Outline:
+- Review the compiled sponsor list for completeness and accuracy, confirming all necessary details are included.
+- Analyze feedback collected from sponsors to verify that the satisfaction rating meets or exceeds the target.
+- Track responses to the follow-up communication to ensure that the engagement rate aligns with the goal.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,5,2.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US044,"As a summit coordinator, I want to list an agenda for my summit, so that I can entice attendees and give positive feedback to presenters to encourage participation.","User Story:
+As a summit coordinator, I want to create a detailed agenda for my summit so that I can attract more attendees and provide constructive feedback to presenters, ultimately boosting participation and engagement.
+
+Acceptance Criteria:
+- The agenda must include at least 10 sessions with clear titles, descriptions, and time slots.
+- Each session should have a designated presenter with a brief bio to enhance credibility and interest.
+- Attendee feedback on the agenda should be collected, aiming for a satisfaction rate of 80% or higher regarding session relevance and variety.
+
+Test Outline:
+- Review the agenda to ensure it contains the required number of sessions and presenter information.
+- Distribute a feedback survey to attendees post-summit and analyze the results to confirm the satisfaction rate meets the target.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US045,"As a anonymoususer, I want to see how many seats are left for the summit, so that I can make sure to register in-time to reserve my spot.","User Story:
+As a anonymoususer, I want to view the remaining available seats for the summit so that I can ensure timely registration and secure my attendance.
+
+Acceptance Criteria:
+- Display the current number of available seats in real-time on the summit registration page.
+- Update the seat count dynamically whenever a registration occurs, reflecting changes within 5 seconds.
+- Ensure that the seat availability information is accessible without requiring user authentication.
+
+Test Outline:
+- Check the registration page to confirm that the available seat count is visible and accurate.
+- Simulate a registration to verify that the seat count updates within the specified time frame.
+- Access the registration page without logging in to ensure the seat availability information is displayed.","secure (ISO 29148)
+that (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US046,"As a anonymoususer, I want to see specific details on summits, so that I can learn more about the summit I'm interested in to see if it matches my interests, register for the event, and get day-of knowledge to help me get to the location.","User Story:
+As a anonymoususer, I want to access detailed information about various summits so that I can evaluate their relevance to my interests, complete my registration for the event, and obtain essential information for navigating to the venue on the day of the event.
+
+Acceptance Criteria:
+- Provide comprehensive summit details, including topics, speakers, and schedules, to facilitate informed decision-making.
+- Enable a seamless registration process that confirms participation within 2 minutes of submission.
+- Offer day-of-event guidance, including location maps and transportation options, accessible at least 24 hours prior to the summit.
+
+Test Outline:
+- Review the summit detail pages to ensure all relevant information is presented clearly and comprehensively.
+- Test the registration process to confirm that users receive a confirmation within the specified time frame.
+- Check the availability and accuracy of day-of-event guidance materials to ensure they are accessible and useful for attendees.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US047,"As a anonymoususer, I want to see a list of all the summits, so that I can determine which summit I might be interested and able to attend.","User Story:
+As a anonymoususer, I want to access a comprehensive list of all available summits so that I can evaluate my options and identify which summit aligns with my interests and availability.
+
+Acceptance Criteria:
+- Display a complete list of summits, including at least the title, date, and location for each summit.
+- Ensure that the list is updated in real-time, reflecting any new summits added or existing ones removed.
+- Provide filtering options to allow users to sort summits by date, location, and topic of interest.
+
+Test Outline:
+- Verify that the list of summits is accessible without requiring user authentication.
+- Check that the displayed information for each summit includes the necessary details as specified in the acceptance criteria.
+- Test the filtering functionality to ensure it works correctly and updates the list based on user selections.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,4,0.0,3,4,1.0,4,4,0.0,2,4,2.0,3,4,1.0,—
+US048,"As a anonymoususer, I want to learn about sponsorship levels, so that I can determine the right level of sponsorship for my organization.","User Story:
+As a anonymoususer, I want to access detailed information about the various sponsorship levels available, so that I can make an informed decision regarding the most suitable sponsorship tier for my organization.
+
+Acceptance Criteria:
+- Provide a comprehensive overview of at least 3 distinct sponsorship levels, including benefits and costs associated with each.
+- Ensure that the information is easily accessible and can be viewed within 2 clicks from the homepage.
+- Include a comparison chart that highlights key features of each sponsorship level for quick reference.
+
+Test Outline:
+- Navigate to the sponsorship information section and verify that all required details are present and clearly outlined.
+- Measure the number of clicks required to access the sponsorship levels from the homepage to ensure it meets the criteria.
+- Review the comparison chart for accuracy and completeness of the information provided.","most (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,5,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US049,"As a authenticateduser, I want to use a WYSIWYG editor for all long-form content, so that I don't have to know HTML to update my content.","User Story:
+As a authenticateduser, I want to utilize a WYSIWYG (What You See Is What You Get) editor for all long-form content creation, so that I can easily update and format my content without needing any knowledge of HTML, thereby streamlining my workflow.
+
+Acceptance Criteria:
+- The WYSIWYG editor must support all essential formatting options (e.g., bold, italics, lists) with a user-friendly interface.
+- Users should be able to save and publish content directly from the editor with a success rate of 95% or higher.
+- The editor must load within 3 seconds to ensure a smooth user experience.
+
+Test Outline:
+- Test the functionality of the WYSIWYG editor to confirm that all formatting options are accessible and work as intended.
+- Measure the success rate of saving and publishing content to ensure it meets the specified threshold.
+- Monitor the loading time of the editor to verify it meets the 3-second requirement.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US050,"As a sponsor, I want to Link to my sponsorship profile from my job listings, so that recruits can learn more about my organization.","User Story:
+As a sponsor, I want to provide a direct link to my sponsorship profile from my job listings so that potential recruits can easily access detailed information about my organization and its values, enhancing their understanding and interest.
+
+Acceptance Criteria:
+- Each job listing must include a visible and functional link to the sponsorship profile.
+- The link should direct users to the sponsorship profile page within 2 seconds of clicking.
+- Track the number of clicks on the sponsorship profile link from job listings, aiming for at least a 20% engagement rate from job seekers.
+
+Test Outline:
+- Verify that the link to the sponsorship profile is present and correctly formatted in each job listing.
+- Measure the loading time of the sponsorship profile page to ensure it meets the 2-second criterion.
+- Analyze click-through data to confirm that at least 20% of job seekers engage with the sponsorship profile link.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US051,"As a anonymoususer, I want to learn about posting jobs as a sponsor and contact the sponsorship person, so that I have the opportunty to post my job listing on the BADCamp site.","User Story:
+As a anonymoususer, I want to understand the process of posting job listings as a sponsor and connect with the sponsorship representative, so that I can effectively promote my job opportunities on the BADCamp website.
+
+Acceptance Criteria:
+- Access detailed information about the sponsorship program and job posting guidelines on the BADCamp site.
+- Successfully contact the sponsorship representative through a provided communication channel within 24 hours.
+- Receive confirmation of the job listing submission process and any associated requirements.
+
+Test Outline:
+- Review the information available on the BADCamp site to ensure it clearly outlines the sponsorship and job posting process.
+- Send a message to the sponsorship representative and verify a response is received within the specified time frame.
+- Confirm that the user receives all necessary details regarding the job listing submission after initial contact.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,4,2.0,3,4,1.0,2,4,2.0,3,4,1.0,2,4,2.0,2,4,2.0,—
+US052,"As a sponsor, I want to post a job, so that I can hire top-tier Drupal talent.","User Story:
+As a sponsor, I want to create and publish a job listing for Drupal positions so that I can attract and hire highly qualified Drupal professionals who meet my specific project needs.
+
+Acceptance Criteria:
+- The job posting must include detailed requirements and qualifications to ensure clarity for potential candidates.
+- The job listing should be live and accessible to candidates within 24 hours of submission.
+- At least 5 qualified applicants should apply within the first week of the job being posted.
+
+Test Outline:
+- Review the job listing to confirm that all necessary details are included and accurately reflect the role.
+- Check the job posting status to ensure it is published within the specified timeframe.
+- Monitor the number of applications received within the first week to verify that the target of 5 qualified applicants is met.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US053,"As a authenticateduser, I want to view the job board, so that I can look for an interesting Drupal gig!.","User Story:
+As a authenticateduser, I want to access the job board so that I can efficiently search for engaging Drupal job opportunities that match my skills and interests.
+
+Acceptance Criteria:
+- Successfully log in as an authenticated user to access the job board.
+- Display a list of at least 20 current Drupal job postings relevant to my profile.
+- Ensure that the job board updates with new listings at least once every hour.
+
+Test Outline:
+- Verify that the user can log in and navigate to the job board without errors.
+- Check that the job board displays a minimum of 20 job postings upon access.
+- Monitor the job board for updates to confirm new listings appear within the specified timeframe.","that (ISO 29148)
+every (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US054,"As a administrator, I want to assign a room to a time slot and a location, so that I can populate the schedule .","User Story:
+As a administrator, I want to allocate a specific room to a designated time slot and location so that I can effectively manage and populate the scheduling system for optimal resource utilization.
+
+Acceptance Criteria:
+- Successfully assign a room to a time slot and location, with confirmation of the assignment displayed in the scheduling system.
+- Ensure that the room assignment does not conflict with any existing bookings, maintaining a conflict-free schedule.
+- Provide a visual representation of the scheduled room assignments, allowing for easy verification of availability.
+
+Test Outline:
+- Verify that the room assignment process completes without errors and is reflected in the scheduling system.
+- Check for any scheduling conflicts by reviewing existing bookings before and after the assignment.
+- Assess the visual representation of the schedule to confirm that the assigned room and time slot are accurately displayed.","easy (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US055,"As a anonymoususer, I want to see the schedule, so that I can plan my day and figure out where to go!.","User Story:
+As a anonymoususer, I want to access the schedule information so that I can effectively plan my day and determine my next destination.
+
+Acceptance Criteria:
+- The schedule must be displayed within 3 seconds of the request to ensure timely access.
+- Users should be able to view at least 7 days of the schedule at a glance.
+- The schedule should include clear details on locations and times for each event.
+
+Test Outline:
+- Measure the time taken to load the schedule after the request is made to confirm it meets the 3-second requirement.
+- Verify that the schedule displays events for a minimum of 7 days.
+- Check that all events listed include accurate location and time information.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+be able to (NASA ARM)
+timely (NASA ARM)
+can (NASA ARM)",2,4,2.0,2,4,2.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US056,"As a anonymoususer, I want to see the final list of sessions approved, so that I can see what's going on at BADCamp .","User Story:
+As a anonymoususer, I want to access the finalized list of approved sessions for BADCamp so that I can stay informed about the event schedule and topics being covered.
+
+Acceptance Criteria:
+- The final list of approved sessions must be displayed on the event website by a specified date, at least 2 weeks prior to BADCamp.
+- The list should include session titles, presenters, and time slots for each session.
+- Users should be able to filter the sessions by category or presenter to easily find relevant content.
+
+Test Outline:
+- Verify that the finalized list of sessions is published on the website by the deadline.
+- Check that all required information (titles, presenters, time slots) is accurately included in the list.
+- Test the filtering functionality to ensure users can sort sessions by category or presenter effectively.","that (ISO 29148)
+all (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US057,"As a administrator, I want to bulk approve sessions as accepted, so that I can save time.","User Story:
+As a administrator, I want to efficiently bulk approve multiple sessions as accepted so that I can significantly reduce the time spent on manual approvals and enhance overall workflow efficiency.
+
+Acceptance Criteria:
+- Enable the selection of at least 50 sessions at once for bulk approval.
+- Ensure that the bulk approval process completes within 2 minutes for the selected sessions.
+- Provide a confirmation message indicating the number of sessions successfully approved after the action is performed.
+
+Test Outline:
+- Test the functionality by selecting various batches of sessions and verifying that the bulk approval feature processes them correctly.
+- Measure the time taken for the bulk approval process to ensure it meets the 2-minute requirement.
+- Check the confirmation message to ensure it accurately reflects the number of sessions approved.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US058,"As a administrator, I want to mark a session as accepted, so that I can populate the schedule .","User Story:
+As a administrator, I want to designate a session as accepted so that I can effectively populate the schedule and ensure all participants are informed in a timely manner.
+
+Acceptance Criteria:
+- Successfully mark a session as accepted, updating its status in the system.
+- Ensure that the schedule reflects the accepted session within 2 minutes of the status change.
+- Notify all relevant participants of the session acceptance via email or in-app notification.
+
+Test Outline:
+- Verify that the session status changes to accepted in the system after the action is performed.
+- Check the schedule to confirm that the accepted session appears within the specified time frame.
+- Validate that all participants receive a notification regarding the session acceptance.","that (ISO 29148)
+all (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US059,"As a anonymoususer, I want to receive a notification when sessions have been evaluated, so that I know whether I've been accepted or rejected.","User Story:
+As a anonymoususer, I want to receive timely notifications regarding the evaluation status of my sessions so that I can promptly understand whether I have been accepted or rejected.
+
+Acceptance Criteria:
+- Notifications must be sent within 24 hours of session evaluation completion.
+- Users should receive a clear message indicating acceptance or rejection status.
+- Notifications should be accessible via both email and in-app alerts to ensure visibility.
+
+Test Outline:
+- Track the time taken from session evaluation completion to notification dispatch to confirm it meets the 24-hour requirement.
+- Review the content of the notifications to ensure they clearly state the acceptance or rejection status.
+- Verify that notifications are successfully delivered to both email and in-app alert systems.","it (ISO 29148)
+that (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",4,5,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US060,"As a anonymoususer, I want to receive a notification when I submit a session, so that know that my session went through ok.","User Story:
+As a anonymoususer, I want to receive a confirmation notification upon submitting a session so that I can be assured that my submission was successful and processed correctly.
+
+Acceptance Criteria:
+- A notification must be sent immediately after the session submission is completed.
+- The notification should clearly indicate the successful submission status with a confirmation message.
+- The notification must be delivered within 3 seconds of the session submission.
+
+Test Outline:
+- Submit a session and verify that a notification is generated and sent.
+- Check the content of the notification to ensure it confirms the successful submission.
+- Measure the time taken from submission to notification delivery to ensure it meets the 3-second requirement.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US061,"As a authenticateduser, I want to edit my session, so that if I make a mistake, I can correct it.","User Story:
+As a authenticateduser, I want the ability to modify my session details so that I can promptly rectify any errors I may have made, ensuring my information is accurate and up-to-date.
+
+Acceptance Criteria:
+- Users must be able to access the session editing feature from their account dashboard.
+- Changes made to the session should be saved successfully, with a confirmation message displayed within 3 seconds.
+- Users should be able to revert to the previous session state within 10 minutes of making changes, ensuring flexibility in case of mistakes.
+
+Test Outline:
+- Verify that the session editing option is accessible from the user’s account dashboard.
+- Test the saving process to ensure that changes are confirmed within the specified time frame.
+- Attempt to revert changes within the 10-minute window and confirm that the previous session state is restored.","that (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)
+may (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US062,"As a anonymoususer, I want to register to speak at BADCamp, so that I submit a session.","User Story:
+As a anonymoususer, I want to complete the registration process to present at BADCamp, so that I can successfully submit my session proposal and contribute to the event.
+
+Acceptance Criteria:
+- Successfully fill out and submit the registration form for BADCamp.
+- Receive a confirmation email within 10 minutes of registration completion.
+- Ensure that the session proposal submission is acknowledged and tracked in the event system.
+
+Test Outline:
+- Verify that the registration form can be completed and submitted without errors.
+- Check the email inbox for a confirmation message within the specified time frame.
+- Confirm that the session proposal is logged in the event management system after submission.","that (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,4,0.0,3,4,1.0,4,4,0.0,2,4,2.0,3,4,1.0,—
+US063,"As a authenticateduser, I want to submit a session at BADCAMP, so that I can get my session evaluated.","User Story:
+As a authenticateduser, I want to submit a session proposal for BADCAMP so that I can receive a formal evaluation of my session content and increase my chances of being selected to present.
+
+Acceptance Criteria:
+- Successfully complete the session submission form with all required fields filled out.
+- Receive a confirmation email within 10 minutes of submission indicating that the session has been received.
+- Ensure that the session proposal is evaluated and feedback is provided within 14 days of submission.
+
+Test Outline:
+- Verify that the session submission form can be accessed and completed without errors.
+- Check the user's email inbox for the confirmation email to ensure it is received within the specified time frame.
+- Review the evaluation process to confirm that feedback is provided within the 14-day period.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,5,2.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US064,"As a sponsor, I want to personalize my sponsorship page, so that I can promote my brand.","User Story:
+As a sponsor, I want to customize my sponsorship page to reflect my brand identity, so that I can effectively enhance brand visibility and engagement with my target audience.
+
+Acceptance Criteria:
+- Allow sponsors to upload a logo and select brand colors that will be displayed on their sponsorship page.
+- Provide at least 3 customizable sections for content, including text, images, and links to external resources.
+- Ensure that changes made to the sponsorship page are saved and displayed in real-time without requiring a page refresh.
+
+Test Outline:
+- Verify that the logo upload and color selection features function correctly and display the chosen elements on the sponsorship page.
+- Check that all customizable sections can be edited and that the content is saved accurately.
+- Test the real-time update functionality by making changes and confirming they appear immediately on the page.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,5,1.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US065,"As a anonymoususer, I want to see a list of all the summits that include when they are, so that I can determine which summit I want to attend.","User Story:
+As a anonymoususer, I want to access a comprehensive list of all upcoming summits along with their scheduled dates so that I can make an informed decision about which summit to attend based on my availability.
+
+Acceptance Criteria:
+- Display a complete list of summits with their respective dates and times.
+- Ensure that the list is updated in real-time to reflect any changes in summit schedules.
+- Allow users to filter the summits by date or category to enhance the selection process.
+
+Test Outline:
+- Verify that the list of summits includes all relevant details, including dates and times, and is accessible to anonymous users.
+- Check the system for real-time updates to the summit schedule to confirm accuracy.
+- Test the filtering functionality to ensure users can easily navigate through the summits based on their preferences.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",4,4,0.0,3,4,1.0,4,4,0.0,3,4,1.0,4,4,0.0,2,4,2.0,3,4,1.0,—
+US066,"As a authenticateduser, I want to Be offered several choices of idividual sponsorship on the second page of registration, so that I can be awesome and financially support the camp.","User Story:
+As a authenticateduser, I want to be presented with multiple individual sponsorship options on the second page of the registration process, so that I can contribute financially to the camp and enhance my experience.
+
+Acceptance Criteria:
+- Display at least 3 distinct individual sponsorship options on the second registration page.
+- Ensure that each sponsorship option includes clear descriptions and associated benefits.
+- Allow users to select their preferred sponsorship option and confirm their choice before finalizing registration.
+
+Test Outline:
+- Verify that the second page of registration shows a minimum of 3 sponsorship choices.
+- Check that each option has a detailed description and benefits listed.
+- Confirm that users can successfully select and confirm their sponsorship choice prior to completing the registration.","that (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US067,"As a anonymoususer, I want to easily find a link in the menu that links to the registration form, so that I can easily register for the camp.","User Story:
+As a anonymoususer, I want to quickly locate a clearly labeled link in the menu that directs me to the registration form, so that I can efficiently complete my registration for the camp without any confusion.
+
+Acceptance Criteria:
+- The registration link must be prominently displayed in the menu and accessible within 2 clicks.
+- The link should be labeled with clear text such as ""Register for Camp"" to enhance visibility.
+- The registration form must load within 3 seconds after clicking the link to ensure a smooth user experience.
+
+Test Outline:
+- Navigate through the menu to confirm that the registration link is easily found and accessible within the specified number of clicks.
+- Check the link's label to ensure it clearly indicates its purpose for registration.
+- Measure the loading time of the registration form after clicking the link to verify it meets the performance criteria.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",4,5,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US068,"As a anonymoususer, I want to fill out a user registration form, so that I can register for the camp and get an account on the website.","User Story:
+As a anonymoususer, I want to complete a user registration form so that I can successfully create an account on the website and secure my spot for the camp.
+
+Acceptance Criteria:
+- The registration form must include fields for at least name, email, and password, with all fields validated for correctness.
+- Users should receive a confirmation email within 3 minutes of submitting the registration form.
+- The account must be accessible immediately after registration, allowing users to log in without additional steps.
+
+Test Outline:
+- Verify that all required fields are present and validate the input for correctness upon submission.
+- Check the user's email inbox to confirm receipt of the registration confirmation email within the specified time frame.
+- Attempt to log in with the newly created account to ensure immediate access is granted.","secure (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",3,4,1.0,3,4,1.0,4,5,1.0,3,5,2.0,4,5,1.0,2,5,3.0,3,5,2.0,—
+US069,"As a anonymoususer, I want to find session information, so that I can go to a session.","User Story:
+As a anonymoususer, I want to access session information quickly so that I can easily navigate to the desired session without unnecessary delays.
+
+Acceptance Criteria:
+- Provide a search functionality that allows users to find session information within 3 clicks.
+- Ensure that session details are displayed within 2 seconds of the search request.
+- Include clear navigation links to the session page for at least 90% of the displayed sessions.
+
+Test Outline:
+- Test the search functionality to confirm that session information can be accessed within the specified number of clicks.
+- Measure the time taken to display session details after a search request to ensure it meets the 2-second requirement.
+- Verify that navigation links are present and functional for the majority of displayed sessions.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",3,5,2.0,2,4,2.0,3,5,2.0,2,5,3.0,4,5,1.0,2,5,3.0,3,5,2.0,—

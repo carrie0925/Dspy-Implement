@@ -1,0 +1,22 @@
+[
+  {
+    "id": "US001",
+    "description": "As a moderator, I want to create a new game by entering a name and an optional description, so that I can start inviting estimators."
+  },
+  {
+    "id": "US002",
+    "description": "As a moderator, I want to invite estimators by giving them a URL where they can access the game, so that we can start the game."
+  },
+  {
+    "id": "US003",
+    "description": " As a moderator, I want to start a round by entering an item in a single multi-line text field, so that we can estimate it."
+  },
+  {
+    "id": "US004",
+    "description": "As a moderator, I want to see all items we try to estimate this session, so that I can answer questions about the current story such as does this include ___"
+  },
+  {
+    "id": "US005",
+    "description": "As a moderator, I want to select an item to be estimated or re-estimated, so that the team sees that item and can estimate it."
+  }
+]

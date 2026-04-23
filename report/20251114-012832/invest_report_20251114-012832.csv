@@ -1,0 +1,80 @@
+﻿ID,Original User Story,Rewritten User Story,Fuzzy Terms (with source),I_before,I_after,delta_I,N_before,N_after,delta_N,V_before,V_after,delta_V,E_before,E_after,delta_E,S_before,S_after,delta_S,T_before,T_after,delta_T,overall_before,overall_after,delta_overall,Low-score Explanation (<2)
+US001,"As a moderator, I want to create a new game by entering a name and an optional description, so that I can start inviting estimators.","User Story:
+As a moderator, I want to initiate the creation of a new game by specifying a name and an optional description, so that I can efficiently streamline the invitation process for estimators to participate.
+
+Acceptance Criteria:
+- The game name must be entered with a maximum character limit of 50 characters or fewer to ensure it is both clear and concise.
+- An optional description can be included, providing context for the game, with a maximum limit of 200 characters to enhance user understanding.
+- The game must be successfully created and visible in the game list, allowing for immediate dispatch of invitations to estimators.
+
+Test Outline:
+- Validate the game name input field to ensure it accepts valid entries and correctly rejects any input exceeding the 50-character limit.
+- Confirm that the optional description field allows for input and enforces the 200-character limit as specified.
+- Ensure that the newly created game appears in the game directory and that invitations can be sent to estimators without any errors.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,—
+US002,"As a moderator, I want to invite estimators by giving them a URL where they can access the game, so that we can start the game.","User Story:
+As a moderator, I want to create and distribute a unique access URL for each estimator participating in the game session, so that we can efficiently streamline the initiation process and ensure all participants are adequately prepared to engage in the session.
+
+Acceptance Criteria:
+- Each estimator must receive a distinct and secure access URL that allows them entry to the game session.
+- The unique URL should be sent to all invited estimators within a maximum of 2 minutes from the time the invitation is issued.
+- At least 90% of the invited estimators must successfully access the game session using the provided URL without encountering any technical issues.
+
+Test Outline:
+- Verify that a unique access URL is generated for each estimator immediately after the invitation is sent.
+- Track the time taken to dispatch the URL to ensure it adheres to the 2-minute requirement.
+- Perform access tests with a representative sample of estimators to confirm that at least 90% can join the game session using the provided URL without any problems.","secure (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,—
+US003," As a moderator, I want to start a round by entering an item in a single multi-line text field, so that we can estimate it.","User Story:
+As a moderator, I want to enter an item into a single multi-line text field to efficiently initiate a round for value estimation and promote a productive discussion.
+
+Acceptance Criteria:
+- The multi-line text field must support input of at least 500 characters, allowing for comprehensive item descriptions.
+- The system should enable the moderator to submit the item with a single action, ensuring a fluid transition to the estimation phase.
+- A confirmation message indicating successful item submission must be displayed within 2 seconds, keeping the moderator informed that the item is ready for evaluation.
+
+Test Outline:
+- Validate the multi-line text field to ensure it can accept the full character limit without any issues.
+- Confirm that the item submission can be executed with a single click and that it transitions smoothly to the estimation phase.
+- Track the time taken to present the confirmation message post-submission to verify compliance with the 2-second requirement.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,—
+US004,"As a moderator, I want to see all items we try to estimate this session, so that I can answer questions about the current story such as does this include ___","User Story:
+As a moderator, I want to have a comprehensive overview of all items scheduled for estimation in the current session so that I can effectively manage inquiries about the stories, including their coverage of specific features or requirements.
+
+Acceptance Criteria:
+- Provide a complete and organized list of all items designated for estimation in the current session, ensuring it is easily accessible to the moderator.
+- Each item must include a succinct description that outlines its scope and context, enhancing clarity and understanding.
+- Develop a quick-reference tool that enables moderators to swiftly respond to questions regarding the inclusion of specific elements within the current stories.
+
+Test Outline:
+- Verify that the list of items is accurately populated and visible to the moderator at the start of the session.
+- Check that each item contains a clear and readily accessible description for better comprehension.
+- Assess the moderator's capability to quickly and accurately address questions related to the listed items throughout the session.","it (ISO 29148)
+that (ISO 29148)
+better (ISO 29148)
+all (ISO 29148)
+capability to (NASA ARM)
+can (NASA ARM)
+better (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,—
+US005,"As a moderator, I want to select an item to be estimated or re-estimated, so that the team sees that item and can estimate it.","User Story:
+As a moderator, I want to seamlessly select an item for estimation or re-estimation so that the team can collaboratively review and provide their estimates, ensuring accurate assessments that enhance project planning effectiveness.
+
+Acceptance Criteria:
+- The moderator must be able to effortlessly select an item from the list for estimation or re-estimation, with a user-friendly interface that minimizes complications.
+- The selected item should be visible to all team members within 2 minutes of selection to enable prompt discussions and feedback.
+- Team members must submit their estimates for the selected item within a strict 10-minute timeframe to ensure project momentum is maintained.
+
+Test Outline:
+- Evaluate the selection process to confirm that the moderator can easily choose an item and that the interface is intuitive and efficient.
+- Track the team’s dashboard to verify that the selected item is displayed to all members within the 2-minute timeframe.
+- Ensure that team members can submit their estimates and that all submissions are completed within the specified 10-minute limit.","efficient (ISO 29148)
+intuitive (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+be able to (NASA ARM)
+can (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,—

@@ -1,0 +1,1363 @@
+﻿ID,Original User Story,Rewritten User Story,Fuzzy Terms (with source),I_before,I_after,delta_I,N_before,N_after,delta_N,V_before,V_after,delta_V,E_before,E_after,delta_E,S_before,S_after,delta_S,T_before,T_after,delta_T,overall_before,overall_after,delta_overall,Low-score Explanation (<2)
+US001,"As a site member, I want to describe myself on my own page in a semi-structured way, so that others can learn about me.","User Story:
+As a site member, I want to showcase my personal information in a well-organized format on my profile page, allowing others to better understand my background and interests.
+
+Acceptance Criteria:
+- Include designated fields for essential personal information such as hobbies, expertise, and professional history.
+- Ensure the design is intuitive and visually engaging for users.
+- Facilitate straightforward updates to the displayed information.
+
+Test Outline:
+- Inspect the profile page to verify the inclusion of organized fields for personal details.
+- Evaluate the process of updating personal information for efficiency and confirm successful modifications.
+- Collect user feedback regarding the clarity and relevance of the information presented.","intuitive (ISO 29148)
+better (ISO 29148)
+better (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,1,1,0.0,2,2,0.0,1,2,1.0,2,2,0.0,E: The acceptance criteria are somewhat vague and do not provide specific metrics or constraints. | HEU: numbers=0; comparators=False; has_AC=True | HEU: numbers=0; comparators=True; has_AC=True
+US002,"As a site member, I want to fill out an application to become a Certified Scrum Practitioner, so that I can earn that designation.","User Story:
+As a site member, I want to submit my application for the Certified Scrum Practitioner credential so that I can achieve this esteemed professional certification.
+
+Acceptance Criteria:
+- Successfully complete and submit the application form with all necessary details.
+- Receive an email confirmation acknowledging the submission of my application.
+- Get updates regarding the application status within the designated timeframe.
+
+Test Outline:
+- Ensure the application form can be accurately filled out and submitted without any errors.
+- Confirm that an email notification is sent upon successful application submission.
+- Track the response time for application status updates to verify compliance with the specified timeframe.","this (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US003,"As a Practitioner, I want to include additional details about me in my profile page, so that I can showcase my experience.","User Story:
+As a Practitioner, I want to enrich my profile page with more comprehensive information about my background, so that I can effectively highlight my expertise and experience to potential clients or employers.
+
+Acceptance Criteria:
+- Provide fields for adding certifications, skills, and work history.
+- Ensure that the profile updates are saved and displayed correctly.
+- Allow users to preview changes before finalizing their profile updates.
+
+Test Outline:
+- Verify that all new fields for additional details are functional and user-friendly.
+- Check that updates are accurately reflected on the profile after saving.
+- Test the preview feature to ensure it displays the profile accurately before submission.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,2,3,1.0,—
+US004,"As a site member, I want to fill out an application to become a Certified Scrum Trainer, so that I can teach CSM and CSPO courses and certify others.","User Story:
+As a site member, I aim to finalize my application for Scrum Trainer certification, which will empower me to teach CSM and CSPO courses and certify future professionals in the field.
+
+Acceptance Criteria:
+- Successfully complete and submit the application for Scrum Trainer certification.
+- Receive a confirmation notification indicating the application has been submitted.
+- Get updates regarding the application status within a defined timeframe.
+
+Test Outline:
+- Ensure the application form is user-friendly and can be submitted without any complications.
+- Confirm receipt of an acknowledgment email that verifies the application submission.
+- Track the response time for feedback on the application status to ensure it aligns with the specified timeframe.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US005,"As a Trainer, I want to include additional details in my profile page about me, so that others can learn about me and decide if I am the right trainer for them.","User Story:
+As a Trainer, I want to enrich my profile page with detailed personal information so that potential clients can better understand my qualifications and assess whether I meet their training needs.
+
+Acceptance Criteria:
+- Create distinct sections highlighting my certifications, work history, and training philosophy.
+- Include a personal statement that conveys my distinctive training approach and techniques.
+- Design the profile to be visually appealing and intuitive for seamless navigation.
+
+Test Outline:
+- Review the profile page to confirm the inclusion of the new sections.
+- Assess the clarity and impact of the personal statement.
+- Analyze the overall design and user-friendliness of the profile layout.","intuitive (ISO 29148)
+that (ISO 29148)
+better (ISO 29148)
+can (NASA ARM)
+better (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US006,"As a Practitioner, I want to write an article for the site with a small graphic shown with the article showing my CSP or CST status, so that others know my certifications when reading.","User Story:
+As a Practitioner, I want to publish an article on the website that includes a visually appealing graphic showcasing my CSP or CST credentials, allowing readers to easily recognize my qualifications and expertise.
+
+Acceptance Criteria:
+- The article features a prominently displayed graphic that represents my CSP or CST certification.
+- The graphic is appropriately sized and strategically positioned within the article to maximize visibility.
+- The article is successfully published on the website without any issues.
+
+Test Outline:
+- Review the published article to confirm the inclusion of the certification graphic.
+- Evaluate the graphic's visibility and clarity in relation to the overall article layout.
+- Verify that the article is accessible and displays correctly across the website.",that (ISO 29148),2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US007,"As a trainer, I want to list my upcoming classes in my profile and include a link to a detailed page about each, so that prospective attendees can find my courses.","User Story:
+As a trainer, I want to prominently showcase my upcoming courses on my profile and include direct links to in-depth descriptions for each class, enabling potential participants to easily discover and investigate my educational offerings.
+
+Acceptance Criteria:
+- Display a clear and organized list of upcoming courses on the instructor's profile page.
+- Ensure each course features a clickable link that leads to a comprehensive information page.
+- Guarantee that the details of the courses are accurate and up-to-date.
+
+Test Outline:
+- Verify that the upcoming courses are correctly listed on the profile.
+- Test each course link to confirm it directs to the appropriate detailed information page.
+- Check that the content on the detailed pages is current and accurately represents the course schedule.","it (ISO 29148)
+that (ISO 29148)
+appropriate (ISO 29148)",2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,3,1.0,1,3,2.0,2,2,0.0,—
+US008,"As a site member, I want to view the profiles of other members, so that I can find others I might want to connect with.","User Story:
+As a site member, I want to access and browse the profiles of fellow members so that I can discover potential connections and expand my network.
+
+Acceptance Criteria:
+- Profiles of all members are easily accessible and viewable.
+- Each profile includes relevant information such as interests and contact options.
+- The browsing experience is intuitive and user-friendly.
+
+Test Outline:
+- Verify that all member profiles can be accessed without errors.
+- Check that each profile displays the necessary information clearly.
+- Assess the overall usability of the profile browsing feature.","intuitive (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,1,1,0.0,2,2,0.0,1,2,1.0,2,2,0.0,E: The acceptance criteria are somewhat vague and do not provide specific metrics or constraints. | HEU: numbers=0; comparators=False; has_AC=True | HEU: numbers=0; comparators=True; has_AC=True
+US009,"As a site member, I want to search for profiles based on a few fields, so that I can find others I might want to connect with.","User Story:
+As a site member, I want to filter profiles using specific criteria so that I can discover potential connections that align with my interests.
+
+Acceptance Criteria:
+- Enable search functionality across at least five profile fields.
+- Display relevant profiles that match the search criteria.
+- Ensure search results are returned within 3 seconds.
+
+Test Outline:
+- Test the search feature by inputting various criteria and verifying the results.
+- Measure the response time for search queries to confirm it meets the 3-second requirement.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US010,"As a site member, I want to mark my profile as private in which case only my name will appear, so that no one can learn things about me I don't want shared.","User Story:
+As a site member, I want the ability to set my profile to private, ensuring that only my name is visible, so that I can protect my personal information from being disclosed.
+
+Acceptance Criteria:
+- Enable the option to toggle profile privacy settings.
+- Ensure that only the member's name is displayed when the profile is set to private.
+- Confirm that no additional personal details are accessible to other users when the profile is private.
+
+Test Outline:
+- Test the functionality to change the profile to private and verify the settings are saved.
+- Check that only the name appears on the profile when viewed by other users.
+- Validate that all other personal information is hidden from public view.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US011,"As a site member, I want to mark my email address as private even if the rest of my profile is not, so that no one can contact me.","User Story:
+As a site member, I want the option to designate my email address as private, even when my profile information is public, so that I can prevent unwanted contact from other users.
+
+Acceptance Criteria:
+- Provide a toggle feature to set the email address to private.
+- Ensure that the email address is hidden from all other users when marked as private.
+- Confirm that the privacy setting can be updated at any time by the member.
+
+Test Outline:
+- Test the functionality of the toggle to mark the email as private.
+- Verify that the email address is not visible to other users when the privacy setting is enabled.
+- Check that the member can successfully change the privacy setting without issues.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US012,"As a site member, I want to send an email to any member via a form, so that we can connect.","User Story:
+As a site member, I want to utilize a form to send messages to other members, enabling us to establish connections and communicate effectively.
+
+Acceptance Criteria:
+- Successfully submit an email through the designated form.
+- Ensure the recipient receives the email promptly.
+- Confirm that the email content is correctly formatted and delivered without errors.
+
+Test Outline:
+- Test the form submission process to verify successful email dispatch.
+- Check the recipient's inbox to ensure the email is received.
+- Review the email for proper formatting and accuracy of the message.",that (ISO 29148),2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US013,"As a site administrator, I want to read practicing and training applications and approve or reject them, so that only applicants who qualify can become CSPs or CSTs.","User Story:
+As a site administrator, I want to review applications for practice and training programs and make decisions to approve or deny them, ensuring that only qualified candidates are granted CSP or CST status.
+
+Acceptance Criteria:
+- Efficiently access and evaluate all submitted applications.
+- Clearly document the reasons for approval or rejection.
+- Ensure that the decision process adheres to established qualification criteria.
+
+Test Outline:
+- Verify that all applications can be accessed and reviewed without issues.
+- Check that each decision is recorded with appropriate justification.
+- Confirm that the qualification criteria are consistently applied in the decision-making process.","that (ISO 29148)
+appropriate (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US014,"As a site administrator, I want to edit any site member profile, so that I can correct problems for members.","User Story:
+As a site administrator, I want the ability to modify any user's profile, enabling me to resolve issues and ensure that all member information is accurate and up-to-date.
+
+Acceptance Criteria:
+- Grant comprehensive access to edit all user profiles as necessary
+- Ensure that any modifications made to user profiles are saved successfully
+- Present a confirmation notification after each successful profile update
+
+Test Outline:
+- Verify that the administrator can access and edit any user profile without restrictions
+- Check that all modifications are correctly saved and reflected in the user's profile
+- Confirm that a notification appears following each successful profile change","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,2,0.0,2,3,1.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US015,"As a site visitor, I want to read current news on the home page, so that I stay current on agile news.","User Story:
+As a site visitor, I want to access the latest news directly from the home page so that I can remain informed about developments in the agile community.
+
+Acceptance Criteria:
+- Display the most recent news articles prominently on the home page.
+- Ensure news updates are refreshed at least once every hour.
+- Provide links to full articles for deeper insights.
+
+Test Outline:
+- Verify that the latest news articles are visible on the home page.
+- Check the frequency of news updates to confirm they occur hourly.
+- Test the links to ensure they direct to the complete articles without errors.","most (ISO 29148)
+that (ISO 29148)
+every (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,0,3,3.0,1,3,2.0,—
+US016,"As a site visitor, I want to access old news that is no longer on the home page, so that I can access things I remember from the past or that others mention to me.","User Story:
+As a site visitor, I want to retrieve archived news articles that are not featured on the homepage, so that I can revisit content I recall or that has been referenced by others.
+
+Acceptance Criteria:
+- Provide a dedicated section for accessing archived news articles.
+- Ensure that users can search for specific articles by date or keyword.
+- Allow easy navigation to find articles from previous months or years.
+
+Test Outline:
+- Verify the presence of an archive section on the site.
+- Test the search functionality to confirm it returns relevant archived articles.
+- Check the navigation options to ensure users can easily browse through older content.","easy (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,2,3,1.0,—
+US017,"As a site visitor, I want to email news items to the editor, so that they can be considered for publication.","User Story:
+As a site visitor, I want to submit news articles directly to the editor via email, enabling them to assess the content for potential publication.
+
+Acceptance Criteria:
+- Develop a user-friendly email submission form that simplifies the process of submitting news articles
+- Guarantee that every submission triggers an acknowledgment email confirming its receipt
+- Implement an efficient review system for the editor to analyze the submitted articles
+
+Test Outline:
+- Evaluate the effectiveness and ease of use of the email submission form for news articles
+- Verify that users receive a confirmation email promptly after their submission
+- Review the editor's evaluation process to ensure all submissions are assessed in a timely manner","efficient (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+every (ISO 29148)
+timely (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US018,"As a site editor, I want to set the following dates on a news item: Start Publishing Date, Old News Date, Stop Publishing Date, so that articles are published on and through appropriate dates.","User Story:
+As a site editor, I want to specify the Start Publishing Date, Expiration Date, and Stop Publishing Date for a news article so that the content is released and removed from visibility at the correct times.
+
+Acceptance Criteria:
+- Ability to set a Start Publishing Date for when the article becomes live
+- Ability to designate an Expiration Date indicating when the article is considered old news
+- Ability to establish a Stop Publishing Date to remove the article from circulation
+
+Test Outline:
+- Verify that the Start Publishing Date is correctly applied and the article goes live as scheduled
+- Check that the Expiration Date is accurately reflected and the article is marked as old news
+- Ensure the Stop Publishing Date effectively removes the article from public view",that (ISO 29148),2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,2,0.0,1,3,2.0,2,3,1.0,—
+US019,"As a site member, I want to subscribe to an RSS feed of news, so that I remain sufficiently and easily informed.","User Story:
+As a site member, I want to sign up for an RSS news feed so that I can effortlessly keep up with the latest information.
+
+Acceptance Criteria:
+- Successfully complete the subscription process and receive a confirmation notification.
+- Obtain regular updates through the RSS feed in a timely manner.
+- Ensure the feed is user-friendly and easy to navigate.
+
+Test Outline:
+- Confirm that the subscription process concludes with a confirmation message.
+- Monitor the delivery of news updates to ensure they arrive promptly via the RSS feed.
+- Evaluate the interface of the RSS feed for usability and accessibility.","easy (ISO 29148)
+that (ISO 29148)
+timely (NASA ARM)
+easy to (NASA ARM)
+can (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US020,"As a site editor, I want to assign priority numbers to news items, so that I can indicate which articles I want featured most prominently on the site.","User Story:
+As a site editor, I want to implement a ranking system for news articles, enabling me to effectively highlight the most impactful stories on the website.
+
+Acceptance Criteria:
+- Assign a priority score to each news article to determine its significance.
+- Ensure that articles with higher priority scores are displayed more prominently on the site.
+- Create an intuitive interface for easily adjusting the priority rankings as needed.
+
+Test Outline:
+- Verify that priority scores can be assigned to news articles without issues.
+- Evaluate the visibility and positioning of articles based on their assigned priority scores.
+- Test the functionality for modifying priority rankings and confirm that changes are accurately reflected on the website.","most (ISO 29148)
+intuitive (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US021,"As a site visitor, I want to see a list of all upcoming Certification Courses and can page through them if there are a lot, so that I can choose the best course for me.","User Story:
+As a site visitor, I want to access a comprehensive list of upcoming Certification Courses with pagination options, so that I can easily select the course that best fits my needs.
+
+Acceptance Criteria:
+- Display a complete list of upcoming Certification Courses.
+- Implement pagination to navigate through the list if it exceeds a certain number of entries.
+- Ensure each course entry includes essential details such as date, duration, and description.
+
+Test Outline:
+- Verify that all upcoming Certification Courses are listed accurately.
+- Test the pagination feature to ensure smooth navigation through multiple pages.
+- Check that each course entry contains the required information for informed decision-making.","best (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)
+best (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,2,3,1.0,—
+US022,"As a site visitor, I want to see a list of all upcoming Other Courses and can page through them if necessary, so that I can choose the best course for me.","User Story:
+As a site visitor, I want to access a comprehensive catalog of all upcoming Other Courses and navigate through them with ease, so that I can select the course that aligns perfectly with my needs.
+
+Acceptance Criteria:
+- Provide an extensive catalog showcasing all upcoming Other Courses.
+- Incorporate pagination to enable effortless browsing through the course listings.
+- Ensure that detailed descriptions for each course are readily available for informed selection.
+
+Test Outline:
+- Verify that the website showcases a complete and updated list of all upcoming Other Courses.
+- Assess the pagination feature to confirm smooth navigation between different course pages.
+- Check that detailed information for each course is accessible and clearly presented.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US023,"As a site visitor, I want to see a list of all upcoming Events, so that I can decide if I want to attend any.","User Story:
+As a site visitor, I want to access a comprehensive list of all upcoming events so that I can evaluate my interest in attending any of them.
+
+Acceptance Criteria:
+- Display a complete and organized list of upcoming events.
+- Include essential details for each event, such as date, time, and location.
+- Ensure the list is updated in real-time to reflect any changes or new additions.
+
+Test Outline:
+- Verify that the events list is visible and accessible on the site.
+- Check that all relevant event details are correctly presented.
+- Confirm that the list updates automatically with new events or changes.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,2,3,1.0,—
+US024,"As a trainer, I want to create a new course or event, so that site visitors can see it.","User Story:
+As a trainer, I want to design and launch a new course or event so that interested individuals can easily find and register for it.
+
+Acceptance Criteria:
+- Successfully publish a course or event listing on the platform
+- Ensure the new listing is accessible and visible to all site users
+- Include comprehensive details about the course or event, such as date, time, and curriculum content
+
+Test Outline:
+- Confirm that the course or event can be created without any issues
+- Navigate the site to verify that the new listing is displayed for users
+- Examine the listing to ensure all pertinent information is presented accurately","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,0,2,2.0,1,2,1.0,—
+US025,"As a trainer, I want to create an Other Course or Event I am charged a listing fee for that activity, so that I don't list events I don't really intend to hold.","User Story:
+As a trainer, I want to launch a new course or event with a specified listing fee, ensuring that I only promote activities I am genuinely committed to delivering.
+
+Acceptance Criteria:
+- Successfully establish a new course or event with a clearly defined listing fee.
+- Ensure that the listing fee effectively deters the posting of events without firm commitment.
+- Verify that the event details are accurately reflected upon creation.
+
+Test Outline:
+- Confirm that the listing fee is enforced during the creation of a new course or event.
+- Ensure that only events with a verified commitment to take place are displayed.
+- Examine the event details to guarantee they are correctly shown after the creation process.",that (ISO 29148),2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US026,"As a site administrator, I want to create an Other Course or Event that is not charged a listing fee, so that the Scrum Alliance doesn't charge itself for Scrum Gatherings that it puts on.","User Story:
+As a site administrator, I want to facilitate the creation of complimentary listings for Other Courses or Events, enabling the Scrum Alliance to host Scrum Gatherings without any associated costs.
+
+Acceptance Criteria:
+- Successfully create a no-cost listing for Other Courses or Events.
+- Ensure the listing creation process is streamlined and user-friendly.
+- Confirm that the Scrum Alliance can promote its Scrum Gatherings without incurring any expenses.
+
+Test Outline:
+- Verify that the listing is created without any fees.
+- Assess the user interface for ease of use and efficiency during the listing process.
+- Evaluate the effectiveness of Scrum Gathering promotions to ensure they are conducted without financial impact.","that (ISO 29148)
+can (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US027,"As a site administrator, I want to set the listing fee per Other Course or Event, so that we have flexibility on what to charge in the future.","User Story:
+As a site administrator, I want to implement a flexible listing fee structure for each Other Course or Event, allowing us to adjust our pricing strategy in response to market dynamics.
+
+Acceptance Criteria:
+- Enable the specification of distinct listing fees for each Other Course or Event
+- Ensure that fees can be swiftly modified to reflect changing market conditions
+- Offer an intuitive interface for administrators to oversee and adjust listing fees
+
+Test Outline:
+- Confirm that administrators can successfully set and alter listing fees for different courses and events
+- Validate that any fee adjustments are accurately displayed on the site
+- Assess the system's capability to process fee updates seamlessly without errors","intuitive (ISO 29148)
+that (ISO 29148)
+capability to (NASA ARM)
+can (NASA ARM)",2,2,0.0,2,3,1.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US028,"As a trainer, I want to update one of my existing courses or events, so that it reflects accurate information.","User Story:
+As a trainer, I want to modify the details of one of my current courses or events to ensure that all information is accurate and up-to-date.
+
+Acceptance Criteria:
+- Successfully access the course or event for editing.
+- Implement changes and save the updated information.
+- Verify that the updated details are displayed correctly to users.
+
+Test Outline:
+- Check that the editing interface allows for modifications.
+- Confirm that changes are saved and reflected in the course or event listing.
+- Review the updated information to ensure accuracy and completeness.","that (ISO 29148)
+all (ISO 29148)",2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US029,"As a trainer, I want to delete one of my courses or events, so that it's no longer listed if I cancel for some reason.","User Story:
+As a trainer, I want the capability to remove a course or event from my listings so that it is hidden from view in the event of a cancellation.
+
+Acceptance Criteria:
+- Successfully eliminate a chosen course or event from the platform.
+- Verify that the removed course or event is no longer accessible to users post-deletion.
+- Ensure the deletion process executes flawlessly without any errors.
+
+Test Outline:
+- Confirm that the course or event can be selected and removed effectively.
+- Inspect the listings to ensure the deleted item is absent.
+- Assess the deletion feature to guarantee it functions seamlessly without complications.","it (ISO 29148)
+that (ISO 29148)
+capability to (NASA ARM)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,2,3,1.0,—
+US030,"As a trainer, I want to copy one of my courses or events, so that I can create a new one.","User Story:
+As a trainer, I want to replicate an existing course or event, allowing me to streamline the creation of new offerings.
+
+Acceptance Criteria:
+- Successfully generate a duplicate of the chosen course or event.
+- Ensure that all pertinent details and resources are accurately transferred to the new version.
+- Facilitate straightforward modifications to the replicated course or event.
+
+Test Outline:
+- Confirm that the replication process produces an identical copy of the original course or event.
+- Verify that all related materials and information are included in the new version.
+- Assess the ease of editing the duplicated course or event without complications.","that (ISO 29148)
+all (ISO 29148)",2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,0,2,2.0,1,2,1.0,—
+US031,"As a site admin, I want to delete any course or event, so that I can remove things that will no longer occur.","User Story:
+As a site admin, I want the capability to remove any course or event, allowing me to efficiently manage and update the platform by eliminating obsolete or canceled listings.
+
+Acceptance Criteria:
+- Successfully execute the deletion of a course or event from the system.
+- Ensure that the deletion can be undone within a defined recovery period.
+- Confirm that users receive notifications about any major changes to courses or events.
+
+Test Outline:
+- Assess the deletion feature to verify its proper functionality.
+- Validate that items can be restored within the specified recovery timeframe.
+- Ensure that users are promptly informed about the removal of courses or events.","that (ISO 29148)
+capability to (NASA ARM)
+can (NASA ARM)",2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US032,"As a site editor, I want to update any course or event, so that I can fix things the original author hasn't.","User Story:
+As a site editor, I want the capability to edit any course or event details so that I can rectify errors or enrich information that the original creator may have missed.
+
+Acceptance Criteria:
+- Grant editing permissions for all course and event records.
+- Ensure that modifications are saved and displayed instantly on the website.
+- Notify the original creator about any changes made to their entries.
+
+Test Outline:
+- Confirm that the content manager can access and update course and event details.
+- Validate that the changes appear on the website immediately after saving.
+- Check that the original creator receives a notification regarding the updates.","that (ISO 29148)
+all (ISO 29148)
+capability to (NASA ARM)
+can (NASA ARM)
+may (NASA ARM)",2,3,1.0,1,3,2.0,2,3,1.0,1,2,1.0,2,2,0.0,0,2,2.0,1,2,1.0,—
+US033,"As a trainer, I want to turn a course into an event or an event into a course, so that I can correctly classify anything that was entered incorrectly.","User Story:
+As a trainer, I want to convert a course into an event or vice versa, enabling me to accurately categorize any entries that were misclassified.
+
+Acceptance Criteria:
+- Successfully transform a course into an event when needed.
+- Effectively change an event into a course as required.
+- Ensure all misclassified entries are correctly identified and reclassified.
+
+Test Outline:
+- Verify that a course can be converted to an event without data loss.
+- Check that an event can be transformed into a course seamlessly.
+- Validate that all previously misclassified entries are now accurately categorized.","that (ISO 29148)
+all (ISO 29148)
+as required (NASA ARM)
+can (NASA ARM)",2,2,0.0,2,3,1.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US034,"As a site visitor, I want to have an advanced search option that lets me fill in a form of search criteria, so that I can quickly find what I am looking for.","User Story:
+As a site visitor, I want to utilize an enhanced search feature that allows me to input specific search criteria through a form, so that I can efficiently locate the information I need.
+
+Acceptance Criteria:
+- Provide a user-friendly form for entering search parameters.
+- Ensure search results are displayed within 3 seconds of submission.
+- Allow filtering options to refine search results based on user preferences.
+
+Test Outline:
+- Test the functionality of the search form to confirm it accepts various criteria.
+- Measure the response time for search results after form submission.
+- Verify that filtering options effectively narrow down the search results.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US035,"As a site visitor, I want to view a course I can click on the trainer's name and be taken to the trainer's profile, so that I can read more about a trainer before registering for a course.","User Story:
+As a site visitor, I want to access a course and click on the trainer's name to navigate to their profile, so that I can learn more about the trainer's qualifications and background before enrolling in a course.
+
+Acceptance Criteria:
+- Ensure the trainer's name is clickable and directs to their profile page.
+- Display comprehensive information about the trainer on their profile.
+- Allow users to easily return to the course page after viewing the trainer's profile.
+
+Test Outline:
+- Verify that clicking the trainer's name redirects to the correct profile.
+- Check that the trainer's profile contains detailed information.
+- Confirm that users can navigate back to the course page seamlessly.","that (ISO 29148)
+can (NASA ARM)
+more (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,2,3,1.0,—
+US036,"As a site visitor, I want to subscribe to an RSS feed of upcoming courses and events, so that I am up to day without having to visit the site.","User Story:
+As a site visitor, I want to enroll in an RSS feed for upcoming courses and events so that I can stay informed without needing to frequently check the website.
+
+Acceptance Criteria:
+- Successfully subscribe to the RSS feed for courses and events.
+- Receive timely updates through the RSS feed.
+- Ensure the feed includes all relevant upcoming events and courses.
+
+Test Outline:
+- Verify that the subscription process for the RSS feed is functional.
+- Check the RSS feed for timely updates on new courses and events.
+- Confirm that the feed accurately reflects all scheduled events and courses.","that (ISO 29148)
+all (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US037,"As a site visitor, I want to read FAQs, so that I can get quick answers.","User Story:
+As a site visitor, I want to effortlessly locate the FAQ section so that I can swiftly obtain answers to my questions.
+
+Acceptance Criteria:
+- The FAQ section is prominently displayed and can be accessed directly from the homepage.
+- Each response in the FAQ is straightforward, succinct, and provides valuable information.
+- Users can effectively search for specific questions within the FAQ section.
+
+Test Outline:
+- Verify that the FAQ section is clearly visible and easily reachable from the homepage.
+- Assess all FAQ entries to ensure they deliver clear and useful information.
+- Test the search functionality to confirm it returns relevant and precise results.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,0,2,2.0,1,2,1.0,—
+US038,"As a site editor, I want to maintain a FAQ section, so that support gets fewer easily answered questions.","User Story:
+As a site editor, I want to curate a comprehensive FAQ section so that the support team receives fewer inquiries regarding common questions.
+
+Acceptance Criteria:
+- Create and publish at least 20 frequently asked questions with clear answers.
+- Ensure the FAQ section is easily accessible from the main site navigation.
+- Monitor and report a reduction in support tickets related to the topics covered in the FAQ.
+
+Test Outline:
+- Review the FAQ section for completeness and clarity of information.
+- Test the accessibility of the FAQ from various pages on the site.
+- Analyze support ticket data to confirm a decrease in related inquiries post-implementation.",that (ISO 29148),2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US039,"As a site visitor, I want to do a full-text search of the FAQs, so that I can find an answer quickly.","User Story:
+As a site visitor, I want to perform a comprehensive search of the FAQs so that I can swiftly locate the information I need.
+
+Acceptance Criteria:
+- Enable full-text search functionality across all FAQ entries.
+- Ensure search results are displayed within 2 seconds.
+- Provide relevant suggestions as users type their queries.
+
+Test Outline:
+- Test the search feature to confirm it retrieves accurate FAQ results.
+- Measure the response time to ensure it meets the 2-second requirement.
+- Verify that the search bar offers relevant suggestions during input.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US040,"As a site member, I want to download the latest training material and methodology PDFs, so that I have them.","User Story:
+As a site member, I want seamless access to the latest training materials and methodology PDFs so that I can utilize the most up-to-date resources for my development.
+
+Acceptance Criteria:
+- Provide a clearly visible link for downloading the latest training material PDFs.
+- Ensure that methodology PDFs are easily accessible for download.
+- Confirm that all downloaded files are the most current versions and properly formatted.
+
+Test Outline:
+- Verify that the download links lead to the latest training material PDFs.
+- Check the availability of methodology PDFs to ensure successful downloads.
+- Examine the content of the downloaded files to guarantee they are current and formatted correctly.","most (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US041,"As a visitor, I want to download presentations, PDFs, etc. on Scrum, so that I can learn from them or use them.","User Story:
+As a visitor, I want to easily find and download a variety of resources, including presentations and PDFs on Scrum, so that I can deepen my understanding and effectively implement the methodologies.
+
+Acceptance Criteria:
+- Curate a comprehensive list of downloadable Scrum-related resources.
+- Guarantee that all files are accessible and free from errors during download.
+- Provide concise descriptions for each resource to help users understand their significance.
+
+Test Outline:
+- Confirm that every resource listed is available for download without issues.
+- Test each download link to ensure it directs to the correct file.
+- Evaluate the descriptions to verify they accurately convey the content and purpose of the resources.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+every (ISO 29148)
+can (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US042,"As a site member, I want to scroll through a listing of jobs, so that I can see if there any I am interested in.","User Story:
+As a site member, I want to browse a comprehensive selection of job opportunities so that I can find positions that match my professional goals.
+
+Acceptance Criteria:
+- Deliver an attractive and user-friendly layout for job listings.
+- Offer advanced filtering capabilities to refine job searches based on criteria like location and job type.
+- Guarantee that detailed job descriptions are accessible with a single click.
+
+Test Outline:
+- Evaluate the job listing interface for user-friendliness and navigational ease.
+- Test the filtering options to ensure they work effectively and yield accurate results.
+- Confirm that clicking on a job listing opens the detailed description smoothly and without errors.","that (ISO 29148)
+can (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US043,"As a recruiter, I want to post a help wanted ad, so that I can attract candidates.","User Story:
+As a recruiter, I want to publish a job advertisement so that I can draw in qualified candidates for open positions.
+
+Acceptance Criteria:
+- Create and submit a detailed job posting on relevant platforms
+- Monitor the number of applications received within the first week
+- Ensure the ad reaches a minimum of 500 potential candidates
+
+Test Outline:
+- Verify that the job ad is live on the selected job boards
+- Track and report the number of applications submitted in the first week
+- Assess the reach of the advertisement through analytics tools","that (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US044,"As a site admin, I want to approve each help wanted ad before it gets to the site, so that we're sure of the quality of jobs being listed.","User Story:
+As a site admin, I want to evaluate and authorize each help wanted advertisement before it is published, ensuring that only top-tier job listings are showcased on the platform.
+
+Acceptance Criteria:
+- Require all job advertisements to be submitted for admin approval prior to publication.
+- Establish a notification system to alert admins of ads pending approval.
+- Keep a comprehensive record of both approved and rejected advertisements for ongoing quality assurance.
+
+Test Outline:
+- Confirm that all submitted advertisements are placed in a queue for administrative review.
+- Ensure that notifications are dispatched for advertisements awaiting approval.
+- Examine the archive of approved and rejected advertisements to verify adherence to quality standards.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)",2,2,0.0,2,3,1.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US045,"As a site admin, I want to be emailed whenever a job is submitted, so that I am aware of it and can decide if I want to post it.","User Story:
+As a site admin, I want to receive immediate email alerts for every job submission, allowing me to stay informed and make swift decisions regarding the publication of listings.
+
+Acceptance Criteria:
+- Instantly receive an email notification upon each job submission.
+- Ensure the notification contains all relevant job details for comprehensive assessment.
+- Confirm that notifications are sent out quickly and without errors.
+
+Test Outline:
+- Submit a job and verify the timely arrival of the email notification.
+- Examine the email to ensure it includes all necessary job information.
+- Perform tests to identify any potential delays in the notification delivery process.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+every (ISO 29148)
+timely (NASA ARM)",2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US046,"As a site member, I want to subscribe to an RSS feed of jobs available, so that I can read them without visiting the site.","User Story:
+As a site member, I want to enroll in an RSS feed for job listings so that I can conveniently access and read them without needing to visit the website.
+
+Acceptance Criteria:
+- Successfully subscribe to the RSS feed for job updates.
+- Receive timely notifications of new job postings through the feed.
+- Ensure the feed displays accurate and up-to-date job information.
+
+Test Outline:
+- Verify that the subscription process to the RSS feed is functional.
+- Check the feed for timely updates on new job listings.
+- Confirm that the job information in the feed matches the website's listings.","that (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US047,"As a site admin, I want to edit and delete help wanted ads, so that I can correct small problems or make sure each ad complies with site guidelines.","User Story:
+As a site admin, I want the capability to update and remove help wanted listings, allowing me to address minor discrepancies and maintain compliance with the site's standards.
+
+Acceptance Criteria:
+- Successfully modify existing help wanted listings to rectify any inaccuracies.
+- Efficiently remove help wanted listings that fail to meet compliance criteria.
+- Ensure all modifications and deletions are documented for transparency.
+
+Test Outline:
+- Validate that changes to help wanted listings are accurately saved and displayed.
+- Confirm that removed listings are no longer accessible on the site.
+- Review the logs to verify that all updates and deletions are properly recorded.","that (ISO 29148)
+all (ISO 29148)
+capability to (NASA ARM)",2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,3,1.0,1,3,2.0,2,2,0.0,—
+US048,"As a site admin, I want to stop publishing jobs on the site 30 days after being posted, so that jobs that may have been filled aren't still listed when the hiring party forgets to come back and delete the ad.","User Story:
+As a site admin, I want to automatically remove job postings 30 days after their initial publication, ensuring that outdated listings do not remain visible and preventing confusion for hiring parties who may have filled the positions.
+
+Acceptance Criteria:
+- Implement an automated system to identify and remove job ads that are older than 30 days.
+- Ensure that notifications are sent to hiring parties before their listings are removed.
+- Confirm that removed listings are no longer accessible on the site.
+
+Test Outline:
+- Verify that job postings older than 30 days are automatically deleted from the site.
+- Check that notifications are sent to hiring parties prior to the removal of their listings.
+- Test the site to ensure that removed job ads do not appear in search results.","that (ISO 29148)
+may (NASA ARM)",2,2,0.0,2,3,1.0,2,2,0.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US049,"As a recruiter, I want to be able to extend an ad for another 30 days by visiting the site and updating the posting, so that my ad remains active.","User Story:
+As a recruiter, I want to extend a job advertisement for an additional 30 days through the platform, ensuring that my listing remains prominent to attract qualified candidates.
+
+Acceptance Criteria:
+- Effortlessly access the job listing management interface.
+- Successfully renew the advertisement for an extra 30 days without any complications.
+- Confirm that the updated listing reflects the new expiration date accurately.
+
+Test Outline:
+- Verify that the recruiter can navigate to the job listing management section with ease.
+- Check that the advertisement's duration is extended by 30 days after the update.
+- Ensure the revised expiration date is displayed correctly on the job listing.","that (ISO 29148)
+can (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US050,"As an advertiser, I want to be emailed a reminder seven day before an ad is about to expire, so that I can go extend the ad.","User Story:
+As an advertiser, I want to receive an email notification one week prior to my advertisement's expiration, enabling me to take timely action to extend its visibility.
+
+Acceptance Criteria:
+- Receive a reminder email exactly seven days before the advertisement is set to expire.
+- Ensure the email includes clear and concise instructions for extending the advertisement.
+- Confirm that notifications are sent for all active advertisements nearing their expiration date.
+
+Test Outline:
+- Check the email inbox for the reminder notification one week before the advertisement expires.
+- Verify that the email provides straightforward guidance on how to extend the advertisement.
+- Test the system to ensure that reminders are correctly generated for all applicable active ads.","that (ISO 29148)
+all (ISO 29148)
+timely (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,2,2,0.0,—
+US051,"As a site visitor, I want to read a new article on the front page about once a week, so that I am up on all the latest happenings.","User Story:
+As a site visitor, I want to see a newly published article featured on the homepage every week, so that I can stay updated on the latest news and events.
+
+Acceptance Criteria:
+- A fresh article is showcased on the homepage at least once per week.
+- The article addresses timely and pertinent topics that engage readers.
+- Users can effortlessly navigate to the article directly from the homepage.
+
+Test Outline:
+- Monitor the homepage weekly to confirm the availability of a new article.
+- Assess the article's content for its relevance and current significance.
+- Ensure that the article is prominently accessible from the homepage.","that (ISO 29148)
+every (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",2,2,0.0,1,2,1.0,2,2,0.0,1,1,0.0,2,2,0.0,0,2,2.0,1,2,1.0,E: The acceptance criteria are somewhat vague regarding the quality and specifics of the content. | HEU: numbers=0; comparators=False; has_AC=True | HEU: numbers=0; comparators=True; has_AC=True
+US052,"As the site editor, I want to include a teaser with each article, so that site visitors can decide if they want to read the rest.","User Story:
+As a content editor, I want to add a captivating teaser for each article, enabling site visitors to quickly assess their interest in reading the full content.
+
+Acceptance Criteria:
+- Each article must have a teaser of no more than 150 characters.
+- Teasers should effectively summarize the article's main points.
+- Ensure that the teaser is displayed prominently on the article listing page.
+
+Test Outline:
+- Review multiple articles to confirm the presence of a teaser.
+- Check that the character limit for teasers is adhered to.
+- Verify that the teaser accurately reflects the article's content.","that (ISO 29148)
+more (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,2,2,0.0,—
+US053,"As a site member who has read a teaser on the front page, I want to read the entire article so that I can finish articles that appeal to me.","User Story:
+As a site member who has read a teaser on the front page, I want to access the full article so that I can complete reading content that interests me.
+
+Acceptance Criteria:
+- Provide a seamless link from the teaser to the full article.
+- Ensure the full article loads without delays.
+- Confirm that all articles are accessible to members who have viewed the teaser.
+
+Test Outline:
+- Test the functionality of the link from the teaser to the full article.
+- Measure the loading time of the full article to ensure it meets performance standards.
+- Verify that all relevant articles are available for reading after engaging with the teaser.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,2,3,1.0,—
+US054,"As the site editor, I want to add an article to the site, so that the site has plenty of content.","User Story:
+As a content manager, I aim to publish a new article on the website to enrich the resources available for our audience.
+
+Acceptance Criteria:
+- Successfully create and format the article for online publication.
+- Ensure the article goes live on the site within 24 hours of submission.
+- Verify that the article is fully optimized for search engine ranking.
+
+Test Outline:
+- Review the published article to confirm proper formatting and accessibility.
+- Check the website within 24 hours to ensure the article is live.
+- Use SEO analysis tools to assess the article's optimization effectiveness.",that (ISO 29148),1,2,1.0,1,2,1.0,2,2,0.0,0,2,2.0,2,2,0.0,0,2,2.0,1,2,1.0,—
+US055,"As a site editor, I want to set start publishing dates, old article date, and stop publishing dates for articles, so that articles appear only during appropriate periods.","User Story:
+As a site editor, I want to establish start and stop publishing dates, as well as specify the original publication date for articles, so that content is displayed only during designated timeframes.
+
+Acceptance Criteria:
+- Define a start date for when articles become visible.
+- Specify an original publication date for archival purposes.
+- Set an end date to automatically remove articles from public view.
+
+Test Outline:
+- Verify that articles are published according to the defined start and stop dates.
+- Check that the original publication date is correctly recorded and displayed.
+- Ensure that articles are no longer accessible after the stop publishing date.",that (ISO 29148),2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US056,"As a site editor, I want to be able to designate whether or not an ever makes the home page, so that the best content is featured most prominently.","User Story:
+As a site editor, I want the ability to select which articles appear on the homepage, ensuring that the most valuable content is highlighted for maximum visibility.
+
+Acceptance Criteria:
+- Implement a feature to mark articles for homepage display.
+- Ensure that only designated articles are showcased on the homepage.
+- Provide an easy-to-use interface for managing homepage content.
+
+Test Outline:
+- Verify that the selection feature allows for marking articles for the homepage.
+- Check that only the selected articles are visible on the homepage.
+- Test the interface for usability and accessibility in managing content.","most (ISO 29148)
+easy (ISO 29148)
+that (ISO 29148)",2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US057,"As the site editor, I want to have pretty good control over how the article, so that articles are visually appealing.","User Story:
+As a site editor, I desire extensive authority over the layout and aesthetics of articles to ensure that the material captivates and engages readers visually.
+
+Acceptance Criteria:
+- Allow for the selection and adjustment of font styles and sizes for headings and body text.
+- Offer functionality to reposition and resize images within the article as needed.
+- Provide a suite of text formatting options, including bullet points, quotes, and diverse styling features.
+
+Test Outline:
+- Verify that the editor can effectively change font styles and sizes.
+- Check that images can be repositioned and resized according to the editor's specifications.
+- Ensure that all text formatting options are functional and enhance the article's visual presentation.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",1,2,1.0,1,2,1.0,2,2,0.0,0,2,2.0,2,2,0.0,0,2,2.0,1,2,1.0,—
+US058,"As a site visitor, I want to click the link from the article teaser to take me directly to the body of the article. not to another teaser setup, so that I can easily finish the article.","User Story:
+As a site visitor, I want to click on the link in the article teaser to be taken directly to the full article, rather than being redirected to another teaser, so that I can seamlessly read and complete the article.
+
+Acceptance Criteria:
+- The link in the teaser should lead directly to the article's content.
+- Ensure that no additional teaser pages are displayed before accessing the article.
+- Confirm that the transition from teaser to article is smooth and immediate.
+
+Test Outline:
+- Click the teaser link and verify that it opens the full article without intermediate pages.
+- Check that the article loads completely and promptly after clicking the link.
+- Ensure that the user experience is uninterrupted and intuitive.","intuitive (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,2,3,1.0,—
+US059,"As a site editor, I want to be able to indicate whether an article is publicly available or for members only, so that visitors are incentivized to become members.","User Story:
+As a site editor, I want to specify if an article is accessible to the public or restricted to members only, so that potential visitors are motivated to sign up for membership.
+
+Acceptance Criteria:
+- Clearly label articles as ""Public"" or ""Members Only""
+- Ensure that access restrictions are enforced based on the article's designation
+- Track membership sign-ups resulting from article visibility changes
+
+Test Outline:
+- Verify that articles are correctly marked according to their access level
+- Test access to articles to confirm restrictions are applied accurately
+- Analyze membership sign-up data to assess the impact of article availability on conversions",that (ISO 29148),2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US060,"As a site visitor, I want to be able to read some of your articles, so that I can learn without first joining the site.","User Story:
+As a site visitor, I want to access a selection of articles on your site so that I can gain knowledge without needing to register first.
+
+Acceptance Criteria:
+- Provide access to at least 3 articles without requiring user registration.
+- Ensure articles are easily discoverable on the homepage.
+- Allow users to read articles in full without interruptions.
+
+Test Outline:
+- Verify that at least 3 articles are available for reading without login.
+- Check the homepage layout to confirm articles are prominently displayed.
+- Test the reading experience to ensure no registration prompts appear during article access.","that (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US061,"As a site member, I want to have full access to all articles, so that there is a benefit to being a member.","User Story:
+As a site member, I want to enjoy full access to all articles, ensuring that my membership delivers real value.
+
+Acceptance Criteria:
+- Validate that every article is available to members without any access limitations.
+- Ensure that the advantages of membership are effectively communicated to users.
+- Monitor member interactions with articles to evaluate the perceived value of access.
+
+Test Outline:
+- Confirm that a member can successfully open and read any article on the platform.
+- Check that the benefits of membership are prominently featured on the website.
+- Analyze engagement data to assess how article access influences member satisfaction.","that (ISO 29148)
+all (ISO 29148)
+every (ISO 29148)
+can (NASA ARM)",2,2,0.0,2,3,1.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US062,"As a site visitor, I want to do a full-text search of article body, title, and author name, so that I can find what I want.","User Story:
+As a site visitor, I want to perform a comprehensive search across article content, titles, and author names, so that I can easily locate the information I need.
+
+Acceptance Criteria:
+- Enable full-text search functionality across all articles.
+- Ensure search results include matches from the body, title, and author name.
+- Provide relevant results within a reasonable response time.
+
+Test Outline:
+- Test the search feature with various queries to confirm it retrieves relevant articles.
+- Verify that results display matches from the article body, title, and author.
+- Measure the response time to ensure it meets user expectations.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US063,"As a site visitor, I want to subscribe to an RSS feed of articles, so that I can read them without visiting the site.","User Story:
+As a site visitor, I want to enroll in an RSS feed for articles so that I can conveniently access and read them without needing to navigate to the website.
+
+Acceptance Criteria:
+- Provide a clear option to subscribe to the RSS feed.
+- Ensure the RSS feed delivers articles promptly and accurately.
+- Allow users to easily manage their subscription preferences.
+
+Test Outline:
+- Verify that the subscription option is visible and functional.
+- Check the timeliness and accuracy of articles delivered through the RSS feed.
+- Test the management features for subscription settings to ensure user control.","that (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,2,1.0,2,3,1.0,—
+US064,"As a site visitor, I want to post comments about articles, so that others can read them.","User Story:
+As a site visitor, I want to share my thoughts on articles by posting comments, enabling others to engage with my insights.
+
+Acceptance Criteria:
+- Allow users to submit comments on articles.
+- Ensure comments are visible to other visitors immediately after posting.
+- Implement moderation to filter inappropriate content.
+
+Test Outline:
+- Test the comment submission process for functionality.
+- Verify that comments appear on the article page without delay.
+- Check the moderation system to ensure it effectively screens out inappropriate comments.","it (ISO 29148)
+that (ISO 29148)",2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US065,"As a site editor, I want to have a prominent area on the home page where I can put special announcements not necessarily news or articles, so that I can give them additional exposure.","User Story:
+As a site editor, I want a dedicated feature on the homepage to showcase important announcements beyond just news articles, so that I can boost their visibility and foster greater audience engagement.
+
+Acceptance Criteria:
+- Develop a visually prominent section on the homepage specifically for important announcements.
+- Ensure that this section is user-friendly and can be easily modified by the content manager.
+- Enable the integration of diverse media formats (text, images, hyperlinks) within the announcements.
+
+Test Outline:
+- Confirm the new announcement feature is visible on the homepage.
+- Assess the editing capabilities to ensure the content manager can effortlessly update the section.
+- Validate that various media formats are correctly displayed in the announcement section.","this (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)
+greater (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US066,"As a site editor, I want to have some flexibility as to where things appear, so that I can accommodate different types of content.","User Story:
+As a site editor, I want the ability to rearrange elements on the site, enabling me to effectively showcase a variety of content types.
+
+Acceptance Criteria:
+- Allow users to effortlessly move content blocks to different areas of the page.
+- Support the addition of new content sections as needed.
+- Ensure that all changes can be saved and published smoothly, without any technical issues.
+
+Test Outline:
+- Verify the functionality to shift content blocks to multiple locations on the page.
+- Check that new content sections can be added and displayed correctly.
+- Review the saving and publishing process for any errors or delays.","that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,2,0.0,1,2,1.0,2,2,0.0,0,2,2.0,2,2,0.0,0,2,2.0,1,2,1.0,—
+US067,"As a trainer, I want to see the upcoming courses are what I want visitors to notice, so that they register and there's a benefit to my membership.","User Story:
+As a trainer, I want to prominently feature upcoming training sessions on the homepage to inspire potential participants to enroll, thereby enhancing the overall value of my membership offerings.
+
+Acceptance Criteria:
+- Ensure that upcoming training sessions are visually distinct and easily noticeable on the homepage for optimal exposure.
+- Analyze enrollment data to assess the level of interest generated by the highlighted sessions.
+- Gather participant feedback on the training programs to refine and improve future offerings.
+
+Test Outline:
+- Verify that the upcoming training sessions are clearly displayed and attractively designed on the website.
+- Examine enrollment statistics to measure the effectiveness of the promotional strategy.
+- Deploy surveys or feedback tools to collect visitor insights regarding their interest in the training courses.",that (ISO 29148),1,2,1.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,0,2,2.0,1,2,1.0,—
+US068,"As a site visitor, I want to see new content when I come to the site, so that I come back more often.","User Story:
+As a site visitor, I want to encounter updated content immediately upon entering the site so that I am motivated to visit more often.
+
+Acceptance Criteria:
+- Feature new content prominently on the homepage for easy visibility.
+- Refresh content at least once a week to maintain its relevance.
+- Monitor visitor engagement metrics to evaluate the frequency of return visits.
+
+Test Outline:
+- Confirm that new content is displayed on the homepage during the initial visit.
+- Review the content update schedule to ensure it adheres to the weekly refresh requirement.
+- Assess visitor return rates to measure the success of the updated content approach.","easy (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+more (NASA ARM)",2,3,1.0,1,3,2.0,2,3,1.0,0,3,3.0,2,3,1.0,0,3,3.0,1,3,2.0,—
+US069,"As a site visitor, I want to have articles that interest me and are easy to get to, so that I come to the site for my agile news and learning.","User Story:
+As a site visitor, I want to easily find engaging articles that resonate with my interests, encouraging me to return regularly for the latest insights and knowledge in agile methodologies.
+
+Acceptance Criteria:
+- Curate a personalized collection of articles based on user preferences and interests.
+- Ensure that articles are accessible within three clicks for a smooth browsing experience.
+- Track user engagement metrics to assess the relevance and effectiveness of the content.
+
+Test Outline:
+- Analyze the article curation process to verify it accurately reflects user interests.
+- Confirm the navigation flow to ensure articles can be accessed within the specified click limit.
+- Evaluate user engagement data to determine the impact and relevance of the content offered.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",1,2,1.0,1,3,2.0,2,2,0.0,1,3,2.0,1,3,2.0,0,3,3.0,1,3,2.0,—
+US070,"As a site visitor, I want to know as soon as I visit what on earth Scrum is and why it needs an alliance, so that I don't bounce immediately oﬀ the page.","User Story:
+As a site visitor, I want to swiftly grasp the fundamentals of Scrum and its significance upon arriving on the page, so that I stay engaged and do not exit the site prematurely.
+
+Acceptance Criteria:
+- Deliver a succinct and clear overview of Scrum within moments of the page loading.
+- Emphasize the value of the Scrum alliance in a captivating manner.
+- Ensure the information is visually appealing and easily navigable to maintain visitor interest.
+
+Test Outline:
+- Evaluate the clarity and prominence of the Scrum overview on the landing page.
+- Collect user insights regarding the perceived value of the Scrum alliance.
+- Track bounce rates to measure visitor engagement following the implementation of enhancements.",that (ISO 29148),2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US071,"As a site visitor, I want to know as I glance around the home page what on earth a CSM is and why I'd want to be one, so that I read more.","User Story:
+As a site visitor, I want to quickly understand the function of a Customer Success Manager (CSM) and the benefits of pursuing this profession while browsing the home page, so that I feel inspired to explore this career opportunity further.
+
+Acceptance Criteria:
+- Prominently feature a concise and informative overview of the CSM role on the home page.
+- Highlight the key advantages and potential career trajectories for CSMs.
+- Ensure the presentation is visually engaging and user-friendly to attract visitor attention.
+
+Test Outline:
+- Review the home page to confirm the presence of a clear and succinct description of the CSM position.
+- Assess the prominence and appeal of the benefits related to the CSM career.
+- Analyze user interaction data to gauge whether visitors are motivated to click for more information about the CSM role.","this (ISO 29148)
+that (ISO 29148)
+more (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,1,1,0.0,2,2,0.0,1,2,1.0,2,2,0.0,E: The acceptance criteria are somewhat vague and do not provide specific metrics or constraints. | HEU: numbers=0; comparators=False; has_AC=True | HEU: numbers=0; comparators=True; has_AC=True
+US072,"As a site visitor, I want to be able to get back to the home page quickly and easily, so that I don't get lost navigating.","User Story:
+As a site visitor, I want an intuitive method to return to the homepage so that I can explore the site effortlessly and without confusion.
+
+Acceptance Criteria:
+- Display a clearly visible home button on every page of the site.
+- Ensure that the homepage can be accessed with a single click from any part of the site.
+- Uphold a uniform navigation design throughout all sections of the website.
+
+Test Outline:
+- Confirm that the home button is present and easily noticeable on all pages.
+- Test the navigation functionality to ensure it directs to the homepage with one click.
+- Assess the navigation framework for consistency across various sections.","intuitive (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+every (ISO 29148)
+can (NASA ARM)",1,3,2.0,1,3,2.0,2,3,1.0,1,2,1.0,2,3,1.0,0,2,2.0,1,3,2.0,—
+US073,"As a site visitor, I want to see a list of the most popular items on the site, so that I am most likely to read the most important or best content.","User Story:
+As a site visitor, I want to access a curated list of the most popular items on the website, so that I can easily engage with the most relevant and high-quality content.
+
+Acceptance Criteria:
+- Display a dynamic list of the top 10 most popular items based on user engagement metrics.
+- Update the list in real-time to reflect current trends and interests.
+- Ensure that the popular items are visually distinct and easily accessible on the homepage.
+
+Test Outline:
+- Verify that the list accurately reflects the most popular items based on engagement data.
+- Check that the list updates automatically without requiring a page refresh.
+- Assess the visibility and accessibility of the popular items on the homepage layout.","most (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US074,"As a trainer, I want to be assured that no one can submit the same answers multiple time and skew my results, so that my ratings are accurate.","User Story:
+As a trainer, I want to ensure that duplicate answer submissions are prevented, so that the integrity of my evaluation results remains intact and my ratings reflect true performance.
+
+Acceptance Criteria:
+- Implement a system that detects and blocks repeated answer submissions from the same user.
+- Provide real-time feedback to users attempting to submit duplicate answers.
+- Ensure that the final ratings are calculated based on unique submissions only.
+
+Test Outline:
+- Test the submission process to confirm that duplicate entries are flagged and rejected.
+- Verify that users receive appropriate notifications when attempting to submit the same answer again.
+- Analyze the final ratings to ensure they accurately represent unique responses.","that (ISO 29148)
+appropriate (ISO 29148)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,2,0.0,1,3,2.0,2,3,1.0,—
+US075,"As a trainer, I want to be notified about the results of surveys about my classes, so that I can read them.","User Story:
+As a trainer, I want to receive notifications regarding survey outcomes for my classes so that I can review and analyze the feedback.
+
+Acceptance Criteria:
+- Receive timely notifications when survey results are available.
+- Access detailed survey feedback for each class.
+- Ensure that notifications include key insights and trends from the surveys.
+
+Test Outline:
+- Verify that notifications are sent promptly after survey results are compiled.
+- Check that the feedback is accessible and clearly presented.
+- Assess the relevance and clarity of insights provided in the notifications.","that (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",2,2,0.0,1,2,1.0,2,2,0.0,0,2,2.0,2,2,0.0,0,2,2.0,1,2,1.0,—
+US076,"As a site admin, I want to see the results for each trainer and averages for the class, so that I can identify any outliers or possible problems.","User Story:
+As a site admin, I want to access performance results for each trainer along with average metrics for the class, enabling me to pinpoint any anomalies or potential issues.
+
+Acceptance Criteria:
+- Display individual performance results for all trainers.
+- Calculate and present average performance metrics for the entire class.
+- Highlight any outliers that deviate significantly from the average.
+
+Test Outline:
+- Verify that the results for each trainer are accurately displayed.
+- Check that the average metrics for the class are correctly calculated.
+- Ensure that any outliers are clearly identified and flagged for review.","that (ISO 29148)
+all (ISO 29148)",2,2,0.0,2,3,1.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US077,"As a site visitor, I want to see a trainer's rating, so that I choose a course from an appropriate trainer.","User Story:
+As a site visitor, I want to view the ratings of trainers so that I can select a course led by a qualified instructor.
+
+Acceptance Criteria:
+- Display trainer ratings prominently on the course selection page.
+- Ensure ratings are updated in real-time based on user feedback.
+- Allow filtering of courses based on trainer ratings.
+
+Test Outline:
+- Verify that trainer ratings are visible and correctly displayed for each course.
+- Check that ratings reflect the most recent user evaluations.
+- Test the filtering functionality to ensure it works as intended.","most (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US078,"As a trainer, I want to show my rating up on my profile page, so that site visitors can choose wisely.","User Story:
+As a trainer, I want my rating prominently showcased on my profile page so that potential clients can make informed decisions when choosing a trainer.
+
+Acceptance Criteria:
+- The coach's rating is clearly visible and stands out on the profile page.
+- The rating is updated in real-time based on client reviews and feedback.
+- The rating system is intuitive and easy for visitors to understand.
+
+Test Outline:
+- Verify that the rating is prominently displayed on the profile page.
+- Check that the rating updates correctly after new reviews are submitted.
+- Assess the clarity and user-friendliness of the rating display for site visitors.","easy (ISO 29148)
+intuitive (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US079,"As a site visitor, I want to view a section of the website that teaches me the basics of what Scrum is, so that I can learn that quickly.","User Story:
+As a site visitor, I want to access a dedicated section that clearly articulates the essential principles of Scrum, enabling me to quickly grasp the foundational concepts.
+
+Acceptance Criteria:
+- The section provides clear and concise explanations of Scrum principles.
+- It incorporates visual elements or real-world examples to aid understanding.
+- The content is designed for user-friendliness and is easily navigable across the website.
+
+Test Outline:
+- Review the section for clarity and depth in presenting Scrum principles.
+- Confirm the presence of visual aids or examples that enhance the educational experience.
+- Test the navigation to ensure users can easily find the Scrum overview.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,0,2,2.0,1,2,1.0,—
+US080,"As a site editor, I want to create the content of the What Is Scrum section, so that it's there for visitors.","User Story:
+As a site editor, I aim to develop the ""What Is Scrum"" section to provide our website visitors with insightful and valuable information about Scrum methodology.
+
+Acceptance Criteria:
+- Create and finalize the content for the ""What Is Scrum"" section.
+- Ensure the information is both captivating and informative for the target audience.
+- Publish the section on the website for public access.
+
+Test Outline:
+- Assess the drafted content for clarity and relevance to the audience's needs.
+- Confirm that the section is live and easily accessible on the website.
+- Gather visitor feedback to evaluate the content's effectiveness and relevance.",that (ISO 29148),2,2,0.0,1,2,1.0,2,2,0.0,0,2,2.0,2,2,0.0,0,2,2.0,1,2,1.0,—
+US081,"As a site visitor, I want to view lists on the site of all Certified Scrum Masters, Practitioners, Trainers, and Certified Scrum Product Owners.","User Story:
+As a site visitor, I want to access a detailed directory of all Certified Scrum Masters, Practitioners, Trainers, and Certified Scrum Product Owners so that I can efficiently locate qualified experts within the Scrum community.
+
+Acceptance Criteria:
+- Present a well-structured directory of Certified Scrum Masters, Practitioners, Trainers, and Certified Scrum Product Owners.
+- Ensure the directory is equipped with robust search and filtering options based on certification type.
+- Offer comprehensive profiles for each professional, showcasing their credentials and contact details.
+
+Test Outline:
+- Confirm that all pertinent certification categories are available on the website.
+- Evaluate the functionality of the search and filter features to ensure they operate effectively.
+- Verify that each professional's profile is accurate and contains complete information.","robust (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",1,2,1.0,1,2,1.0,1,2,1.0,0,2,2.0,2,2,0.0,0,2,2.0,1,2,1.0,—
+US082,"As a CSM, I want to have my name listed in the registry without becoming a member of the site, so that employers or others can verify my certification.","User Story:
+As a CSM, I want my name to be included in the certification registry without needing to register as a site member, enabling employers and others to easily verify my credentials.
+
+Acceptance Criteria:
+- My name is accurately displayed in the certification registry.
+- No membership account is required for listing.
+- Verification requests can be processed efficiently by employers.
+
+Test Outline:
+- Confirm that my name appears in the registry without a membership.
+- Test the verification process to ensure it functions correctly for employers.
+- Validate that the registry updates reflect my certification status promptly.","it (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US083,"As a trainer, I want to load an Excel file into the site, so that the course participants are added to the Scrum Alliance records.","User Story:
+As a trainer, I want to effortlessly upload an Excel spreadsheet to the platform, enabling the automatic enrollment of participants into the Scrum Alliance database.
+
+Acceptance Criteria:
+- Successfully upload an Excel file containing participant information.
+- Confirm that each participant is accurately registered in the Scrum Alliance database.
+- Ensure the upload process is completed without encountering any errors.
+
+Test Outline:
+- Perform a test upload with a sample Excel file to verify successful processing.
+- Inspect the Scrum Alliance database to ensure all participants from the uploaded file are correctly listed.
+- Validate that appropriate error notifications are displayed for any issues encountered during the upload.","that (ISO 29148)
+appropriate (ISO 29148)
+all (ISO 29148)",2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US084,"As a site admin, I want to view all classes in a pending state, so that I can approve any that need to be approved.","User Story:
+As a site admin, I want to access a list of all classes currently awaiting approval, so that I can efficiently review and authorize those that require my approval.
+
+Acceptance Criteria:
+- Display a comprehensive list of classes in a pending status.
+- Include relevant details for each class, such as title, instructor, and submission date.
+- Enable a straightforward approval process for selected classes.
+
+Test Outline:
+- Verify that the pending classes are accurately listed with all necessary information.
+- Test the functionality of the approval mechanism to ensure it works as intended.","it (ISO 29148)
+that (ISO 29148)
+those (ISO 29148)
+all (ISO 29148)
+can (NASA ARM)",2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US085,"As a site admin, I want to move people in a trainer's class from a pending state to the registry once I have received proof of payment from the trainer.","User Story:
+As a site admin, I want to transition individuals in a trainer's class from a pending status to the official registry upon receiving confirmation of payment from the trainer.
+
+Acceptance Criteria:
+- Verify receipt of payment proof from the trainer.
+- Successfully update the status of participants from pending to registered.
+- Ensure that the registry reflects the changes in real-time.
+
+Test Outline:
+- Confirm that payment proof is received and documented.
+- Check the participant status in the registry to ensure updates are accurate.
+- Validate that the changes are visible to users immediately after processing.",that (ISO 29148),2,2,0.0,2,3,1.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US086,"As a CSM, I want to be sent an email welcoming me to the Scrum Alliance and with instructions to register or activate my membership once my name has been loaded to the registry.","User Story:
+As a CSM, I want to receive a welcome email from the Scrum Alliance that outlines the necessary steps to activate my membership once my name is registered.
+
+Acceptance Criteria:
+- Obtain the welcome email immediately after completing my registration.
+- The email must provide detailed instructions for activating my membership.
+- Confirm that the email is sent to the correct address associated with my account.
+
+Test Outline:
+- Check for the welcome email's arrival right after registration is finalized.
+- Review the email content to ensure it includes all activation steps.
+- Verify that the email is dispatched to the designated email address linked to my account.","it (ISO 29148)
+that (ISO 29148)
+all (ISO 29148)",2,2,0.0,2,2,0.0,2,2,0.0,1,2,1.0,2,3,1.0,1,3,2.0,2,2,0.0,—
+US087,"As a site editor, I want to edit the content of the email automatically sent to new Certified Scrum Masters and Product Owners, so that I don't need to involve a programmer on simple email edits.","User Story:
+As a site editor, I want to easily update the automated emails sent to newly certified Scrum Masters and Product Owners, allowing me to make quick adjustments without relying on a developer.
+
+Acceptance Criteria:
+- Gain access to an intuitive interface for editing the email content.
+- Ensure that changes to the email template can be saved successfully without any issues.
+- Preview the revised email prior to distribution to recipients.
+
+Test Outline:
+- Confirm that the content manager can navigate to the email editing interface.
+- Test the functionality to save changes and verify that they are preserved.
+- Validate the preview option to ensure the email renders correctly with the updated content.","intuitive (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,3,1.0,1,2,1.0,2,2,0.0,—
+US088,"As a company, I want to join the Scrum Alliance by paying a corporate membership fee, so that I can show the company's support of Scrum.","User Story:
+As a company, I want to enroll in a corporate membership with the Scrum Alliance by submitting the necessary payment, so that we can demonstrate our commitment to the Scrum framework.
+
+Acceptance Criteria:
+- Complete the corporate membership application successfully.
+- Ensure the payment for the membership fee is processed without any issues.
+- Receive official confirmation of membership from the Scrum Alliance.
+
+Test Outline:
+- Verify that the corporate membership application is accurately submitted.
+- Confirm that the payment transaction is processed seamlessly.
+- Check for the receipt of the membership confirmation email from the Scrum Alliance.","that (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,—
+US089,"As a corporatesponsor, I want to display my logo on a corporate sponsors page, so that others see the company's support of Scrum.","User Story:
+As a corporatesponsor, I want my logo to be prominently featured on the corporate sponsors page to showcase my company's commitment to Scrum and enhance brand visibility.
+
+Acceptance Criteria:
+- Ensure the logo is displayed in a prominent position on the sponsors page.
+- Verify that the logo meets the specified size and quality requirements.
+- Confirm that the logo links directly to the company’s official website.
+
+Test Outline:
+- Review the sponsors page to ensure the logo is highly visible and correctly positioned.
+- Check the logo's dimensions and resolution to ensure compliance with the specified standards.
+- Click the logo to verify it redirects to the appropriate company website.","it (ISO 29148)
+that (ISO 29148)
+appropriate (ISO 29148)",2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,2,0.0,1,3,2.0,2,2,0.0,—
+US090,"As a corporatesponsor, I want to make my logo randomly appear on the home page, so that others see the company's support of Scrum.","User Story:
+As a corporatesponsor, I want my logo to be displayed randomly on the homepage, so that visitors recognize my company's endorsement of Scrum.
+
+Acceptance Criteria:
+- Ensure the logo appears randomly on the homepage at least once per user session.
+- Track and report the frequency of logo displays to measure visibility.
+- Confirm that the logo maintains high resolution and clarity when displayed.
+
+Test Outline:
+- Verify that the logo is shown randomly during different user sessions.
+- Check the analytics to ensure the display frequency meets the target.
+- Assess the logo's quality to ensure it is clear and visually appealing.","it (ISO 29148)
+that (ISO 29148)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US091,"As a CSM, I want to be charged a fee once I am approved for Practitioner status, so that my certification status can be activated.","User Story:
+As a CSM, I want to incur a fee upon receiving approval for Practitioner status, so that I can activate my certification and leverage its benefits.
+
+Acceptance Criteria:
+- Fee payment is processed immediately after approval for Practitioner status.
+- Certification status is activated within 24 hours of fee payment.
+- Confirmation of certification activation is sent via email.
+
+Test Outline:
+- Verify that the fee is charged upon approval notification.
+- Check the activation status of the certification within the specified timeframe.
+- Ensure that the confirmation email is received after activation.","that (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US092,"As a CST, I want to pay an annual fee, so that my CST status is active.","User Story:
+As a CST, I want to submit my annual fee payment to ensure that my CST certification remains valid and active.
+
+Acceptance Criteria:
+- Successfully process the annual fee payment.
+- Confirm that the CST status is updated to active upon payment.
+- Provide a receipt or confirmation of the payment transaction.
+
+Test Outline:
+- Verify that the payment process completes without errors.
+- Check the CST status to ensure it reflects as active post-payment.
+- Ensure a payment confirmation receipt is generated and accessible.","it (ISO 29148)
+that (ISO 29148)",2,2,0.0,2,3,1.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—
+US093,"As a site administrator, I want to set the annual fees for members, Practitioners and Trainers, so that fees can be set without involving a programmer.","User Story:
+As a site administrator, I want to independently establish the annual fees for members, practitioners, and trainers, enabling me to adjust fees without needing developer assistance.
+
+Acceptance Criteria:
+- Provide a user-friendly interface for setting yearly fees for each category of users.
+- Ensure that any modifications are immediately saved and displayed on the website.
+- Allow for fee adjustments at any time throughout the year.
+
+Test Outline:
+- Verify that the fee-setting interface is clear and user-friendly.
+- Check that the updated fees are accurately shown on the website after changes are made.
+- Evaluate the system's ability to save and apply fee changes in real-time.",that (ISO 29148),2,2,0.0,2,3,1.0,2,2,0.0,1,2,1.0,2,3,1.0,1,2,1.0,2,2,0.0,—
+US094,"As a member, I want to receive a reminder and a link, so that I can renew my membership.","User Story:
+As a member, I want to get a notification along with a renewal link, so that I can easily extend my membership without any hassle.
+
+Acceptance Criteria:
+- Send a timely reminder notification to the member.
+- Include a direct link for membership renewal in the notification.
+- Ensure the renewal process is straightforward and user-friendly.
+
+Test Outline:
+- Verify that the reminder notification is sent out on schedule.
+- Check that the renewal link is functional and directs to the correct page.
+- Test the renewal process to confirm it is seamless and efficient.","efficient (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)
+timely (NASA ARM)
+can (NASA ARM)",1,2,1.0,1,2,1.0,2,2,0.0,1,2,1.0,2,2,0.0,0,2,2.0,1,2,1.0,—
+US095,"As a member, I want to have the system email me a new password or a password reminder since i have short-term memory problems.","User Story:
+As a member, I want the system to quickly send me a new password or a reminder via email so that I can easily regain access to my account without complications.
+
+Acceptance Criteria:
+- Receive an email containing a new password or reminder within minutes after submitting the request.
+- Ensure the email is straightforward and user-friendly, offering clear guidance for accessing my account.
+- Confirm that the password reset or reminder process is secure, protecting my account information.
+
+Test Outline:
+- Initiate a password reset or reminder request and track the time taken for email delivery.
+- Evaluate the email's content for clarity and user-friendliness.
+- Verify that the process adheres to security protocols to safeguard my account details.","secure (ISO 29148)
+that (ISO 29148)
+can (NASA ARM)",2,3,1.0,2,3,1.0,2,3,1.0,1,2,1.0,2,2,0.0,1,3,2.0,2,3,1.0,—
+US096,"As a trainer, I want to read information of relevance only to trainers, so that the Scrum Alliance can share information with me easily.","User Story:
+As a trainer, I want to obtain resources specifically designed for trainers, allowing the Scrum Alliance to effectively disseminate relevant information to me.
+
+Acceptance Criteria:
+- Content is exclusively curated for trainers.
+- Information is consistently refreshed to maintain its relevance.
+- Access to the resources is intuitive and user-friendly.
+
+Test Outline:
+- Confirm that the displayed content is solely for trainers.
+- Assess the regularity of content updates to ensure it remains pertinent.
+- Evaluate the user interface for straightforward navigation to the resources.","intuitive (ISO 29148)
+it (ISO 29148)
+that (ISO 29148)",2,2,0.0,1,2,1.0,2,2,0.0,0,1,1.0,2,2,0.0,0,2,2.0,1,2,1.0,E: The acceptance criteria are somewhat vague and do not provide specific metrics or constraints. | HEU: numbers=0; comparators=False; has_AC=True | HEU: numbers=0; comparators=True; has_AC=True
+US097,"As a site editor, I want to post information in a trainers-only section, so that only trainers see it.","User Story:
+As a site editor, I want to establish a dedicated section for publishing updates exclusively for trainers, ensuring that confidential information is only accessible to the intended audience.
+
+Acceptance Criteria:
+- Develop a secure platform for trainers to access specialized content.
+- Restrict visibility of the posted information to users assigned the trainer role.
+- Set up a notification mechanism to inform trainers when new updates are published.
+
+Test Outline:
+- Confirm that the trainers-only section is accessible exclusively to authorized trainer accounts.
+- Ensure that users without trainer roles are unable to view the content in this section.
+- Validate the notification system to ensure alerts are dispatched to trainers upon the release of new content.","secure (ISO 29148)
+this (ISO 29148)
+that (ISO 29148)",2,2,0.0,2,3,1.0,2,2,0.0,1,3,2.0,2,3,1.0,1,3,2.0,2,3,1.0,—

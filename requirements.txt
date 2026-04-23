@@ -17,3 +17,8 @@ seaborn>=0.13.0
 # === Dev Utilities ===
 ipykernel>=6.29.0
 jupyter>=1.0.0
+
+streamlit
+pandas
+openpyxl
+python-dotenv

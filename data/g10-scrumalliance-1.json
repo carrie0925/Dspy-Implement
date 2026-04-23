@@ -1,0 +1,390 @@
+[
+  {
+    "id": "US001",
+    "description": "As a site member, I want to describe myself on my own page in a semi-structured way, so that others can learn about me."
+  },
+  {
+    "id": "US002",
+    "description": "As a site member, I want to fill out an application to become a Certified Scrum Practitioner, so that I can earn that designation."
+  },
+  {
+    "id": "US003",
+    "description": "As a Practitioner, I want to include additional details about me in my profile page, so that I can showcase my experience."
+  },
+  {
+    "id": "US004",
+    "description": "As a site member, I want to fill out an application to become a Certified Scrum Trainer, so that I can teach CSM and CSPO courses and certify others."
+  },
+  {
+    "id": "US005",
+    "description": "As a Trainer, I want to include additional details in my profile page about me, so that others can learn about me and decide if I am the right trainer for them."
+  },
+  {
+    "id": "US006",
+    "description": "As a Practitioner, I want to write an article for the site with a small graphic shown with the article showing my CSP or CST status, so that others know my certifications when reading."
+  },
+  {
+    "id": "US007",
+    "description": "As a trainer, I want to list my upcoming classes in my profile and include a link to a detailed page about each, so that prospective attendees can find my courses."
+  },
+  {
+    "id": "US008",
+    "description": "As a site member, I want to view the profiles of other members, so that I can find others I might want to connect with."
+  },
+  {
+    "id": "US009",
+    "description": "As a site member, I want to search for profiles based on a few fields, so that I can find others I might want to connect with."
+  },
+  {
+    "id": "US010",
+    "description": "As a site member, I want to mark my profile as private in which case only my name will appear, so that no one can learn things about me I don't want shared."
+  },
+  {
+    "id": "US011",
+    "description": "As a site member, I want to mark my email address as private even if the rest of my profile is not, so that no one can contact me."
+  },
+  {
+    "id": "US012",
+    "description": "As a site member, I want to send an email to any member via a form, so that we can connect."
+  },
+  {
+    "id": "US013",
+    "description": "As a site administrator, I want to read practicing and training applications and approve or reject them, so that only applicants who qualify can become CSPs or CSTs."
+  },
+  {
+    "id": "US014",
+    "description": "As a site administrator, I want to edit any site member profile, so that I can correct problems for members."
+  },
+  {
+    "id": "US015",
+    "description": "As a site visitor, I want to read current news on the home page, so that I stay current on agile news."
+  },
+  {
+    "id": "US016",
+    "description": "As a site visitor, I want to access old news that is no longer on the home page, so that I can access things I remember from the past or that others mention to me."
+  },
+  {
+    "id": "US017",
+    "description": "As a site visitor, I want to email news items to the editor, so that they can be considered for publication."
+  },
+  {
+    "id": "US018",
+    "description": "As a site editor, I want to set the following dates on a news item: Start Publishing Date, Old News Date, Stop Publishing Date, so that articles are published on and through appropriate dates."
+  },
+  {
+    "id": "US019",
+    "description": "As a site member, I want to subscribe to an RSS feed of news, so that I remain sufficiently and easily informed."
+  },
+  {
+    "id": "US020",
+    "description": "As a site editor, I want to assign priority numbers to news items, so that I can indicate which articles I want featured most prominently on the site."
+  },
+  {
+    "id": "US021",
+    "description": "As a site visitor, I want to see a list of all upcoming Certification Courses and can page through them if there are a lot, so that I can choose the best course for me."
+  },
+  {
+    "id": "US022",
+    "description": "As a site visitor, I want to see a list of all upcoming Other Courses and can page through them if necessary, so that I can choose the best course for me."
+  },
+  {
+    "id": "US023",
+    "description": "As a site visitor, I want to see a list of all upcoming Events, so that I can decide if I want to attend any."
+  },
+  {
+    "id": "US024",
+    "description": "As a trainer, I want to create a new course or event, so that site visitors can see it."
+  },
+  {
+    "id": "US025",
+    "description": "As a trainer, I want to create an Other Course or Event I am charged a listing fee for that activity, so that I don't list events I don't really intend to hold."
+  },
+  {
+    "id": "US026",
+    "description": "As a site administrator, I want to create an Other Course or Event that is not charged a listing fee, so that the Scrum Alliance doesn't charge itself for Scrum Gatherings that it puts on."
+  },
+  {
+    "id": "US027",
+    "description": "As a site administrator, I want to set the listing fee per Other Course or Event, so that we have flexibility on what to charge in the future."
+  },
+  {
+    "id": "US028",
+    "description": "As a trainer, I want to update one of my existing courses or events, so that it reflects accurate information."
+  },
+  {
+    "id": "US029",
+    "description": "As a trainer, I want to delete one of my courses or events, so that it's no longer listed if I cancel for some reason."
+  },
+  {
+    "id": "US030",
+    "description": "As a trainer, I want to copy one of my courses or events, so that I can create a new one."
+  },
+  {
+    "id": "US031",
+    "description": "As a site admin, I want to delete any course or event, so that I can remove things that will no longer occur."
+  },
+  {
+    "id": "US032",
+    "description": "As a site editor, I want to update any course or event, so that I can fix things the original author hasn't."
+  },
+  {
+    "id": "US033",
+    "description": "As a trainer, I want to turn a course into an event or an event into a course, so that I can correctly classify anything that was entered incorrectly."
+  },
+  {
+    "id": "US034",
+    "description": "As a site visitor, I want to have an advanced search option that lets me fill in a form of search criteria, so that I can quickly find what I am looking for."
+  },
+  {
+    "id": "US035",
+    "description": "As a site visitor, I want to view a course I can click on the trainer's name and be taken to the trainer's profile, so that I can read more about a trainer before registering for a course."
+  },
+  {
+    "id": "US036",
+    "description": "As a site visitor, I want to subscribe to an RSS feed of upcoming courses and events, so that I am up to day without having to visit the site."
+  },
+  {
+    "id": "US037",
+    "description": "As a site visitor, I want to read FAQs, so that I can get quick answers."
+  },
+  {
+    "id": "US038",
+    "description": "As a site editor, I want to maintain a FAQ section, so that support gets fewer easily answered questions."
+  },
+  {
+    "id": "US039",
+    "description": "As a site visitor, I want to do a full-text search of the FAQs, so that I can find an answer quickly."
+  },
+  {
+    "id": "US040",
+    "description": "As a site member, I want to download the latest training material and methodology PDFs, so that I have them."
+  },
+  {
+    "id": "US041",
+    "description": "As a visitor, I want to download presentations, PDFs, etc. on Scrum, so that I can learn from them or use them."
+  },
+  {
+    "id": "US042",
+    "description": "As a site member, I want to scroll through a listing of jobs, so that I can see if there any I am interested in."
+  },
+  {
+    "id": "US043",
+    "description": "As a recruiter, I want to post a help wanted ad, so that I can attract candidates."
+  },
+  {
+    "id": "US044",
+    "description": "As a site admin, I want to approve each help wanted ad before it gets to the site, so that we're sure of the quality of jobs being listed."
+  },
+  {
+    "id": "US045",
+    "description": "As a site admin, I want to be emailed whenever a job is submitted, so that I am aware of it and can decide if I want to post it."
+  },
+  {
+    "id": "US046",
+    "description": "As a site member, I want to subscribe to an RSS feed of jobs available, so that I can read them without visiting the site."
+  },
+  {
+    "id": "US047",
+    "description": "As a site admin, I want to edit and delete help wanted ads, so that I can correct small problems or make sure each ad complies with site guidelines."
+  },
+  {
+    "id": "US048",
+    "description": "As a site admin, I want to stop publishing jobs on the site 30 days after being posted, so that jobs that may have been filled aren't still listed when the hiring party forgets to come back and delete the ad."
+  },
+  {
+    "id": "US049",
+    "description": "As a recruiter, I want to be able to extend an ad for another 30 days by visiting the site and updating the posting, so that my ad remains active."
+  },
+  {
+    "id": "US050",
+    "description": "As an advertiser, I want to be emailed a reminder seven day before an ad is about to expire, so that I can go extend the ad."
+  },
+  {
+    "id": "US051",
+    "description": "As a site visitor, I want to read a new article on the front page about once a week, so that I am up on all the latest happenings."
+  },
+  {
+    "id": "US052",
+    "description": "As the site editor, I want to include a teaser with each article, so that site visitors can decide if they want to read the rest."
+  },
+  {
+    "id": "US053",
+    "description": "As a site member who has read a teaser on the front page, I want to read the entire article so that I can finish articles that appeal to me."
+  },
+  {
+    "id": "US054",
+    "description": "As the site editor, I want to add an article to the site, so that the site has plenty of content."
+  },
+  {
+    "id": "US055",
+    "description": "As a site editor, I want to set start publishing dates, old article date, and stop publishing dates for articles, so that articles appear only during appropriate periods."
+  },
+  {
+    "id": "US056",
+    "description": "As a site editor, I want to be able to designate whether or not an ever makes the home page, so that the best content is featured most prominently."
+  },
+  {
+    "id": "US057",
+    "description": "As the site editor, I want to have pretty good control over how the article, so that articles are visually appealing."
+  },
+  {
+    "id": "US058",
+    "description": "As a site visitor, I want to click the link from the article teaser to take me directly to the body of the article. not to another teaser setup, so that I can easily finish the article."
+  },
+  {
+    "id": "US059",
+    "description": "As a site editor, I want to be able to indicate whether an article is publicly available or for members only, so that visitors are incentivized to become members."
+  },
+  {
+    "id": "US060",
+    "description": "As a site visitor, I want to be able to read some of your articles, so that I can learn without first joining the site."
+  },
+  {
+    "id": "US061",
+    "description": "As a site member, I want to have full access to all articles, so that there is a benefit to being a member."
+  },
+  {
+    "id": "US062",
+    "description": "As a site visitor, I want to do a full-text search of article body, title, and author name, so that I can find what I want."
+  },
+  {
+    "id": "US063",
+    "description": "As a site visitor, I want to subscribe to an RSS feed of articles, so that I can read them without visiting the site."
+  },
+  {
+    "id": "US064",
+    "description": "As a site visitor, I want to post comments about articles, so that others can read them."
+  },
+  {
+    "id": "US065",
+    "description": "As a site editor, I want to have a prominent area on the home page where I can put special announcements not necessarily news or articles, so that I can give them additional exposure."
+  },
+  {
+    "id": "US066",
+    "description": "As a site editor, I want to have some flexibility as to where things appear, so that I can accommodate different types of content."
+  },
+  {
+    "id": "US067",
+    "description": "As a trainer, I want to see the upcoming courses are what I want visitors to notice, so that they register and there's a benefit to my membership."
+  },
+  {
+    "id": "US068",
+    "description": "As a site visitor, I want to see new content when I come to the site, so that I come back more often."
+  },
+  {
+    "id": "US069",
+    "description": "As a site visitor, I want to have articles that interest me and are easy to get to, so that I come to the site for my agile news and learning."
+  },
+  {
+    "id": "US070",
+    "description": "As a site visitor, I want to know as soon as I visit what on earth Scrum is and why it needs an alliance, so that I don't bounce immediately oﬀ the page."
+  },
+  {
+    "id": "US071",
+    "description": "As a site visitor, I want to know as I glance around the home page what on earth a CSM is and why I'd want to be one, so that I read more."
+  },
+  {
+    "id": "US072",
+    "description": "As a site visitor, I want to be able to get back to the home page quickly and easily, so that I don't get lost navigating."
+  },
+  {
+    "id": "US073",
+    "description": "As a site visitor, I want to see a list of the most popular items on the site, so that I am most likely to read the most important or best content."
+  },
+  {
+    "id": "US074",
+    "description": "As a trainer, I want to be assured that no one can submit the same answers multiple time and skew my results, so that my ratings are accurate."
+  },
+  {
+    "id": "US075",
+    "description": "As a trainer, I want to be notified about the results of surveys about my classes, so that I can read them."
+  },
+  {
+    "id": "US076",
+    "description": "As a site admin, I want to see the results for each trainer and averages for the class, so that I can identify any outliers or possible problems."
+  },
+  {
+    "id": "US077",
+    "description": "As a site visitor, I want to see a trainer's rating, so that I choose a course from an appropriate trainer."
+  },
+  {
+    "id": "US078",
+    "description": "As a trainer, I want to show my rating up on my profile page, so that site visitors can choose wisely."
+  },
+  {
+    "id": "US079",
+    "description": "As a site visitor, I want to view a section of the website that teaches me the basics of what Scrum is, so that I can learn that quickly."
+  },
+  {
+    "id": "US080",
+    "description": "As a site editor, I want to create the content of the What Is Scrum section, so that it's there for visitors."
+  },
+  {
+    "id": "US081",
+    "description": "As a site visitor, I want to view lists on the site of all Certified Scrum Masters, Practitioners, Trainers, and Certified Scrum Product Owners."
+  },
+  {
+    "id": "US082",
+    "description": "As a CSM, I want to have my name listed in the registry without becoming a member of the site, so that employers or others can verify my certification."
+  },
+  {
+    "id": "US083",
+    "description": "As a trainer, I want to load an Excel file into the site, so that the course participants are added to the Scrum Alliance records."
+  },
+  {
+    "id": "US084",
+    "description": "As a site admin, I want to view all classes in a pending state, so that I can approve any that need to be approved."
+  },
+  {
+    "id": "US085",
+    "description": "As a site admin, I want to move people in a trainer's class from a pending state to the registry once I have received proof of payment from the trainer."
+  },
+  {
+    "id": "US086",
+    "description": "As a CSM, I want to be sent an email welcoming me to the Scrum Alliance and with instructions to register or activate my membership once my name has been loaded to the registry."
+  },
+  {
+    "id": "US087",
+    "description": "As a site editor, I want to edit the content of the email automatically sent to new Certified Scrum Masters and Product Owners, so that I don't need to involve a programmer on simple email edits."
+  },
+  {
+    "id": "US088",
+    "description": "As a company, I want to join the Scrum Alliance by paying a corporate membership fee, so that I can show the company's support of Scrum."
+  },
+  {
+    "id": "US089",
+    "description": "As a corporatesponsor, I want to display my logo on a corporate sponsors page, so that others see the company's support of Scrum."
+  },
+  {
+    "id": "US090",
+    "description": "As a corporatesponsor, I want to make my logo randomly appear on the home page, so that others see the company's support of Scrum."
+  },
+  {
+    "id": "US091",
+    "description": "As a CSM, I want to be charged a fee once I am approved for Practitioner status, so that my certification status can be activated."
+  },
+  {
+    "id": "US092",
+    "description": "As a CST, I want to pay an annual fee, so that my CST status is active."
+  },
+  {
+    "id": "US093",
+    "description": "As a site administrator, I want to set the annual fees for members, Practitioners and Trainers, so that fees can be set without involving a programmer."
+  },
+  {
+    "id": "US094",
+    "description": "As a member, I want to receive a reminder and a link, so that I can renew my membership."
+  },
+  {
+    "id": "US095",
+    "description": "As a member, I want to have the system email me a new password or a password reminder since i have short-term memory problems."
+  },
+  {
+    "id": "US096",
+    "description": "As a trainer, I want to read information of relevance only to trainers, so that the Scrum Alliance can share information with me easily."
+  },
+  {
+    "id": "US097",
+    "description": "As a site editor, I want to post information in a trainers-only section, so that only trainers see it."
+  }
+]
