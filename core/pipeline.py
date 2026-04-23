@@ -771,14 +771,22 @@ def dimension_deltas_report(scorer: InvestScorer, rewriter: UserStoryRewriter, d
     return {d: (sum(agg[d])/len(agg[d]) if agg[d] else 0.0) for d in dims}
 
 # ===== main runner =====
-@dataclass
 class OptimizeConfig:
-    max_rounds: int = 3
-    fewshot_k: int = 4
-    use_dspy: bool = True
-    best_of_k: int = 3
-    diversity_lambda: float = DIVERSITY_LAMBDA
-    min_diversity:    float = MIN_DIVERSITY
+    def __init__(
+        self, 
+        max_rounds: int = 3, 
+        fewshot_k: int = 4, 
+        use_dspy: bool = True, 
+        best_of_k: int = 3, 
+        diversity_lambda: float = DIVERSITY_LAMBDA, 
+        min_diversity: float = MIN_DIVERSITY
+    ):
+        self.max_rounds = max_rounds
+        self.fewshot_k = fewshot_k
+        self.use_dspy = use_dspy
+        self.best_of_k = best_of_k
+        self.diversity_lambda = diversity_lambda
+        self.min_diversity = min_diversity
 
 
 def run_batch_optimization(

@@ -118,9 +118,6 @@ if not api_key:
 # --- 流程 A: PM 初始設定 ---
 if st.session_state.step == "PM_SETUP":
     st.header("Designing an Agile Requirements Quality Agent: A Self-Improving DSPy Framework")
-    
-    st.subheader("0. 準備工作")
-    # 提供範例檔案供下載 (必須在 form 之外)
     example_path = Path("data/user_story_submit_example.xlsx")
     if not example_path.exists():
         example_path.parent.mkdir(parents=True, exist_ok=True)
