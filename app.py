@@ -13,7 +13,8 @@ load_dotenv()
 # --- 1. 匯入後端核心函數 ---
 try:
     from core.pipeline import run_batch_optimization
-    from core.mailer import send_survey_links 
+    # 匯入寄送受試者邀請信與研究者通知信的函數
+    from core.mailer import send_survey_links, send_admin_notification 
 except ImportError:
     st.error("❌ 找不到 core 模組，請確認 app.py 放在專案根目錄且 core 資料夾存在。")
     st.stop()
@@ -41,6 +42,7 @@ if 'init_check' not in st.session_state:
     query_params = st.query_params
     if "id" in query_params:
         exp_id = query_params["id"]
+        # 統一使用 data/user_project/ 路徑
         master_path = f"data/user_project/master_{exp_id}.json"
         
         if os.path.exists(master_path):
@@ -83,21 +85,42 @@ def save_json_result(final_data):
     email_safe = final_data['user_info']['email'].replace('@', '_at_').replace('.', '_')
     fname = os.path.join(survey_folder, f"result_{st.session_state.exp_id}_{email_safe}.json")
     
-    # 3. 執行儲存 (加上 indent=4 實作換行)
+    # 3. 執行儲存
     with open(fname, 'w', encoding='utf-8') as f:
         json.dump(final_data, f, ensure_ascii=False, indent=4)
     return fname
 
-# 檢查 API Key
-if not os.getenv("OPENAI_API_KEY"):
-    st.error("❌ OPENAI_API_KEY 缺失！請檢查 .env 檔案。")
+# 檢查 API Key (優先檢查 Streamlit Secrets)
+# --- 環境判斷與 API Key 讀取 ---
+def get_api_key():
+    # 1. 嘗試從 Streamlit Cloud 的 Secrets 讀取 (雲端環境優先)
+    try:
+        if "OPENAI_API_KEY" in st.secrets:
+            return st.secrets["OPENAI_API_KEY"]
+    except Exception:
+        # 如果在本地端且沒有 secrets.toml，st.secrets 會噴錯，我們直接進入 except
+        pass
+
+    # 2. 如果上面失敗，嘗試從本地 .env 讀取 (本地環境)
+    local_key = os.getenv("OPENAI_API_KEY")
+    return local_key
+
+# 執行讀取
+api_key = get_api_key()
+
+# 判斷目前是否在本地執行 (輔助用)
+IS_LOCAL = os.getenv("STREAMLIT_SERVER_ADDRESS") is None # 雲端通常會設定 server 位址
+
+if not api_key:
+    st.error("❌ OPENAI_API_KEY 缺失！請檢查雲端 Secrets 或本地 .env 檔案。")
     st.stop()
 
 # --- 流程 A: PM 初始設定 ---
 if st.session_state.step == "PM_SETUP":
-    st.header("Designing an Agile Requirements Quality Agent: A Self-Improving DSPy Framework for Reducing Requirements Technical Debt")
+    st.header("Designing an Agile Requirements Quality Agent: A Self-Improving DSPy Framework")
     
-    # --- 重要修正：將下載範例按鈕移出 st.form 之外 ---
+    st.subheader("0. 準備工作")
+    # 提供範例檔案供下載 (必須在 form 之外)
     example_path = Path("data/user_story_submit_example.xlsx")
     if not example_path.exists():
         example_path.parent.mkdir(parents=True, exist_ok=True)
@@ -163,16 +186,21 @@ if st.session_state.step == "PM_SETUP":
                 prog_bar.progress(80)
                 
                 status_msg.text("📧 正在寄送邀請信件至各成員信箱...")
+                # 發送信件 (mailer.py 會根據 exp_id 生成帶參數的連結)
                 send_survey_links(valid_emails, st.session_state.exp_id)
                 
-                # 儲存 Master JSON
-                if not os.path.exists('data'): os.makedirs('data')
+                # --- 核心修正：確保存放到 data/user_project/ 目錄下 ---
+                target_dir = os.path.join("data", "user_project")
+                if not os.path.exists(target_dir):
+                    os.makedirs(target_dir, exist_ok=True)
+                
+                master_path = os.path.join(target_dir, f"master_{st.session_state.exp_id}.json")
                 master_data = {
                     "project_context": project_context,
                     "results": raw_results,
                     "email_list": valid_emails
                 }
-                with open(f"data/master_{st.session_state.exp_id}.json", "w", encoding="utf-8") as f:
+                with open(master_path, "w", encoding="utf-8") as f:
                     json.dump(master_data, f, ensure_ascii=False, indent=4)
                 
                 prog_bar.progress(100)
@@ -198,7 +226,7 @@ elif st.session_state.step == "USER_INFO":
         doc_exp = st.selectbox("您在軟體開發接觸需求文件的實務經驗？", ["未滿1年", "1~2年", "3~5年", "6~10年", "10年以上"])
         role = st.selectbox("您在目前的敏捷開發團隊中，是擔任何種職能的人員？", ["專案經理/專案管理/產品管理", "UIUX設計師/使用者經驗訪談", "前端/後端開發工程師/系統分析師", "其他"])
 
-        if st.form_submit_button("Start Measurement Scales of Perceived Usefulness and Perceived Ease of Use"):
+        if st.form_submit_button("Start Measurement Scales"):
             st.session_state.current_user = {
                 "email": selected_email, "age": age, 
                 "agile_exp": agile_exp, "doc_exp": doc_exp, "role": role
@@ -217,7 +245,7 @@ elif st.session_state.step == "SURVEY_MODE":
     
     ver_a = row.get('description') or row.get('original') or "內容讀取失敗"
     ver_b = row.get('optimized_description') or row.get('rewritten') or row.get('optimized') or "優化內容讀取失敗"
-    
+
     col_a, col_b = st.columns(2)
     with col_a:
         st.error(f"**Version A**\n\n{ver_a}")
@@ -253,9 +281,9 @@ elif st.session_state.step == "SURVEY_MODE":
                 st.session_state.step = "FINAL"
                 st.rerun()
 
-# --- 流程 D: 提交與結束頁面 ---
+# --- 流程 D: 提交與自動寄信給研究者 ---
 elif st.session_state.step == "FINAL":
-    st.header("🏁 Finish")
+    st.header("🏁 填寫完成")
     st.write("感謝您的參與！您的回饋對本研究至關重要。")
     
     interview = st.checkbox("我願意參加後續訪談 (約 30-40 分鐘，將額外提供 NTD 500 訪談費)")
@@ -269,7 +297,13 @@ elif st.session_state.step == "FINAL":
             "interview_interested": interview,
             "submitted_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         }
+        
+        # 1. 將結果儲存於伺服器 data/survey/ 資料夾下
         save_json_result(final_payload)
+        
+        # 2. 🔥 即時同步寄送填答結果給研究者 (PM)
+        with st.spinner("正在將結果同步至研究者信箱..."):
+            send_admin_notification(final_payload)
         
         st.balloons()
         st.markdown("---")
