@@ -16,7 +16,8 @@ def send_survey_links(email_list, exp_id):
     subject = f"【學術研究】User Story 易用性實驗邀請 - ID: {exp_id}"
     
     # 這裡的連結要改成你之後部署 Streamlit 的網址
-    survey_url = f"http://localhost:8501/?id={exp_id}" 
+    base_url = "https://xxx.streamlit.app"          
+    link = f"{base_url}/?id={exp_id}" 
 
     try:
         # 設定 SMTP 伺服器 (以 Gmail 為例)
@@ -35,8 +36,8 @@ def send_survey_links(email_list, exp_id):
             
             感謝您參與本次 User Story 優化研究。
             請點擊以下連結開始進行易用性問卷填寫：
-            {survey_url}
-            
+            {link}
+
             您的實驗編號為：{exp_id}
             進入系統後請選擇您的 Email 以開始評估，並且在完成問卷前都不要關閉網頁
             填寫時間約30-40分鐘，填寫完畢後請將實驗編號截圖提供給計畫主持人(鄭慈昱)，即可完成填寫金領取。
