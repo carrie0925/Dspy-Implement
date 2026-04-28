@@ -1,0 +1,338 @@
+{
+    "project_context": "",
+    "results": [
+        {
+            "id": 0,
+            "status": "done",
+            "rounds": 1,
+            "original_text": "As a site editor, I want to have pretty good control over how the article, so that articles are visually appealing.",
+            "final_text": "User Story:\nAs a site editor, I want to have comprehensive control over the formatting and layout of articles so that I can create visually appealing content that engages readers effectively.\n\nAcceptance Criteria:\n- Editors should be able to customize at least 5 key visual elements (font styles, colors, images, spacing, and alignment) to enhance article aesthetics.\n- The article preview feature must update in real-time, ensuring at least 95% accuracy in displaying changes made during editing.\n- User feedback should indicate a satisfaction rate of at least 85% regarding the visual appeal of articles after implementing these controls.\n\nTest Outline:\n- Assess the customization options available to editors and verify that all specified elements can be modified as intended.\n- Conduct user testing with a sample of readers to evaluate their perception of article visuals before and after the enhancements.",
+            "history": [
+                {
+                    "text": "As a site editor, I want to have pretty good control over how the article, so that articles are visually appealing.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "HEU: single_goal=True; has_As/I...=True",
+                            "N": "HEU: rigid_spec=False; has_AC=False (bullets: 0)",
+                            "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "HEU: has_AC=False (bullets: 0); measurable=True",
+                            "S": "HEU: story_token_len=21",
+                            "T": "HEU: has_AC=False (bullets: 0); has_Test_Outline=False"
+                        },
+                        "I": 3,
+                        "N": 2,
+                        "V": 3,
+                        "E": 2,
+                        "S": 3,
+                        "T": 2,
+                        "overall": 3,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": false,
+                            "V": true,
+                            "E": false,
+                            "S": true,
+                            "T": false,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.0
+                },
+                {
+                    "text": "User Story:\nAs a site editor, I want to have comprehensive control over the formatting and layout of articles so that I can create visually appealing content that engages readers effectively.\n\nAcceptance Criteria:\n- Editors should be able to customize at least 5 key visual elements (font styles, colors, images, spacing, and alignment) to enhance article aesthetics.\n- The article preview feature must update in real-time, ensuring at least 95% accuracy in displaying changes made during editing.\n- User feedback should indicate a satisfaction rate of at least 85% regarding the visual appeal of articles after implementing these controls.\n\nTest Outline:\n- Assess the customization options available to editors and verify that all specified elements can be modified as intended.\n- Conduct user testing with a sample of readers to evaluate their perception of article visuals before and after the enhancements.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "HEU: single_goal=False; has_As/I...=True",
+                            "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "HEU: story_token_len=29",
+                            "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 4,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 5,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8333333333333334
+                },
+                {
+                    "text": "User Story:\nAs a site editor, I want to have comprehensive control over the article formatting and layout so that I can create visually appealing articles that engage readers effectively.\n\nAcceptance Criteria:\n- The editing tool must allow for at least 10 different formatting options (e.g., font styles, colors, headings) to enhance visual appeal.\n- Editors should be able to preview changes in real-time, with a 98% accuracy in displaying the final appearance before publishing.\n- The article layout should support responsive design, ensuring 100% compatibility across various devices (desktop, tablet, mobile).\n\nTest Outline:\n- Evaluate the available formatting options within the editing tool to confirm they meet the specified criteria.\n- Conduct usability testing with editors to ensure real-time previews accurately reflect final published articles.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "HEU: single_goal=False; has_As/I...=True",
+                            "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "HEU: story_token_len=28",
+                            "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 4,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 5,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8282828282828283
+                },
+                {
+                    "text": "User Story:\nAs a site editor, I want to have comprehensive control over the formatting and layout of articles so that I can ensure they are visually appealing and engaging for readers.\n\nAcceptance Criteria:\n- Editors should be able to modify at least 10 formatting options (font size, color, images, headings) to achieve desired aesthetics.\n- The article preview feature must update in real-time, allowing editors to see changes instantly with a refresh time of less than 2 seconds.\n- At least 85% of readers should express satisfaction with the visual presentation of articles in user surveys.\n\nTest Outline:\n- Evaluate the range of formatting options available to editors and validate that all options function correctly.\n- Conduct user surveys post-publication to measure reader satisfaction regarding the visual appeal of the articles.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "HEU: single_goal=False; has_As/I...=True",
+                            "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "HEU: story_token_len=30",
+                            "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 4,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 5,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8043478260869565
+                }
+            ],
+            "original": "As a site editor, I want to have pretty good control over how the article, so that articles are visually appealing.",
+            "rewritten": "User Story:\nAs a site editor, I want to have comprehensive control over the formatting and layout of articles so that I can create visually appealing content that engages readers effectively.\n\nAcceptance Criteria:\n- Editors should be able to customize at least 5 key visual elements (font styles, colors, images, spacing, and alignment) to enhance article aesthetics.\n- The article preview feature must update in real-time, ensuring at least 95% accuracy in displaying changes made during editing.\n- User feedback should indicate a satisfaction rate of at least 85% regarding the visual appeal of articles after implementing these controls.\n\nTest Outline:\n- Assess the customization options available to editors and verify that all specified elements can be modified as intended.\n- Conduct user testing with a sample of readers to evaluate their perception of article visuals before and after the enhancements.",
+            "scoring_criteria_text": "I-I:  | N-N:  | V-V:  | E-E:  | S-S:  | T-T: ",
+            "fuzzy_terms": [],
+            "low_score_explanations": {},
+            "score_new": {
+                "reasons": {
+                    "I": "HEU: single_goal=False; has_As/I...=True",
+                    "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                    "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                    "E": "HEU: has_AC=True (bullets: 3); measurable=True",
+                    "S": "HEU: story_token_len=29",
+                    "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                },
+                "I": 4,
+                "N": 4,
+                "V": 5,
+                "E": 5,
+                "S": 5,
+                "T": 5,
+                "overall": 5,
+                "meets_thresholds": {
+                    "I": true,
+                    "N": true,
+                    "V": true,
+                    "E": true,
+                    "S": true,
+                    "T": true,
+                    "overall": true
+                }
+            }
+        },
+        {
+            "id": 1,
+            "status": "done",
+            "rounds": 1,
+            "original_text": "I want a search bar on the top of the page.",
+            "final_text": "User Story:\nAs a website visitor, I want a search bar prominently located at the top of the page so that I can easily access and navigate to the content I am looking for without unnecessary scrolling.\n\nAcceptance Criteria:\n- The search bar should be visible and accessible on the top of every page, appearing within 1 second of page load for 95% of users.\n- Users should be able to input search queries with a character limit of at least 100 characters and receive relevant results with a minimum accuracy rate of 85%.\n- The search function must include autocomplete suggestions that display at least 5 relevant options as users type their queries.\n\nTest Outline:\n- Test the visibility and loading time of the search bar across multiple devices and browsers to ensure consistency.\n- Evaluate the functionality of the search bar by conducting user tests to assess the accuracy and relevance of the search results and autocomplete suggestions.",
+            "history": [
+                {
+                    "text": "I want a search bar on the top of the page.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "HEU: single_goal=True; has_As/I...=False",
+                            "N": "HEU: rigid_spec=False; has_AC=False (bullets: 0)",
+                            "V": "HEU: benefit_clause(so that/in order to)=False; measurable=True",
+                            "E": "HEU: has_AC=False (bullets: 0); measurable=True",
+                            "S": "HEU: story_token_len=11",
+                            "T": "HEU: has_AC=False (bullets: 0); has_Test_Outline=False"
+                        },
+                        "I": 1,
+                        "N": 1,
+                        "V": 1,
+                        "E": 1,
+                        "S": 2,
+                        "T": 1,
+                        "overall": 1,
+                        "meets_thresholds": {
+                            "I": false,
+                            "N": false,
+                            "V": false,
+                            "E": false,
+                            "S": false,
+                            "T": false,
+                            "overall": false
+                        }
+                    },
+                    "diversity": 0.0
+                },
+                {
+                    "text": "User Story:\nAs a website visitor, I want a search bar prominently located at the top of the page so that I can easily access and navigate to the content I am looking for without unnecessary scrolling.\n\nAcceptance Criteria:\n- The search bar should be visible and accessible on the top of every page, appearing within 1 second of page load for 95% of users.\n- Users should be able to input search queries with a character limit of at least 100 characters and receive relevant results with a minimum accuracy rate of 85%.\n- The search function must include autocomplete suggestions that display at least 5 relevant options as users type their queries.\n\nTest Outline:\n- Test the visibility and loading time of the search bar across multiple devices and browsers to ensure consistency.\n- Evaluate the functionality of the search bar by conducting user tests to assess the accuracy and relevance of the search results and autocomplete suggestions.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "HEU: single_goal=False; has_As/I...=True",
+                            "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "HEU: story_token_len=35",
+                            "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 4,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 5,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8901098901098901
+                },
+                {
+                    "text": "User Story:\nAs a user, I want a prominently placed search bar at the top of the page so that I can conveniently access search functionality and quickly locate relevant content.\n\nAcceptance Criteria:\n- The search bar must be visible on the top of the page without scrolling for 100% of users accessing the site.\n- Users should be able to initiate a search within 2 clicks, with a completion rate of at least 95% for search queries.\n- The search bar should support autocomplete suggestions to improve user efficiency, with a suggestion accuracy of at least 80%.\n\nTest Outline:\n- Verify the visibility of the search bar on various devices and screen sizes to ensure it meets design specifications.\n- Conduct usability testing to measure the time taken for users to perform a search and gather feedback on the effectiveness of autocomplete suggestions.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "HEU: single_goal=False; has_As/I...=True",
+                            "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "HEU: story_token_len=29",
+                            "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 4,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 5,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8795180722891567
+                },
+                {
+                    "text": "User Story:\nAs a user, I want a prominently placed search bar at the top of the page so that I can quickly access information and resources without having to navigate through multiple menus.\n\nAcceptance Criteria:\n- The search bar must be visible on the top of every page, with a visibility rate of 100% across all devices.\n- Users should be able to initiate a search within 2 clicks from any section of the site, improving navigation efficiency.\n- The search bar should support autocomplete suggestions with at least 80% accuracy based on user input to facilitate faster searches.\n\nTest Outline:\n- Verify the presence of the search bar on all pages across different devices and screen sizes.\n- Conduct usability testing to ensure users can initiate a search within the specified number of clicks and assess the accuracy of autocomplete suggestions.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "HEU: single_goal=False; has_As/I...=True",
+                            "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "HEU: story_token_len=32",
+                            "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 4,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 5,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8809523809523809
+                }
+            ],
+            "original": "I want a search bar on the top of the page.",
+            "rewritten": "User Story:\nAs a website visitor, I want a search bar prominently located at the top of the page so that I can easily access and navigate to the content I am looking for without unnecessary scrolling.\n\nAcceptance Criteria:\n- The search bar should be visible and accessible on the top of every page, appearing within 1 second of page load for 95% of users.\n- Users should be able to input search queries with a character limit of at least 100 characters and receive relevant results with a minimum accuracy rate of 85%.\n- The search function must include autocomplete suggestions that display at least 5 relevant options as users type their queries.\n\nTest Outline:\n- Test the visibility and loading time of the search bar across multiple devices and browsers to ensure consistency.\n- Evaluate the functionality of the search bar by conducting user tests to assess the accuracy and relevance of the search results and autocomplete suggestions.",
+            "scoring_criteria_text": "I-I:  | N-N:  | V-V:  | E-E:  | S-S:  | T-T: ",
+            "fuzzy_terms": [
+                {
+                    "text": "easily",
+                    "pos": "ADV_VAGUE",
+                    "reason": "Ambiguous or non-verifiable term without measurable threshold in the same sentence.",
+                    "suggestion": "Replace 'easily' with a measurable criterion (e.g., '<= 200 ms', 'p95 <= 2s', explicit scope/boundary').",
+                    "start": 111,
+                    "end": 117
+                }
+            ],
+            "low_score_explanations": {},
+            "score_new": {
+                "reasons": {
+                    "I": "HEU: single_goal=False; has_As/I...=True",
+                    "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                    "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                    "E": "HEU: has_AC=True (bullets: 3); measurable=True",
+                    "S": "HEU: story_token_len=35",
+                    "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                },
+                "I": 4,
+                "N": 4,
+                "V": 5,
+                "E": 5,
+                "S": 5,
+                "T": 5,
+                "overall": 5,
+                "meets_thresholds": {
+                    "I": true,
+                    "N": true,
+                    "V": true,
+                    "E": true,
+                    "S": true,
+                    "T": true,
+                    "overall": true
+                }
+            }
+        }
+    ],
+    "email_list": [
+        "ca0983896371@gmail.com",
+        "ca098386371@gmail.com"
+    ]
+}

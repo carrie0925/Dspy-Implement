@@ -1,0 +1,339 @@
+{
+    "project_context": "",
+    "results": [
+        {
+            "id": 0,
+            "status": "done",
+            "rounds": 1,
+            "original_text": "As a site editor, I want to have pretty good control over how the article, so that articles are visually appealing.",
+            "final_text": "User Story:\nAs a site editor, I want to manage the visual layout of articles effectively so that I can enhance their aesthetic appeal, aiming for a 30% increase in reader engagement metrics.\n\nAcceptance Criteria:\n- Editors should be able to customize article formatting options (font styles, colors, and layouts) with a user-friendly interface, achieving changes within 2 minutes for 90% of tasks.\n- At least 85% of readers should report an improvement in visual appeal in a post-article feedback survey conducted within one month of implementation.\n- The system must ensure that all formatting changes are saved correctly without loss of data in at least 95% of attempts.\n\nTest Outline:\n- Measure the time taken by editors to apply formatting changes, ensuring that 90% of tasks are completed within the 2-minute timeframe.\n- Analyze reader feedback from surveys to confirm that at least 85% of respondents perceive an improvement in visual appeal.\n- Conduct tests on the save functionality to verify that formatting changes persist reliably, aiming for a ≥ 95% success rate.",
+            "history": [
+                {
+                    "text": "As a site editor, I want to have pretty good control over how the article, so that articles are visually appealing.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "HEU: single_goal=True; has_As/I...=True",
+                            "N": "HEU: rigid_spec=False; has_AC=False (bullets: 0)",
+                            "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "HEU: has_AC=False (bullets: 0); measurable=True",
+                            "S": "HEU: story_token_len=21",
+                            "T": "HEU: has_AC=False (bullets: 0); has_Test_Outline=False"
+                        },
+                        "I": 3,
+                        "N": 2,
+                        "V": 3,
+                        "E": 2,
+                        "S": 4,
+                        "T": 2,
+                        "overall": 3,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": false,
+                            "V": true,
+                            "E": false,
+                            "S": true,
+                            "T": false,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.0
+                },
+                {
+                    "text": "User Story:\nAs a site editor, I want to have comprehensive control over article formatting and layout so that I can enhance the visual appeal of articles, resulting in a 30% increase in reader engagement.\n\nAcceptance Criteria:\n- Editors should be able to customize article elements (fonts, images, and layouts) using an intuitive interface with at least 95% usability satisfaction among users.\n- Articles must maintain a consistent visual style, with ≥ 90% adherence to predefined design guidelines.\n- An increase in time spent on articles by readers should be measured, targeting a minimum of 25% improvement post-implementation.\n\nTest Outline:\n- Conduct usability testing to evaluate the ease of use of formatting tools, aiming for at least 95% positive feedback from editors.\n- Review a sample of published articles to ensure they adhere to the design guidelines, with ≥ 90% compliance.\n- Analyze site analytics to measure changes in average time spent by readers on articles before and after enhancements.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "HEU: single_goal=False; has_As/I...=True",
+                            "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "HEU: story_token_len=33",
+                            "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 4,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 5,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8636363636363636
+                },
+                {
+                    "text": "User Story:\nAs a site editor, I want to have comprehensive control over the article formatting and layout so that I can ensure each article is visually appealing and engages readers, leading to a minimum of 30% increase in reader retention.\n\nAcceptance Criteria:\n- The editor interface should allow at least 10 different customizable formatting options for text, images, and layouts.\n- Articles should load with a visually appealing design in less than 5 seconds for 95% of users.\n- User surveys should indicate that at least 85% of readers find the articles visually appealing after the new formatting options are implemented.\n\nTest Outline:\n- Evaluate the editor interface to confirm the availability of ≥ 10 formatting options for articles.\n- Measure the loading time of articles to ensure they meet the ≤ 5 seconds criterion for 95% of users.\n- Conduct post-implementation surveys to gather feedback on the visual appeal of articles, targeting an ≥ 85% satisfaction rate.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "HEU: single_goal=False; has_As/I...=True",
+                            "N": "HEU: rigid_spec=False; has_AC=True (bullets: 3)",
+                            "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "HEU: story_token_len=39",
+                            "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 5,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 5,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8105263157894737
+                },
+                {
+                    "text": "User Story:\nAs a site editor, I want to manage the visual layout of articles effectively so that I can enhance their aesthetic appeal, aiming for a 30% increase in reader engagement metrics.\n\nAcceptance Criteria:\n- Editors should be able to customize article formatting options (font styles, colors, and layouts) with a user-friendly interface, achieving changes within 2 minutes for 90% of tasks.\n- At least 85% of readers should report an improvement in visual appeal in a post-article feedback survey conducted within one month of implementation.\n- The system must ensure that all formatting changes are saved correctly without loss of data in at least 95% of attempts.\n\nTest Outline:\n- Measure the time taken by editors to apply formatting changes, ensuring that 90% of tasks are completed within the 2-minute timeframe.\n- Analyze reader feedback from surveys to confirm that at least 85% of respondents perceive an improvement in visual appeal.\n- Conduct tests on the save functionality to verify that formatting changes persist reliably, aiming for a ≥ 95% success rate.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "HEU: single_goal=True; has_As/I...=True",
+                            "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "HEU: story_token_len=31",
+                            "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 5,
+                        "N": 4,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 5,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8888888888888888
+                }
+            ],
+            "original": "As a site editor, I want to have pretty good control over how the article, so that articles are visually appealing.",
+            "rewritten": "User Story:\nAs a site editor, I want to manage the visual layout of articles effectively so that I can enhance their aesthetic appeal, aiming for a 30% increase in reader engagement metrics.\n\nAcceptance Criteria:\n- Editors should be able to customize article formatting options (font styles, colors, and layouts) with a user-friendly interface, achieving changes within 2 minutes for 90% of tasks.\n- At least 85% of readers should report an improvement in visual appeal in a post-article feedback survey conducted within one month of implementation.\n- The system must ensure that all formatting changes are saved correctly without loss of data in at least 95% of attempts.\n\nTest Outline:\n- Measure the time taken by editors to apply formatting changes, ensuring that 90% of tasks are completed within the 2-minute timeframe.\n- Analyze reader feedback from surveys to confirm that at least 85% of respondents perceive an improvement in visual appeal.\n- Conduct tests on the save functionality to verify that formatting changes persist reliably, aiming for a ≥ 95% success rate.",
+            "scoring_criteria_text": "I-I:  | N-N:  | V-V:  | E-E:  | S-S:  | T-T: ",
+            "fuzzy_terms": [],
+            "low_score_explanations": {},
+            "score_new": {
+                "reasons": {
+                    "I": "HEU: single_goal=True; has_As/I...=True",
+                    "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                    "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                    "E": "HEU: has_AC=True (bullets: 3); measurable=True",
+                    "S": "HEU: story_token_len=31",
+                    "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                },
+                "I": 5,
+                "N": 4,
+                "V": 5,
+                "E": 5,
+                "S": 5,
+                "T": 5,
+                "overall": 5,
+                "meets_thresholds": {
+                    "I": true,
+                    "N": true,
+                    "V": true,
+                    "E": true,
+                    "S": true,
+                    "T": true,
+                    "overall": true
+                }
+            }
+        },
+        {
+            "id": 1,
+            "status": "done",
+            "rounds": 1,
+            "original_text": "I want a search bar on the top of the page.",
+            "final_text": "User Story:\nAs a user, I want a search bar located at the top of the page so that I can quickly initiate searches from any part of the site, enhancing my navigation efficiency by at least 30%.\n\nAcceptance Criteria:\n- The search bar must be accessible and functional on all pages within 100% of user sessions.\n- Users should be able to perform a search with the search bar within 2 clicks, maintaining a success rate of ≥ 95%.\n- At least 85% of users should express satisfaction with the search bar's visibility and ease of use in a feedback survey conducted after implementation.\n\nTest Outline:\n- Verify the search bar's presence and functionality on various pages by navigating through the site during testing.\n- Track the number of clicks required to perform a search, ensuring that it remains ≤ 2 clicks for 95% of users.\n- Conduct a user satisfaction survey post-launch to gather feedback on the search bar's visibility and usability.",
+            "history": [
+                {
+                    "text": "I want a search bar on the top of the page.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "HEU: single_goal=True; has_As/I...=False",
+                            "N": "HEU: rigid_spec=False; has_AC=False (bullets: 0)",
+                            "V": "HEU: benefit_clause(so that/in order to)=False; measurable=True",
+                            "E": "HEU: has_AC=False (bullets: 0); measurable=True",
+                            "S": "HEU: story_token_len=11",
+                            "T": "HEU: has_AC=False (bullets: 0); has_Test_Outline=False"
+                        },
+                        "I": 1,
+                        "N": 2,
+                        "V": 2,
+                        "E": 1,
+                        "S": 3,
+                        "T": 1,
+                        "overall": 2,
+                        "meets_thresholds": {
+                            "I": false,
+                            "N": false,
+                            "V": false,
+                            "E": false,
+                            "S": true,
+                            "T": false,
+                            "overall": false
+                        }
+                    },
+                    "diversity": 0.0
+                },
+                {
+                    "text": "User Story:\nAs a user, I want a search bar located at the top of the page so that I can quickly initiate searches from any part of the site, enhancing my navigation efficiency by at least 30%.\n\nAcceptance Criteria:\n- The search bar must be accessible and functional on all pages within 100% of user sessions.\n- Users should be able to perform a search with the search bar within 2 clicks, maintaining a success rate of ≥ 95%.\n- At least 85% of users should express satisfaction with the search bar's visibility and ease of use in a feedback survey conducted after implementation.\n\nTest Outline:\n- Verify the search bar's presence and functionality on various pages by navigating through the site during testing.\n- Track the number of clicks required to perform a search, ensuring that it remains ≤ 2 clicks for 95% of users.\n- Conduct a user satisfaction survey post-launch to gather feedback on the search bar's visibility and usability.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The user story is fully independent, allowing users to search easily from any page. | HEU: single_goal=True; has_As/I...=True",
+                            "N": "Clear requirements that allow for user feedback and flexibility in implementation. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "High user value with explicit benefits stated, enhancing navigation efficiency. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "Measurable and validated by specific metrics in the acceptance criteria. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The scope is small enough to fit within a Sprint, focused on a specific feature. | HEU: story_token_len=36",
+                            "T": "Complete acceptance tests outlined with validation methods for each criterion. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 5,
+                        "N": 4,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 5,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8901098901098901
+                },
+                {
+                    "text": "User Story:\nAs a user, I want a prominently placed search bar at the top of the page so that I can quickly locate information, enhancing my navigation efficiency by at least 30%.\n\nAcceptance Criteria:\n- The search bar should be visible on all pages, with a 100% accessibility rate for users.\n- Users should be able to initiate a search within 2 clicks on 95% of the pages.\n- At least 85% of users should express satisfaction with the search bar's location and functionality in a post-implementation survey.\n\nTest Outline:\n- Verify the visibility of the search bar on all pages by conducting a thorough review of the site layout.\n- Measure the number of clicks required to initiate a search across various pages to ensure it meets the ≤ 2 clicks requirement.\n- Gather user feedback through surveys to assess satisfaction levels, targeting ≥ 85% positive responses regarding the search bar.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "HEU: single_goal=True; has_As/I...=True",
+                            "N": "HEU: rigid_spec=False; has_AC=True (bullets: 3)",
+                            "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "HEU: story_token_len=31",
+                            "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 5,
+                        "N": 5,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 5,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8863636363636364
+                },
+                {
+                    "text": "User Story:\nAs a user, I want a prominently placed search bar at the top of the page so that I can quickly locate content, enhancing my navigation efficiency by at least 30%.\n\nAcceptance Criteria:\n- The search bar must be visible on 100% of pages, ensuring users can access it without scrolling.\n- Users should be able to perform a search and receive results within 2 seconds for 95% of queries.\n- At least 85% of users should report improved navigation satisfaction in a post-implementation survey.\n\nTest Outline:\n- Verify the visibility of the search bar across all pages to confirm it appears without the need for scrolling.\n- Measure response times for search queries, ensuring that 95% are processed within the 2-second timeframe.\n- Conduct a user satisfaction survey after implementation to assess navigation improvements, targeting ≥ 85% positive feedback.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "HEU: single_goal=True; has_As/I...=True",
+                            "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "HEU: story_token_len=31",
+                            "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 5,
+                        "N": 4,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 5,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8837209302325582
+                }
+            ],
+            "original": "I want a search bar on the top of the page.",
+            "rewritten": "User Story:\nAs a user, I want a search bar located at the top of the page so that I can quickly initiate searches from any part of the site, enhancing my navigation efficiency by at least 30%.\n\nAcceptance Criteria:\n- The search bar must be accessible and functional on all pages within 100% of user sessions.\n- Users should be able to perform a search with the search bar within 2 clicks, maintaining a success rate of ≥ 95%.\n- At least 85% of users should express satisfaction with the search bar's visibility and ease of use in a feedback survey conducted after implementation.\n\nTest Outline:\n- Verify the search bar's presence and functionality on various pages by navigating through the site during testing.\n- Track the number of clicks required to perform a search, ensuring that it remains ≤ 2 clicks for 95% of users.\n- Conduct a user satisfaction survey post-launch to gather feedback on the search bar's visibility and usability.",
+            "scoring_criteria_text": "I-I:  | N-N:  | V-V:  | E-E:  | S-S:  | T-T: ",
+            "fuzzy_terms": [
+                {
+                    "text": "various",
+                    "pos": "QTY_VAGUE",
+                    "reason": "Ambiguous or non-verifiable term without measurable threshold in the same sentence.",
+                    "suggestion": "Replace 'various' with a measurable criterion (e.g., '<= 200 ms', 'p95 <= 2s', explicit scope/boundary').",
+                    "start": 651,
+                    "end": 658
+                }
+            ],
+            "low_score_explanations": {},
+            "score_new": {
+                "reasons": {
+                    "I": "The user story is fully independent, allowing users to search easily from any page. | HEU: single_goal=True; has_As/I...=True",
+                    "N": "Clear requirements that allow for user feedback and flexibility in implementation. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                    "V": "High user value with explicit benefits stated, enhancing navigation efficiency. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                    "E": "Measurable and validated by specific metrics in the acceptance criteria. | HEU: has_AC=True (bullets: 3); measurable=True",
+                    "S": "The scope is small enough to fit within a Sprint, focused on a specific feature. | HEU: story_token_len=36",
+                    "T": "Complete acceptance tests outlined with validation methods for each criterion. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                },
+                "I": 5,
+                "N": 4,
+                "V": 5,
+                "E": 5,
+                "S": 5,
+                "T": 5,
+                "overall": 5,
+                "meets_thresholds": {
+                    "I": true,
+                    "N": true,
+                    "V": true,
+                    "E": true,
+                    "S": true,
+                    "T": true,
+                    "overall": true
+                }
+            }
+        }
+    ],
+    "email_list": [
+        "ca0983896371@gmail.com",
+        "tzuyu.cheng@iss.nthu.edu.tw",
+        "ca098386371@gmail.com"
+    ]
+}

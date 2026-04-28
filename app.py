@@ -13,29 +13,38 @@ load_dotenv()
 # --- 1. 匯入後端核心函數 ---
 try:
     from core.pipeline import run_batch_optimization
-    # 匯入寄送受試者邀請信與研究者通知信的函數
     from core.mailer import send_survey_links, send_admin_notification 
+    # 匯入 INVEST 定義與維度
+    from core.invest_rules import INVEST_RUBRIC_15, DIM_KEYS
 except ImportError:
     st.error("❌ 找不到 core 模組，請確認 app.py 放在專案根目錄且 core 資料夾存在。")
     st.stop()
 
-# --- 2. 基礎配置與問卷題目 ---
+# --- 2. 基礎配置與定義 (Ambiguity & INVEST) ---
 st.set_page_config(page_title="User Story 實驗系統", layout="wide")
 
-SURVEY_QUESTIONS = [
-    "Using Version B rather than Version A in my job would enable me to accomplish tasks more quickly.",
-    "Using Version B rather than Version A would improve my job performance.",
-    "Using Version B rather than Version A in my job would increase my productivity.",
-    "Using Version B rather than Version A would enhance my effectiveness on the job.",
-    "Using Version B rather than Version A would make it easier to do my job.",
-    "I would find using Version B rather than Version A useful in my job.",
-    "Learning to operate/edit Version B would be easy for me rather than Version A.",
-    "I would find it easy to get Version B to do what I want it to do rather than Version A.",
-    "My interaction with Version B would be clear and understandable rather than Version A.",
-    "I would find Version B to be flexible to interact with rather than Version A.",
-    "It would be easy for me to become skillful at using Version B rather than Version A.",
-    "I would find Version B easy to use rather than Version A."
-]
+# 定義四大模糊性 (Ambiguity) 的說明文字
+AMBIGUITY_TYPES = {
+    "Lexical": "Ambiguity at the level of individual words that might unconsciously exist due to words having several meanings because of etymological differences or related but different meanings.",
+    "Syntactic": "Ambiguity at the sentence level that is present when a sentence can be interpreted using different grammatical structures.",
+    "Semantic": "Ambiguity at the phrase (i.e., part of a sentence) or sentence level that exists if there are multiple interpretations of a phrase or sentence.",
+    "Pragmatic": "Ambiguity at the phrase or sentence level that is present if the context does not clarify the intended meaning."
+}
+
+# 定義 INVEST 各維度的全名與基本定義
+INVEST_FULL_NAMES = {
+    "I": "Independent", "N": "Negotiable", "V": "Valuable", 
+    "E": "Estimable", "S": "Small", "T": "Testable"
+}
+
+INVEST_DESCRIPTIONS = {
+    "I": "The independent story is self-sufficient. An independent story can be pulled into a sprint, built, and tested without waiting for another story to be completed first. It may share databases, APIs, or services with other stories, but no other story needs to be finished before this one can move forward. If removing it from the sprint would not block or delay any other story, it is independent.",
+    "N": "A negotiable story tells the team what the user needs and why it matters, without specifying how the system should deliver it. A developer reading the story should find the goal clear, but the solution open — no named technology, UI component, or system behaviors have been decided in advance. The story is a starting point for a conversation, not a specification to be implemented as written.",
+    "V": "The valuable story answers the question of why this feature should exist, from the perspective of a specific user or the business, not the development team. A tester reading only the 'so that' clause should be able to name who benefits and what changes in their situation when the feature exists. A story that describes only what needs to be built is a developer task, not a user story, regardless of how it is formatted.",
+    "E": "The estimable story gives the development team three things: a concrete action describing what the system must do, scope boundaries defining what is included and excluded, and acceptance conditions stating what done looks like. A developer reading the story should be able to assign a complexity estimate without consulting anyone outside the team or making assumptions not stated in the text. If two developers reading the same story independently would produce significantly different estimates, the story is not yet estimable.",
+    "S": "The small story covers one user goal that a team can fully deliver within a single sprint (coded, tested, and releasable) without splitting it into separate deliverables first. A developer reading the story should be able to identify a single action with a bounded outcome, where no part of the story could be removed and still deliver independent value on its own. At the same time, a small story may represent a meaningful incremental step toward a larger user goal or desired outcome. If the story contains multiple goals that could each stand alone as separate stories, or conditions that could be built and tested independently, it needs to be broken down before entering a sprint.",
+    "T": "The testable story gives a QA tester everything needed to verify the feature without interpretation or discussion. A tester reading the story should be able to identify what to observe, what action to perform, and what a passing result looks like, stated in specific terms such as a number, date, named system state, or defined threshold. In practice, these acceptance criteria may be refined through discussion among QA, the product owner, and the team, but they should ultimately be expressed in a clear and explicit form within the story. If two testers reading the same story would disagree on whether the same system output passes or fails, the acceptance criteria are not yet testable."
+}
 
 # --- 3. URL 參數自動辨識 (解決信箱點擊跳轉問題) ---
 if 'init_check' not in st.session_state:
@@ -76,41 +85,26 @@ def process_uploaded_data(file):
 
 def save_json_result(final_data):
     """儲存個人填答結果至 data/survey/ 資料夾"""
-    # 1. 定義並確保子資料夾路徑存在
     survey_folder = os.path.join('data', 'survey') 
     if not os.path.exists(survey_folder):
         os.makedirs(survey_folder, exist_ok=True)
     
-    # 2. 處理檔名
     email_safe = final_data['user_info']['email'].replace('@', '_at_').replace('.', '_')
     fname = os.path.join(survey_folder, f"result_{st.session_state.exp_id}_{email_safe}.json")
     
-    # 3. 執行儲存
     with open(fname, 'w', encoding='utf-8') as f:
         json.dump(final_data, f, ensure_ascii=False, indent=4)
     return fname
 
-# 檢查 API Key (優先檢查 Streamlit Secrets)
-# --- 環境判斷與 API Key 讀取 ---
 def get_api_key():
-    # 1. 嘗試從 Streamlit Cloud 的 Secrets 讀取 (雲端環境優先)
     try:
         if "OPENAI_API_KEY" in st.secrets:
             return st.secrets["OPENAI_API_KEY"]
     except Exception:
-        # 如果在本地端且沒有 secrets.toml，st.secrets 會噴錯，我們直接進入 except
         pass
+    return os.getenv("OPENAI_API_KEY")
 
-    # 2. 如果上面失敗，嘗試從本地 .env 讀取 (本地環境)
-    local_key = os.getenv("OPENAI_API_KEY")
-    return local_key
-
-# 執行讀取
 api_key = get_api_key()
-
-# 判斷目前是否在本地執行 (輔助用)
-IS_LOCAL = os.getenv("STREAMLIT_SERVER_ADDRESS") is None # 雲端通常會設定 server 位址
-
 if not api_key:
     st.error("❌ OPENAI_API_KEY 缺失！請檢查雲端 Secrets 或本地 .env 檔案。")
     st.stop()
@@ -140,7 +134,6 @@ if st.session_state.step == "PM_SETUP":
 
     st.divider()
 
-    # --- 開始表單 ---
     with st.form("pm_form"):
         st.subheader("1. 專案背景描述 (選填)")
         project_context = st.text_area("描述僅存於後台資料中", height=100)
@@ -165,8 +158,6 @@ if st.session_state.step == "PM_SETUP":
             
             if file and valid_emails:
                 stories = process_uploaded_data(file)
-                
-                # 進度條與狀態顯示
                 prog_bar = st.progress(0)
                 status_msg = st.empty()
                 
@@ -183,10 +174,8 @@ if st.session_state.step == "PM_SETUP":
                 prog_bar.progress(80)
                 
                 status_msg.text("📧 正在寄送邀請信件至各成員信箱...")
-                # 發送信件 (mailer.py 會根據 exp_id 生成帶參數的連結)
                 send_survey_links(valid_emails, st.session_state.exp_id)
                 
-                # --- 核心修正：確保存放到 data/user_project/ 目錄下 ---
                 target_dir = os.path.join("data", "user_project")
                 if not os.path.exists(target_dir):
                     os.makedirs(target_dir, exist_ok=True)
@@ -223,7 +212,7 @@ elif st.session_state.step == "USER_INFO":
         doc_exp = st.selectbox("您在軟體開發接觸需求文件的實務經驗？", ["未滿1年", "1~2年", "3~5年", "6~10年", "10年以上"])
         role = st.selectbox("您在目前的敏捷開發團隊中，是擔任何種職能的人員？", ["專案經理/專案管理/產品管理", "UIUX設計師/使用者經驗訪談", "前端/後端開發工程師/系統分析師", "其他"])
 
-        if st.form_submit_button("Start Measurement Scales"):
+        if st.form_submit_button("進入評估系統") :
             st.session_state.current_user = {
                 "email": selected_email, "age": age, 
                 "agile_exp": agile_exp, "doc_exp": doc_exp, "role": role
@@ -240,28 +229,103 @@ elif st.session_state.step == "SURVEY_MODE":
     st.progress((idx + 1) / len(df))
     st.subheader(f"User Story 評估任務 ({idx + 1} / {len(df)})")
     
+    # --- 評估任務事前說明 ---
+    st.info("""
+    **📝 評估任務說明**
+    
+    本任務分為兩個部分，請先仔細閱讀下方對照的 **Version A (原始版本)** 與 **Version B (優化版本)**，接著進行評分：
+    - **Part 1: INVEST 評估**
+      依據敏捷開發的 INVEST 六大準則進行評分。請對照每個題目下方的 `1-5 分詳細評分標準`，為 A、B 兩個版本分別給出 1(最低) 到 5(最高) 的分數。
+    - **Part 2: 模糊性 (Ambiguity) 評估**
+      評估這兩個版本的 User Story 是否存在詞彙、語法、語義或語用上的模糊不清。請參考題目下方的定義，1 分代表「完全沒有模糊 (No ambiguity)」，5 分代表「非常模糊 (Very ambiguous)」。
+    """)
+    st.write("")
+
+    # --- 雙欄固定對照 ---
     ver_a = row.get('description') or row.get('original') or "內容讀取失敗"
     ver_b = row.get('optimized_description') or row.get('rewritten') or row.get('optimized') or "優化內容讀取失敗"
 
     col_a, col_b = st.columns(2)
     with col_a:
-        st.error(f"**Version A**\n\n{ver_a}")
+        st.error(f"**Version A (Original)**\n\n{ver_a}")
     with col_b:
-        st.success(f"**Version B**\n\n{ver_b}")
+        st.success(f"**Version B (Optimized)**\n\n{ver_b}")
         
     st.divider()
-    st.write("#### Measurement Scales of Perceived Usefulness and Perceived Ease of Use Survey")
-    current_page_scores = []
-    for q_idx, q_text in enumerate(SURVEY_QUESTIONS):
-        s = st.radio(
-            f"Q{q_idx+1}: {q_text}", 
-            [1, 2, 3, 4, 5, 6, 7], 
-            horizontal=True, 
-            key=f"task_{idx}_q_{q_idx}",
-            format_func=lambda x: {1:"Extremely Unlikely", 2:"Quite Unlikely", 3:"Slightly Unlikely", 4:"Neither", 5:"Slightly Likely", 6:"Quite Likely", 7:"Extremely Likely"}[x]
-        )
-        current_page_scores.append(s)
 
+    # --- 初始化暫存容器 ---
+    invest_a_scores = {}
+    invest_b_scores = {}
+    amb_a_scores = {}
+    amb_b_scores = {}
+
+    # --- Part 1: INVEST 評分矩陣 ---
+    st.markdown("## Part 1: INVEST Evaluation")
+    st.write("請依據各維度的定義與 1-5 分的詳細標準，分別為 Version A 與 Version B 進行評分。")
+    st.write("")
+    
+    for dim in DIM_KEYS:
+        full_name = INVEST_FULL_NAMES[dim]
+        # 顯示維度全名與基本定義
+        st.markdown(f"### 【 {full_name} 】")
+        st.write(f"**Definition:** {INVEST_DESCRIPTIONS[dim]}")
+        
+        # 展開式面板：顯示該維度的 1-5 分詳細 Rubric
+        with st.expander(f"🔍 點此展開 {full_name} ({dim}) 的 1~5 分詳細評分標準", expanded=False):
+            for score in ["1", "2", "3", "4", "5"]:
+                desc = INVEST_RUBRIC_15.get(dim, {}).get(score, "N/A")
+                st.markdown(f"- **Score {score}**: {desc}")
+
+        # 評分按鈕
+        c1, c2 = st.columns(2)
+        with c1:
+            invest_a_scores[dim] = st.radio(
+                f"Version A Score:", 
+                options=[1, 2, 3, 4, 5], 
+                horizontal=True, 
+                key=f"inv_a_{idx}_{dim}"
+            )
+        with c2:
+            invest_b_scores[dim] = st.radio(
+                f"Version B Score:", 
+                options=[1, 2, 3, 4, 5], 
+                horizontal=True, 
+                key=f"inv_b_{idx}_{dim}"
+            )
+        st.markdown("<br>", unsafe_allow_html=True) # 增加題距留白
+
+    st.divider()
+
+    # --- Part 2: Ambiguity 評分矩陣 ---
+    st.markdown("## Part 2: Ambiguity Evaluation")
+    st.write("Does this user story have the following ambiguity? (1: No ambiguity ~ 5: Very ambiguous)")
+    st.write("")
+
+    for amb, desc in AMBIGUITY_TYPES.items():
+        st.markdown(f"### Does this user story have **{amb}** ambiguity?")
+        # 直接將定義以較淡/較小的字體顯示在題目下方
+        st.caption(f"💡 **Definition:** {desc}")
+        
+        c1, c2 = st.columns(2)
+        with c1:
+            amb_a_scores[amb] = st.radio(
+                f"Version A Score:", 
+                options=[1, 2, 3, 4, 5], 
+                horizontal=True, 
+                key=f"amb_a_{idx}_{amb}"
+            )
+        with c2:
+            amb_b_scores[amb] = st.radio(
+                f"Version B Score:", 
+                options=[1, 2, 3, 4, 5], 
+                horizontal=True, 
+                key=f"amb_b_{idx}_{amb}"
+            )
+        st.markdown("<br>", unsafe_allow_html=True) # 增加題距留白
+
+    st.divider()
+
+    # --- 換頁與提交邏輯 ---
     c_prev, c_next = st.columns(2)
     with c_prev:
         if idx > 0 and st.button("⬅️ Previous User Story"):
@@ -270,7 +334,14 @@ elif st.session_state.step == "SURVEY_MODE":
     with c_next:
         label = "Finish and Submit" if idx == len(df)-1 else "Next User Story ➡️"
         if st.button(label):
-            st.session_state.user_responses[idx] = current_page_scores
+            # 將整理好的結構化資料存入 session_state
+            st.session_state.user_responses[idx] = {
+                "invest_A": invest_a_scores,
+                "invest_B": invest_b_scores,
+                "ambiguity_A": amb_a_scores,
+                "ambiguity_B": amb_b_scores
+            }
+            
             if idx < len(df) - 1:
                 st.session_state.current_idx += 1
                 st.rerun()
@@ -306,5 +377,5 @@ elif st.session_state.step == "FINAL":
         st.markdown("---")
         st.markdown("### ✅ 提交成功！")
         st.write(f"您的實驗代碼為：**RTD-{st.session_state.exp_id}**")
-        st.write("請將此代碼截圖提供給計畫主持人(鄭慈昱)，即可完成領獎。")
+        st.write("請將此代碼截圖提供給計畫主持人，即可完成領獎。")
         st.write("現在您可以安全地關閉此瀏覽器分頁。")
