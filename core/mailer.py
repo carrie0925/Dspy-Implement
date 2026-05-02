@@ -83,7 +83,8 @@ def send_admin_notification(payload):
     json_content = json.dumps(payload, ensure_ascii=False, indent=4)
     body = f"收到一份新的 User Story 評估結果：\n\n{json_content}"
     
-    msg.attach(MIMEText(body, 'plain', 'utf-8'))
+    msg.attach(MIMEText(body, 
+                        'plain', 'utf-8'))
 
     try:
         # 管理員通知通常使用更穩定的 SSL 連線

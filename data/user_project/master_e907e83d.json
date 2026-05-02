@@ -6,7 +6,7 @@
             "status": "done",
             "rounds": 1,
             "original_text": "As a site editor, I want to have pretty good control over how the article, so that articles are visually appealing.",
-            "final_text": "User Story:\nAs a site editor, I want to have comprehensive control over the formatting and layout of articles so that I can create visually appealing content that engages readers effectively.\n\nAcceptance Criteria:\n- Editors should be able to customize at least 5 key visual elements (font styles, colors, images, spacing, and alignment) to enhance article aesthetics.\n- The article preview feature must update in real-time, ensuring at least 95% accuracy in displaying changes made during editing.\n- User feedback should indicate a satisfaction rate of at least 85% regarding the visual appeal of articles after implementing these controls.\n\nTest Outline:\n- Assess the customization options available to editors and verify that all specified elements can be modified as intended.\n- Conduct user testing with a sample of readers to evaluate their perception of article visuals before and after the enhancements.",
+            "final_text": "User Story:\nAs a site editor, I want to have comprehensive control over the formatting and layout of articles, so that I can ensure each article is visually engaging and aligns with brand standards.\n\nAcceptance Criteria:\n- The editing interface must allow adjustments to at least 10 formatting elements, including fonts, colors, headings, images, and spacing.\n- Article previews should update in real-time, reflecting changes within 1 second for 95% of edits made.\n- User satisfaction regarding the ease of formatting control should achieve a score of at least 4.5 out of 5 in feedback surveys after implementation.\n\nTest Outline:\n- Review the editing interface to confirm the availability of the specified formatting options.\n- Test the real-time preview functionality by tracking the update speed during various edits.\n- Conduct user feedback sessions to measure satisfaction levels with the formatting control features.",
             "history": [
                 {
                     "text": "As a site editor, I want to have pretty good control over how the article, so that articles are visually appealing.",
@@ -21,9 +21,9 @@
                         },
                         "I": 3,
                         "N": 2,
-                        "V": 3,
+                        "V": 4,
                         "E": 2,
-                        "S": 3,
+                        "S": 4,
                         "T": 2,
                         "overall": 3,
                         "meets_thresholds": {
@@ -39,67 +39,7 @@
                     "diversity": 0.0
                 },
                 {
-                    "text": "User Story:\nAs a site editor, I want to have comprehensive control over the formatting and layout of articles so that I can create visually appealing content that engages readers effectively.\n\nAcceptance Criteria:\n- Editors should be able to customize at least 5 key visual elements (font styles, colors, images, spacing, and alignment) to enhance article aesthetics.\n- The article preview feature must update in real-time, ensuring at least 95% accuracy in displaying changes made during editing.\n- User feedback should indicate a satisfaction rate of at least 85% regarding the visual appeal of articles after implementing these controls.\n\nTest Outline:\n- Assess the customization options available to editors and verify that all specified elements can be modified as intended.\n- Conduct user testing with a sample of readers to evaluate their perception of article visuals before and after the enhancements.",
-                    "metrics": {
-                        "reasons": {
-                            "I": "HEU: single_goal=False; has_As/I...=True",
-                            "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
-                            "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
-                            "E": "HEU: has_AC=True (bullets: 3); measurable=True",
-                            "S": "HEU: story_token_len=29",
-                            "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
-                        },
-                        "I": 4,
-                        "N": 4,
-                        "V": 5,
-                        "E": 5,
-                        "S": 5,
-                        "T": 5,
-                        "overall": 5,
-                        "meets_thresholds": {
-                            "I": true,
-                            "N": true,
-                            "V": true,
-                            "E": true,
-                            "S": true,
-                            "T": true,
-                            "overall": true
-                        }
-                    },
-                    "diversity": 0.8333333333333334
-                },
-                {
-                    "text": "User Story:\nAs a site editor, I want to have comprehensive control over the article formatting and layout so that I can create visually appealing articles that engage readers effectively.\n\nAcceptance Criteria:\n- The editing tool must allow for at least 10 different formatting options (e.g., font styles, colors, headings) to enhance visual appeal.\n- Editors should be able to preview changes in real-time, with a 98% accuracy in displaying the final appearance before publishing.\n- The article layout should support responsive design, ensuring 100% compatibility across various devices (desktop, tablet, mobile).\n\nTest Outline:\n- Evaluate the available formatting options within the editing tool to confirm they meet the specified criteria.\n- Conduct usability testing with editors to ensure real-time previews accurately reflect final published articles.",
-                    "metrics": {
-                        "reasons": {
-                            "I": "HEU: single_goal=False; has_As/I...=True",
-                            "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
-                            "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
-                            "E": "HEU: has_AC=True (bullets: 3); measurable=True",
-                            "S": "HEU: story_token_len=28",
-                            "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
-                        },
-                        "I": 4,
-                        "N": 4,
-                        "V": 5,
-                        "E": 5,
-                        "S": 5,
-                        "T": 5,
-                        "overall": 5,
-                        "meets_thresholds": {
-                            "I": true,
-                            "N": true,
-                            "V": true,
-                            "E": true,
-                            "S": true,
-                            "T": true,
-                            "overall": true
-                        }
-                    },
-                    "diversity": 0.8282828282828283
-                },
-                {
-                    "text": "User Story:\nAs a site editor, I want to have comprehensive control over the formatting and layout of articles so that I can ensure they are visually appealing and engaging for readers.\n\nAcceptance Criteria:\n- Editors should be able to modify at least 10 formatting options (font size, color, images, headings) to achieve desired aesthetics.\n- The article preview feature must update in real-time, allowing editors to see changes instantly with a refresh time of less than 2 seconds.\n- At least 85% of readers should express satisfaction with the visual presentation of articles in user surveys.\n\nTest Outline:\n- Evaluate the range of formatting options available to editors and validate that all options function correctly.\n- Conduct user surveys post-publication to measure reader satisfaction regarding the visual appeal of the articles.",
+                    "text": "User Story:\nAs a site editor, I want to have comprehensive control over the formatting and layout of articles so that I can ensure they are visually appealing and engaging for readers.\n\nAcceptance Criteria:\n- The editing interface must allow adjustments to at least 8 different formatting options, including font style, size, color, spacing, and alignment.\n- Changes made to article formatting should be previewed in real-time, with updates appearing within 1 second.\n- User satisfaction with the article presentation should reach at least 4.5 out of 5 in feedback surveys following article publication.\n\nTest Outline:\n- Verify the availability of specified formatting options within the editing interface.\n- Measure the responsiveness of the preview feature to ensure it meets the 1-second update criterion.\n- Collect user feedback through surveys to assess satisfaction with the visual appeal of published articles.",
                     "metrics": {
                         "reasons": {
                             "I": "HEU: single_goal=False; has_As/I...=True",
@@ -126,13 +66,82 @@
                             "overall": true
                         }
                     },
-                    "diversity": 0.8043478260869565
+                    "diversity": 0.8125
+                },
+                {
+                    "text": "User Story:\nAs a site editor, I want to have comprehensive control over the formatting and layout of articles, so that I can ensure each article is visually engaging and aligns with brand standards.\n\nAcceptance Criteria:\n- The editing interface must allow adjustments to at least 10 formatting elements, including fonts, colors, headings, images, and spacing.\n- Article previews should update in real-time, reflecting changes within 1 second for 95% of edits made.\n- User satisfaction regarding the ease of formatting control should achieve a score of at least 4.5 out of 5 in feedback surveys after implementation.\n\nTest Outline:\n- Review the editing interface to confirm the availability of the specified formatting options.\n- Test the real-time preview functionality by tracking the update speed during various edits.\n- Conduct user feedback sessions to measure satisfaction levels with the formatting control features.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "HEU: single_goal=False; has_As/I...=True",
+                            "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "HEU: story_token_len=32",
+                            "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 4,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 5,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.84
+                },
+                {
+                    "text": "User Story:\nAs a site editor, I want to have robust control over the formatting and layout of articles so that they are visually appealing and enhance reader engagement.\n\nAcceptance Criteria:\n- Editors must be able to customize at least 10 distinct formatting options, including font styles, colors, images, and layout structures.\n- The system should allow real-time previews of changes, ensuring that modifications are visible within 2 seconds of being made.\n- User engagement metrics, such as time on page and bounce rate, should improve by at least 15% within the first month after implementing enhanced formatting controls.\n\nTest Outline:\n- Verify that editors can access and utilize all specified formatting options in the article editing interface.\n- Measure the time taken for real-time previews to update after changes are made.\n- Analyze user engagement statistics before and after implementing the new formatting controls to assess the impact on reader behavior.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "HEU: single_goal=False; has_As/I...=True",
+                            "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "HEU: story_token_len=27",
+                            "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 4,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 5,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8235294117647058
                 }
             ],
             "original": "As a site editor, I want to have pretty good control over how the article, so that articles are visually appealing.",
-            "rewritten": "User Story:\nAs a site editor, I want to have comprehensive control over the formatting and layout of articles so that I can create visually appealing content that engages readers effectively.\n\nAcceptance Criteria:\n- Editors should be able to customize at least 5 key visual elements (font styles, colors, images, spacing, and alignment) to enhance article aesthetics.\n- The article preview feature must update in real-time, ensuring at least 95% accuracy in displaying changes made during editing.\n- User feedback should indicate a satisfaction rate of at least 85% regarding the visual appeal of articles after implementing these controls.\n\nTest Outline:\n- Assess the customization options available to editors and verify that all specified elements can be modified as intended.\n- Conduct user testing with a sample of readers to evaluate their perception of article visuals before and after the enhancements.",
+            "rewritten": "User Story:\nAs a site editor, I want to have comprehensive control over the formatting and layout of articles, so that I can ensure each article is visually engaging and aligns with brand standards.\n\nAcceptance Criteria:\n- The editing interface must allow adjustments to at least 10 formatting elements, including fonts, colors, headings, images, and spacing.\n- Article previews should update in real-time, reflecting changes within 1 second for 95% of edits made.\n- User satisfaction regarding the ease of formatting control should achieve a score of at least 4.5 out of 5 in feedback surveys after implementation.\n\nTest Outline:\n- Review the editing interface to confirm the availability of the specified formatting options.\n- Test the real-time preview functionality by tracking the update speed during various edits.\n- Conduct user feedback sessions to measure satisfaction levels with the formatting control features.",
             "scoring_criteria_text": "I-I:  | N-N:  | V-V:  | E-E:  | S-S:  | T-T: ",
-            "fuzzy_terms": [],
+            "fuzzy_terms": [
+                {
+                    "text": "various",
+                    "pos": "QTY_VAGUE",
+                    "reason": "Ambiguous or non-verifiable term without measurable threshold in the same sentence.",
+                    "suggestion": "Replace 'various' with a measurable criterion (e.g., '<= 200 ms', 'p95 <= 2s', explicit scope/boundary').",
+                    "start": 806,
+                    "end": 813
+                }
+            ],
             "low_score_explanations": {},
             "score_new": {
                 "reasons": {
@@ -140,7 +149,7 @@
                     "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
                     "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
                     "E": "HEU: has_AC=True (bullets: 3); measurable=True",
-                    "S": "HEU: story_token_len=29",
+                    "S": "HEU: story_token_len=32",
                     "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
                 },
                 "I": 4,
@@ -166,7 +175,7 @@
             "status": "done",
             "rounds": 1,
             "original_text": "I want a search bar on the top of the page.",
-            "final_text": "User Story:\nAs a website visitor, I want a search bar prominently located at the top of the page so that I can easily access and navigate to the content I am looking for without unnecessary scrolling.\n\nAcceptance Criteria:\n- The search bar should be visible and accessible on the top of every page, appearing within 1 second of page load for 95% of users.\n- Users should be able to input search queries with a character limit of at least 100 characters and receive relevant results with a minimum accuracy rate of 85%.\n- The search function must include autocomplete suggestions that display at least 5 relevant options as users type their queries.\n\nTest Outline:\n- Test the visibility and loading time of the search bar across multiple devices and browsers to ensure consistency.\n- Evaluate the functionality of the search bar by conducting user tests to assess the accuracy and relevance of the search results and autocomplete suggestions.",
+            "final_text": "User Story:\nAs a website user, I want a search bar prominently positioned at the top of the page so that I can easily access it and find information quickly without navigating through multiple sections.\n\nAcceptance Criteria:\n- The search bar must be visible on all pages and load within 1 second for 95% of users.\n- Users should be able to initiate a search by typing at least 3 characters, with results displayed in under 2 seconds.\n- The search bar must include an autocomplete feature that suggests at least 5 relevant queries based on user input.\n\nTest Outline:\n- Verify the visibility of the search bar on various pages to ensure it meets the design requirements.\n- Measure the load time of the search bar and the response time for search results to confirm they adhere to the specified criteria.\n- Test the autocomplete functionality by entering different queries to assess the relevance and speed of the suggestions provided.",
             "history": [
                 {
                     "text": "I want a search bar on the top of the page.",
@@ -199,14 +208,14 @@
                     "diversity": 0.0
                 },
                 {
-                    "text": "User Story:\nAs a website visitor, I want a search bar prominently located at the top of the page so that I can easily access and navigate to the content I am looking for without unnecessary scrolling.\n\nAcceptance Criteria:\n- The search bar should be visible and accessible on the top of every page, appearing within 1 second of page load for 95% of users.\n- Users should be able to input search queries with a character limit of at least 100 characters and receive relevant results with a minimum accuracy rate of 85%.\n- The search function must include autocomplete suggestions that display at least 5 relevant options as users type their queries.\n\nTest Outline:\n- Test the visibility and loading time of the search bar across multiple devices and browsers to ensure consistency.\n- Evaluate the functionality of the search bar by conducting user tests to assess the accuracy and relevance of the search results and autocomplete suggestions.",
+                    "text": "User Story:\nAs a website user, I want a search bar prominently positioned at the top of the page so that I can easily access it and find information quickly without navigating through multiple sections.\n\nAcceptance Criteria:\n- The search bar must be visible on all pages and load within 1 second for 95% of users.\n- Users should be able to initiate a search by typing at least 3 characters, with results displayed in under 2 seconds.\n- The search bar must include an autocomplete feature that suggests at least 5 relevant queries based on user input.\n\nTest Outline:\n- Verify the visibility of the search bar on various pages to ensure it meets the design requirements.\n- Measure the load time of the search bar and the response time for search results to confirm they adhere to the specified criteria.\n- Test the autocomplete functionality by entering different queries to assess the relevance and speed of the suggestions provided.",
                     "metrics": {
                         "reasons": {
                             "I": "HEU: single_goal=False; has_As/I...=True",
                             "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
                             "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
                             "E": "HEU: has_AC=True (bullets: 3); measurable=True",
-                            "S": "HEU: story_token_len=35",
+                            "S": "HEU: story_token_len=33",
                             "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
                         },
                         "I": 4,
@@ -226,17 +235,17 @@
                             "overall": true
                         }
                     },
-                    "diversity": 0.8901098901098901
+                    "diversity": 0.8958333333333334
                 },
                 {
-                    "text": "User Story:\nAs a user, I want a prominently placed search bar at the top of the page so that I can conveniently access search functionality and quickly locate relevant content.\n\nAcceptance Criteria:\n- The search bar must be visible on the top of the page without scrolling for 100% of users accessing the site.\n- Users should be able to initiate a search within 2 clicks, with a completion rate of at least 95% for search queries.\n- The search bar should support autocomplete suggestions to improve user efficiency, with a suggestion accuracy of at least 80%.\n\nTest Outline:\n- Verify the visibility of the search bar on various devices and screen sizes to ensure it meets design specifications.\n- Conduct usability testing to measure the time taken for users to perform a search and gather feedback on the effectiveness of autocomplete suggestions.",
+                    "text": "User Story:\nAs a user, I want a search bar prominently positioned at the top of the page so that I can easily access it and quickly locate content across the platform.\n\nAcceptance Criteria:\n- The search bar must be visible and accessible on all pages, with a load time not exceeding 1 second for 95% of users.\n- The search bar should have an autocomplete feature that suggests at least 5 relevant results based on user input within 2 seconds.\n- User engagement with the search bar should increase by at least 30% within the first month after implementation.\n\nTest Outline:\n- Verify the visibility and accessibility of the search bar across different pages and devices.\n- Measure the response time of the autocomplete suggestions to ensure they meet the 2-second criterion.\n- Analyze user interaction data before and after the implementation to assess the increase in engagement.",
                     "metrics": {
                         "reasons": {
                             "I": "HEU: single_goal=False; has_As/I...=True",
                             "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
                             "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
                             "E": "HEU: has_AC=True (bullets: 3); measurable=True",
-                            "S": "HEU: story_token_len=29",
+                            "S": "HEU: story_token_len=30",
                             "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
                         },
                         "I": 4,
@@ -256,17 +265,17 @@
                             "overall": true
                         }
                     },
-                    "diversity": 0.8795180722891567
+                    "diversity": 0.8888888888888888
                 },
                 {
-                    "text": "User Story:\nAs a user, I want a prominently placed search bar at the top of the page so that I can quickly access information and resources without having to navigate through multiple menus.\n\nAcceptance Criteria:\n- The search bar must be visible on the top of every page, with a visibility rate of 100% across all devices.\n- Users should be able to initiate a search within 2 clicks from any section of the site, improving navigation efficiency.\n- The search bar should support autocomplete suggestions with at least 80% accuracy based on user input to facilitate faster searches.\n\nTest Outline:\n- Verify the presence of the search bar on all pages across different devices and screen sizes.\n- Conduct usability testing to ensure users can initiate a search within the specified number of clicks and assess the accuracy of autocomplete suggestions.",
+                    "text": "User Story:\nAs a user, I want a prominently placed search bar at the top of the page so that I can easily access the search feature and quickly find relevant content.\n\nAcceptance Criteria:\n- The search bar must be visible and accessible on all pages, with at least 95% of users able to locate it within 5 seconds.\n- The search bar should support autocomplete suggestions that display at least 3 relevant options based on user input.\n- The search functionality must yield results that are relevant to the query, achieving at least a 90% accuracy rate.\n\nTest Outline:\n- Conduct usability testing to evaluate how quickly users can find the search bar on various pages.\n- Analyze the effectiveness of autocomplete suggestions by measuring the average number of relevant options provided during searches.\n- Review user feedback on the accuracy of search results to ensure the 90% relevance criterion is met.",
                     "metrics": {
                         "reasons": {
                             "I": "HEU: single_goal=False; has_As/I...=True",
                             "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
                             "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
                             "E": "HEU: has_AC=True (bullets: 3); measurable=True",
-                            "S": "HEU: story_token_len=32",
+                            "S": "HEU: story_token_len=30",
                             "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
                         },
                         "I": 4,
@@ -286,13 +295,21 @@
                             "overall": true
                         }
                     },
-                    "diversity": 0.8809523809523809
+                    "diversity": 0.8863636363636364
                 }
             ],
             "original": "I want a search bar on the top of the page.",
-            "rewritten": "User Story:\nAs a website visitor, I want a search bar prominently located at the top of the page so that I can easily access and navigate to the content I am looking for without unnecessary scrolling.\n\nAcceptance Criteria:\n- The search bar should be visible and accessible on the top of every page, appearing within 1 second of page load for 95% of users.\n- Users should be able to input search queries with a character limit of at least 100 characters and receive relevant results with a minimum accuracy rate of 85%.\n- The search function must include autocomplete suggestions that display at least 5 relevant options as users type their queries.\n\nTest Outline:\n- Test the visibility and loading time of the search bar across multiple devices and browsers to ensure consistency.\n- Evaluate the functionality of the search bar by conducting user tests to assess the accuracy and relevance of the search results and autocomplete suggestions.",
+            "rewritten": "User Story:\nAs a website user, I want a search bar prominently positioned at the top of the page so that I can easily access it and find information quickly without navigating through multiple sections.\n\nAcceptance Criteria:\n- The search bar must be visible on all pages and load within 1 second for 95% of users.\n- Users should be able to initiate a search by typing at least 3 characters, with results displayed in under 2 seconds.\n- The search bar must include an autocomplete feature that suggests at least 5 relevant queries based on user input.\n\nTest Outline:\n- Verify the visibility of the search bar on various pages to ensure it meets the design requirements.\n- Measure the load time of the search bar and the response time for search results to confirm they adhere to the specified criteria.\n- Test the autocomplete functionality by entering different queries to assess the relevance and speed of the suggestions provided.",
             "scoring_criteria_text": "I-I:  | N-N:  | V-V:  | E-E:  | S-S:  | T-T: ",
             "fuzzy_terms": [
+                {
+                    "text": "quickly",
+                    "pos": "ADV_VAGUE",
+                    "reason": "Ambiguous or non-verifiable term without measurable threshold in the same sentence.",
+                    "suggestion": "Replace 'quickly' with a measurable criterion (e.g., '<= 200 ms', 'p95 <= 2s', explicit scope/boundary').",
+                    "start": 149,
+                    "end": 156
+                },
                 {
                     "text": "easily",
                     "pos": "ADV_VAGUE",
@@ -300,6 +317,14 @@
                     "suggestion": "Replace 'easily' with a measurable criterion (e.g., '<= 200 ms', 'p95 <= 2s', explicit scope/boundary').",
                     "start": 111,
                     "end": 117
+                },
+                {
+                    "text": "various",
+                    "pos": "QTY_VAGUE",
+                    "reason": "Ambiguous or non-verifiable term without measurable threshold in the same sentence.",
+                    "suggestion": "Replace 'various' with a measurable criterion (e.g., '<= 200 ms', 'p95 <= 2s', explicit scope/boundary').",
+                    "start": 611,
+                    "end": 618
                 }
             ],
             "low_score_explanations": {},
@@ -309,7 +334,7 @@
                     "N": "HEU: rigid_spec=True; has_AC=True (bullets: 3)",
                     "V": "HEU: benefit_clause(so that/in order to)=True; measurable=True",
                     "E": "HEU: has_AC=True (bullets: 3); measurable=True",
-                    "S": "HEU: story_token_len=35",
+                    "S": "HEU: story_token_len=33",
                     "T": "HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
                 },
                 "I": 4,
@@ -333,6 +358,7 @@
     ],
     "email_list": [
         "ca0983896371@gmail.com",
-        "ca098386371@gmail.com"
+        "ca098386371@gmail.com",
+        "tzuyu.cheng@iss.nthu.edu.tw"
     ]
 }
