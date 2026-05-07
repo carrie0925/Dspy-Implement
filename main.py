@@ -31,7 +31,7 @@ def _load_user_stories(data_path: Path):
 
 def main():
     # 設定路徑 (優先權: 環境變數 > 命令列參數 > 預設路徑)
-    default_path = Path("data/g10-scrumalliance-1.json")
+    default_path = Path("data/models_json/O1_mini.json")
     arg_path = Path(sys.argv[1]) if len(sys.argv) > 1 else None
     env_path = Path(os.getenv("USER_STORIES_JSON", "")) if os.getenv("USER_STORIES_JSON") else None
     data_path = env_path or arg_path or default_path

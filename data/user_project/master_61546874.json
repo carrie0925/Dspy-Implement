@@ -1,0 +1,371 @@
+{
+    "project_context": "",
+    "results": [
+        {
+            "id": 0,
+            "status": "done",
+            "rounds": 1,
+            "original_text": "As a site editor, I want to have pretty good control over how the article, so that articles are visually appealing.",
+            "final_text": "User Story:\nAs a site editor, I want comprehensive control over article formatting and layout options so that I can ensure each article is visually appealing and consistent with our brand standards.\n\nAcceptance Criteria:\n- Editors can customize fonts, colors, and spacing, with changes previewed in real-time.\n- The system should include a template library with at least 10 predefined layouts for quick application.\n- All formatting changes should be applied and saved within 5 seconds of submission.\n\nTest Outline:\n- Verify that editors can adjust and preview fonts, colors, and spacing in real-time.\n- Check that the template library includes at least 10 layouts and templates can be applied easily.\n- Measure the time taken to apply and save formatting changes to ensure it is within the 5-second limit.",
+            "correction_reason": "The original user story was vague and did not define specific capabilities or the business benefit clearly. The revised version identifies the editor's need for comprehensive control over article formatting, highlighting the importance of visual appeal and brand consistency. Acceptance criteria are defined with measurable metrics (real-time preview, template availability, and response time), enhancing the story's specificity, testability, and relevance, thus improving the INVEST score.",
+            "history": [
+                {
+                    "text": "As a site editor, I want to have pretty good control over how the article, so that articles are visually appealing.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The goal lacks specificity and independence; 'pretty good control' is vague. | HEU: single_goal=True; has_As/I...=True",
+                            "N": "The requirement is vague and lacks clear guidelines or specifications. | HEU: rigid_spec=False; has_AC=False (bullets: 0)",
+                            "V": "Value is implied as it aims to make articles visually appealing, which could enhance user engagement. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "Effort is vague due to the non-specific nature of 'control' and 'visually appealing'. | HEU: has_AC=False (bullets: 0); measurable=True",
+                            "S": "The story scope is moderate but could vary significantly based on interpretation. | HEU: story_token_len=21",
+                            "T": "No tests are indicated or specified to ensure the feature's success. | HEU: has_AC=False (bullets: 0); has_Test_Outline=False"
+                        },
+                        "I": 3,
+                        "N": 2,
+                        "V": 4,
+                        "E": 2,
+                        "S": 4,
+                        "T": 1,
+                        "overall": 3,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": false,
+                            "V": true,
+                            "E": false,
+                            "S": true,
+                            "T": false,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.0
+                },
+                {
+                    "text": "User Story:\nAs a site editor, I want comprehensive control over article formatting and layout options so that I can ensure each article is visually appealing and consistent with our brand standards.\n\nAcceptance Criteria:\n- Editors can customize fonts, colors, and spacing, with changes previewed in real-time.\n- The system should include a template library with at least 10 predefined layouts for quick application.\n- All formatting changes should be applied and saved within 5 seconds of submission.\n\nTest Outline:\n- Verify that editors can adjust and preview fonts, colors, and spacing in real-time.\n- Check that the template library includes at least 10 layouts and templates can be applied easily.\n- Measure the time taken to apply and save formatting changes to ensure it is within the 5-second limit.",
+                    "reason": "The original user story was vague and did not define specific capabilities or the business benefit clearly. The revised version identifies the editor's need for comprehensive control over article formatting, highlighting the importance of visual appeal and brand consistency. Acceptance criteria are defined with measurable metrics (real-time preview, template availability, and response time), enhancing the story's specificity, testability, and relevance, thus improving the INVEST score.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The requirement is fully independent with a clear goal focused on article formatting. | HEU: single_goal=False; has_As/I...=True",
+                            "N": "High-level need with detailed acceptance criteria allowing for feedback and iteration. | HEU: rigid_spec=False; has_AC=True (bullets: 3)",
+                            "V": "Explicit value is provided, ensuring visual appeal and brand consistency. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "Effort is measurable and bounded by specific constraints, including a time limit. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "Scope is clearly defined and small enough for a Sprint. | HEU: story_token_len=30",
+                            "T": "Completed and validated acceptance tests are outlined, ensuring thorough verification. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 4,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 5,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8275862068965517
+                },
+                {
+                    "text": "User Story:\nAs a site editor, I want comprehensive control over article formatting and layout so that I can ensure articles are visually appealing and maintain a consistent style across the website.\n\nAcceptance Criteria:\n- The editor should be able to adjust font styles, sizes, and colors with a live preview feature.\n- Images and multimedia elements can be resized and aligned with precision to enhance article aesthetics.\n- The system should support style templates that can be applied consistently across multiple articles.\n\nTest Outline:\n- Verify that changes to font styles, sizes, and colors are immediately visible in the live preview.\n- Test the resizing and alignment tools to ensure multimedia elements can be precisely adjusted.\n- Check the application of style templates to ensure they provide consistent formatting across different articles.",
+                    "reason": "The original user story was vague and lacked clarity on the specific capabilities and benefits. The revised version provides a clearer definition of the role and desired functionality, emphasizing comprehensive control over article formatting. It establishes measurable acceptance criteria focusing on specific features such as font control, multimedia adjustments, and style templates, which are essential for ensuring visual appeal and consistency. These changes enhance the story's specificity, verifiability, and alignment with business goals.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The story is fully independent with a single, well-defined goal. | HEU: single_goal=False; has_As/I...=True",
+                            "N": "The requirements are negotiable at a high level, with clear acceptance criteria. | HEU: rigid_spec=False; has_AC=True (bullets: 3)",
+                            "V": "The value is explicit and directly linked to user and business needs for consistent styling. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "Effort is measurable with specific tasks outlined in the acceptance criteria. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The scope is detailed and manageable, but slightly complex for a single sprint. | HEU: story_token_len=30",
+                            "T": "Tests are completed and validated with specific, measurable outcomes. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 4,
+                        "V": 5,
+                        "E": 5,
+                        "S": 4,
+                        "T": 5,
+                        "overall": 5,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.7875
+                },
+                {
+                    "text": "User Story:\nAs a site editor, I want comprehensive control over article formatting and layout options so that I can ensure each article is visually appealing and consistent with the site's design standards.\n\nAcceptance Criteria:\n- Editors can choose from at least 10 predefined layout templates for articles.\n- Customization options should allow for font, color, and spacing adjustments, with changes previewed in real-time.\n- The formatting tools should be intuitive to use, requiring no more than 30 minutes of training to master.\n\nTest Outline:\n- Verify the availability and functionality of at least 10 layout templates.\n- Test the real-time preview feature for font, color, and spacing adjustments.\n- Conduct user testing to ensure the formatting tools are intuitive, confirming they can be learned in ≤ 30 minutes.",
+                    "reason": "The original user story was vague, lacking specificity in the capabilities and benefits. The improved version specifies the role of the site editor and details the specific capability of controlling article formatting and layout. It clarifies the business-relevant benefit of maintaining visual appeal and consistency. Measurable acceptance criteria were introduced to ensure testability, including the number of templates, customization options, and ease of use, thereby enhancing the story's clarity and focus.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The story is fully independent with a clear and single goal of article formatting control. | HEU: single_goal=False; has_As/I...=True",
+                            "N": "There is a high-level need with explicit acceptance criteria allowing for feedback and adjustments. | HEU: rigid_spec=False; has_AC=True (bullets: 3)",
+                            "V": "The value is explicit, focusing on visual appeal and consistency with design standards. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "Effort is measurable with specific customization options and training time constraints. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "Scope is small enough for a Sprint, focusing on predefined templates and customization. | HEU: story_token_len=32",
+                            "T": "Tests are completed and validated with a clear outline, including user testing and functionality checks. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 4,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 5,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8
+                }
+            ],
+            "original": "As a site editor, I want to have pretty good control over how the article, so that articles are visually appealing.",
+            "rewritten": "User Story:\nAs a site editor, I want comprehensive control over article formatting and layout options so that I can ensure each article is visually appealing and consistent with our brand standards.\n\nAcceptance Criteria:\n- Editors can customize fonts, colors, and spacing, with changes previewed in real-time.\n- The system should include a template library with at least 10 predefined layouts for quick application.\n- All formatting changes should be applied and saved within 5 seconds of submission.\n\nTest Outline:\n- Verify that editors can adjust and preview fonts, colors, and spacing in real-time.\n- Check that the template library includes at least 10 layouts and templates can be applied easily.\n- Measure the time taken to apply and save formatting changes to ensure it is within the 5-second limit.",
+            "scoring_criteria_text": "I-I:  | N-N:  | V-V:  | E-E:  | S-S:  | T-T: ",
+            "fuzzy_terms": [
+                {
+                    "text": "in real-time",
+                    "pos": "TIME_VAGUE",
+                    "reason": "Ambiguous or non-verifiable term without measurable threshold in the same sentence.",
+                    "suggestion": "Replace 'in real-time' with a measurable criterion (e.g., '<= 200 ms', 'p95 <= 2s', explicit scope/boundary').",
+                    "start": 296,
+                    "end": 308
+                },
+                {
+                    "text": "in real-time",
+                    "pos": "TIME_VAGUE",
+                    "reason": "Ambiguous or non-verifiable term without measurable threshold in the same sentence.",
+                    "suggestion": "Replace 'in real-time' with a measurable criterion (e.g., '<= 200 ms', 'p95 <= 2s', explicit scope/boundary').",
+                    "start": 588,
+                    "end": 600
+                }
+            ],
+            "low_score_explanations": {},
+            "score_new": {
+                "reasons": {
+                    "I": "The requirement is fully independent with a clear goal focused on article formatting. | HEU: single_goal=False; has_As/I...=True",
+                    "N": "High-level need with detailed acceptance criteria allowing for feedback and iteration. | HEU: rigid_spec=False; has_AC=True (bullets: 3)",
+                    "V": "Explicit value is provided, ensuring visual appeal and brand consistency. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                    "E": "Effort is measurable and bounded by specific constraints, including a time limit. | HEU: has_AC=True (bullets: 3); measurable=True",
+                    "S": "Scope is clearly defined and small enough for a Sprint. | HEU: story_token_len=30",
+                    "T": "Completed and validated acceptance tests are outlined, ensuring thorough verification. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                },
+                "I": 4,
+                "N": 4,
+                "V": 5,
+                "E": 5,
+                "S": 5,
+                "T": 5,
+                "overall": 5,
+                "meets_thresholds": {
+                    "I": true,
+                    "N": true,
+                    "V": true,
+                    "E": true,
+                    "S": true,
+                    "T": true,
+                    "overall": true
+                }
+            }
+        },
+        {
+            "id": 1,
+            "status": "done",
+            "rounds": 1,
+            "original_text": "I want a search bar on the top of the page.",
+            "final_text": "User Story:\nAs a website visitor, I want a search bar prominently placed at the top of the page so that I can quickly and easily locate information or products, enhancing my browsing experience.\n\nAcceptance Criteria:\n- The search bar should be visible and accessible on all pages within 1 second of page load.\n- It should support auto-suggestions, displaying relevant suggestions within 300 milliseconds of typing.\n- The design should comply with accessibility standards, including keyboard navigation and screen reader compatibility.\n\nTest Outline:\n- Verify the search bar's visibility and accessibility on every page, ensuring it appears within 1 second.\n- Test the auto-suggestion feature to confirm suggestions appear within 300 milliseconds for various queries.\n- Check compliance with accessibility standards through keyboard navigation tests and screen reader evaluations.",
+            "correction_reason": "The original request was incomplete and lacked context, specifically the role of the user and the benefit of having a search bar. The rewritten version clearly outlines the user role as a website visitor, the capability of having a search bar at the top of the page, and the benefit of enhancing the browsing experience. It includes measurable acceptance criteria ensuring visibility, performance, and accessibility, thus improving the story's specificity, testability, and alignment with business goals.",
+            "history": [
+                {
+                    "text": "I want a search bar on the top of the page.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The requirement is not fully independent as it lacks a user role or specific goal. | HEU: single_goal=True; has_As/I...=False",
+                            "N": "The need is not clearly articulated beyond the presence of a search bar. | HEU: rigid_spec=False; has_AC=False (bullets: 0)",
+                            "V": "User value is implied but not explicitly stated, lacking context on benefits. | HEU: benefit_clause(so that/in order to)=False; measurable=True",
+                            "E": "Effort is vague with no details on functionality or integration. | HEU: has_AC=False (bullets: 0); measurable=True",
+                            "S": "Scope is unclear, potentially small but without details on features. | HEU: story_token_len=11",
+                            "T": "No tests are mentioned or implied. | HEU: has_AC=False (bullets: 0); has_Test_Outline=False"
+                        },
+                        "I": 2,
+                        "N": 2,
+                        "V": 2,
+                        "E": 2,
+                        "S": 3,
+                        "T": 1,
+                        "overall": 2,
+                        "meets_thresholds": {
+                            "I": false,
+                            "N": false,
+                            "V": false,
+                            "E": false,
+                            "S": true,
+                            "T": false,
+                            "overall": false
+                        }
+                    },
+                    "diversity": 0.0
+                },
+                {
+                    "text": "User Story:\nAs a website visitor, I want a prominently placed search bar at the top of the page so that I can quickly and easily find specific content or information on the site without having to navigate through multiple pages.\n\nAcceptance Criteria:\n- The search bar must be visible and easily accessible on all pages of the website.\n- The search bar should begin displaying relevant search suggestions within 1 second of typing.\n- The search functionality should return the first page of results within 2 seconds for 95% of queries.\n\nTest Outline:\n- Verify the presence and accessibility of the search bar on different pages of the website.\n- Measure the time taken for search suggestions to appear and ensure it is ≤ 1 second.\n- Test search result retrieval time to confirm it is within 2 seconds for the majority of queries.",
+                    "reason": "The initial request lacked context, detail, and business value. The revised story specifies the role (website visitor), desired functionality (search bar at the top of the page), and benefits (quick access to site content). Acceptance criteria are now clear and measurable, focusing on visibility, suggestion speed, and result retrieval time. These enhancements ensure the story is specific, testable, and relevant, aligning with the INVEST principles.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The user story is fully independent with a single, clear goal of having a search bar. | HEU: single_goal=False; has_As/I...=True",
+                            "N": "There is a high-level need with explicit acceptance criteria enabling feedback. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "The value is explicit, providing a clear benefit to user navigation and content discovery. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "Effort is measurable with specific time constraints validated within the acceptance criteria. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The task is small and specific enough to fit within a Sprint. | HEU: story_token_len=39",
+                            "T": "Completed and validated acceptance tests are specified with clear performance metrics. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 4,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 5,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8734177215189873
+                },
+                {
+                    "text": "User Story:\nAs a website visitor, I want a search bar prominently placed at the top of the page so that I can quickly and easily locate information or products, enhancing my browsing experience.\n\nAcceptance Criteria:\n- The search bar should be visible and accessible on all pages within 1 second of page load.\n- It should support auto-suggestions, displaying relevant suggestions within 300 milliseconds of typing.\n- The design should comply with accessibility standards, including keyboard navigation and screen reader compatibility.\n\nTest Outline:\n- Verify the search bar's visibility and accessibility on every page, ensuring it appears within 1 second.\n- Test the auto-suggestion feature to confirm suggestions appear within 300 milliseconds for various queries.\n- Check compliance with accessibility standards through keyboard navigation tests and screen reader evaluations.",
+                    "reason": "The original request was incomplete and lacked context, specifically the role of the user and the benefit of having a search bar. The rewritten version clearly outlines the user role as a website visitor, the capability of having a search bar at the top of the page, and the benefit of enhancing the browsing experience. It includes measurable acceptance criteria ensuring visibility, performance, and accessibility, thus improving the story's specificity, testability, and alignment with business goals.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The story is fully independent with a single clear goal of improving user experience via a search bar. | HEU: single_goal=False; has_As/I...=True",
+                            "N": "The requirement is high-level, with clear acceptance criteria allowing for feedback and adaptation. | HEU: rigid_spec=False; has_AC=True (bullets: 3)",
+                            "V": "The value is explicit and directly related to enhancing user experience and site usability. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "Effort is clearly measurable with specified performance metrics and compliance standards. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The scope is well-defined and small enough to be completed within a Sprint. | HEU: story_token_len=32",
+                            "T": "Testing is comprehensive, with detailed acceptance criteria and test outlines ensuring complete validation. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 4,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 5,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8823529411764706
+                },
+                {
+                    "text": "User Story:\nAs an end-user, I want a prominently placed search bar at the top of the page so that I can quickly and easily access the search functionality to find relevant content without navigating away from my current view.\n\nAcceptance Criteria:\n- The search bar should be located at the top of every page and be visible without scrolling.\n- The search bar must respond to input within 1 second and display suggestions as the user types.\n- Search results should appear within 2 seconds after hitting 'Enter'.\n\nTest Outline:\n- Verify that the search bar is consistently visible at the top of each page without the need for scrolling.\n- Test the responsiveness of the search bar to ensure suggestions appear within 1 second of input.\n- Measure the time taken for search results to load, ensuring it does not exceed 2 seconds.",
+                    "reason": "The original request lacked specificity and context. The rewritten story provides a specific user role and clarifies the capability and benefit of having a search bar at the top of the page. Measurable acceptance criteria are established, focusing on the search bar's visibility, responsiveness, and result retrieval time. These improvements ensure that the story is clear, actionable, and testable, enhancing the INVEST score by addressing independence, negotiability, and specificity.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The story is fully independent with a single, clear goal. | HEU: single_goal=True; has_As/I...=False",
+                            "N": "The requirement is high-level with the ability to provide feedback, supported by detailed acceptance criteria. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "The value is explicit, providing direct user benefit by enhancing accessibility and ease of use. | HEU: benefit_clause(so that/in order to)=False; measurable=True",
+                            "E": "Effort is measurable with specific performance constraints detailed. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The task is small and well-defined, suitable for a single Sprint. | HEU: story_token_len=2",
+                            "T": "Testing is comprehensive with clear, validated acceptance tests. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 4,
+                        "V": 4,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 4,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8875
+                }
+            ],
+            "original": "I want a search bar on the top of the page.",
+            "rewritten": "User Story:\nAs a website visitor, I want a search bar prominently placed at the top of the page so that I can quickly and easily locate information or products, enhancing my browsing experience.\n\nAcceptance Criteria:\n- The search bar should be visible and accessible on all pages within 1 second of page load.\n- It should support auto-suggestions, displaying relevant suggestions within 300 milliseconds of typing.\n- The design should comply with accessibility standards, including keyboard navigation and screen reader compatibility.\n\nTest Outline:\n- Verify the search bar's visibility and accessibility on every page, ensuring it appears within 1 second.\n- Test the auto-suggestion feature to confirm suggestions appear within 300 milliseconds for various queries.\n- Check compliance with accessibility standards through keyboard navigation tests and screen reader evaluations.",
+            "scoring_criteria_text": "I-I:  | N-N:  | V-V:  | E-E:  | S-S:  | T-T: ",
+            "fuzzy_terms": [
+                {
+                    "text": "quickly",
+                    "pos": "ADV_VAGUE",
+                    "reason": "Ambiguous or non-verifiable term without measurable threshold in the same sentence.",
+                    "suggestion": "Replace 'quickly' with a measurable criterion (e.g., '<= 200 ms', 'p95 <= 2s', explicit scope/boundary').",
+                    "start": 110,
+                    "end": 117
+                },
+                {
+                    "text": "easily",
+                    "pos": "ADV_VAGUE",
+                    "reason": "Ambiguous or non-verifiable term without measurable threshold in the same sentence.",
+                    "suggestion": "Replace 'easily' with a measurable criterion (e.g., '<= 200 ms', 'p95 <= 2s', explicit scope/boundary').",
+                    "start": 122,
+                    "end": 128
+                }
+            ],
+            "low_score_explanations": {},
+            "score_new": {
+                "reasons": {
+                    "I": "The story is fully independent with a single clear goal of improving user experience via a search bar. | HEU: single_goal=False; has_As/I...=True",
+                    "N": "The requirement is high-level, with clear acceptance criteria allowing for feedback and adaptation. | HEU: rigid_spec=False; has_AC=True (bullets: 3)",
+                    "V": "The value is explicit and directly related to enhancing user experience and site usability. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                    "E": "Effort is clearly measurable with specified performance metrics and compliance standards. | HEU: has_AC=True (bullets: 3); measurable=True",
+                    "S": "The scope is well-defined and small enough to be completed within a Sprint. | HEU: story_token_len=32",
+                    "T": "Testing is comprehensive, with detailed acceptance criteria and test outlines ensuring complete validation. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                },
+                "I": 4,
+                "N": 4,
+                "V": 5,
+                "E": 5,
+                "S": 5,
+                "T": 5,
+                "overall": 5,
+                "meets_thresholds": {
+                    "I": true,
+                    "N": true,
+                    "V": true,
+                    "E": true,
+                    "S": true,
+                    "T": true,
+                    "overall": true
+                }
+            }
+        }
+    ],
+    "email_list": [
+        "ca0983896371@gmail.com",
+        "tzuyu.cheng@iss.nthu.edu.tw"
+    ]
+}

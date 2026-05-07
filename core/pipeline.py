@@ -65,7 +65,7 @@ def configure_default_lm():
         print("[INFO] Configuring default LM: openai/gpt-4o-mini (temperature=0.7)")
         dspy.settings.configure(
             lm=dspy.LM(
-                "openai/gpt-4o-mini",
+                "openai/gpt-4o",
                 api_key=api_key,
                 temperature=0.7,
                 max_tokens=1000, # 增加 token 數以防截斷 JSON
@@ -361,6 +361,7 @@ class InvestRewriteSig(dspy.Signature):
         "- <measurable criterion 1>\n- <measurable criterion 2>\n- <measurable criterion 3>\n"
         "Test Outline:\n- <how to verify 1>\n- <how to verify 2>"
     ))
+    correction_reason: str = dspy.OutputField(desc="Briefly explain the specific reasons for the modifications made to improve the INVEST score.")
 
 # ===== Modules =====
 import dspy
@@ -624,6 +625,8 @@ class UserStoryRewriter(dspy.Module):
     def __init__(self):
         super().__init__()
         self.rewrite = dspy.Predict(InvestRewriteSig)
+        self.last_reason = "" # [新增] 用來暫存最新的修正原因
+
     def __call__(self, text: str) -> str:
         CALLS["rewriter"] += 1
         MIN_DIFF = 0.30
@@ -632,6 +635,7 @@ class UserStoryRewriter(dspy.Module):
         for _ in range(MAX_TRIES):
             out = self.rewrite(input_text=best)
             rewritten = (getattr(out, "improved_text", None) or best).strip()
+            self.last_reason = getattr(out, "correction_reason", "No reason provided.").strip() # [新增] 紀錄 LLM 給的原因
             rewritten, _meta = _lock_role(text, rewritten)
             if token_diff_ratio(text, rewritten) >= MIN_DIFF:
                 return rewritten
@@ -906,18 +910,19 @@ def run_batch_optimization(
         hist.append({"text": original_text, "metrics": m0, "diversity": 0.0})
 
         best_text, best_m = original_text, m0
+        best_reason = "Original text, no correction." # [新增] 初始化原因
         best_combo = invest_overall(m0) + cfg.diversity_lambda * 0.0
 
-        rounds_used = 0  # ✅ 實際「有提升」的輪數
+        rounds_used = 0  
 
         # === 多輪改寫迴圈 ===
         for _round in range(cfg.max_rounds):
             candidates = []
 
             for _try in range(cfg.best_of_k):
-                # 第一次用 original，之後用當前 best 當 seed 改寫
                 seed_text = original_text if _try == 0 else best_text
                 cand_text = rewriter(seed_text)
+                cand_reason = getattr(rewriter, "last_reason", "") # [新增] 抓取剛剛生成的原因
 
                 if _try == 0 and _round == 0:
                      print(f"\n[DEBUG CHECK] Original: {seed_text[:50]}...")
@@ -930,24 +935,25 @@ def run_batch_optimization(
 
                 hist.append({
                     "text": cand_text,
+                    "reason": cand_reason, # [新增] 存入歷史紀錄
                     "metrics": cand_m,
                     "diversity": div,
                 })
-                candidates.append((cand_text, cand_m, div))
+                candidates.append((cand_text, cand_m, div, cand_reason)) # [修改] 加入 cand_reason 進入 tuple
 
             if not candidates:
                 break
 
             def combo_score(item) -> float:
-                _, m, div = item
+                _, m, div, _ = item # [修改] 配合新增的 tuple 長度 unpack
                 return invest_overall(m) + cfg.diversity_lambda * div
 
             elig = [c for c in candidates if c[2] >= cfg.min_diversity] or candidates
-            winner_text, winner_m, winner_div = max(elig, key=combo_score)
-            winner_combo = combo_score((winner_text, winner_m, winner_div))
+            winner_text, winner_m, winner_div, winner_reason = max(elig, key=combo_score) # [修改] 接收 winner_reason
+            winner_combo = combo_score((winner_text, winner_m, winner_div, winner_reason))
 
             if winner_combo > best_combo:
-                best_text, best_m, best_combo = winner_text, winner_m, winner_combo
+                best_text, best_m, best_combo, best_reason = winner_text, winner_m, winner_combo, winner_reason # [修改] 更新 best_reason
                 rounds_used += 1  
 
             if invest_overall(best_m) >= stop_at and jaccard_diversity(original_text, best_text) >= cfg.min_diversity:
@@ -963,8 +969,8 @@ def run_batch_optimization(
             "rounds": rounds_used,                 
             "original_text": original_text,
             "final_text": best_text,
+            "correction_reason": best_reason, # [新增] 將最佳原因寫入最終產出
             "history": hist,
-
             "original": original_text,
             "rewritten": best_text,
             "scoring_criteria_text": rubric_as_text(),

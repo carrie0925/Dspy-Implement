@@ -132,7 +132,7 @@ if 'init_check' not in st.session_state:
     query_params = st.query_params
     if "id" in query_params:
         exp_id = query_params["id"]
-        master_path = f"data/user_project/master_{exp_id}.json"
+        master_path = f"/user_project/master_{exp_id}.json"
         
         if os.path.exists(master_path):
             with open(master_path, "r", encoding="utf-8") as f:
@@ -339,19 +339,24 @@ elif st.session_state.step == "SURVEY_MODE":
     idx = st.session_state.current_idx
     row = df.iloc[idx]
     
+    # 讀取版本內容與新增的修正原因
     ver_a = row.get('description') or row.get('original') or "內容讀取失敗"
-    ver_b = row.get('optimized_description') or row.get('rewritten') or row.get('optimized') or "優化內容讀取失敗"
+    ver_b = row.get('final_text') or row.get('optimized_description') or row.get('rewritten') or "優化內容讀取失敗"
+    reason = row.get('correction_reason') or "系統未提供明確的修正原因" # [新增] 讀取 LLM 產出的修正原因
 
     st.progress((idx + 1) / len(df))
     st.subheader(f"User Story 模糊性品質評估問卷 ({idx + 1} / {len(df)})")
     
     col_left, col_right = st.columns([3, 1])
 
-    # 右側：永遠固定顯示當前 User Story 的雙版本對照
+    # 右側：永遠固定顯示當前 User Story 的雙版本對照與優化原因
     with col_right:
         st.markdown("### User Story")
         st.error(f"**Version A (Original)**\n\n{ver_a}")
         st.success(f"**Version B (Optimized)**\n\n{ver_b}")
+        
+        # [新增] 顯示優化原因提示框
+        st.info(f"**💡 Optimization Reason (優化原因)**\n\n{reason}")
 
     # 左側：問卷核心區
     with col_left:
@@ -453,10 +458,12 @@ elif st.session_state.step == "SURVEY_MODE":
         with c_next:
             label = "Finish and Submit" if idx == len(df)-1 else "Next User Story ➡️"
             if st.button(label):
+                # [核心修改] 確保將 correction_reason 也存入該受試者的回應紀錄中
                 st.session_state.user_responses[idx] = {
                     "story_id": row.get('id', idx),
                     "version_A_text": ver_a,
                     "version_B_text": ver_b,
+                    "optimization_explanation": reason, # <--- 新增這一行，確保理由被保存
                     "invest_A": invest_a_scores,
                     "invest_B": invest_b_scores,
                     "ambiguity_A": amb_a_scores,

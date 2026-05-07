@@ -119,6 +119,7 @@ def export_results_csv(results: List[Dict[str, Any]], out_root: str = "report") 
         r = res_by_id.get(rid, {})
         orig = r.get("original_text", "")
         final = r.get("final_text", "")
+        reason = r.get("correction_reason", "—") # [新增] 讀取剛剛寫入的修正原因
 
         history = r.get("history") or []
         m_before = (history[0].get("metrics", {}) if history else {})
@@ -132,6 +133,7 @@ def export_results_csv(results: List[Dict[str, Any]], out_root: str = "report") 
             "ID": rid,
             "Original User Story": orig,
             "Rewritten User Story": final,
+            "Correction Reason": reason, # [新增] 將原因加入 DataFrame 的對應列
             "Fuzzy Terms (with source)": "\n".join(fuzzy) if fuzzy else "—",
             "Low-score Explanation (<2)": low_exp,
         }
@@ -145,7 +147,7 @@ def export_results_csv(results: List[Dict[str, Any]], out_root: str = "report") 
     metric_cols += ["overall_before", "overall_after", "delta_overall"]
 
     cols = (
-        ["ID", "Original User Story", "Rewritten User Story", "Fuzzy Terms (with source)"]
+        ["ID", "Original User Story", "Rewritten User Story", "Correction Reason", "Fuzzy Terms (with source)"] # [修改] 標題加上 Correction Reason
         + metric_cols
         + ["Low-score Explanation (<2)"]
     )
