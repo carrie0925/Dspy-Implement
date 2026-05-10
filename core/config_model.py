@@ -14,7 +14,7 @@ def configure_lm():
     load_dotenv(env_path, override=True)
 
     key   = (os.getenv("OPENAI_API_KEY") or "").strip()
-    model = (os.getenv("OPENAI_MODEL") or "gpt-4o-mini").strip()
+    model = (os.getenv("OPENAI_MODEL") or "gpt-4o").strip()
     org   = (os.getenv("OPENAI_ORG_ID") or os.getenv("OPENAI_ORGANIZATION") or "").strip()
     proj  = (os.getenv("OPENAI_PROJECT") or "").strip()
     api_base = (os.getenv("OPENAI_API_BASE") or "https://api.openai.com/v1").strip()

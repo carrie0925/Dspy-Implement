@@ -50,8 +50,8 @@ INVEST_RUBRIC_15, INVEST_THRESHOLDS, INVEST_WEIGHTS = _load_invest_rules()
 # 在 pipeline.py 前段
 
 def configure_default_lm():
-    os.environ["DSP_CACHEBOOL"] = "False" 
-    
+    os.environ["DSP_CACHEBOOL"] = "True"
+
     try:
         lm = getattr(dspy.settings, "lm", None)
     except Exception:
@@ -377,8 +377,8 @@ from typing import Tuple, Dict, Any
 
 class InvestScorer(dspy.Module):
     # --- MODIFIED: 提高 LLM 權重, 降低啟發式權重 (75%/25%) ---
-    LLM_WEIGHT = 0.75
-    HEU_WEIGHT = 0.25
+    LLM_WEIGHT = 0.5
+    HEU_WEIGHT = 0.5
 
     def __init__(self):
         super().__init__()

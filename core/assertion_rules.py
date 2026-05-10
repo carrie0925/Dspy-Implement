@@ -37,7 +37,7 @@ try:
 except Exception:  # pragma: no cover
     def get_invest_rubric_text(dim: str, score: int, scale: str = "1-5") -> str:
         return ""  # fallback: no rubric text available
-    _DIM_KEYS = ["I", "N", "V", "E", "S"]
+    _DIM_KEYS = ["I", "N", "V", "E", "S", "T"]
 
 # --- Constants / Defaults -----------------------------------------------------
 SCALE: str = "1-5"
