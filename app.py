@@ -243,6 +243,11 @@ if st.session_state.step == "PM_SETUP":
                     use_dspy=True
                 )
                 prog_bar.progress(80)
+
+                for i, res in enumerate(raw_results):
+                    # 確保回傳結果包含原始文字，否則強制從原本的 stories 抓過來
+                    if 'description' not in res and i < len(stories):
+                        res['description'] = stories[i]['description']
                 
                 status_msg.text("📧 正在寄送邀請問卷信件至各成員信箱...")
                 send_survey_links(valid_emails, st.session_state.exp_id)
@@ -312,7 +317,7 @@ elif st.session_state.step == "SURVEY_MODE":
     
     opt_text = row.get('final_text') or row.get('optimized_description') or row.get('rewritten') or "優化內容讀取失敗"
     reason = row.get('correction_reason') or "系統未提供明確的修正原因"
-    
+
     # 注入 CSS 動畫、右側置頂與字體縮小樣式
     st.markdown(f"""
     <style>
