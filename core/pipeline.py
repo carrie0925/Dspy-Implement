@@ -62,7 +62,7 @@ def configure_default_lm():
         if not api_key:
             raise ValueError("[CRITICAL] OPENAI_API_KEY is missing! The system cannot run.")
             
-        print("[INFO] Configuring default LM: openai/gpt-4o-mini (temperature=0.7)")
+        print("[INFO] Configuring default LM: openai/gpt-4o (temperature=0.7)")
         dspy.settings.configure(
             lm=dspy.LM(
                 "openai/gpt-4o",

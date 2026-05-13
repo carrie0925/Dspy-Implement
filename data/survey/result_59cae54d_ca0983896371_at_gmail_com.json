@@ -1,0 +1,177 @@
+{
+    "exp_id": "59cae54d",
+    "project_context": "",
+    "user_info": {
+        "email": "ca0983896371@gmail.com",
+        "age": "20-24",
+        "agile_exp": "6個月-1年",
+        "doc_exp": "6個月-1年",
+        "role": "專案經理/專案管理/產品管理",
+        "write_skill": "基礎",
+        "lang_skill": "基礎"
+    },
+    "survey_results": {
+        "0": {
+            "story_id": 0,
+            "version_A_is": "Optimized",
+            "version_B_is": "Original",
+            "version_A_text": "User Story:\nAs a site editor, I want comprehensive control over article formatting and layout options to ensure that each article is visually appealing and aligns with our brand standards, thereby increasing reader engagement by 25%.\n\nAcceptance Criteria:\n- Provide at least 15 formatting options, including font styles, sizes, and color schemes.\n- Enable drag-and-drop functionality for arranging images and text blocks within the article.\n- Implement a preview feature that reflects the final appearance of the article before publication.\n\nTest Outline:\n- Verify that all 15 formatting options are accessible and functional.\n- Test the drag-and-drop feature to ensure it allows seamless rearrangement of content.\n- Check that the preview accurately represents the published article's appearance.",
+            "version_B_text": "As a site editor, I want to have pretty good control over how the article, so that articles are visually appealing.",
+            "optimization_explanation": "The original story was vague and lacked specific criteria for control and visual appeal. The improved version specifies the editor's role more clearly, enhances the control aspects with detailed formatting and layout options, and quantifies the business benefit in terms of reader engagement. Acceptance criteria and test outlines are added to ensure the story is specific, measurable, and testable, aligning with the INVEST principles.",
+            "invest_A": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "invest_B": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "ambiguity_A": {
+                "has_ambiguity": "No 否",
+                "suggestion": ""
+            },
+            "ambiguity_B": {
+                "has_ambiguity": "No 否",
+                "suggestion": ""
+            }
+        },
+        "1": {
+            "story_id": 1,
+            "version_A_is": "Optimized",
+            "version_B_is": "Original",
+            "version_A_text": "User Story:\nAs a frequent website visitor, I want a search bar located at the top of the page so that I can quickly find the information I need, reducing navigation time by 40%.\n\nAcceptance Criteria:\n- The search bar must be prominently placed at the top of every page.\n- Search initiation should occur via pressing 'Enter' or clicking a search icon, with results displayed within 2 seconds.\n- The search bar should support input of at least 100 characters to accommodate complex queries.\n\nTest Outline:\n- Verify the search bar's consistent presence across all pages.\n- Measure the time taken from search initiation to results display to ensure it is ≤2 seconds.\n- Test the input capacity to confirm it handles at least 100 characters without error.",
+            "version_B_text": "I want a search bar on the top of the page.",
+            "optimization_explanation": "The original input lacked specific details about the capability's purpose and business benefit. The improved version specifies the role, capability, and benefit, making the story more actionable. It includes measurable acceptance criteria and a test outline, enhancing the story's specificity, measurability, and testability according to INVEST principles.",
+            "invest_A": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "invest_B": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "ambiguity_A": {
+                "has_ambiguity": "No 否",
+                "suggestion": ""
+            },
+            "ambiguity_B": {
+                "has_ambiguity": "No 否",
+                "suggestion": ""
+            }
+        },
+        "2": {
+            "story_id": 2,
+            "version_A_is": "Optimized",
+            "version_B_is": "Original",
+            "version_A_text": "User Story:\nAs a cybersecurity analyst, I want AI-powered drones to autonomously detect and mitigate cyber threats in real-time so that our defense systems maintain 99.9% uptime and are safeguarded against unauthorized access.\n\nAcceptance Criteria:\n- Drones must identify cyber threats with a detection accuracy of ≥98%.\n- Automated threat response must occur within 2 seconds of detection.\n- The system should handle at least 500 simultaneous threat assessments without performance degradation.\n\nTest Outline:\n- Validate detection accuracy by comparing AI predictions with known threat data to ensure ≥98% accuracy.\n- Measure the response time from threat detection to mitigation to confirm it is within the 2-second threshold.\n- Simulate 500 concurrent threat scenarios to test system performance and reliability.",
+            "version_B_text": "As a cybersecurity analyst, I want AI-powered drones to detect and respond to cyber threats autonomously, so that our defense systems remain secure against digital attacks.",
+            "optimization_explanation": "The original story lacked precise, measurable criteria and specific outcomes. The improved version specifies real-time detection and response, includes measurable uptime and accuracy targets, and outlines capacity requirements for handling concurrent threats. This makes the story more specific, measurable, and testable, aligning with INVEST principles.",
+            "invest_A": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "invest_B": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "ambiguity_A": {
+                "has_ambiguity": "No 否",
+                "suggestion": ""
+            },
+            "ambiguity_B": {
+                "has_ambiguity": "No 否",
+                "suggestion": ""
+            }
+        },
+        "3": {
+            "story_id": 3,
+            "version_A_is": "Optimized",
+            "version_B_is": "Original",
+            "version_A_text": "User Story:\nAs a field commander, I want AI-enabled drones to autonomously conduct search and rescue missions with real-time location tracking and communication, so that injured personnel can be identified and evacuated within 30 minutes, reducing response time by 50%.\n\nAcceptance Criteria:\n- Drones must locate and identify injured personnel with 95% accuracy through AI image recognition.\n- Each search and rescue mission must be completed within 30 minutes from deployment.\n- Drones should maintain a communication link with the command center 100% of the time during operations.\n\nTest Outline:\n- Validate the accuracy of AI image recognition by comparing identified targets against ground truth data.\n- Measure the time taken from deployment to completion of missions to ensure they are within the 30-minute requirement.\n- Test communication systems under various conditions to guarantee continuous connectivity with the command center.",
+            "version_B_text": "As a field commander, I want AI-enabled drones to perform search and rescue operations, so that injured personnel can be located and evacuated swiftly.",
+            "optimization_explanation": "The original user story was improved by specifying the autonomous capability and real-time features of the drones, along with the precise benefit of reducing response time by 50%. Measurable acceptance criteria were introduced, including accuracy, time constraints, and communication reliability, thereby enhancing specificity, measurability, and testability in alignment with INVEST principles.",
+            "invest_A": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "invest_B": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "ambiguity_A": {
+                "has_ambiguity": "No 否",
+                "suggestion": ""
+            },
+            "ambiguity_B": {
+                "has_ambiguity": "No 否",
+                "suggestion": ""
+            }
+        },
+        "4": {
+            "story_id": 4,
+            "version_A_is": "Optimized",
+            "version_B_is": "Original",
+            "version_A_text": "User Story:\nAs an interoperability coordinator, I want drones from various allied forces to integrate seamlessly and operate cohesively so that joint missions can achieve a 30% increase in operational efficiency and reduce mission completion time by 25%.\n\nAcceptance Criteria:\n- The interoperability system must facilitate data exchange between drones with a minimum 95% success rate.\n- Joint missions should exhibit a 30% faster task execution compared to those without integrated drone collaboration.\n- Feedback from mission participants should indicate a satisfaction level of 90% or above regarding the drones' cooperative functions.\n\nTest Outline:\n- Perform interoperability assessments to verify the data exchange success rate among diverse drones.\n- Evaluate mission performance data before and after implementing interoperability to validate a 30% enhancement in speed and a 25% reduction in completion time.\n- Conduct participant surveys post-mission to evaluate satisfaction levels concerning the interoperability of drone operations.",
+            "version_B_text": "User Story:\nAs an interoperability coordinator, I want drones from various allied forces to seamlessly communicate and operate together so that joint missions can achieve a 30% increase in operational efficiency and a 25% reduction in mission completion time.\n\nAcceptance Criteria:\n- The communication protocol must enable data exchange between drones with a success rate of at least 95%.\n- Joint missions should demonstrate a 30% improvement in task execution speed compared to previous missions without interoperability.\n- User feedback from mission participants should reflect a satisfaction rate of 90% or higher regarding the effectiveness of drone collaboration.\n\nTest Outline:\n- Conduct interoperability tests to measure the success rate of data exchange between different drones.\n- Analyze mission performance metrics before and after implementing the communication protocols to quantify improvements in efficiency and completion time.\n- Gather feedback from mission participants through surveys to assess their satisfaction with the collaborative capabilities of the drones.",
+            "optimization_explanation": "The original user story was already well-structured with explicit business benefits and measurable acceptance criteria, aligned with the INVEST principles. Only minor rephrasing was necessary to ensure clarity and consistency, such as emphasizing seamless integration and cohesive operation. The acceptance criteria and test outlines were already specific and measurable, so minimal changes were needed to enhance clarity.",
+            "invest_A": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "invest_B": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "ambiguity_A": {
+                "has_ambiguity": "No 否",
+                "suggestion": ""
+            },
+            "ambiguity_B": {
+                "has_ambiguity": "No 否",
+                "suggestion": ""
+            }
+        }
+    },
+    "interview_interested": true,
+    "submitted_at": "2026-05-14 01:17:46"
+}

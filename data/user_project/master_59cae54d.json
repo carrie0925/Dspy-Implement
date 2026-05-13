@@ -1,0 +1,848 @@
+{
+    "project_context": "",
+    "results": [
+        {
+            "id": 0,
+            "status": "done",
+            "rounds": 1,
+            "original_text": "As a site editor, I want to have pretty good control over how the article, so that articles are visually appealing.",
+            "final_text": "User Story:\nAs a site editor, I want comprehensive control over article formatting and layout options to ensure that each article is visually appealing and aligns with our brand standards, thereby increasing reader engagement by 25%.\n\nAcceptance Criteria:\n- Provide at least 15 formatting options, including font styles, sizes, and color schemes.\n- Enable drag-and-drop functionality for arranging images and text blocks within the article.\n- Implement a preview feature that reflects the final appearance of the article before publication.\n\nTest Outline:\n- Verify that all 15 formatting options are accessible and functional.\n- Test the drag-and-drop feature to ensure it allows seamless rearrangement of content.\n- Check that the preview accurately represents the published article's appearance.",
+            "correction_reason": "The original story was vague and lacked specific criteria for control and visual appeal. The improved version specifies the editor's role more clearly, enhances the control aspects with detailed formatting and layout options, and quantifies the business benefit in terms of reader engagement. Acceptance criteria and test outlines are added to ensure the story is specific, measurable, and testable, aligning with the INVEST principles.",
+            "history": [
+                {
+                    "text": "As a site editor, I want to have pretty good control over how the article, so that articles are visually appealing.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The story lacks specific details on how control is exercised. | HEU: single_goal=True; has_As/I...=True",
+                            "N": "The requirement is vague and does not provide specific guidelines. | HEU: rigid_spec=False; has_AC=False (bullets: 0)",
+                            "V": "There is some implied value in making articles visually appealing. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "Effort is vague and lacks specific actions or constraints. | HEU: has_AC=False (bullets: 0); measurable=True",
+                            "S": "The scope is too broad and lacks sufficient detail for estimation. | HEU: story_token_len=21",
+                            "T": "There is no indication of testing or validation methods. | HEU: has_AC=False (bullets: 0); has_Test_Outline=False"
+                        },
+                        "I": 4,
+                        "N": 2,
+                        "V": 4,
+                        "E": 2,
+                        "S": 4,
+                        "T": 1,
+                        "overall": 3,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": false,
+                            "V": true,
+                            "E": false,
+                            "S": true,
+                            "T": false,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.0
+                },
+                {
+                    "text": "User Story:\nAs a site editor, I want comprehensive control over article formatting, including layout, fonts, and images, so that I can ensure each article is visually appealing and meets brand standards.\n\nAcceptance Criteria:\n- Editors must have access to at least 20 formatting options, including font styles, sizes, and color schemes.\n- Changes to the article layout should be reflected in the preview mode within 1 second.\n- The system should allow the uploading and placement of images up to 5MB without affecting the page load speed.\n\nTest Outline:\n- Verify the availability and functionality of the 20 formatting options in the editor interface.\n- Measure the time for layout changes to appear in preview mode to ensure it is within the 1-second threshold.\n- Test the upload and display of various image sizes to confirm compliance with performance standards.",
+                    "reason": "The original user story was vague, lacking in specificity and measurable criteria. The improved version specifies the editor's capabilities and the business benefit more clearly. It introduces precise acceptance criteria related to formatting options, response time, and image handling, making the story more specific, measurable, and testable, thus aligning with the INVEST principles.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The story is fully independent with a single goal of improving article formatting. | HEU: single_goal=False; has_As/I...=True",
+                            "N": "The requirement provides a high-level need with detailed acceptance criteria allowing feedback. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "The value is explicit, ensuring articles meet brand standards and are visually appealing. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "The effort is measurable with specific numbers and constraints validated in the acceptance criteria. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The task is small enough for a Sprint, with a clear scope defined by the acceptance criteria. | HEU: story_token_len=30",
+                            "T": "Completed and validated acceptance tests are outlined, ensuring all criteria are met. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 3,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 4,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8279569892473118
+                },
+                {
+                    "text": "User Story:\nAs a site editor, I want comprehensive control over article formatting and layout options so that I can ensure all published articles are visually appealing and meet design standards consistently.\n\nAcceptance Criteria:\n- Editors must have access to at least 15 formatting tools, including font styles, sizes, and color palettes.\n- The system should support real-time preview of changes to verify visual adjustments before publication.\n- Formatting changes should be applied instantly, with no more than 1-second delay.\n\nTest Outline:\n- Verify the availability and functionality of the 15 formatting tools.\n- Test the real-time preview feature to ensure accuracy of visual representation.\n- Measure the response time for applying formatting changes to confirm instant application.",
+                    "reason": "The original input was vague, lacking specific criteria and measurable elements. The revised user story clarifies the editor's role and capability, specifying the tools and features needed to achieve the desired outcome. Acceptance criteria provide clear, testable requirements, enhancing the INVEST score by making the story specific, measurable, and testable.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The story is fully independent and focused on a single goal of enhancing article formatting control. | HEU: single_goal=False; has_As/I...=True",
+                            "N": "The need is clearly defined with specific requirements and ample room for feedback. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "The value is explicit, ensuring articles are visually appealing and meet design standards, benefiting both users and the business. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "Effort is measurable with constraints validated, specifying tools and performance metrics. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The task is small enough to be completed in a Sprint, with clear boundaries. | HEU: story_token_len=30",
+                            "T": "Acceptance tests are completed and validated with a detailed test outline. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 3,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 4,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.7954545454545454
+                },
+                {
+                    "text": "User Story:\nAs a site editor, I want comprehensive control over article formatting and layout options to ensure that each article is visually appealing and aligns with our brand standards, thereby increasing reader engagement by 25%.\n\nAcceptance Criteria:\n- Provide at least 15 formatting options, including font styles, sizes, and color schemes.\n- Enable drag-and-drop functionality for arranging images and text blocks within the article.\n- Implement a preview feature that reflects the final appearance of the article before publication.\n\nTest Outline:\n- Verify that all 15 formatting options are accessible and functional.\n- Test the drag-and-drop feature to ensure it allows seamless rearrangement of content.\n- Check that the preview accurately represents the published article's appearance.",
+                    "reason": "The original story was vague and lacked specific criteria for control and visual appeal. The improved version specifies the editor's role more clearly, enhances the control aspects with detailed formatting and layout options, and quantifies the business benefit in terms of reader engagement. Acceptance criteria and test outlines are added to ensure the story is specific, measurable, and testable, aligning with the INVEST principles.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The user story is fully independent with a clear single goal of improving article appearance. | HEU: single_goal=True; has_As/I...=False",
+                            "N": "High-level need with room for feedback and implementation creativity. | HEU: rigid_spec=False; has_AC=True (bullets: 3)",
+                            "V": "Explicit value defined with a target of increasing reader engagement by 25%. | HEU: benefit_clause(so that/in order to)=False; measurable=True",
+                            "E": "Effort is measurable with clear constraints such as 15 formatting options and drag-and-drop functionality. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The task is well-defined and manageable within a Sprint. | HEU: story_token_len=2",
+                            "T": "Comprehensive tests are outlined and acceptance criteria are clear and validated. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 4,
+                        "V": 3,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 4,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8314606741573034
+                }
+            ],
+            "original": "As a site editor, I want to have pretty good control over how the article, so that articles are visually appealing.",
+            "rewritten": "User Story:\nAs a site editor, I want comprehensive control over article formatting and layout options to ensure that each article is visually appealing and aligns with our brand standards, thereby increasing reader engagement by 25%.\n\nAcceptance Criteria:\n- Provide at least 15 formatting options, including font styles, sizes, and color schemes.\n- Enable drag-and-drop functionality for arranging images and text blocks within the article.\n- Implement a preview feature that reflects the final appearance of the article before publication.\n\nTest Outline:\n- Verify that all 15 formatting options are accessible and functional.\n- Test the drag-and-drop feature to ensure it allows seamless rearrangement of content.\n- Check that the preview accurately represents the published article's appearance.",
+            "scoring_criteria_text": "I-I:  | N-N:  | V-V:  | E-E:  | S-S:  | T-T: ",
+            "fuzzy_terms": [
+                {
+                    "text": "seamless",
+                    "pos": "ADJ_VAGUE",
+                    "reason": "Ambiguous or non-verifiable term without measurable threshold in the same sentence.",
+                    "suggestion": "Replace 'seamless' with a measurable criterion (e.g., '<= 200 ms', 'p95 <= 2s', explicit scope/boundary').",
+                    "start": 680,
+                    "end": 688
+                }
+            ],
+            "low_score_explanations": {},
+            "score_new": {
+                "reasons": {
+                    "I": "The user story is fully independent with a clear single goal of improving article appearance. | HEU: single_goal=True; has_As/I...=False",
+                    "N": "High-level need with room for feedback and implementation creativity. | HEU: rigid_spec=False; has_AC=True (bullets: 3)",
+                    "V": "Explicit value defined with a target of increasing reader engagement by 25%. | HEU: benefit_clause(so that/in order to)=False; measurable=True",
+                    "E": "Effort is measurable with clear constraints such as 15 formatting options and drag-and-drop functionality. | HEU: has_AC=True (bullets: 3); measurable=True",
+                    "S": "The task is well-defined and manageable within a Sprint. | HEU: story_token_len=2",
+                    "T": "Comprehensive tests are outlined and acceptance criteria are clear and validated. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                },
+                "I": 4,
+                "N": 4,
+                "V": 3,
+                "E": 5,
+                "S": 5,
+                "T": 5,
+                "overall": 4,
+                "meets_thresholds": {
+                    "I": true,
+                    "N": true,
+                    "V": true,
+                    "E": true,
+                    "S": true,
+                    "T": true,
+                    "overall": true
+                }
+            }
+        },
+        {
+            "id": 1,
+            "status": "done",
+            "rounds": 1,
+            "original_text": "I want a search bar on the top of the page.",
+            "final_text": "User Story:\nAs a frequent website visitor, I want a search bar located at the top of the page so that I can quickly find the information I need, reducing navigation time by 40%.\n\nAcceptance Criteria:\n- The search bar must be prominently placed at the top of every page.\n- Search initiation should occur via pressing 'Enter' or clicking a search icon, with results displayed within 2 seconds.\n- The search bar should support input of at least 100 characters to accommodate complex queries.\n\nTest Outline:\n- Verify the search bar's consistent presence across all pages.\n- Measure the time taken from search initiation to results display to ensure it is ≤2 seconds.\n- Test the input capacity to confirm it handles at least 100 characters without error.",
+            "correction_reason": "The original input lacked specific details about the capability's purpose and business benefit. The improved version specifies the role, capability, and benefit, making the story more actionable. It includes measurable acceptance criteria and a test outline, enhancing the story's specificity, measurability, and testability according to INVEST principles.",
+            "history": [
+                {
+                    "text": "I want a search bar on the top of the page.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The goal is simple but lacks context or independence details. | HEU: single_goal=True; has_As/I...=False",
+                            "N": "The need is specified but lacks any flexibility or additional requirements. | HEU: rigid_spec=False; has_AC=False (bullets: 0)",
+                            "V": "The value to the user is implied but not explicitly stated. | HEU: benefit_clause(so that/in order to)=False; measurable=True",
+                            "E": "Effort estimation is vague; lacks specific technical details. | HEU: has_AC=False (bullets: 0); measurable=True",
+                            "S": "The size is potentially small but undefined without context. | HEU: story_token_len=11",
+                            "T": "No testing criteria or validation methods are provided. | HEU: has_AC=False (bullets: 0); has_Test_Outline=False"
+                        },
+                        "I": 2,
+                        "N": 2,
+                        "V": 2,
+                        "E": 2,
+                        "S": 4,
+                        "T": 1,
+                        "overall": 2,
+                        "meets_thresholds": {
+                            "I": false,
+                            "N": false,
+                            "V": false,
+                            "E": false,
+                            "S": true,
+                            "T": false,
+                            "overall": false
+                        }
+                    },
+                    "diversity": 0.0
+                },
+                {
+                    "text": "User Story:\nAs a frequent website visitor, I want a search bar located at the top of the page so that I can quickly find the information I need, reducing navigation time by 40%.\n\nAcceptance Criteria:\n- The search bar must be prominently placed at the top of every page.\n- Search initiation should occur via pressing 'Enter' or clicking a search icon, with results displayed within 2 seconds.\n- The search bar should support input of at least 100 characters to accommodate complex queries.\n\nTest Outline:\n- Verify the search bar's consistent presence across all pages.\n- Measure the time taken from search initiation to results display to ensure it is ≤2 seconds.\n- Test the input capacity to confirm it handles at least 100 characters without error.",
+                    "reason": "The original input lacked specific details about the capability's purpose and business benefit. The improved version specifies the role, capability, and benefit, making the story more actionable. It includes measurable acceptance criteria and a test outline, enhancing the story's specificity, measurability, and testability according to INVEST principles.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The story is fully independent with a single clear goal. | HEU: single_goal=True; has_As/I...=True",
+                            "N": "The requirement is high-level, allowing for feedback and iteration. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "The value is explicit, focusing on user convenience and efficiency. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "Effort is measurable with clear constraints like the search response time. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The scope is small enough to be manageable within a Sprint. | HEU: story_token_len=32",
+                            "T": "Complete and validated acceptance tests are clearly outlined. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 5,
+                        "N": 3,
+                        "V": 5,
+                        "E": 5,
+                        "S": 4,
+                        "T": 5,
+                        "overall": 5,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8902439024390244
+                },
+                {
+                    "text": "User Story:\nAs a website visitor, I want a search bar located at the top of the page that provides immediate access to search functionality so that I can quickly find relevant content and improve my browsing experience by 40%.\n\nAcceptance Criteria:\n- The search bar should be visible and accessible on all pages within 1 second of page load.\n- Users must receive search suggestions as they type, with results relevant to their input.\n- The search bar should maintain functionality and appearance across different devices and screen sizes.\n\nTest Outline:\n- Verify the search bar's visibility and accessibility across all pages within the 1-second load time.\n- Test the search suggestion feature for accuracy and relevance to user input.\n- Conduct usability testing on multiple devices to ensure consistent functionality and appearance.",
+                    "reason": "The original input was unclear and lacked context, capability, and measurable benefits. The revised version defines the specific requirement for the search bar's position and its purpose, providing clear benefits. Acceptance criteria establish quantifiable standards for performance and usability, aligning with INVEST principles by making the story specific, measurable, and testable.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The story is fully independent with a clear goal, providing a single, focused functionality. | HEU: single_goal=False; has_As/I...=True",
+                            "N": "The requirement is high-level, providing room for flexibility and feedback. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "The value is explicit, with a measurable improvement of 40% in browsing experience. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "Effort is measurable with specific constraints, such as loading time and cross-device functionality. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The user story is small enough to be completed within a Sprint, with balanced development and testing. | HEU: story_token_len=38",
+                            "T": "Completed and validated acceptance tests are clearly outlined, covering all critical aspects. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 3,
+                        "V": 5,
+                        "E": 5,
+                        "S": 4,
+                        "T": 5,
+                        "overall": 4,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.8795180722891567
+                },
+                {
+                    "text": "User Story:\nAs a website visitor, I want a search bar prominently located at the top of the page to quickly find information and improve my navigation experience by 40%.\n\nAcceptance Criteria:\n- The search bar must be visible on all pages within the top navigation area.\n- Search results should be displayed within 1 second of query submission.\n- The search bar should support autocomplete suggestions for at least the top 100 most-searched terms.\n\nTest Outline:\n- Verify the search bar's presence and functionality across all pages of the website.\n- Measure the response time for search queries to ensure results are displayed within 1 second.\n- Test the autocomplete feature to confirm it suggests relevant terms from the top 100 search queries.",
+                    "reason": "The original request was vague, lacking details on the purpose and expected outcomes. The improved version specifies the role and benefit for the user, while acceptance criteria are defined with clear, measurable targets, enhancing the story's specificity, testability, and business relevance in line with INVEST principles.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The story is fully independent and clearly defined in terms of a single goal. | HEU: single_goal=True; has_As/I...=False",
+                            "N": "There is a high-level need with explicit acceptance criteria and room for feedback on implementation. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "The value is explicit and tied to a measurable improvement in user experience. | HEU: benefit_clause(so that/in order to)=False; measurable=True",
+                            "E": "Effort is measurable with specific constraints such as response time and feature requirements. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The task is small and well-defined, suitable for a single Sprint. | HEU: story_token_len=2",
+                            "T": "Tests are explicitly outlined and cover presence, performance, and functionality, with clear validation criteria. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 3,
+                        "V": 3,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 4,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.863013698630137
+                }
+            ],
+            "original": "I want a search bar on the top of the page.",
+            "rewritten": "User Story:\nAs a frequent website visitor, I want a search bar located at the top of the page so that I can quickly find the information I need, reducing navigation time by 40%.\n\nAcceptance Criteria:\n- The search bar must be prominently placed at the top of every page.\n- Search initiation should occur via pressing 'Enter' or clicking a search icon, with results displayed within 2 seconds.\n- The search bar should support input of at least 100 characters to accommodate complex queries.\n\nTest Outline:\n- Verify the search bar's consistent presence across all pages.\n- Measure the time taken from search initiation to results display to ensure it is ≤2 seconds.\n- Test the input capacity to confirm it handles at least 100 characters without error.",
+            "scoring_criteria_text": "I-I:  | N-N:  | V-V:  | E-E:  | S-S:  | T-T: ",
+            "fuzzy_terms": [],
+            "low_score_explanations": {},
+            "score_new": {
+                "reasons": {
+                    "I": "The story is fully independent with a single clear goal. | HEU: single_goal=True; has_As/I...=True",
+                    "N": "The requirement is high-level, allowing for feedback and iteration. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                    "V": "The value is explicit, focusing on user convenience and efficiency. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                    "E": "Effort is measurable with clear constraints like the search response time. | HEU: has_AC=True (bullets: 3); measurable=True",
+                    "S": "The scope is small enough to be manageable within a Sprint. | HEU: story_token_len=32",
+                    "T": "Complete and validated acceptance tests are clearly outlined. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                },
+                "I": 5,
+                "N": 3,
+                "V": 5,
+                "E": 5,
+                "S": 4,
+                "T": 5,
+                "overall": 5,
+                "meets_thresholds": {
+                    "I": true,
+                    "N": true,
+                    "V": true,
+                    "E": true,
+                    "S": true,
+                    "T": true,
+                    "overall": true
+                }
+            }
+        },
+        {
+            "id": 2,
+            "status": "done",
+            "rounds": 1,
+            "original_text": "As a cybersecurity analyst, I want AI-powered drones to detect and respond to cyber threats autonomously, so that our defense systems remain secure against digital attacks.",
+            "final_text": "User Story:\nAs a cybersecurity analyst, I want AI-powered drones to autonomously detect and mitigate cyber threats in real-time so that our defense systems maintain 99.9% uptime and are safeguarded against unauthorized access.\n\nAcceptance Criteria:\n- Drones must identify cyber threats with a detection accuracy of ≥98%.\n- Automated threat response must occur within 2 seconds of detection.\n- The system should handle at least 500 simultaneous threat assessments without performance degradation.\n\nTest Outline:\n- Validate detection accuracy by comparing AI predictions with known threat data to ensure ≥98% accuracy.\n- Measure the response time from threat detection to mitigation to confirm it is within the 2-second threshold.\n- Simulate 500 concurrent threat scenarios to test system performance and reliability.",
+            "correction_reason": "The original story lacked precise, measurable criteria and specific outcomes. The improved version specifies real-time detection and response, includes measurable uptime and accuracy targets, and outlines capacity requirements for handling concurrent threats. This makes the story more specific, measurable, and testable, aligning with INVEST principles.",
+            "history": [
+                {
+                    "text": "As a cybersecurity analyst, I want AI-powered drones to detect and respond to cyber threats autonomously, so that our defense systems remain secure against digital attacks.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The goal is highly ambitious and lacks independence due to complexity. | HEU: single_goal=False; has_As/I...=True",
+                            "N": "No clear requirements or negotiation details are provided. | HEU: rigid_spec=False; has_AC=False (bullets: 0)",
+                            "V": "The value is implied as beneficial but not clearly defined in terms of execution. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "Effort estimation is extremely vague with no clear boundaries or constraints. | HEU: has_AC=False (bullets: 0); measurable=True",
+                            "S": "The scope is too large and complex, resembling an epic. | HEU: story_token_len=27",
+                            "T": "There are no tests indicated or validation methods provided. | HEU: has_AC=False (bullets: 0); has_Test_Outline=False"
+                        },
+                        "I": 2,
+                        "N": 2,
+                        "V": 4,
+                        "E": 2,
+                        "S": 3,
+                        "T": 1,
+                        "overall": 2,
+                        "meets_thresholds": {
+                            "I": false,
+                            "N": false,
+                            "V": true,
+                            "E": false,
+                            "S": true,
+                            "T": false,
+                            "overall": false
+                        }
+                    },
+                    "diversity": 0.0
+                },
+                {
+                    "text": "User Story:\nAs a cybersecurity analyst, I want AI-powered drones to autonomously detect and mitigate cyber threats in real-time so that our defense systems maintain 99.9% uptime and are safeguarded against unauthorized access.\n\nAcceptance Criteria:\n- Drones must identify cyber threats with a detection accuracy of ≥98%.\n- Automated threat response must occur within 2 seconds of detection.\n- The system should handle at least 500 simultaneous threat assessments without performance degradation.\n\nTest Outline:\n- Validate detection accuracy by comparing AI predictions with known threat data to ensure ≥98% accuracy.\n- Measure the response time from threat detection to mitigation to confirm it is within the 2-second threshold.\n- Simulate 500 concurrent threat scenarios to test system performance and reliability.",
+                    "reason": "The original story lacked precise, measurable criteria and specific outcomes. The improved version specifies real-time detection and response, includes measurable uptime and accuracy targets, and outlines capacity requirements for handling concurrent threats. This makes the story more specific, measurable, and testable, aligning with INVEST principles.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The story is fully independent with a single, clear goal of maintaining system uptime. | HEU: single_goal=False; has_As/I...=True",
+                            "N": "The requirement is a high-level need with room for feedback and adaptation. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "The value is explicit and critical to maintaining system integrity and uptime. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "Effort is measurable with explicit constraints and performance metrics. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The task is small enough and clearly defined to fit into a Sprint cycle. | HEU: story_token_len=26",
+                            "T": "Completed and validated acceptance tests are provided with clear criteria. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 3,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 4,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.7640449438202247
+                },
+                {
+                    "text": "User Story:\nAs a cybersecurity analyst, I want AI-powered drones to autonomously detect and neutralize cyber threats within 5 seconds of identification so that our defense systems maintain a 99.9% uptime against digital attacks.\n\nAcceptance Criteria:\n- The AI system must identify and categorize cyber threats with a 98% accuracy rate.\n- Drones should autonomously neutralize identified threats within ≤5 seconds.\n- Maintain system uptime of at least 99.9% by preventing breaches.\n\nTest Outline:\n- Validate the threat detection accuracy using a dataset of known cyber threats.\n- Measure response times from threat detection to neutralization to ensure it meets the 5-second requirement.\n- Monitor system performance over a month to confirm the 99.9% uptime standard.",
+                    "reason": "The original user story was improved by specifying the response time and accuracy rate for detecting and neutralizing cyber threats, thus making the capability clear and measurable. The business benefit of maintaining system uptime was quantified, providing a tangible goal. These enhancements ensure the story is specific, testable, and valuable, aligning with INVEST principles.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The story is fully independent with a single, clear goal. | HEU: single_goal=False; has_As/I...=True",
+                            "N": "The requirement is high-level and allows for feedback and negotiation in implementation. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "The value is explicitly stated with significant user and business benefits. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "Effort is measurable with specific accuracy and time constraints. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The story is small enough to be tackled within a Sprint, given the detailed constraints. | HEU: story_token_len=29",
+                            "T": "Completed and validated acceptance tests are clearly outlined. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 3,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 4,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.7125
+                },
+                {
+                    "text": "User Story:\nAs a cybersecurity analyst, I want AI-powered drones to autonomously detect and neutralize cyber threats in real-time so that our defense systems maintain a 99.9% security uptime against digital intrusions.\n\nAcceptance Criteria:\n- Drones must identify and categorize cyber threats with ≥98% accuracy.\n- The system should neutralize threats within 5 seconds of detection.\n- Maintain security operations for up to 1,000 simultaneous threat scenarios without degradation in performance.\n\nTest Outline:\n- Validate the accuracy of threat detection by comparing AI categorizations to a pre-verified dataset.\n- Measure the time from threat detection to neutralization to ensure it is within the 5-second threshold.\n- Simulate multiple concurrent threat scenarios to test system stability and performance.",
+                    "reason": "The original user story was ambitious but vague in terms of specifics and measurable outcomes. The improved version defines clear, measurable criteria for detection accuracy, response time, and operational scalability. This enhances the INVEST qualities by ensuring the story is more specific, measurable, and testable, providing a clearer path to implementation and evaluation of success.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The functionality is fully independent with a single, clear goal. | HEU: single_goal=False; has_As/I...=True",
+                            "N": "High-level needs are clearly defined and allow for feedback based on performance metrics. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "Explicit value is provided by enhancing security systems with significant business relevance. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "Effort is measurable with precise constraints on accuracy, time, and performance. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The task is well-defined and appropriately sized for a Sprint. | HEU: story_token_len=27",
+                            "T": "Comprehensive tests are outlined with specific validation criteria and performance measures. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 3,
+                        "V": 5,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 4,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.7441860465116279
+                }
+            ],
+            "original": "As a cybersecurity analyst, I want AI-powered drones to detect and respond to cyber threats autonomously, so that our defense systems remain secure against digital attacks.",
+            "rewritten": "User Story:\nAs a cybersecurity analyst, I want AI-powered drones to autonomously detect and mitigate cyber threats in real-time so that our defense systems maintain 99.9% uptime and are safeguarded against unauthorized access.\n\nAcceptance Criteria:\n- Drones must identify cyber threats with a detection accuracy of ≥98%.\n- Automated threat response must occur within 2 seconds of detection.\n- The system should handle at least 500 simultaneous threat assessments without performance degradation.\n\nTest Outline:\n- Validate detection accuracy by comparing AI predictions with known threat data to ensure ≥98% accuracy.\n- Measure the response time from threat detection to mitigation to confirm it is within the 2-second threshold.\n- Simulate 500 concurrent threat scenarios to test system performance and reliability.",
+            "scoring_criteria_text": "I-I:  | N-N:  | V-V:  | E-E:  | S-S:  | T-T: ",
+            "fuzzy_terms": [],
+            "low_score_explanations": {},
+            "score_new": {
+                "reasons": {
+                    "I": "The story is fully independent with a single, clear goal of maintaining system uptime. | HEU: single_goal=False; has_As/I...=True",
+                    "N": "The requirement is a high-level need with room for feedback and adaptation. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                    "V": "The value is explicit and critical to maintaining system integrity and uptime. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                    "E": "Effort is measurable with explicit constraints and performance metrics. | HEU: has_AC=True (bullets: 3); measurable=True",
+                    "S": "The task is small enough and clearly defined to fit into a Sprint cycle. | HEU: story_token_len=26",
+                    "T": "Completed and validated acceptance tests are provided with clear criteria. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                },
+                "I": 4,
+                "N": 3,
+                "V": 5,
+                "E": 5,
+                "S": 5,
+                "T": 5,
+                "overall": 4,
+                "meets_thresholds": {
+                    "I": true,
+                    "N": true,
+                    "V": true,
+                    "E": true,
+                    "S": true,
+                    "T": true,
+                    "overall": true
+                }
+            }
+        },
+        {
+            "id": 3,
+            "status": "done",
+            "rounds": 1,
+            "original_text": "As a field commander, I want AI-enabled drones to perform search and rescue operations, so that injured personnel can be located and evacuated swiftly.",
+            "final_text": "User Story:\nAs a field commander, I want AI-enabled drones to autonomously conduct search and rescue missions with real-time location tracking and communication, so that injured personnel can be identified and evacuated within 30 minutes, reducing response time by 50%.\n\nAcceptance Criteria:\n- Drones must locate and identify injured personnel with 95% accuracy through AI image recognition.\n- Each search and rescue mission must be completed within 30 minutes from deployment.\n- Drones should maintain a communication link with the command center 100% of the time during operations.\n\nTest Outline:\n- Validate the accuracy of AI image recognition by comparing identified targets against ground truth data.\n- Measure the time taken from deployment to completion of missions to ensure they are within the 30-minute requirement.\n- Test communication systems under various conditions to guarantee continuous connectivity with the command center.",
+            "correction_reason": "The original user story was improved by specifying the autonomous capability and real-time features of the drones, along with the precise benefit of reducing response time by 50%. Measurable acceptance criteria were introduced, including accuracy, time constraints, and communication reliability, thereby enhancing specificity, measurability, and testability in alignment with INVEST principles.",
+            "history": [
+                {
+                    "text": "As a field commander, I want AI-enabled drones to perform search and rescue operations, so that injured personnel can be located and evacuated swiftly.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The task has some constraints due to reliance on AI technology but is focused on a single goal. | HEU: single_goal=False; has_As/I...=True",
+                            "N": "The requirement is high-level with some room for negotiation on implementation specifics. | HEU: rigid_spec=False; has_AC=False (bullets: 0)",
+                            "V": "The value is significant and explicit, focusing on the safety and efficiency of search and rescue operations. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "Effort is vague due to the complexity of AI implementation and lack of clear constraints. | HEU: has_AC=False (bullets: 0); measurable=True",
+                            "S": "The task size is large and likely spans multiple Sprints. | HEU: story_token_len=25",
+                            "T": "Testing is not detailed, and validation methods for AI performance are not specified. | HEU: has_AC=False (bullets: 0); has_Test_Outline=False"
+                        },
+                        "I": 3,
+                        "N": 2,
+                        "V": 5,
+                        "E": 2,
+                        "S": 4,
+                        "T": 2,
+                        "overall": 3,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": false,
+                            "V": true,
+                            "E": false,
+                            "S": true,
+                            "T": false,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.0
+                },
+                {
+                    "text": "User Story:\nAs a field commander, I want AI-enabled drones to autonomously conduct search and rescue operations with high precision so that injured personnel can be identified and evacuated within 15 minutes, minimizing casualties by 50%.\n\nAcceptance Criteria:\n- Drones must identify injured personnel with ≥95% accuracy using AI image recognition.\n- Each search and rescue mission should be completed within a 15-minute timeframe.\n- The system should operate effectively in various terrains and weather conditions with ≥90% success rate.\n\nTest Outline:\n- Evaluate the accuracy of AI image recognition in identifying injured personnel using a set of test images.\n- Time the duration of drone missions to ensure completion within 15 minutes.\n- Conduct trials in different terrains and weather conditions to verify the 90% operational success rate.",
+                    "reason": "The original user story lacked specificity in terms of measurable outcomes and testable criteria. The revised story provides a clear capability and benefit, with explicit acceptance criteria that can be quantified and tested, such as accuracy rates, mission completion time, and operational success across conditions. This enhances the INVEST score by making the story more specific, measurable, and testable.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The story is fully independent with a single goal of enhancing search and rescue operations. | HEU: single_goal=False; has_As/I...=True",
+                            "N": "There is a high-level need with clear acceptance criteria and feedback mechanisms. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "The value is explicit, focusing on reducing casualties with a quantifiable benefit. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "Effort is measurable with constraints validated through specific criteria and benchmarks. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The story is broken down into specific, manageable tasks for development. | HEU: story_token_len=35",
+                            "T": "Complete and validated acceptance tests are outlined with clear metrics for success. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 3,
+                        "V": 5,
+                        "E": 5,
+                        "S": 4,
+                        "T": 5,
+                        "overall": 4,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.7469879518072289
+                },
+                {
+                    "text": "User Story:\nAs a field commander, I want AI-enabled drones to autonomously conduct search and rescue missions, accurately identifying and locating injured personnel within 5 minutes, so that they can be evacuated swiftly, reducing response time by 50%.\n\nAcceptance Criteria:\n- Drones must identify and locate injured personnel with a 98% accuracy rate.\n- Each drone must complete search and identification tasks within 5 minutes of deployment.\n- The system should handle simultaneous operations by at least 20 drones without compromising performance.\n\nTest Outline:\n- Validate the accuracy of personnel identification by comparing AI results with ground truth data.\n- Measure the time from drone deployment to task completion across multiple trials.\n- Test system performance with 20 drones operating simultaneously under various conditions.",
+                    "reason": "The original input needed more precision and measurable outcomes to align with the INVEST principles. The improved version specifies the role more clearly, defines the capability of autonomous operations, and quantifies the benefit of reduced response time. Measurable acceptance criteria ensure the story's feasibility and testability, enhancing specificity and value.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The story is fully independent with a clear single-goal mission for the drones. | HEU: single_goal=False; has_As/I...=True",
+                            "N": "High-level needs are specified with room for feedback and iteration. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "The user and business-relevant benefit is explicit, with a focus on reducing response time. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "Effort is measurable with precise constraints and performance metrics. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The task is clearly defined and small enough for a Sprint, considering the outlined constraints. | HEU: story_token_len=37",
+                            "T": "Tests are completed and validated with explicit acceptance criteria and testing outlines. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 3,
+                        "V": 5,
+                        "E": 5,
+                        "S": 4,
+                        "T": 5,
+                        "overall": 4,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.75
+                },
+                {
+                    "text": "User Story:\nAs a field commander, I want AI-enabled drones to autonomously conduct search and rescue missions with real-time location tracking and communication, so that injured personnel can be identified and evacuated within 30 minutes, reducing response time by 50%.\n\nAcceptance Criteria:\n- Drones must locate and identify injured personnel with 95% accuracy through AI image recognition.\n- Each search and rescue mission must be completed within 30 minutes from deployment.\n- Drones should maintain a communication link with the command center 100% of the time during operations.\n\nTest Outline:\n- Validate the accuracy of AI image recognition by comparing identified targets against ground truth data.\n- Measure the time taken from deployment to completion of missions to ensure they are within the 30-minute requirement.\n- Test communication systems under various conditions to guarantee continuous connectivity with the command center.",
+                    "reason": "The original user story was improved by specifying the autonomous capability and real-time features of the drones, along with the precise benefit of reducing response time by 50%. Measurable acceptance criteria were introduced, including accuracy, time constraints, and communication reliability, thereby enhancing specificity, measurability, and testability in alignment with INVEST principles.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The story is fully independent with a single, clear goal of conducting autonomous search and rescue missions. | HEU: single_goal=False; has_As/I...=True",
+                            "N": "The need is expressed at a high level with specific, measurable outcomes, allowing room for negotiation and feedback. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "The value is explicit and directly tied to reducing response time, benefiting both injured personnel and the mission's success. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                            "E": "Effort is measurable with clearly defined constraints, including time and accuracy requirements. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The task is small enough to be feasible within a Sprint, with balanced development and testing efforts. | HEU: story_token_len=40",
+                            "T": "Acceptance tests are completed and validated with specific criteria for accuracy, timing, and communication. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 3,
+                        "V": 5,
+                        "E": 5,
+                        "S": 4,
+                        "T": 5,
+                        "overall": 4,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.7692307692307692
+                }
+            ],
+            "original": "As a field commander, I want AI-enabled drones to perform search and rescue operations, so that injured personnel can be located and evacuated swiftly.",
+            "rewritten": "User Story:\nAs a field commander, I want AI-enabled drones to autonomously conduct search and rescue missions with real-time location tracking and communication, so that injured personnel can be identified and evacuated within 30 minutes, reducing response time by 50%.\n\nAcceptance Criteria:\n- Drones must locate and identify injured personnel with 95% accuracy through AI image recognition.\n- Each search and rescue mission must be completed within 30 minutes from deployment.\n- Drones should maintain a communication link with the command center 100% of the time during operations.\n\nTest Outline:\n- Validate the accuracy of AI image recognition by comparing identified targets against ground truth data.\n- Measure the time taken from deployment to completion of missions to ensure they are within the 30-minute requirement.\n- Test communication systems under various conditions to guarantee continuous connectivity with the command center.",
+            "scoring_criteria_text": "I-I:  | N-N:  | V-V:  | E-E:  | S-S:  | T-T: ",
+            "fuzzy_terms": [
+                {
+                    "text": "various",
+                    "pos": "QTY_VAGUE",
+                    "reason": "Ambiguous or non-verifiable term without measurable threshold in the same sentence.",
+                    "suggestion": "Replace 'various' with a measurable criterion (e.g., '<= 200 ms', 'p95 <= 2s', explicit scope/boundary').",
+                    "start": 861,
+                    "end": 868
+                }
+            ],
+            "low_score_explanations": {},
+            "score_new": {
+                "reasons": {
+                    "I": "The story is fully independent with a single, clear goal of conducting autonomous search and rescue missions. | HEU: single_goal=False; has_As/I...=True",
+                    "N": "The need is expressed at a high level with specific, measurable outcomes, allowing room for negotiation and feedback. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                    "V": "The value is explicit and directly tied to reducing response time, benefiting both injured personnel and the mission's success. | HEU: benefit_clause(so that/in order to)=True; measurable=True",
+                    "E": "Effort is measurable with clearly defined constraints, including time and accuracy requirements. | HEU: has_AC=True (bullets: 3); measurable=True",
+                    "S": "The task is small enough to be feasible within a Sprint, with balanced development and testing efforts. | HEU: story_token_len=40",
+                    "T": "Acceptance tests are completed and validated with specific criteria for accuracy, timing, and communication. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                },
+                "I": 4,
+                "N": 3,
+                "V": 5,
+                "E": 5,
+                "S": 4,
+                "T": 5,
+                "overall": 4,
+                "meets_thresholds": {
+                    "I": true,
+                    "N": true,
+                    "V": true,
+                    "E": true,
+                    "S": true,
+                    "T": true,
+                    "overall": true
+                }
+            }
+        },
+        {
+            "id": 4,
+            "status": "done",
+            "rounds": 1,
+            "original_text": "User Story:\nAs an interoperability coordinator, I want drones from various allied forces to seamlessly communicate and operate together so that joint missions can achieve a 30% increase in operational efficiency and a 25% reduction in mission completion time.\n\nAcceptance Criteria:\n- The communication protocol must enable data exchange between drones with a success rate of at least 95%.\n- Joint missions should demonstrate a 30% improvement in task execution speed compared to previous missions without interoperability.\n- User feedback from mission participants should reflect a satisfaction rate of 90% or higher regarding the effectiveness of drone collaboration.\n\nTest Outline:\n- Conduct interoperability tests to measure the success rate of data exchange between different drones.\n- Analyze mission performance metrics before and after implementing the communication protocols to quantify improvements in efficiency and completion time.\n- Gather feedback from mission participants through surveys to assess their satisfaction with the collaborative capabilities of the drones.",
+            "final_text": "User Story:\nAs an interoperability coordinator, I want drones from various allied forces to integrate seamlessly and operate cohesively so that joint missions can achieve a 30% increase in operational efficiency and reduce mission completion time by 25%.\n\nAcceptance Criteria:\n- The interoperability system must facilitate data exchange between drones with a minimum 95% success rate.\n- Joint missions should exhibit a 30% faster task execution compared to those without integrated drone collaboration.\n- Feedback from mission participants should indicate a satisfaction level of 90% or above regarding the drones' cooperative functions.\n\nTest Outline:\n- Perform interoperability assessments to verify the data exchange success rate among diverse drones.\n- Evaluate mission performance data before and after implementing interoperability to validate a 30% enhancement in speed and a 25% reduction in completion time.\n- Conduct participant surveys post-mission to evaluate satisfaction levels concerning the interoperability of drone operations.",
+            "correction_reason": "The original user story was already well-structured with explicit business benefits and measurable acceptance criteria, aligned with the INVEST principles. Only minor rephrasing was necessary to ensure clarity and consistency, such as emphasizing seamless integration and cohesive operation. The acceptance criteria and test outlines were already specific and measurable, so minimal changes were needed to enhance clarity.",
+            "history": [
+                {
+                    "text": "User Story:\nAs an interoperability coordinator, I want drones from various allied forces to seamlessly communicate and operate together so that joint missions can achieve a 30% increase in operational efficiency and a 25% reduction in mission completion time.\n\nAcceptance Criteria:\n- The communication protocol must enable data exchange between drones with a success rate of at least 95%.\n- Joint missions should demonstrate a 30% improvement in task execution speed compared to previous missions without interoperability.\n- User feedback from mission participants should reflect a satisfaction rate of 90% or higher regarding the effectiveness of drone collaboration.\n\nTest Outline:\n- Conduct interoperability tests to measure the success rate of data exchange between different drones.\n- Analyze mission performance metrics before and after implementing the communication protocols to quantify improvements in efficiency and completion time.\n- Gather feedback from mission participants through surveys to assess their satisfaction with the collaborative capabilities of the drones.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The story is fully independent with a clear single goal of improving interoperability among drones. | HEU: single_goal=True; has_As/I...=False",
+                            "N": "The requirement is high-level and allows for feedback and collaboration to achieve the desired outcome. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "The value is explicit, offering measurable benefits in operational efficiency and mission completion time. | HEU: benefit_clause(so that/in order to)=False; measurable=True",
+                            "E": "Effort is measurable with specific numerical targets and constraints outlined in the acceptance criteria. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The task size is well-defined and balanced for execution within a Sprint. | HEU: story_token_len=2",
+                            "T": "Completed and validated acceptance tests are defined, with specific metrics and feedback mechanisms in place. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 3,
+                        "V": 3,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 4,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.0
+                },
+                {
+                    "text": "User Story:\nAs an interoperability coordinator, I want drones from various allied forces to seamlessly integrate and collaborate during joint operations so that mission efficiency increases by 30% and mission completion time decreases by 25%.\n\nAcceptance Criteria:\n- The communication protocol must facilitate data exchange between drones with a reliability rate of 95% or higher.\n- Joint missions should exhibit a 30% enhancement in task execution speed compared to missions conducted without interoperability.\n- Feedback from mission participants should indicate a satisfaction rate of 90% or higher concerning the effectiveness of drone collaboration.\n\nTest Outline:\n- Perform interoperability assessments to evaluate the reliability of data exchange across different drone models.\n- Compare mission performance statistics before and after implementing enhanced communication protocols to determine improvements in efficiency and completion time.\n- Collect and analyze participant feedback post-mission through surveys to verify satisfaction levels regarding drone integration.",
+                    "reason": "The original user story was already well-structured and aligned with the INVEST criteria. However, slight modifications were made to enhance clarity and ensure consistent language (e.g., \"integrate and collaborate\" instead of \"communicate and operate together\"). This slight rephrasing strengthens the clarity of the capability and benefit. Overall, the changes ensure the story remains specific, measurable, and testable.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The story is fully independent with a single goal of enhancing drone interoperability. | HEU: single_goal=True; has_As/I...=False",
+                            "N": "The requirement is a high-level need with detailed feedback mechanisms. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "The value is explicit with clear business relevance, aiming for improved mission efficiency. | HEU: benefit_clause(so that/in order to)=False; measurable=True",
+                            "E": "Effort is measurable with specific targets for efficiency and completion time improvements. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The task size is substantial but potentially manageable within a Sprint due to clear goals. | HEU: story_token_len=2",
+                            "T": "Tests are completed and validated with specific criteria for data exchange reliability, mission improvements, and user satisfaction. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 3,
+                        "V": 3,
+                        "E": 5,
+                        "S": 4,
+                        "T": 5,
+                        "overall": 4,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.44354838709677424
+                },
+                {
+                    "text": "User Story:\nAs an interoperability coordinator, I want drones from various allied forces to integrate seamlessly for collaborative operations so that joint missions can boost operational efficiency by 30% and reduce mission completion time by 25%.\n\nAcceptance Criteria:\n- The communication system must facilitate data exchange between drones with at least a 95% success rate.\n- Joint missions must achieve a 30% improvement in task execution speed compared to pre-interoperability benchmarks.\n- A satisfaction rate of 90% or more regarding drone collaboration must be reflected in post-mission participant surveys.\n\nTest Outline:\n- Perform interoperability assessments to validate the success rate of data exchange between diverse drones.\n- Evaluate mission performance metrics to document improvements in efficiency and time reduction due to enhanced interoperability.\n- Collect and analyze participant feedback through structured surveys to gauge satisfaction with drone integration.",
+                    "reason": "The original user story was already well-structured and aligned with the INVEST criteria, providing clear role, capability, and business benefits. To improve clarity and coherence, minor adjustments were made for conciseness—such as rephrasing for seamless integration and collaborative operations. The acceptance criteria and test outline were already specific and measurable, requiring minimal refinement.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The story is fully independent and clearly ties into a single goal of enhancing interoperability among drones. | HEU: single_goal=True; has_As/I...=False",
+                            "N": "The need is high-level with explicit targets for operational efficiency and time reduction. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "There is a clear, user-relevant, and business-relevant benefit explicitly outlined. | HEU: benefit_clause(so that/in order to)=False; measurable=True",
+                            "E": "Effort is measurable with specific percentages and success rates. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The scope is clearly defined and achievable within a development cycle. | HEU: story_token_len=2",
+                            "T": "Acceptance tests are completed and validated with specific criteria for success. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 3,
+                        "V": 3,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 4,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.4426229508196722
+                },
+                {
+                    "text": "User Story:\nAs an interoperability coordinator, I want drones from various allied forces to integrate seamlessly and operate cohesively so that joint missions can achieve a 30% increase in operational efficiency and reduce mission completion time by 25%.\n\nAcceptance Criteria:\n- The interoperability system must facilitate data exchange between drones with a minimum 95% success rate.\n- Joint missions should exhibit a 30% faster task execution compared to those without integrated drone collaboration.\n- Feedback from mission participants should indicate a satisfaction level of 90% or above regarding the drones' cooperative functions.\n\nTest Outline:\n- Perform interoperability assessments to verify the data exchange success rate among diverse drones.\n- Evaluate mission performance data before and after implementing interoperability to validate a 30% enhancement in speed and a 25% reduction in completion time.\n- Conduct participant surveys post-mission to evaluate satisfaction levels concerning the interoperability of drone operations.",
+                    "reason": "The original user story was already well-structured with explicit business benefits and measurable acceptance criteria, aligned with the INVEST principles. Only minor rephrasing was necessary to ensure clarity and consistency, such as emphasizing seamless integration and cohesive operation. The acceptance criteria and test outlines were already specific and measurable, so minimal changes were needed to enhance clarity.",
+                    "metrics": {
+                        "reasons": {
+                            "I": "The goal is clearly independent and aims at a single, measurable outcome of enhancing operational efficiency. | HEU: single_goal=True; has_As/I...=False",
+                            "N": "The need is high-level with specific, measurable outcomes enabling feedback and negotiation. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                            "V": "There is an explicit, user/business-relevant benefit focusing on operational efficiency and mission success. | HEU: benefit_clause(so that/in order to)=False; measurable=True",
+                            "E": "Effort is measurable with specific performance metrics and constraints defined. | HEU: has_AC=True (bullets: 3); measurable=True",
+                            "S": "The story size is appropriate for a Sprint with balanced development and testing activities. | HEU: story_token_len=2",
+                            "T": "Tests are completed and validated with clear acceptance criteria and measurable outcomes. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                        },
+                        "I": 4,
+                        "N": 3,
+                        "V": 3,
+                        "E": 5,
+                        "S": 5,
+                        "T": 5,
+                        "overall": 4,
+                        "meets_thresholds": {
+                            "I": true,
+                            "N": true,
+                            "V": true,
+                            "E": true,
+                            "S": true,
+                            "T": true,
+                            "overall": true
+                        }
+                    },
+                    "diversity": 0.4516129032258065
+                }
+            ],
+            "original": "User Story:\nAs an interoperability coordinator, I want drones from various allied forces to seamlessly communicate and operate together so that joint missions can achieve a 30% increase in operational efficiency and a 25% reduction in mission completion time.\n\nAcceptance Criteria:\n- The communication protocol must enable data exchange between drones with a success rate of at least 95%.\n- Joint missions should demonstrate a 30% improvement in task execution speed compared to previous missions without interoperability.\n- User feedback from mission participants should reflect a satisfaction rate of 90% or higher regarding the effectiveness of drone collaboration.\n\nTest Outline:\n- Conduct interoperability tests to measure the success rate of data exchange between different drones.\n- Analyze mission performance metrics before and after implementing the communication protocols to quantify improvements in efficiency and completion time.\n- Gather feedback from mission participants through surveys to assess their satisfaction with the collaborative capabilities of the drones.",
+            "rewritten": "User Story:\nAs an interoperability coordinator, I want drones from various allied forces to integrate seamlessly and operate cohesively so that joint missions can achieve a 30% increase in operational efficiency and reduce mission completion time by 25%.\n\nAcceptance Criteria:\n- The interoperability system must facilitate data exchange between drones with a minimum 95% success rate.\n- Joint missions should exhibit a 30% faster task execution compared to those without integrated drone collaboration.\n- Feedback from mission participants should indicate a satisfaction level of 90% or above regarding the drones' cooperative functions.\n\nTest Outline:\n- Perform interoperability assessments to verify the data exchange success rate among diverse drones.\n- Evaluate mission performance data before and after implementing interoperability to validate a 30% enhancement in speed and a 25% reduction in completion time.\n- Conduct participant surveys post-mission to evaluate satisfaction levels concerning the interoperability of drone operations.",
+            "scoring_criteria_text": "I-I:  | N-N:  | V-V:  | E-E:  | S-S:  | T-T: ",
+            "fuzzy_terms": [],
+            "low_score_explanations": {},
+            "score_new": {
+                "reasons": {
+                    "I": "The goal is clearly independent and aims at a single, measurable outcome of enhancing operational efficiency. | HEU: single_goal=True; has_As/I...=False",
+                    "N": "The need is high-level with specific, measurable outcomes enabling feedback and negotiation. | HEU: rigid_spec=True; has_AC=True (bullets: 3)",
+                    "V": "There is an explicit, user/business-relevant benefit focusing on operational efficiency and mission success. | HEU: benefit_clause(so that/in order to)=False; measurable=True",
+                    "E": "Effort is measurable with specific performance metrics and constraints defined. | HEU: has_AC=True (bullets: 3); measurable=True",
+                    "S": "The story size is appropriate for a Sprint with balanced development and testing activities. | HEU: story_token_len=2",
+                    "T": "Tests are completed and validated with clear acceptance criteria and measurable outcomes. | HEU: has_AC=True (bullets: 3); has_Test_Outline=True"
+                },
+                "I": 4,
+                "N": 3,
+                "V": 3,
+                "E": 5,
+                "S": 5,
+                "T": 5,
+                "overall": 4,
+                "meets_thresholds": {
+                    "I": true,
+                    "N": true,
+                    "V": true,
+                    "E": true,
+                    "S": true,
+                    "T": true,
+                    "overall": true
+                }
+            }
+        }
+    ],
+    "email_list": [
+        "ca0983896371@gmail.com",
+        "tzuyu.cheng@iss.nthu.edu.tw",
+        "ca098386371@gmail.com"
+    ]
+}

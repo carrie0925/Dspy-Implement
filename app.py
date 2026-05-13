@@ -1,8 +1,10 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import os
 import json
 import uuid
 import pandas as pd
+import random
 from datetime import datetime
 from pathlib import Path
 from dotenv import load_dotenv
@@ -23,26 +25,6 @@ except ImportError:
 # --- 2. 基礎配置與定義 (雙語化處理) ---
 st.set_page_config(page_title="User Story 實驗系統", layout="wide")
 
-# 模糊性定義 (中英雙語)
-AMBIGUITY_TYPES = {
-    "Lexical (詞彙模糊)": {
-        "en": "Ambiguity at the level of individual words that might unconsciously exist due to words having several meanings because of etymological differences or related but different meanings.",
-        "zh": "存在於單字層級的模糊性。可能因為單字本身有多種含義，導致不自覺地產生多種解釋。"
-    },
-    "Syntactic (語法模糊)": {
-        "en": "Ambiguity at the sentence level that is present when a sentence can be interpreted using different grammatical structures.",
-        "zh": "存在於句子層級的模糊性。當一個句子可以使用不同的文法結構來解釋時就會發生。"
-    },
-    "Semantic (語義模糊)": {
-        "en": "Ambiguity at the phrase (i.e., part of a sentence) or sentence level that exists if there are multiple interpretations of a phrase or sentence.",
-        "zh": "存在於短語或句子層級的模糊性。當一個短語或句子有多種解讀方式時就會發生。"
-    },
-    "Pragmatic (語用模糊)": {
-        "en": "Ambiguity at the phrase or sentence level that is present if the context does not clarify the intended meaning.",
-        "zh": "存在於短語或句子層級的模糊性。當上下文情境無法釐清作者真實意圖時就會發生。"
-    }
-}
-
 # INVEST 標題
 INVEST_FULL_NAMES = {
     "I": "Independent (獨立性)", 
@@ -56,74 +38,74 @@ INVEST_FULL_NAMES = {
 # INVEST 定義 (中英雙語)
 INVEST_DESCRIPTIONS = {
     "I": {
-        "en": "The independent story is self-sufficient. An independent story can be pulled into a sprint, built, and tested without waiting for another story to be completed first. It may share databases, APIs, or services with other stories, but no other story needs to be finished before this one can move forward. If removing it from the sprint would not block or delay any other story, it is independent.",
-        "zh": "獨立的 Story 是自給自足的。它可以隨時被排入 Sprint 中開發和測試，不需要等待其他 Story 先完成。即使移除它，也不會阻礙或延遲任何其他進度。"
+        "en": "A independent story is self-sufficient. An independent story can be pulled into a sprint, built, and tested without waiting for another story to be completed first. It may share databases, APIs, or services with other stories, but no other story needs to be finished before this one can move forward. If removing it from the sprint would not block or delay any other story, it is independent.",
+        "zh": "獨立性：一個獨立的使用者故事是自足的，代表它可以放入衝刺(Sprint) 中獨立開發、測試與交付，不需要先等待其他使用者故事完成。它可以共享既有的資料庫、API 或服務；即便其他使用者故事未先完成，它仍然可以繼續推進，不需要先完成其他任何故事。若從 Sprint 中移除此故事不會阻礙或延誤其他故事，則可視為具有獨立性"
     },
     "N": {
         "en": "A negotiable story tells the team what the user needs and why it matters, without specifying how the system should deliver it. A developer reading the story should find the goal clear, but the solution open — no named technology, UI component, or system behaviors have been decided in advance. The story is a starting point for a conversation, not a specification to be implemented as written.",
-        "zh": "可協商的 Story 告訴團隊使用者需要什麼以及為什麼重要，但不強制規定系統該如何實作（不提特定技術或 UI）。它是討論的起點，而非寫死的死板規格。"
+        "zh": "可協商性：具有可協商性的使用者故事，應清楚說明使用者需要什麼，以及為什麼重要，但不應過早指定系統要如何實作。開發人員讀完後應能理解目標，但仍保有討論解法的空間。也就是說，故事不應預先指定特定技術、UI 元件、工作流程或系統行為。使用者故事應是團隊對話的起點，而不是必須逐字實作的規格文件"
     },
     "V": {
-        "en": " The valuable story answers the question of why this feature should exist, from the perspective of a specific user or the business, not the development team. A tester reading only the \"so that\" clause should be able to name who benefits and what changes in their situation when the feature exists. A story that describes only what needs to be built is a developer task, not a user story, regardless of how it is formatted.",
-        "zh": "有價值的 Story 清楚回答了「為什麼需要這個功能？」，並點出誰能受益以及改善了什麼。只寫出「系統需要做什麼」的只是開發任務，不是 User Story。"
+        "en": "A valuable story answers the question of why this feature should exist, from the perspective of a specific user or the business, not the development team. A tester reading only the \"so that\" clause should be able to name who benefits and what changes in their situation when the feature exists. A story that describes only what needs to be built is a developer task, not a user story, regardless of how it is formatted.",
+        "zh": "有價值：具有價值的使用者故事，應從特定使用者或商業需求的角度，說明這個功能為什麼值得存在，而不只是描述開發團隊要做什麼。測試人員即使只閱讀「以便（so that）」子句，應能夠判斷受益者為何人以及該功能存在時其情境會有何改變。無論敘述方式如何呈現,一則只描述「要建置什麼」的故事是開發任務,而不是使用者故事。"
     },
     "E": {
-        "en": "The estimable story gives the development team three things: a concrete action describing what the system must do, scope boundaries defining what is included and excluded, and acceptance conditions stating what done looks like. A developer reading the story should be able to assign a complexity estimate without consulting anyone outside the team or making assumptions not stated in the text. If two developers reading the same story independently would produce significantly different estimates, the story is not yet estimable.",
-        "zh": "可估算的 Story 提供了明確的動作、範圍邊界與驗收條件。開發者閱讀後不需要東猜西想，就能給出大致的工作量估算。"
+        "en": "A estimable story gives the development team three things: a concrete action describing what the system must do, scope boundaries defining what is included and excluded, and acceptance conditions stating what done looks like. A developer reading the story should be able to assign a complexity estimate without consulting anyone outside the team or making assumptions not stated in the text. If two developers reading the same story independently would produce significantly different estimates, the story is not yet estimable.",
+        "zh": "可估算性：具有可估算性的使用者故事，應提供開發團隊三項資訊：系統需要執行的具體動作、工作範圍的邊界(包含與不包含的內容)，以及用來判斷「完成狀態」的驗收條件。開發人員閱讀後，應能在不詢問團隊外部人員、也不做額外假設的情況下，估算此故事的複雜度。如果兩位開發人員各自讀完同一則故事，得出的估算結果差距明顯，則該故事還不具備可估算性。"
     },
     "S": {
-        "en": "The small story covers one user goal that a team can fully deliver within a single sprint (coded, tested, and releasable) without splitting it into separate deliverables first. A developer reading the story should be able to identify a single action with a bounded outcome, where no part of the story could be removed and still deliver independent value on its own. At the same time, a small story may represent a meaningful incremental step toward a larger user goal or desired outcome. If the story contains multiple goals that could each stand alone as separate stories, or conditions that could be built and tested independently, it needs to be broken down before entering a sprint.",
-        "zh": "小巧的 Story 涵蓋了團隊可以在單一 Sprint 內完全交付（開發、測試、可發布）的單一使用者目標。如果包含了多個目標，就應該被拆分。"
+        "en": "A small story covers one user goal that a team can fully deliver within a single sprint (coded, tested, and releasable) without splitting it into separate deliverables first. A developer reading the story should be able to identify a single action with a bounded outcome, where no part of the story could be removed and still deliver independent value on its own. At the same time, a small story may represent a meaningful incremental step toward a larger user goal or desired outcome. If the story contains multiple goals that could each stand alone as separate stories, or conditions that could be built and tested independently, it needs to be broken down before entering a sprint.",
+        "zh": "小/適切規模：使用者故事若具有適切規模，代表它聚焦於一個使用者目標，且團隊能在單一 Sprint 中完成開發、測試與交付，不需要先拆成多個交付項目。開發人員閱讀後，應能辨識出一個明確動作與有邊界的成果，而且故事裡任何一部分被拿掉，剩下的內容就無法單獨產出價值。同時，一則適切規模的故事，也可以是朝向更大使用者目標或預期成果邁進的階段性步驟。若故事包含多個可各自獨立交付的目標，或包含可分開開發與測試的條件，則應在進入 Sprint 前拆分。"
     },
     "T": {
-        "en": "The testable story gives a QA tester everything needed to verify the feature without interpretation or discussion. A tester reading the story should be able to identify what to observe, what action to perform, and what a passing result looks like, stated in specific terms such as a number, date, named system state, or defined threshold. In practice, these acceptance criteria may be refined through discussion among QA, the product owner, and the team, but they should ultimately be expressed in a clear and explicit form within the story. If two testers reading the same story would disagree on whether the same system output passes or fails, the acceptance criteria are not yet testable.",
-        "zh": "可測試的 Story 給予 QA 測試人員明確的驗證資訊。測試人員能清楚知道要觀察什麼、做什麼動作，以及怎樣才算「通過」（例如具體的數字、狀態）。沒有模糊解釋的空間。"
+        "en": "A testable story gives a QA tester everything needed to verify the feature without interpretation or discussion. A tester reading the story should be able to identify what to observe, what action to perform, and what a passing result looks like, stated in specific terms such as a number, date, named system state, or defined threshold. In practice, these acceptance criteria may be refined through discussion among QA, the product owner, and the team, but they should ultimately be expressed in a clear and explicit form within the story. If two testers reading the same story would disagree on whether the same system output passes or fails, the acceptance criteria are not yet testable.",
+        "zh": "可測試性：可測試的故事為 QA 測試人員提供了驗證功能所需的一切資訊，不需要額外的解讀或討論。閱讀故事的測試人員應該能夠識別要觀察什麼、執行什麼動作，以及什麼樣子的結果算是通過，並以具體的術語陳述，例如數字、日期、明確命名的系統狀態或已定義的門檻值。實務上，這些驗收標準可以透過 QA、產品負責人（Product Owner）和團隊之間的討論來細化，但最終應在故事中以清晰且明確的形式表達。如果兩位閱讀相同故事的測試人員對同一個系統輸出是否合格產生分歧，則該驗收標準尚不具備可測試性。"
     }
 }
 
 # 內建 1~5 分中文輔助對照表
 INVEST_RUBRIC_15_ZH = {
     "I": {
-        "1": "明確被其他特定的 Story 阻擋。在其他任務完成前無法開始。",
-        "2": "可以開始，但核心決策邏輯需依賴另一個 Story，開發者無法單獨判斷。",
-        "3": "功能獨立，但測試與驗證強烈依賴其他必須預先存在的資料或環境狀態。",
-        "4": "可獨立開發與實作，僅有少數共享介面依賴，不影響開發進度。",
-        "5": "完全獨立。可隨時被拉進 Sprint 並獨立建置與測試。"
+        "1": "等級 1：該故事明確地受到其他特定使用者故事阻礙，或必須等其他故事完成後才能開始，在其他故事完成之前，這個故事無法開始運作，例如：「身為使用者，我希望在新的訊息系統實施後收到通知。」",
+        "2": "等級 2：該故事可以開始進行，但其核心商業規則或決策邏輯是在另一個特定故事中定義或是與其共用的。該故事依賴外部邏輯才能正確運作，開發人員無法在不參考另一個故事下，獨自閱讀此故事判斷完整的決策邏輯。例如：「身為使用者，我希望在申請折扣時，使用與會員升級流程相同的資格規格，以確保我的定價一致。」",
+        "3": "等級 3：該故事描述了一個獨立的功能，但它所操作的物件、記錄或帳戶狀態，必須在生產環境前存在，才能促使這使用者故事有意義。建置工作是可以分離的，但故事仍依賴先決條件才能進行完整驗證。這種依賴關係是基於已存在的資料，而不是共用的邏輯，且只有在故事文字中明確陳述此類依賴關係時才應進行評估。例如：「身為回訪顧客，我希望檢視我過去的歷史訂單，以便我能快速重新訂購商品。」",
+        "4": "等級 4：此故事可以獨立開發與實作，其依賴僅限於共用介面或服務系統元件。其他使用者故事不需先完成，且這些既有元件已足以支援開發與驗證。例如：「允許使用者透過現有的電子郵件服務重設密碼。」",
+        "5": "等級 5：該故事完全自成一體；它可以獨立開發和發布，沒有阻塞性的依賴，也不需要遵守任何外部條件要求的開發順序或驗證。例如：「允許使用者變更他們的帳戶密碼。驗收條件：密碼變更流程在帳戶系統內獨立運作，不需要依賴其他功能或外部工作流程。」"
     },
     "N": {
-        "1": "寫得像死板的技術規格，直接規定了 UI 或資料庫寫法，無討論空間。",
-        "2": "包含過多實作細節，高度限制了開發團隊的技術選擇。",
-        "3": "團隊有一定彈性，但部分細節仍綁得太死，需要花時間與 PO 重新協商。",
-        "4": "專注於價值與需求，開發團隊可自由決定如何用技術來實作。",
-        "5": "極佳的對話起點。完美描述痛點，技術實作完全開放給團隊討論決定。"
+        "1": "等級 1：該故事規定了特定的後端、架構、演算法、資料庫或技術實作細節，幾乎沒有留給團隊考慮替代解決方案的空間，這被視為可協商性的最低等級，因為它限制了底層技術設計，並可能限制了多個下游實作的選擇，例如：「身為使用者，我希望系統將我的購買記錄儲存在一個具有三個正規化資料表（訂單、項目、付款）的 MySQL 資料庫中，以便我能檢視我過去的交易。」",
+        "2": "等級 2：該故事指定了一個特定的 UI 元件、互動模式或展示層的解決方案。使用者目標可能很明確，後端實作可能仍然保持開放，但介面解決方案在團隊需求釐清之前就已經決定好了。例如：「身為使用者，我希望在頂部導覽列中有一個下拉式選單來選擇我的偏好語言，以便網站以我的語言顯示。」",
+        "3": "等級 3：該故事描述了特定的系統行為、回應管道或處理流程，而不是使用者的成果。沒有指定 UI 元件，但故事承諾了系統將如何運作，在有替代方案存在的情況下，指定了通知方法、工作流程步驟或處理順序。團隊可以選擇介面，但不能重新考慮行為方法。例如：「身為使用者，我希望在完成結帳後收到一封電子郵件確認信，以便我知道我的訂單已成立。」",
+        "4": "等級 4：該故事清楚地陳述了使用者的目標和需求背後要解決的理由。技術實作保持開放。故事可能包含必要的限制，例如政策、合規性、無障礙性、整合或業務規則，但這些限制並未規定特定的 UI 元件、工作流程順序、演算法、資料庫設計或技術解決方案。團隊仍然有空間選擇如何實作解決方案。例如：「身為銀行客戶，我希望在檢視帳戶詳細資訊之前驗證我的身分，以確保我的財務資訊受到保護。」",
+        "5": "等級 5：該故事定義了使用者需求或業務問題，而沒有暗示特定的解決方案、介面、工作流程、管道、技術或實作限制。它讓團隊能在需求釐清過程中共同創作出最合適的解法。例如：「身為銀行客戶，我希望我的帳戶詳細資訊能免於未經授權的存取，以確保我的財務資訊安全。」"
     },
     "V": {
-        "1": "完全看不出價值，或只是一個純後端/技術任務，對使用者無感。",
-        "2": "有提到價值但非常敷衍（例如：為了讓我能做事），無法看出解決了什麼痛點。",
-        "3": "可以推測出價值，但描述的受眾或帶來的改變不夠精準。",
-        "4": "清楚描述特定使用者的痛點，以及此功能將如何改善現況。",
-        "5": "價值論述極度強大且精準，任何人看一眼就能明白這功能為何至關重要。"
+        "1": "等級 1：描述了一項開發人員任務（例如，「重構程式碼」、「建立資料表」），且無法察覺的使用者或商業價值。例如：「重構後端程式碼。」",
+        "2": "等級 2：效益子句描述了完成該動作的直接結果，也就是使用者做完該動作後當下成立的狀態，而不是解釋這個結果為什麼很重要。這裡的「以便（so that）」只是把動作換句話說，重新陳述為「已完成的狀態」、「取得存取的條件」,或「系統的確認訊息」。它只說明功能跑得起來,卻沒有說使用者因此能做什麼、能避開什麼,或能達成什麼。例如：「身為使用者，我希望提交我的工時表，以便我的工時表被提交。」「身為會員，我希望登入，以便我已登入並可以存取該網站。」「身為顧客，我希望下訂單，以便訂單在系統中被建立。」",
+        "3": "等級 3：效益子句提出了一個正面的方向（例如，節省時間、改善體驗、提高效率），但沒有具體說明誰能受惠、在什麼情況下，或是與什麼基準相比。這個價值聽起來合理但很籠統：同一段「以便(so that)」子句可以挪用到待辦清單裡的好幾則故事上，讀起來都不會違和。產品團隊無法使用這種效益來排優先順序、驗證成效，或衡量這則故事的價值。例如：模糊的成果：「身為回訪顧客，我希望檢視我之前的訂單，以便我在重新訂購時能節省時間。」 體驗聲明：「身為新使用者，我希望在引導流程中有指引的設定步驟，以便體驗更輕鬆且不那麼令人困惑。」",
+        "4": "等級 4：故事指定了特定的人物誌（persona），並說明具體的使用者導向效益，也就是使用者因此能做什麼、能避開什麼、或能達成什麼以前辦不到的事。這個價值足夠具體，如果移植到另一個故事上，讀起來就會違和。即使沒有明確的績效指標，使用者的成果也清楚且可執行。例如：正向收益：「身為現場技術人員，我希望可以離線存取設備手冊，以便我無需等待網路連線即可完成維修。」 避免損失：「身為作家，我希望我的草稿每兩分鐘自動儲存一次，以便在我的瀏覽器崩潰時我不會遺失工作進度。」",
+        "5": "等級 5：故事清楚闡述了對特定人物誌的價值，同時也將功能與可衡量的業務成果或關鍵結果連結起來。該價值既與使用者相關，也能量化評估。例如：「身為購票者，我希望透過自助服務頁面查看我的票券狀態，以便我無需聯繫客服即可解決狀態問題；成效將以『票券狀態相關(工單狀態、問題單狀態、客服單狀態)的客服請求減少 10%』 來衡量。」"
     },
     "E": {
-        "1": "完全無法估算。缺乏範圍與條件，開發者無法猜測需要多少時間。",
-        "2": "有大致方向，但遺漏了關鍵範圍，需做大量假設才能給出分數。",
-        "3": "可給出粗估，但仍有邊緣情況需與外部人員確認才能精準估算。",
-        "4": "內容清晰，包含具體動作與邊界，團隊可直接給出可靠的工作量估算。",
-        "5": "極度清晰且細節完整。團隊中任何開發者獨立評估，幾乎都會給出一樣的估算。"
+        "1": "等級 1：故事未指定任何具體的系統行為。它可能表達了某種期望的品質、組織目標或籠統的改善方向，但沒有描述系統應該做什麼或讓使用者能做什麼。無法單從文字中形成對這項工作的共同理解，估算無法開始。例如：「身為使用者，我希望系統更好、更可靠，以便我可以信任它。」",
+        "2": "等級 2：故事指名了一個可識別的系統動作，但沒有提供範圍邊界——沒有限制、條件、格式、數量或排除事項。團隊大致知道要建置什麼，但無法針對起點和終點達成共識。開發人員之間的估算值會有很大差異，因為每個人都會假設不同的範圍邊界。例如：「身為使用者，我希望搜尋產品，以便我可以找到我需要的東西。」",
+        "3": "等級 3：故事指名了一個系統動作並定義了它的主要範圍。然而，驗收條件缺失或不完整：未說明成功標準、未指定失敗路徑，或邊界案例留待推斷。團隊可以估算核心工作，但有低估的風險，因為那些尚未釐清的邊界案例，其複雜度在開發過程中才會顯現。例如：「身為使用者，我希望匯出我的報告，以便我能在系統外分析資料。」",
+        "4": "等級 4：故事定義了一個具體的動作，並且明確寫出了邊界。範圍不依賴推論或領域知識，且開發人員之間可以有一致的解讀。然而，某些驗收條件、失敗情況或邊界案例尚未完全具體說明，可能需要在實作前進行後續討論。例如：「身為購物者，我希望從產品詳細資訊頁面將產品標記為最愛，以便將其儲存到我的『最愛』清單中以供稍後查看。」",
+        "5": "等級 5：故事指定了具體的系統動作、明確的範圍邊界，以及足以進行可靠估算的驗收條件。這些條件涵蓋了主要的成功路徑以及最重要的失敗或邊界案例。開發人員可以僅憑故事本身來估算工作量，而無需依賴關鍵的未說明假設或外部領域知識。例如：「身為網站管理員，我希望職缺貼文在發布滿 30天後自動下架，自動取消發布，以便網站訪客不再看到過期的列表。驗收條件：系統應在 30 天後更新職缺狀態，已過期的職缺對網站訪客隱藏，但管理員仍可存取，並正確處理現有的未發布狀態和續約情境。"
     },
     "S": {
-        "1": "過於龐大（Epic 等級），包含太多目標，絕對無法在一個 Sprint 內做完。",
-        "2": "勉強能塞進 Sprint 但風險極高，且明顯可以拆成多個獨立故事。",
-        "3": "大小適中，但若仔細看，還是能進一步拆解出更小、更獨立的模塊。",
-        "4": "小巧且專注於單一明確目標，可在 Sprint 輕鬆交付，且難以再拆解。",
-        "5": "極度精簡專注。只包含最核心的路徑或單一條件，能極快速交付價值。"
+        "1": "等級 1：故事涵蓋了廣泛的功能/模組和端到端（end-to-end）的工作流程。範圍太大，無法被視為單一的用戶故事，顯然需要大幅度拆解。例如：「身為使用者，我想要一個完整的帳戶管理系統，以便我可以控制我的個人資料、安全性和偏好的所有層面。」",
+        "2": "等級 2：故事在單一陳述中結合了多個獨立的使用者目標，通常由「和（AND）」、「或（OR）」或是隱含著一連串獨立的動作。每個目標都可以獨立成為一個單獨的故事。該故事必須在開發開始前進行拆分。例如：「身為使用者，我希望搜尋產品、查看產品詳細資訊並將商品儲存到願望清單中，以便我規劃購買計劃。」",
+        "3": "等級 3：故事表達了單一的使用者目標，但包含多個需要分別開發與測試工作的條件，這意味著它們無法作為一個不可再分割的最小單位（atomic unit）交付。負責此故事的開發人員必須做出多個獨立的實作決策。該故事可以拆分為較小的交付項目而不會失去連貫性。例如：「身為註冊使用者，我希望在下訂單後收到確認電子郵件，並能在我的帳戶儀表板中查看訂單摘要，以便我有購買記錄。」",
+        "4": "等級 4：故事透過單一的主要路徑表達單一的使用者目標。其中出現的任何變化（例如：替代輸入、次要邊界案例）都在單次開發工作中處理，不需要單獨的交付項目。該故事已準備好進入衝刺，但開發人員在實作過程中仍需做出內部排序決策。例如：「身為使用者，我希望按名稱或類別搜尋產品，以便我能快速找到我想要的東西。」",
+        "5": "等級 5：此故事描述一個使用者動作，並有明確邊界的成果。它不包含額外的使用者目標、選用變體、替代管道、多種角色或可拆分的交付項目。若故事中包含條件，該條件必須是此單一動作或規則不可或缺的一部分，而不是另一個可獨立成篇的故事。（例如：「身為網站管理員，我希望發布超過 30 天的職缺能自動取消發布，以便已填補的職位不會顯示給訪客。」）"
     },
     "T": {
-        "1": "沒有驗收條件，或者條件過於主觀（如：介面要好看），QA 無法測試。",
-        "2": "條件模糊，缺乏具體步驟與通過標準，測試人員必須自己通靈猜測。",
-        "3": "有基本驗收條件，但漏掉重要的邊緣情況（Edge cases）或具體數值限制。",
-        "4": "條件明確。測試人員清楚知道要執行什麼、觀察什麼，以及怎樣算通過。",
-        "5": "條件極度嚴謹。包含正常流程與錯誤處理，甚至可直接轉化為自動化測試腳本。"
+        "1": "等級 1：驗收完全取決於主觀判斷。故事使用了評價性語言（「直觀」、「好」、「吸引人」、「易於使用」），反映的是一種主觀看法而非系統狀態。任兩個測試人員都不會觀察到相同的事情或應用相同的標準。例如：「身為使用者，我想要一個美觀且直觀的介面，以便我享受使用該應用程式。」",
+        "2": "等級 2：故事指名了使用者想要的功能或性能，但沒有描述測試人員可以觀察到的任何具體系統行為。預期行為只能從功能名稱去推測，測試人員大致知道要查驗哪個區塊，但沒有明確的輸出、狀態變更或系統回應作為目標。例如：「身為使用者，我想要一個個人化的儀表板，以便我可以快速存取我需要的內容。」",
+        "3": "等級 3：故事描述了一個測試人員可以找到並觀察的具體系統行為。然而，通過條件是相對於一個未說明的標準來定義的，這個標準可以是一個比較基準點、門檻值或是一個基線，而且這些都不涵蓋故事裡。測試人員可以執行測試，但若故事中隱含的比較基準未釐清，則無法做出最終判斷。兩位觀察到相同系統輸出的測試人員，可能對其是否合格產生分歧。例如：「身為使用者，我希望當有新活動發生時我的儀表板能自動更新，以便我無需重新整理頁面即可始終看到最新資訊。」",
+        "4": "等級 4：故事描述了一個可觀察的系統行為，並給出了一個通常可以理解的預期結果，但至少有一個邊界條件仍有待解釋。測試人員可以識別要驗證什麼，但仍必須對時間點、門檻值、系統狀態、使用者條件或通過/未通過的界線做出微小的假設。存在諸如「最近的」、「活躍的」、「相關的」、「快速地」或「適當的」之類的主觀描述詞，但未明確定義。例如：「身為使用者，我希望當有人回覆我的貼文時收到通知，以便我可以在對話仍然活躍（active）時進行後續追蹤。」",
+        "5": "等級 5：等級 5：故事使用確定性的通過／未通過標準來描述驗收條件，例如數值、日期、持續時間、命名的系統狀態、明確的規則或布林條件。主觀描述詞僅在被明確定義的情況下才是可以接受的。任何閱讀故事的測試人員對於相同的系統輸出，都會在無需討論或解讀的情況下做出相同的合格/失敗決定。例如：「身為使用者，我希望從我的儀表板中自動移除超過 7 天的通知，以便我只看到最近的活動。驗收條件：當通知的建立日期早於目前日期 7天以上時，該通知將被移除。在過去 7天內建立的通知持續顯示。」條件極度嚴謹。包含正常流程與錯誤處理，甚至可直接轉化為自動化測試腳本。"
     }
 }
 
@@ -132,7 +114,9 @@ if 'init_check' not in st.session_state:
     query_params = st.query_params
     if "id" in query_params:
         exp_id = query_params["id"]
-        master_path = f"/user_project/master_{exp_id}.json"
+        
+        # 修正：確保讀取時的相對路徑與 PM_SETUP 存檔時一致
+        master_path = os.path.join("data", "user_project", f"master_{exp_id}.json")
         
         if os.path.exists(master_path):
             with open(master_path, "r", encoding="utf-8") as f:
@@ -140,9 +124,14 @@ if 'init_check' not in st.session_state:
             
             st.session_state.results_df = pd.DataFrame(master_data["results"])
             st.session_state.email_list = master_data["email_list"]
-            st.session_state.project_context = master_data["project_context"]
+            st.session_state.project_context = master_data.get("project_context", "")
             st.session_state.exp_id = exp_id
+            
+            # 讀取成功，直接跳轉到背景資訊填寫頁面
             st.session_state.step = "USER_INFO" 
+        else:
+            st.error(f"找不到實驗代碼為 {exp_id} 的專案資料，請確認連結是否正確。")
+            
     st.session_state.init_check = True
 
 # --- 4. 初始化 Session State ---
@@ -151,6 +140,7 @@ if 'results_df' not in st.session_state: st.session_state.results_df = None
 if 'current_idx' not in st.session_state: st.session_state.current_idx = 0
 if 'user_responses' not in st.session_state: st.session_state.user_responses = {}
 if 'exp_id' not in st.session_state: st.session_state.exp_id = str(uuid.uuid4())[:8]
+if 'ab_swaps' not in st.session_state: st.session_state.ab_swaps = {}
 
 # --- 5. 輔助函數 ---
 def process_uploaded_data(file):
@@ -161,7 +151,6 @@ def process_uploaded_data(file):
         norm_stories.append({"id": i, "description": str(content)})
     return norm_stories
 
-# 🔥 補回漏掉的資料淨化翻譯機 🔥
 def safe_json_encoder(obj):
     """將 numpy 或 pandas 的資料型態轉為 Python 原生型態"""
     if hasattr(obj, 'item'):
@@ -176,7 +165,6 @@ def save_json_result(final_data):
     email_safe = final_data['user_info']['email'].replace('@', '_at_').replace('.', '_')
     fname = os.path.join(survey_folder, f"result_{st.session_state.exp_id}_{email_safe}.json")
     
-    # 這裡也加上 default，雙重保險
     with open(fname, 'w', encoding='utf-8') as f:
         json.dump(final_data, f, ensure_ascii=False, indent=4, default=safe_json_encoder)
     return fname
@@ -312,93 +300,128 @@ elif st.session_state.step == "USER_INFO":
 
 # --- 流程 C: A/B 版本評估 ---
 elif st.session_state.step == "SURVEY_MODE":
+    df = st.session_state.results_df
+    idx = st.session_state.current_idx
+    row = df.iloc[idx]
     
-    # 🔥 在這裡加上字體縮小的 CSS 🔥
-    st.markdown("""
+    # 注入 CSS 動畫、右側置頂與字體縮小樣式
+    st.markdown(f"""
     <style>
     /* 針對 Streamlit 左右佈局，鎖定第 2 個欄位內部的直式區塊進行置頂 */
     [data-testid="column"]:nth-of-type(2) > div, 
-    [data-testid="stColumn"]:nth-of-type(2) > div {
+    [data-testid="stColumn"]:nth-of-type(2) > div {{
         position: sticky !important;
         top: 4rem !important;
         max-height: 85vh !important;
         overflow-y: auto !important;
         padding-left: 1rem;
         border-left: 2px solid #f0f2f6;
-    }
-    
-    /* 針對右側欄位的提示框 (stAlert) 內的段落文字進行縮小 */
-    [data-testid="column"]:nth-of-type(2) .stAlert p {
+    }}
+    [data-testid="column"]:nth-of-type(2) .stAlert p {{
         font-size: 0.85rem !important;
         line-height: 1.4 !important;
-    }
+    }}
+    .streamlit-expanderContent {{
+        padding-top: 5px !important;
+    }}
+    
+    /* 換題閃爍動畫 */
+    @keyframes flashEffect_{idx} {{
+        0% {{ opacity: 0.3; transform: translateY(10px); background-color: rgba(255, 250, 205, 0.4); }}
+        100% {{ opacity: 1; transform: translateY(0); background-color: transparent; }}
+    }}
+    [data-testid="block-container"] {{
+        animation: flashEffect_{idx} 0.6s ease-out;
+    }}
     </style>
     """, unsafe_allow_html=True)
 
-    df = st.session_state.results_df
-    idx = st.session_state.current_idx
-    row = df.iloc[idx]
+    # 注入 JavaScript 強制將外層視窗滾動到最上方
+    components.html(
+        """
+        <script>
+        setTimeout(function() {
+            var mainContainer = window.parent.document.querySelector('.main');
+            if (mainContainer) {
+                mainContainer.scrollTo({top: 0, behavior: 'smooth'});
+            }
+            window.parent.scrollTo({top: 0, behavior: 'smooth'});
+        }, 100);
+        </script>
+        """,
+        height=0
+    )
+
+    # 右下角彈出提示 (如果是同一題重複刷新則不提示)
+    if st.session_state.get('last_notified_idx') != idx:
+        st.toast(f"✨ 已跳轉至第 {idx + 1} 題", icon="🚀")
+        st.session_state.last_notified_idx = idx
+
+    # --- A/B 隨機分配 ---
+    if idx not in st.session_state.ab_swaps:
+        st.session_state.ab_swaps[idx] = random.choice([True, False])
     
-    # 讀取版本內容與新增的修正原因
-    ver_a = row.get('description') or row.get('original') or "內容讀取失敗"
-    ver_b = row.get('final_text') or row.get('optimized_description') or row.get('rewritten') or "優化內容讀取失敗"
-    reason = row.get('correction_reason') or "系統未提供明確的修正原因" # [新增] 讀取 LLM 產出的修正原因
+    is_swapped = st.session_state.ab_swaps[idx]
+    
+    orig_text = row.get('description') or row.get('original') or "內容讀取失敗"
+    opt_text = row.get('final_text') or row.get('optimized_description') or row.get('rewritten') or "優化內容讀取失敗"
+    reason = row.get('correction_reason') or "系統未提供明確的修正原因"
+
+    if is_swapped:
+        ver_a, ver_b = opt_text, orig_text
+        a_is, b_is = "Optimized", "Original"
+    else:
+        ver_a, ver_b = orig_text, opt_text
+        a_is, b_is = "Original", "Optimized"
 
     st.progress((idx + 1) / len(df))
-    st.subheader(f"User Story 模糊性品質評估問卷 ({idx + 1} / {len(df)})")
+    st.subheader(f"User Story 評估問卷 ({idx + 1} / {len(df)})")
     
     col_left, col_right = st.columns([3, 1])
 
-    # 右側：永遠固定顯示當前 User Story 的雙版本對照與優化原因
+    # 右側：固定顯示當前 User Story 的雙版本對照
     with col_right:
         st.markdown("### User Story")
-        st.error(f"**Version A (Original)**\n\n{ver_a}")
-        st.success(f"**Version B (Optimized)**\n\n{ver_b}")
+        st.info(f"**Version A**\n\n{ver_a}")
+        st.info(f"**Version B**\n\n{ver_b}")
         
-        # [新增] 顯示優化原因提示框
-        st.info(f"**💡 Optimization Reason (優化原因)**\n\n{reason}")
+        st.warning(f"**💡 修正提示 (Note)**\n\n{reason}")
 
     # 左側：問卷核心區
     with col_left:
         st.info("""
         **📝 問卷說明**
         
-        請參考右方的 **Version A (原始版本)** 與 **Version B (優化版本)**，已提供中文翻譯為輔助閱讀，但實際判斷請以英文版本為各題進行評分：
+        請參考右方的 **Version A** 與 **Version B**，並針對這兩個版本進行評分：
         - **Part 1: INVEST 評估**
           依據敏捷開發的 INVEST 準則進行評分。請對照每個題目下方的 1(最低)-5(最高) 詳細評分標準，為 A、B 兩個版本給分。
         - **Part 2: 模糊性 (Ambiguity) 評估**
-          評估這兩個版本的 User Story 是否存在詞彙(Lexical)、語法(Semantic)、語義(Syntactic)或語用(Pragmatic)上的模糊不清。1 分代表「完全沒有模糊」，5 分代表「非常模糊」。
+          評估這兩個版本的 User Story 是否有任何部分不明確，或可能產生多種解釋，並提供您的建議。
         """)
         st.write("")
 
         invest_a_scores = {}
         invest_b_scores = {}
-        amb_a_scores = {}
-        amb_b_scores = {}
 
         # --- Part 1: INVEST 評分矩陣 ---
         st.markdown("## Part 1: INVEST Evaluation")
-        st.write("Please rate Version A and Version B for each dimension according to the definitions and the detailed 1-5 scoring criteria.")
         st.write("")
         
         for dim in DIM_KEYS:
             full_name = INVEST_FULL_NAMES[dim]
             st.markdown(f"### 【 {full_name} 】")
             
-            # 📌 雙語定義顯示
-            st.caption(f"**Definition:** {INVEST_DESCRIPTIONS[dim]['en']}")
-            st.info(f"💡 **中文輔助理解:** {INVEST_DESCRIPTIONS[dim]['zh']}")
+            st.markdown(f"<div style='font-size:0.85rem; color:#444; margin-bottom: 5px;'><strong>Definition:</strong> {INVEST_DESCRIPTIONS[dim]['en']}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='font-size:0.85rem; color:#2c3e50; background-color: #f0f8ff; padding: 8px; border-radius: 5px; margin-bottom: 10px;'>💡 <strong>中文輔助理解:</strong> {INVEST_DESCRIPTIONS[dim]['zh']}</div>", unsafe_allow_html=True)
             
-            # 📌 展開面板：包含英文與中文的 Rubric
-            with st.expander(f"🔍 點此展開 {full_name.split(' ')[0]} ({dim}) 的 1~5 分詳細評分標準", expanded=False):
+            with st.expander(f"🔍 點此展開Level 1~5 的詳細評分標準", expanded=False):
                 for score in ["1", "2", "3", "4", "5"]:
-                    # 英文來自 core，中文來自我們內建的字典
                     desc_en = INVEST_RUBRIC_15.get(dim, {}).get(score, "N/A")
                     desc_zh = INVEST_RUBRIC_15_ZH.get(dim, {}).get(score, "")
                     
-                    st.markdown(f"- **Score {score}**: {desc_en}")
+                    st.markdown(f"<div style='font-size: 0.85rem; line-height: 1.4; margin-bottom: 3px;'><strong style='font-size: 0.9rem;'>Score {score}:</strong> {desc_en}</div>", unsafe_allow_html=True)
                     if desc_zh:
-                        st.markdown(f"<div style='color:#666; margin-left: 20px; margin-bottom:15px;'><em>{desc_zh}</em></div>", unsafe_allow_html=True)
+                        st.markdown(f"<div style='font-size: 0.8rem; color:#666; margin-left: 20px; margin-bottom: 12px;'><em>{desc_zh}</em></div>", unsafe_allow_html=True)
 
             c1, c2 = st.columns(2)
             with c1:
@@ -421,32 +444,40 @@ elif st.session_state.step == "SURVEY_MODE":
 
         # --- Part 2: Ambiguity 評分矩陣 ---
         st.markdown("## Part 2: Ambiguity Evaluation")
-        st.write("Does this user story have the following ambiguity? (1: No ambiguity ~ 5: Very ambiguous)")
-        st.write("")
+        
+        amb_options = ["Yes 是", "No 否", "Not sure 不確定"]
 
-        for amb_key, desc_dict in AMBIGUITY_TYPES.items():
-            st.markdown(f"### Does this user story have **{amb_key}**?")
-            
-            # 📌 雙語定義顯示
-            st.caption(f"**Definition:** {desc_dict['en']}")
-            st.info(f"💡 {desc_dict['zh']}")
-            
-            c1, c2 = st.columns(2)
-            with c1:
-                amb_a_scores[amb_key.split(' ')[0]] = st.radio( 
-                    f"Version A Score:", 
-                    options=[1, 2, 3, 4, 5], 
-                    horizontal=True, 
-                    key=f"amb_a_{idx}_{amb_key}"
-                )
-            with c2:
-                amb_b_scores[amb_key.split(' ')[0]] = st.radio( 
-                    f"Version B Score:", 
-                    options=[1, 2, 3, 4, 5], 
-                    horizontal=True, 
-                    key=f"amb_b_{idx}_{amb_key}"
-                )
-            st.markdown("<br>", unsafe_allow_html=True) 
+        st.markdown("#### Version A")
+        amb_a_choice = st.radio(
+            "Is any part of the version A user story ambiguous or open to multiple interpretations? \n\n"
+            "針對版本 A 的使用者故事是否有任何部分不明確，或可能產生多種解釋？",
+            options=amb_options,
+            key=f"amb_a_choice_{idx}"
+        )
+        amb_a_text = ""
+        if amb_a_choice == "Yes 是":
+            amb_a_text = st.text_area(
+                "If yes, please list the ambiguous phrase and your suggestions. \n\n"
+                "若上述的回答為是，請列出該段不明確的文字在以下輸入框，並列出您的修正建議：",
+                key=f"amb_a_text_{idx}"
+            )
+
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        st.markdown("#### Version B")
+        amb_b_choice = st.radio(
+            "Is any part of the version B user story ambiguous or open to multiple interpretations? \n\n"
+            "針對版本 B 的使用者故事是否有任何部分不明確，或可能產生多種解釋？",
+            options=amb_options,
+            key=f"amb_b_choice_{idx}"
+        )
+        amb_b_text = ""
+        if amb_b_choice == "Yes 是":
+            amb_b_text = st.text_area(
+                "If yes, please list the ambiguous phrase and your suggestions. \n\n"
+                "若上述的回答為是，請列出該段不明確的文字在以下輸入框，並列出您的修正建議：",
+                key=f"amb_b_text_{idx}"
+            )
 
         st.divider()
 
@@ -458,31 +489,49 @@ elif st.session_state.step == "SURVEY_MODE":
         with c_next:
             label = "Finish and Submit" if idx == len(df)-1 else "Next User Story ➡️"
             if st.button(label):
-                # [核心修改] 確保將 correction_reason 也存入該受試者的回應紀錄中
-                st.session_state.user_responses[idx] = {
-                    "story_id": row.get('id', idx),
-                    "version_A_text": ver_a,
-                    "version_B_text": ver_b,
-                    "optimization_explanation": reason, # <--- 新增這一行，確保理由被保存
-                    "invest_A": invest_a_scores,
-                    "invest_B": invest_b_scores,
-                    "ambiguity_A": amb_a_scores,
-                    "ambiguity_B": amb_b_scores
-                }
-                
-                if idx < len(df) - 1:
-                    st.session_state.current_idx += 1
-                    st.rerun()
+                # --- 必填邏輯檢查 ---
+                error_a = amb_a_choice == "Yes 是" and not amb_a_text.strip()
+                error_b = amb_b_choice == "Yes 是" and not amb_b_text.strip()
+
+                if error_a or error_b:
+                    if error_a:
+                        st.error("⚠️ 您在 Version A 選擇了『是』，請務必填寫不明確的文字與修正建議。")
+                    if error_b:
+                        st.error("⚠️ 您在 Version B 選擇了『是』，請務必填寫不明確的文字與修正建議。")
                 else:
-                    st.session_state.step = "FINAL"
-                    st.rerun()
+                    # 檢查通過，寫入資料並跳轉
+                    st.session_state.user_responses[idx] = {
+                        "story_id": row.get('id', idx),
+                        "version_A_is": a_is,
+                        "version_B_is": b_is,
+                        "version_A_text": ver_a,
+                        "version_B_text": ver_b,
+                        "optimization_explanation": reason, 
+                        "invest_A": invest_a_scores,
+                        "invest_B": invest_b_scores,
+                        "ambiguity_A": {
+                            "has_ambiguity": amb_a_choice,
+                            "suggestion": amb_a_text
+                        },
+                        "ambiguity_B": {
+                            "has_ambiguity": amb_b_choice,
+                            "suggestion": amb_b_text
+                        }
+                    }
+                    
+                    if idx < len(df) - 1:
+                        st.session_state.current_idx += 1
+                        st.rerun()
+                    else:
+                        st.session_state.step = "FINAL"
+                        st.rerun()
 
 # --- 流程 D: 提交與自動寄信給研究者 ---
 elif st.session_state.step == "FINAL":
     st.header("填寫完成")
     st.write("感謝您的參與！您的回饋對本研究至關重要。")
     
-    interview = st.checkbox("我願意參加後續訪談 (約 30-40 分鐘，研究人員將隨機聯繫進行訪談，訪談結束後額外提供 NTD 500 補助費)")
+    interview = st.checkbox("我願意參加後續訪談(約 30-40 分鐘，研究人員將隨機聯繫進行訪談)，訪談結束後額外提供 NTD 500 補助費)")
     
     if st.button("確認提交"):
         final_payload = {

@@ -1,0 +1,177 @@
+{
+    "exp_id": "8b26c5cb",
+    "project_context": "",
+    "user_info": {
+        "email": "ca0983896371@gmail.com",
+        "age": "20-24",
+        "agile_exp": "6個月-1年",
+        "doc_exp": "6個月-1年",
+        "role": "專案經理/專案管理/產品管理",
+        "write_skill": "基礎",
+        "lang_skill": "基礎"
+    },
+    "survey_results": {
+        "0": {
+            "story_id": 0,
+            "version_A_is": "Original",
+            "version_B_is": "Optimized",
+            "version_A_text": "As a site editor, I want to have pretty good control over how the article, so that articles are visually appealing.",
+            "version_B_text": "User Story:\nAs a site editor, I want comprehensive control over the article layout and design elements so that I can ensure all articles are visually appealing and maintain a consistent aesthetic across the platform.\n\nAcceptance Criteria:\n- Editors must be able to customize font styles, sizes, and colors with a minimum of 10 options each.\n- The system should allow drag-and-drop functionality for images and text blocks, enabling layout adjustments in real-time.\n- Changes made to the article design should be visible in a live preview within 2 seconds.\n\nTest Outline:\n- Check that editors have access to at least 10 options for fonts, sizes, and colors.\n- Verify the drag-and-drop feature for images and text blocks functions smoothly and allows real-time layout changes.\n- Confirm that any design changes are reflected in the live preview within the 2-second benchmark.",
+            "optimization_explanation": "The original user story lacked specificity and clarity regarding the level of control and the desired outcome. The improved version provides a detailed description of the editor's capabilities and the business benefit of maintaining a consistent aesthetic. Acceptance criteria were expanded to include measurable design options and functionality, making the story actionable and testable.",
+            "invest_A": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "invest_B": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "ambiguity_A": {
+                "has_ambiguity": "No 否",
+                "suggestion": ""
+            },
+            "ambiguity_B": {
+                "has_ambiguity": "No 否",
+                "suggestion": ""
+            }
+        },
+        "1": {
+            "story_id": 1,
+            "version_A_is": "Optimized",
+            "version_B_is": "Original",
+            "version_A_text": "User Story:\nAs a website visitor, I want a prominently placed search bar at the top of the page so that I can quickly and easily find the content I am looking for without navigating through multiple pages.\n\nAcceptance Criteria:\n- The search bar should be positioned at the top of every page and remain visible as users scroll.\n- Search functionality must return results within 2 seconds for 95% of queries.\n- The search bar should support autocomplete suggestions to improve user experience and search efficiency.\n\nTest Outline:\n- Check that the search bar is consistently visible at the top of all pages and remains in view during scrolling.\n- Test the search response time to ensure results are delivered within 2 seconds for 95% of queries.\n- Verify that the autocomplete feature provides relevant suggestions as users type in the search bar.",
+            "version_B_text": "I want a search bar on the top of the page.",
+            "optimization_explanation": "The original statement was vague about the role, capability, and benefit. The improved version specifies the user's role and clarifies the benefit of easy content discovery. Acceptance criteria include measurable performance metrics like response time and autocomplete functionality, ensuring the story is specific and testable. This approach strengthens the INVEST dimensions by making the story more independent, negotiable, valuable, estimable, small, and testable.",
+            "invest_A": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "invest_B": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "ambiguity_A": {
+                "has_ambiguity": "Yes 是",
+                "suggestion": ""
+            },
+            "ambiguity_B": {
+                "has_ambiguity": "Yes 是",
+                "suggestion": ""
+            }
+        },
+        "2": {
+            "story_id": 2,
+            "version_A_is": "Optimized",
+            "version_B_is": "Original",
+            "version_A_text": "User Story:\nAs a cybersecurity analyst, I want AI-powered drones to autonomously detect and neutralize cyber threats in real-time so that our defense systems maintain a high level of security and minimize potential breaches.\n\nAcceptance Criteria:\n- AI-powered drones must identify and categorize cyber threats with a detection accuracy rate of ≥ 95%.\n- The response time for drones to neutralize identified threats should be ≤ 2 seconds.\n- The system should log and report each detected threat and response action with a 100% success rate for audit purposes.\n\nTest Outline:\n- Simulate various cyber threat scenarios to ensure drones detect and categorize threats with at least 95% accuracy.\n- Measure the time taken by drones to respond to threats, ensuring it does not exceed 2 seconds.\n- Verify that every threat detection and response action is logged and reported accurately for 100% of incidents.",
+            "version_B_text": "As a cybersecurity analyst, I want AI-powered drones to detect and respond to cyber threats autonomously, so that our defense systems remain secure against digital attacks.",
+            "optimization_explanation": "The original user story was vague in terms of measurable outcomes and testability. The improved version specifies the role of the cybersecurity analyst and the necessity for autonomous threat detection and neutralization. Acceptance criteria are enhanced with quantifiable metrics such as detection accuracy and response time, ensuring the feature's performance can be effectively evaluated and verified.",
+            "invest_A": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "invest_B": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "ambiguity_A": {
+                "has_ambiguity": "Yes 是",
+                "suggestion": ""
+            },
+            "ambiguity_B": {
+                "has_ambiguity": "Yes 是",
+                "suggestion": "hhhhhh"
+            }
+        },
+        "3": {
+            "story_id": 3,
+            "version_A_is": "Optimized",
+            "version_B_is": "Original",
+            "version_A_text": "User Story:\nAs a field commander, I need AI-enabled drones to autonomously conduct search and rescue missions, ensuring injured personnel are identified and evacuated within a critical timeframe to enhance survival rates and operational efficiency.\n\nAcceptance Criteria:\n- Drones must autonomously locate injured personnel within 5 minutes of deployment in 90% of missions.\n- The system should successfully communicate the location of injured individuals with a 95% accuracy rate.\n- Evacuation procedures must be initiated within 2 minutes of locating injured personnel.\n\nTest Outline:\n- Deploy drones in simulated environments to verify they locate injured personnel within 5 minutes in at least 90% of scenarios.\n- Assess the accuracy of location data transmitted by drones, confirming a 95% success rate.\n- Confirm that evacuation processes are reliably triggered within 2 minutes after personnel are located.",
+            "version_B_text": "As a field commander, I want AI-enabled drones to perform search and rescue operations, so that injured personnel can be located and evacuated swiftly.",
+            "optimization_explanation": "The original story was clear but lacked specific and measurable criteria for evaluating the AI-enabled drones' performance. The revised version includes precise timeframes and success rates, making the story more actionable and testable. These additions ensure that the user story meets the INVEST principles by providing clear, measurable objectives and testing procedures to verify the functionality and benefits.",
+            "invest_A": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "invest_B": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "ambiguity_A": {
+                "has_ambiguity": "Yes 是",
+                "suggestion": ""
+            },
+            "ambiguity_B": {
+                "has_ambiguity": "Yes 是",
+                "suggestion": ""
+            }
+        },
+        "4": {
+            "story_id": 4,
+            "version_A_is": "Original",
+            "version_B_is": "Optimized",
+            "version_A_text": "User Story:\nAs an interoperability coordinator, I want drones from various allied forces to seamlessly communicate and operate together so that joint missions can achieve a 30% increase in operational efficiency and a 25% reduction in mission completion time.\n\nAcceptance Criteria:\n- The communication protocol must enable data exchange between drones with a success rate of at least 95%.\n- Joint missions should demonstrate a 30% improvement in task execution speed compared to previous missions without interoperability.\n- User feedback from mission participants should reflect a satisfaction rate of 90% or higher regarding the effectiveness of drone collaboration.\n\nTest Outline:\n- Conduct interoperability tests to measure the success rate of data exchange between different drones.\n- Analyze mission performance metrics before and after implementing the communication protocols to quantify improvements in efficiency and completion time.\n- Gather feedback from mission participants through surveys to assess their satisfaction with the collaborative capabilities of the drones.",
+            "version_B_text": "User Story:\nAs an interoperability coordinator, I aim for drones from diverse allied forces to integrate and operate in unison, thereby boosting the operational efficiency of joint missions by 30% and decreasing mission completion times by 25%.\n\nAcceptance Criteria:\n- Establish a robust communication protocol with a minimum 95% success rate in seamless data exchange among drones from different allied forces.\n- Demonstrate an operational efficiency increase of 30% for joint missions through improved task execution speed, compared to prior non-integrated operations.\n- Secure a satisfaction rating of 90% or above from mission participants on the effectiveness of drone interoperability and collaboration.\n\nTest Outline:\n- Perform rigorous interoperability trials to ensure a 95% success rate in data exchange between drones of various forces.\n- Evaluate mission efficiency by comparing performance metrics before and after the implementation of the communication protocol, aiming for a 30% increase in efficiency and a 25% reduction in completion time.\n- Gather participant feedback via structured surveys to confirm a satisfaction level of at least 90% with the enhanced collaborative drone operations.",
+            "optimization_explanation": "The original user story was already well-formulated in terms of the INVEST criteria, but minor adjustments were made to reinforce clarity and focus. The refined version emphasizes the goals of integration and unison in drone operations. The acceptance criteria were slightly adjusted to underscore the reliability of the communication protocol and the satisfaction level, making the outcomes more explicit and actionable. The test outline was expanded to ensure clear verification methods.",
+            "invest_A": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "invest_B": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "ambiguity_A": {
+                "has_ambiguity": "Yes 是",
+                "suggestion": ""
+            },
+            "ambiguity_B": {
+                "has_ambiguity": "Yes 是",
+                "suggestion": ""
+            }
+        }
+    },
+    "interview_interested": true,
+    "submitted_at": "2026-05-14 01:06:54"
+}
