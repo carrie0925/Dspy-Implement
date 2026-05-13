@@ -1,8 +1,10 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import os
 import json
 import uuid
 import pandas as pd
+import random
 from datetime import datetime
 from pathlib import Path
 from dotenv import load_dotenv
@@ -112,7 +114,9 @@ if 'init_check' not in st.session_state:
     query_params = st.query_params
     if "id" in query_params:
         exp_id = query_params["id"]
-        master_path = f"/user_project/master_{exp_id}.json"
+        
+        # 修正：確保讀取時的相對路徑與 PM_SETUP 存檔時一致
+        master_path = os.path.join("data", "user_project", f"master_{exp_id}.json")
         
         if os.path.exists(master_path):
             with open(master_path, "r", encoding="utf-8") as f:
@@ -120,9 +124,14 @@ if 'init_check' not in st.session_state:
             
             st.session_state.results_df = pd.DataFrame(master_data["results"])
             st.session_state.email_list = master_data["email_list"]
-            st.session_state.project_context = master_data["project_context"]
+            st.session_state.project_context = master_data.get("project_context", "")
             st.session_state.exp_id = exp_id
+            
+            # 讀取成功，直接跳轉到背景資訊填寫頁面
             st.session_state.step = "USER_INFO" 
+        else:
+            st.error(f"找不到實驗代碼為 {exp_id} 的專案資料，請確認連結是否正確。")
+            
     st.session_state.init_check = True
 
 # --- 4. 初始化 Session State ---
@@ -131,6 +140,7 @@ if 'results_df' not in st.session_state: st.session_state.results_df = None
 if 'current_idx' not in st.session_state: st.session_state.current_idx = 0
 if 'user_responses' not in st.session_state: st.session_state.user_responses = {}
 if 'exp_id' not in st.session_state: st.session_state.exp_id = str(uuid.uuid4())[:8]
+if 'ab_swaps' not in st.session_state: st.session_state.ab_swaps = {}
 
 # --- 5. 輔助函數 ---
 def process_uploaded_data(file):
@@ -232,11 +242,6 @@ if st.session_state.step == "PM_SETUP":
                     fewshot_k=int(os.getenv("FEWSHOT_K", 4)),
                     use_dspy=True
                 )
-
-                for i, res in enumerate(raw_results):
-                    if 'description' not in res and 'original' not in res:
-                        res['description'] = stories[i]['description']
-
                 prog_bar.progress(80)
                 
                 status_msg.text("📧 正在寄送邀請問卷信件至各成員信箱...")
@@ -295,61 +300,103 @@ elif st.session_state.step == "USER_INFO":
 
 # --- 流程 C: A/B 版本評估 ---
 elif st.session_state.step == "SURVEY_MODE":
+    df = st.session_state.results_df
+    idx = st.session_state.current_idx
+    row = df.iloc[idx]
     
-    # CSS 樣式控制
-    st.markdown("""
+    # 注入 CSS 動畫、右側置頂與字體縮小樣式
+    st.markdown(f"""
     <style>
     /* 針對 Streamlit 左右佈局，鎖定第 2 個欄位內部的直式區塊進行置頂 */
     [data-testid="column"]:nth-of-type(2) > div, 
-    [data-testid="stColumn"]:nth-of-type(2) > div {
+    [data-testid="stColumn"]:nth-of-type(2) > div {{
         position: sticky !important;
         top: 4rem !important;
         max-height: 85vh !important;
         overflow-y: auto !important;
         padding-left: 1rem;
         border-left: 2px solid #f0f2f6;
-    }
-    
-    /* 針對右側欄位的提示框 (stAlert) 內的段落文字進行縮小 */
-    [data-testid="column"]:nth-of-type(2) .stAlert p {
+    }}
+    [data-testid="column"]:nth-of-type(2) .stAlert p {{
         font-size: 0.85rem !important;
         line-height: 1.4 !important;
-    }
+    }}
+    .streamlit-expanderContent {{
+        padding-top: 5px !important;
+    }}
+    
+    /* 換題閃爍動畫 */
+    @keyframes flashEffect_{idx} {{
+        0% {{ opacity: 0.3; transform: translateY(10px); background-color: rgba(255, 250, 205, 0.4); }}
+        100% {{ opacity: 1; transform: translateY(0); background-color: transparent; }}
+    }}
+    [data-testid="block-container"] {{
+        animation: flashEffect_{idx} 0.6s ease-out;
+    }}
     </style>
     """, unsafe_allow_html=True)
 
-    df = st.session_state.results_df
-    idx = st.session_state.current_idx
-    row = df.iloc[idx]
+    # 注入 JavaScript 強制將外層視窗滾動到最上方
+    components.html(
+        """
+        <script>
+        setTimeout(function() {
+            var mainContainer = window.parent.document.querySelector('.main');
+            if (mainContainer) {
+                mainContainer.scrollTo({top: 0, behavior: 'smooth'});
+            }
+            window.parent.scrollTo({top: 0, behavior: 'smooth'});
+        }, 100);
+        </script>
+        """,
+        height=0
+    )
+
+    # 右下角彈出提示 (如果是同一題重複刷新則不提示)
+    if st.session_state.get('last_notified_idx') != idx:
+        st.toast(f"✨ 已跳轉至第 {idx + 1} 題", icon="🚀")
+        st.session_state.last_notified_idx = idx
+
+    # --- A/B 隨機分配 ---
+    if idx not in st.session_state.ab_swaps:
+        st.session_state.ab_swaps[idx] = random.choice([True, False])
     
-    # 讀取版本內容與新增的修正原因
-    ver_a = row.get('description') or row.get('original') or row.get('original_text') or row.get('input') or "內容讀取失敗"
-    ver_b = row.get('final_text') or row.get('optimized_description') or row.get('rewritten') or "優化內容讀取失敗"
-    reason = row.get('correction_reason') or "系統未提供明確的修正原因" 
+    is_swapped = st.session_state.ab_swaps[idx]
+    
+    orig_text = row.get('description') or row.get('original') or "內容讀取失敗"
+    opt_text = row.get('final_text') or row.get('optimized_description') or row.get('rewritten') or "優化內容讀取失敗"
+    reason = row.get('correction_reason') or "系統未提供明確的修正原因"
+
+    if is_swapped:
+        ver_a, ver_b = opt_text, orig_text
+        a_is, b_is = "Optimized", "Original"
+    else:
+        ver_a, ver_b = orig_text, opt_text
+        a_is, b_is = "Original", "Optimized"
 
     st.progress((idx + 1) / len(df))
-    st.subheader(f"User Story 模糊性品質評估問卷 ({idx + 1} / {len(df)})")
+    st.subheader(f"User Story 評估問卷 ({idx + 1} / {len(df)})")
     
     col_left, col_right = st.columns([3, 1])
 
-    # 右側：永遠固定顯示當前 User Story 的雙版本對照與優化原因
+    # 右側：固定顯示當前 User Story 的雙版本對照
     with col_right:
         st.markdown("### User Story")
-        st.error(f"**Version A (Original)**\n\n{ver_a}")
-        st.success(f"**Version B (Optimized)**\n\n{ver_b}")
+        st.info(f"**Version A**\n\n{ver_a}")
+        st.info(f"**Version B**\n\n{ver_b}")
         
-        st.info(f"**💡 Optimization Reason (優化原因)**\n\n{reason}")
+        st.warning(f"**💡 修正提示 (Note)**\n\n{reason}")
 
     # 左側：問卷核心區
     with col_left:
         st.info("""
         **📝 問卷說明**
         
-        請參考右方的 **Version A (原始版本)** 與 **Version B (優化版本)**，已提供中文翻譯為輔助閱讀，但實際判斷請以英文版本為各題進行評分：
+        請參考右方的 **Version A** 與 **Version B**，並針對這兩個版本進行評分：
         - **Part 1: INVEST 評估**
           依據敏捷開發的 INVEST 準則進行評分。請對照每個題目下方的 1(最低)-5(最高) 詳細評分標準，為 A、B 兩個版本給分。
         - **Part 2: 模糊性 (Ambiguity) 評估**
-          評估這兩個版本的 User Story 是否存在任何不明確、或可能產生多種解釋的片段，並提供您的修正建議。
+          評估這兩個版本的 User Story 是否有任何部分不明確，或可能產生多種解釋，並提供您的建議。
         """)
         st.write("")
 
@@ -365,20 +412,17 @@ elif st.session_state.step == "SURVEY_MODE":
             full_name = INVEST_FULL_NAMES[dim]
             st.markdown(f"### 【 {full_name} 】")
             
-            # 📌 雙語定義顯示
-            st.caption(f"**Definition:** {INVEST_DESCRIPTIONS[dim]['en']}")
-            st.info(f"💡 **中文輔助理解:** {INVEST_DESCRIPTIONS[dim]['zh']}")
+            st.markdown(f"<div style='font-size:0.85rem; color:#444; margin-bottom: 5px;'><strong>Definition:</strong> {INVEST_DESCRIPTIONS[dim]['en']}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='font-size:0.85rem; color:#2c3e50; background-color: #f0f8ff; padding: 8px; border-radius: 5px; margin-bottom: 10px;'>💡 <strong>中文輔助理解:</strong> {INVEST_DESCRIPTIONS[dim]['zh']}</div>", unsafe_allow_html=True)
             
-            # 📌 展開面板：包含英文與中文的 Rubric (注入縮小字體的 HTML)
             with st.expander(f"🔍 點此展開 {full_name.split(' ')[0]} ({dim}) 的 1~5 分詳細評分標準", expanded=False):
                 for score in ["1", "2", "3", "4", "5"]:
                     desc_en = INVEST_RUBRIC_15.get(dim, {}).get(score, "N/A")
                     desc_zh = INVEST_RUBRIC_15_ZH.get(dim, {}).get(score, "")
                     
-                    # 縮小 1~5 分標準的字體，改為 0.85rem
-                    st.markdown(f"<div style='font-size: 0.85rem; line-height: 1.5; margin-bottom: 5px;'><b>Score {score}</b>: {desc_en}</div>", unsafe_allow_html=True)
+                    st.markdown(f"<div style='font-size: 0.85rem; line-height: 1.4; margin-bottom: 3px;'><strong style='font-size: 0.9rem;'>Score {score}:</strong> {desc_en}</div>", unsafe_allow_html=True)
                     if desc_zh:
-                        st.markdown(f"<div style='font-size: 0.85rem; color:#666; margin-left: 20px; margin-bottom: 15px; line-height: 1.5;'><em>{desc_zh}</em></div>", unsafe_allow_html=True)
+                        st.markdown(f"<div style='font-size: 0.8rem; color:#666; margin-left: 20px; margin-bottom: 12px;'><em>{desc_zh}</em></div>", unsafe_allow_html=True)
 
             c1, c2 = st.columns(2)
             with c1:
@@ -399,41 +443,41 @@ elif st.session_state.step == "SURVEY_MODE":
 
         st.divider()
 
-        # --- Part 2: Ambiguity 評分矩陣 (更新為兩階段提問與輸入框) ---
-        st.markdown("## Part 2: Ambiguity Evaluation")
+        # --- Part 2: Ambiguity 評分矩陣 ---
+        st.markdown("## Part 2: Ambiguity Evaluation (模糊性評估)")
         
-        # 評估版本 A
-        st.markdown("### Version A")
+        amb_options = ["Yes 是", "No 否", "Not sure 不確定"]
+
+        st.markdown("#### Version A")
         amb_a_choice = st.radio(
-            "Is any part of the version A user story ambiguous or open to multiple interpretations? \n\n(針對版本 A 的使用者故事是否有任何部分不明確，或可能產生多種解釋？)",
-            options=["Yes 是", "No 否", "Not sure 不確定"],
-            key=f"amb_a_choice_{idx}",
-            horizontal=True
+            "Is any part of the version A user story ambiguous or open to multiple interpretations? \n\n"
+            "針對版本 A 的使用者故事是否有任何部分不明確，或可能產生多種解釋？",
+            options=amb_options,
+            key=f"amb_a_choice_{idx}"
         )
-        amb_a_suggestion = ""
-        # 若選擇 Yes 是，則顯示輸入框
+        amb_a_text = ""
         if amb_a_choice == "Yes 是":
-            amb_a_suggestion = st.text_area(
-                "If yes, please list the ambiguous phrase and your suggestions. \n\n(若上述的回答為是，請列出該段不明確的文字在以下輸入框，並列出您的修正建議)",
-                key=f"amb_a_suggest_{idx}"
+            amb_a_text = st.text_area(
+                "If yes, please list the ambiguous phrase and your suggestions. \n\n"
+                "若上述的回答為是，請列出該段不明確的文字在以下輸入框，並列出您的修正建議：",
+                key=f"amb_a_text_{idx}"
             )
-            
-        st.write("---")
-        
-        # 評估版本 B
-        st.markdown("### Version B")
+
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        st.markdown("#### Version B")
         amb_b_choice = st.radio(
-            "Is any part of the version B user story ambiguous or open to multiple interpretations? \n\n(針對版本 B 的使用者故事是否有任何部分不明確，或可能產生多種解釋？)",
-            options=["Yes 是", "No 否", "Not sure 不確定"],
-            key=f"amb_b_choice_{idx}",
-            horizontal=True
+            "Is any part of the version B user story ambiguous or open to multiple interpretations? \n\n"
+            "針對版本 B 的使用者故事是否有任何部分不明確，或可能產生多種解釋？",
+            options=amb_options,
+            key=f"amb_b_choice_{idx}"
         )
-        amb_b_suggestion = ""
-        # 若選擇 Yes 是，則顯示輸入框
+        amb_b_text = ""
         if amb_b_choice == "Yes 是":
-            amb_b_suggestion = st.text_area(
-                "If yes, please list the ambiguous phrase and your suggestions. \n\n(若上述的回答為是，請列出該段不明確的文字在以下輸入框，並列出您的修正建議)",
-                key=f"amb_b_suggest_{idx}"
+            amb_b_text = st.text_area(
+                "If yes, please list the ambiguous phrase and your suggestions. \n\n"
+                "若上述的回答為是，請列出該段不明確的文字在以下輸入框，並列出您的修正建議：",
+                key=f"amb_b_text_{idx}"
             )
 
         st.divider()
@@ -446,31 +490,42 @@ elif st.session_state.step == "SURVEY_MODE":
         with c_next:
             label = "Finish and Submit" if idx == len(df)-1 else "Next User Story ➡️"
             if st.button(label):
-                
-                # 儲存回傳 JSON 的結構也一併更新
-                st.session_state.user_responses[idx] = {
-                    "story_id": row.get('id', idx),
-                    "version_A_text": ver_a,
-                    "version_B_text": ver_b,
-                    "optimization_explanation": reason,
-                    "invest_A": invest_a_scores,
-                    "invest_B": invest_b_scores,
-                    "ambiguity_A": {
-                        "has_ambiguity": amb_a_choice,
-                        "suggestion": amb_a_suggestion
-                    },
-                    "ambiguity_B": {
-                        "has_ambiguity": amb_b_choice,
-                        "suggestion": amb_b_suggestion
-                    }
-                }
-                
-                if idx < len(df) - 1:
-                    st.session_state.current_idx += 1
-                    st.rerun()
+                # --- 必填邏輯檢查 ---
+                error_a = amb_a_choice == "Yes 是" and not amb_a_text.strip()
+                error_b = amb_b_choice == "Yes 是" and not amb_b_text.strip()
+
+                if error_a or error_b:
+                    if error_a:
+                        st.error("⚠️ 您在 Version A 選擇了『是』，請務必填寫不明確的文字與修正建議。")
+                    if error_b:
+                        st.error("⚠️ 您在 Version B 選擇了『是』，請務必填寫不明確的文字與修正建議。")
                 else:
-                    st.session_state.step = "FINAL"
-                    st.rerun()
+                    # 檢查通過，寫入資料並跳轉
+                    st.session_state.user_responses[idx] = {
+                        "story_id": row.get('id', idx),
+                        "version_A_is": a_is,
+                        "version_B_is": b_is,
+                        "version_A_text": ver_a,
+                        "version_B_text": ver_b,
+                        "optimization_explanation": reason, 
+                        "invest_A": invest_a_scores,
+                        "invest_B": invest_b_scores,
+                        "ambiguity_A": {
+                            "has_ambiguity": amb_a_choice,
+                            "suggestion": amb_a_text
+                        },
+                        "ambiguity_B": {
+                            "has_ambiguity": amb_b_choice,
+                            "suggestion": amb_b_text
+                        }
+                    }
+                    
+                    if idx < len(df) - 1:
+                        st.session_state.current_idx += 1
+                        st.rerun()
+                    else:
+                        st.session_state.step = "FINAL"
+                        st.rerun()
 
 # --- 流程 D: 提交與自動寄信給研究者 ---
 elif st.session_state.step == "FINAL":
@@ -484,7 +539,7 @@ elif st.session_state.step == "FINAL":
             "exp_id": st.session_state.exp_id,
             "project_context": st.session_state.get('project_context', ""),
             "user_info": st.session_state.current_user,
-            "survey_results": list(st.session_state.user_responses.values()),  # 將字典轉為 List 陣列格式更利於 JSON 解析
+            "survey_results": st.session_state.user_responses,
             "interview_interested": interview,
             "submitted_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         }
