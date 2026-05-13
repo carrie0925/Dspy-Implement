@@ -17,7 +17,7 @@ def send_survey_links(email_list, exp_id):
         print("[ERROR] 郵件設定缺失 (SENDER_EMAIL/SENDER_PASSWORD)，無法寄送連結。")
         return
 
-    subject = f"【學術研究】User Story 易用性實驗邀請 - ID: {exp_id}"
+    subject = f"【學術研究】User Story 優化實驗問卷邀請 - ID: {exp_id}"
 
     try:
         # 使用 TLS 模式寄送邀請信
