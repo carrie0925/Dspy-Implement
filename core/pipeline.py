@@ -735,7 +735,7 @@ def compile_rewriter_with_teleprompt(base_rewriter: UserStoryRewriter, scorer: I
     ]
     try:
         tele = dspy.BootstrapFewShot(metric=metric_fn, max_labeled_demos=min(fewshot_k, len(trainset)),
-                                     max_bootstrapped_demos=min(5, len(trainset)), max_rounds=max_rounds,
+                                     max_bootstrapped_demos=min(4, len(trainset)), max_rounds=max_rounds,
                                      teacher_settings=({"lm": teacher_lm} if teacher_lm else None))
         print("[DEBUG] starting rewriter teleprompt.compile()")
         compiled = tele.compile(student=base_rewriter.rewrite, trainset=trainset)
