@@ -304,6 +304,15 @@ elif st.session_state.step == "SURVEY_MODE":
     idx = st.session_state.current_idx
     row = df.iloc[idx]
     
+    # 💡 [除錯用] 如果您不確定後端回傳了什麼欄位，可以暫時加上這行把欄位印在畫面上看：
+    # st.info(f"當前資料包含的欄位有：{df.columns.tolist()}")
+
+    # 擴充原始文字的抓取範圍，把 DSPy 可能吐回來的原始文字欄位名稱都加上去
+    orig_text = row.get('description') or row.get('original') or row.get('original_story') or row.get('input') or row.get('user_story') or "內容讀取失敗"
+    
+    opt_text = row.get('final_text') or row.get('optimized_description') or row.get('rewritten') or "優化內容讀取失敗"
+    reason = row.get('correction_reason') or "系統未提供明確的修正原因"
+    
     # 注入 CSS 動畫、右側置頂與字體縮小樣式
     st.markdown(f"""
     <style>
