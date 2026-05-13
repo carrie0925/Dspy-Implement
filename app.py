@@ -232,6 +232,11 @@ if st.session_state.step == "PM_SETUP":
                     fewshot_k=int(os.getenv("FEWSHOT_K", 4)),
                     use_dspy=True
                 )
+
+                for i, res in enumerate(raw_results):
+                    if 'description' not in res and 'original' not in res:
+                        res['description'] = stories[i]['description']
+
                 prog_bar.progress(80)
                 
                 status_msg.text("📧 正在寄送邀請問卷信件至各成員信箱...")
@@ -318,7 +323,7 @@ elif st.session_state.step == "SURVEY_MODE":
     row = df.iloc[idx]
     
     # 讀取版本內容與新增的修正原因
-    ver_a = row.get('description') or row.get('original') or "內容讀取失敗"
+    ver_a = row.get('description') or row.get('original') or row.get('original_text') or row.get('input') or "內容讀取失敗"
     ver_b = row.get('final_text') or row.get('optimized_description') or row.get('rewritten') or "優化內容讀取失敗"
     reason = row.get('correction_reason') or "系統未提供明確的修正原因" 
 
