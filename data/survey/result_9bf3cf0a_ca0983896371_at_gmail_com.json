@@ -1,0 +1,49 @@
+{
+    "exp_id": "9bf3cf0a",
+    "project_context": "",
+    "user_info": {
+        "email": "ca0983896371@gmail.com",
+        "age": "20-24",
+        "agile_exp": "6個月-1年",
+        "doc_exp": "6個月-1年",
+        "role": "專案經理/專案管理/產品管理",
+        "write_skill": "基礎",
+        "lang_skill": "基礎"
+    },
+    "survey_results": {
+        "0": {
+            "story_id": 0,
+            "version_A_is": "Original",
+            "version_B_is": "Optimized",
+            "version_A_text": "As a site editor, I want to have pretty good control over how the article, so that articles are visually appealing.",
+            "version_B_text": "User Story:\nAs a site editor, I want comprehensive control over article formatting and layout so that I can ensure articles are consistently visually appealing and align with our brand standards.\n\nAcceptance Criteria:\n- Editors can customize font styles, sizes, and colors with a preview option before publishing.\n- The system allows drag-and-drop functionality for images and text blocks to adjust layout seamlessly.\n- Changes to article formatting must be saved and applied in under 10 seconds.\n\nTest Outline:\n- Test the customization options for fonts and colors to ensure they match the brand style guide.\n- Verify that drag-and-drop functionality works smoothly for all media and text elements.\n- Measure the time taken for changes to be saved and applied to confirm it is within the 10-second limit.",
+            "optimization_explanation": "The original user story lacked clarity regarding the specific controls and benefits. The revision explicitly defines the role of the site editor and articulates the desired capabilities with precise, measurable acceptance criteria. This approach strengthens the INVEST principles by ensuring the story is specific, valuable, and testable, providing clear guidance for implementation and validation.",
+            "invest_A": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "invest_B": {
+                "I": 1,
+                "N": 1,
+                "V": 1,
+                "E": 1,
+                "S": 1,
+                "T": 1
+            },
+            "ambiguity_A": {
+                "has_ambiguity": "No 否",
+                "suggestion": ""
+            },
+            "ambiguity_B": {
+                "has_ambiguity": "No 否",
+                "suggestion": ""
+            }
+        }
+    },
+    "interview_interested": false,
+    "submitted_at": "2026-05-14 03:11:20"
+}

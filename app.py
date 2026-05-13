@@ -140,7 +140,6 @@ if 'results_df' not in st.session_state: st.session_state.results_df = None
 if 'current_idx' not in st.session_state: st.session_state.current_idx = 0
 if 'user_responses' not in st.session_state: st.session_state.user_responses = {}
 if 'exp_id' not in st.session_state: st.session_state.exp_id = str(uuid.uuid4())[:8]
-if 'ab_swaps' not in st.session_state: st.session_state.ab_swaps = {}
 
 # --- 5. 輔助函數 ---
 def process_uploaded_data(file):
@@ -299,7 +298,7 @@ elif st.session_state.step == "USER_INFO":
             st.session_state.step = "SURVEY_MODE"
             st.rerun()
 
-# --- 流程 C: A/B 版本評估 ---
+# --- 流程 C: 版本評估 (固定A:原始, B:優化) ---
 elif st.session_state.step == "SURVEY_MODE":
     df = st.session_state.results_df
     idx = st.session_state.current_idx
@@ -364,18 +363,11 @@ elif st.session_state.step == "SURVEY_MODE":
         st.toast(f"✨ 已跳轉至第 {idx + 1} 題", icon="🚀")
         st.session_state.last_notified_idx = idx
 
-    # --- A/B 隨機分配 ---
-    if idx not in st.session_state.ab_swaps:
-        st.session_state.ab_swaps[idx] = random.choice([True, False])
-    
-    is_swapped = st.session_state.ab_swaps[idx]
-    
-    if is_swapped:
-        ver_a, ver_b = opt_text, orig_text
-        a_is, b_is = "Optimized", "Original"
-    else:
-        ver_a, ver_b = orig_text, opt_text
-        a_is, b_is = "Original", "Optimized"
+    # --- 固定分配：Version A 為原始版本，Version B 為優化版本 ---
+    ver_a = orig_text
+    ver_b = opt_text
+    a_is = "Original"
+    b_is = "Optimized"
 
     st.progress((idx + 1) / len(df))
     st.subheader(f"User Story 評估問卷 ({idx + 1} / {len(df)})")
@@ -385,8 +377,8 @@ elif st.session_state.step == "SURVEY_MODE":
     # 右側：固定顯示當前 User Story 的雙版本對照
     with col_right:
         st.markdown("### User Story")
-        st.info(f"**Version A**\n\n{ver_a}")
-        st.info(f"**Version B**\n\n{ver_b}")
+        st.info(f"**Version A (原始版本)**\n\n{ver_a}")
+        st.info(f"**Version B (優化版本)**\n\n{ver_b}")
         
         st.warning(f"**💡 修正提示 (Note)**\n\n{reason}")
 
@@ -395,7 +387,7 @@ elif st.session_state.step == "SURVEY_MODE":
         st.info("""
         **📝 問卷說明**
         
-        請參考右方的 **Version A** 與 **Version B**，並針對這兩個版本進行評分：
+        請參考右方的 **Version A (原始版本)** 與 **Version B (優化版本)**，並針對這兩個版本進行評分：
         - **Part 1: INVEST 評估**
           依據敏捷開發的 INVEST 準則進行評分。請對照每個題目下方的 1(最低)-5(最高) 詳細評分標準，為 A、B 兩個版本給分。
         - **Part 2: 模糊性 (Ambiguity) 評估**
