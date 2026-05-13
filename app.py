@@ -105,7 +105,7 @@ INVEST_RUBRIC_15_ZH = {
         "2": "等級 2：故事指名了使用者想要的功能或性能，但沒有描述測試人員可以觀察到的任何具體系統行為。預期行為只能從功能名稱去推測，測試人員大致知道要查驗哪個區塊，但沒有明確的輸出、狀態變更或系統回應作為目標。例如：「身為使用者，我想要一個個人化的儀表板，以便我可以快速存取我需要的內容。」",
         "3": "等級 3：故事描述了一個測試人員可以找到並觀察的具體系統行為。然而，通過條件是相對於一個未說明的標準來定義的，這個標準可以是一個比較基準點、門檻值或是一個基線，而且這些都不涵蓋故事裡。測試人員可以執行測試，但若故事中隱含的比較基準未釐清，則無法做出最終判斷。兩位觀察到相同系統輸出的測試人員，可能對其是否合格產生分歧。例如：「身為使用者，我希望當有新活動發生時我的儀表板能自動更新，以便我無需重新整理頁面即可始終看到最新資訊。」",
         "4": "等級 4：故事描述了一個可觀察的系統行為，並給出了一個通常可以理解的預期結果，但至少有一個邊界條件仍有待解釋。測試人員可以識別要驗證什麼，但仍必須對時間點、門檻值、系統狀態、使用者條件或通過/未通過的界線做出微小的假設。存在諸如「最近的」、「活躍的」、「相關的」、「快速地」或「適當的」之類的主觀描述詞，但未明確定義。例如：「身為使用者，我希望當有人回覆我的貼文時收到通知，以便我可以在對話仍然活躍（active）時進行後續追蹤。」",
-        "5": "等級 5：等級 5：故事使用確定性的通過／未通過標準來描述驗收條件，例如數值、日期、持續時間、命名的系統狀態、明確的規則或布林條件。主觀描述詞僅在被明確定義的情況下才是可以接受的。任何閱讀故事的測試人員對於相同的系統輸出，都會在無需討論或解讀的情況下做出相同的合格/失敗決定。例如：「身為使用者，我希望從我的儀表板中自動移除超過 7 天的通知，以便我只看到最近的活動。驗收條件：當通知的建立日期早於目前日期 7天以上時，該通知將被移除。在過去 7天內建立的通知持續顯示。」條件極度嚴謹。包含正常流程與錯誤處理，甚至可直接轉化為自動化測試腳本。"
+        "5": "等級 5：故事使用確定性的通過／未通過標準來描述驗收條件，例如數值、日期、持續時間、命名的系統狀態、明確的規則或布林條件。主觀描述詞僅在被明確定義的情況下才是可以接受的。任何閱讀故事的測試人員對於相同的系統輸出，都會在無需討論或解讀的情況下做出相同的合格/失敗決定。例如：「身為使用者，我希望從我的儀表板中自動移除超過 7 天的通知，以便我只看到最近的活動。驗收條件：當通知的建立日期早於目前日期 7天以上時，該通知將被移除。在過去 7天內建立的通知持續顯示。」條件極度嚴謹。包含正常流程與錯誤處理，甚至可直接轉化為自動化測試腳本。"
     }
 }
 
@@ -243,11 +243,7 @@ if st.session_state.step == "PM_SETUP":
                     use_dspy=True
                 )
                 prog_bar.progress(80)
-
-                for i, res in enumerate(raw_results):
-                    # 確保回傳結果包含原始文字，否則強制從原本的 stories 抓過來
-                    if 'description' not in res and i < len(stories):
-                        res['description'] = stories[i]['description']
+                
                 
                 status_msg.text("📧 正在寄送邀請問卷信件至各成員信箱...")
                 send_survey_links(valid_emails, st.session_state.exp_id)
@@ -309,9 +305,6 @@ elif st.session_state.step == "SURVEY_MODE":
     idx = st.session_state.current_idx
     row = df.iloc[idx]
     
-    # 💡 [除錯用] 如果您不確定後端回傳了什麼欄位，可以暫時加上這行把欄位印在畫面上看：
-    # st.info(f"當前資料包含的欄位有：{df.columns.tolist()}")
-
     # 擴充原始文字的抓取範圍，把 DSPy 可能吐回來的原始文字欄位名稱都加上去
     orig_text = row.get('description') or row.get('original') or row.get('original_story') or row.get('input') or row.get('user_story') or "內容讀取失敗"
     
@@ -377,10 +370,6 @@ elif st.session_state.step == "SURVEY_MODE":
     
     is_swapped = st.session_state.ab_swaps[idx]
     
-    orig_text = row.get('description') or row.get('original') or "內容讀取失敗"
-    opt_text = row.get('final_text') or row.get('optimized_description') or row.get('rewritten') or "優化內容讀取失敗"
-    reason = row.get('correction_reason') or "系統未提供明確的修正原因"
-
     if is_swapped:
         ver_a, ver_b = opt_text, orig_text
         a_is, b_is = "Optimized", "Original"
