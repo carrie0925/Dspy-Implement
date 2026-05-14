@@ -3,6 +3,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import os
 import json
+import time
 
 def send_survey_links(email_list, exp_id):
     """寄送實驗邀請連結給受試者，自動根據環境切換 URL"""
@@ -55,6 +56,11 @@ def send_survey_links(email_list, exp_id):
             """
             msg.attach(MIMEText(body, 'plain', 'utf-8'))
             server.send_message(msg)
+            
+            # 🌟 新增 2：每寄出一封信，就讓程式暫停 2 秒鐘
+            # 這樣可以模擬人類手動寄信的節奏，大幅降低被判定為 Spam 的機率
+            time.sleep(2)
+            
             print(f"[INFO] 邀請信已成功寄送至: {receiver}")
 
         server.quit()
