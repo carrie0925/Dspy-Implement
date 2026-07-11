@@ -75,7 +75,6 @@ def get_invest_rubric_text(dim: str, score: int, scale: str = "1-5") -> str:
     if dim not in INVEST_RUBRIC_15:
         return ""
     
-    # 確保分數在 1-5 之間
     step = str(max(1, min(5, int(round(score)))))
     return INVEST_RUBRIC_15[dim]["scale"].get(step, "")
 

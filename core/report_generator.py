@@ -133,7 +133,7 @@ def export_results_csv(results: List[Dict[str, Any]], out_root: str = "report") 
             "ID": rid,
             "Original User Story": orig,
             "Rewritten User Story": final,
-            "Correction Reason": reason, # [新增] 將原因加入 DataFrame 的對應列
+            "Correction Reason": reason, 
             "Fuzzy Terms (with source)": "\n".join(fuzzy) if fuzzy else "—",
             "Low-score Explanation (<2)": low_exp,
         }
@@ -147,7 +147,7 @@ def export_results_csv(results: List[Dict[str, Any]], out_root: str = "report") 
     metric_cols += ["overall_before", "overall_after", "delta_overall"]
 
     cols = (
-        ["ID", "Original User Story", "Rewritten User Story", "Correction Reason", "Fuzzy Terms (with source)"] # [修改] 標題加上 Correction Reason
+        ["ID", "Original User Story", "Rewritten User Story", "Correction Reason", "Fuzzy Terms (with source)"] 
         + metric_cols
         + ["Low-score Explanation (<2)"]
     )
@@ -169,7 +169,6 @@ def summarize_report(df: pd.DataFrame) -> Dict[str, Any]:
     oa = pd.to_numeric(df.get("overall_after", 0), errors="coerce").fillna(0)
     summary["pass_rate"] = float((oa >= overall_cut).mean())
 
-    # ✅ 安全處理 rounds 欄位
     if "rounds" in df.columns:
         rounds_col = pd.to_numeric(df["rounds"], errors="coerce").fillna(0)
         summary["avg_rounds"] = float(rounds_col.mean())

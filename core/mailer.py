@@ -6,11 +6,10 @@ import json
 import time
 
 def send_survey_links(email_list, exp_id):
-    """寄送實驗邀請連結給受試者，自動根據環境切換 URL"""
+    """Send experiment invitation for candidates"""
     sender_email = os.getenv("SENDER_EMAIL")
-    sender_password = os.getenv("SENDER_PASSWORD") # Gmail 應用程式密碼
+    sender_password = os.getenv("SENDER_PASSWORD") 
     
-    # 自動偵測網址：若環境變數未設定，則預設為地端測試位址
     base_url = os.getenv("APP_URL", "http://localhost:8501")
     link = f"{base_url}/?id={exp_id}" 
 
@@ -56,9 +55,8 @@ def send_survey_links(email_list, exp_id):
             """
             msg.attach(MIMEText(body, 'plain', 'utf-8'))
             server.send_message(msg)
-            
-            # 🌟 新增 2：每寄出一封信，就讓程式暫停 2 秒鐘
-            # 這樣可以模擬人類手動寄信的節奏，大幅降低被判定為 Spam 的機率
+
+            # avoid too frequent sending
             time.sleep(2)
             
             print(f"[INFO] 邀請信已成功寄送至: {receiver}")
@@ -71,7 +69,7 @@ def send_admin_notification(payload):
     """當受試者提交問卷時，立即寄送備份資料給研究者 (PM)"""
     sender = os.getenv("SENDER_EMAIL")
     password = os.getenv("SENDER_PASSWORD")
-    receiver = os.getenv("SENDER_EMAIL") # 預設寄回給自己備份
+    receiver = os.getenv("SENDER_EMAIL") 
 
     if not sender or not password:
         print("[ERROR] 郵件設定缺失，無法寄送後台通知。")
@@ -85,7 +83,7 @@ def send_admin_notification(payload):
     msg['From'] = sender
     msg['To'] = receiver
 
-    # 美化 JSON 輸出內容
+   
     json_content = json.dumps(payload, ensure_ascii=False, indent=4)
     body = f"收到一份新的 User Story 評估結果：\n\n{json_content}"
     
@@ -93,7 +91,6 @@ def send_admin_notification(payload):
                         'plain', 'utf-8'))
 
     try:
-        # 管理員通知通常使用更穩定的 SSL 連線
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
             server.login(sender, password)
             server.send_message(msg)

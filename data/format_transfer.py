@@ -6,7 +6,7 @@ from pathlib import Path
 # ================== 路徑設定（請依需求修改） ==================
 
 # ① CSV → 依模型切成多個 JSON
-INPUT_CSV   = Path("UStAI-annotated_V2.csv")  # 這份就是你剛上傳的標註檔
+INPUT_CSV   = Path("B.xlsx")  # 這份就是你剛上傳的標註檔
 OUTPUT_DIR  = Path("models_json")             # 會在這個資料夾底下輸出每個模型各自的 JSON
 
 # ② [原本功能] TXT → 單一 JSON（沿用你原來的 format_transfer.py）

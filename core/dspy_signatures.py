@@ -1,6 +1,5 @@
 from typing import Dict, List
 import dspy
-# 確保這裡的引用路徑正確，指向您的 invest_rules.py
 from .invest_rules import INVEST_RUBRIC_15, DIM_KEYS
 
 # -------------------------
@@ -8,9 +7,8 @@ from .invest_rules import INVEST_RUBRIC_15, DIM_KEYS
 # -------------------------
 
 def _format_scale_lines(scale: Dict[str, str]) -> str:
-    """將 1-5 分的定義轉化為易讀的字串"""
+    """Transfer 1-5 scale definitions into a human-readable string."""
     lines = []
-    # 確保依照 1 到 5 的順序排列
     for k in ["1", "2", "3", "4", "5"]:
         if k in scale:
             lines.append(f"  - [Score {k}]: {scale[k]}")
@@ -18,7 +16,7 @@ def _format_scale_lines(scale: Dict[str, str]) -> str:
 
 def build_invest_rubric_text() -> str:
     """
-    整合各維度的指標名稱、基本定義與評分量表。
+    Integrate all dimension scoring rubric, definitions, and 1-5 scale.
     """
     INVEST_DESCRIPTIONS = {
         "I": "Independent: The independent story is self-sufficient. An independent story can be pulled into a sprint, built, and tested without waiting for another story to be completed first. It may share databases, APIs, or services with other stories, but no other story needs to be finished before this one can move forward. If removing it from the sprint would not block or delay any other story, it is independent.",
@@ -31,10 +29,8 @@ def build_invest_rubric_text() -> str:
 
     parts: List[str] = []
     for key in DIM_KEYS:
-        # 從 invest_rules.py 獲取 1-5 分的量表
         scale_data = INVEST_RUBRIC_15.get(key, {})
-        
-        # 組合該維度的區塊
+    
         header = f"### Dimension [{key}]"
         definition = f"Definition: {INVEST_DESCRIPTIONS.get(key, 'No definition provided.')}"
         rubric = _format_scale_lines(scale_data)
@@ -42,8 +38,6 @@ def build_invest_rubric_text() -> str:
         parts.append(f"{header}\n{definition}\nScoring Rubric:\n{rubric}")
     
     return "\n\n".join(parts)
-
-# 預先生成完整的參考文本
 RUBRIC_TEXT = build_invest_rubric_text()
 
 # -------------------------
@@ -58,8 +52,6 @@ class InvestScoreSig(dspy.Signature):
     """
     input_text = dspy.InputField(desc="The User Story text to be evaluated.")
     rubric_text = dspy.InputField(desc="The complete INVEST definitions and scoring scales.")
-    
-    # 強調輸出格式為 JSON，並包含分數與原因
     result_json = dspy.OutputField(desc="JSON string with keys: 'scores' (dict of I-T scores) and 'reasonings' (dict of explanations).")
 
 class InvestRewriteSig(dspy.Signature):

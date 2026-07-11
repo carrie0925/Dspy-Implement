@@ -9,10 +9,8 @@ from datetime import datetime
 from pathlib import Path
 from dotenv import load_dotenv
 
-# --- 0. 環境變數預載 (必須在匯入 core 之前) ---
 load_dotenv()
 
-# --- 1. 匯入後端核心函數 ---
 try:
     from core.pipeline import run_batch_optimization
     from core.mailer import send_survey_links, send_admin_notification 

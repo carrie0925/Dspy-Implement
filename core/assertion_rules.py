@@ -24,7 +24,6 @@ Data Contracts
 - Input scores: dict with keys in {"I","N","V","E","S"}; values in [1, 5].
 - Output result: AssertionResult with details & message.
 
-Author: YOU
 """
 
 from dataclasses import dataclass, field
